@@ -1,0 +1,158 @@
+/* ============================================================
+   The Nowhere Bookshop — wall treatments ("kinds")
+
+   Each room picks one structural kind (how the walls are built)
+   and supplies its own palette as inline custom properties, so
+   no two rooms read the same even where they share a kind.
+   ============================================================ */
+
+/* ── panelled: wainscot + rail, the classic shop interior ─── */
+.k-panel {
+  --wall-art:
+    repeating-linear-gradient(90deg, transparent 0 118px, rgba(0,0,0,.30) 118px 124px, rgba(255,255,255,.045) 124px 128px, transparent 128px 246px);
+}
+.k-panel .f-back::before, .k-panel .f-left::before, .k-panel .f-right::before {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 46px;
+  height: 200px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 12px, rgba(0,0,0,.22) 12px 18px, transparent 18px 150px),
+    linear-gradient(180deg, var(--wood), var(--wood-dark));
+  border-top: 5px solid var(--wood-lit);
+  box-shadow: inset 0 20px 30px -22px rgba(0,0,0,.9);
+}
+
+/* ── plaster: soft, aged, a picture rail near the top ─────── */
+.k-plaster {
+  --wall-art: radial-gradient(120% 90% at 20% 10%, rgba(255,255,255,.05), transparent 60%);
+}
+.k-plaster .f-back::before, .k-plaster .f-left::before, .k-plaster .f-right::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 120px; height: 12px;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood-dark));
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,.7);
+}
+
+/* ── papered: a pattern behind everything ─────────────────── */
+.k-paper {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='150' viewBox='0 0 120 150'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.16' stroke-width='2'%3E%3Cpath d='M60 8c14 16 22 30 22 44s-10 24-22 24-22-10-22-24 8-28 22-44z'/%3E%3Cpath d='M60 76v46M46 96c8 4 14 10 14 18M74 96c-8 4-14 10-14 18'/%3E%3Ccircle cx='0' cy='75' r='6'/%3E%3Ccircle cx='120' cy='75' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  --wall-art-blend: soft-light;
+}
+
+/* ── stone: heavy blocks, cold ────────────────────────────── */
+.k-stone {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='120' viewBox='0 0 240 120'%3E%3Cg fill='none' stroke='%23000000' stroke-opacity='.42' stroke-width='3'%3E%3Cpath d='M0 60h240M0 0h240M0 120h240M60 0v60M180 0v60M0 60v60M120 60v60M240 60v60'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── brick: cellar ────────────────────────────────────────── */
+.k-brick {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80' viewBox='0 0 160 80'%3E%3Cg fill='none' stroke='%23000000' stroke-opacity='.5' stroke-width='3'%3E%3Cpath d='M0 40h160M0 0h160M0 80h160M40 0v40M120 0v40M0 40v40M80 40v40M160 40v40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── timber: attic rafters ────────────────────────────────── */
+.k-timber {
+  --wall-art:
+    repeating-linear-gradient(90deg, transparent 0 200px, rgba(0,0,0,.42) 200px 232px, transparent 232px 400px);
+}
+.k-timber .f-ceiling {
+  background:
+    radial-gradient(50% 44% at 50% 26%, color-mix(in srgb, var(--glow) 26%, transparent), transparent 76%),
+    repeating-linear-gradient(90deg, var(--ceiling) 0 150px, var(--wood-dark) 150px 186px);
+}
+
+/* ── glass: an iron-framed glasshouse, weather outside ────── */
+.k-glass {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='190' viewBox='0 0 150 190'%3E%3Cg fill='none' stroke='%23000000' stroke-opacity='.55' stroke-width='7'%3E%3Cpath d='M0 0v190M150 0v190M0 0h150M0 190h150M0 95h150M75 0v190'/%3E%3C/g%3E%3C/svg%3E");
+}
+.k-glass .f-back, .k-glass .f-left, .k-glass .f-right {
+  background:
+    var(--wall-art),
+    linear-gradient(180deg, var(--sky-1, #7d9aa8) 0%, var(--sky-2, #2f4038) 62%, var(--wall) 100%);
+  background-blend-mode: normal, normal;
+}
+.k-glass .f-ceiling {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--sky-1, #7d9aa8) 70%, transparent), transparent 78%),
+    repeating-linear-gradient(90deg, transparent 0 140px, rgba(0,0,0,.5) 140px 152px);
+}
+
+/* ── metal: riveted plate ─────────────────────────────────── */
+.k-metal {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23ffffff' fill-opacity='.10'%3E%3Ccircle cx='12' cy='12' r='3.4'/%3E%3Ccircle cx='108' cy='12' r='3.4'/%3E%3Ccircle cx='12' cy='108' r='3.4'/%3E%3Ccircle cx='108' cy='108' r='3.4'/%3E%3C/g%3E%3Cg fill='none' stroke='%23000000' stroke-opacity='.34' stroke-width='2'%3E%3Crect x='2' y='2' width='116' height='116'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── void: the wall gives out onto space ──────────────────── */
+.k-void {
+  --wall-art:
+    radial-gradient(1.4px 1.4px at 20% 30%, #fff, transparent),
+    radial-gradient(1.2px 1.2px at 68% 18%, #ffe9c0, transparent),
+    radial-gradient(1.6px 1.6px at 44% 62%, #cfe4ff, transparent),
+    radial-gradient(1px 1px at 82% 74%, #fff, transparent),
+    radial-gradient(1.3px 1.3px at 12% 82%, #fff, transparent),
+    radial-gradient(1px 1px at 92% 38%, #ffd9a8, transparent),
+    radial-gradient(1.1px 1.1px at 33% 8%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 57% 90%, #d6ecff, transparent);
+}
+.k-void .f-back {
+  background:
+    var(--wall-art),
+    radial-gradient(60% 46% at 50% 40%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 74%),
+    linear-gradient(180deg, #070a14, #0d1020 60%, var(--wall));
+  background-size: 420px 420px, auto, auto;
+}
+.k-void .f-back::after { opacity: .9; }
+
+/* ── forest: trunks receding behind the shelves ───────────── */
+.k-forest {
+  --wall-art:
+    linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 34%),
+    repeating-linear-gradient(91deg,
+      transparent 0 74px,
+      rgba(0,0,0,.46) 74px 104px,
+      rgba(255,255,255,.05) 104px 111px,
+      transparent 111px 236px),
+    repeating-linear-gradient(89deg,
+      transparent 0 158px,
+      rgba(0,0,0,.28) 158px 204px,
+      transparent 204px 410px);
+}
+
+/* ── tile: cool, institutional, a reading room ────────────── */
+.k-tile {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='2'%3E%3Cpath d='M0 0h96v96H0z'/%3E%3Cpath d='M48 0v96M0 48h96'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── ink: heavy halftone, comics ──────────────────────────── */
+.k-ink {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='6' cy='6' r='3' fill='%23000' fill-opacity='.34'/%3E%3Ccircle cx='18' cy='18' r='3' fill='%23000' fill-opacity='.34'/%3E%3C/svg%3E");
+}
+
+/* ── snow / ice ───────────────────────────────────────────── */
+.k-ice {
+  --wall-art:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.14' stroke-width='2'%3E%3Cpath d='M-10 40L60 -10M10 120L120 10M40 190L190 40M120 200L200 120'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── water: rippling light on everything ──────────────────── */
+.k-water {
+  --wall-art:
+    repeating-linear-gradient(0deg, transparent 0 26px, rgba(180,225,255,.10) 26px 30px, transparent 30px 62px);
+}
+.k-water .f-back::after, .k-water .f-left::after, .k-water .f-right::after { opacity: .85; }
+
+/* ── the shelves' contents glow a little in every room ────── */
+.room { --sp-band: rgba(0,0,0,.4); }
+
+/* ── a few rooms want a different lamp colour on the case ─── */
+.case { filter: saturate(var(--case-sat, 1)); }
+
+/* ── ceiling-height variation (attic, cellar feel lower) ──── */
+.low .f-ceiling { transform: translate3d(-840px, -180px, -1200px) rotateX(90deg); }
+.low .f-back, .low .f-left, .low .f-right { --wall-lit: color-mix(in srgb, var(--wall-lit) 88%, #000); }
