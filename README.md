@@ -43,7 +43,7 @@ Stair*.
 |---|---|
 | Point at a spine | read the title and the prize it won |
 | Click a book | take it off the shelf — blurb, curator's note, opening line, where to buy |
-| Click a lit doorway | walk through into the next room |
+| Click a lit doorway | walk through into the next room — the sign over it says where it goes |
 | `←` `→` | the next book along the shelf |
 | `/` or `⌘K` | search titles, authors, prizes and moods — try *islands*, *grief*, *Booker* |
 | `M` | the shop plan |
@@ -51,8 +51,10 @@ Stair*.
 | `B` | ring the bell — the shopkeeper hands you something from anywhere in the shop, weighted towards the deep rooms |
 | `Esc` | put the book back, or step back a room |
 
-Every room is also listed along the bottom of the screen and on the plan, so
-nothing is reachable only by finding it in the 3D view.
+The ways on are named along the bottom of the screen when you arrive and then
+step out of the way; the doorways are how you get about. Everything is also on
+the plan and in search, so nothing is reachable only by finding it in the 3D
+view.
 
 ## How it is built
 
@@ -75,6 +77,7 @@ src/js/
     rooms.js    the plan of the shop: palettes, wall kinds, props
     props.js    SVG set dressing (ladders, globes, moths, candles…)
     books/*.js  the shelves, one file per hall
+    enrich.js   ISBNs and page counts, fetched (see tools/hardcover.mjs)
 ```
 
 **The rooms are DOM, not canvas.** Walls, shelves and books are ordinary
@@ -101,6 +104,11 @@ bookshops. Underneath it are Bookshop.org UK, Hive (which pays a share to a
 high-street shop of your choice), Better World Books and Biblio for secondhand,
 and Open Library so you can borrow it for nothing instead.
 
+Every link prefers an ISBN-13 where the book has one, so it lands on the book
+rather than on a search page you then have to pick through. ISBNs are fetched
+by `tools/hardcover.mjs` into `src/js/data/enrich.js`; a book without one still
+works, it just searches by title and author.
+
 To earn affiliate income, put your id in `AFFILIATE.bookshop` at the top of that
 file; every Bookshop link then carries it. Nothing else needs changing, and
 there is no tracking of any kind in the page.
@@ -112,6 +120,11 @@ shortlisted for, and the critical judgements that put the book on the shelf.
 Where a book is here on reputation rather than a specific prize, the note says
 so. Translators are named on the cover panel, because they wrote the book you
 are actually going to read.
+
+The shop will not quote a book's opening lines unless it can say where the
+quotation came from. Instead each book points at somewhere you can read the
+real pages: a publisher preview, a library loan, or — for anything out of
+copyright — the whole text, free.
 
 ## Accessibility
 

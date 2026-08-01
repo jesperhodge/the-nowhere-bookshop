@@ -4,7 +4,7 @@
    ============================================================ */
 
 import { coverSVG, spineStyle } from '../covers.js';
-import { buyLink, altLinks, VENDORS } from '../links.js';
+import { buyLink, altLinks, sampleLinks, isbn13 } from '../links.js';
 import { ROOM_BY_ID, pathTo } from '../shop.js';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -32,6 +32,7 @@ export function renderBook(book, ctx) {
     book.year ? `${book.year}` : '',
     book.pages ? `${book.pages} pp.` : '',
     book.translator ? `translated by ${esc(book.translator)}` : '',
+    isbn13(book) ? `ISBN ${isbn13(book)}` : '',
   ].filter(Boolean).map((f) => `<span>${f}</span>`).join('');
 
   const seals = [
@@ -43,24 +44,29 @@ export function renderBook(book, ctx) {
     `<a class="buy__alt" href="${v.href}" target="_blank" rel="noopener noreferrer" title="${esc(v.note)}">${esc(v.name)}</a>`
   ).join('');
 
-  const sample = book.first
-    ? `<section class="bd__sec">
-         <h3 class="bd__h">The first page</h3>
-         <div class="firstpage">
-           <p class="firstpage__t">${rich(book.first)}</p>
-           <p class="firstpage__c">Opening line · <a href="${VENDORS.preview.url(book)}" target="_blank" rel="noopener noreferrer" style="color:inherit">read further</a></p>
-         </div>
-       </section>`
-    : `<section class="bd__sec">
-         <h3 class="bd__h">A few pages</h3>
-         <div class="firstpage">
-           <p class="firstpage__t" style="font-size:.98rem">Have a look inside before you commit — most of these have a readable preview, and a good many can be borrowed for nothing.</p>
-           <p class="firstpage__c">
-             <a href="${VENDORS.preview.url(book)}" target="_blank" rel="noopener noreferrer" style="color:inherit">Preview</a> ·
-             <a href="${VENDORS.openlibrary.url(book)}" target="_blank" rel="noopener noreferrer" style="color:inherit">Borrow</a>
-           </p>
-         </div>
-       </section>`;
+  /* An opening line is only shown when we can say where it came from.
+     The `first` field on most books was written from memory rather than
+     from the book, and a misquoted first sentence presented as the real
+     one is the sort of thing that quietly discredits the whole shelf.
+     Where there is no sourced quotation, we send you somewhere you can
+     read the actual pages instead. */
+  const quoted = book.first && book.firstSource
+    ? `<blockquote class="firstpage__q">${rich(book.first)}</blockquote>
+       <p class="firstpage__c">Opening lines · ${esc(book.firstSource)}</p>`
+    : `<p class="firstpage__t">Have a look inside before you commit. Most of these have publisher preview
+         pages${book.publicDomain ? ', and this one is out of copyright — the whole text is free' : ', and a good many can be borrowed for nothing'}.</p>`;
+
+  const where = sampleLinks(book).map((v) =>
+    `<a class="buy__alt" href="${v.href}" target="_blank" rel="noopener noreferrer" title="${esc(v.note)}">${esc(v.name)}</a>`
+  ).join('');
+
+  const sample = `<section class="bd__sec">
+      <h3 class="bd__h">Before you buy it</h3>
+      <div class="firstpage">
+        ${quoted}
+        <div class="firstpage__links">${where}</div>
+      </div>
+    </section>`;
 
   const el = document.createElement('div');
   el.className = 'bd';

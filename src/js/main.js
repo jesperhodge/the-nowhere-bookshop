@@ -27,7 +27,7 @@ const dom = {
   searchOverlay: $('#searchOverlay'), findInput: $('#findInput'), findResults: $('#findResults'),
   parcelOverlay: $('#parcelOverlay'), parcelBody: $('#parcelBody'), parcelCount: $('#parcelCount'),
   shelfOverlay: $('#shelfOverlay'), shelfBody: $('#shelfBody'),
-  toast: $('#toast'), hint: $('#hint'), ambience: $('#ambience'), dlabels: $('#dlabels'),
+  toast: $('#toast'), hint: $('#hint'), ambience: $('#ambience'),
 };
 
 const state = {
@@ -75,7 +75,6 @@ function fit() {
   if (Math.abs(pan) > panMax) pan = Math.sign(pan) * panMax;
   applyPivot();
   amb.resize();
-  placeLabels();
 }
 
 /* ── parallax ─────────────────────────────────────────────── */
@@ -105,7 +104,6 @@ function onMove(e) {
   requestAnimationFrame(() => {
     rafPending = false;
     applyPivot();
-    placeLabels();
   });
 }
 
@@ -129,7 +127,6 @@ function onDragMove(e) {
   }
   pan = Math.max(-panMax, Math.min(panMax, drag.from + dx / fitK));
   applyPivot();
-  placeLabels();
   e.preventDefault();
 }
 function onDragEnd() {
@@ -145,78 +142,12 @@ function onDragEnd() {
   }
 }
 
-/* ── door names ───────────────────────────────────────────────
-   Text inside the geometry gets sliced by whatever is standing in
-   front of it, so the names live in a flat layer and are pushed
-   to wherever their doorway currently is on screen. */
-
-let labels = [];
-
-function buildLabels() {
-  dom.dlabels.textContent = '';
-  labels = [];
-  const stage = dom.stage.getBoundingClientRect();
-  for (const node of $$('[data-go]', dom.room)) {
-    const r = ROOM_BY_ID[node.dataset.go];
-    if (!r) continue;
-    const l = document.createElement('div');
-    l.className = 'dlabel';
-    l.style.setProperty('--dl', r.pal?.['door-glow'] || '#ffb45e');
-    l.innerHTML =
-      `<div class="dlabel__n">${esc(r.name)}</div>` +
-      `<div class="dlabel__s">${esc(r.sub || '')} · ${r.total}</div>`;
-    if (node.classList.contains('table3d')) l.dataset.lift = '1';
-    dom.dlabels.appendChild(l);
-    labels.push({ node, l });
-  }
-  placeLabels(stage);
-}
-
-function placeLabels(stageRect) {
-  if (!labels.length || dom.shop.hidden) return;
-  const stage = stageRect || dom.stage.getBoundingClientRect();
-  const seats = [];
-  /* nearest doorway first, so the ones in front get the good spots */
-  const measured = labels
-    .map(({ node, l }) => ({ l, r: node.getBoundingClientRect() }))
-    .sort((a, b) => b.r.width * b.r.height - a.r.width * a.r.height);
-
-  for (const { l, r } of measured) {
-    if (r.width < 18 || r.height < 18) { l.style.opacity = '0'; continue; }
-    l.style.opacity = '';
-    let x = Math.max(96, Math.min(stage.width - 96, r.left - stage.left + r.width / 2));
-    let y = r.top - stage.top - (l.dataset.lift === '1' ? 66 : 10);
-    for (let guard = 0; guard < 10; guard++) {
-      const hit = seats.find((s) => Math.abs(s.x - x) < 150 && Math.abs(s.y - y) < 46);
-      if (!hit) break;
-      y = hit.y - 50;
-    }
-    y = Math.max(64, Math.min(stage.height - 92, y));
-    seats.push({ x, y });
-    l.style.left = `${x.toFixed(1)}px`;
-    l.style.top = `${y.toFixed(1)}px`;
-    l.style.setProperty('--dl-op', (0.5 + Math.min(0.5, (r.width / 170) * 0.5)).toFixed(2));
-  }
-}
-
-/* the room animates in, so keep re-measuring until it settles */
-let syncUntil = 0, syncing = false;
-function syncLabels(ms = 760) {
-  syncUntil = performance.now() + ms;
-  if (syncing) return;
-  syncing = true;
-  let frame = 0;
-  const tick = () => {
-    if (frame++ % 2 === 0) placeLabels();
-    if (performance.now() < syncUntil) requestAnimationFrame(tick);
-    else { syncing = false; placeLabels(); }
-  };
-  requestAnimationFrame(tick);
-}
-
-function hotLabel(node) {
-  for (const { node: n, l } of labels) l.classList.toggle('is-hot', n === node);
-}
+/* Door names used to live in a flat overlay that was re-measured every
+   other frame for three quarters of a second after every room change —
+   getBoundingClientRect() on a dozen 3D-transformed nodes, then a write
+   back to each, which is a layout thrash on the one frame budget that was
+   already tight. They now hang on brackets over their own doorways inside
+   the geometry (see .dsign in scene.css), so there is nothing to place. */
 
 /* ── travelling ───────────────────────────────────────────── */
 
@@ -247,8 +178,6 @@ function go(id, dir = 'in', replace = false) {
     dom.room.appendChild(built.travel);
     state.room = id;
     paintChrome(room);
-    buildLabels();
-    syncLabels();
     amb.set(room.amb || 'dust');
     tone.apply(room.amb || 'dust');
     travelling = false;
@@ -288,13 +217,18 @@ function paintChrome(room) {
   void dom.placard.offsetWidth;
   dom.placard.style.animation = '';
 
-  /* doors in the dock */
+  /* Ways on, in the dock. These used to sit there permanently, which made
+     the doorways decorative — why walk when there is a button? They now
+     show for a few seconds when you arrive and then get out of the way;
+     the doorways are the way through, and the plan and search are still
+     the reliable route to anywhere. Focus or hover brings them back. */
   const kids = room.children || [];
   dom.dockDoors.innerHTML = kids.map((k) =>
     `<a class="godoor${k.depth > 2 ? ' godoor--deep' : ''}" href="#/${k.id}">
        <span class="godoor__n">${esc(k.name)}</span>
        <span class="godoor__s">${esc(k.sub || '')} · ${k.total}</span>
      </a>`).join('');
+  showWaysOn(kids.length > 0);
 
   /* back */
   const parent = room.parent ? ROOM_BY_ID[room.parent] : null;
@@ -309,6 +243,15 @@ function paintChrome(room) {
   });
 
   document.title = `${room.name} — The Nowhere Bookshop`;
+}
+
+let waysTimer;
+function showWaysOn(any) {
+  clearTimeout(waysTimer);
+  dom.dockDoors.hidden = !any;
+  if (!any) return;
+  dom.dockDoors.classList.remove('is-resting');
+  waysTimer = setTimeout(() => dom.dockDoors.classList.add('is-resting'), 6500);
 }
 
 /* ── hovering a book shows its name ───────────────────────── */
@@ -576,7 +519,7 @@ function fromHash(replace) {
 /* ── wiring ───────────────────────────────────────────────── */
 
 function wire() {
-  window.addEventListener('resize', () => { fit(); placeLabels(); }, { passive: true });
+  window.addEventListener('resize', fit, { passive: true });
   window.addEventListener('orientationchange', () => setTimeout(fit, 120));
   dom.stage.addEventListener('pointermove', onMove, { passive: true });
   dom.stage.addEventListener('pointerdown', onDragStart);
@@ -586,7 +529,6 @@ function wire() {
   dom.stage.addEventListener('pointerleave', () => {
     target = { x: 0, y: 0 };
     applyPivot();
-    placeLabels();
   });
 
   /* shelf + doors */
@@ -600,18 +542,15 @@ function wire() {
     const bk = e.target.closest('.bk[data-book]');
     if (bk) return showTag(bk);
     const door = e.target.closest('[data-go]');
-    if (door) { hotLabel(door); return hideTag(); }
-    hotLabel(null);
+    if (door) return hideTag();
     hideTag();
   });
   dom.room.addEventListener('focusin', (e) => {
     const bk = e.target.closest('.bk[data-book]');
     if (bk) return showTag(bk);
-    const door = e.target.closest('[data-go]');
-    if (door) hotLabel(door);
   });
-  dom.room.addEventListener('focusout', () => { hideTag(); hotLabel(null); });
-  dom.room.addEventListener('pointerleave', () => { hideTag(); hotLabel(null); });
+  dom.room.addEventListener('focusout', hideTag);
+  dom.room.addEventListener('pointerleave', hideTag);
 
   /* dock */
   dom.back.addEventListener('click', () => {
@@ -768,7 +707,6 @@ function enter() {
   amb.start();
   showHint();
   fit();
-  syncLabels(1600);
 }
 
 function showHint() {

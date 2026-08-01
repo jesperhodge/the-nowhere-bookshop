@@ -95,12 +95,16 @@ src/js/
   shop.js       joins rooms to shelves; search; the bell's random pick
   views/book.js the take-a-book-off-the-shelf panel
   views/map.js  the shop plan
-  data/rooms.js the plan of the shop: palettes, wall kinds, props
-  data/props.js SVG set dressing (ladders, globes, moths, candles…)
-  data/books/   the shelves, one file per hall
+  data/rooms.js  the plan of the shop: palettes, wall kinds, props
+  data/props.js  SVG set dressing (ladders, globes, moths, candles…)
+  data/books/    the shelves, one file per hall — the shop's opinions
+  data/enrich.js fetched facts (ISBN, pages, year), generated, merged
+                 UNDER the shelves so hand-written values always win
 tools/
-  qa.mjs        the QA sweep — RUN THIS (see §6)
-  shot.mjs      screenshot one room
+  qa.mjs             the QA sweep — RUN THIS (see §6)
+  shot.mjs           screenshot one room
+  hardcover.mjs      fetch ISBNs etc. from Hardcover; also suggests candidates
+  mock-hardcover.mjs a fixture server, so the above can be run without a token
 ```
 
 ### The world box
@@ -225,6 +229,26 @@ now queue (`queued` in `main.js`). Keep that if you touch routing.
 the bottleneck — measure before optimising. `tools/qa.mjs` and a small perf probe
 are how the real cause was found.
 
+**6. The arrival animation is not composited, and a fixed timeout will lie to
+you.** `arriveIn` is declared at .62s but takes 1.2–1.9s of wall clock, because
+it runs on the main thread behind a few hundred `preserve-3d` nodes and stalls
+for most of the first frame. Anything that measures or photographs a room must
+wait for `getComputedStyle('.travel').transform === 'none'`, not for a number of
+milliseconds. `qa.mjs --shots` used to wait 800ms and quietly produced a whole
+set of screenshots of rooms mid-flight, at the wrong scale — which is worse than
+no screenshots, because they look fine until you compare two.
+
+**7. Themes replace the whole `background` on a face.** `.k-glass .f-left` and
+friends in `themes.css` set `background:`, so any layer you add to `.f-left`'s
+background in `scene.css` silently disappears in those rooms. The near-field
+ambient on the side walls is an inset `box-shadow` for exactly this reason.
+
+**8. Books on a side wall are seen edge-on.** A shelf against the left or right
+wall faces across the view, so each spine collapses to a 1–3px sliver and the
+run reads as scratches. Side-wall shelves are painted with `spineRun()` in
+`covers.js` instead of built out of nodes — which also removed roughly 480
+elements per room.
+
 ---
 
 ## 6. QA — run this before you hand anything back
@@ -239,16 +263,22 @@ Needs Playwright (`npm i playwright`) and Chromium at
 your path differs. Do **not** edit source files while it runs; it walks all 50
 rooms and a mid-run reload produces confusing failures.
 
-It checks: duplicate/missing book fields, dead rooms, every room's doorway labels
-get placed, a book panel opens in every room with a shelf, buy links point at
-bookshop.org, no Amazon anywhere, keyboard focus + Enter opens a book, search,
+It checks: duplicate/missing book fields, dead rooms, every doorway carrying a
+sign that names where it goes, room transition times against a 2.5s budget, a
+book panel opening in every room with a shelf, the link builders (with and
+without an ISBN), that no book shows an opening line it cannot source, buy links
+pointing at bookshop.org, no Amazon anywhere, keyboard focus + Enter, search,
 and a parcel round-trip. A clean run looks like:
 
 ```
 books: 409 rooms: 50
+room transition: median 1266ms, worst 1937ms
+heaviest room: front, 320 nodes
 book panels opened OK: 50
-outbound hosts: google.com, openlibrary.org, bookshop.org, uk.bookshop.org,
-                hive.co.uk, betterworldbooks.com, biblio.com
+ok   preview deep-links by ISBN
+ok   borrow deep-links by ISBN
+ok   buy link is bookshop.org
+books with an unsourced opening line shown: 0 (44 held back)
 no console or page errors
 ```
 
@@ -263,14 +293,24 @@ Ordered by how much they'd improve the thing the owner actually asked for.
 Confirm priorities with them before a big push.
 
 **Curation quality (highest value — this is the heart of the brief)**
-1. **Accolade audit.** All 409 entries were written from model knowledge. Expect
-   a handful of slips in prize *years* and shortlist-vs-win. Verify in batches
-   with web search and correct `won` / `cited`. This is the one thing that would
-   embarrass the project publicly.
-2. More `first` lines — only ~60 of 409 have one; the rest fall back to a generic
-   "have a look inside" card. Only add where certain of the wording.
-3. Deepen the sparse rooms. Leaf rooms have 6–9 books; the brief's "wow, I had no
+1. **Accolade audit — still open, and still the top item.** All 409 entries were
+   written from model knowledge. Expect slips in prize *years* and
+   shortlist-vs-win. Verify in batches and correct `won` / `cited`. This is the
+   one thing that would embarrass the project publicly. The blurbs deserve the
+   same pass: they read well, but nobody has checked them against the books.
+2. **Opening lines are no longer shown.** 44 books carry a `first` field written
+   from memory; the panel now only renders one if the book also has a
+   `firstSource` saying where the quotation came from, so none are currently
+   displayed. Restore them by sourcing them — the public-domain titles are the
+   easy win, since Standard Ebooks and Gutenberg carry the real text.
+3. **Run the enrichment.** `tools/hardcover.mjs enrich` has never been run
+   against the live API (see §9), so `data/enrich.js` is empty and every
+   outbound link still falls back to a title-and-author search. One run turns
+   409 search links into 409 links that land on the book.
+4. Deepen the sparse rooms. Leaf rooms have 6–9 books; the brief's "wow, I had no
    idea this existed" moment lives there, not on the front table.
+   `tools/hardcover.mjs suggest` finds candidates but deliberately will not
+   shelve them — a lookup cannot write the curator's note.
 
 **Discovery UX**
 4. The bell (`surprise()`) weights deep rooms 5× but always opens a single book.
@@ -305,3 +345,26 @@ Confirm priorities with them before a big push.
   labelled as exactly that.
 - No build step and no runtime dependencies. It is a folder you can open.
 - Translators are named on the book panel. Keep them.
+
+
+---
+
+## 9. What the last session could not do
+
+`api.hardcover.app` is not reachable from the sandbox that session ran in — the
+egress policy answers 403 to CONNECT for it, and for `openlibrary.org`,
+`bookshop.org`, `gutenberg.org` and `standardebooks.org` as well. So:
+
+- `tools/hardcover.mjs` is written, and verified end to end against
+  `tools/mock-hardcover.mjs` — matching, the wrong-author decoy, edition
+  selection, the resume path and the write path all pass. It has **never spoken
+  to the real API.** Expect to adjust `hits()` in it: Hardcover's `search` is in
+  beta and returns a raw blob whose shape has moved around, so it digs for the
+  results rather than assuming a path. If the first run returns "no confident
+  match" for everything, log one raw response and fix that function.
+- `data/enrich.js` is empty on purpose. Filling it with plausible ISBNs nobody
+  fetched is the exact failure mode the file exists to end.
+- Reading samples: no API licenses excerpt text, Hardcover included. The panel
+  now links to Google Books previews (by ISBN once enrichment has run), Open
+  Library borrowing, and for the 27 public-domain titles, Standard Ebooks and
+  Gutenberg, where the full text is genuinely free.

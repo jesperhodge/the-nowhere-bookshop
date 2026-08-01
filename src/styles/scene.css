@@ -41,7 +41,8 @@
    pick up take pointer events. */
 .room, .travel, .pivot, .world, .stage__fit,
 .face, .case, .case__panel, .case__row, .case__board, .shelf,
-.prop, .table3d__top, .table3d__leg, .table3d__books {
+.prop, .table3d__books,
+.dsign, .dsign__arm, .dsign__board {
   pointer-events: none;
 }
 .bk, .door3d { pointer-events: auto; }
@@ -128,6 +129,19 @@
     linear-gradient(180deg, color-mix(in srgb, var(--wall) 80%, #000), var(--wall) 56%, color-mix(in srgb, var(--wall) 86%, #000));
   background-blend-mode: var(--wall-art-blend, normal), normal, normal, normal, normal;
 }
+
+/* Near-field ambient on the side walls.
+
+   Both walls used to fall to black long before they reached the front of
+   the room, so every room read as a lit diorama floating in space rather
+   than somewhere you are standing inside. This has to be a shadow rather
+   than another background layer: the themes in themes.css replace the
+   whole `background` property on these faces, and would drop it.
+
+   .f-left's local +x runs from the back wall towards you, so its near end
+   is its right edge; .f-right runs the other way. */
+.f-left  { box-shadow: inset -300px 0 260px -170px color-mix(in srgb, var(--wall-lit) 78%, transparent); }
+.f-right { box-shadow: inset  300px 0 260px -170px color-mix(in srgb, var(--wall-lit) 78%, transparent); }
 
 /* skirting board / picture rail — instant "interior" cue */
 .f-back::after, .f-left::after, .f-right::after {
@@ -395,43 +409,156 @@
   pointer-events: none;
 }
 
-/* door names live in a flat overlay (see .dlabel in ui.css) so they
-   are never clipped by the geometry they are labelling */
+/* a lit threshold, so a doorway reads as somewhere to walk rather than an arch */
+.door3d__step {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 26px;
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--door-glow, #ffb45e) 80%, #fff));
+  opacity: .8;
+}
+
+/* ── the name of the room beyond ─────────────────────────────
+   A bracket sign hung out into the room. The doorway is in the side
+   wall, so a name painted flat on it is seen at ~20° and cannot be
+   read; rotating the board back out of the wall turns it to face you.
+   Signage, not a control — it takes no pointer events, and the door
+   itself is the thing you click. */
+.dsign {
+  position: absolute;
+  left: 50%; top: -6px;
+  width: 0; height: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+/* Bays run near-to-far down the wall, and perspective stacks them into
+   the same patch of screen. Hanging the far ones higher keeps three
+   signs on one wall legible instead of overlapping. */
+.dsign { --arm: 34px; }
+[data-bay="2"] .dsign { --arm: 96px; }
+[data-bay="3"] .dsign { --arm: 158px; }
+
+.dsign__arm {
+  position: absolute;
+  left: -1px; bottom: 0;
+  width: 2px; height: var(--arm);
+  background: linear-gradient(180deg, var(--wood-dark), var(--wood));
+}
+.dsign__board {
+  position: absolute;
+  left: 0; bottom: var(--arm);
+  translate: -50% 0;
+  padding: .3rem .7rem .34rem;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #2a1d16, #16100c);
+  border: 1px solid color-mix(in srgb, var(--door-glow, #ffb45e) 40%, transparent);
+  box-shadow: 0 10px 22px -12px #000, 0 0 20px -6px color-mix(in srgb, var(--door-glow, #ffb45e) 55%, transparent);
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+/* turn the board out of the wall it is mounted on, back towards the front
+   of the room, so the type faces the reader */
+.door3d--l .dsign { transform: rotateY(-90deg); }
+.door3d--r .dsign { transform: rotateY(90deg); }
+/* the table already faces you, so its card only needs to stand clear of
+   whatever is shelved on the wall behind it */
+.table3d .dsign { --arm: 150px; top: -8px; }
+
+.dsign__n {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--paper);
+}
+.dsign__s {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--door-glow, #ffb45e) 75%, #fff);
+  margin-top: .12rem;
+}
 
 .door3d:hover { filter: brightness(1.22) saturate(1.1); }
 .door3d:hover .door3d__void::after { animation-duration: 2.2s; }
+.door3d:hover .dsign__board, .door3d:focus-visible .dsign__board {
+  border-color: color-mix(in srgb, var(--door-glow, #ffb45e) 95%, transparent);
+  box-shadow: 0 10px 22px -12px #000, 0 0 30px -4px color-mix(in srgb, var(--door-glow, #ffb45e) 80%, transparent);
+}
 
-/* the front table — a passage that looks like a table */
+/* ── the front table — a passage that looks like a table ─────
+   The button box is the front apron, standing at the near edge of the
+   table between the floor and the underside of the top. The top recedes
+   *away* from you from there; the legs stand at both ends of that depth;
+   the stacks sit on the surface. Getting the sign of that rotation wrong
+   is what made the table jut out of the front of the room. */
 .table3d { transform-style: preserve-3d; }
 .table3d__top {
   position: absolute; left: 0; top: 0;
-  width: 100%; height: 260px;
+  width: var(--tw); height: var(--td);
   transform-origin: 0 0;
-  transform: rotateX(90deg);
-  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 55%, var(--wood-dark));
-  border-radius: 8px;
-  box-shadow: 0 40px 70px -26px rgba(0,0,0,.85), inset 0 0 40px rgba(255,220,170,.12);
+  transform: rotateX(-90deg);          /* the surface goes back, not forward */
+  background:
+    repeating-linear-gradient(96deg, transparent 0 34px, rgba(0,0,0,.10) 34px 38px),
+    linear-gradient(180deg, var(--wood-dark), var(--wood) 46%, var(--wood-lit));
+  border-radius: 7px 7px 3px 3px;
+  box-shadow: inset 0 0 50px rgba(255,220,170,.14), inset 0 -18px 26px -20px rgba(0,0,0,.6);
+}
+.table3d__apron {                       /* the front edge board you actually see */
+  position: absolute; left: 0; top: 0;
+  width: var(--tw); height: 30px;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 60%, var(--wood-dark));
+  border-radius: 3px;
+  box-shadow: 0 26px 46px -20px rgba(0,0,0,.85);
 }
 .table3d__leg {
-  position: absolute; bottom: 0;
-  width: 20px; height: 100%;
-  background: linear-gradient(90deg, var(--wood-dark), var(--wood));
+  position: absolute; top: 22px;
+  width: 20px; height: calc(var(--th) - 22px);
+  transform: translate3d(var(--lx), 0, var(--lz));
+  background: linear-gradient(90deg, var(--wood-dark), var(--wood) 55%, var(--wood-dark));
   border-radius: 0 0 3px 3px;
 }
-.table3d__books { position: absolute; left: 0; top: 0; width: 100%; height: 0; transform-style: preserve-3d; }
-.table3d__bk {
-  position: absolute; bottom: 0;
-  width: var(--w); height: calc(var(--n) * 15px);
-  transform: translateZ(-105px);
-  background:
-    repeating-linear-gradient(180deg, var(--bg) 0 11px, rgba(0,0,0,.45) 11px 15px);
-  border-radius: 2px;
-  box-shadow: 0 8px 18px -8px rgba(0,0,0,.8);
+.table3d__books {
+  position: absolute; left: 0; top: 0;
+  width: var(--tw); height: 0;
+  transform-style: preserve-3d;
 }
-.table3d:hover .table3d__top { filter: brightness(1.2); }
+/* a stack of books lying flat: the side you see, plus the top board */
+.tstack {
+  position: absolute; left: 0; top: 0;
+  width: var(--sw); height: var(--sh);
+  transform-style: preserve-3d;
+  transform: translate3d(var(--sx), calc(var(--sh) * -1), calc(var(--sz) * -1));
+}
+.tstack__side {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(180deg, var(--bg) 0 12px, rgba(0,0,0,.5) 12px 17px);
+  border-radius: 2px;
+  box-shadow: 0 10px 20px -8px rgba(0,0,0,.85);
+}
+.tstack__top {
+  position: absolute; left: 0; top: 0;
+  width: var(--sw); height: var(--sd);
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 80%, #fff), var(--bg));
+  border-radius: 2px;
+}
+.table3d:hover .table3d__top,
+.table3d:hover .table3d__apron { filter: brightness(1.24); }
 
 /* the shelves running along the side walls read as background */
 .case--side { --wood: color-mix(in srgb, var(--wood-dark) 62%, #000); --wood-lit: var(--wood-dark); }
+/* their books are painted rather than built — see spineRun() in covers.js */
+.shelf--painted {
+  background-repeat: no-repeat;
+  height: calc(100% - 6px);
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  box-shadow: inset 0 12px 18px -14px rgba(0,0,0,.9);
+}
 
 /* ── props & set dressing ─────────────────────────────────── */
 
@@ -554,6 +681,22 @@
   background: var(--art) center/contain no-repeat;
   opacity: var(--art-op, 1);
   filter: var(--art-filter, none);
+}
+
+/* A flat drawing with nothing under it reads as a sticker on the glass.
+   Anything standing on the floor gets a shadow lying on the floor at its
+   feet, and is dimmed with distance by --art-filter (see groundStyle). */
+.prop--ground::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 100%;
+  width: calc(var(--pw) * .92);
+  height: calc(var(--pw) * .46);
+  translate: -50% 0;
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,var(--lift, .6)), transparent 70%);
+  pointer-events: none;
 }
 
 /* table of books (the front table, display tables) */

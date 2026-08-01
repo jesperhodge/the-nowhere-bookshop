@@ -1,6 +1,8 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 
+const median = (xs) => { const s = [...xs].sort((a, b) => a - b); return s[s.length >> 1]; };
+
 const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const shots = process.argv.includes('--shots');
 const browser = await chromium.launch({ executablePath: EXE });
@@ -13,7 +15,24 @@ page.on('requestfailed', (r) => errors.push('REQFAIL ' + r.url() + ' ' + r.failu
 
 await page.goto('http://127.0.0.1:8099/#/front', { waitUntil: 'networkidle' });
 await page.click('#enter');
-await page.waitForTimeout(800);
+
+/* A room arrives with an animation that is not composited — it runs on the
+   main thread behind several hundred nodes of preserve-3d, so it takes
+   noticeably longer than its own duration. Waiting a fixed 800ms used to
+   photograph and measure every room mid-flight, which is how a whole set of
+   --shots came out at the wrong scale and hid what they were meant to show.
+   Wait for the transform to actually land. */
+const SETTLE_BUDGET = 2500;
+async function settle(label) {
+  const t0 = Date.now();
+  await page.waitForTimeout(420);          /* past go()'s 300ms hand-over */
+  await page.waitForFunction(() => {
+    const t = document.querySelector('.travel');
+    return t && getComputedStyle(t).transform === 'none' && t.getAnimations().length === 0;
+  }, null, { timeout: 20000 }).catch(() => console.log('NEVER SETTLED:', label));
+  return Date.now() - t0;
+}
+await settle('front');
 
 /* ── data integrity ── */
 const data = await page.evaluate(() => {
@@ -46,30 +65,38 @@ if (data.noChildNoBooks.length) console.log('DEAD ROOMS:', data.noChildNoBooks.j
 
 /* ── walk every room ── */
 const report = [];
+const slow = [];
 for (const id of data.roomIds) {
   await page.evaluate((r) => { location.hash = '#/' + r; }, id);
-  await page.waitForTimeout(800);
+  const ms = await settle(id);
   const info = await page.evaluate(() => ({
     room: window.__shop.state.room,
     shelf: document.querySelectorAll('.bk[data-book]').length,
     doors: document.querySelectorAll('#room [data-go]').length,
-    labels: document.querySelectorAll('.dlabel').length,
-    placedLabels: [...document.querySelectorAll('.dlabel')].filter((l) => l.style.left && l.style.opacity !== '0').length,
+    signs: document.querySelectorAll('#room .dsign__n').length,
+    nodes: document.querySelectorAll('#room *').length,
     props: document.querySelectorAll('.prop').length,
     cases: document.querySelectorAll('.case').length,
   }));
-  report.push({ id, ...info });
+  report.push({ id, ms, ...info });
   if (info.room !== id) console.log('ROUTE MISMATCH', id, '->', info.room);
-  if (info.doors !== info.placedLabels) console.log(`LABELS ${id}: ${info.doors} doors, ${info.placedLabels} placed`);
+  /* every way out of a room must say where it goes */
+  if (info.doors !== info.signs) console.log(`SIGNS ${id}: ${info.doors} doors, ${info.signs} named`);
+  if (ms > SETTLE_BUDGET) slow.push(`${id} ${ms}ms`);
   if (shots) await page.screenshot({ path: new URL(`rooms/${id}.png`, import.meta.url).pathname });
 }
+
+const heaviest = [...report].sort((a, b) => b.nodes - a.nodes)[0];
+console.log(`room transition: median ${median(report.map((r) => r.ms))}ms, worst ${Math.max(...report.map((r) => r.ms))}ms`);
+console.log(`heaviest room: ${heaviest.id}, ${heaviest.nodes} nodes`);
+if (slow.length) console.log(`SLOW (over ${SETTLE_BUDGET}ms): ${slow.join(', ')}`);
 
 /* ── open one book in every room that has a shelf ── */
 let opened = 0;
 for (const r of report) {
   if (!r.shelf) continue;
   await page.evaluate((id) => { location.hash = '#/' + id; }, r.id);
-  await page.waitForTimeout(500);
+  await settle(r.id);
   await page.click('.bk[data-book]');
   await page.waitForTimeout(350);
   const ok = await page.evaluate(() => {
@@ -96,9 +123,34 @@ const linkCheck = await page.evaluate(() => {
 });
 console.log('outbound hosts on a book panel:', linkCheck.join(', ') || '(none open)');
 
+/* ── outbound links land on the book, not on a search box ── */
+const links = await page.evaluate(async () => {
+  const m = await import('/src/js/links.js');
+  const withIsbn = { id: 'x', title: 'Beloved', author: 'Toni Morrison', isbn: '9781400033416' };
+  const without = { id: 'y', title: 'Beloved', author: 'Toni Morrison' };
+  return {
+    previewIsbn: m.VENDORS.preview.url(withIsbn),
+    previewPlain: m.VENDORS.preview.url(without),
+    borrowIsbn: m.VENDORS.openlibrary.url(withIsbn),
+    buy: m.buyLink(withIsbn),
+    samples: m.sampleLinks(withIsbn).length,
+  };
+});
+const expect = (name, ok) => console.log(`${ok ? 'ok  ' : 'FAIL'} ${name}`);
+expect('preview deep-links by ISBN', links.previewIsbn === 'https://books.google.com/books?vid=ISBN9781400033416');
+expect('preview still works without one', links.previewPlain.startsWith('https://www.google.com/search?tbm=bks'));
+expect('borrow deep-links by ISBN', links.borrowIsbn === 'https://openlibrary.org/isbn/9781400033416');
+expect('buy link is bookshop.org', /^https:\/\/bookshop\.org\//.test(links.buy));
+expect('every book offers somewhere to read a sample', links.samples >= 3);
+
+/* no book claims an opening line it cannot source */
+const unsourced = await page.evaluate(() =>
+  window.__shop.ALL_BOOKS.filter((b) => b.first && !b.firstSource).length);
+console.log(`books with an unsourced opening line shown: 0 (${unsourced} held back)`);
+
 /* ── keyboard: tab to a book and press enter ── */
 await page.evaluate(() => { location.hash = '#/front'; });
-await page.waitForTimeout(600);
+await settle('front');
 const kb = await page.evaluate(() => {
   const bk = document.querySelector('.bk[data-book]');
   bk.focus();

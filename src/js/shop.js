@@ -17,6 +17,7 @@ import cellar from './data/books/cellar.js';
 import inkroom from './data/books/inkroom.js';
 import windowseat from './data/books/windowseat.js';
 import landing from './data/books/landing.js';
+import { ENRICH } from './data/enrich.js';
 
 const SHELVES = Object.assign({}, front, longroom, orrery, oak, lamproom, glasshouse,
   readingroom, attic, cellar, inkroom, windowseat, landing);
@@ -26,6 +27,9 @@ export const BOOK_BY_ID = Object.create(null);
 
 for (const room of ROOMS) {
   const list = (SHELVES[room.id] || []).map((b) => ({
+    /* Fetched facts go underneath, so anything written by hand on the
+       shelf wins over anything a lookup guessed. */
+    ...ENRICH[b.id],
     ...b,
     room: room.id,
     won: b.won || [],

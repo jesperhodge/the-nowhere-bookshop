@@ -664,4 +664,32 @@ export function fillerStyle(seed, hue) {
   };
 }
 
+/* A run of shelved books painted as one gradient rather than built out of
+   nodes. Used on the side walls: a book standing on a wall-mounted case is
+   seen almost edge-on, so its 3D geometry collapses to a 1–3px sliver and
+   reads as a scratch. Painted on a plane that faces into the room, the same
+   run reads as a shelf of spines — and costs one element instead of forty. */
+export function spineRun(seed, hue, width) {
+  const r = rngFrom(seed);
+  const spines = [];      /* one layer per book, so each can have its own height */
+  let x = 0;
+  while (x < width) {
+    const w = 9 + Math.round(r() * 20);
+    const h = 62 + Math.round(r() * 34);         /* % of the row this book fills */
+    const l = 11 + r() * 24;
+    const s = 8 + r() * 30;
+    const hh = (hue + (-24 + r() * 48) + 360) % 360;
+    const c = (k) => `hsl(${hh.toFixed(0)} ${s.toFixed(0)}% ${(l * k).toFixed(0)}%)`;
+    /* dark gutter, lit leading edge, body, shadowed trailing edge */
+    spines.push(
+      `linear-gradient(90deg, ${c(0.4)} 0 1px, ${c(1.45)} 1px 3px, ${c(1)} 3px ${w - 2}px, ${c(0.5)} ${w - 2}px ${w}px)` +
+      ` ${x}px 100% / ${w}px ${h}% no-repeat`,
+    );
+    x += w + 1;
+  }
+  /* bottom layer: the shadowed back of the case showing between the books */
+  spines.push(`linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.45)) 0 0 / 100% 100% no-repeat`);
+  return spines.join(',');
+}
+
 export { hash, rngFrom };

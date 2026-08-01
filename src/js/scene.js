@@ -12,7 +12,7 @@
    hand, so a room can never put a fireplace behind a door.
    ============================================================ */
 
-import { spineStyle, shelfSize, fillerStyle, hash } from './covers.js';
+import { spineStyle, shelfSize, fillerStyle, spineRun, hash } from './covers.js';
 import { artURI } from './data/props.js';
 
 const WORLD = { w: 1680, h: 940, d: 1200, hw: 840, hh: 470 };
@@ -71,6 +71,19 @@ function place(p) {
   const f = SLOT[p.at] || SLOT['floor-ml'];
   const c = f(p.w || 200, p.h || 200);
   return { x: c.x + (p.dx || 0), y: c.y + (p.dy || 0), z: c.z + (p.dz || 0) };
+}
+
+/* Anything standing on the floor gets a contact shadow and is dimmed with
+   depth — without those two cues a flat SVG reads as a sticker on the glass
+   rather than a thing in the room. */
+const GROUNDED = /^(floor|tall)/;
+
+function groundStyle(p, c) {
+  if (!GROUNDED.test(p.at || '')) return '';
+  /* -1200 is the back wall, 0 is where you are standing */
+  const depth = Math.min(1, Math.max(0, -c.z / 1200));
+  const dim = (1 - depth * 0.34).toFixed(2);
+  return `--lift:${(0.72 - depth * 0.3).toFixed(2)}; --art-filter: brightness(${dim});`;
 }
 
 function buildProp(p) {
@@ -150,8 +163,9 @@ function buildProp(p) {
     }
     case 'art': {
       const n = el('div', 'prop prop-art', `${base} --pw:${px(p.w)}; --ph:${px(p.h)}; width:${px(p.w)}; height:${px(p.h)};
-        --art:${artURI(p.a, ...propArgs(p))}; --art-op:${p.op ?? 1};`);
+        --art:${artURI(p.a, ...propArgs(p))}; --art-op:${p.op ?? 1}; ${groundStyle(p, c)}`);
       if (p.breathe) n.classList.add('prop-cat');
+      if (GROUNDED.test(p.at || '')) n.classList.add('prop--ground');
       return n;
     }
     default:
@@ -285,8 +299,28 @@ function doorTransform(slot) {
     : `translate3d(832px, ${px(y)}, ${px(bay.r)}) rotateY(-90deg)`;
 }
 
+/* The name of the room beyond, on a bracket sign over the doorway.
+
+   The doorway lies in the side wall, so anything drawn in that plane is seen
+   at about 20° and is unreadable. A real shop hangs its sign out into the
+   room on a bracket; rotating the sign back out of the wall does the same
+   thing here, and the name ends up facing you, above its own door, in
+   perspective. It takes no pointer events — it is signage, not a button. */
+function doorSign(room, side) {
+  return (
+    `<span class="dsign dsign--${side}" aria-hidden="true">` +
+      `<span class="dsign__arm"></span>` +
+      `<span class="dsign__board">` +
+        `<span class="dsign__n">${escapeHtml(room.name)}</span>` +
+        `<span class="dsign__s">${escapeHtml(room.sub || 'further in')} · ${room.total}</span>` +
+      `</span>` +
+    `</span>`
+  );
+}
+
 function buildDoor(room, slot) {
-  const a = el('button', `door3d door3d--${slot[0]}`);
+  const side = slot[0];
+  const a = el('button', `door3d door3d--${side}`);
   a.type = 'button';
   a.dataset.go = room.id;
   a.dataset.bay = slot[1];
@@ -294,28 +328,55 @@ function buildDoor(room, slot) {
   if (room.pal && room.pal['door-glow']) a.style.setProperty('--door-glow', room.pal['door-glow']);
   a.setAttribute('aria-label', `Go through to ${room.name}${room.sub ? ' — ' + room.sub : ''}`);
   a.innerHTML =
-    `<span class="door3d__frame"><span class="door3d__void"></span></span>` +
-    `<span class="door3d__spill"></span>`;
+    `<span class="door3d__frame"><span class="door3d__void"><span class="door3d__step"></span></span></span>` +
+    `<span class="door3d__spill"></span>` +
+    doorSign(room, side);
   return a;
 }
 
-/* a display table that is also a way through — the front table */
+/* A display table that is also a way through — the front table.
+
+   The button box is the table's front apron: it stands at the near edge,
+   from the floor up to the underside of the top. Everything else is built
+   backwards from there, so the top recedes away from you (rotateX(-90deg))
+   instead of jutting out past the front of the room, and the stacks stand
+   on the surface rather than floating behind it. */
+const TABLE = { w: 470, h: 232, d: 300, z: -330 };
+
 function buildTablePortal(room) {
-  const w = 470, legH = 230;
-  const g = el('button', 'door3d table3d', `transform: translate3d(${px(-w / 2 - 330)}, ${px(WORLD.hh - legH)}, ${px(-250)}); width:${px(w)}; height:${px(legH)};`);
+  const { w, h, d, z } = TABLE;
+  const g = el('button', 'door3d table3d',
+    `transform: translate3d(${px(-w / 2 - 300)}, ${px(WORLD.hh - h)}, ${px(z)});
+     width:${px(w)}; height:${px(h)}; --tw:${px(w)}; --th:${px(h)}; --td:${px(d)};`);
   g.type = 'button';
   g.dataset.go = room.id;
-  g.setAttribute('aria-label', `Go to ${room.name} — ${room.sub || ''}`);
+  g.setAttribute('aria-label', `Go to ${room.name}${room.sub ? ' — ' + room.sub : ''}`);
+
   const seed = hash(room.id);
+  const hue = room.pal?.hue ?? 30;
   let stacks = '';
-  for (let i = 0; i < 5; i++) {
-    const f = fillerStyle(seed + i * 131, room.pal?.hue ?? 30);
-    stacks += `<span class="table3d__bk" style="left:${8 + i * 19}%; --w:${68 + (i % 3) * 16}px; --bg:${f.base}; --n:${2 + (i % 3)}"></span>`;
+  for (let i = 0; i < 4; i++) {
+    const f = fillerStyle(seed + i * 131, hue);
+    const n = 2 + (i % 3);
+    /* across the top and back from the front edge, so they sit on the wood */
+    const sx = 26 + i * 108 + (i % 2) * 14;
+    const sz = 70 + (i % 3) * 62;
+    const sw = 96 + (i % 3) * 22;
+    stacks +=
+      `<span class="tstack" style="--sx:${px(sx)}; --sz:${px(sz)}; --sw:${px(sw)}; --sh:${px(n * 17)}; --sd:${px(sw * 0.68)}; --bg:${f.base}">` +
+        `<span class="tstack__top"></span><span class="tstack__side"></span>` +
+      `</span>`;
   }
+
   g.innerHTML =
-    `<span class="table3d__top"></span>
-     <span class="table3d__books">${stacks}</span>
-     <span class="table3d__leg" style="left:6%"></span><span class="table3d__leg" style="right:6%"></span>`;
+    `<span class="table3d__top"></span>` +
+    `<span class="table3d__apron"></span>` +
+    `<span class="table3d__leg" style="--lx:14px; --lz:0"></span>` +
+    `<span class="table3d__leg" style="--lx:${px(w - 34)}; --lz:0"></span>` +
+    `<span class="table3d__leg" style="--lx:14px; --lz:${px(-d + 34)}"></span>` +
+    `<span class="table3d__leg" style="--lx:${px(w - 34)}; --lz:${px(-d + 34)}"></span>` +
+    `<span class="table3d__books">${stacks}</span>` +
+    doorSign(room, 't');
   return g;
 }
 
@@ -396,7 +457,12 @@ function addSideCase(world, side, doorsUsed, hue, seed) {
     ? buildCase({ x: -832, y: WORLD.hh, z: z0, ry: 90, w, rows: 2, cd: 170 })
     : buildCase({ x: 832, y: WORLD.hh, z: z0 - w, ry: -90, w, rows: 2, cd: 170 });
   c.node.classList.add('case--side');
-  c.shelves.forEach((sh, i) => fillRow(sh, [], 0, w - 40, hue, seed + i * 313));
+  /* painted, not built: see spineRun() — edge-on 3D books collapse to
+     1–3px slivers here and read as scratches on the wall */
+  c.shelves.forEach((sh, i) => {
+    sh.classList.add('shelf--painted');
+    sh.style.background = spineRun(seed + i * 313, hue, w - 40);
+  });
   world.appendChild(c.node);
 }
 
