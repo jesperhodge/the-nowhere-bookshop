@@ -107,8 +107,26 @@ and then places its leaves at `x = 70 + Math.sin(a / 57) * 96` for
 `a = −80 … 80`, i.e. **x from −24.6 to 164.6** — the outermost leaf on each side
 is cut off at the box edge. That is the hard vertical edge in the Glasshouse.
 
-**Fix:** widen the viewBox (or clamp the geometry) per artwork. A full audit of
-every `ART` entry is running; the fix is per-entry and mechanical.
+**Fix:** widen the viewBox, or clamp the geometry, per artwork. All 26 `ART`
+entries were audited by computing true path extents — Bézier and elliptical-arc
+extrema, per-primitive rotation, and stroke width — against the declared box.
+Five overflow:
+
+| art | viewBox | drawn extent | over by | cause |
+|---|---|---|---|---|
+| `plant` | `0 0 140 180` | −33.4 … 173.4 | **33.4 left and right** | leaf fan amplitude `sin(a/57)*96`, plus the rotated 16×8 leaf ellipses |
+| `gramophone` | `0 0 160 180` | … 179.3 | 19.3 right | the horn bell's fill path |
+| `starchart` | `0 0 160 200` | −2.5 … 202.5 | 2.5 all four sides | border rect sized to the viewBox instead of inset by half its 5px stroke |
+| `herbs` | `0 0 140 160` | −2.0 … 140 | 2.0 left | leftmost bunch's mirrored leaf paths |
+| `candle` | `0 0 60 140` | −8.0 top | 8.0 top | the `r=26` glow circle at `cy=18` |
+
+`plant` is the visible one — a quarter of the width is cut off each side, which
+is the whole outermost leaf on each end. Fix it by reducing the amplitude
+constant rather than widening the box: widening to `-34 0 208 180` changes the
+aspect ratio from 140:180 to 208:180, and under `background: contain` that would
+render every plant in the shop noticeably smaller than its neighbours.
+`gramophone` gets a wider box (`0 0 180 180`); the other three get their geometry
+nudged in. All five are one-number changes.
 
 ---
 
