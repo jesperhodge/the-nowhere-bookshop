@@ -1,5 +1,10 @@
 # Iteration 2 — plan
 
+> Diagnosis. See `PLAN-ARCH.md` for the decision that follows from it: the room
+> moves from hand-written CSS 3D to three.js. Findings A and B below are the
+> evidence for that move rather than things to be patched in place; Finding C
+> and point 4 survive the change unaltered.
+
 Ten points from the owner. For each: what the feature should actually be, the
 root cause underneath the symptom, whether a different approach beats patching,
 and what changes.
