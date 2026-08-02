@@ -37,6 +37,39 @@ const TEX_SCALE = 0.75; // canvas px per world unit
  * @param {THREE.Path[]} [holes] doorway cut-outs, wound opposite the
  *        outer contour — phase 5's extension point, unused this phase.
  */
+/* ExtrudeGeometry's default UVGenerator (WorldUVGenerator, three.core.js)
+   hands back the shape's raw local coordinates as UVs, not 0-1 — fine for
+   a shape already authored in 0-1 space, but ours are authored in world
+   units (hundreds of px). Left alone, a wall's texture only ever shows
+   the single texel at its ClampToEdgeWrapping edge: the whole face reads
+   as one smeared colour and every wainscot band / pinstripe / mullion
+   textures.js paints is invisible. Normalize top/bottom-cap UVs to 0-1
+   over the shape's own width/height so the texture actually tiles across
+   the face once, and side-wall UVs to 0-1 over thickness so the (mostly
+   hidden) extrude strip doesn't inherit the same bug. */
+function uvGenerator(width, height, thickness) {
+  const cap = (i, vertices) => new THREE.Vector2(
+    vertices[i * 3] / width + 0.5,
+    vertices[i * 3 + 1] / height + 0.5,
+  );
+  return {
+    generateTopUV(geometry, vertices, a, b, c) {
+      return [cap(a, vertices), cap(b, vertices), cap(c, vertices)];
+    },
+    generateSideWallUV(geometry, vertices, a, b, c, d) {
+      const ax = vertices[a * 3], ay = vertices[a * 3 + 1];
+      const bx = vertices[b * 3], by = vertices[b * 3 + 1];
+      const useX = Math.abs(ay - by) < Math.abs(ax - bx);
+      const span = useX ? width : height;
+      const uv = (i) => new THREE.Vector2(
+        (useX ? vertices[i * 3] : vertices[i * 3 + 1]) / span + 0.5,
+        1 - vertices[i * 3 + 2] / thickness,
+      );
+      return [uv(a), uv(b), uv(c), uv(d)];
+    },
+  };
+}
+
 function buildFace({ width, height, thickness, position, rotation, material, holes = [] }) {
   const shape = new THREE.Shape();
   shape.moveTo(-width / 2, -height / 2);
@@ -51,6 +84,7 @@ function buildFace({ width, height, thickness, position, rotation, material, hol
     bevelEnabled: false,
     steps: 1,
     curveSegments: 12,
+    UVGenerator: uvGenerator(width, height, thickness),
   });
   // ExtrudeGeometry extrudes local z in [0, thickness]; shift so z=0 is
   // the room-facing surface and the solid recedes into z<0, i.e. away

@@ -15,6 +15,35 @@ runs the CSS-3D scene exactly as it did after phase 2. The new stage lives
 entirely under `src/js/scene/` and is only reachable via the standalone
 preview harness described below; nothing wires it into the shop yet.
 
+## Post-handoff fix (orchestrator review, before phase 4 started)
+
+Independent verification of this handoff's checkpoint screenshots found the
+wall textures **were not actually visible in the lit render** — both
+`front` (k-panel) and `glasshouse` (k-glass) rendered as smooth, patternless
+gradients, contradicting this document's "wainscot band + pinstripe read
+correctly" claim below. Root cause: `ExtrudeGeometry`'s default
+`WorldUVGenerator` (three.core.js) hands back each shape's *raw local
+coordinates* as UVs rather than 0-1 — fine for a shape authored in 0-1
+space, but `shell.js`'s shapes are authored in world units (hundreds of
+px). With `ClampToEdgeWrapping`, a wall's texture sampled almost entirely
+at one edge texel, so the whole face read as a single smeared colour;
+`textures.js`'s ~450 lines of wall-kind patterns were being computed
+correctly but were invisible on screen. Confirmed by dumping the `uv`
+buffer attribute directly (`[-840, -470, -840, 470, ...]`, matching WORLD
+units, not `[0,0, 0,1, ...]`) — not a rendering-taste issue, a geometry bug.
+
+Fixed in `shell.js` by passing a custom `UVGenerator` to `ExtrudeGeometry`
+that normalizes `generateTopUV`/`generateSideWallUV` output to 0-1 over
+each face's own width/height/thickness. Re-screenshotted all three
+checked rooms (`front`, `glasshouse`, `orrery`) after the fix: wainscot
+band, vertical pinstripes, floorboards, ceiling beams, glass mullion
+grid, and the starfield/nebula all now render as designed. The
+"Checkpoint verdict: pass" below is upgraded from "true despite invisible
+textures" to "true and the texture pipeline is actually visible" — the
+mood/falloff verdict itself was correct, only the texture-visibility claim
+needed correcting. No other files changed; light tuning numbers
+(1.8M candela etc.) are unaffected by this fix and still apply.
+
 ## Checkpoint verdict: **pass**
 
 IMPLEMENTATION.md's exact bar: *"if the skeleton looks like grey plastic,
