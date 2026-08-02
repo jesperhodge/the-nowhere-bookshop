@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stage preview — phase 3 checkpoint</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Standalone harness for the three.js stage substrate (phase 3). Not
+  part of the live site — main.js/index.html still run the CSS-3D
+  scene.js exactly as before. This exists so the new stage.js/shell.js
+  can be looked at and screenshotted on their own, per
+  IMPLEMENTATION.md's phase-3 checkpoint instruction.
+
+  Serve with a plain static server from the repo root, e.g.:
+    python3 -m http.server 8099
+  then open http://localhost:8099/tools/preview-stage.html
+  (npm start's Express app deliberately only serves /src and
+  index.html — see server/index.js — so it will 404 on /vendor here.)
+
+  Query params:
+    ?room=<id>   which room to build (default: glasshouse)
+    ?orbit=1     free-look with mouse (OrbitControls) instead of the
+                 fixed §4.2 camera pose, for eyeballing the shell
+    ?exposure=N  override renderer.toneMappingExposure
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0a0706; }
+  #wrap { position: fixed; inset: 0; }
+  canvas { display: block; width: 100%; height: 100%; }
+  #hud {
+    position: fixed; left: 12px; top: 12px; z-index: 2;
+    font: 12px/1.5 ui-monospace, monospace; color: #e8dcc8;
+    background: rgba(10,7,6,.72); padding: 8px 10px; border-radius: 6px;
+    pointer-events: none; white-space: pre;
+  }
+  #err {
+    position: fixed; inset: 0; z-index: 3; display: none;
+    background: #1a0e0c; color: #ffb4a0; font: 13px/1.5 monospace;
+    padding: 24px; white-space: pre-wrap; overflow: auto;
+  }
+</style>
+<script type="importmap">
+{ "imports": {
+    "three": "/vendor/three/build/three.module.js",
+    "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="wrap"><canvas id="stage-canvas"></canvas></div>
+<div id="hud"></div>
+<pre id="err"></pre>
+
+<script type="module">
+import * as THREE from 'three';
+import { createStage, buildRoomLights } from '/src/js/scene/stage.js';
+import { buildShell } from '/src/js/scene/shell.js';
+import { ROOMS } from '/src/js/data/rooms.js';
+
+const params = new URLSearchParams(location.search);
+const roomId = params.get('room') || 'glasshouse';
+const room = ROOMS.find((r) => r.id === roomId) || ROOMS[0];
+
+const canvas = document.getElementById('stage-canvas');
+const hud = document.getElementById('hud');
+const errBox = document.getElementById('err');
+
+window.addEventListener('error', (e) => showError(e.error || e.message));
+window.addEventListener('unhandledrejection', (e) => showError(e.reason));
+function showError(err) {
+  errBox.style.display = 'block';
+  errBox.textContent = (err && err.stack) || String(err);
+  window.__stageError = String((err && err.message) || err);
+}
+
+const exposure = params.has('exposure') ? Number(params.get('exposure')) : undefined;
+const stage = createStage(canvas, exposure !== undefined ? { toneMappingExposure: exposure } : {});
+
+const shell = buildShell(room);
+stage.scene.add(shell);
+
+const lightOpts = {};
+if (params.has('li')) lightOpts.lampIntensity = Number(params.get('li'));
+if (params.has('ai')) lightOpts.ambientIntensity = Number(params.get('ai'));
+if (params.has('ld')) lightOpts.lampDecay = Number(params.get('ld'));
+const lights = buildRoomLights(room, lightOpts);
+stage.scene.add(lights);
+
+if (params.get('orbit') === '1') {
+  const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
+  const controls = new OrbitControls(stage.camera, stage.renderer.domElement);
+  controls.target.set(0, 470, -600);
+  controls.update();
+  (function pollControls() { controls.update(); requestAnimationFrame(pollControls); })();
+}
+
+const lampCount = (room.props || []).filter((p) => p.t === 'lamp').length;
+hud.textContent =
+  `room: ${room.id}  kind: ${room.kind}\n` +
+  `lamps: ${lampCount}  ambient: on\n` +
+  `camera fov: ${stage.camera.fov.toFixed(1)}deg  exposure: ${stage.renderer.toneMappingExposure}\n` +
+  (params.get('orbit') === '1' ? 'drag to orbit' : 'fixed §4.2 pose (?orbit=1 to free-look)');
+
+stage.start();
+
+// exposed for Playwright / manual poking, not used by the render loop itself
+window.__stage = stage;
+window.__stageRoom = room.id;
+</script>
+</body>
+</html>
