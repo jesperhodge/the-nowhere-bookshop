@@ -32,13 +32,13 @@ export const ART = {
     <g fill="none" stroke="${c}" stroke-width="4" stroke-linecap="round">
       ${Array.from({ length: 9 }, (_, i) => {
         const a = -80 + i * 20;
-        return `<path d="M70 140 q${Math.sin(a / 57) * 60} -50 ${Math.sin(a / 57) * 96} -${60 + (i % 3) * 22}"/>`;
+        return `<path d="M70 140 q${Math.sin(a / 57) * 60} -50 ${Math.sin(a / 57) * 62} -${60 + (i % 3) * 22}"/>`;
       }).join('')}
     </g>
     <g fill="${c}">
       ${Array.from({ length: 9 }, (_, i) => {
         const a = -80 + i * 20;
-        const x = 70 + Math.sin(a / 57) * 96, y = 140 - (60 + (i % 3) * 22);
+        const x = 70 + Math.sin(a / 57) * 62, y = 140 - (60 + (i % 3) * 22);
         return `<ellipse cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" rx="16" ry="8" transform="rotate(${a} ${x.toFixed(0)} ${y.toFixed(0)})"/>`;
       }).join('')}
     </g>
@@ -84,7 +84,7 @@ export const ART = {
     <path d="M30 14 q5 7 0 14 q-5 -7 0 -14z" fill="#fff6d0"/>
     <ellipse cx="30" cy="120" rx="26" ry="8" fill="${h}"/>
     <path d="M6 120 q24 14 48 0 v6 q-24 12 -48 0z" fill="${h}" opacity=".8"/>
-    <circle cx="30" cy="18" r="26" fill="#ffb347" opacity=".18"/>`),
+    <circle cx="30" cy="26" r="26" fill="#ffb347" opacity=".18"/>`),
 
   teapot: (c = '#8fa9a1') => S('0 0 140 110', `
     <path d="M28 54 h74 a34 34 0 0 1 -12 46 h-50 a34 34 0 0 1 -12 -46z" fill="${c}"/>
@@ -102,7 +102,7 @@ export const ART = {
     ${Array.from({ length: 3 }, (_, r) => Array.from({ length: 11 }, (_, i) =>
       `<circle cx="${26 + i * 11}" cy="${70 + r * 9}" r="3.2" fill="${k}"/>`).join('')).join('')}`),
 
-  gramophone: (c = '#c07a3a', d = '#3a2418') => S('0 0 160 180', `
+  gramophone: (c = '#c07a3a', d = '#3a2418') => S('0 0 180 180', `
     <path d="M84 96 L150 18 a54 54 0 0 1 0 96 z" fill="${c}"/>
     <path d="M96 96 L142 40 a34 34 0 0 1 0 60 z" fill="#000" opacity=".28"/>
     <rect x="26" y="112" width="66" height="10" rx="4" fill="${d}"/>
@@ -182,7 +182,7 @@ export const ART = {
 
   starchart: (c = '#c99a5a', bg = '#101828') => S('0 0 160 200', `
     <rect x="0" y="0" width="160" height="200" rx="4" fill="${bg}"/>
-    <rect x="0" y="0" width="160" height="200" rx="4" fill="none" stroke="${c}" stroke-width="5"/>
+    <rect x="2.5" y="2.5" width="155" height="195" rx="4" fill="none" stroke="${c}" stroke-width="5"/>
     <circle cx="80" cy="96" r="62" fill="none" stroke="${c}" stroke-width="1.4" opacity=".6"/>
     <circle cx="80" cy="96" r="40" fill="none" stroke="${c}" stroke-width="1.2" opacity=".45"/>
     <path d="M18 96 h124 M80 34 v124 M36 52 L124 140 M124 52 L36 140" stroke="${c}" stroke-width=".8" opacity=".35"/>
@@ -201,7 +201,7 @@ export const ART = {
 
   herbs: (c = '#7d8f5a', s = '#8a6a3a') => S('0 0 140 160', `
     <path d="M6 8 h128" stroke="${s}" stroke-width="4"/>
-    ${[18, 52, 88, 120].map((x, i) => `
+    ${[20, 52, 88, 120].map((x, i) => `
       <g transform="translate(${x} 10)">
         <path d="M0 0 v${70 + (i % 2) * 30}" stroke="${s}" stroke-width="3"/>
         ${Array.from({ length: 8 }, (_, j) => `<path d="M0 ${16 + j * 11} q-16 4 -20 14 q14 2 20 -6 M0 ${16 + j * 11} q16 4 20 14 q-14 2 -20 -6" fill="${c}" opacity=".9"/>`).join('')}

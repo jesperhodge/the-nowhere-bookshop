@@ -3,9 +3,8 @@ import fs from 'node:fs';
 
 const median = (xs) => { const s = [...xs].sort((a, b) => a - b); return s[s.length >> 1]; };
 
-const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const shots = process.argv.includes('--shots');
-const browser = await chromium.launch({ executablePath: EXE });
+const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1600, height: 1000 } });
 
 const errors = [];
@@ -33,6 +32,54 @@ async function settle(label) {
   return Date.now() - t0;
 }
 await settle('front');
+
+/* ── every ART entry must draw inside its own viewBox (Finding C, PLAN.md) ──
+   Render each shape into a canvas padded well past its declared box, using an
+   enlarged viewBox so nothing gets clipped at render time, then check whether
+   any painted pixel falls outside where the *real* viewBox would have been.
+   That is a direct test of what clips in production, not a re-derivation of
+   each shape's bezier/arc extrema. */
+const artCheck = await page.evaluate(async () => {
+  const { ART } = await import('/src/js/data/props.js');
+  const out = [];
+  for (const name of Object.keys(ART)) {
+    const svgStr = ART[name]();
+    const [, vb, body] = svgStr.match(/viewBox="([^"]+)">([\s\S]*)<\/svg>/);
+    const [minX, minY, w, h] = vb.split(' ').map(Number);
+    const pad = Math.max(w, h) * 0.5;
+    const scale = 4;
+    const cw = Math.round((w + pad * 2) * scale), ch = Math.round((h + pad * 2) * scale);
+    const paddedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${minX - pad} ${minY - pad} ${w + pad * 2} ${h + pad * 2}">${body}</svg>`;
+    const img = new Image();
+    await new Promise((res, rej) => {
+      img.onload = res; img.onerror = rej;
+      img.src = 'data:image/svg+xml,' + encodeURIComponent(paddedSvg);
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = cw; canvas.height = ch;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, cw, ch);
+    const data = ctx.getImageData(0, 0, cw, ch).data;
+    const innerX0 = Math.round(pad * scale), innerY0 = Math.round(pad * scale);
+    const innerX1 = Math.round((pad + w) * scale), innerY1 = Math.round((pad + h) * scale);
+    let overBy = 0;
+    for (let y = 0; y < ch; y++) {
+      for (let x = 0; x < cw; x++) {
+        if (data[(y * cw + x) * 4 + 3] <= 8) continue;
+        if (x < innerX0) overBy = Math.max(overBy, (innerX0 - x) / scale);
+        if (x >= innerX1) overBy = Math.max(overBy, (x - innerX1 + 1) / scale);
+        if (y < innerY0) overBy = Math.max(overBy, (innerY0 - y) / scale);
+        if (y >= innerY1) overBy = Math.max(overBy, (y - innerY1 + 1) / scale);
+      }
+    }
+    out.push({ name, overBy: Math.round(overBy * 10) / 10 });
+  }
+  return out;
+});
+const clipped = artCheck.filter((r) => r.overBy > 0.5);
+console.log(clipped.length
+  ? `ART CLIPPED BY VIEWBOX: ${clipped.map((r) => `${r.name} (+${r.overBy})`).join(', ')}`
+  : `all ${artCheck.length} ART entries draw inside their viewBox`);
 
 /* ── data integrity ── */
 const data = await page.evaluate(() => {
