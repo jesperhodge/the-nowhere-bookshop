@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Stage preview — phase 3 checkpoint</title>
+<title>Stage preview — phase 4 checkpoint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  Standalone harness for the three.js stage substrate (phase 3). Not
-  part of the live site — main.js/index.html still run the CSS-3D
-  scene.js exactly as before. This exists so the new stage.js/shell.js
-  can be looked at and screenshotted on their own, per
-  IMPLEMENTATION.md's phase-3 checkpoint instruction.
+  Standalone harness for the three.js stage substrate. Not part of
+  the live site — main.js/index.html still run the CSS-3D scene.js
+  exactly as before. Started as the phase-3 shell/lighting checkpoint;
+  phase 4 extends it with real cases + books + the per-room spine
+  atlas + raycast hover/select + the a11y mirror (src/js/scene/
+  books.js, interact.js, a11y.js), per IMPLEMENTATION.md §4.6/§4.7.
 
   Serve with a plain static server from the repo root, e.g.:
     python3 -m http.server 8099
   then open http://localhost:8099/tools/preview-stage.html
-  (npm start's Express app deliberately only serves /src and
-  index.html — see server/index.js — so it will 404 on /vendor here.)
+  (npm start's Express app only serves /src, /vendor and index.html
+  as of phase 4 — see server/index.js — but NOT /tools, so this
+  harness itself still needs the plain static server; only the real
+  site's own eventual vendor/three import would work under npm start.)
 
   Query params:
     ?room=<id>   which room to build (default: glasshouse)
     ?orbit=1     free-look with mouse (OrbitControls) instead of the
                  fixed §4.2 camera pose, for eyeballing the shell
     ?exposure=N  override renderer.toneMappingExposure
+    ?books=0     skip cases/books/a11y mirror entirely (shell+lights
+                 only, i.e. the old phase-3 view)
+    ?mirror=1    force the a11y mirror's buttons visible (not just
+                 focused) — for eyeballing the mirror itself, not how
+                 a screen reader user would ever see it
 -->
 <style>
   html, body { margin: 0; height: 100%; background: #0a0706; }
@@ -37,6 +45,20 @@
     position: fixed; inset: 0; z-index: 3; display: none;
     background: #1a0e0c; color: #ffb4a0; font: 13px/1.5 monospace;
     padding: 24px; white-space: pre-wrap; overflow: auto;
+  }
+  /* ?mirror=1 only: make the a11y mirror's buttons visible so they
+     can be eyeballed directly, instead of the clip-hidden default
+     (see src/js/scene/a11y.js) a screen-reader user would get. Not
+     used by the real accessibility path, testing aid only. */
+  body.show-mirror .scene-a11y-mirror button {
+    position: static !important; width: auto !important; height: auto !important;
+    margin: 1px !important; padding: 2px 6px !important; clip: auto !important; clip-path: none !important;
+    display: inline-block; font: 11px monospace; color: #e8dcc8; background: #241a12;
+    border: 1px solid #4a382a;
+  }
+  body.show-mirror #mirror-wrap {
+    position: fixed; right: 0; top: 0; bottom: 0; width: 260px; overflow: auto;
+    background: rgba(10,7,6,.88); z-index: 2; padding: 8px;
   }
 </style>
 <script type="importmap">
@@ -55,11 +77,17 @@
 import * as THREE from 'three';
 import { createStage, buildRoomLights } from '/src/js/scene/stage.js';
 import { buildShell } from '/src/js/scene/shell.js';
+import { buildRoomBooks } from '/src/js/scene/books.js';
+import { createBookController, attachPointerPicking } from '/src/js/scene/interact.js';
+import { mountA11yMirror } from '/src/js/scene/a11y.js';
 import { ROOMS } from '/src/js/data/rooms.js';
+import { booksIn } from '/src/js/shop.js';
 
 const params = new URLSearchParams(location.search);
 const roomId = params.get('room') || 'glasshouse';
 const room = ROOMS.find((r) => r.id === roomId) || ROOMS[0];
+const wantBooks = params.get('books') !== '0';
+if (params.get('mirror') === '1') document.body.classList.add('show-mirror');
 
 const canvas = document.getElementById('stage-canvas');
 const hud = document.getElementById('hud');
@@ -95,11 +123,47 @@ if (params.get('orbit') === '1') {
 }
 
 const lampCount = (room.props || []).filter((p) => p.t === 'lamp').length;
-hud.textContent =
-  `room: ${room.id}  kind: ${room.kind}\n` +
-  `lamps: ${lampCount}  ambient: on\n` +
-  `camera fov: ${stage.camera.fov.toFixed(1)}deg  exposure: ${stage.renderer.toneMappingExposure}\n` +
-  (params.get('orbit') === '1' ? 'drag to orbit' : 'fixed §4.2 pose (?orbit=1 to free-look)');
+
+let entries = [];
+let controller = null;
+let mirror = null;
+let lastOpened = '';
+
+if (wantBooks) {
+  const books = booksIn(room.id);
+  const { group: bookGroup, entries: bookEntries } = buildRoomBooks(room, books);
+  stage.scene.add(bookGroup);
+  entries = bookEntries;
+
+  controller = createBookController();
+  attachPointerPicking(stage, entries, controller); // detach() not needed: this page never tears the room down
+
+  const mirrorWrap = document.createElement('div');
+  mirrorWrap.id = 'mirror-wrap';
+  document.body.appendChild(mirrorWrap);
+  mirror = mountA11yMirror(mirrorWrap, entries, controller);
+
+  controller.onActivate((entry) => {
+    lastOpened = `${entry.book.title} (${entry.book.id})`;
+    console.log('book:open', entry.book.id, entry.book.title);
+    updateHud();
+  });
+
+  window.__entries = entries;
+  window.__controller = controller;
+  window.__mirror = mirror;
+}
+
+function updateHud() {
+  hud.textContent =
+    `room: ${room.id}  kind: ${room.kind}\n` +
+    `lamps: ${lampCount}  ambient: on\n` +
+    `camera fov: ${stage.camera.fov.toFixed(1)}deg  exposure: ${stage.renderer.toneMappingExposure}\n` +
+    (params.get('orbit') === '1' ? 'drag to orbit\n' : 'fixed §4.2 pose (?orbit=1 to free-look)\n') +
+    (wantBooks ? `books: ${entries.length} real, mirror buttons: ${entries.length}\n` : 'books: skipped (?books=0)\n') +
+    (lastOpened ? `last opened: ${lastOpened}` : '');
+}
+updateHud();
 
 stage.start();
 

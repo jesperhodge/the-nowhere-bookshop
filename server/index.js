@@ -63,6 +63,12 @@ app.get('/api/list/:slug', (req, res) => {
    hand out server/ source, tools/, node_modules/ and data/cache/
    to anyone who asked. */
 app.use('/src', express.static(path.join(ROOT, 'src')));
+/* three.js, vendored and committed (PLAN-ARCH.md "The one dependency")
+   — not used by main.js/index.html yet (the CSS-3D scene is still
+   live, see HANDOFF-PHASE5.md), but the route is additive and safe to
+   land now so a later phase's `import * as THREE from '/vendor/...'`
+   works under `npm start` without a server change of its own. */
+app.use('/vendor', express.static(path.join(ROOT, 'vendor')));
 app.get('/', (_req, res) => res.sendFile(path.join(ROOT, 'index.html')));
 app.get('/index.html', (_req, res) => res.sendFile(path.join(ROOT, 'index.html')));
 
