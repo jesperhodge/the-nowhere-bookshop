@@ -39,6 +39,13 @@ function mix(a, b, p) {
 }
 const BLACK = '#000000', WHITE = '#ffffff';
 
+/* hex/rgba/mix/pinstripe re-exported so props.js (phase 6) can reuse the
+   same gradient-math primitives for its canvas-painted prop types
+   (lamp shade, window, hearth, trunk, column, ...) instead of
+   duplicating them — same "one texture pipeline" reasoning as
+   PLAN-ARCH.md's "Keeping the look". Behaviour unchanged, additive. */
+export { hex, rgba, mix, pinstripe, BLACK, WHITE };
+
 /* ── small generic pattern drawers, each period given in CSS px and
    scaled to canvas px by `s` ──────────────────────────────────── */
 

@@ -54,7 +54,7 @@ const PANEL_T = 14; // carcass panel thickness, ours (scene.js has no direct equ
 
 const SIDE_NEAR = -420;
 const SIDE_FAR = -1190;
-const SIDE_CD = 170;
+export const SIDE_CD = 170;
 const SIDE_MAX_W = 640;
 const SIDE_MIN_W = 260;
 
@@ -255,6 +255,22 @@ function sideCaseSpec(room, side) {
   w = Math.min(w, SIDE_MAX_W);
   if (w < SIDE_MIN_W) return null;
   return { z0, w };
+}
+
+/* Exported per phase 6's props.js: a floor-l/floor-r/floor-ml/floor-mr/
+   back-l/back-r prop and a same-side case can genuinely occupy the same
+   3D volume now that both are real geometry (SLOT's floor-l/r,
+   floor-ml/mr, back-l/r x-anchors sit well within SIDE_CD's 170-unit
+   case depth — this was
+   never a problem in the CSS build, where the side "shelf" was a flat
+   painted card with no real depth to collide with). props.js uses this
+   existence check (not sideCaseSpec()'s full {z0,w} — it only needs
+   the boolean) to decide whether to nudge an affected prop clear of the
+   case, the same "resolve a real conflict between two now-real pieces
+   of geometry" move phase 5 made for the case/door overlap it found —
+   see HANDOFF-PHASE7.md for the numbers this was verified against. */
+export function sideCaseExists(room, side) {
+  return !!sideCaseSpec(room, side);
 }
 
 /* ── the atlas ────────────────────────────────────────────── */

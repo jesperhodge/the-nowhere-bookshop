@@ -8,7 +8,7 @@
    ============================================================ */
 
 import * as THREE from 'three';
-import { WORLD, placeProp } from './coords.js';
+import { WORLD, lampAnchor } from './coords.js';
 
 /* ── camera ───────────────────────────────────────────────────
    Reproduces the CSS framing: perspective: 1500px, i.e. an eye at
@@ -40,11 +40,14 @@ export function makeCamera(aspect = 1) {
    real, instead of the radial-gradient planes that turned out never
    to render (PLAN-ARCH.md "Finding A").
 
-   Lamp position: coords.placeProp() gives the CSS-authored anchor —
-   the shade's TOP-LEFT corner, already y-flipped. The bulb hangs
-   roughly at the shade's horizontal centre and just below its bottom
-   edge (see .prop-lamp .bulb in scene.css: bottom:-14px), so the
-   light sits at (anchor.x + w/2, anchor.y - h - 14, anchor.z). */
+   Lamp position: coords.lampAnchor() gives the CSS-authored anchor —
+   the shade's TOP-LEFT corner, already y-flipped, resolved to the
+   bulb's actual position (shade horizontal centre, 14 units below the
+   shade's bottom edge — see .prop-lamp .bulb in scene.css:
+   bottom:-14px). Phase 6's props.js lamp fixture (shade + cord) calls
+   the SAME function to place its geometry, so the light and the
+   fixture it's supposedly inside of can't drift apart — see
+   coords.js's lampAnchor() doc comment. */
 /* Tuned empirically against screenshots, not derived — three.js r155+
    uses physically-based light units (PointLight intensity is candela,
    falloff is real inverse-square via `decay`). Our world units are CSS
@@ -71,11 +74,7 @@ export function buildRoomLights(room, opts = {}) {
 
   for (const p of room.props || []) {
     if (p.t !== 'lamp') continue;
-    const anchor = placeProp(p);
-    const w = p.w || 200, h = p.h || 200;
-    const cx = anchor.x + w / 2;
-    const cy = anchor.y - h - 14;
-    const cz = anchor.z;
+    const anchor = lampAnchor(p);
     const color = p.green ? '#8fe4bc' : (pal.glow || '#ffc978');
 
     const light = new THREE.PointLight(
@@ -84,7 +83,7 @@ export function buildRoomLights(room, opts = {}) {
       opts.lampDistance ?? LAMP_DISTANCE,
       opts.lampDecay ?? LAMP_DECAY,
     );
-    light.position.set(cx, cy, cz);
+    light.position.set(anchor.x, anchor.y, anchor.z);
     group.add(light);
 
     // a faint bulb-glow sphere so the fixture itself doesn't read as

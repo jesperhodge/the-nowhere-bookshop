@@ -646,20 +646,58 @@ export function shelfSize(book) {
   return { t, h, d, tilt: r() < 0.09 ? (r() < 0.5 ? -3.5 : 3.5) : 0 };
 }
 
+/* HSL -> #rrggbb. fillerStyle() below used to hand back CSS Color-4
+   space-separated `hsl(H S% L%)` strings directly. That's valid CSS the
+   live scene.css/scene.js build renders fine — but it silently breaks
+   two DOWNSTREAM consumers that were both added in the three.js port
+   without either side knowing about the mismatch:
+   src/js/scene/books.js's `new THREE.Color(item.coverColor)` (a filler
+   book's cover material) and its `parseStops()` atlas-gradient parser
+   (regex is hex-only, `#[0-9a-fA-F]{6}`). three.js's own
+   `Color.setStyle()` (vendor/three/build/three.core.js) only matches
+   COMMA-separated `hsl(H, S%, L%)` -- space-separated silently matches
+   nothing and leaves the color at its default white, which is exactly
+   why every filler book's cover rendered as a blank white box and
+   every filler spine fell back to parseStops()'s flat-gray default.
+   Emitting hex here fixes both consumers at once and is a no-op for
+   the CSS site (same colour, different encoding). Found and fixed
+   during phase 6's props.js testing -- see HANDOFF-PHASE7.md. */
+function hslToHex(h, s, l) {
+  h = ((h % 360) + 360) % 360;
+  s = Math.max(0, Math.min(100, s)) / 100;
+  l = Math.max(0, Math.min(100, l)) / 100;
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+  const m = l - c / 2;
+  let r1, g1, b1;
+  if (h < 60) [r1, g1, b1] = [c, x, 0];
+  else if (h < 120) [r1, g1, b1] = [x, c, 0];
+  else if (h < 180) [r1, g1, b1] = [0, c, x];
+  else if (h < 240) [r1, g1, b1] = [0, x, c];
+  else if (h < 300) [r1, g1, b1] = [x, 0, c];
+  else [r1, g1, b1] = [c, 0, x];
+  const toHex = (v) => Math.round((v + m) * 255).toString(16).padStart(2, '0');
+  return `#${toHex(r1)}${toHex(g1)}${toHex(b1)}`;
+}
+
 /* a filler book — décor only, never interactive */
 export function fillerStyle(seed, hue) {
   const r = rngFrom(seed);
   const l = 12 + r() * 26;
   const s = 8 + r() * 30;
   const hh = (hue + (-24 + r() * 48) + 360) % 360;
-  const base = `hsl(${hh.toFixed(0)} ${s.toFixed(0)}% ${l.toFixed(0)}%)`;
+  const base = hslToHex(hh, s, l);
   return {
-    bg: `linear-gradient(90deg, hsl(${hh.toFixed(0)} ${s.toFixed(0)}% ${(l * 0.5).toFixed(0)}%), hsl(${hh.toFixed(0)} ${s.toFixed(0)}% ${(l * 1.35).toFixed(0)}%) 22%, hsl(${hh.toFixed(0)} ${s.toFixed(0)}% ${(l * 0.55).toFixed(0)}%))`,
+    // explicit 0%/22%/100% stops (matching spineStyle()'s real-book
+    // gradient format) so books.js's parseStops() -- which requires a
+    // percentage on every stop -- captures all three, not just the
+    // one that already had one.
+    bg: `linear-gradient(90deg, ${hslToHex(hh, s, l * 0.5)} 0%, ${hslToHex(hh, s, l * 1.35)} 22%, ${hslToHex(hh, s, l * 0.55)} 100%)`,
     t: 9 + Math.round(r() * 22),
     h: 132 + Math.round(r() * 66),
     d: 96 + Math.round(r() * 24),
     tilt: r() < 0.06 ? (r() < 0.5 ? -5 : 5) : 0,
-    band: r() < 0.4 ? `hsl(${((hh + 40) % 360).toFixed(0)} 40% 60%)` : 'transparent',
+    band: r() < 0.4 ? hslToHex((hh + 40) % 360, 40, 60) : 'transparent',
     base,
   };
 }

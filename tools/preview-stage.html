@@ -13,7 +13,12 @@
   (holes cut into the side walls), a light spill in each opening, and
   a DOM sign shown on hover/focus (src/js/scene/doors.js, plus the
   createDoorController()/attachDoorPicking() additions to interact.js)
-  — per IMPLEMENTATION.md §3 (row 5, points 2 & 3).
+  — per IMPLEMENTATION.md §3 (row 5, points 2 & 3). Phase 6 adds props
+  as textured planes (src/js/scene/props.js) — art SVGs alpha-mapped
+  onto contain-fit planes, hand-painted canvas textures for the ten
+  specially-coded types, and real shade+cord geometry for the lamp
+  fixture (the bare bulb-sphere stand-in from phase 3 now has a real
+  fixture around it) — per IMPLEMENTATION.md §3 (row 6, point 9).
 
   Serve with a plain static server from the repo root, e.g.:
     python3 -m http.server 8099
@@ -43,6 +48,9 @@
     ?dli=N       override door PointLight intensity (see doors.js's
                  DOOR_LIGHT_INTENSITY) — for tuning against a screenshot
     ?ddist=N     override door PointLight distance
+    ?props=0     skip set dressing entirely (shell+lights+books+doors
+                 only, i.e. the pre-phase-6 view — isolates a props
+                 regression from everything else)
 -->
 <style>
   html, body { margin: 0; height: 100%; background: #0a0706; }
@@ -92,6 +100,7 @@ import { createStage, buildRoomLights } from '/src/js/scene/stage.js';
 import { buildShell } from '/src/js/scene/shell.js';
 import { buildRoomBooks } from '/src/js/scene/books.js';
 import { computeRoomDoorHoles, buildRoomDoors } from '/src/js/scene/doors.js';
+import { buildRoomProps } from '/src/js/scene/props.js';
 import {
   createBookController, attachPointerPicking,
   createDoorController, attachDoorPicking,
@@ -106,6 +115,7 @@ const room = ROOMS.find((r) => r.id === roomId) || ROOMS[0];
 const wantBooks = params.get('books') !== '0';
 const wantDoors = params.get('doors') !== '0';
 const wantSigns = wantDoors && params.get('signs') !== '0';
+const wantProps = params.get('props') !== '0';
 if (params.get('mirror') === '1') document.body.classList.add('show-mirror');
 
 const canvas = document.getElementById('stage-canvas');
@@ -227,6 +237,25 @@ if (wantDoors) {
   window.__doorController = doorController;
 }
 
+let propsRig = null;
+if (wantProps) {
+  propsRig = buildRoomProps(room);
+  stage.scene.add(propsRig.group);
+
+  const clockStart = performance.now();
+  (function pollProps() {
+    propsRig.update((performance.now() - clockStart) / 1000);
+    requestAnimationFrame(pollProps);
+  })();
+
+  window.__propsGroup = propsRig.group;
+  // a plain boolean flag, not the Promise itself, since Playwright's
+  // page.evaluate() can't hand a live Promise object back across the
+  // bridge — poll this for the settle-before-screenshot discipline.
+  window.__propsReady = false;
+  propsRig.ready.then(() => { window.__propsReady = true; updateHud(); });
+}
+
 function updateHud() {
   hud.textContent =
     `room: ${room.id}  kind: ${room.kind}\n` +
@@ -235,6 +264,7 @@ function updateHud() {
     (params.get('orbit') === '1' ? 'drag to orbit\n' : 'fixed §4.2 pose (?orbit=1 to free-look)\n') +
     (wantBooks ? `books: ${entries.length} real, mirror buttons: ${entries.length}\n` : 'books: skipped (?books=0)\n') +
     (wantDoors ? `doors: ${doorEntries.length}${wantSigns ? '' : ' (signs off)'}\n` : 'doors: skipped (?doors=0)\n') +
+    (wantProps ? `props: ${(room.props || []).length} (${window.__propsReady ? 'loaded' : 'loading'})\n` : 'props: skipped (?props=0)\n') +
     (lastOpened ? `last opened: ${lastOpened}\n` : '') +
     (lastDoor ? `last door: ${lastDoor}` : '');
 }

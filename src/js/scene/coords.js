@@ -79,3 +79,44 @@ export function placeProp(p) {
     z: c.z + (p.dz || 0),
   };
 }
+
+/* Every SLOT anchor (except 'rug', which is laid flat and handled on its
+   own) is the prop's box TOP-LEFT-of-front corner: x grows right by w,
+   y shrinks toward the floor by h from there (see the SLOT comment
+   above). That box-center formula is shared by two independent callers
+   this phase — stage.js's buildRoomLights() (the point light + glow
+   bulb) and props.js's lamp fixture geometry (shade + cord) — and per
+   HANDOFF-PHASE6's explicit warning ("make sure your lamp prop geometry
+   lines up with that light position exactly ... don't recompute it
+   independently and risk drift"), both now call this ONE function
+   rather than each inlining the same arithmetic. Bulb position matches
+   scene.css's `.prop-lamp .bulb { bottom:-14px }` (14 units below the
+   shade's bottom edge, centered horizontally). */
+export function lampAnchor(p) {
+  const anchor = placeProp(p);
+  const w = p.w || 200, h = p.h || 200;
+  return {
+    x: anchor.x + w / 2,
+    y: anchor.y - h - 14,
+    z: anchor.z,
+    shadeTop: anchor.y,
+    shadeBottom: anchor.y - h,
+    w, h,
+  };
+}
+
+/* Box-center helper for the generic "vertical billboard" prop case
+   (everything props.js draws except 'rug', which lies flat on the
+   floor and is positioned directly from placeProp() + w/h instead). */
+export function propBoxCenter(p) {
+  const anchor = placeProp(p);
+  const w = p.w || 200, h = p.h || 200;
+  return {
+    x: anchor.x + w / 2,
+    y: anchor.y - h / 2,
+    z: anchor.z,
+    bottomY: anchor.y - h,
+    topY: anchor.y,
+    w, h,
+  };
+}
