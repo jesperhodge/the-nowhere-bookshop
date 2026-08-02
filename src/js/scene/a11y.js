@@ -12,14 +12,19 @@
    (see interact.js) so a book can't behave differently depending on
    which input found it.
 
-   This phase only covers books (doors and tables don't exist as
-   real 3D objects yet — phases 5 and 7). The module is shaped so a
-   later phase can append door/table entries to the SAME mirror list
-   rather than building a parallel one: mountA11yMirror() takes a
-   plain `entries` array and an `ariaLabel`/`activate`/`setHighlight`
-   shape per entry (see books.js's `entries`), not anything
-   book-specific, and exposes `addEntry()` to append more of them
-   in place after doors/tables exist.
+   Phase 4 covered only books. Phase 5 (doors) appends to the SAME
+   mirror list via addEntry() rather than building a parallel one, per
+   this module's original design — but books and doors want DIFFERENT
+   activate() behaviour (book:open vs. door:go), and mountA11yMirror()
+   only takes one `controller` at mount time. Rather than teach ONE
+   controller to branch on entry shape, each entry may carry its OWN
+   `.controller` (see interact.js: createBookController() /
+   createDoorController() are separate instances) — addEntry() prefers
+   `entry.controller` and falls back to the mirror's default `controller`
+   when absent, so book entries (no `.controller` field) are completely
+   unaffected and doors just supply their own. `entries`/`addEntry()`
+   still take a plain `ariaLabel`/`setHighlight` shape otherwise,
+   nothing book- or door-specific.
    ============================================================ */
 
 /* visually hidden, not display:none — screen readers and Tab order
@@ -41,17 +46,23 @@ const HIDDEN_CSS = [
 /**
  * @param {HTMLElement} container  where the mirror's root is appended
  *   (a plain div; the harness/eventual main.js decides layout)
- * @param {object[]} entries  books.js's `buildRoomBooks().entries` —
- *   each needs `.ariaLabel` and `.setHighlight(bool)`; `.book.id` is
- *   used as the button's `data-book-id` for test/debug hooks.
+ * @param {object[]} entries  books.js's `buildRoomBooks().entries`
+ *   and/or doors.js's `buildRoomDoors().entries` — each needs
+ *   `.ariaLabel` and `.setHighlight(bool)`; `.book.id`/`.room.id` are
+ *   used as `data-book-id`/`data-room-id` for test/debug hooks; an
+ *   optional `.controller` overrides which controller this entry's
+ *   button routes hover/activate through (see the file's doc comment).
  * @param {{hover(entry), activate(entry)}} controller  from
- *   interact.js's createBookController() — the one shared path.
+ *   interact.js's createBookController()/createDoorController() — the
+ *   DEFAULT controller, used by any entry that doesn't supply its own.
  */
 export function mountA11yMirror(container, entries, controller) {
   const root = document.createElement('div');
   root.className = 'scene-a11y-mirror';
   root.setAttribute('role', 'list');
-  root.setAttribute('aria-label', 'Books on the shelves in this room');
+  // "Books" in phase 4; phase 5 appends doorways to this same list
+  // (see the file's doc comment) so the label now covers both.
+  root.setAttribute('aria-label', 'Books and doorways in this room');
 
   const buttons = new Map(); // entry -> button
 
@@ -62,22 +73,28 @@ export function mountA11yMirror(container, entries, controller) {
     b.textContent = entry.ariaLabel;
     b.setAttribute('aria-label', entry.ariaLabel);
     if (entry.book) b.dataset.bookId = entry.book.id;
+    if (entry.room) b.dataset.roomId = entry.room.id;
     b.setAttribute('role', 'listitem');
+
+    // Route through this entry's OWN controller if it has one (doors
+    // do — see the file's doc comment), else the mirror's default
+    // (what every book entry uses, unchanged from phase 4).
+    const ctl = entry.controller || controller;
 
     // Focus moves the camera to it in a later phase (poses don't
     // exist until phase 7 — TODO(phase 7): fly to `shelf:<caseId>`
     // and centre this book here) and highlights it in the scene now.
-    b.addEventListener('focus', () => controller.hover(entry));
+    b.addEventListener('focus', () => ctl.hover(entry));
     b.addEventListener('blur', () => {
-      if (controller.hovered === entry) controller.hover(null);
+      if (ctl.hovered === entry) ctl.hover(null);
     });
 
     // A real <button> already turns Enter/Space into a `click` event
     // natively — that's the whole reason this is a <button> and not
     // a <div role="button">. One listener here covers mouse, Enter
-    // and Space identically, through the same controller.activate()
-    // a raycast pointer-click also calls (interact.js).
-    b.addEventListener('click', () => controller.activate(entry));
+    // and Space identically, through the same ctl.activate() a
+    // raycast pointer-click also calls (interact.js).
+    b.addEventListener('click', () => ctl.activate(entry));
 
     root.appendChild(b);
     buttons.set(entry, b);

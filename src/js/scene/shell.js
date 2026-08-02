@@ -7,9 +7,12 @@
    doorway holes into shape.holes, the inner reveal faces of those
    openings come for free from the same geometry.
 
-   Phase 3 builds a closed box: five surfaces, no holes. `buildFace()`
-   already accepts a `holes` array so phase 5 can cut doorways without
-   restructuring this file — it isn't exercised yet.
+   Phase 3 built a closed box: five surfaces, no holes. `buildFace()`
+   already accepted a `holes` array, unexercised until phase 5, which
+   threads `opts.holes = { left, right }` (arrays of THREE.Path, one
+   per doorway, built by doors.js) onto the left/right walls' shapes —
+   back wall, floor and ceiling never get holes (doors only ever sit
+   in side walls, per IMPLEMENTATION.md/scene.js).
 
    Coordinates are three.js world units, y already flipped via
    coords.js (toThreeY / WORLD) — nothing in this file touches CSS
@@ -33,9 +36,12 @@ const TEX_SCALE = 0.75; // canvas px per world unit
  * @param {number} thickness
  * @param {THREE.Vector3} position centre of the room-facing surface
  * @param {THREE.Euler} rotation
- * @param {THREE.Material} material
+ * @param {THREE.Material|THREE.Material[]} material  a 2-element array
+ *        [cap, reveal] gives the extrude's front/back caps and its
+ *        side-wall strips (including a hole's reveal faces) distinct
+ *        materials — see revealMaterial()'s comment below.
  * @param {THREE.Path[]} [holes] doorway cut-outs, wound opposite the
- *        outer contour — phase 5's extension point, unused this phase.
+ *        outer contour — built by doors.js's computeRoomDoorHoles().
  */
 /* ExtrudeGeometry's default UVGenerator (WorldUVGenerator, three.core.js)
    hands back the shape's raw local coordinates as UVs, not 0-1 — fine for
@@ -111,23 +117,62 @@ function faceMaterial(kind, pal, face, sizeWorld) {
   });
 }
 
+/* ExtrudeGeometry always calls addGroup() twice regardless of whether
+   the shape has holes: group materialIndex 0 is the front/back caps
+   (the decorative, textured room-facing + outer-back surfaces),
+   materialIndex 1 is every "side wall" strip the extrusion produces —
+   both the thin perimeter around the whole slab AND, once a doorway
+   hole exists, its inner reveal faces. Passing a 2-material array to
+   the Mesh is therefore all that's needed to give holed geometry (or,
+   for that matter, every wall's previously-hidden thin perimeter
+   edge) a plain, undecorated material instead of the cap's stretched
+   texture — phase 3's handoff flagged exactly this ("the inner reveal
+   faces of a doorway are exactly these strips, and a stretched wall
+   texture will look wrong there"). One reveal material per room
+   (shared across all 5 faces, not per-face) is plenty since it's a
+   flat tone with no map. */
+function revealMaterial(pal) {
+  const tone = pal.wood || pal.wall || '#6b5642';
+  return new THREE.MeshStandardMaterial({
+    color: tone,
+    roughness: 0.95,
+    metalness: 0.02,
+    side: THREE.DoubleSide,
+  });
+}
+
 /**
  * Build one room's shell: back wall, left wall, right wall, floor,
  * ceiling. Returns a THREE.Group. `room` needs `.kind` and `.pal`
  * (see src/js/data/rooms.js); geometry is otherwise fixed to WORLD.
+ *
+ * @param {object} [opts]
+ * @param {number} [opts.thickness]
+ * @param {{left?: THREE.Path[], right?: THREE.Path[]}} [opts.holes]
+ *   doorway cut-outs for the two side walls, in the wall SHAPE's own
+ *   local coordinates — see passages.js's doorLocalXRange()/
+ *   doorLocalYRange() and doors.js's computeRoomDoorHoles(), which
+ *   builds exactly this shape. Back wall/floor/ceiling never take
+ *   holes (doors only ever sit in side walls).
  */
 export function buildShell(room, opts = {}) {
   const thickness = opts.thickness ?? DEFAULT_THICKNESS;
   const kind = room.kind || 'k-panel';
   const pal = room.pal || {};
+  const holes = opts.holes || {};
   const group = new THREE.Group();
   group.name = `shell:${room.id || 'room'}`;
+
+  // one reveal material per room, shared across all 5 faces (see
+  // revealMaterial()'s comment) — cheap, and keeps the doorway
+  // reveal's tone consistent with the rest of the shell's woodwork.
+  const reveal = revealMaterial(pal);
 
   const back = buildFace({
     width: WORLD.w, height: WORLD.h, thickness,
     position: new THREE.Vector3(0, WORLD.h / 2, -WORLD.d),
     rotation: new THREE.Euler(0, 0, 0),
-    material: faceMaterial(kind, pal, 'back', { w: WORLD.w, h: WORLD.h }),
+    material: [faceMaterial(kind, pal, 'back', { w: WORLD.w, h: WORLD.h }), reveal],
   });
   back.name = 'wall-back';
 
@@ -135,7 +180,7 @@ export function buildShell(room, opts = {}) {
     width: WORLD.w, height: WORLD.d, thickness,
     position: new THREE.Vector3(0, 0, -WORLD.d / 2),
     rotation: new THREE.Euler(-Math.PI / 2, 0, 0),
-    material: faceMaterial(kind, pal, 'floor', { w: WORLD.w, h: WORLD.d }),
+    material: [faceMaterial(kind, pal, 'floor', { w: WORLD.w, h: WORLD.d }), reveal],
   });
   floor.name = 'floor';
 
@@ -143,7 +188,7 @@ export function buildShell(room, opts = {}) {
     width: WORLD.w, height: WORLD.d, thickness,
     position: new THREE.Vector3(0, WORLD.h, -WORLD.d / 2),
     rotation: new THREE.Euler(Math.PI / 2, 0, 0),
-    material: faceMaterial(kind, pal, 'ceiling', { w: WORLD.w, h: WORLD.d }),
+    material: [faceMaterial(kind, pal, 'ceiling', { w: WORLD.w, h: WORLD.d }), reveal],
   });
   ceiling.name = 'ceiling';
 
@@ -151,7 +196,8 @@ export function buildShell(room, opts = {}) {
     width: WORLD.d, height: WORLD.h, thickness,
     position: new THREE.Vector3(-WORLD.hw, WORLD.h / 2, -WORLD.d / 2),
     rotation: new THREE.Euler(0, Math.PI / 2, 0),
-    material: faceMaterial(kind, pal, 'left', { w: WORLD.d, h: WORLD.h }),
+    material: [faceMaterial(kind, pal, 'left', { w: WORLD.d, h: WORLD.h }), reveal],
+    holes: holes.left || [],
   });
   left.name = 'wall-left';
 
@@ -159,7 +205,8 @@ export function buildShell(room, opts = {}) {
     width: WORLD.d, height: WORLD.h, thickness,
     position: new THREE.Vector3(WORLD.hw, WORLD.h / 2, -WORLD.d / 2),
     rotation: new THREE.Euler(0, -Math.PI / 2, 0),
-    material: faceMaterial(kind, pal, 'right', { w: WORLD.d, h: WORLD.h }),
+    material: [faceMaterial(kind, pal, 'right', { w: WORLD.d, h: WORLD.h }), reveal],
+    holes: holes.right || [],
   });
   right.name = 'wall-right';
 

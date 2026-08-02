@@ -40,6 +40,7 @@
 import * as THREE from 'three';
 import { spineStyle, shelfSize, fillerStyle, hash } from '../covers.js';
 import { WORLD } from './coords.js';
+import { BAY, doorSlots } from './passages.js';
 
 /* ── measured geometry constants (IMPLEMENTATION.md §4.6, ported
    from scene.js's CASE_W/CASE_D/ROW_H/BOARD/BAY/MAX_BOOK_H) ── */
@@ -57,21 +58,11 @@ const SIDE_CD = 170;
 const SIDE_MAX_W = 640;
 const SIDE_MIN_W = 260;
 
-/* door bays, near to far — same table as scene.js, needed here only
-   to reproduce which width a side case ends up with (a case can't
-   overlap a doorway). Doors themselves are phase 5's job. */
-const BAY = [
-  { l: -300, r: -540 },
-  { l: -580, r: -820 },
-  { l: -860, r: -1100 },
-];
-
-function doorSlots(n) {
-  if (n <= 0) return [];
-  if (n === 1) return ['r1'];
-  const order = ['l1', 'r1', 'l2', 'r2', 'l3', 'r3'];
-  return order.slice(0, Math.min(n, 6));
-}
+/* BAY (door bays, near to far) and doorSlots() now live in
+   passages.js, imported above — phase 5's doors.js is the second
+   consumer, per HANDOFF-PHASE5's explicit request to hoist them
+   rather than keep two copies. Needed here only to reproduce which
+   width a side case ends up with (a case can't overlap a doorway). */
 
 /* the "lift toward camera + tilt forward" hover/focus gesture —
    world-unit / radian equivalents of scene.css's
@@ -243,10 +234,23 @@ function sideCaseSpec(room, side) {
   const slots = doorSlots(kids.length);
   const used = slots.filter((sl) => sl[0] === side).length;
 
+  /* When `used` > 0, z0 is the z of the last used door bay's far edge
+     — i.e. the case's nominal near boundary sits right where a real
+     doorway ends. buildCarcass() below then gives the case a physical
+     housing (left/right panels) that extends a further PANEL_T PAST
+     that nominal edge — so pulling z0 back by exactly PANEL_T only
+     cancels the overhang back to touching the door bay, not clear of
+     it. Pull back by 2*PANEL_T: one PANEL_T to absorb the carcass's
+     own overhang, one more as an actual clearance gap. (The far edge,
+     SIDE_FAR, is a fixed room-corner constant no door ever sits at,
+     so it needs no margin.) Caught, and the arithmetic double-checked
+     against a Box3 overlap test, by phase 5's door/case cross-check —
+     see HANDOFF-PHASE6.md for the numbers this was verified against. */
+  const DOOR_MARGIN = PANEL_T * 2;
   let z0, w;
   if (used === 0) { z0 = SIDE_NEAR; w = Math.abs(SIDE_FAR - SIDE_NEAR); }
-  else if (used === 1) { z0 = BAY[0].r; w = Math.abs(SIDE_FAR - BAY[0].r); }
-  else if (used === 2) { z0 = BAY[1].r; w = Math.abs(SIDE_FAR - BAY[1].r); }
+  else if (used === 1) { z0 = BAY[0].r - DOOR_MARGIN; w = Math.abs(SIDE_FAR - BAY[0].r) - DOOR_MARGIN; }
+  else if (used === 2) { z0 = BAY[1].r - DOOR_MARGIN; w = Math.abs(SIDE_FAR - BAY[1].r) - DOOR_MARGIN; }
   else return null;
   w = Math.min(w, SIDE_MAX_W);
   if (w < SIDE_MIN_W) return null;

@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Stage preview — phase 4 checkpoint</title>
+<title>Stage preview — phase 5 checkpoint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
   Standalone harness for the three.js stage substrate. Not part of
   the live site — main.js/index.html still run the CSS-3D scene.js
   exactly as before. Started as the phase-3 shell/lighting checkpoint;
-  phase 4 extends it with real cases + books + the per-room spine
-  atlas + raycast hover/select + the a11y mirror (src/js/scene/
-  books.js, interact.js, a11y.js), per IMPLEMENTATION.md §4.6/§4.7.
+  phase 4 added real cases + books + the per-room spine atlas + raycast
+  hover/select + the a11y mirror. Phase 5 adds real doorway openings
+  (holes cut into the side walls), a light spill in each opening, and
+  a DOM sign shown on hover/focus (src/js/scene/doors.js, plus the
+  createDoorController()/attachDoorPicking() additions to interact.js)
+  — per IMPLEMENTATION.md §3 (row 5, points 2 & 3).
 
   Serve with a plain static server from the repo root, e.g.:
     python3 -m http.server 8099
@@ -30,6 +33,16 @@
     ?mirror=1    force the a11y mirror's buttons visible (not just
                  focused) — for eyeballing the mirror itself, not how
                  a screen reader user would ever see it
+    ?doors=0     skip doorway holes/sensors/lights/signs entirely
+                 (shell without cut-outs, i.e. the pre-phase-5 view —
+                 useful for isolating a books/shell regression from a
+                 doors regression)
+    ?signs=0     build doors, but skip the DOM hover/focus signs (the
+                 sign container costs nothing at 0-6 nodes/room, but
+                 this isolates the sign layer for a screenshot)
+    ?dli=N       override door PointLight intensity (see doors.js's
+                 DOOR_LIGHT_INTENSITY) — for tuning against a screenshot
+    ?ddist=N     override door PointLight distance
 -->
 <style>
   html, body { margin: 0; height: 100%; background: #0a0706; }
@@ -78,7 +91,11 @@ import * as THREE from 'three';
 import { createStage, buildRoomLights } from '/src/js/scene/stage.js';
 import { buildShell } from '/src/js/scene/shell.js';
 import { buildRoomBooks } from '/src/js/scene/books.js';
-import { createBookController, attachPointerPicking } from '/src/js/scene/interact.js';
+import { computeRoomDoorHoles, buildRoomDoors } from '/src/js/scene/doors.js';
+import {
+  createBookController, attachPointerPicking,
+  createDoorController, attachDoorPicking,
+} from '/src/js/scene/interact.js';
 import { mountA11yMirror } from '/src/js/scene/a11y.js';
 import { ROOMS } from '/src/js/data/rooms.js';
 import { booksIn } from '/src/js/shop.js';
@@ -87,6 +104,8 @@ const params = new URLSearchParams(location.search);
 const roomId = params.get('room') || 'glasshouse';
 const room = ROOMS.find((r) => r.id === roomId) || ROOMS[0];
 const wantBooks = params.get('books') !== '0';
+const wantDoors = params.get('doors') !== '0';
+const wantSigns = wantDoors && params.get('signs') !== '0';
 if (params.get('mirror') === '1') document.body.classList.add('show-mirror');
 
 const canvas = document.getElementById('stage-canvas');
@@ -104,7 +123,11 @@ function showError(err) {
 const exposure = params.has('exposure') ? Number(params.get('exposure')) : undefined;
 const stage = createStage(canvas, exposure !== undefined ? { toneMappingExposure: exposure } : {});
 
-const shell = buildShell(room);
+// Door holes have to be known before the shell's geometry is built —
+// computeRoomDoorHoles() must run first (see doors.js's own doc
+// comment on ordering).
+const doorHoles = wantDoors ? computeRoomDoorHoles(room) : undefined;
+const shell = buildShell(room, doorHoles ? { holes: doorHoles } : {});
 stage.scene.add(shell);
 
 const lightOpts = {};
@@ -126,8 +149,12 @@ const lampCount = (room.props || []).filter((p) => p.t === 'lamp').length;
 
 let entries = [];
 let controller = null;
+let doorEntries = [];
+let doorController = null;
+let doorRig = null;
 let mirror = null;
 let lastOpened = '';
+let lastDoor = '';
 
 if (wantBooks) {
   const books = booksIn(room.id);
@@ -154,6 +181,52 @@ if (wantBooks) {
   window.__mirror = mirror;
 }
 
+if (wantDoors) {
+  const doorOpts = {};
+  if (wantSigns) {
+    const signWrap = document.createElement('div');
+    signWrap.id = 'door-signs';
+    document.body.appendChild(signWrap);
+    doorOpts.signContainer = signWrap;
+  }
+  if (params.has('dli')) doorOpts.lightIntensity = Number(params.get('dli'));
+  if (params.has('ddist')) doorOpts.lightDistance = Number(params.get('ddist'));
+
+  doorRig = buildRoomDoors(room, doorOpts);
+  stage.scene.add(doorRig.group);
+  doorEntries = doorRig.entries;
+
+  doorController = createDoorController();
+  attachDoorPicking(stage, doorEntries, doorController);
+
+  // Append to the SAME mirror list books already built (or mount a
+  // books-less one if ?books=0), per a11y.js's addEntry() — one
+  // accessible list per room, not a parallel one for doors. Each
+  // door entry carries its own `.controller` (see a11y.js's doc
+  // comment) so it routes through doorController, not the book one.
+  if (!mirror) {
+    const mirrorWrap = document.createElement('div');
+    mirrorWrap.id = 'mirror-wrap';
+    document.body.appendChild(mirrorWrap);
+    mirror = mountA11yMirror(mirrorWrap, [], controller || doorController);
+  }
+  for (const entry of doorEntries) {
+    entry.controller = doorController;
+    mirror.addEntry(entry);
+  }
+
+  doorController.onActivate((entry) => {
+    lastDoor = `${entry.room.name} (${entry.room.id})`;
+    console.log('door:go', entry.room.id, entry.room.name);
+    updateHud();
+  });
+
+  (function pollSigns() { doorRig.updateSigns(stage); requestAnimationFrame(pollSigns); })();
+
+  window.__doorEntries = doorEntries;
+  window.__doorController = doorController;
+}
+
 function updateHud() {
   hud.textContent =
     `room: ${room.id}  kind: ${room.kind}\n` +
@@ -161,7 +234,9 @@ function updateHud() {
     `camera fov: ${stage.camera.fov.toFixed(1)}deg  exposure: ${stage.renderer.toneMappingExposure}\n` +
     (params.get('orbit') === '1' ? 'drag to orbit\n' : 'fixed §4.2 pose (?orbit=1 to free-look)\n') +
     (wantBooks ? `books: ${entries.length} real, mirror buttons: ${entries.length}\n` : 'books: skipped (?books=0)\n') +
-    (lastOpened ? `last opened: ${lastOpened}` : '');
+    (wantDoors ? `doors: ${doorEntries.length}${wantSigns ? '' : ' (signs off)'}\n` : 'doors: skipped (?doors=0)\n') +
+    (lastOpened ? `last opened: ${lastOpened}\n` : '') +
+    (lastDoor ? `last door: ${lastDoor}` : '');
 }
 updateHud();
 
