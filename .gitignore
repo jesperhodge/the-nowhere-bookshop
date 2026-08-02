@@ -1,0 +1,11 @@
+node_modules/
+parcel.png
+tools/qa-report.json
+tools/suggestions/
+
+# Credentials. Order matters here: the negation has to come after the
+# pattern it is carving an exception out of, or .env.example gets ignored
+# too and nobody can see what needs filling in.
+.env
+.env.*
+!.env.example

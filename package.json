@@ -1,0 +1,22 @@
+{
+  "name": "the-nowhere-bookshop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A curated 3D bookshop. The site itself needs no install — this only serves /api and enrichment tooling.",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "mock": "HARDCOVER_MOCK=1 node server/index.js",
+    "qa": "node tools/qa.mjs",
+    "enrich": "node tools/hardcover.mjs enrich"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "optionalDependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

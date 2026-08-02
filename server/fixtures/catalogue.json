@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1, "title": "Piranesi", "slug": "piranesi", "pages": 245, "release_year": 2020,
+    "description": "A man lives alone in an infinite house of endless, wandering halls.",
+    "contributions": [{ "author": { "name": "Susanna Clarke" } }],
+    "editions": [
+      { "isbn_13": null, "pages": 245, "release_year": 2020, "language": { "language": "English" } },
+      { "isbn_13": "9781635575637", "pages": 245, "release_year": 2020, "language": { "language": "English" } },
+      { "isbn_13": "9782264078988", "pages": 256, "release_year": 2021, "language": { "language": "French" } }
+    ]
+  },
+  {
+    "id": 2, "title": "Beloved", "slug": "beloved-other", "pages": 180, "release_year": 2011,
+    "description": "Unrelated — a decoy with the same title, wrong author.",
+    "contributions": [{ "author": { "name": "Corinne Michaels" } }],
+    "editions": [{ "isbn_13": "9780000000001", "pages": 180, "release_year": 2011, "language": { "language": "English" } }]
+  },
+  {
+    "id": 3, "title": "Beloved", "slug": "beloved", "pages": 324, "release_year": 1987,
+    "description": "Sethe was born a slave and escaped to Ohio, but her past has not.",
+    "contributions": [{ "author": { "name": "Toni Morrison" } }],
+    "editions": [
+      { "isbn_13": "9781400033416", "pages": 324, "release_year": 2004, "language": { "language": "English" } },
+      { "isbn_13": "9780099760115", "pages": 336, "release_year": 1997, "language": { "language": "English" } }
+    ]
+  },
+  {
+    "id": 4, "title": "The Rings of Saturn", "slug": "the-rings-of-saturn", "pages": 296, "release_year": 1995,
+    "description": "A walking tour of Suffolk that drifts into meditations on history and decay.",
+    "contributions": [{ "author": { "name": "W. G. Sebald" } }],
+    "editions": [{ "isbn_13": null, "pages": 296, "release_year": 1995, "language": { "language": "English" } }]
+  }
+]
