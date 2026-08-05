@@ -60,6 +60,7 @@ import { ART } from '../data/props.js';
 import { WORLD, placeProp, propBoxCenter, lampAnchor } from './coords.js';
 import { rgba, mix, pinstripe, svgTexture } from './textures.js';
 import { sideCaseExists, SIDE_CD } from './books.js';
+import { roomHasTable, tableFootprint } from './tables.js';
 
 const GROUNDED = /^(floor|tall)/;
 const PROP_TEX_SCALE = 1.25; // canvas px per world unit for hand-painted prop textures
@@ -105,6 +106,48 @@ function clearSideCase(room, at, box) {
     if (rightEdge > innerEdge) return { ...box, x: box.x - (rightEdge - innerEdge) };
   }
   return box;
+}
+
+/* Phase 7's version of the same problem, one phase later and one
+   piece of furniture along: a table is now real geometry too, and in
+   `cartographer` a `globe` at floor-l — already nudged inward off the
+   left case by clearSideCase() above — landed with its billboard
+   plane passing straight through the table's slab (found by the same
+   Box3.intersectsBox() sweep, table frame vs. every prop mesh; 2 of
+   the 4 overlaps it reported, the other 2 being `front`'s table legs
+   standing on its rug, which is correct and left alone).
+
+   Nudged in Z, not x: the corridor between the left case's inner face
+   (x -670) and the table's left edge (x -535) is 135 units and the
+   globe is 196 wide, so there is no x that clears both. Nudged
+   FORWARD (toward the room's open front) rather than deeper, because
+   deeper is where the side cases and the back case are.
+
+   Only floor-l/floor-r can ever trigger this — they are the only
+   SLOT entries whose z (-430) falls inside the table's -630..-330
+   depth run — but the test below is a real box test rather than a
+   slot allow-list, so a future `dz:` in the data can't sneak past it.
+   Flat decorative planes (rug at SLOT.rug, skylight at SLOT.ceil) are
+   excluded by GROUNDED, which is what keeps a table standing ON a rug
+   from being "fixed". */
+const TABLE_CLEAR_MARGIN = 24;
+
+function clearTable(room, at, box) {
+  if (!GROUNDED.test(at || '') || !roomHasTable(room)) return box;
+  const t = tableFootprint();
+  const overlapsX = box.x + box.w / 2 > t.x0 && box.x - box.w / 2 < t.x1;
+  const overlapsY = box.y + box.h / 2 > t.y0 && box.y - box.h / 2 < t.y1;
+  const overlapsZ = box.z > t.z0 && box.z < t.z1; // a billboard is one z plane
+  if (!overlapsX || !overlapsY || !overlapsZ) return box;
+  return { ...box, z: t.z1 + TABLE_CLEAR_MARGIN };
+}
+
+/** Where a prop's billboard box actually ends up: its authored anchor,
+ *  moved clear of a same-side case (phase 6) and then of the room's
+ *  table (phase 7). One helper, so the four build* functions below
+ *  cannot each remember a different subset of the constraints. */
+function propBox(room, p) {
+  return clearTable(room, p.at, clearSideCase(room, p.at, propBoxCenter(p)));
 }
 
 /* ── 'art' props: SVG -> canvas texture ──────────────────────────
@@ -228,7 +271,7 @@ function billboard(x, y, z, w, h, material) {
 
 function buildArt(p, pal, room) {
   const { texture, aspect, ready } = artTexture(p.a, artArgs(p));
-  const box = clearSideCase(room, p.at, propBoxCenter(p));
+  const box = propBox(room, p);
   const boxAspect = box.w / box.h;
   const dispW = aspect > boxAspect ? box.w : box.h * aspect;
   const dispH = aspect > boxAspect ? box.w / aspect : box.h;
@@ -420,7 +463,7 @@ function paintWindow(ctx, w, h, s, p) {
 }
 
 function buildWindow(p, pal, room) {
-  const box = clearSideCase(room, p.at, propBoxCenter(p));
+  const box = propBox(room, p);
   const key = `window|${p.sky1}|${p.sky2}|${p.snow ? 1 : 0}|${p.weather}|${box.w}x${box.h}`;
   const tex = paintedTexture(key, box.w, box.h, (ctx, w, h, s) => paintWindow(ctx, w, h, s, p));
   const material = new THREE.MeshStandardMaterial({
@@ -464,7 +507,7 @@ function paintHearth(ctx, w, h, s) {
 }
 
 function buildHearth(p, pal, room) {
-  const box = clearSideCase(room, p.at, propBoxCenter(p));
+  const box = propBox(room, p);
   const key = `hearth|${box.w}x${box.h}`;
   const tex = paintedTexture(key, box.w, box.h, paintHearth);
   const material = new THREE.MeshStandardMaterial({
@@ -496,7 +539,7 @@ function paintBlinds(ctx, w, h, s, pal) {
 }
 
 function buildBlinds(p, pal, room) {
-  const box = clearSideCase(room, p.at, propBoxCenter(p));
+  const box = propBox(room, p);
   const key = `blinds|${pal.wood}|${box.w}x${box.h}`;
   const tex = paintedTexture(key, box.w, box.h, (ctx, w, h, s) => paintBlinds(ctx, w, h, s, pal));
   const material = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.85 });

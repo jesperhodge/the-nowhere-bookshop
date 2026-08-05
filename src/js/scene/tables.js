@@ -115,12 +115,34 @@ const BOOK_HOVER_LIFT = 8;
 /* ── planning: which books (if any) leave the shelf for the table ── */
 
 /**
+ * Does this room get a table at all? Data only, and deliberately
+ * separate from planRoomTable() (which needs the room's books to
+ * answer the harder question of WHICH books go on it) — props.js
+ * needs the cheap boolean, at prop-placement time, before any book
+ * data is in hand, to keep a floor prop from standing inside the
+ * table. Same split, and the same reason, as books.js exporting
+ * sideCaseExists() rather than sideCaseSpec() for props.js's
+ * equivalent check in phase 6.
+ * @returns {boolean}
+ */
+export function roomHasTable(room) {
+  if (!room) return false;
+  if ((room.children || []).some((k) => k.viaTable)) return true;
+  return /table/i.test(room.name || '') && !room.viaTable;
+}
+
+/**
  * @param room       a src/js/data/rooms.js entry
  * @param roomBooks  the room's own books (shop.js's booksIn(room.id))
  * @param booksFor   (roomId) => book[] — used ONLY to read a viaTable child's shelf
  * @returns {{ shelfBooks: object[], table: null | {id, name, sub, books} }}
  */
 export function planRoomTable(room, roomBooks, booksFor) {
+  // Rule 3 first, so the "does this room have a table" rule lives in
+  // exactly ONE place (roomHasTable(), which props.js also reads) and
+  // cannot drift between the two files.
+  if (!roomHasTable(room)) return { shelfBooks: roomBooks, table: null };
+
   // Rule 1: a viaTable child room (today only `front`, whose child is
   // `fronttable`, 15 books) supplies the table's books from ITS OWN
   // shelf — a shelf that was never part of THIS room's shelf to begin
@@ -149,46 +171,54 @@ export function planRoomTable(room, roomBooks, booksFor) {
   // `fronttable`'s own name also matches /table/i, and it IS the
   // table (rule 1's child, reached only by clicking the front room's
   // table) — if the harness ever builds room=fronttable directly, this
-  // guard stops it from growing a second table of its own.
-  if (/table/i.test(room.name || '') && !room.viaTable) {
-    // `onTable` is phase 9's field — it does not exist in the data
-    // yet, which is exactly why the fallback below exists. Once it
-    // lands, this `if` is one line away from deletion.
-    let chosen = roomBooks.filter((b) => b.onTable);
-    if (!chosen.length) {
-      // Deterministic fallback: most-awarded first, then most recent,
-      // then id ascending as a TOTAL order — never rely on Array#sort
-      // stability for this, since neither `won.length` nor `year` is
-      // guaranteed unique and JS's sort stability guarantee is a
-      // red herring here (it only protects EQUAL keys that were
-      // already adjacent going in; it says nothing about reproducing
-      // the same order across two different runs' input orderings,
-      // which is the actual property needed).
-      const bySelection = roomBooks.slice().sort((a, b) => {
-        const wonDiff = (b.won?.length || 0) - (a.won?.length || 0);
-        if (wonDiff) return wonDiff;
-        const yearDiff = (b.year || 0) - (a.year || 0);
-        if (yearDiff) return yearDiff;
-        return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
-      });
-      const n = Math.min(4, Math.floor(roomBooks.length / 2));
-      chosen = bySelection.slice(0, n);
-    }
+  // guard stops it from growing a second table of its own (it is in
+  // roomHasTable() above, checked before we ever get here).
 
-    const chosenIds = new Set(chosen.map((b) => b.id));
-    // Filter the ORIGINAL array, not the sorted copy — shelf order is
-    // a stated design goal (IMPLEMENTATION.md §4.6), so the fallback
-    // sort above must never leak into it.
-    const shelfBooks = roomBooks.filter((b) => !chosenIds.has(b.id));
-
-    return {
-      shelfBooks,
-      table: { id: `${room.id}:table`, name: room.name, sub: room.sub, books: chosen },
-    };
+  // `onTable` is phase 9's field — it does not exist in the data
+  // yet, which is exactly why the fallback below exists. Once it
+  // lands, this fallback is one block away from deletion.
+  let chosen = roomBooks.filter((b) => b.onTable);
+  if (!chosen.length) {
+    // Deterministic fallback: most-awarded first, then most recent,
+    // then id ascending as a TOTAL order — never rely on Array#sort
+    // stability for this, since neither `won.length` nor `year` is
+    // guaranteed unique and JS's sort stability guarantee is a
+    // red herring here (it only protects EQUAL keys that were
+    // already adjacent going in; it says nothing about reproducing
+    // the same order across two different runs' input orderings,
+    // which is the actual property needed).
+    const bySelection = roomBooks.slice().sort((a, b) => {
+      const wonDiff = (b.won?.length || 0) - (a.won?.length || 0);
+      if (wonDiff) return wonDiff;
+      const yearDiff = (b.year || 0) - (a.year || 0);
+      if (yearDiff) return yearDiff;
+      return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+    });
+    const n = Math.min(4, Math.floor(roomBooks.length / 2));
+    chosen = bySelection.slice(0, n);
   }
 
-  // Rule 3: no table.
-  return { shelfBooks: roomBooks, table: null };
+  const chosenIds = new Set(chosen.map((b) => b.id));
+  // Filter the ORIGINAL array, not the sorted copy — shelf order is
+  // a stated design goal (IMPLEMENTATION.md §4.6), so the fallback
+  // sort above must never leak into it.
+  const shelfBooks = roomBooks.filter((b) => !chosenIds.has(b.id));
+
+  return {
+    shelfBooks,
+    table: { id: `${room.id}:table`, name: room.name, sub: room.sub, books: chosen },
+  };
+}
+
+/* The table's own footprint as a world-space AABB, floor to top plus
+   headroom for the books lying on it. props.js reads this to keep a
+   floor prop from standing inside the table; poses.js gets the real
+   group instead (it has one). Exported so neither of them re-derives
+   TABLE's placement arithmetic — the same one-source-of-truth rule
+   this file's header states for `surface`. */
+export function tableFootprint() {
+  const { w, h, d, x0, zNear } = TABLE;
+  return { x0, x1: x0 + w, z0: zNear - d, z1: zNear, y0: 0, y1: h + 30 };
 }
 
 /* ── the table top's plank texture ───────────────────────────────

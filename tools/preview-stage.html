@@ -83,11 +83,12 @@
                  change jumps instead of tweening), overriding the
                  real media query — for tests that can't easily flip
                  an OS setting.
-    ?orbit=1     — see above — additionally means pose controls
-                 (wheel/pinch dolly, Escape/Arrow keys) are NOT
-                 attached: OrbitControls owns the camera outright, and
-                 the two would fight over it every frame otherwise
-                 (see the `if (rig && !wantOrbit)` comment below).
+    ?orbit=1     — see above — additionally means NO POSE RIG AT ALL
+                 (not merely no wheel/key bindings): OrbitControls owns
+                 the camera outright, and clicking, tabbing or ending
+                 an orbit drag on empty floor would otherwise each
+                 start a tween racing controls.update(). Implies
+                 ?poses=0 in effect; ?pose=<name> is ignored.
 -->
 <style>
   html, body { margin: 0; height: 100%; background: #0a0706; }
@@ -359,8 +360,19 @@ if (wantTables && table) {
   tableRig.ready.then(() => { window.__tablesReady = true; updateHud(); });
 }
 
-if (wantPoses) {
-  const tablesForRig = tableRig ? [{ id: table.id, surface: tableRig.surface }] : [];
+// No rig at all under ?orbit=1. Skipping only attachPoseControls (the
+// wheel/pinch/key bindings) is not enough: the pose CONTROLLER is
+// still wired to rig.goTo(), the a11y mirror's onFocus is still wired
+// to rig.focusEntry(), and attachScenePicking's onMiss is still wired
+// to rig.back() — and OrbitControls' own drag ends in a `click` on
+// empty floor, so every orbit gesture would kick off a 700ms tween
+// racing controls.update() (which recomputes the camera from its own
+// spherical state on its own rAF loop, with no ordering guarantee
+// against stage.onFrame). One owner of the camera at a time.
+if (wantPoses && !wantOrbit) {
+  const tablesForRig = tableRig
+    ? [{ id: table.id, surface: tableRig.surface, group: tableRig.group }]
+    : [];
   const rigOpts = { cases, tables: tablesForRig };
   if (forceReduced) rigOpts.reducedMotion = true;
   rig = createPoseRig(stage, rigOpts);
@@ -390,16 +402,9 @@ attachScenePicking(
   { onMiss: () => rig?.back() }, // a click on empty floor steps back out (PLAN.md point 6)
 );
 
-// Wheel/pinch dolly + Escape/Arrow keys — never attached under
-// ?orbit=1, where OrbitControls owns camera.position/lookAt outright.
-// Attaching both would be two systems fighting over the same camera
-// every frame: OrbitControls.update() (polled every rAF tick by the
-// pollControls() loop above) unconditionally recomputes the camera
-// from ITS OWN stored spherical coordinates/target, so it would
-// silently undo any goTo()/dolly() move on the very next frame anyway
-// — attaching pose controls on top of that wouldn't error, it would
-// just visibly do nothing, which is worse than not attaching them.
-if (rig && !wantOrbit) attachPoseControls(stage, rig);
+// Wheel/pinch dolly + Escape/Arrow keys. `rig` is already null under
+// ?orbit=1 (see above), so this needs no orbit check of its own.
+if (rig) attachPoseControls(stage, rig);
 
 function updateHud() {
   hud.textContent =
@@ -411,7 +416,9 @@ function updateHud() {
     (wantDoors ? `doors: ${doorEntries.length}${wantSigns ? '' : ' (signs off)'}\n` : 'doors: skipped (?doors=0)\n') +
     (wantProps ? `props: ${(room.props || []).length} (${window.__propsReady ? 'loaded' : 'loading'})\n` : 'props: skipped (?props=0)\n') +
     (tableRig ? `table: ${table.id} (${tableEntries.length} books)\n` : 'table: none\n') +
-    (rig ? `pose: ${rig.current}  t: ${rig.t.toFixed(2)}  tweening: ${rig.tweening}\n` : 'pose: skipped (?poses=0)\n') +
+    (rig
+      ? `pose: ${rig.current}  t: ${rig.t.toFixed(2)}  tweening: ${rig.tweening}\n`
+      : `pose: skipped (${wantOrbit ? '?orbit=1 owns the camera' : '?poses=0'})\n`) +
     (lastOpened ? `last opened: ${lastOpened}\n` : '') +
     (lastDoor ? `last door: ${lastDoor}` : '');
 }
