@@ -4,7 +4,19 @@
  "rooms": [
   "longroom",
   "fronttable",
-  "readingroom"
+  "readingroom",
+  "longtable",
+  "glasscase",
+  "argument",
+  "witnessbox",
+  "windowseat",
+  "saltcellar",
+  "wanderingchair",
+  "glasshouse",
+  "understory",
+  "saltline",
+  "snowroom",
+  "smallkingdom"
  ],
  "page": "The Writers' Prize",
  "url": "https://en.wikipedia.org/wiki/The_Writers'_Prize",

@@ -361,13 +361,22 @@ async function cmdFetch() {
     console.log(`ok   ${cfg.slug.padEnd(24)} ${String(entries.length).padStart(4)} entries  (${wins} won / ${entries.length - wins} cited)  rev ${rec.revid}`);
   }
 
-  console.log(`\n${totalEntries} entries from ${LISTS.length - gaps.length}/${LISTS.length} lists`);
+  const ran = only ? only.size : LISTS.length;
+  console.log(`\n${totalEntries} entries from ${ran - gaps.length}/${ran} lists`);
   if (gaps.length) {
     console.log('\nGAPS — recorded, never filled in from memory:');
     for (const g of gaps) console.log(`  ${g.slug}: ${g.reason}`);
-    fs.writeFileSync(path.join(LISTS_DIR, '_gaps.json'), JSON.stringify(gaps, null, 1) + '\n');
-  } else {
-    fs.rmSync(path.join(LISTS_DIR, '_gaps.json'), { force: true });
+  }
+  /* Only a full run may rewrite the gap record. Re-fetching two slugs is not
+     evidence that the other seventy-five are fine, and letting a partial run
+     clear the file turns "no gaps recorded" into a lie the next reader has no
+     way to spot. */
+  const gapFile = path.join(LISTS_DIR, '_gaps.json');
+  if (!only) {
+    if (gaps.length) fs.writeFileSync(gapFile, JSON.stringify(gaps, null, 1) + '\n');
+    else fs.rmSync(gapFile, { force: true });
+  } else if (gaps.length) {
+    console.log('  (partial run — data/lists/_gaps.json left alone; re-run in full to update it)');
   }
 }
 

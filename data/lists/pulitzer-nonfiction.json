@@ -3,9 +3,18 @@
  "prize": "Pulitzer Prize for General Nonfiction",
  "rooms": [
   "readingroom",
+  "longtable",
   "glasscase",
+  "argument",
   "witnessbox",
-  "argument"
+  "windowseat",
+  "saltcellar",
+  "wanderingchair",
+  "glasshouse",
+  "understory",
+  "saltline",
+  "snowroom",
+  "smallkingdom"
  ],
  "page": "Pulitzer Prize for General Nonfiction",
  "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_General_Nonfiction",

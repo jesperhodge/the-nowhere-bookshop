@@ -1,0 +1,27 @@
+[
+ {
+  "slug": "kirkus",
+  "page": "Kirkus Prize",
+  "reason": "SUSPECT winner ratio 3.0/yr — shortlistings may be recorded as wins"
+ },
+ {
+  "slug": "nero",
+  "page": "Nero Book Awards",
+  "reason": "SUSPECT winner ratio 4.0/yr — shortlistings may be recorded as wins"
+ },
+ {
+  "slug": "somerset-maugham",
+  "page": "Somerset Maugham Award",
+  "reason": "SUSPECT winner ratio 2.5/yr — shortlistings may be recorded as wins"
+ },
+ {
+  "slug": "sunburst",
+  "page": "Sunburst Award",
+  "reason": "parsed to zero entries"
+ },
+ {
+  "slug": "ned-kelly",
+  "page": "Ned Kelly Awards",
+  "reason": "SUSPECT winner ratio 2.9/yr — shortlistings may be recorded as wins"
+ }
+]
