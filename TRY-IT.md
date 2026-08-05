@@ -5,18 +5,22 @@ work stands and what is next.
 
 ## The one thing to know first
 
-**There are two builds in this repo and they have never met.**
+**There is one build now.** Phase 10 retired the CSS-3D scene and made the
+three.js stage the actual shop, so `npm start` gives you real geometry, real
+lights, doorway openings, tables and camera poses — everything phases 3–7
+built beside the live site is now *in* it.
 
-| build | what it is | how you reach it |
-|---|---|---|
-| the **live site** | the original CSS-3D shop, plus phase 8's dock and phase 9's real books | `npm start` → http://localhost:8099 |
-| the **three.js stage** | phases 3–7: real geometry, lights, doorway openings, tables, camera poses | a static server → `/tools/preview-stage.html` |
+`src/js/scene.js`, `src/styles/scene.css` and `src/styles/themes.css` are
+gone. The whole DOM UI stayed exactly as it was: dock, book panel, search,
+plan, parcel, and the grain and vignette overlays that sit on top of the
+canvas and carry a lot of the mood.
 
-The swap-over — retiring the CSS scene and wiring the three.js stage into the
-live site — is **phase 10, and it has not happened yet.** So the shop you can
-walk around is still the CSS one; the new renderer is only in the harness.
-That is deliberate: phases 3–7 were built beside the live site on purpose, so
-neither was ever broken.
+**Status:** phase 10 is committed as a reviewed-pending draft (`d7b0f4c`). It
+has been smoke-verified — the front room and a second room both build with
+zero console errors, the a11y mirror is intact with no `role="listitem"` on a
+button, and the table reads correctly at both poses — but it has **not** had
+the full adversarial review pass every earlier phase got. See "What is not
+done" at the bottom.
 
 ## Run the live site
 
@@ -40,20 +44,16 @@ Without a `.env` holding `HARDCOVER_TOKEN` the server runs on baked data and
 fixtures, which is the intended offline mode — nothing is broken. `npm run mock`
 forces fixture mode even when a token is present.
 
-## Run the three.js stage
+## The isolation harness
 
-`npm start` does **not** serve `/tools`, so the harness needs a plain static
-server. From the repo root:
+The shop is the shop now, but the preview harness survives as the place to
+look at **one room with layers switched off** — which is how every scene bug
+since phase 3 was actually found. Phase 10 taught the Express server to serve
+it, so there is no second server any more (a leftover `python3 -m http.server`
+holding :8099 while `npm start` silently died cost this project two sessions;
+that trap is now closed):
 
-```sh
-python3 -m http.server 8101
-```
-
-Then open <http://localhost:8101/tools/preview-stage.html?room=front>.
-
-**Kill that static server before you next trust anything on :8099.** A leftover
-one holding the port while `npm start` silently died has cost two sessions
-already.
+<http://localhost:8099/tools/preview-stage.html?room=front>
 
 ### Query parameters worth knowing
 
@@ -66,11 +66,10 @@ already.
 | `?tables=0` `?poses=0` `?props=0` `?doors=0` `?books=0` `?signs=0` | switch a layer off to isolate what you are looking at |
 | `?mirror=1` | show the normally-hidden a11y mirror |
 
-The things phase 7 finished are best seen at
-`?room=front&pose=table:fronttable` (fifteen covers face-up, legible — the
-payoff for point 10) and `?room=front&pose=shelf:back` (spine titles readable).
-Click a case or a table to fly to its pose; `Escape` steps back; the wheel
-dollies.
+In the shop itself: click a case or the table to fly to its pose, `Escape`
+steps back, and the wheel dollies. The front table stands **five** covers
+upright in the room pose and lays out all **58** when you walk up to it —
+the five that stand up are the shopkeeper's own picks.
 
 ## See all the changes
 
@@ -110,3 +109,45 @@ npm run harvest:report   # the harvest's coverage counts
 Note that `tools/qa.mjs` still asserts the **old** CSS build's DOM
 (`.bk[data-book]`, `.travel` settling). Rewriting it is part of phase 10 —
 `IMPLEMENTATION.md` §7 lists what it should check instead.
+
+---
+
+## What is not done
+
+Being straight about the state, because a doc that overstates it costs the
+next person a session.
+
+**Phase 10 (the swap-over) is a reviewed-pending draft.** It was implemented
+and visually checked, and it has been smoke-verified since — two rooms build
+with zero console errors, the a11y mirror carries no `role="listitem"` on a
+button, room teardown survives walking between rooms, and the table reads
+correctly at both poses. But the **separate adversarial review pass** that
+every earlier phase got was interrupted and never ran. In phases 7, 8 and 9
+that pass is where essentially every real defect was found — phase 9 found
+eleven, none of which were in its plan. So assume defects remain, and run
+that pass before trusting this in production.
+
+Specifically **not** verified since the swap: the full 50-room sweep, the
+rewritten `tools/qa.mjs`, the no-WebGL fallback, deep links and browser
+back/forward, the parcel surviving a reload, `fronttable`'s removal as a room
+being consistent across the plan/breadcrumbs/shelf overlay, and performance
+in the heaviest room.
+
+**Phase 11 — book descriptions.** 1,105 of 2,096 harvested books still have
+no blurb. `DESCRIPTIONS-FEASIBILITY.md` records every source measured against
+books that are actually missing one, and the design for a single programmatic
+backfill tool. Nothing has been built yet. The short version: Open Library is
+exhausted, Google Books is the right primary source but needs an API key,
+Wikipedia works only behind a strict verification gate, and Goodreads is
+declined on robots.txt grounds.
+
+**Phase 12 — final polish and Vercel.** Not started. There is no
+`vercel.json`, and the `/api` routes would need to become serverless
+functions. The static site itself deploys as-is.
+
+**Carried forward, still unfixed:** the far end of a deep side case is not
+reachable from any camera pose; no real screen reader has ever been used on
+the a11y mirror; `Back` rewrites the URL hash to the room you just left when
+a book panel is open (phase 8 documented it, deliberately out of scope); and
+four keyboard shortcuts don't guard modifiers, so ⌘P opens the parcel *and*
+the print dialog.
