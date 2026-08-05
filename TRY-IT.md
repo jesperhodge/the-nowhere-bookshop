@@ -1,7 +1,8 @@
 # Trying it out, and seeing what changed
 
-Written mid-project, after phase 9. Read `HANDOFF-PHASE10.md` for where the
-work stands and what is next.
+Written mid-project, during phase 10. Read `HANDOFF-PHASE10.md` for the
+swap-over's own brief, and the "What is not done" section at the bottom of
+this file for the current state.
 
 ## The one thing to know first
 
@@ -86,18 +87,19 @@ The phases in this session's run:
 | `a7ae125` | 7 — tables and camera poses: review, clearance fix, verification |
 | `324a38f` | 8 — the dock: chips out, the way home in |
 | `4172cb2`, `5b909ad` | 9 — harvest, enrich and shelve the real books |
+| `3020e54`, `d7b0f4c` | 10 — the swap-over: the shop becomes the three.js stage (draft) |
 
 Each phase also left a document, and they are the honest record — every one
 carries a "left undone, with reasons" section:
 
-- `PLAN-PHASE7.md`, `PLAN-PHASE8.md`, `PLAN-PHASE9.md` — the plan written
-  *before* the implementation
+- `PLAN-PHASE7.md` … `PLAN-PHASE10.md` — the plan written *before* the
+  implementation it governs
 - `HANDOFF-PHASE8.md`, `HANDOFF-PHASE9.md`, `HANDOFF-PHASE10.md` — what the
   next session needs to know, including the traps that already cost someone a
   session
 
-`HANDOFF-PHASE10.md` is the one to read if you want to know where the project
-stands right now.
+`DESCRIPTIONS-FEASIBILITY.md` records the measured sources for the missing
+book descriptions, so phase 11 does not re-probe any of them.
 
 ## Check it yourself
 
@@ -106,9 +108,10 @@ npm run qa               # the data and DOM checks
 npm run harvest:report   # the harvest's coverage counts
 ```
 
-Note that `tools/qa.mjs` still asserts the **old** CSS build's DOM
-(`.bk[data-book]`, `.travel` settling). Rewriting it is part of phase 10 —
-`IMPLEMENTATION.md` §7 lists what it should check instead.
+`tools/qa.mjs` was rewritten in phase 10 against `IMPLEMENTATION.md` §7 — it
+now checks the canvas, the a11y mirror and the camera poses rather than the
+retired CSS build's `.bk[data-book]` nodes. **It has not been run since the
+rewrite**, so treat a failure as "unverified", not necessarily "regressed".
 
 ---
 
