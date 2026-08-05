@@ -18,30 +18,19 @@
   --paper: #efe3cd;
   --brass: #d9a44f;
   --brass-soft: #b98b3f;
-  --oxblood: #7d2f2a;
   --night: #150f0d;
-  --night-2: #221815;
   --shadow: 0 24px 60px -18px rgba(0,0,0,.85);
 
-  /* room theme defaults — every theme overrides these */
-  --wall: #2b201a;
-  --wall-lit: #46332a;
-  --wall-trim: #1b1310;
-  --floor: #2a1d16;
-  --floor-lit: #4a352a;
-  --ceiling: #1a1210;
-  --wood: #4a3227;
-  --wood-lit: #6b4a37;
-  --wood-dark: #2c1d16;
-  --glow: #ffc46b;
-  --glow-2: #ff9d4d;
-  --accent: #d9a44f;
-  --haze: rgba(255,190,120,.13);
-  --lamp-size: 60%;
-
-  --world-w: 1680px;
-  --world-h: 940px;
-  --fit: 1;
+  /* The room-theme defaults (--wall, --floor, --wood, --glow, --accent,
+     --haze, --lamp-size) and the CSS-3D world box (--world-w/h, --fit)
+     lived here until phase 10. Every one of them existed for scene.css
+     and themes.css, which are gone: a room's palette now goes straight
+     from rooms.js's `pal` into three.js materials and canvas textures,
+     with no CSS custom property in between. Phase 8's rule — a rule that
+     matches nothing is the thing that actually rots, because the next
+     person to read it believes it still does something. (--oxblood and
+     --night-2 went with them; both had already been unused for longer
+     than this phase.) */
 
   --ease: cubic-bezier(.22,.61,.36,1);
   --ease-in-out: cubic-bezier(.65,.05,.36,1);

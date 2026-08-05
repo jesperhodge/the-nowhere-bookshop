@@ -18,7 +18,55 @@
 
 import * as THREE from 'three';
 
-const cache = new Map();
+/* ── a bounded cache, and why this one has to be bounded ─────────
+   Every cache in src/js/scene/ is keyed by CONTENT, so through phase 9
+   they were all unbounded and it cost nothing: exactly one room was ever
+   built per page, in the preview harness. Phase 10 makes the stage the
+   live shop, where you walk from room to room, and a wall texture is
+   keyed by the room's own palette — so an unbounded cache holds five
+   1260x705 canvases per room visited. Measured over a fifty-room walk:
+   461 live textures and climbing, roughly a gigabyte of GPU memory for
+   forty-nine rooms nobody is standing in.
+
+   So: least-recently-used, capped, and evictions are DISPOSED. The cap
+   is a few rooms' worth, which is what makes walking back through a
+   doorway you just came out of free — the common case — without
+   pretending the whole shop fits on the card.
+
+   Exported because props.js's two caches have the same shape and the
+   same problem; tables.js's cover cache does not (66 covers, ever). */
+export function boundedCache(max, dispose = (v) => v.dispose?.()) {
+  const map = new Map();
+  return {
+    get(key) {
+      if (!map.has(key)) return undefined;
+      const v = map.get(key);        // refresh: delete + set puts it last
+      map.delete(key);
+      map.set(key, v);
+      return v;
+    },
+    set(key, value) {
+      map.delete(key);
+      map.set(key, value);
+      while (map.size > max) {
+        const oldest = map.keys().next().value;
+        const dead = map.get(oldest);
+        map.delete(oldest);
+        dispose(dead);
+      }
+      return value;
+    },
+    clear() {
+      for (const v of map.values()) dispose(v);
+      map.clear();
+    },
+    get size() { return map.size; },
+  };
+}
+
+/* Five faces a room, so this is about five rooms' worth. The back wall
+   alone is 1260x705 at TEX_SCALE 0.75. */
+const cache = boundedCache(24);
 
 function hex(c) {
   if (!c) return [0, 0, 0];
@@ -502,7 +550,8 @@ export function wallTexture(kind, pal, face, sizeWorld, scale = 0.75) {
   const wPx = Math.max(2, Math.round(sizeWorld.w * scale));
   const hPx = Math.max(2, Math.round(sizeWorld.h * scale));
   const k = keyFor(kind, face, pal, wPx, hPx);
-  if (cache.has(k)) return cache.get(k);
+  const cached = cache.get(k);
+  if (cached) return cached;
 
   const canvas = document.createElement('canvas');
   canvas.width = wPx; canvas.height = hPx;
@@ -535,6 +584,5 @@ export function wallTexture(kind, pal, face, sizeWorld, scale = 0.75) {
 }
 
 export function clearTextureCache() {
-  for (const tex of cache.values()) tex.dispose();
-  cache.clear();
+  cache.clear();   // boundedCache.clear() disposes as it goes
 }

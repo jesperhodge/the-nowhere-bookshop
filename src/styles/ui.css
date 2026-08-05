@@ -2,6 +2,125 @@
    The Nowhere Bookshop — chrome, panels, overlays
    ============================================================ */
 
+/* ─── the stage ────────────────────────────────────────────────
+   The room is a WebGL canvas as of phase 10. Everything else in
+   here came over from scene.css when that file was retired,
+   unchanged except where the note says otherwise: the grain and
+   the vignette carry a lot of the mood and IMPLEMENTATION.md §4.5
+   is explicit that they stay on top of the canvas exactly as they
+   were. */
+
+.stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0a0706;
+  /* `perspective`/`perspective-origin` lived here and are gone with
+     the CSS 3D world — the camera is a real camera now (stage.js
+     §4.2 reproduces the same framing). `cursor: grab` is gone too:
+     there is nothing to drag, and interact.js sets `pointer` on the
+     canvas itself whenever something under it is clickable. */
+  touch-action: none;
+}
+
+/* The room itself. Sized by stage.js's resize() from this element's
+   own box, so it must fill it exactly. */
+.scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* dust, embers, rain — one canvas over the whole stage */
+.ambience {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: .85;
+  mix-blend-mode: screen;
+}
+
+.vignette {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(132% 100% at 50% 46%, transparent 52%, rgba(0,0,0,.34) 82%, rgba(0,0,0,.66) 100%);
+}
+.grain {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: .045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* the floating name-tag that follows the book you're pointing at.
+   main.js re-projects it from the camera every frame while it is on —
+   the camera moves under it during a pose tween. */
+.tag {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  padding: .5rem .8rem .55rem;
+  border-radius: 8px;
+  background: rgba(20,14,11,.93);
+  border: 1px solid rgba(217,164,79,.3);
+  box-shadow: 0 14px 34px -14px #000;
+  backdrop-filter: blur(6px);
+  transform: translate(-50%, -118%);
+  opacity: 0;
+  transition: opacity .18s var(--ease);
+  max-width: 20rem;
+}
+.tag.is-on { opacity: 1; }
+.tag__t { font-family: var(--font-display); font-size: .96rem; line-height: 1.2; color: var(--paper); }
+.tag__a { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .05em; color: var(--brass); margin-top: .2rem; }
+.tag__x { font-family: var(--font-ui); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: .35rem; }
+
+/* ─── travelling between rooms ──────────────────────────────────
+   Same four beats and the same 300ms hand-over go() has always used,
+   moved from the old .travel node onto the canvas. `translateZ` gave
+   way to `scale` because there is no perspective context left to give
+   it depth — the felt effect is the same. Driving this from the CAMERA
+   instead was the tempting move and the wrong one: poses.js owns the
+   camera, and a second thing moving it is the class of bug that file
+   warns about twice. */
+#scene.go-in      { animation: travelInOut .46s var(--ease-in-out) forwards; }
+#scene.go-out     { animation: travelOutIn .46s var(--ease-in-out) forwards; }
+#scene.arrive-in  { animation: arriveIn .62s var(--ease) backwards; }
+#scene.arrive-out { animation: arriveOut .62s var(--ease) backwards; }
+
+@keyframes travelInOut { to   { transform: scale(2.6); opacity: 0; filter: brightness(1.5) } }
+@keyframes arriveIn    { from { transform: scale(.45); opacity: 0 } }
+@keyframes travelOutIn { to   { transform: scale(.45); opacity: 0; filter: brightness(.4) } }
+@keyframes arriveOut   { from { transform: scale(2.4); opacity: 0; filter: brightness(1.4) } }
+
+/* dim the room while a book is in your hands */
+.stage { transition: filter .4s var(--ease), transform .5s var(--ease); }
+body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  #scene { animation: none !important; }
+}
+
+/* ─── no WebGL ──────────────────────────────────────────────────
+   Not an error page. The shop is entirely usable from here — the
+   shelf list, the plan and search are a complete text UI for all
+   fifty rooms, and main.js opens the shelf for you (§4.7). */
+.flat {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: 8vh 2rem;
+  text-align: center;
+  background: radial-gradient(120% 90% at 50% 30%, rgba(255,176,88,.10), transparent 62%), #0d0a09;
+}
+.flat__inner { max-width: 30rem; }
+.flat__hd { font-family: var(--font-display); font-size: 1.5rem; color: var(--paper); margin: 0 0 1rem; }
+.flat__p { font-size: .94rem; line-height: 1.7; color: var(--ink-dim); margin: 0 0 .8rem; }
+.flat__keys { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .08em; color: var(--ink-faint); margin: 1.6rem 0 0; }
+.flat__keys kbd {
+  font-family: var(--font-mono); font-size: .72rem;
+  padding: .12rem .4rem; border-radius: 4px;
+  border: 1px solid rgba(217,164,79,.32); color: var(--brass);
+}
+
 /* ─── top bar ──────────────────────────────────────────────── */
 
 .topbar {
@@ -90,6 +209,11 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   animation: placardIn .8s var(--ease) both;
 }
 @keyframes placardIn { from { opacity: 0; transform: translateY(-10px) } }
+/* Stepped up to a shelf or over the table: the room's name is a caption
+   printed across the books. It goes; the dock and the breadcrumbs stay,
+   because those are how you get back out. */
+body.is-close .placard { opacity: 0; transition: opacity .4s var(--ease); }
+body.is-close .hint { opacity: 0; }
 .placard__kicker {
   font-family: var(--font-ui);
   font-size: .66rem;
@@ -238,7 +362,24 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
 .bd__close:hover { color: var(--paper); background: rgba(255,255,255,.12); transform: rotate(90deg); }
 .bd__close svg { width: 16px; height: 16px; }
 
-/* the 3D object you can turn over in your hands */
+/* the 3D object you can turn over in your hands.
+
+   The drop-shadow sits on `.hold`, NOT on `.hold__obj`, and that is the
+   whole point of it being written down here. `.hold__obj` carries
+   `transform-style: preserve-3d`, and a computed `filter` other than
+   `none` forces that property's used value to `flat` — the grouping-
+   property trap PLAN.md's Finding B is about, and the one
+   IMPLEMENTATION.md §2 names by element: "do not put a filter on
+   `.hold` or `.hold__obj`". It was on `.hold__obj` from the start, so
+   the book in the panel had never actually been three-dimensional: the
+   spine and fore-edge collapsed into the front cover's plane and only
+   the cover was ever drawn. Found by tools/qa.mjs's own §7 check in
+   phase 10, on the very element the brief warned about.
+
+   `.hold` uses `perspective`, not `preserve-3d`, so the filter here
+   applies to the composited 3D result instead of destroying it — the
+   shadow is unchanged, the book is finally a book, and the check that
+   caught it is in the suite. */
 .hold {
   perspective: 1400px;
   display: grid;
@@ -247,6 +388,7 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   cursor: grab;
   touch-action: none;
   user-select: none;
+  filter: drop-shadow(0 34px 40px rgba(0,0,0,.65));
 }
 .hold:active { cursor: grabbing; }
 .hold__obj {
@@ -256,7 +398,6 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   transform-style: preserve-3d;
   transform: rotateX(var(--rx, -6deg)) rotateY(var(--ry, -28deg));
   transition: transform .5s var(--ease);
-  filter: drop-shadow(0 34px 40px rgba(0,0,0,.65));
 }
 .hold.is-dragging .hold__obj { transition: none; }
 .hold__f { position: absolute; left: 50%; top: 50%; translate: -50% -50%; backface-visibility: hidden; overflow: hidden; }
@@ -649,6 +790,16 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .pnode--l1 { background: linear-gradient(180deg, rgba(217,164,79,.13), rgba(255,255,255,.02)); }
 .pkids { display: flex; flex-direction: column; gap: .35rem; margin: .35rem 0 0 .85rem; padding-left: .75rem; border-left: 1px dashed rgba(217,164,79,.26); }
 .pnode--l2 .pnode__n { font-size: .9rem; }
+/* the front table: a table, not a room — drawn in its own line under
+   the room it stands in rather than as one more card in the grid */
+.pnode--table {
+  background: linear-gradient(180deg, rgba(217,164,79,.09), rgba(255,255,255,.02));
+  border-style: dashed;
+}
+.pnode--table .pnode__n::before {
+  content: "▤ ";
+  color: var(--brass-soft);
+}
 .pnode--l3 { opacity: .95; }
 .pnode--l3 .pnode__n { font-size: .84rem; font-style: italic; }
 

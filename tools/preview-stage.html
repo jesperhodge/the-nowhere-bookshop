@@ -109,11 +109,17 @@
      can be eyeballed directly, instead of the clip-hidden default
      (see src/js/scene/a11y.js) a screen-reader user would get. Not
      used by the real accessibility path, testing aid only. */
-  body.show-mirror .scene-a11y-mirror button {
+  /* the clip-hiding lives on the role="listitem" WRAPPER since phase 10
+     (a11y.js — the button must keep its own implicit button role), so
+     this un-hides the wrapper, not the button. */
+  body.show-mirror .scene-a11y-mirror [role="listitem"] {
     position: static !important; width: auto !important; height: auto !important;
-    margin: 1px !important; padding: 2px 6px !important; clip: auto !important; clip-path: none !important;
-    display: inline-block; font: 11px monospace; color: #e8dcc8; background: #241a12;
-    border: 1px solid #4a382a;
+    margin: 1px !important; padding: 0 !important; clip: auto !important; clip-path: none !important;
+    display: inline-block;
+  }
+  body.show-mirror .scene-a11y-mirror button {
+    display: inline-block; padding: 2px 6px; font: 11px monospace;
+    color: #e8dcc8; background: #241a12; border: 1px solid #4a382a;
   }
   body.show-mirror #mirror-wrap {
     position: fixed; right: 0; top: 0; bottom: 0; width: 260px; overflow: auto;
@@ -133,31 +139,21 @@
 <pre id="err"></pre>
 
 <script type="module">
-import * as THREE from 'three';
-import { createStage, buildRoomLights } from '/src/js/scene/stage.js';
-import { buildShell } from '/src/js/scene/shell.js';
-import { buildRoomBooks } from '/src/js/scene/books.js';
-import { computeRoomDoorHoles, buildRoomDoors } from '/src/js/scene/doors.js';
-import { buildRoomProps } from '/src/js/scene/props.js';
-import { planRoomTable, buildRoomTable } from '/src/js/scene/tables.js';
-import {
-  createBookController, createDoorController, createPoseController,
-  attachScenePicking,
-} from '/src/js/scene/interact.js';
-import { mountA11yMirror } from '/src/js/scene/a11y.js';
-import { createPoseRig, attachPoseControls } from '/src/js/scene/poses.js';
+import { createStage } from '/src/js/scene/stage.js';
+import { buildRoom } from '/src/js/scene/room.js';
 import { ROOMS } from '/src/js/data/rooms.js';
 import { booksIn } from '/src/js/shop.js';
+
+// Phase 10 moved the assembly this file used to do inline into
+// src/js/scene/room.js — see that file's header for why (short version:
+// main.js needs the same assembly, and a reference that drifts from the
+// thing it references is worse than no reference). Every ?x=0 lever
+// below is now an option on buildRoom(); the harness keeps the HUD, the
+// query-parameter surface and ?orbit=1, which are harness-only concerns.
 
 const params = new URLSearchParams(location.search);
 const roomId = params.get('room') || 'glasshouse';
 const room = ROOMS.find((r) => r.id === roomId) || ROOMS[0];
-const wantBooks = params.get('books') !== '0';
-const wantDoors = params.get('doors') !== '0';
-const wantSigns = wantDoors && params.get('signs') !== '0';
-const wantProps = params.get('props') !== '0';
-const wantTables = params.get('tables') !== '0';
-const wantPoses = params.get('poses') !== '0';
 const wantOrbit = params.get('orbit') === '1';
 const startPose = params.get('pose'); // ?pose=<name> — instant start, for screenshots
 const forceReduced = params.get('reduced') === '1';
@@ -178,270 +174,97 @@ function showError(err) {
 const exposure = params.has('exposure') ? Number(params.get('exposure')) : undefined;
 const stage = createStage(canvas, exposure !== undefined ? { toneMappingExposure: exposure } : {});
 
-// Door holes have to be known before the shell's geometry is built —
-// computeRoomDoorHoles() must run first (see doors.js's own doc
-// comment on ordering).
-const doorHoles = wantDoors ? computeRoomDoorHoles(room) : undefined;
-const shell = buildShell(room, doorHoles ? { holes: doorHoles } : {});
-stage.scene.add(shell);
+const mirrorWrap = document.createElement('div');
+mirrorWrap.id = 'mirror-wrap';
+document.body.appendChild(mirrorWrap);
+const signWrap = document.createElement('div');
+signWrap.id = 'door-signs';
+document.body.appendChild(signWrap);
 
-const lightOpts = {};
-if (params.has('li')) lightOpts.lampIntensity = Number(params.get('li'));
-if (params.has('ai')) lightOpts.ambientIntensity = Number(params.get('ai'));
-if (params.has('ld')) lightOpts.lampDecay = Number(params.get('ld'));
-const lights = buildRoomLights(room, lightOpts);
-stage.scene.add(lights);
+let lastOpened = '';
+let lastDoor = '';
+
+// ?orbit=1 means NO POSE RIG AT ALL, not merely no key/wheel bindings:
+// OrbitControls owns the camera outright, and an orbit drag ends in a
+// `click` on empty floor, which would otherwise start a 700ms tween
+// racing controls.update(). One owner of the camera at a time.
+const handle = buildRoom(stage, room, {
+  booksFor: booksIn,
+  books: params.get('books') !== '0',
+  doors: params.get('doors') !== '0',
+  signs: params.get('signs') !== '0',
+  props: params.get('props') !== '0',
+  tables: params.get('tables') !== '0',
+  poses: params.get('poses') !== '0' && !wantOrbit,
+  poseKeys: true,                 // the harness has no other keyboard owner
+  reducedMotion: forceReduced || undefined,
+  mirrorContainer: mirrorWrap,
+  signContainer: signWrap,
+  onBookActivate: (entry) => {
+    lastOpened = `${entry.book.title} (${entry.book.id})`;
+    console.log('book:open', entry.book.id, entry.book.title);
+    updateHud();
+  },
+  onDoorActivate: (entry) => {
+    lastDoor = `${entry.room.name} (${entry.room.id})`;
+    console.log('door:go', entry.room.id, entry.room.name);
+    updateHud();
+  },
+});
+
+const rig = handle.rig;
+if (startPose && rig) rig.goTo(startPose, { instant: true }); // land there before the first render
 
 if (wantOrbit) {
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
   const controls = new OrbitControls(stage.camera, stage.renderer.domElement);
   controls.target.set(0, 470, -600);
   controls.update();
-  (function pollControls() { controls.update(); requestAnimationFrame(pollControls); })();
+  stage.onFrame(() => controls.update());
 }
+
+stage.onFrame(() => updateHud());
 
 const lampCount = (room.props || []).filter((p) => p.t === 'lamp').length;
-
-// ── the three shared controllers (phase 7 unifies picking across
-// every kind of clickable thing — see interact.js's
-// attachScenePicking() doc comment). Created UNCONDITIONALLY, even
-// when the matching content is skipped by a ?books=0/?doors=0/
-// ?poses=0 lever: a table's own books need bookController even in a
-// room with no shelf (tables.js/interact.js — a book means the same
-// thing wherever it's lying), and every group handed to
-// attachScenePicking() below needs a real controller object
-// regardless of whether that group's entries list ends up empty —
-// its onMove() unconditionally calls `grp.controller.hover(null)` on
-// every non-owning group on each pointer move, and a null controller
-// there would throw, not just no-op. ──
-const bookController = createBookController();
-const doorController = createDoorController();
-const poseController = createPoseController();
-
-let entries = [];
-let cases = [];
-let doorEntries = [];
-let doorRig = null;
-let tableEntries = [];
-let tableRig = null;
-let rig = null; // createPoseRig()'s return, or null under ?poses=0 — see below
-let lastOpened = '';
-let lastDoor = '';
-
-// All three controllers' activation handlers, registered up front
-// (not nested inside their content's own `if` block, unlike phases
-// 4-6): a book lying on the table still fires bookController's
-// activation, and should still update the HUD/console, even in a
-// ?books=0 room that has no SHELF books at all.
-bookController.onActivate((entry) => {
-  lastOpened = `${entry.book.title} (${entry.book.id})`;
-  console.log('book:open', entry.book.id, entry.book.title);
-  updateHud();
-});
-doorController.onActivate((entry) => {
-  lastDoor = `${entry.room.name} (${entry.room.id})`;
-  console.log('door:go', entry.room.id, entry.room.name);
-  updateHud();
-});
-poseController.onActivate((entry) => {
-  console.log('pose:go', entry.pose);
-  rig?.goTo(entry.pose); // null under ?poses=0 — the fixed §4.2 camera never moves
-  updateHud();
-});
-
-// One mirror, mounted once, for the room's whole lifetime — entries
-// are appended to it below (never rebuilt as a parallel list), in the
-// order the brief mandates: shelf books -> doors -> cases -> table ->
-// table books. `rig` is still null the first time this closure is
-// created (createPoseRig() runs further down, after the table) —
-// `let rig` above plus the `rig?.` optional chain here mean
-// opts.onFocus always reads whatever `rig` CURRENTLY is at focus
-// time, not at mount time, so mounting the mirror before the rig
-// exists is safe.
-const mirrorWrap = document.createElement('div');
-mirrorWrap.id = 'mirror-wrap';
-document.body.appendChild(mirrorWrap);
-const mirror = mountA11yMirror(mirrorWrap, [], bookController, {
-  onFocus: (entry) => rig?.focusEntry(entry),
-});
-
-// ── the room's own shelf/table plan: which books stay on the shelf,
-// and which move to the table. Computed unconditionally (data only,
-// no THREE) so ?books=0/?tables=0 can be toggled independently
-// without re-deriving this — and so a book that has moved to the
-// table never also appears on the shelf (PLAN.md point 10):
-// buildRoomBooks() below is handed `shelfBooks`, never the room's raw
-// book list. ──
-const roomBooksRaw = booksIn(room.id);
-const { shelfBooks, table } = planRoomTable(room, roomBooksRaw, booksIn);
-
-if (wantBooks) {
-  const built = buildRoomBooks(room, shelfBooks);
-  stage.scene.add(built.group);
-  entries = built.entries;
-  cases = built.cases;
-  for (const entry of entries) mirror.addEntry(entry); // shelf books first, in shelf order
-}
-
-if (wantDoors) {
-  const doorOpts = {};
-  if (wantSigns) {
-    const signWrap = document.createElement('div');
-    signWrap.id = 'door-signs';
-    document.body.appendChild(signWrap);
-    doorOpts.signContainer = signWrap;
-  }
-  if (params.has('dli')) doorOpts.lightIntensity = Number(params.get('dli'));
-  if (params.has('ddist')) doorOpts.lightDistance = Number(params.get('ddist'));
-
-  doorRig = buildRoomDoors(room, doorOpts);
-  stage.scene.add(doorRig.group);
-  doorEntries = doorRig.entries;
-
-  // Each door entry carries its own `.controller` (a11y.js's doc
-  // comment) so it routes through doorController, not the mirror's
-  // default (bookController).
-  for (const entry of doorEntries) {
-    entry.controller = doorController;
-    mirror.addEntry(entry);
-  }
-
-  (function pollSigns() { doorRig.updateSigns(stage); requestAnimationFrame(pollSigns); })();
-}
-
-let propsRig = null;
-if (wantProps) {
-  propsRig = buildRoomProps(room);
-  stage.scene.add(propsRig.group);
-
-  const clockStart = performance.now();
-  (function pollProps() {
-    propsRig.update((performance.now() - clockStart) / 1000);
-    requestAnimationFrame(pollProps);
-  })();
-
-  window.__propsGroup = propsRig.group;
-  // a plain boolean flag, not the Promise itself, since Playwright's
-  // page.evaluate() can't hand a live Promise object back across the
-  // bridge — poll this for the settle-before-screenshot discipline.
-  window.__propsReady = false;
-  propsRig.ready.then(() => { window.__propsReady = true; updateHud(); });
-}
-
-// Cases become pose targets HERE, not inside the `wantBooks` block
-// above that actually builds them — kept separate purely so the
-// mirror's button order matches the mandated sequence (shelf books,
-// THEN doors, THEN cases), even though the case data itself was
-// already available right after buildRoomBooks() returned.
-for (const c of cases) {
-  c.entry.controller = poseController;
-  mirror.addEntry(c.entry);
-}
-
-window.__tablesReady = true; // nothing to build unless the block below says otherwise
-if (wantTables && table) {
-  tableRig = buildRoomTable(room, table);
-  stage.scene.add(tableRig.group);
-  tableEntries = tableRig.bookEntries;
-
-  // The table's own frame (top/apron/rails/legs) is a pose target,
-  // the SAME shared controller cases use (interact.js's
-  // createPoseController() doc comment: a case and a table are never
-  // both under the pointer at once, so one instance for both is
-  // correct, not a shortcut).
-  tableRig.tableEntry.controller = poseController;
-  mirror.addEntry(tableRig.tableEntry);
-  // Table books last — same bookController as shelf books (a book
-  // means the same thing wherever it's lying); no `.controller` tag
-  // needed, they fall back to the mirror's own default.
-  for (const entry of tableEntries) mirror.addEntry(entry);
-
-  window.__tablesReady = false;
-  tableRig.ready.then(() => { window.__tablesReady = true; updateHud(); });
-}
-
-// No rig at all under ?orbit=1. Skipping only attachPoseControls (the
-// wheel/pinch/key bindings) is not enough: the pose CONTROLLER is
-// still wired to rig.goTo(), the a11y mirror's onFocus is still wired
-// to rig.focusEntry(), and attachScenePicking's onMiss is still wired
-// to rig.back() — and OrbitControls' own drag ends in a `click` on
-// empty floor, so every orbit gesture would kick off a 700ms tween
-// racing controls.update() (which recomputes the camera from its own
-// spherical state on its own rAF loop, with no ordering guarantee
-// against stage.onFrame). One owner of the camera at a time.
-if (wantPoses && !wantOrbit) {
-  const tablesForRig = tableRig
-    ? [{ id: table.id, surface: tableRig.surface, group: tableRig.group }]
-    : [];
-  const rigOpts = { cases, tables: tablesForRig };
-  if (forceReduced) rigOpts.reducedMotion = true;
-  rig = createPoseRig(stage, rigOpts);
-  stage.onFrame((now) => {
-    rig.update(now);
-    // Cheap (one textContent write) — refreshed from the SAME
-    // stage.onFrame callback that drives the tween itself, per the
-    // brief, rather than a second one: updateHud() stays the single
-    // place that formats the HUD.
-    updateHud();
-  });
-  if (startPose) rig.goTo(startPose, { instant: true }); // ?pose=<name>: land there before the first render
-}
-
-// ONE raycaster over every kind of clickable thing in the room at
-// once — see interact.js's attachScenePicking() doc comment for why
-// this replaced phase 4-6's one-raycaster-per-kind design (a case's
-// own sensor sits directly behind that same case's books on purpose,
-// so two independent raycasters would both fire for one click).
-attachScenePicking(
-  stage,
-  [
-    { entries: [...entries, ...tableEntries], controller: bookController },
-    { entries: doorEntries, controller: doorController },
-    { entries: [...cases.map((c) => c.entry), ...(tableRig ? [tableRig.tableEntry] : [])], controller: poseController },
-  ],
-  { onMiss: () => rig?.back() }, // a click on empty floor steps back out (PLAN.md point 6)
-);
-
-// Wheel/pinch dolly + Escape/Arrow keys. `rig` is already null under
-// ?orbit=1 (see above), so this needs no orbit check of its own.
-if (rig) attachPoseControls(stage, rig);
 
 function updateHud() {
   hud.textContent =
     `room: ${room.id}  kind: ${room.kind}\n` +
     `lamps: ${lampCount}  ambient: on\n` +
     `camera fov: ${stage.camera.fov.toFixed(1)}deg  exposure: ${stage.renderer.toneMappingExposure}\n` +
-    (wantOrbit ? 'drag to orbit\n' : 'fixed §4.2 pose (?orbit=1 to free-look)\n') +
-    (wantBooks ? `books: ${entries.length} real, mirror buttons: ${entries.length}\n` : 'books: skipped (?books=0)\n') +
-    (wantDoors ? `doors: ${doorEntries.length}${wantSigns ? '' : ' (signs off)'}\n` : 'doors: skipped (?doors=0)\n') +
-    (wantProps ? `props: ${(room.props || []).length} (${window.__propsReady ? 'loaded' : 'loading'})\n` : 'props: skipped (?props=0)\n') +
-    (tableRig ? `table: ${table.id} (${tableEntries.length} books)\n` : 'table: none\n') +
+    (wantOrbit ? 'drag to orbit\n' : 'pose rig (?orbit=1 to free-look)\n') +
+    `books: ${handle.entries.length}  doors: ${handle.doorEntries.length}  props: ${(room.props || []).length}\n` +
+    (handle.tableRig
+      ? `table: ${handle.table.id} (${handle.tableEntries.length} books, spread ${handle.tableRig.spread.toFixed(2)})\n`
+      : 'table: none\n') +
     (rig
       ? `pose: ${rig.current}  t: ${rig.t.toFixed(2)}  tweening: ${rig.tweening}\n`
       : `pose: skipped (${wantOrbit ? '?orbit=1 owns the camera' : '?poses=0'})\n`) +
+    `ready: ${handle.isReady}\n` +
     (lastOpened ? `last opened: ${lastOpened}\n` : '') +
     (lastDoor ? `last door: ${lastDoor}` : '');
 }
 updateHud();
+handle.ready.then(updateHud);
 
 stage.start();
 
-// exposed for Playwright / manual poking, not used by the render loop
-// itself. `__tablesReady` (set above) is deliberately a plain
-// boolean, not a Promise — page.evaluate() can't hand a live Promise
-// back across the bridge (the same reason `__propsReady` is a
-// boolean, not props.js's own `ready` Promise).
+// exposed for Playwright / manual poking. `__roomReady` is deliberately
+// a plain boolean, not handle.ready itself — page.evaluate() cannot hand
+// a live Promise back across the bridge.
 window.__stage = stage;
+window.__room = handle;
 window.__stageRoom = room.id;
-window.__entries = entries;
-window.__controller = bookController;
-window.__mirror = mirror;
-window.__doorEntries = doorEntries;
-window.__doorController = doorController;
-window.__cases = cases;
-window.__tableRig = tableRig;
-window.__tableEntries = tableEntries;
+window.__entries = handle.entries;
+window.__controller = handle.bookController;
+window.__mirror = handle.mirror;
+window.__doorEntries = handle.doorEntries;
+window.__doorController = handle.doorController;
+window.__cases = handle.cases;
+window.__tableRig = handle.tableRig;
+window.__tableEntries = handle.tableEntries;
 window.__poseRig = rig;
+Object.defineProperty(window, '__roomReady', { get: () => handle.isReady });
 </script>
 </body>
 </html>

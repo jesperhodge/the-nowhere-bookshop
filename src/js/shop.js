@@ -94,6 +94,23 @@ export { ROOMS, ROOM_BY_ID, pathTo };
 
 export const booksIn = (id) => ROOM_BY_ID[id]?.books || [];
 
+/* ── a table is not a room (PLAN.md point 10) ──────────────────
+   `fronttable` is written in rooms.js as a full room record with
+   `viaTable: true`, because rooms were the only container this app had
+   when it was written — walls, props, a palette and a place in the
+   tree, for fifty-eight books lying on a table six feet from the door.
+   Since phase 7 the three.js build models it correctly (tables.js: a
+   real table with its own selection, reached by a camera pose), and
+   since phase 10 the router agrees: you never stand in a table, you
+   stand in the room the table is in and look down at it.
+
+   These three are that rule, in one place, so no consumer re-derives
+   it. `standIn()` in particular is what every route, every hash write
+   and every breadcrumb goes through. */
+export const isTable = (id) => !!ROOM_BY_ID[id]?.viaTable;
+export const standIn = (id) => (isTable(id) ? ROOM_BY_ID[id].parent : id);
+export const tableOf = (id) => (ROOM_BY_ID[id]?.children || []).find((k) => k.viaTable) || null;
+
 /* ── search ───────────────────────────────────────────────── */
 
 const norm = (s) => s.toLowerCase()
@@ -161,6 +178,11 @@ export function surprise(excludeId) {
 export const STATS = {
   books: ALL_BOOKS.length,
   picks: PICKS.length,
-  rooms: ROOMS.length,
+  /* Rooms you can stand in — 49, not ROOMS.length's 50. The plan
+     renders this number next to a tree that no longer lists the front
+     table as a room, and "50 rooms" over 49 room cards is the kind of
+     small lie that outlives the session that told it. */
+  rooms: ROOMS.filter((r) => !r.viaTable).length,
+  tables: ROOMS.filter((r) => r.viaTable).length,
   deepest: Math.max(...ROOMS.map((r) => r.depth)),
 };

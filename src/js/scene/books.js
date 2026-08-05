@@ -379,9 +379,11 @@ function buildAtlas(items) {
   ctx.fillRect(0, 0, canvasW, canvasH);
 
   const rectMap = new Map();
+  const cellMap = new Map();
   for (const s of sorted) {
     paintSpineCell(ctx, s.px, s.py, s.wPx, s.hPx, s.it);
     rectMap.set(s.it, pxRectToUV(s.px, s.py, s.wPx, s.hPx, canvasW, canvasH));
+    cellMap.set(s.it, s);
   }
 
   const texture = new THREE.CanvasTexture(canvas);
@@ -393,6 +395,35 @@ function buildAtlas(items) {
 
   const material = new THREE.MeshStandardMaterial({ map: texture, roughness: 0.82, metalness: 0.02 });
 
+  /* "You have taken this one down before" — scene.css's
+     `.bk.is-read .bk__spine::before`, a small brass dot near the top of
+     the spine, ported. It is painted INTO the atlas rather than added as
+     a mesh: a room can hold a hundred books, and a hundred extra draw
+     calls to say "seen" would cost more than the whole side-case rebuild
+     saved. One canvas arc plus a texture re-upload, and only when a book
+     is actually opened (or when the room is first built, where the
+     upload was happening anyway).
+
+     v runs bottom-to-top over the cell (pxRectToUV flips it), so the
+     canvas's own py IS the top of the spine — the same edge the CSS
+     rule's `top: 10px` measured from. */
+  const seen = new Set();
+  function markSeen(item) {
+    const cell = cellMap.get(item);
+    if (!cell || seen.has(item)) return;
+    seen.add(item);
+    const r = Math.max(1.5, 2.5 * ATLAS_SCALE);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cell.px + cell.wPx / 2, cell.py + 10 * ATLAS_SCALE, r, 0, Math.PI * 2);
+    ctx.fillStyle = '#d9a44f';
+    ctx.shadowColor = '#d9a44f';
+    ctx.shadowBlur = 8;
+    ctx.fill();
+    ctx.restore();
+    texture.needsUpdate = true;
+  }
+
   return {
     texture,
     material,
@@ -400,6 +431,7 @@ function buildAtlas(items) {
     width: canvasW,
     height: canvasH,
     rectFor: (item) => rectMap.get(item),
+    markSeen,
     dispose() { texture.dispose(); material.dispose(); },
   };
 }
@@ -425,10 +457,14 @@ function remapFaceUV(geometry, faceIndex, rect) {
 
 /* ── meshes ───────────────────────────────────────────────── */
 
+/* One instance for every book in every room, for the life of the page —
+   so room.js's dispose() must NOT dispose it when it tears a room down.
+   `userData.shared` is that flag; see room.js's disposeObject3D(). */
 let sharedPageMaterial = null;
 function pageMaterial() {
   if (!sharedPageMaterial) {
     sharedPageMaterial = new THREE.MeshStandardMaterial({ color: '#e9dec5', roughness: 0.92, metalness: 0 });
+    sharedPageMaterial.userData.shared = true;
   }
   return sharedPageMaterial;
 }
@@ -619,6 +655,8 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
            band on the spine is worth nothing without colour or shape.
            Same wording as scene.js's CSS build, deliberately. */
         ariaLabel: `${item.book.title} by ${item.book.author}.${item.pick ? " The shopkeeper's pick." : ''} Take it off the shelf.`,
+        /* the brass "already taken down" dot — see the atlas's markSeen() */
+        setSeen() { atlas.markSeen(item); },
         setHighlight(on) {
           mesh.position.z = on ? baseZ + HOVER_LIFT : baseZ;
           mesh.rotation.x = on ? -HOVER_TILT : 0;

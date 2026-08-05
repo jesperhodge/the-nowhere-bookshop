@@ -105,6 +105,33 @@ export function lampAnchor(p) {
   };
 }
 
+/* Where a skylight's pane actually ends up, and therefore where the
+   light coming through it is. Same one-source-of-truth rule as
+   lampAnchor(): props.js's buildSkylight() places the pane from this,
+   and stage.js's buildRoomLights() hangs the light from it, so the
+   opening and the light coming through it cannot drift apart.
+
+   Phase 10 found out why that matters. Three rooms — attic, rafters,
+   foreignwindow — have a skylight and NO lamp, and through phases 3-9
+   only lamps made light. Those three therefore rendered essentially
+   black (measured: rafters mean luminance 1.3/255, foreignwindow 0.7)
+   and nobody saw it, because the preview harness was only ever eyeballed
+   in rooms that have a lamp. A hole in the ceiling is a light source.
+
+   `p.h` is the pane's depth in z (it lies flat), not a height, so the
+   pane's own placement uses anchor.x + w/2 and anchor.z unchanged —
+   matching buildSkylight() exactly. */
+export function skylightAnchor(p) {
+  const anchor = placeProp(p);
+  const w = p.w || 200, h = p.h || 200;
+  return {
+    x: anchor.x + w / 2,
+    y: Math.min(anchor.y, WORLD.h - 4),
+    z: anchor.z,
+    w, h,
+  };
+}
+
 /* Box-center helper for the generic "vertical billboard" prop case
    (everything props.js draws except 'rug', which lies flat on the
    floor and is positioned directly from placeProp() + w/h instead). */

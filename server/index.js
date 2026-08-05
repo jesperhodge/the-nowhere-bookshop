@@ -85,6 +85,18 @@ app.use('/src', express.static(path.join(ROOT, 'src')));
 app.use('/vendor', express.static(path.join(ROOT, 'vendor')));
 app.get('/', (_req, res) => res.sendFile(path.join(ROOT, 'index.html')));
 app.get('/index.html', (_req, res) => res.sendFile(path.join(ROOT, 'index.html')));
+/* The stage preview harness — one file, named explicitly rather than a
+   static mount over tools/, which would also hand out the enrichment
+   tooling and whatever a QA run has just written into tools/rooms/.
+
+   It is here because not serving it has now cost two sessions: the
+   harness needed a second static server on another port, and a leftover
+   one holding :8099 while `npm start` had silently died looked exactly
+   like a working site. One server, both pages, no second port to forget
+   to kill. Phases 3-9 needed the harness because the live site ran a
+   different renderer; since phase 10 they are the same renderer and this
+   is a debugging view of it (?orbit=1, ?books=0, ?pose=…). */
+app.get('/tools/preview-stage.html', (_req, res) => res.sendFile(path.join(ROOT, 'tools/preview-stage.html')));
 
 app.listen(PORT, () => {
   console.log(`the-nowhere-bookshop on http://localhost:${PORT}  (hardcover: ${MODE})`);

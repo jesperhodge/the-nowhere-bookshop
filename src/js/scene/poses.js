@@ -195,11 +195,11 @@ function roomPose() {
  * @param {object} [opts]
  * @param {object[]} [opts.cases]   books.js's buildRoomBooks().cases —
  *   `{id, group, w, ch, depth}` per case actually built (may be []).
- * @param {object[]} [opts.tables]  `[{id, surface, group?}]` from
+ * @param {object[]} [opts.tables]  `[{id, surface, box?, group?}]` from
  *   tables.js's buildRoomTable() — `surface` is `{center, w, d}` (may
- *   be []). `group` is optional and used only as a clearance obstacle
- *   for shelf poses; when absent, a box is derived from `surface`
- *   instead (see tableObstacleBox()).
+ *   be []). `box`/`group` are optional and used only as a clearance
+ *   obstacle for shelf poses; when both are absent, a box is derived
+ *   from `surface` instead (see tableObstacleBox()).
  * @param {boolean} [opts.reducedMotion]  overrides the
  *   `prefers-reduced-motion` media query (tests/harness); when true,
  *   every goTo() jumps instead of tweening.
@@ -361,12 +361,18 @@ export function createPoseRig(stage, opts = {}) {
     return obstacleCache;
   }
 
-  /* A table's obstacle box. Prefers the real group (tables.js's
-     buildRoomTable().group) when the caller supplied one; otherwise
-     derives one from `surface`, which carries the top's centre and
-     footprint but not its height — hence floor-to-top plus headroom
-     for the books lying on it. */
+  /* A table's obstacle box. Prefers an ANALYTIC box the caller
+     published (tables.js's buildRoomTable().bounds) over the group's
+     own measured bounds, because since phase 10 the group's bounds
+     depend on where the table's spread animation happens to be when
+     obstacles() first runs — and obstacles() caches. A shelf pose whose
+     chosen lift depends on animation timing is non-deterministic, which
+     is a worse failure than being forty units conservative. Falls back
+     to the real group, then to a box derived from `surface`, which
+     carries the top's centre and footprint but not its height — hence
+     floor-to-top plus headroom for the books lying on it. */
   function tableObstacleBox(tb) {
+    if (tb.box) return tb.box;
     if (tb.group) {
       tb.group.updateWorldMatrix(true, true);
       return new THREE.Box3().setFromObject(tb.group);
@@ -712,14 +718,21 @@ function isEditableTarget(target) {
  *
  * @param {object} stage  createStage()'s return value
  * @param {object} rig    createPoseRig()'s return value
- * @param {object} [opts]  reserved, unused today — kept for signature
- *   symmetry with attachScenePicking()/attach*Picking() (interact.js),
- *   which all take an `opts` bag even when a given call needs none of
- *   it yet.
+ * @param {object} [opts]
+ * @param {boolean} [opts.keys=true]  attach the window-level Escape/Arrow
+ *   bindings. **The live site passes `false`** and wires them itself, and
+ *   that is not a preference: `main.js` already owns a window `keydown`
+ *   handler where Escape closes an overlay or the book panel, and
+ *   ArrowLeft/Right step through the shelf while a book is open. Two
+ *   uncoordinated window listeners means one Escape both closes the book
+ *   panel AND pops the pose stack, and one ArrowLeft both steps a book and
+ *   flies to the left shelf. Wheel and pinch are canvas-scoped and stay
+ *   attached either way — nothing else competes for those.
  * @returns {() => void} detach
  */
 export function attachPoseControls(stage, rig, opts = {}) {
   const canvas = stage.renderer.domElement;
+  const wantKeys = opts.keys !== false;
 
   // The page must never scroll under the stage — `{ passive: false }`
   // plus an unconditional preventDefault(), even on a delta that ends
@@ -793,7 +806,7 @@ export function attachPoseControls(stage, rig, opts = {}) {
       default: break;
     }
   }
-  window.addEventListener('keydown', onKeydown);
+  if (wantKeys) window.addEventListener('keydown', onKeydown);
 
   return function detach() {
     canvas.removeEventListener('wheel', onWheel);
@@ -801,6 +814,6 @@ export function attachPoseControls(stage, rig, opts = {}) {
     canvas.removeEventListener('pointermove', onPointerMove);
     canvas.removeEventListener('pointerup', onPointerUp);
     canvas.removeEventListener('pointercancel', onPointerUp);
-    window.removeEventListener('keydown', onKeydown);
+    if (wantKeys) window.removeEventListener('keydown', onKeydown);
   };
 }

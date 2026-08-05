@@ -55,6 +55,8 @@ import {
 const DOOR_LIGHT_INTENSITY = 220_000;
 const DOOR_LIGHT_DISTANCE = 900;
 const DOOR_LIGHT_DECAY = 2;
+const SIGN_IDLE = 0.62;  // see buildSignEl()
+const SIGN_STEP = 110;   // world units a deeper bay's sign is raised — see signAnchor
 const HOVER_LIGHT_BOOST = 1.35; // ~= CSS .door3d:hover { filter: brightness(1.22) }, felt right brighter in WebGL
 
 /* ── the one source of truth for "which kid goes in which bay" ──
@@ -133,9 +135,19 @@ function buildSignEl(room) {
   const el = document.createElement('div');
   el.className = 'scene-door-sign';
   el.setAttribute('aria-hidden', 'true');
+  /* SIGN_IDLE, not 0. PLAN-ARCH.md point 2 says the sign is "shown on
+     hover/focus", and phase 5 implemented exactly that — but the CSS
+     build it replaced hung a permanent bracket plaque over every
+     doorway, and comparing the two side by side in phase 10 that is a
+     real loss: a first-time visitor met five identical glowing arches
+     with no idea what was through any of them. Wayfinding was in the
+     scene and moved to a hover state, which a phone does not have.
+     So: legible always, emphasised on hover. The deviation is
+     deliberate and is recorded in HANDOFF-PHASE11.md. */
   el.style.cssText = [
-    'position:fixed', 'left:0', 'top:0', 'transform:translate(-50%,-100%)',
-    'opacity:0', 'transition:opacity .18s ease',
+    'position:fixed', 'left:0', 'top:0',
+    'transform:translate(-50%,-100%)', 'transform-origin:50% 100%',
+    `opacity:${SIGN_IDLE}`, 'transition:opacity .18s ease',
     'pointer-events:none', 'z-index:5', 'will-change:transform,left,top',
     'background:linear-gradient(180deg,#2a1d16,#16100c)',
     'border:1px solid rgba(255,180,94,.4)',
@@ -236,7 +248,19 @@ export function buildRoomDoors(room, opts = {}) {
     if (container) {
       signEl = buildSignEl(spec.room);
       container.appendChild(signEl);
-      signAnchor = new THREE.Vector3(anchor.x + intoRoom * 10, DOOR_H + 12, anchor.z);
+      /* Stepped up the wall by bay, in WORLD space so perspective does
+         the rest. Three doorways in one side wall all sit at x = -832
+         and project within 60px of each other, so three fixed labels at
+         `DOOR_H + 12` piled into one illegible heap — which is why phase
+         5 made the sign hover-only in the first place. Raising each
+         deeper bay by SIGN_STEP separates them into the same stepped
+         diagonal the CSS build's brackets got for free from being inside
+         the geometry, and keeps each sign over its own opening. */
+      signAnchor = new THREE.Vector3(
+        anchor.x + intoRoom * 10,
+        DOOR_H + 12 + spec.bayIndex * SIGN_STEP,
+        anchor.z,
+      );
     }
 
     const entry = {
@@ -246,7 +270,7 @@ export function buildRoomDoors(room, opts = {}) {
       ariaLabel: `Go through to ${spec.room.name}${spec.room.sub ? ' — ' + spec.room.sub : ''}`,
       setHighlight(on) {
         light.intensity = on ? baseIntensity * HOVER_LIGHT_BOOST : baseIntensity;
-        if (signEl) signEl.style.opacity = on ? '1' : '0';
+        if (signEl) signEl.style.opacity = on ? '1' : String(SIGN_IDLE);
       },
       signEl,
       signAnchor,
@@ -255,6 +279,17 @@ export function buildRoomDoors(room, opts = {}) {
     entries.push(entry);
   }
 
+  /* Signs SCALE with depth, which is not decoration — it is what keeps
+     three of them on the same wall from piling into one illegible heap.
+     The CSS build's brackets were inside the geometry, so perspective
+     sized and separated them for free; a fixed-size DOM label at the
+     projected position of each of `front`'s three left-hand doorways
+     lands the three within 60px of each other, each 110px wide. Scaling
+     by distance restores the same stepped diagonal the CSS build had,
+     and a far doorway's sign reads as further away rather than as a
+     duplicate of its neighbour's. Clamped, so the nearest never becomes
+     a billboard and the furthest stays readable. */
+  const SIGN_REF_DIST = 1750;   // roughly a near doorway from the room pose
   function updateSigns(stage) {
     if (!container) return;
     const rect = stage.renderer.domElement.getBoundingClientRect();
@@ -262,8 +297,14 @@ export function buildRoomDoors(room, opts = {}) {
     for (const entry of entries) {
       if (!entry.signAnchor) continue;
       const p = entry.signAnchor.clone().project(stage.camera);
+      const dist = entry.signAnchor.distanceTo(stage.camera.position);
+      const k = Math.max(0.5, Math.min(1.06, SIGN_REF_DIST / Math.max(1, dist)));
       entry.signEl.style.left = `${Math.round((p.x * 0.5 + 0.5) * rect.width + rect.left)}px`;
       entry.signEl.style.top = `${Math.round((1 - (p.y * 0.5 + 0.5)) * rect.height + rect.top)}px`;
+      entry.signEl.style.transform = `translate(-50%,-100%) scale(${k.toFixed(3)})`;
+      /* Behind the camera, or off to the side of a shelf pose: hide it
+         rather than pin it to an edge. p.z > 1 is beyond the far plane. */
+      entry.signEl.style.visibility = (p.z > 1 || Math.abs(p.x) > 1.25) ? 'hidden' : '';
     }
   }
 

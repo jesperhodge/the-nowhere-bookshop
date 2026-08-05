@@ -57,8 +57,8 @@
 
 import * as THREE from 'three';
 import { ART } from '../data/props.js';
-import { WORLD, placeProp, propBoxCenter, lampAnchor } from './coords.js';
-import { rgba, mix, pinstripe, svgTexture } from './textures.js';
+import { WORLD, placeProp, propBoxCenter, lampAnchor, skylightAnchor } from './coords.js';
+import { rgba, mix, pinstripe, svgTexture, boundedCache } from './textures.js';
 import { sideCaseExists, SIDE_CD } from './books.js';
 import { roomHasTable, tableFootprint } from './tables.js';
 
@@ -162,7 +162,13 @@ function propBox(room, p) {
    and the ART registry lookup.
    ============================================================ */
 
-const artCache = new Map();
+/* Bounded for the reason textures.js's boundedCache() gives: the live
+   site walks rooms, and an unbounded content-keyed cache is a leak with
+   a good excuse. 26 ART kinds x a few colourways is the whole space, so
+   this cap is generous rather than tight — it exists to have a ceiling
+   at all. The entry is svgTexture()'s `{texture, aspect, ready}`, hence
+   the explicit disposer. */
+const artCache = boundedCache(64, (e) => e.texture?.dispose());
 
 /** ART registry name + positional args -> { texture, aspect, ready }.
  *  See textures.js's svgTexture() for what each field means and when
@@ -204,7 +210,7 @@ function artArgs(p) {
 
 /* ── shared canvas-painted-texture cache (specially-coded types) ── */
 
-const paintCache = new Map();
+const paintCache = boundedCache(48);
 function paintedTexture(key, wWorld, hWorld, painter) {
   const hit = paintCache.get(key);
   if (hit) return hit;
@@ -269,6 +275,37 @@ function billboard(x, y, z, w, h, material) {
 
 /* ── 'art' ────────────────────────────────────────────────────── */
 
+/* ── why a billboard needs its own light ─────────────────────────
+   Every 'art' prop is a flat plane facing the viewer. The lamp that
+   lights the room hangs above and behind it, so the angle between the
+   plane's normal and the direction of the light is close to 90 degrees
+   and the diffuse term is close to nothing — the armchair in the front
+   room, painted #7d4239, rendered as a black silhouette, and so did the
+   globe in the long room, the cat, the mushrooms in the oak. Anything
+   standing on the floor more than a little away from the lamp.
+
+   That is correct Lambert shading of a shape that is not really flat: a
+   real armchair has surfaces facing every way, and the SVG already
+   paints its own light and shade. So the texture is fed back in as an
+   EMISSIVE map — the prop carries its own painted illumination, and the
+   room's real light adds to it rather than being the only source. At 0.6
+   the props read at about the brightness the CSS build painted them
+   while still visibly darker in a room's dim corners, which is the whole
+   thing phases 3-6 were trying to buy.
+
+   Found in phase 10, comparing the live site against the CSS build it
+   replaced side by side. It survived phases 6-9 because the preview
+   harness was eyeballed room by room with nothing to compare against,
+   and a dark silhouette in a dim room looks deliberate. */
+const ART_SELF_LIT = 0.6;
+
+function selfLit(material, texture, amount = ART_SELF_LIT) {
+  material.emissiveMap = texture;
+  material.emissive = new THREE.Color(0xffffff);
+  material.emissiveIntensity = amount;
+  return material;
+}
+
 function buildArt(p, pal, room) {
   const { texture, aspect, ready } = artTexture(p.a, artArgs(p));
   const box = propBox(room, p);
@@ -276,11 +313,11 @@ function buildArt(p, pal, room) {
   const dispW = aspect > boxAspect ? box.w : box.h * aspect;
   const dispH = aspect > boxAspect ? box.w / aspect : box.h;
 
-  const material = new THREE.MeshStandardMaterial({
+  const material = selfLit(new THREE.MeshStandardMaterial({
     map: texture, transparent: true, alphaTest: 0.02,
     roughness: 0.88, metalness: 0.02, side: THREE.DoubleSide,
     opacity: p.op ?? 1,
-  });
+  }), texture);
   const mesh = billboard(box.x, box.y, box.z, dispW, dispH, material);
   mesh.name = `prop-art:${p.a || ''}`;
 
@@ -466,10 +503,13 @@ function buildWindow(p, pal, room) {
   const box = propBox(room, p);
   const key = `window|${p.sky1}|${p.sky2}|${p.snow ? 1 : 0}|${p.weather}|${box.w}x${box.h}`;
   const tex = paintedTexture(key, box.w, box.h, (ctx, w, h, s) => paintWindow(ctx, w, h, s, p));
-  const material = new THREE.MeshStandardMaterial({
+  /* A window is a light source, so it gets its OWN painted sky as the
+     emissive map rather than a flat tint of sky1 at 0.14 — which is what
+     it had, and which is why the long room's two tall windows read as
+     grey panels next to the CSS build's golden ones. */
+  const material = selfLit(new THREE.MeshStandardMaterial({
     map: tex, roughness: 0.4, metalness: 0.05,
-    emissive: new THREE.Color(p.sky1 || '#456179'), emissiveIntensity: 0.14,
-  });
+  }), tex, 0.55);
   return { objects: [billboard(box.x, box.y, box.z, box.w, box.h, material)] };
 }
 
@@ -510,11 +550,12 @@ function buildHearth(p, pal, room) {
   const box = propBox(room, p);
   const key = `hearth|${box.w}x${box.h}`;
   const tex = paintedTexture(key, box.w, box.h, paintHearth);
-  const material = new THREE.MeshStandardMaterial({
-    map: tex, transparent: true,
-    emissive: new THREE.Color('#ff8c32'), emissiveIntensity: 0.35,
-    roughness: 0.7,
-  });
+  /* Same as the window: the painted fire is the light, so it lights
+     itself. A flat #ff8c32 tint at 0.35 washed the mouth and the mantel
+     with the same orange as the flames. */
+  const material = selfLit(new THREE.MeshStandardMaterial({
+    map: tex, transparent: true, roughness: 0.7,
+  }), tex, 0.6);
   return { objects: [billboard(box.x, box.y, box.z, box.w, box.h, material)] };
 }
 
@@ -623,7 +664,6 @@ function paintSkylight(ctx, w, h, s) {
 }
 
 function buildSkylight(p) {
-  const anchor = placeProp(p);
   const w = p.w || 200, h = p.h || 200;
   const key = `skylight|${w}x${h}`;
   const tex = paintedTexture(key, w, h, paintSkylight);
@@ -631,7 +671,12 @@ function buildSkylight(p) {
   const geo = new THREE.PlaneGeometry(w, h);
   geo.rotateX(Math.PI / 2); // normal faces -Y (down into the room)
   const mesh = new THREE.Mesh(geo, material);
-  mesh.position.set(anchor.x + w / 2, Math.min(anchor.y, WORLD.h - 4), anchor.z);
+  /* coords.js's skylightAnchor(), not this file's own arithmetic —
+     stage.js's buildRoomLights() hangs the light coming through the
+     opening off the SAME function, the way lampAnchor() already keeps a
+     lamp's fixture and its bulb together. */
+  const anchor = skylightAnchor(p);
+  mesh.position.set(anchor.x, anchor.y, anchor.z);
   mesh.name = 'prop-skylight';
   return { objects: [mesh] };
 }
@@ -816,7 +861,7 @@ export function buildRoomProps(room) {
 }
 
 export function clearPropTextureCache() {
-  artCache.clear();
+  artCache.clear();   // boundedCache.clear() disposes as it goes
   paintCache.clear();
   sharedShadowTexture = null;
   sharedShadeTexture = null;

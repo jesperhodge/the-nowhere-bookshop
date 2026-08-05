@@ -51,12 +51,14 @@ import * as THREE from 'three';
 function makeController(eventName, detailOf) {
   let hovered = null;
   const activateListeners = new Set();
+  const hoverListeners = new Set();
 
   function hover(entry) {
     if (hovered === entry) return;
     if (hovered) hovered.setHighlight(false);
     hovered = entry;
     if (hovered) hovered.setHighlight(true);
+    for (const fn of hoverListeners) fn(hovered);
   }
 
   function activate(entry) {
@@ -76,10 +78,22 @@ function makeController(eventName, detailOf) {
     return () => activateListeners.delete(fn);
   }
 
+  /** Subscribe to hover CHANGES — called with the entry now hovered, or
+   *  null when nothing is. Symmetric with onActivate(), and for the same
+   *  reason: both input paths (raycast and the a11y mirror's focus) already
+   *  funnel through hover(), so a subscriber here is told about mouse and
+   *  Tab identically and cannot drift between them. main.js's floating
+   *  name-tag is the first consumer. */
+  function onHover(fn) {
+    hoverListeners.add(fn);
+    return () => hoverListeners.delete(fn);
+  }
+
   return {
     hover,
     activate,
     onActivate,
+    onHover,
     get hovered() { return hovered; },
   };
 }
@@ -197,6 +211,21 @@ export function attachScenePicking(stage, groups, opts = {}) {
     return null;
   }
 
+  /* THREE.Raycaster does NOT skip invisible objects — `intersect()` in
+     three.core.js tests `object.layers` and nothing else, and a mesh
+     handed to intersectObjects() directly is never traversed, so its
+     `.visible` is never consulted. That was harmless while every
+     pickable mesh was always drawn. It stopped being harmless when the
+     display table gained two layouts (tables.js): in the `room` pose
+     most of the table's books are hidden, and without this they stay
+     clickable straight through the table top — you would pick a book
+     you cannot see, in front of one you can. Nearest VISIBLE hit, not
+     nearest hit. */
+  function visible(obj) {
+    for (let o = obj; o; o = o.parent) if (o.visible === false) return false;
+    return true;
+  }
+
   function pick(event) {
     const rect = canvas.getBoundingClientRect();
     if (rect.width === 0 || rect.height === 0) return null;
@@ -204,8 +233,8 @@ export function attachScenePicking(stage, groups, opts = {}) {
     pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     raycaster.setFromCamera(pointer, stage.camera);
     const hits = raycaster.intersectObjects(meshes, false);
-    if (!hits.length) return null;
-    return hits[0].object.userData.entry || null;
+    const hit = hits.find((h) => visible(h.object));
+    return hit ? (hit.object.userData.entry || null) : null;
   }
 
   function onMove(event) {

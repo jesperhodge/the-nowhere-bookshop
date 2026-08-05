@@ -33,7 +33,11 @@
    purpose: IMPLEMENTATION.md's inherited trap list calls those out as
    grouping properties that break transform-style elsewhere in this
    codebase — this element has no 3D transform to break, but the habit
-   of never reaching for them near the scene is worth keeping. */
+   of never reaching for them near the scene is worth keeping.
+
+   Phase 10 moves this off the <button> and onto a WRAPPER — see
+   addEntry() for why, it is the fix for a defect phases 4-9 all carried
+   forward. */
 const HIDDEN_CSS = [
   'position:absolute',
   'width:1px', 'height:1px',
@@ -68,21 +72,33 @@ export function mountA11yMirror(container, entries, controller, opts = {}) {
   const root = document.createElement('div');
   root.className = 'scene-a11y-mirror';
   root.setAttribute('role', 'list');
-  // "Books" in phase 4; phase 5 appends doorways to this same list
-  // (see the file's doc comment) so the label now covers both.
-  root.setAttribute('aria-label', 'Books and doorways in this room');
+  // "Books and doorways" through phase 9; phase 10 makes this the live
+  // site's only description of the room, and it holds cases and the
+  // display table too.
+  root.setAttribute('aria-label', 'Everything in this room');
 
   const buttons = new Map(); // entry -> button
 
   function addEntry(entry) {
+    /* The listitem is a WRAPPER, and the clip-hiding lives on it.
+       Phases 4-9 put `role="listitem"` on the <button> itself, which
+       overrides the implicit `button` role: a screen reader announced a
+       list item, and the one affordance that matters here — "this is a
+       button, press Enter" — was gone. The whole reason these are real
+       <button>s (see below) was being thrown away one attribute later.
+       An element may have one role; a list needs its items to be
+       listitems and this mirror needs its controls to be buttons, so
+       they cannot be the same element. */
+    const li = document.createElement('div');
+    li.setAttribute('role', 'listitem');
+    li.style.cssText = HIDDEN_CSS;
+
     const b = document.createElement('button');
     b.type = 'button';
-    b.style.cssText = HIDDEN_CSS;
     b.textContent = entry.ariaLabel;
     b.setAttribute('aria-label', entry.ariaLabel);
     if (entry.book) b.dataset.bookId = entry.book.id;
     if (entry.room) b.dataset.roomId = entry.room.id;
-    b.setAttribute('role', 'listitem');
 
     // Route through this entry's OWN controller if it has one (doors
     // do — see the file's doc comment), else the mirror's default
@@ -113,7 +129,8 @@ export function mountA11yMirror(container, entries, controller, opts = {}) {
     // raycast pointer-click also calls (interact.js).
     b.addEventListener('click', () => ctl.activate(entry));
 
-    root.appendChild(b);
+    li.appendChild(b);
+    root.appendChild(li);
     buttons.set(entry, b);
     return b;
   }

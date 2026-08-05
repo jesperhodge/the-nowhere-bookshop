@@ -9,9 +9,19 @@
 <meta name="theme-color" content="#1a1210">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231d1512'/><rect x='7' y='7' width='5' height='18' rx='1' fill='%23c98a4b'/><rect x='13.5' y='9' width='4' height='16' rx='1' fill='%238fa9a1'/><rect x='19' y='6' width='5' height='19' rx='1' fill='%23b4574b'/></svg>">
 <link rel="stylesheet" href="src/styles/base.css">
-<link rel="stylesheet" href="src/styles/scene.css">
-<link rel="stylesheet" href="src/styles/themes.css">
 <link rel="stylesheet" href="src/styles/ui.css">
+<!-- three.js r185, vendored and committed, loaded through an import map:
+     no bundler, no build step, no npm needed to view the shop
+     (PLAN-ARCH.md "The one dependency"). three.module.js imports
+     ./three.core.js by a RELATIVE path the map never sees, which is why
+     both files sit together in vendor/three/build/ — the map itself
+     needs only these two entries. -->
+<script type="importmap">
+{ "imports": {
+    "three": "/vendor/three/build/three.module.js",
+    "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
 </head>
 <body>
 
@@ -37,12 +47,30 @@
 <main id="shop" class="shop" hidden>
 
   <div class="stage" id="stage">
-    <div class="stage__fit" id="fit">
-      <div class="room" id="room"></div>
-    </div>
+    <!-- The room. The canvas carries no semantics at all — every book,
+         doorway, shelf and table in it is a real focusable button in
+         #mirror, which is why that sits next in the document and inside
+         the stage: Tab order is room contents, then the tools, then the
+         dock, exactly as it was when the books were DOM. -->
+    <canvas class="scene" id="scene" aria-hidden="true"></canvas>
+    <div class="mirror" id="mirror"></div>
+    <div class="signs" id="signs" aria-hidden="true"></div>
     <canvas class="ambience" id="ambience" aria-hidden="true"></canvas>
     <div class="vignette" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
+
+    <!-- Shown only when WebGL will not start. The shop is still whole:
+         search, the plan and the shelf list are a complete text UI for
+         every one of its rooms (IMPLEMENTATION.md §4.7). -->
+    <div class="flat" id="flat" hidden>
+      <div class="flat__inner">
+        <p class="flat__hd">The rooms can't be drawn in this browser.</p>
+        <p class="flat__p" id="flatWhy">WebGL wouldn't start, so there is nothing to walk around in.</p>
+        <p class="flat__p">Everything is still here as a list — the shelf you are standing at, the
+        plan of the shop, and a search over all of it.</p>
+        <p class="flat__keys"><kbd>S</kbd> this shelf · <kbd>/</kbd> search · <kbd>M</kbd> the plan</p>
+      </div>
+    </div>
   </div>
 
   <!-- Top bar -->

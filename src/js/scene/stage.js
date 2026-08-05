@@ -8,7 +8,7 @@
    ============================================================ */
 
 import * as THREE from 'three';
-import { WORLD, lampAnchor } from './coords.js';
+import { WORLD, lampAnchor, skylightAnchor } from './coords.js';
 
 /* ── camera ───────────────────────────────────────────────────
    Reproduces the CSS framing: perspective: 1500px, i.e. an eye at
@@ -32,6 +32,33 @@ export function makeCamera(aspect = 1) {
   camera.position.set(0, WORLD.h / 2, CAMERA.eyeZ);
   camera.lookAt(0, CAMERA.lookY, CAMERA.lookZ);
   return camera;
+}
+
+/* ── narrow viewports ────────────────────────────────────────
+   A perspective camera holds its VERTICAL fov, so a tall, narrow
+   viewport simply sees less of the room's width: at a phone's 0.46
+   aspect the room pose frames x ±216 of its ±840, which is a third of
+   the back case and no doorways at all. The CSS build handled this by
+   cropping in and letting you drag along the shelf (main.js's old
+   fit()/panMax) — a mechanic that dies with the swap, since there is
+   nothing left to pan.
+
+   So below MIN_ASPECT the vertical fov widens to hold the horizontal
+   framing steady (the standard "Hor+" adaptation). MIN_ASPECT is 1.0
+   deliberately, not the 1.787 the 1680x940 world box would suggest:
+   every desktop viewport, and every measurement, screenshot and pose
+   figure recorded by phases 3-9, is at aspect >= 1 and must come out
+   BIT-IDENTICAL. This only ever fires in portrait.
+
+   poses.js reads camera.fov fresh on every goTo() (its own doc comment
+   says why), so shelf and table poses follow this for free. */
+const MIN_ASPECT = 1.0;
+const DEG = Math.PI / 180;
+
+export function fovForAspect(aspect) {
+  if (!(aspect > 0) || aspect >= MIN_ASPECT) return CAMERA.fovDeg;
+  const halfTan = Math.tan((CAMERA.fovDeg * DEG) / 2) * (MIN_ASPECT / aspect);
+  return (2 * Math.atan(halfTan)) / DEG;
 }
 
 /* ── lighting ─────────────────────────────────────────────────
@@ -60,6 +87,26 @@ const AMBIENT_INTENSITY = 0.7;
 const LAMP_INTENSITY = 1_800_000;
 const LAMP_DISTANCE = 1400;
 const LAMP_DECAY = 2;
+
+/* A hole in the ceiling is a light source, and for three rooms it is the
+   ONLY one. `attic`, `rafters` and `foreignwindow` carry a skylight and
+   no lamp, and through phases 3-9 this function only ever lit a lamp —
+   so those three rendered at a mean luminance of 14, 1.3 and 0.7 out of
+   255. Effectively black, all the way through the phase that measured
+   draw calls in them. It survived nine phases because the preview
+   harness was only ever eyeballed in `front`, `longroom` and `orrery`,
+   which all have lamps, and because a canvas that renders a dark room
+   and a canvas that renders nothing look identical. tools/qa.mjs now
+   reads the frame back off the GPU and asserts every room has structure
+   in it, which is the check that would have caught it in phase 3.
+
+   Cooler and higher than a lamp: it is daylight through glass, from
+   above, over a wider area — hence the bigger distance and the room's
+   `glow-2` (the cool secondary) in preference to `glow`. Tuned by
+   screenshot in all three rooms, the same way LAMP_INTENSITY was. */
+const SKY_INTENSITY = 2_600_000;
+const SKY_DISTANCE = 2000;
+const SKY_DROP = 60; // how far below the pane the light hangs
 
 export function buildRoomLights(room, opts = {}) {
   const group = new THREE.Group();
@@ -95,12 +142,41 @@ export function buildRoomLights(room, opts = {}) {
     bulb.position.copy(light.position);
     group.add(bulb);
   }
+
+  for (const p of room.props || []) {
+    if (p.t !== 'skylight') continue;
+    const anchor = skylightAnchor(p);
+    const light = new THREE.PointLight(
+      new THREE.Color(pal['glow-2'] || pal.glow || '#cbdcff'),
+      opts.skyIntensity ?? SKY_INTENSITY,
+      opts.skyDistance ?? SKY_DISTANCE,
+      opts.lampDecay ?? LAMP_DECAY,
+    );
+    // No glow sphere: unlike a lamp bulb, the thing the light comes
+    // through is already a lit surface (props.js paints the pane).
+    light.position.set(anchor.x, anchor.y - SKY_DROP, anchor.z);
+    group.add(light);
+  }
   return group;
 }
 
 /* ── renderer + render loop + resize ─────────────────────────── */
 
-export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
+/**
+ * @param {HTMLCanvasElement} canvas
+ * @param {object} [opts]
+ * @param {number} [opts.toneMappingExposure]
+ * @param {(event: Event) => void} [opts.onContextLost]  the GPU took the
+ *   context back (a tab backgrounded on a phone, a driver reset). Nothing
+ *   renders after this and there is no way to notice from the outside —
+ *   the canvas simply freezes on its last frame — so the caller is told
+ *   and can fall back to the text UI, exactly as it would on a
+ *   context-creation failure (IMPLEMENTATION.md §4.7).
+ *
+ * THROWS if a WebGL context cannot be created. That is the no-WebGL
+ * fallback's trigger and it is deliberately not swallowed here.
+ */
+export function createStage(canvas, { toneMappingExposure = 1.05, onContextLost } = {}) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -119,10 +195,23 @@ export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
     const h = Math.max(1, (parent ? parent.clientHeight : window.innerHeight));
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
+    camera.fov = fovForAspect(camera.aspect); // see fovForAspect() — portrait only
     camera.updateProjectionMatrix();
   }
   window.addEventListener('resize', resize);
   resize();
+
+  function onLost(e) {
+    /* preventDefault() is what makes a restore even possible; we do not
+       attempt one (rebuilding every room's atlas and texture from a
+       half-dead context is a lot of new failure surface for a rare
+       event), we just stop and tell the caller so the shop can fall
+       back to the list UI it already has. */
+    e.preventDefault();
+    stop();
+    onContextLost?.(e);
+  }
+  canvas.addEventListener('webglcontextlost', onLost);
 
   let raf = null;
   let frame = 0;
@@ -158,6 +247,7 @@ export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
   function dispose() {
     stop();
     window.removeEventListener('resize', resize);
+    canvas.removeEventListener('webglcontextlost', onLost);
     renderer.dispose();
     frameCallbacks.clear();
   }
@@ -175,9 +265,24 @@ export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
     return () => frameCallbacks.delete(fn);
   }
 
+  /**
+   * Where an object currently sits on screen, in normalised device
+   * coordinates (-1..1, y up). Exposed so DOM chrome that has to follow
+   * a thing in the room — main.js's floating name-tag — can do it
+   * without importing three.js itself, and using THIS camera rather
+   * than a second idea of where the camera is.
+   * @param {THREE.Object3D} object
+   */
+  const projectScratch = new THREE.Vector3();
+  function project(object) {
+    object.getWorldPosition(projectScratch);
+    projectScratch.project(camera);
+    return { x: projectScratch.x, y: projectScratch.y };
+  }
+
   return {
     renderer, scene, camera,
-    resize, start, stop, dispose, onFrame,
+    resize, start, stop, dispose, onFrame, project,
     get frame() { return frame; },
   };
 }
