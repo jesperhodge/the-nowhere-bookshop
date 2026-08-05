@@ -1,0 +1,396 @@
+{
+ "slug": "pen-translation",
+ "prize": "PEN Translation Prize",
+ "rooms": [
+  "translator",
+  "hundredwindows",
+  "coldcoast",
+  "othersuns",
+  "foreignwindow"
+ ],
+ "page": "PEN Translation Prize",
+ "url": "https://en.wikipedia.org/wiki/PEN_Translation_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1350478988",
+ "revid": 1350478988,
+ "fetchedAt": "2026-08-05T17:21:09.592Z",
+ "counts": {
+  "entries": 51,
+  "winners": 51,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Translator | Author | Title | Original title | Language | Ref.",
+   "roles": {
+    "year": 0,
+    "translator": 1,
+    "author": 2,
+    "title": 3
+   },
+   "took": 51,
+   "dropped": 13,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Viceroys",
+   "author": "Federico De Roberto",
+   "year": 1963,
+   "kind": "w",
+   "translator": "Archibald Colquhoun"
+  },
+  {
+   "title": "The Tin Drum",
+   "author": "Günter Grass",
+   "year": 1964,
+   "kind": "w",
+   "translator": "Ralph Manheim"
+  },
+  {
+   "title": "The Story of a Life",
+   "author": "Konstantin Paustovsky",
+   "year": 1965,
+   "kind": "w",
+   "translator": "Joseph Barnes"
+  },
+  {
+   "title": "Sagarana: The Duel",
+   "author": "João Guimarães Rosa",
+   "year": 1967,
+   "kind": "w",
+   "translator": "Harriet de Onis"
+  },
+  {
+   "title": "The History of Italy",
+   "author": "Francesco Guicciardini",
+   "year": 1970,
+   "kind": "w",
+   "translator": "Sidney Alexander"
+  },
+  {
+   "title": "Hope Against Hope",
+   "author": "Nadezhda Mandelstam",
+   "year": 1971,
+   "kind": "w",
+   "translator": "Max Hayward"
+  },
+  {
+   "title": "The Obscene Bird of Night",
+   "author": "José Donoso",
+   "year": 1974,
+   "kind": "w",
+   "translator": "Hardie St. Martin & Leonard Mades"
+  },
+  {
+   "title": "Count Julian",
+   "author": "Juan Goytisolo",
+   "year": 1975,
+   "kind": "w",
+   "translator": "Helen R. Lane"
+  },
+  {
+   "title": "A Short History of Decay",
+   "author": "E. M. Cioran",
+   "year": 1976,
+   "kind": "w",
+   "translator": "Richard Howard"
+  },
+  {
+   "title": "The Autumn of the Patriarch",
+   "author": "Gabriel García Márquez",
+   "year": 1977,
+   "kind": "w",
+   "translator": "Gregory Rabassa"
+  },
+  {
+   "title": "One Way or Another",
+   "author": "Leonardo Sciascia",
+   "year": 1979,
+   "kind": "w",
+   "translator": "Adrienne Foulke"
+  },
+  {
+   "title": "The Storm and Other Poems",
+   "author": "Eugenio Montale",
+   "year": 1979,
+   "kind": "w",
+   "translator": "Charles Wright"
+  },
+  {
+   "title": "Homage to the Lame Wolf",
+   "author": "Vasko Popa",
+   "year": 1980,
+   "kind": "w",
+   "translator": "Charles Simic"
+  },
+  {
+   "title": "Evening Edged in Gold",
+   "author": "Arno Schmidt",
+   "year": 1981,
+   "kind": "w",
+   "translator": "John E. Woods"
+  },
+  {
+   "title": "Four Comedies: The Misanthrope, Tartuffe, The Learned Ladies, The School for Wives",
+   "author": "Molière",
+   "year": 1983,
+   "kind": "w",
+   "translator": "Richard Wilbur"
+  },
+  {
+   "title": "The Name of the Rose",
+   "author": "Umberto Eco",
+   "year": 1984,
+   "kind": "w",
+   "translator": "William Weaver"
+  },
+  {
+   "title": "The War of the End of the World",
+   "author": "Mario Vargas Llosa",
+   "year": 1985,
+   "kind": "w",
+   "translator": "Helen R. Lane"
+  },
+  {
+   "title": "The Lover",
+   "author": "Marguerite Duras",
+   "year": 1986,
+   "kind": "w",
+   "translator": "Barbara Bray"
+  },
+  {
+   "title": "Perfume: The Story of a Murderer",
+   "author": "Patrick Süskind",
+   "year": 1987,
+   "kind": "w",
+   "translator": "John E. Woods"
+  },
+  {
+   "title": "A Scrap of Time",
+   "author": "Ida Fink",
+   "year": 1988,
+   "kind": "w",
+   "translator": "Madeline Levine & Francine Prose"
+  },
+  {
+   "title": "The Stranger",
+   "author": "Albert Camus",
+   "year": 1989,
+   "kind": "w",
+   "translator": "Matthew Ward"
+  },
+  {
+   "title": "Foucault's Pendulum",
+   "author": "Umberto Eco",
+   "year": 1990,
+   "kind": "w",
+   "translator": "William Weaver"
+  },
+  {
+   "title": "The Brothers Karamazov",
+   "author": "Fyodor Dostoevsky",
+   "year": 1991,
+   "kind": "w",
+   "translator": "Richard Pevear & Larissa Volokhonsky"
+  },
+  {
+   "title": "The Adventures of Mr. Nicholas Wisdom",
+   "author": "Ignacy Krasicki",
+   "year": 1993,
+   "kind": "w",
+   "translator": "Thomas Hoisington"
+  },
+  {
+   "title": "Earthlight",
+   "author": "André Breton",
+   "year": 1994,
+   "kind": "w",
+   "translator": "Bill Zavatsky & Zack Rogow"
+  },
+  {
+   "title": "View With a Grain of Sand",
+   "author": "Wisława Szymborska",
+   "year": 1996,
+   "kind": "w",
+   "translator": "Stanisław Barańczak & Clare Cavanagh"
+  },
+  {
+   "title": "Six Early Stories",
+   "author": "Thomas Mann",
+   "year": 1998,
+   "kind": "w",
+   "translator": "Peter Constantine"
+  },
+  {
+   "title": "The Tale of the 1002nd Night",
+   "author": "Joseph Roth",
+   "year": 1999,
+   "kind": "w",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "Selected Writings",
+   "author": "Gérard de Nerval",
+   "year": 2000,
+   "kind": "w",
+   "translator": "Richard Sieburth"
+  },
+  {
+   "title": "The Cross",
+   "author": "Sigrid Undset",
+   "year": 2001,
+   "kind": "w",
+   "translator": "Tiina Nunnally"
+  },
+  {
+   "title": "Anna Karenina",
+   "author": "Leo Tolstoy",
+   "year": 2002,
+   "kind": "w",
+   "translator": "Richard Pevear & Larissa Volokhonsky"
+  },
+  {
+   "title": "The Moon and the Bonfires",
+   "author": "Cesare Pavese",
+   "year": 2003,
+   "kind": "w",
+   "translator": "R. W. Flint"
+  },
+  {
+   "title": "Sepharad",
+   "author": "Antonio Muñoz Molina",
+   "year": 2004,
+   "kind": "w",
+   "translator": "Margaret Sayers Peden"
+  },
+  {
+   "title": "Fatelessness",
+   "author": "Imre Kertész",
+   "year": 2005,
+   "kind": "w",
+   "translator": "Tim Wilkinson"
+  },
+  {
+   "title": "Kafka on the Shore",
+   "author": "Haruki Murakami",
+   "year": 2006,
+   "kind": "w",
+   "translator": "Philip Gabriel"
+  },
+  {
+   "title": "The Maias",
+   "author": "Eça de Queirós",
+   "year": 2008,
+   "kind": "w",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "Wonder",
+   "author": "Hugo Claus",
+   "year": 2010,
+   "kind": "w",
+   "translator": "Michael Henry Heim"
+  },
+  {
+   "title": "Journal of an Ordinary Grief",
+   "author": "Mahmoud Darwish",
+   "year": 2011,
+   "kind": "w",
+   "translator": "Ibrahim Muhawi"
+  },
+  {
+   "title": "Stone Upon Stone",
+   "author": "Wiesław Myśliwski",
+   "year": 2012,
+   "kind": "w",
+   "translator": "Bill Johnston"
+  },
+  {
+   "title": "The Island of Second Sight",
+   "author": "Albert Vigoleis Thelen",
+   "year": 2013,
+   "kind": "w",
+   "translator": "Donald O. White"
+  },
+  {
+   "title": "Autobiography of a Corpse",
+   "author": "Sigizmund Krzhizhanovsky",
+   "year": 2014,
+   "kind": "w",
+   "translator": "Joanne Turnbull & Nikolai Formozov"
+  },
+  {
+   "title": "Baboon",
+   "author": "Naja Marie Aidt",
+   "year": 2015,
+   "kind": "w",
+   "translator": "Denise Newman"
+  },
+  {
+   "title": "The Complete Stories",
+   "author": "Clarice Lispector",
+   "year": 2016,
+   "kind": "w",
+   "translator": "Katrina Dodson"
+  },
+  {
+   "title": "Angel of Oblivion",
+   "author": "Maja Haderlap",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Tess Lewis"
+  },
+  {
+   "title": "Katalin Street",
+   "author": "Magda Szabó",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Len Rix"
+  },
+  {
+   "title": "Love",
+   "author": "Hanne Ørstavik",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "The Ten Loves of Nishino",
+   "author": "Hiromi Kawakami",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Allison Markin Powell"
+  },
+  {
+   "title": "A Country for Dying",
+   "author": "Abdellah Taïa",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Emma Ramadan"
+  },
+  {
+   "title": "Migratory Birds",
+   "author": "Mariana Oliver",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Julia Sanches"
+  },
+  {
+   "title": "People from Bloomington",
+   "author": "Budi Darma",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Tiffany Tsao"
+  },
+  {
+   "title": "Verdigris",
+   "author": "Michele Mari",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Brian Robert Moore"
+  }
+ ]
+}

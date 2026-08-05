@@ -1,0 +1,1037 @@
+{
+ "slug": "eisner-newseries",
+ "prize": "Eisner Award for Best New Series",
+ "rooms": [
+  "inkroom",
+  "panelwall"
+ ],
+ "page": "Eisner Award for Best New Series",
+ "url": "https://en.wikipedia.org/wiki/Eisner_Award_for_Best_New_Series",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1367410484",
+ "revid": 1367410484,
+ "fetchedAt": "2026-08-05T16:27:19.522Z",
+ "counts": {
+  "entries": 167,
+  "winners": 33,
+  "cited": 134
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and nominees",
+   "headers": "Year | Title | Creators | Publihser | Ref.",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2
+   },
+   "took": 167,
+   "dropped": 8,
+   "winnerMark": "bold"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Concrete",
+   "author": "Paul Chadwick",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "The American",
+   "author": "Mark Verheiden, Chris Warner & Art Nichols",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Eddy Current",
+   "author": "Ted McKeever",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Kings In Disguise",
+   "author": "James Vance & Dan Burr",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Animal Man",
+   "author": "Grant Morrison, Chas Truog & Doug Hazlewood",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Excalibur",
+   "author": "Chris Claremont, Alan Davis & Paul Neary",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Maze Agency",
+   "author": "Mike W. Barr, Adam Hughes & Rick Magyar",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "V For Vendetta",
+   "author": "Alan Moore & David Lloyd",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Too Much Coffee Man",
+   "author": "Shannon Wheeler",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Don Simpson's Bizarre Heroes",
+   "author": "Don Simpson",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Roarin' Rick's Rare Bit Fiends",
+   "author": "Rick Veitch",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "S. R. Bissette's Tyrant",
+   "author": "Stephen R. Bissette",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "THB",
+   "author": "Paul Pope",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Kurt Busiek's Astro City",
+   "author": "Kurt Busiek & Brent Anderson",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Black Hole",
+   "author": "Charles Burns",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Ballads and Sagas",
+   "author": "Charles Vess & others",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Optic Nerve",
+   "author": "Adrian Tomine",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Preacher",
+   "author": "Garth Ennis & Steve Dillon",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Stray Bullets",
+   "author": "David Lapham",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Leave It to Chance",
+   "author": "James Robinson & Paul Smith",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Barry Windsor-Smith: Storyteller",
+   "author": "Barry Windsor-Smith",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Coventry",
+   "author": "Bill Willingham",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Nowhere",
+   "author": "Debbie Drechsler",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Wretch",
+   "author": "Phillip Hester & others",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Castle Waiting",
+   "author": "Linda Medley",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Lost Stories",
+   "author": "John Riley, Garrett Berner & Dave Sharpe",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Soulwind",
+   "author": "C. Scott Morse",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Squee!",
+   "author": "Jhonen Vasquez",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "A Touch of Silver",
+   "author": "Jim Valentino",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Inhumans",
+   "author": "Paul Jenkins & Jae Lee",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Age of Bronze",
+   "author": "Eric Shanower",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Colonia",
+   "author": "Jeff Nicholson",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Lenore",
+   "author": "Roman Dirge",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Young Justice",
+   "author": "Peter David, Todd Nauck & Lary Stucker",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Top Ten",
+   "author": "Alan Moore, Gene Ha & Zander Cannon",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Louis Riel",
+   "author": "Chester Brown",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "100 Bullets",
+   "author": "Brian Azzarello & Eduardo Risso",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Planetary",
+   "author": "Warren Ellis & John Cassaday",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Promethea",
+   "author": "Alan Moore, J. H. Williams III & Mick Gray",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Powers",
+   "author": "Brian Michael Bendis & Michael Avon Oeming",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Eagle",
+   "author": "Kaiji Kawaguchi",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Lucifer",
+   "author": "Mike Carey & others",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Red Star",
+   "author": "Christian Gossett & Team Red Star",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Queen & Country",
+   "author": "Greg Rucka & Steve Rolston",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Private Beach",
+   "author": "David Hahn",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Ruse",
+   "author": "Mark Waid, Butch Guice & Michael Perkins",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Sandwalk Adventures",
+   "author": "Jay Hosler",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "True Story, Swear to God",
+   "author": "Tom Beland",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Fables",
+   "author": "Bill Willingham, Lan Medina, Mark Buckingham & Steve Leialoha",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Forlorn Funnies",
+   "author": "Paul Hornschemeier",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Gotham Central",
+   "author": "Ed Brubaker, Greg Rucka & Michael Lark",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Nowhere Girl",
+   "author": "Justine Shaw",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Y: The Last Man",
+   "author": "Brian K. Vaughan, Pia Guerra & Jose Marzan",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Plastic Man",
+   "author": "Kyle Baker",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "El Cazador",
+   "author": "Chuck Dixon & Steve Epting",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Invincible",
+   "author": "Robert Kirkman & Cory Walker",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Losers",
+   "author": "Andy Diggle & Jock",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Sleeper",
+   "author": "Ed Brubaker & Sean Phillips",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Walking Dead",
+   "author": "Robert Kirkman & Tony Moore",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Ex Machina",
+   "author": "Brian K. Vaughan, Tony Harris & Tom Fesiter",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Astonishing X-Men",
+   "author": "Joss Whedon & John Cassaday",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Doc Frankenstein",
+   "author": "The Wachowskis & Steve Skroce",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Shaolin Cowboy",
+   "author": "Geof Darrow",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "All Star Superman",
+   "author": "Grant Morrison & Frank Quitely",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Desolation Jones",
+   "author": "Warren Ellis & J. H. Williams III",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Fell",
+   "author": "Warren Ellis & Ben Templesmith",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Rocketo",
+   "author": "Frank Espinosa",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Young Avengers",
+   "author": "Allan Heinberg, Jim Cheung & John Dell",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Criminal",
+   "author": "Ed Brubaker & Sean Phillips",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "East Coast Rising",
+   "author": "Becky Cloonan",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Gumby",
+   "author": "Bob Burden & Rick Geary",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Jack of Fables",
+   "author": "Bill Willingham, Matthew Sturges, Tony Akins & Andrew Pepoy",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Lone Ranger",
+   "author": "Brett Matthews & Sergio Cariello",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Buffy the Vampire Slayer, Season 8",
+   "author": "Joss Whedon, Brian K. Vaughan, Georges Jeanty & Andy Owens",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Immortal Iron Fist",
+   "author": "Ed Brubaker, Matt Fraction, David Aja & others",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Johnny Hiro",
+   "author": "Fred Chao",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Infinite Horizon",
+   "author": "Gerry Duggan & Phil Noto",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Scalped",
+   "author": "Jason Aaron & R. M. Guera",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Invincible Iron Man",
+   "author": "Matt Fraction & Salvador Larocca",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Air",
+   "author": "G. Willow Wilson & M. K. Perker",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Echo",
+   "author": "Terry Moore",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Madame Xanadu",
+   "author": "Matt Wagner, Amy Reeder Hadley & Richard Friend",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Unknown Soldier",
+   "author": "Joshua Dysart & Alberto Ponticelli",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Chew",
+   "author": "John Layman & Rob Guillory",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Do Androids Dream of Electric Sheep?",
+   "author": "Phillip K. Dick, art by Tony Parker",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Ireedeemable",
+   "author": "Mark Waid & Peter Krause",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Sweet Tooth",
+   "author": "Jeff Lemire",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Unwritten",
+   "author": "Mike Carey & Peter Gross",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "American Vampire",
+   "author": "Scott Snyder, Stephen King & Rafael Albuquerque",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "iZombie",
+   "author": "Chris Roberson & Michael Allred",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Marineman",
+   "author": "Ian Churchill",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Morning Glories",
+   "author": "Nick Spencer & Joe Eisma",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Superboy",
+   "author": "Jeff Lemire & Pier Gallo",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Saga",
+   "author": "Brian K. Vaughan & Fiona Staples",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Adventure Time",
+   "author": "Ryan North, Shelli Paroline & Braden Lamb",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Bandette",
+   "author": "Paul Tobin & Colleen Coove",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Fatale",
+   "author": "Ed Brubaker & Sean Phillips",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Hawkeye",
+   "author": "Matt Fraction & David Aja",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Sex Criminals",
+   "author": "Matt Fraction & Chip Zdarsky",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "High Crimes",
+   "author": "Christopher Sebela & Ibrahim Moustafa",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Lazarus",
+   "author": "Greg Rucka & Michael Lark",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Rat Queens",
+   "author": "Kurtis J. Wiebe & Roc Upchurch",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Watson and Holmes",
+   "author": "Karl Bollers, Rick Leonardi, Paul Mendoza et al.",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Lumberjanes",
+   "author": "Shannon Watters, Grace Ellis, ND Stevenson & Brooke A. Allen",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Fade Out",
+   "author": "Ed Brubaker & Sean Phillips",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Ms. Marvel",
+   "author": "G. Willow Wilson & Adrian Alphon",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Rocket Raccoon",
+   "author": "Skottie Young",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Wicked + The Divine",
+   "author": "Kieron Gillen & Jamie McKelvie",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Paper Girls",
+   "author": "Brian K. Vaughan & Cliff Chiang",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Bitch Planet",
+   "author": "Kelly Sue DeConnick & Valentine De Landro",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Harrow County",
+   "author": "Cullen Bunn & Tyler Crook",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Kaijumax",
+   "author": "Zander Cannon",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress",
+   "author": "Marjorie Liu & Sana Takeda",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Unbeatable Squirrel Girl",
+   "author": "Ryan North & Erica Henderson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Black Hammer",
+   "author": "Jeff Lemire & Dean Ormston",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Clean Room",
+   "author": "Gail Simone & Jon Davis-Hunt",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Deathstroke: Rebirth",
+   "author": "Christopher Priest, Carlo Pagulayan, et al.",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Faith",
+   "author": "Jody Houser, Pere Pérez & Marguerite Sauvage",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Mockingbird",
+   "author": "Chelsea Cain & Kate Niemczyk",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Black Bolt",
+   "author": "Saladin Ahmed & Christian Ward",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Grass Kings",
+   "author": "Matt Kindt & Tyler Jenkins",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Maestros",
+   "author": "Steve Skroce",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Redlands",
+   "author": "Jordie Bellaire & Vanesa Del Rey",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Royal City",
+   "author": "Jeff Lemire",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Gideon Falls",
+   "author": "Jeff Lemire & Andrea Sorrentino",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Bitter Root",
+   "author": "David F. Walker, Chuck Brown & Sanford Green",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Crowded",
+   "author": "Christopher Sebela, Ro Stein & Ted Brandt",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Isola",
+   "author": "Brenden Fletcher & Karl Kerschl",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Man-Eaters",
+   "author": "Chelsea Cain & Kate Niemczyk",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Skyward",
+   "author": "Joe Henderson & Lee Garbett",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Kingdom",
+   "author": "G. Willow Wilson & Christian Ward",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Doctor Doom",
+   "author": "Christopher Cantwell & Salvador Larocca",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Once & Future",
+   "author": "Kieron Gillen & Dan Mora",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Something Is Killing the Children",
+   "author": "James Tynion IV & Werther Dell’Edera",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Undiscovered Country",
+   "author": "Scott Snyder, Charles Soule, Giuseppe Camuncoli & Daniele Orlandini",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Black Widow",
+   "author": "Kelly Thompson & Elena Casagrande",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Crossover",
+   "author": "Donny Cates & Geoff Shaw",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Department of Truth",
+   "author": "James Tynion IV & Martin Simmonds",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Killadelphia",
+   "author": "Rodney Barnes & Jason Shawn Alexander",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "We Only Find Them When They’re Dead",
+   "author": "Al Ewing & Simone Di Meo",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Nice House on the Lake",
+   "author": "James Tynion IV & Álvaro Martínez Bueno",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Human Target",
+   "author": "Tom King & Greg Smallwood",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Not All Robots",
+   "author": "Mark Russell & Mike Deodato Jr.",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Radiant Black",
+   "author": "Kyle Higgins & Marcelo Costa",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Ultramega",
+   "author": "James Harren",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Public Domain",
+   "author": "Chip Zdarsky",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Atonement Bell",
+   "author": "Jim Ousley & Tyler B. Ruff",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Love Everlasting",
+   "author": "Tom King & Elsa Charretier",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Star Trek",
+   "author": "Collin Kelly, Jackson Lanzing & Ramon Rosanas",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Traveling to Mars",
+   "author": "Mark Russell & Roberto Meli",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Somna: A Bedtime Story",
+   "author": "Becky Cloonan & Tula Lotay",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Beneath the Trees Where Nobody Sees",
+   "author": "Patrick Horvath",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Black Cloak",
+   "author": "Kelly Thompson & Meredith McClaren",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Local Man",
+   "author": "Tim Seeley & Tony Fleecs",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Phantom Road",
+   "author": "Jeff Lemire & Gabriel Hernández Walta",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Absolute Wonder Woman",
+   "author": "Kelly Thompson & Hayden Sherman",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Absolute Batman",
+   "author": "Scott Snyder & Nick Dragotta",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Minor Arcana",
+   "author": "Jeff Lemire",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Pedestrian",
+   "author": "Joey Esposito & Sean Von Gorman",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Power Fantasy",
+   "author": "Kieron Gillen & Caspar Wijngaard",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Uncanny Valley",
+   "author": "Tony Fleecs & Dave Wachter",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Assorted Crisis Events",
+   "author": "Deniz Camp & Eric Zawadzki",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Batman Vol. 4",
+   "author": "Matt Fraction & Jorge Jiménez",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Black Cat",
+   "author": "G. Willow Wilson & Gleb Melnikov",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Exquisite Corpses",
+   "author": "James Tynion IV, Michael Walsh, Pornsak Pichetshote & others",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost Pepper",
+   "author": "Ludo Lullabi",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Temporal",
+   "author": "Stephanie Williams & Asiah Fulmore",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

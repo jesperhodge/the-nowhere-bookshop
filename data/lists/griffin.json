@@ -1,0 +1,1158 @@
+{
+ "slug": "griffin",
+ "prize": "Griffin Poetry Prize",
+ "rooms": [
+  "attic",
+  "rafters",
+  "oldbeam",
+  "foreignwindow"
+ ],
+ "page": "Griffin Poetry Prize",
+ "url": "https://en.wikipedia.org/wiki/Griffin_Poetry_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1360168699",
+ "revid": 1360168699,
+ "fetchedAt": "2026-08-05T16:27:15.098Z",
+ "counts": {
+  "entries": 177,
+  "winners": 48,
+  "cited": 129
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "2000s",
+   "headers": "Year | Category | Poet | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 63,
+   "dropped": 3,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "2010s",
+   "headers": "Year | Category | Poet | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 70,
+   "dropped": 9,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2020-2022",
+   "headers": "Year | Category | Poet | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 21,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "Canadian First Book Prize",
+   "headers": "Year | Poet | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 3,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 4,
+   "heading": "Griffin Poetry Prize",
+   "headers": "Year | Poet | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 20,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Men in the Off Hours",
+   "author": "Anne Carson",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Nine Visits to the Mythworld",
+   "author": "Robert Bringhurst",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Another Gravity",
+   "author": "Don McKay",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Glottal Stop: 101 Poems by Paul Celan",
+   "author": "Nikolai B. Popov & Heather McHugh",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Open Closed Open by Yehuda Amichai",
+   "author": "Chana Bloch & Chana Kronfeld",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Fanny Howe",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Learning Human",
+   "author": "Les Murray",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Eunoia",
+   "author": "Christian Bök",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Sheep's Vigil by a Fervent Person",
+   "author": "Erín Moure",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Short Haul Engine",
+   "author": "Karen Solie",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Disobedience",
+   "author": "Alice Notley",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Maraca",
+   "author": "Victor Hernández Cruz",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Homer: War Music",
+   "author": "Christopher Logue",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Conscious and Verbal",
+   "author": "Les Murray",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Concrete and Wild Carrot",
+   "author": "Margaret Avison",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "thirsty",
+   "author": "Dionne Brand",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Planet Earth: Poems Selected and New",
+   "author": "P. K. Page",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Moy Sand and Gravel",
+   "author": "Paul Muldoon",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Mr And Mrs Scotland are Dead: Poems 1980–1994",
+   "author": "Kathleen Jamie",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "American Sonnets: poems",
+   "author": "Gerald Stern",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Steal Away: selected and new poems",
+   "author": "C. D. Wright",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Loop",
+   "author": "Anne Simpson",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Now You Care",
+   "author": "Di Brandt",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "go-go dancing for Elvis",
+   "author": "Leslie Greentree",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Strange Hours Travelers Keep",
+   "author": "August Kleinzahler",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Notes From the Divided Country",
+   "author": "Suji Kwock Kim",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Ha-Ha",
+   "author": "David Kirby",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Owner of the House",
+   "author": "Louis Simpson",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Short Journey Upriver Toward Oishida",
+   "author": "Roo Borson",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Changing on the Fly",
+   "author": "George Bowering",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Camber",
+   "author": "Don McKay",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems: 1963–2003",
+   "author": "Charles Simic",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "On the Ground",
+   "author": "Fanny Howe",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Corpus",
+   "author": "Michael Symmons Roberts",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "A Green Light",
+   "author": "Matthew Rohrer",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Nerve Squall",
+   "author": "Sylvia Legris",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "An Oak Hunch",
+   "author": "Phil Hall",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Little theatres",
+   "author": "Erín Moure",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Born to Slow Horses",
+   "author": "Kamau Brathwaite",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Ashes for Breakfast: Selected Poems fby Durs Grünbein",
+   "author": "Michael Hofmann",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Company of Moths",
+   "author": "Michael Palmer",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The War Works Hard by Dunya Mikhail",
+   "author": "Elizabeth Winslow",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Strike/Slip",
+   "author": "Don McKay",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Airstream Land Yacht",
+   "author": "Ken Babstock",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Ontological Necessities",
+   "author": "Priscila Uppal",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Scar Tissue",
+   "author": "Charles Wright",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Tramp in Flames",
+   "author": "Paul Farley",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Salvation Blues",
+   "author": "Rodney Jones",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Ooga-Booga",
+   "author": "Frederick Seidel",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Holy Forest: Collected Poems of Robin Blaser",
+   "author": "Robin Blaser",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Notebook of Roses and Civilization by Nicole Brossard",
+   "author": "Robert Majzels & Erín Moure",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Why Are You So Sad? Selected Poems of David W. McFadden",
+   "author": "David McFadden",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Notes from the Air: Selected Later Poems",
+   "author": "John Ashbery",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Ripple Effect: New and Selected Poems",
+   "author": "Elaine Equi",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Complete Poetry: A Bilingual Edition by Cesar Vallejo",
+   "author": "Clayton Eshleman",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems 1969–2005",
+   "author": "David Harsent",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Sentinel",
+   "author": "A. F. Moritz",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Revolver",
+   "author": "Kevin Connolly",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Crabwise to the Hounds",
+   "author": "Jeramy Dodds",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Rising, Falling, Hovering",
+   "author": "C.D. Wright",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Lost Leader",
+   "author": "Mick Imlah",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Life on Earth",
+   "author": "Derek Mahon",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Primitive Mentor",
+   "author": "Dean Young",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Pigeon",
+   "author": "Karen Solie",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Certainty Dream",
+   "author": "Kate Hall",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Coal and Roses",
+   "author": "P. K. Page",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Sun-fish",
+   "author": "Eilean Ni Chuilleanain",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Grain",
+   "author": "John Glenday",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "A Village Life",
+   "author": "Louise Glück",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Cold Spring in Winter by Valérie Rouzeau",
+   "author": "Susan Wicks",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Ossuaries",
+   "author": "Dionne Brand",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Irrationalist",
+   "author": "Suzanne Buffam",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Lookout",
+   "author": "John Steffler",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Heavenly Questions",
+   "author": "Gjertrud Schnackenberg",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Human Chain",
+   "author": "Seamus Heaney",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Adonis: Selected Poems by Adunis",
+   "author": "Khaled Mattawa",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of the Snow from the French by Francois Jacqmin",
+   "author": "Philip Mosley",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Methodist Hatchet",
+   "author": "Ken Babstock",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Killdeer",
+   "author": "Phil Hall",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Forge",
+   "author": "Jan Zwicky",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Night",
+   "author": "David Harsent",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Chameleon Couch",
+   "author": "Yusef Komunyakaa",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "November",
+   "author": "Sean O'Brien",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Sobbing Superpower: Selected Poems of Tadeusz Rózewicz",
+   "author": "Joanna Trzeciak",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "What's the Score?",
+   "author": "David McFadden",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Sailing to Babylon",
+   "author": "James Pollock",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Personals",
+   "author": "Ian Williams",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Straw Bird It Follows Me, and Other Poems by Ghassan Zaqtan",
+   "author": "Fady Joudah",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Liquid Nitrogen",
+   "author": "Jennifer Maiden",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Night of the Republic",
+   "author": "Alan Shapiro",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Our Andromeda",
+   "author": "Brenda Shaughnessy",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Red Doc>",
+   "author": "Anne Carson",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Ocean",
+   "author": "Susan Goyette",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Correspondences",
+   "author": "Anne Michaels",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Seasonal Works with Letters on Fire",
+   "author": "Brenda Hillman",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Pilgrim's Flower",
+   "author": "Rachael Boast",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Silverchest",
+   "author": "Carl Phillips",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Colonies by Tomasz Różycki",
+   "author": "Mira Rosenthal",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Sonoma",
+   "author": "Jane Munro",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Congotronic",
+   "author": "Shane Book",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Hundred Lives",
+   "author": "Russell Thornton",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Stairwell",
+   "author": "Michael Longley",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Something Crosses My Mind by Wang Xiaoni",
+   "author": "Eleanor Goodman",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Finite Formulae & Theories of Chance by Wioletta Greg",
+   "author": "Marek Kazmierski",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Road to Emmaus",
+   "author": "Spencer Reece",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Infinite Citizen of the Shaking Tent",
+   "author": "Liz Howard",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Frayed Opus for Strings & Wind Instruments by Ulrikka S. Gernes",
+   "author": "Per Brask & Patrick Friesen",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Tell: poems for a girlhood",
+   "author": "Soraya Peerbaye",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Quotations of Bone",
+   "author": "Norman Dubie",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Conflict Resolution for Holy Beings",
+   "author": "Joy Harjo",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "40 Sonnets",
+   "author": "Don Paterson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Heaven",
+   "author": "Rowan Ricardo Phillips",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Injun",
+   "author": "Jordan Abel",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Violet Energy Ingots",
+   "author": "Hoa Nguyen",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Silvija",
+   "author": "Sandra Ridley",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Falling Awake",
+   "author": "Alice Oswald",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "World of Made and Unmade",
+   "author": "Jane Mead",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "In Praise of Defeat by Abdellatif Laabi",
+   "author": "Donald Nicholson-Smith",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Say Something Back",
+   "author": "Denise Riley",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "This Wound is a World",
+   "author": "Billy-Ray Belcourt",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "I have to live.",
+   "author": "Aisha Sasha John",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Same Diff",
+   "author": "Donato Mancini",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Debths",
+   "author": "Susan Howe",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Heaven is All Goodbyes",
+   "author": "Tongo Eisen-Martin",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Whereas",
+   "author": "Layli Long Soldier",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Hard Child",
+   "author": "Natalie Shapero",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Quarrels",
+   "author": "Eve Joseph",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Blue Clerk",
+   "author": "Dionne Brand",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Art of Dying",
+   "author": "Sarah Tolmie",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Autobiography of Death by Kim Hyesoon",
+   "author": "Don Mee Choi",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Perseverance",
+   "author": "Raymond Antrobus",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Lake Michigan",
+   "author": "Daniel Borzutzky",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Negative Space by Luljeta Lleshanaku",
+   "author": "Ani Gjika",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Magnetic Equator",
+   "author": "Kaie Kellough",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "How She Read",
+   "author": "Chantal Gibson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "heft",
+   "author": "Doyali Islam",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Time by Etel Adnan",
+   "author": "Sarah Riggs",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "How to Dress a Fish",
+   "author": "Abigail Chabitnoy",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Arias",
+   "author": "Sharon Olds",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Lima :: Limón",
+   "author": "Natalie Scenters-Zapico",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Dyzgraphxst",
+   "author": "Canisia Lubrin",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The East Side of It All",
+   "author": "Joseph A. Dandurand",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Pluviophile",
+   "author": "Yusuf Saadi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Music for the Dead and Resurrected",
+   "author": "Valzhyna Mort",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Obit",
+   "author": "Victoria Chang",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Underworld Lit",
+   "author": "Srikanth Reddy",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "My Name Will Grow Wide Like a Tree by Yi Lei",
+   "author": "Tracy K. Smith & Changtai Bi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Junta of Happenstance",
+   "author": "Tolu Oloruntoba",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Dream of No One But Myself",
+   "author": "David Bradford",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Letters in a Bruised Cosmos",
+   "author": "Liz Howard",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Sho",
+   "author": "Douglas Kearney",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Late to the House of Words by Gemma Gorga",
+   "author": "Sharon Dolin",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Eccentric Days of Hope and Sorrow by Natalka Bilotserkivets",
+   "author": "Ali Kinsella & Dzvinia Orlowsky",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Asked What Has Changed",
+   "author": "Ed Roberson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Big Melt",
+   "author": "Emily Riddle",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Chores",
+   "author": "Maggie Burton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Northerny",
+   "author": "Dawn Macdonald",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Best Barbarian",
+   "author": "Roger Reeves",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Threshold",
+   "author": "Iman Mersal (translated by Robyn Creswell)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Hurting Kind",
+   "author": "Ada Limón",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Exculpatory Lilies",
+   "author": "Susan Musgrave",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Time Is a Mother",
+   "author": "Ocean Vuong",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Self-Portrait in the Zone of Silence",
+   "author": "George McWhirter",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "To 2040",
+   "author": "Jorie Graham",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "School of Instructions",
+   "author": "Ishion Hutchinson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Crash Course in Molotov Cocktails",
+   "author": "Halyna Kruk (translated by Amelia M. Glaser & Yuliya Ilchuk)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Door",
+   "author": "Ann Lauterbach",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Psyche Running",
+   "author": "Durs Grünbein (translated by Karen Leeder)",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Zoo",
+   "author": "Nicolás Guillén (translated by Aaron Coleman)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Scattered Snows, to the North",
+   "author": "Carl Phillips",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Kiss the Eyes of Peace",
+   "author": "Tomaž Šalamun (translated by Brian Henry)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Modern Poetry",
+   "author": "Diane Seuss",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Night Watch",
+   "author": "Kevin Young",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Death Does Not End at the Sea",
+   "author": "Gbenga Adesina",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Bodies Found in Various Places",
+   "author": "Elvira Hernández (translated by Daniel Borzutzky & Alec Schumacher)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Green of All Heads",
+   "author": "Aracelis Girmay",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Foxglovewise",
+   "author": "Ange Mlinko",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

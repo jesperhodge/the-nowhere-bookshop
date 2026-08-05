@@ -1,0 +1,456 @@
+{
+ "slug": "duff-cooper",
+ "prize": "Duff Cooper Prize",
+ "rooms": [
+  "readingroom",
+  "longtable",
+  "windowseat"
+ ],
+ "page": "Duff Cooper Prize",
+ "url": "https://en.wikipedia.org/wiki/Duff_Cooper_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1363497727",
+ "revid": 1363497727,
+ "fetchedAt": "2026-08-05T16:27:11.100Z",
+ "counts": {
+  "entries": 70,
+  "winners": 70,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 70,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Gallipoli",
+   "author": "Alan Moorehead",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "Bitter Lemons",
+   "author": "Lawrence Durrell",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "John Betjeman",
+   "year": 1958,
+   "kind": "w"
+  },
+  {
+   "title": "Mani: Travels in the Southern Peloponnese",
+   "author": "Patrick Leigh Fermor",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Andrew Young",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "Joseph Conrad",
+   "author": "Jocelyn Baines",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "The Franco-Prussian War",
+   "author": "Michael Howard",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "John Keats: The Making of a Poet",
+   "author": "Aileen Ward",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "The World of the Shining Prince",
+   "author": "Ivan Morris",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "Marcel Proust",
+   "author": "George Painter",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "The Continent of Circe",
+   "author": "Nirad C. Chaudhuri",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "The Peregrine",
+   "author": "J. A. Baker",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "New Poems",
+   "author": "Roy Fuller",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "The Man of Letters",
+   "author": "John Gross",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "Charles of Orleans: Prince & Poet",
+   "author": "Enid McLeod",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "Discoveries of Bones and Stones",
+   "author": "Geoffrey Grigson",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Virginia Woolf",
+   "author": "Quentin Bell",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Alexander the Great",
+   "author": "Robin Lane Fox",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Wilfred Owen",
+   "author": "Jon Stallworthy",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "North",
+   "author": "Seamus Heaney",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Mussolini's Roman Empire",
+   "author": "Denis Mack Smith",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Missing Persons",
+   "author": "E. R. Dodds",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Life in the English Country House",
+   "author": "Mark Girouard",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Tenebrae",
+   "author": "Geoffrey Hill",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Tennyson, The Unquiet Heart",
+   "author": "Robert Bernard Martin",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Edith Sitwell: A Unicorn Among the Lions",
+   "author": "Victoria Glendinning",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "James Joyce",
+   "author": "Richard Ellmann",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Peter Porter",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Ivy When Young: The Early Life of Ivy Compton-Burnett 1884-1919",
+   "author": "Hilary Spurling",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Edmund Gosse: A Literary Landscape, 1849-1928",
+   "author": "Ann Thwaite",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "C. R. Ashbee: Architect, Designer, and Romantic Socialist",
+   "author": "Alan Crawford",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "The Fatal Shore",
+   "author": "Robert Hughes",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "A Serious Character: The Life of Ezra Pound",
+   "author": "Humphrey Carpenter",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Federico Garcia Lorca",
+   "author": "Ian Gibson",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Clever Hearts: Desmond and Molly Maccarthy: A Biography",
+   "author": "Hugh Cecil & Mirabel Cecil",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Ludwig Wittgenstein: The Duty of Genius",
+   "author": "Ray Monk",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Never Again: Britain, 1945-1951",
+   "author": "Peter Hennessy",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "A History of Warfare",
+   "author": "John Keegan",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Curzon: Imperial Statesman",
+   "author": "David Gilmour",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Albert Speer: His Battle with Truth",
+   "author": "Gitta Sereny",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Thomas Cranmer: A Life",
+   "author": "Diarmaid MacCulloch",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Frozen Desire: An Inquiry into the Meaning of Money",
+   "author": "James Buchan",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Coleridge: Darker Reflections",
+   "author": "Richard Holmes",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "King Leopold's Ghost: A Story of Greed, Terror and Heroism in Colonial Africa",
+   "author": "Adam Hochschild",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "John Maynard Keynes",
+   "author": "Robert Skidelsky",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Peacemakers: The Paris Peace Conference of 1919 and Its Attempt to End War",
+   "author": "Margaret MacMillan",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The Architect and His Wife",
+   "author": "Jane Ridley",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Gulag: A History",
+   "author": "Anne Applebaum",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Salonica, City of Ghosts: Christians, Muslims and Jews, 1430-1950",
+   "author": "Mark Mazower",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Edge of Empire: Conquest and Collecting on the Eastern Frontiers of the British Empire",
+   "author": "Maya Jasanoff",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Mughal: The Fall of a Dynasty, Delhi 1857",
+   "author": "William Dalrymple",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Discovery of France",
+   "author": "Graham Robb",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
+   "author": "Kai Bird & Martin J. Sherwin",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Trotsky: A Biography",
+   "author": "Robert Service",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "How to Live: A Life of Montaigne in One Question and Twenty Attempts at An Answer",
+   "author": "Sarah Bakewell",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Becoming Dickens: The Invention of a Novelist",
+   "author": "Robert Douglas-Fairhurst",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Strindberg: A Life",
+   "author": "Sue Prideaux",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Pike: Gabriele D'Annunzio, Poet, Seducer and Preacher of War",
+   "author": "Lucy Hughes-Hallett",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Other People's Countries: A Journey into Memory",
+   "author": "Patrick McGuinness",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Schubert's Winter Journey: Anatomy of an Obsession",
+   "author": "Ian Bostridge",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Meetings with Remarkable Manuscripts",
+   "author": "Christopher de Hamel",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Red Famine: Stalin's War on Ukraine",
+   "author": "Anne Applebaum",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "A Certain Idea of France: The Life of Charles De Gaulle",
+   "author": "Julian Jackson",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "A History of the Bible",
+   "author": "John Barton",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Ravenna: Capital of Empire, Crucible of Empire",
+   "author": "Judith Herrin",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Greek Revolution: 1821 and the Making of Modern Europe",
+   "author": "Mark Mazower",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Restless Republic: Britain without a Crown",
+   "author": "Anna Keay",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "France on Trial: The Case of Marshal Pétain",
+   "author": "Julian Jackson",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Wild Thing: A Life of Paul Gauguin",
+   "author": "Sue Prideaux",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Allies at War: The Politics of Defeating Hitler",
+   "author": "Tim Bouverie",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

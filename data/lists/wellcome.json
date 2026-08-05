@@ -1,0 +1,95 @@
+{
+ "slug": "wellcome",
+ "prize": "Wellcome Book Prize",
+ "rooms": [
+  "glasscase",
+  "windowseat"
+ ],
+ "page": "Wellcome Book Prize",
+ "url": "https://en.wikipedia.org/wiki/Wellcome_Book_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1315165784",
+ "revid": 1315165784,
+ "fetchedAt": "2026-08-05T16:27:14.130Z",
+ "counts": {
+  "entries": 10,
+  "winners": 10,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and shortlisted nominees",
+   "headers": "Year | Winner | Work | Shortlisted nominees | Ref(s)",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 10,
+   "dropped": 1,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Murmur",
+   "author": "Will Eaves",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "To Be a Machine: Adventures Among Cyborgs, Utopians, Hackers, and the Futurists Solving the Modest Problem of Death",
+   "author": "Mark O'Connell",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Mend the Living (aka The Heart)",
+   "author": "Maylis de Kerangal",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "It's All in Your Head: True Stories of Imaginary Illness",
+   "author": "Suzanne O'Sullivan",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Iceberg: A Memoir",
+   "author": "Marion Coutts",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Far from the Tree: Parents, Children, and the Search for Identity",
+   "author": "Andrew Solomon",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Circulation: William Harvey, a Man in Motion",
+   "author": "Thomas Wright",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Turn of Mind",
+   "author": "Alice LaPlante",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Immortal Life of Henrietta Lacks",
+   "author": "Rebecca Skloot",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Keeper: Living with Nancy – A Journey into Alzheimer's",
+   "author": "Andrea Gillies",
+   "year": 2009,
+   "kind": "w"
+  }
+ ]
+}

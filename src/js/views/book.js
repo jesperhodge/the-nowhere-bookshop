@@ -21,6 +21,9 @@ const ICON = {
   prev: '<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
   next: '<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>',
   keep: '<svg viewBox="0 0 24 24"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z"/></svg>',
+  /* the picks mark: the same gilt ribbon that bands a pick's spine on the
+     shelf, so the thing you spotted in the room is the thing you found */
+  pick: '<svg viewBox="0 0 24 24"><path d="M8 3h8v13l-4-3-4 3V3z"/><path d="M5 20h14"/></svg>',
 };
 
 export function renderBook(book, ctx) {
@@ -63,6 +66,26 @@ export function renderBook(book, ctx) {
 
   const where = linkRow(sampleLinks(book));
 
+  /* The curator's note is the product — but only 409 of the books on these
+     shelves have one, and since phase 9 the rest are harvested from prize
+     lists with no note by design (IMPLEMENTATION.md §6: no hand-written
+     blurbs, notes or tags for generated books). So the section is rendered
+     only when there is something in it, and when there is, it says whose
+     opinion it is. A book without a note is not a lesser book; it is one
+     the shopkeeper has not got round to writing about. */
+  const note = book.note
+    ? `<section class="bd__sec bd__sec--pick">
+        <h3 class="bd__h">
+          <span class="pickmark" aria-hidden="true">${ICON.pick}</span>
+          The shopkeeper's pick — why it's on this shelf
+        </h3>
+        <p class="bd__note">${rich(book.note)}</p>
+      </section>`
+    : `<section class="bd__sec bd__sec--nonote">
+        <p class="bd__nonote">On the shelf for what it won, not for a note —
+          the shopkeeper hasn't written about this one.</p>
+      </section>`;
+
   const sample = `<section class="bd__sec">
       <h3 class="bd__h">Before you buy it</h3>
       <div class="firstpage">
@@ -98,15 +121,12 @@ export function renderBook(book, ctx) {
     </div>
 
     <div class="bd__scroll scroll">
-      <section class="bd__sec">
+      ${book.blurb ? `<section class="bd__sec">
         <h3 class="bd__h">What it is</h3>
         <p class="bd__p">${rich(book.blurb)}</p>
-      </section>
+      </section>` : ''}
 
-      <section class="bd__sec">
-        <h3 class="bd__h">Why it's on this shelf</h3>
-        <p class="bd__note">${rich(book.note)}</p>
-      </section>
+      ${note}
 
       ${sample}
 

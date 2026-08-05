@@ -1,0 +1,1178 @@
+{
+ "slug": "stoker-novel",
+ "prize": "Bram Stoker Award for Superior Achievement in a Novel",
+ "rooms": [
+  "cellar",
+  "candlestair",
+  "dampwall",
+  "lockedroom"
+ ],
+ "page": "Bram Stoker Award for Best Novel",
+ "url": "https://en.wikipedia.org/wiki/Bram_Stoker_Award_for_Best_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366517847",
+ "revid": 1366517847,
+ "fetchedAt": "2026-08-05T16:27:08.413Z",
+ "counts": {
+  "entries": 190,
+  "winners": 41,
+  "cited": 149
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and nominees",
+   "headers": "Year | Recipient | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 190,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Misery",
+   "author": "Stephen King",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Swan Song",
+   "author": "Robert R. McCammon",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Live Girls",
+   "author": "Ray Garton",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Unassigned Territory",
+   "author": "Kem Nunn",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Ash Wednesday",
+   "author": "Chet Williamson",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "The Silence of the Lambs",
+   "author": "Thomas Harris",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Stinger",
+   "author": "Robert R. McCammon",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Black Wind",
+   "author": "F. Paul Wilson",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Drive-In",
+   "author": "Joe R. Lansdale",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Queen of the Damned",
+   "author": "Anne Rice",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Flesh",
+   "author": "Richard Laymon",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Carrion Comfort",
+   "author": "Dan Simmons",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Geek Love",
+   "author": "Katherine Dunn",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "In a Dark Dream",
+   "author": "Charles L. Grant",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Midnight",
+   "author": "Dean R. Koontz",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The Wolf's Hour",
+   "author": "Robert R. McCammon",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Mine",
+   "author": "Robert R. McCammon",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Funland",
+   "author": "Richard Laymon",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Reign",
+   "author": "Chet Williamson",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Savage Season",
+   "author": "Joe R. Lansdale",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Boy's Life",
+   "author": "Robert R. McCammon",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The M.D.",
+   "author": "Thomas M. Disch",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Needful Things",
+   "author": "Stephen King",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Tower III: The Waste Lands",
+   "author": "Stephen King",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Summer of Night",
+   "author": "Dan Simmons",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Blood of the Lamb",
+   "author": "Thomas F. Monteleone",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Homecoming",
+   "author": "Matthew Costello",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Deathgrip",
+   "author": "Brian Hodge",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Hideaway",
+   "author": "Dean R. Koontz",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Children of the Night",
+   "author": "Dan Simmons",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Throat",
+   "author": "Peter Straub",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Anno Dracula",
+   "author": "Kim Newman",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Blackburn",
+   "author": "Bradley Denton",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Drawing Blood",
+   "author": "Poppy Z. Brite",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "The Summoning",
+   "author": "Bentley Little",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Dead in the Water",
+   "author": "Nancy Holder",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Alienist",
+   "author": "Caleb Carr",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "From the Teeth of Angels",
+   "author": "Jonathan Carroll",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Insomnia",
+   "author": "Stephen King",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The Butcher Boy",
+   "author": "Patrick McCabe",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Zombie",
+   "author": "Joyce Carol Oates",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Widow",
+   "author": "Billie Sue Mosiman",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Deadrush",
+   "author": "Yvonne Navarro",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Bone Music",
+   "author": "Alan Rodgers",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Mile",
+   "author": "Stephen King",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Exquisite Corpse",
+   "author": "Poppy Z. Brite",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Crota",
+   "author": "Owl Goingback",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Hellfire Club",
+   "author": "Peter Straub",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Children of the Dusk",
+   "author": "Janet Berliner & George Guthridge",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Church of Dead Girls",
+   "author": "Stephen Dobyns",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "My Soul to Keep",
+   "author": "Tananarive Due",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Earthquake Weather",
+   "author": "Tim Powers",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Bag of Bones",
+   "author": "Stephen King",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Fear Nothing",
+   "author": "Dean R. Koontz",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Darker Angels",
+   "author": "S. P. Somtow",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Fog Heart",
+   "author": "Thomas Tessier",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Mr. X",
+   "author": "Peter Straub",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Darker than Night",
+   "author": "Owl Goingback",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Hannibal",
+   "author": "Thomas Harris",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Low Men in Yellow Coats",
+   "author": "Stephen King",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Hexes",
+   "author": "Tom Piccirilli",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Traveling Vampire Show",
+   "author": "Richard Laymon",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Indifference of Heaven",
+   "author": "Gary A. Braunbeck",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Silent Children",
+   "author": "Ramsey Campbell",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Licking Valley Coon Hunters Club",
+   "author": "Brian A. Hopkins",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Deceased",
+   "author": "Tom Piccirilli",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "American Gods",
+   "author": "Neil Gaiman",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "From the Dust Returned",
+   "author": "Ray Bradbury",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost",
+   "author": "Jack Ketchum",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Black House",
+   "author": "Stephen King & Peter Straub",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Class",
+   "author": "Tom Piccirilli",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Hour Before Dark",
+   "author": "Douglas Clegg",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "From a Buick 8",
+   "author": "Stephen King",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Lullaby",
+   "author": "Chuck Palahniuk",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Lovely Bones",
+   "author": "Alice Sebold",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Lost Boy, Lost Girl",
+   "author": "Peter Straub",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Dark Tower V: Wolves of the Calla",
+   "author": "Stephen King",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Serenity Falls",
+   "author": "James A. Moore",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Country",
+   "author": "Stewart O'Nan",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "A Choir of Ill Children",
+   "author": "Tom Piccirilli",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "In the Night Room",
+   "author": "Peter Straub",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Wind Caller",
+   "author": "P. D. Cacek",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Tower VII: The Dark Tower",
+   "author": "Stephen King",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Deep in the Darkness",
+   "author": "Michael Laimo",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Creepers",
+   "author": "David Morrell",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Dread in the Beast",
+   "author": "Charlee Jacob",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Keepers",
+   "author": "Gary A. Braunbeck",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "November Mourns",
+   "author": "Tom Piccirilli",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Lisey's Story",
+   "author": "Stephen King",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Headstone City",
+   "author": "Tom Piccirilli",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost Road Blues",
+   "author": "Jonathan Maberry",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Pressure",
+   "author": "Jeff Strand",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Prodigal Blues",
+   "author": "Gary A. Braunbeck",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Missing",
+   "author": "Sarah Langan",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Guardener's Tale",
+   "author": "Bruce Boston",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Heart-Shaped Box",
+   "author": "Joe Hill",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Witch's Trinity",
+   "author": "Erika Mailman",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Terror",
+   "author": "Dan Simmons",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Duma Key",
+   "author": "Stephen King",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Coffin County",
+   "author": "Gary A. Braunbeck",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Reach",
+   "author": "Nate Kenyon",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Johnny Gruesome",
+   "author": "Gregory Lamberson",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Audrey's Door",
+   "author": "Sarah Langan",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Patient Zero",
+   "author": "Jonathan Maberry",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Quarantined",
+   "author": "Joe McKinney",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Cursed",
+   "author": "Jeremy Shipp",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Dark Matter",
+   "author": "Peter Straub",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Horns",
+   "author": "Joe Hill",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Rot & Ruin",
+   "author": "Jonathan Maberry",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Dead Love",
+   "author": "Linda Watanabe McFerrin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Apocalypse of the Dead",
+   "author": "Joe McKinney",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Dweller",
+   "author": "Jeff Strand",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Flesh Eaters",
+   "author": "Joe McKinney",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "A Matrix Of Angels",
+   "author": "Christopher Conlon",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Cosmic Forces",
+   "author": "Gregory Lamberson",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Floating Staircase",
+   "author": "Ronald Malfi",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Not Fade Away",
+   "author": "Gene O'Neill",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The German",
+   "author": "Lee Thomas",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Drowning Girl",
+   "author": "Caitlin R. Kiernan",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The German",
+   "author": "Lee Thomas",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Bottled Abyss",
+   "author": "Benjamin Kane Ethridge",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Nightwhere",
+   "author": "John Everson",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Inheritance",
+   "author": "Joe McKinney",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Haunted",
+   "author": "Bentley Little",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Doctor Sleep",
+   "author": "Stephen King",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "NOS4A2",
+   "author": "Joe Hill",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Malediction",
+   "author": "Lisa Morton",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Necessary End",
+   "author": "Sarah Pinborough & F. Paul Wilson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Heavens Rise",
+   "author": "Christopher Rice",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Blood Kin",
+   "author": "Steve Rasnic Tem",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Suffer the Children",
+   "author": "Craig DiLouie",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Jade Sky",
+   "author": "Patrick Freivald",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Beautiful You",
+   "author": "Chuck Palahniuk",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Vines",
+   "author": "Christopher Rice",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "A Head Full of Ghosts",
+   "author": "Paul G. Tremblay",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Scarlet Gospels",
+   "author": "Clive Barker",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Deep",
+   "author": "Michaelbrent Collings",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Cure",
+   "author": "JG Faherty",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Black Tide",
+   "author": "Patrick Freivald",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Fisherman",
+   "author": "John Langan",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Hard Light",
+   "author": "Elizabeth Hand",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Mongrels",
+   "author": "Stephen Graham Jones",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Stranded",
+   "author": "Bracken MacLeod",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Disappearance at Devil's Rock",
+   "author": "Paul G. Tremblay",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Ararat",
+   "author": "Christopher Golden",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Sleeping Beauties",
+   "author": "Stephen King & Owen King",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Black Mad Wheel",
+   "author": "Josh Malerman",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "I Wish I Was Like You",
+   "author": "S. P. Miskowski",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Ubo",
+   "author": "Steve Rasnic Tem",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Cabin at the End of the World",
+   "author": "Paul G. Tremblay",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Dracul",
+   "author": "J. D. Barker & Dacre Stoker",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Hunger",
+   "author": "Alma Katsu",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Glimpse",
+   "author": "Jonathan Maberry",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Unbury Carol",
+   "author": "Josh Malerman",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Coyote Rage",
+   "author": "Owl Goingback",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Inspection",
+   "author": "Josh Malerman",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Worst Is Yet to Come",
+   "author": "S. P. Miskowski",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Into the Ashes",
+   "author": "Lee Murray",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Wanderers",
+   "author": "Chuck Wendig",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Only Good Indians",
+   "author": "Stephen Graham Jones",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Deep",
+   "author": "Alma Katsu",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Devil's Creek",
+   "author": "Todd Keisling",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Malorie",
+   "author": "Josh Malerman",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Mexican Gothic",
+   "author": "Silvia Moreno-Garcia",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "My Heart Is a Chainsaw",
+   "author": "Stephen Graham Jones",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Queen of the Cicadas",
+   "author": "V. Castro",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Final Girl Support Group",
+   "author": "Grady Hendrix",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Children of Chicago",
+   "author": "Cynthia Pelayo",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Accidents",
+   "author": "Chuck Wendig",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil Takes You Home",
+   "author": "Gabino Iglesias",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Fervor",
+   "author": "Alma Katsu",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Reluctant Immortals",
+   "author": "Gwendolyn Kiste",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Daphne",
+   "author": "Josh Malerman",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Sundial",
+   "author": "Catriona Ward",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Reformatory",
+   "author": "Tananarive Due",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "How to Sell a Haunted House",
+   "author": "Grady Hendrix",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Don't Fear the Reaper",
+   "author": "Stephen Graham Jones",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Lone Women",
+   "author": "Victor Lavalle",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Camp Damascus",
+   "author": "Chuck Tingle",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Black River Orchard",
+   "author": "Chuck Wendig",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Haunting of Velkwood",
+   "author": "Gwendolyn Kiste",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "House of Bone and Rain",
+   "author": "Gabino Iglesias",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "I Was a Teenage Slasher",
+   "author": "Stephen Graham Jones",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Incidents Around the House",
+   "author": "Josh Malerman",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Horror Movie",
+   "author": "Paul G. Tremblay",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Buffalo Hunter Hunter",
+   "author": "Stephen Graham Jones",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Witchcraft for Wayward Girls",
+   "author": "Grady Hendrix",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "King Sorrow",
+   "author": "Joe Hill",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Bewitching",
+   "author": "Silvia Moreno-Garcia",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Girl in the Creek",
+   "author": "Wendy N. Wagner",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

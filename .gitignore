@@ -9,3 +9,17 @@ tools/suggestions/
 .env
 .env.*
 !.env.example
+
+# Phase 9's harvest. Appended, not merged into anything above — this file is
+# LAST-MATCH-WINS and sorting it silently ignores .env.example. See the note
+# on the credentials block.
+#
+# data/lists/*.json IS the harvest snapshot and is committed: parsed entries
+# plus the page, the revision id and a per-table parse audit. The raw
+# wikitext underneath it is 4.1 MB for 72 pages and is NOT — every list
+# carries a permalink (?oldid=<revid>) that resolves to the byte-identical
+# page for good, so provenance does not depend on keeping a local copy.
+# Regenerate with:  npm run harvest -- --force   (~72 requests, under a minute)
+data/cache/wiki/
+# handoff file between `harvest shelve` and `harvest isbns`, rewritten by both
+data/cache/isbn-wanted.json

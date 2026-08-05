@@ -17,7 +17,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { MODE, lookupBook } from './hardcover.js';
+import { MODE, lookupBook } from './lookup.js';
 
 const server = new McpServer({ name: 'nowhere-bookshop-hardcover', version: '1.0.0' });
 
@@ -25,10 +25,11 @@ server.registerTool(
   'hardcover_search',
   {
     title: 'Hardcover book lookup',
-    description: 'Look up a book on Hardcover by title and author. Returns ISBN-13, ' +
+    description: 'Look up a book by title and author, through the same provider chain the ' +
+      'site uses (Hardcover when a token is present, then Open Library). Returns ISBN-13, ' +
       'page count, first-publication year and a publisher description when a ' +
-      'confident match is found. Runs in "live" or "fixture" mode depending on ' +
-      'whether HARDCOVER_TOKEN is set; always reports which in `source`.',
+      'confident match is found. Always reports which mode answered in `source` ' +
+      '(live · fixture · miss) and which upstream in `via`.',
     inputSchema: {
       title: z.string().describe('Book title'),
       author: z.string().describe('Author name'),

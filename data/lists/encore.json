@@ -1,0 +1,264 @@
+{
+ "slug": "encore",
+ "prize": "Encore Award",
+ "rooms": [
+  "longroom",
+  "quiethouse"
+ ],
+ "page": "Encore Award",
+ "url": "https://en.wikipedia.org/wiki/Encore_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1327339211",
+ "revid": 1327339211,
+ "fetchedAt": "2026-08-05T16:26:54.408Z",
+ "counts": {
+  "entries": 38,
+  "winners": 38,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "List of winners",
+   "headers": "Year | Author | Book | Award",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 38,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "A Lesser Dependency",
+   "author": "Peter Benson",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Calm at Sunset, Calm at Dawn",
+   "author": "Paul Watkins",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Richard's Feet",
+   "author": "Carey Harrison",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Downriver",
+   "author": "Iain Sinclair",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Heather Blazing",
+   "author": "Colm Tóibín",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Afternoon Raag",
+   "author": "Amit Chaudhuri",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "A Goat's Song",
+   "author": "Dermot Healy",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "So I am Glad",
+   "author": "A. L. Kennedy",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Like Plastic",
+   "author": "David Flusfeder",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "I Could Read the Sky",
+   "author": "Timothy O'Grady",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "These Demented Lands",
+   "author": "Alan Warner",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Undiscovered Country",
+   "author": "Christina Koning",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Mercy Boys",
+   "author": "John Burnside",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Life",
+   "author": "Claire Messud",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Eight Minutes Idle",
+   "author": "Matt Thorne",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Triangulation",
+   "author": "Phil Whitaker",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "What Are You Like?",
+   "author": "Anne Enright",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Hotel World",
+   "author": "Ali Smith",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Book of Israel",
+   "author": "Jeremy Gavron",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Hamilton Case",
+   "author": "Michelle de Kretser",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Maps for Lost Lovers",
+   "author": "Nadeem Aslam",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Carry Me Down",
+   "author": "M. J. Hyland",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Disquiet",
+   "author": "Julia Leigh",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Quickening Maze",
+   "author": "Adam Foulds",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Wild Abandon",
+   "author": "Joe Dunthorne",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Teleportation Accident",
+   "author": "Ned Beauman",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "All the Birds, Singing",
+   "author": "Evie Wyld",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Lives of Others",
+   "author": "Neel Mukherjee",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Year of the Runaways",
+   "author": "Sunjeev Sahota",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The North Water",
+   "author": "Ian McGuire",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Devil's Day",
+   "author": "Andrew Michael Hurley",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Blood Miracles",
+   "author": "Lisa McInerney",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Normal People",
+   "author": "Sally Rooney",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Throw Me to the Wolves",
+   "author": "Patrick McGuinness",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Wild Laughter",
+   "author": "Caoilinn Hughes",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Light Perpetual",
+   "author": "Francis Spufford",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Emergency",
+   "author": "Daisy Hildyard",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Enter Ghost",
+   "author": "Isabella Hammad",
+   "year": 2024,
+   "kind": "w"
+  }
+ ]
+}

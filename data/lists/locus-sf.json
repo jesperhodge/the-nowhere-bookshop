@@ -1,0 +1,318 @@
+{
+ "slug": "locus-sf",
+ "prize": "Locus Award for Best Science Fiction Novel",
+ "rooms": [
+  "orrery",
+  "engine",
+  "longnow"
+ ],
+ "page": "Locus Award for Best Science Fiction Novel",
+ "url": "https://en.wikipedia.org/wiki/Locus_Award_for_Best_Science_Fiction_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1360465712",
+ "revid": 1360465712,
+ "fetchedAt": "2026-08-05T16:27:01.408Z",
+ "counts": {
+  "entries": 47,
+  "winners": 47,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Author | Work | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 47,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Titan",
+   "author": "John Varley",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Snow Queen",
+   "author": "Joan D. Vinge",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Many-Colored Land",
+   "author": "Julian May",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Foundation's Edge",
+   "author": "Isaac Asimov",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Startide Rising",
+   "author": "David Brin",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "The Integral Trees",
+   "author": "Larry Niven",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Postman",
+   "author": "David Brin",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Speaker for the Dead",
+   "author": "Orson Scott Card",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "The Uplift War",
+   "author": "David Brin",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Cyteen",
+   "author": "C. J. Cherryh",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Hyperion",
+   "author": "Dan Simmons",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall of Hyperion",
+   "author": "Dan Simmons",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Barrayar",
+   "author": "Lois McMaster Bujold",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Doomsday Book",
+   "author": "Connie Willis",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Green Mars",
+   "author": "Kim Stanley Robinson",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Mirror Dance",
+   "author": "Lois McMaster Bujold",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Diamond Age",
+   "author": "Neal Stephenson",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Blue Mars",
+   "author": "Kim Stanley Robinson",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise of Endymion",
+   "author": "Dan Simmons",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "To Say Nothing of the Dog",
+   "author": "Connie Willis",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Cryptonomicon",
+   "author": "Neal Stephenson",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Telling",
+   "author": "Ursula K. Le Guin",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Passage",
+   "author": "Connie Willis",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Years of Rice and Salt",
+   "author": "Kim Stanley Robinson",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Ilium",
+   "author": "Dan Simmons",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Baroque Cycle (i.e. Quicksilver; The Confusion; The System of the World)",
+   "author": "Neal Stephenson",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Accelerando",
+   "author": "Charles Stross",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Rainbows End",
+   "author": "Vernor Vinge",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Yiddish Policemen's Union",
+   "author": "Michael Chabon",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Anathem",
+   "author": "Neal Stephenson",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Boneshaker",
+   "author": "Cherie Priest",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Blackout/All Clear",
+   "author": "Connie Willis",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Embassytown",
+   "author": "China Miéville",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Redshirts",
+   "author": "John Scalzi",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Abaddon's Gate",
+   "author": "James S. A. Corey",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Ancillary Sword",
+   "author": "Ann Leckie",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Ancillary Mercy",
+   "author": "Ann Leckie",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Death's End",
+   "author": "Liu Cixin",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Collapsing Empire",
+   "author": "John Scalzi",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Calculating Stars",
+   "author": "Mary Robinette Kowal",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The City in the Middle of the Night",
+   "author": "Charlie Jane Anders",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Network Effect",
+   "author": "Martha Wells",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "A Desolation Called Peace",
+   "author": "Arkady Martine",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Kaiju Preservation Society",
+   "author": "John Scalzi",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "System Collapse",
+   "author": "Martha Wells",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Man Who Saw Seconds",
+   "author": "Alexander Boldizar",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Death of the Author",
+   "author": "Nnedi Okorafor",
+   "year": 2026,
+   "kind": "w"
+  }
+ ]
+}

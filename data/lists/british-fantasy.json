@@ -1,0 +1,957 @@
+{
+ "slug": "british-fantasy",
+ "prize": "British Fantasy Award for Best Novel",
+ "rooms": [
+  "oak",
+  "cartographer",
+  "thorngate",
+  "kitchendoor",
+  "bonelibrary",
+  "cellar"
+ ],
+ "page": "British Fantasy Award for Best Novel",
+ "url": "https://en.wikipedia.org/wiki/British_Fantasy_Award_for_Best_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1342345334",
+ "revid": 1342345334,
+ "fetchedAt": "2026-08-05T16:27:04.758Z",
+ "counts": {
+  "entries": 153,
+  "winners": 39,
+  "cited": 114
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and shortlist",
+   "headers": "Year | Author | Work | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 153,
+   "dropped": 0,
+   "winnerMark": "star"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Knight of the Swords",
+   "author": "Michael Moorcock",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "The King of the Swords",
+   "author": "Michael Moorcock",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Hrolf Kraki's Saga",
+   "author": "Poul Anderson",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Sword and the Stallion",
+   "author": "Michael Moorcock",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "A Quest for Simbilis",
+   "author": "Michael Shea",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Shardik",
+   "author": "Richard Adams",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Hollow Lands",
+   "author": "Michael Moorcock",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Bloodstone",
+   "author": "Karl Edward Wagner",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The House of the Worm",
+   "author": "Gary Myers",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Marauders of Gor",
+   "author": "John Norman",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "A Plague of Nightmares",
+   "author": "Adrian Cole",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Dragon and the George",
+   "author": "Gordon R. Dickson",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Camber of Culdi",
+   "author": "Katherine Kurtz",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Interview with the Vampire",
+   "author": "Anne Rice",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "A Spell for Chameleon",
+   "author": "Piers Anthony",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "My Lord Barbarian",
+   "author": "Andrew J. Offutt",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Our Lady of Darkness",
+   "author": "Fritz Leiber",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Chronicles of Thomas Covenant the Unbeliever",
+   "author": "Stephen R. Donaldson",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Dying of the Light",
+   "author": "George R. R. Martin",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Gloriana",
+   "author": "Michael Moorcock",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The Quest of the White Witch",
+   "author": "Tanith Lee",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The Road to Corlay",
+   "author": "Richard Cowper",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Death's Master",
+   "author": "Tanith Lee",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Harpist in the Wind",
+   "author": "Patricia A. McKillip",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Sorcerer's Son",
+   "author": "Phyllis Eisenstein",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "To Wake the Dead",
+   "author": "Ramsey Campbell",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Firestarter",
+   "author": "Stephen King",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Kill the Dead",
+   "author": "Tanith Lee",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "A Storm of Wings",
+   "author": "M. John Harrison",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Wounded Land",
+   "author": "Stephen R. Donaldson",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Cujo",
+   "author": "Stephen King",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Camber the Heretic",
+   "author": "Katherine Kurtz",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Delusion's Master",
+   "author": "Tanith Lee",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Nameless",
+   "author": "Ramsey Campbell",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Sword of the Lictor",
+   "author": "Gene Wolfe",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "In Viriconium",
+   "author": "M. John Harrison",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Psycho II",
+   "author": "Robert Bloch",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Floating Dragon",
+   "author": "Peter Straub",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Incarnate",
+   "author": "Ramsey Campbell",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Lyonesse",
+   "author": "Jack Vance",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Nights at the Circus",
+   "author": "Angela Carter",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Ceremonies",
+   "author": "T. E. D. Klein",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "It",
+   "author": "Stephen King",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Necroscope",
+   "author": "Brian Lumley",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Strangers",
+   "author": "Dean Koontz",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "The Hungry Moon",
+   "author": "Ramsey Campbell",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "The Influence",
+   "author": "Ramsey Campbell",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Carrion Comfort",
+   "author": "Dan Simmons",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Midnight Sun",
+   "author": "Ramsey Campbell",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Outside the Dog Museum",
+   "author": "Jonathan Carroll",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Count of Eleven",
+   "author": "Ramsey Campbell",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Summer of Night",
+   "author": "Dan Simmons",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Sister",
+   "author": "Graham Joyce",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Long Lost",
+   "author": "Ramsey Campbell",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Only Forward",
+   "author": "Michael Marshall Smith",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Blood Wars",
+   "author": "Brian Lumley",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Nocturne",
+   "author": "Mark Chadbourn",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Pasquale's Angel",
+   "author": "Paul J. McAuley",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Quorum",
+   "author": "Kim Newman",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Requiem",
+   "author": "Graham Joyce",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Blood Crazy",
+   "author": "Simon Clark",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Dead of Light",
+   "author": "Chaz Brenchley",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Gap Into Madness: Chaos and Order",
+   "author": "Stephen R. Donaldson",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Time Ships",
+   "author": "Stephen Baxter",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Tooth Fairy",
+   "author": "Graham Joyce",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Assassin's Apprentice",
+   "author": "Robin Hobb",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Excession",
+   "author": "Iain Banks",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Hellfire Club",
+   "author": "Peter Straub",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Hogfather",
+   "author": "Terry Pratchett",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Sacrament",
+   "author": "Clive Barker",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Scenting Hallowed Blood",
+   "author": "Storm Constantine",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Spares",
+   "author": "Michael Marshall Smith",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Light Errant",
+   "author": "Chaz Brenchley",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The House on Nazareth Hill",
+   "author": "Ramsey Campbell",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Mesmer",
+   "author": "Tim Lebbon",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Polgara the Sorceress",
+   "author": "David Eddings & Leigh Eddings",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Signs of Life",
+   "author": "M. John Harrison",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Bag of Bones",
+   "author": "Stephen King",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Chasm",
+   "author": "Stephen Laws",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Gate of Ivory, Gate of Horn",
+   "author": "Robert Holdstock",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Kissing The Beehive",
+   "author": "Jonathan Carroll",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "One of Us",
+   "author": "Michael Marshall Smith",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Someplace to be Flying",
+   "author": "Charles de Lint",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Stormwatcher",
+   "author": "Graham Joyce",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Vampyrrhic",
+   "author": "Simon Clark",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Indigo",
+   "author": "Graham Joyce",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Amber Citadel",
+   "author": "Freda Warrington",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Marriage of Sticks",
+   "author": "Jonathan Carroll",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Shelter",
+   "author": "Chaz Brenchley",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "World's End",
+   "author": "Mark Chadbourn",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Perdido Street Station",
+   "author": "China Miéville",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Hush",
+   "author": "Tim Lebbon & Gavin Williams",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Mr. X",
+   "author": "Peter Straub",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Ragchild",
+   "author": "Steve Lockley & Paul Lewis",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Silent Children",
+   "author": "Ramsey Campbell",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Night of the Triffids",
+   "author": "Simon Clark",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Always Forever",
+   "author": "Mark Chadbourn",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "American Gods",
+   "author": "Neil Gaiman",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Bold as Love",
+   "author": "Gwyneth Jones",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Smoking Poppy",
+   "author": "Graham Joyce",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Scar",
+   "author": "China Miéville",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Darkest Part of the Woods",
+   "author": "Ramsey Campbell",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil in Green",
+   "author": "Mark Chadbourn",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Facts of Life",
+   "author": "Graham Joyce",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "White Apples",
+   "author": "Jonathan Carroll",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Full Dark House",
+   "author": "Christopher Fowler",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Felaheen: The Third Arabesk",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "lost boy, lost girl",
+   "author": "Peter Straub",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Nobody True",
+   "author": "James Herbert",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Poison Master",
+   "author": "Liz Williams",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Vampyrrhic Rites",
+   "author": "Simon Clark",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Tower VII: The Dark Tower",
+   "author": "Stephen King",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Abarat: Days of Magic, Nights of War",
+   "author": "Clive Barker",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Jonathan Strange & Mr Norrell",
+   "author": "Susanna Clarke",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Queen of Sinister",
+   "author": "Mark Chadbourn",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Water Room",
+   "author": "Christopher Fowler",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Anansi Boys",
+   "author": "Neil Gaiman",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "A Feast for Crows",
+   "author": "George R. R. Martin",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Hounds of Avalon",
+   "author": "Mark Chadbourn",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Nowhere Near an Angel",
+   "author": "Mark Morris",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Secret Stories",
+   "author": "Ramsey Campbell",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Vellum",
+   "author": "Hal Duncan",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Dusk",
+   "author": "Tim Lebbon",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Breeding Ground",
+   "author": "Sarah Pinborough",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Bridge of Dreams",
+   "author": "Chaz Brenchley",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil You Know",
+   "author": "Mike Carey",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Face of Twilight",
+   "author": "Mark Samuels",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Jack of Ravens",
+   "author": "Mark Chadbourn",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Lies of Locke Lamora",
+   "author": "Scott Lynch",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Nova Swing",
+   "author": "M. John Harrison",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Unblemished",
+   "author": "Conrad Williams",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Grin of the Dark",
+   "author": "Ramsey Campbell",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Heart-Shaped",
+   "author": "Joe Hill",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Intruders",
+   "author": "Michael Marshall",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Servants",
+   "author": "Michael Marshall Smith",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Taken",
+   "author": "Sarah Pinborough",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Terror",
+   "author": "Dan Simmons",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Memoirs of a Master Forger",
+   "author": "William Heaney",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Midnight Man",
+   "author": "Simon Clark",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Rain Dogs",
+   "author": "Gary McMahon",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Graveyard Book",
+   "author": "Neil Gaiman",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Victoria Vanishes",
+   "author": "Christopher Fowler",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Thieving Fear",
+   "author": "Ramsey Campbell",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "One",
+   "author": "Conrad Williams",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Best Served Cold",
+   "author": "Joe Abercrombie",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Naming of the Beasts",
+   "author": "Mike Carey",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Under the Dome",
+   "author": "Stephen King",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Futile Flame",
+   "author": "Sam Stone",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Demon Dance",
+   "author": "Sam Stone§",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Apartment 16",
+   "author": "Adam Nevill",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Leaping",
+   "author": "Tom Fletcher",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Pretty Little Dead Things",
+   "author": "Gary McMahon",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Silent Land",
+   "author": "Graham Joyce",
+   "year": 2011,
+   "kind": "c"
+  }
+ ]
+}

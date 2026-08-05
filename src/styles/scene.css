@@ -46,7 +46,6 @@
   pointer-events: none;
 }
 .bk, .door3d { pointer-events: auto; }
-.bk.fill { pointer-events: none; }
 
 .room { position: absolute; inset: 0; transform-style: preserve-3d; }
 
@@ -338,9 +337,29 @@
 }
 .bk.is-taken { opacity: .12; pointer-events: none; }
 
-/* decorative filler books — not interactive, just make the shop full */
-.fill { pointer-events: none; }
-.fill .bk__spine { box-shadow: inset 3px 0 8px -2px rgba(0,0,0,.7), inset -2px 0 4px -2px rgba(255,255,255,.08); }
+/* The shopkeeper's picks — the books with a curator's note, which since
+   phase 9 are a minority of the shelf rather than all of it. A gilt band
+   low on the spine and a slightly brighter head band, so a pick is
+   findable standing in the room instead of only after you open it.
+   Layered over --sp-bg rather than replacing it: every book keeps its own
+   procedural jacket. */
+.bk--pick .bk__spine {
+  background:
+    linear-gradient(180deg,
+      transparent 0 79%,
+      rgba(0,0,0,.35) 79% 80%,
+      var(--brass) 80% 87%,
+      rgba(0,0,0,.35) 87% 88%,
+      transparent 88%),
+    var(--sp-bg);
+}
+.bk--pick .bk__spine::after { opacity: 1; }
+
+/* The `.fill` rules for decorative filler books stood here. Phase 9 deleted
+   the generator (scene.js's buildFiller()), so they matched nothing — and a
+   rule that matches nothing is the thing that actually rots, because the next
+   person to read it believes there are still filler books. tools/qa.mjs
+   asserts `.bk.fill` is zero in all 50 rooms. */
 
 /* the floating name-tag that follows the book you're pointing at */
 .tag {

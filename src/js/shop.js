@@ -18,6 +18,7 @@ import inkroom from './data/books/inkroom.js';
 import windowseat from './data/books/windowseat.js';
 import landing from './data/books/landing.js';
 import { ENRICH } from './data/enrich.js';
+import { GENERATED, SOURCES } from './data/generated/index.js';
 
 const SHELVES = Object.assign({}, front, longroom, orrery, oak, lamproom, glasshouse,
   readingroom, attic, cellar, inkroom, windowseat, landing);
@@ -25,17 +26,53 @@ const SHELVES = Object.assign({}, front, longroom, orrery, oak, lamproom, glassh
 export const ALL_BOOKS = [];
 export const BOOK_BY_ID = Object.create(null);
 
+/** Where a harvested accolade came from: the list, its page, and the exact
+    revision of it that was parsed. Every generated book's `acc[].s` resolves
+    here — that is what makes the shelf checkable rather than merely
+    plausible. See tools/harvest.mjs and IMPLEMENTATION.md §6. */
+export { SOURCES };
+
+/* A harvested book stores its accolades once, as acc:[{l,k,s}] — label, kind
+   and the list slug it is traceable to. `won`/`cited` are derived from that
+   here rather than written twice into the data file, so there is exactly one
+   thing to audit and no way for the two to drift apart. */
+function accolades(b) {
+  if (!b.acc) return { won: b.won || [], cited: b.cited || [] };
+  const won = [], cited = [];
+  for (const a of b.acc) (a.k === 'w' ? won : cited).push(a.l);
+  return { won, cited };
+}
+
 for (const room of ROOMS) {
-  const list = (SHELVES[room.id] || []).map((b) => ({
+  const curated = (SHELVES[room.id] || []).map((b) => ({
     /* Fetched facts go underneath, so anything written by hand on the
        shelf wins over anything a lookup guessed. */
     ...ENRICH[b.id],
     ...b,
     room: room.id,
-    won: b.won || [],
-    cited: b.cited || [],
+    ...accolades(b),
     tags: b.tags || [],
+    /* The shopkeeper's picks. A pick is a book with a curator's note — the
+       one thing this shop has that a catalogue does not — so the tier is
+       derived from the note rather than kept as a second flag that could
+       disagree with it. */
+    pick: !!b.note,
   }));
+
+  const generated = (GENERATED[room.id] || []).map((b) => ({
+    ...b,
+    room: room.id,
+    ...accolades(b),
+    tags: [],
+    pick: false,
+  }));
+
+  /* Picks first, so they take the top row of the case — eye level, and the
+     row the shelf camera frames best. Every pick is a curated book today, so
+     the concatenation alone would do it; the sort is here so the ordering
+     follows from the rule rather than from that happening to be true. Stable,
+     so within each tier the hand-written shelf order is untouched. */
+  const list = [...curated, ...generated].sort((a, b) => Number(b.pick) - Number(a.pick));
   room.books = list;
   for (const b of list) {
     if (BOOK_BY_ID[b.id]) console.warn('duplicate book id:', b.id);
@@ -43,6 +80,8 @@ for (const room of ROOMS) {
     ALL_BOOKS.push(b);
   }
 }
+
+export const PICKS = ALL_BOOKS.filter((b) => b.pick);
 
 /* how many books sit at or below each room — shown on the plan */
 for (const room of ROOMS) {
@@ -88,6 +127,11 @@ export function search(q, limit = 40) {
     if (a.includes(query)) score += 26;
     if (norm(b.tags.join(' ')).includes(query)) score += 14;
     if (b.won.length) score += 4;
+    /* The shopkeeper's picks rank above the harvested shelf on an equal
+       match. They are the books someone actually wrote about, which is the
+       whole reason to prefer this shop to a catalogue — the tier has to be
+       visible in search too, not only on the spine. */
+    if (b.pick) score += 12;
     books.push({ b, score });
   }
   books.sort((x, y) => y.score - x.score || x.b.title.localeCompare(y.b.title));
@@ -116,6 +160,7 @@ export function surprise(excludeId) {
 
 export const STATS = {
   books: ALL_BOOKS.length,
+  picks: PICKS.length,
   rooms: ROOMS.length,
   deepest: Math.max(...ROOMS.map((r) => r.depth)),
 };

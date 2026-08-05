@@ -1,0 +1,503 @@
+{
+ "slug": "goldsmiths",
+ "prize": "Goldsmiths Prize",
+ "rooms": [
+  "brokensentence",
+  "smallpress",
+  "longroom"
+ ],
+ "page": "Goldsmiths Prize",
+ "url": "https://en.wikipedia.org/wiki/Goldsmiths_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1342314078",
+ "revid": 1342314078,
+ "fetchedAt": "2026-08-05T16:26:47.654Z",
+ "counts": {
+  "entries": 77,
+  "winners": 13,
+  "cited": 64
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and shortlists",
+   "skipped": "no header row"
+  },
+  {
+   "t": 1,
+   "heading": "Winners and shortlists",
+   "headers": "Year | Author | Novel | Publisher | Notes",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 77,
+   "dropped": 1,
+   "winnerMark": "ribbon"
+  }
+ ],
+ "entries": [
+  {
+   "title": "We Live Here Now",
+   "author": "CD Rose",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "We Pretty Pieces of Flesh",
+   "author": "Colwill Brown",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Catch",
+   "author": "Yrsa Daley-Ward",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Helm",
+   "author": "Sarah Hall",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Expansion Project",
+   "author": "Ben Pester",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Nova Scotia House",
+   "author": "Charlie Porter",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Parade",
+   "author": "Rachel Cusk",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "All My Precious Madness",
+   "author": "Mark Bowles",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Tell",
+   "author": "Jonathan Buckley",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Choice",
+   "author": "Neel Mukherjee",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Spent Light",
+   "author": "Lara Pawson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Portraits at the Palace of Creativity and Wrecking",
+   "author": "Han Smith",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Cuddy",
+   "author": "Benjamin Myers",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Lori & Joe",
+   "author": "Amy Arnold",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Long Form",
+   "author": "Kate Briggs",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Never Was",
+   "author": "H. Gareth Gavin",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Man-Eating Typewriter",
+   "author": "Richard Milward",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Future Future",
+   "author": "Adam Thirlwell",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Diego Garcia",
+   "author": "Natasha Soobramanien & Luke Williams",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Somebody Loves You",
+   "author": "Mona Arshi",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Seven Steeples",
+   "author": "Sara Baume",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Maps of Our Spectacular Bodies",
+   "author": "Maddie Mortimer",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Peaces",
+   "author": "Helen Oyeyemi",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "there are more things",
+   "author": "Yara Rodrigues Fowler",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Sterling Karat Gold",
+   "author": "Isabel Waidner",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Checkout 19",
+   "author": "Claire-Louise Bennett",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Assembly",
+   "author": "Natasha Brown",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A Shock",
+   "author": "Keith Ridgway",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "This One Sky Day",
+   "author": "Leone Ross",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "little scratch",
+   "author": "Rebecca Watson",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Sunken Land Begins to Rise Again",
+   "author": "M. John Harrison",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Mr Beethoven",
+   "author": "Paul Griffiths",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "A Lover's Discourse",
+   "author": "Xiaolu Guo",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Meanwhile in Dopamine City",
+   "author": "DBC Pierre",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Mermaid of Black Conch",
+   "author": "Monique Roffey",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Bina",
+   "author": "Anakana Schofield",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Ducks, Newburyport",
+   "author": "Lucy Ellmann",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "We Are Made of Diamond Stuff",
+   "author": "Isabel Waidner",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Good Day?",
+   "author": "Vesna Main",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Slip of a Fish",
+   "author": "Amy Arnold",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Porpoise",
+   "author": "Mark Haddon",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Man Who Saw Everything",
+   "author": "Deborah Levy",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Long Take",
+   "author": "Robin Robertson",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Kudos",
+   "author": "Rachel Cusk",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Murmur",
+   "author": "Will Eaves",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "In Our Mad and Furious City",
+   "author": "Guy Gunaratne",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Cemetery in Barnes",
+   "author": "Gabriel Josipovici",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Crudo",
+   "author": "Olivia Laing",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "H(A)PPY",
+   "author": "Nicola Barker",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "A Line Made by Walking",
+   "author": "Sara Baume",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Playing Possum",
+   "author": "Kevin Davey",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Reservoir 13",
+   "author": "Jon McGregor",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "First Love",
+   "author": "Gwendoline Riley",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Phone",
+   "author": "Will Self",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Solar Bones",
+   "author": "Mike McCormack",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Hot Milk",
+   "author": "Deborah Levy",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Like a Mule Bringing Ice Cream to the Sun",
+   "author": "Sarah Ladipo Manyika",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Martin John",
+   "author": "Anakana Schofield",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Lesser Bohemians",
+   "author": "Eimear McBride",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Transit",
+   "author": "Rachel Cusk",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Beatlebone",
+   "author": "Kevin Barry",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Acts of the Assassins",
+   "author": "Richard Beard",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Field of the Cloth of Gold",
+   "author": "Magnus Mills",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Satin Island",
+   "author": "Tom McCarthy",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Grief Is the Thing with Feathers",
+   "author": "Max Porter",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Lurid & Cute",
+   "author": "Adam Thirlwell",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "How to Be Both",
+   "author": "Ali Smith",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Outline",
+   "author": "Rachel Cusk",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Absent Therapist",
+   "author": "Will Eaves",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Wake",
+   "author": "Paul Kingsnorth",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "In the Light of What We Know",
+   "author": "Zia Haider Rahman",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "A Girl Is a Half-formed Thing",
+   "author": "Eimear McBride",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "tapestry",
+   "author": "Philip Terry",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Harvest",
+   "author": "Jim Crace",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Exodus",
+   "author": "Lars Iyer",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Red or Dead",
+   "author": "David Peace",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Artful",
+   "author": "Ali Smith",
+   "year": 2013,
+   "kind": "c"
+  }
+ ]
+}

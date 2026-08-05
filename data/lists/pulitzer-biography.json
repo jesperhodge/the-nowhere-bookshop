@@ -1,0 +1,1366 @@
+{
+ "slug": "pulitzer-biography",
+ "prize": "Pulitzer Prize for Biography",
+ "rooms": [
+  "windowseat",
+  "readingroom"
+ ],
+ "page": "Pulitzer Prize for Biography",
+ "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_Biography",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1367287153",
+ "revid": 1367287153,
+ "fetchedAt": "2026-08-05T16:27:12.598Z",
+ "counts": {
+  "entries": 208,
+  "winners": 79,
+  "cited": 129
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1910s–1940s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 34,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 1,
+   "heading": "1950s–1970s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 29,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 2,
+   "heading": "1980s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 33,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "1990s",
+   "headers": "Year | Author(s) | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 31,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "2000s",
+   "headers": "Year | Author(s) | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 30,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "2010s",
+   "headers": "Year | Author(s) | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 30,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 6,
+   "heading": "2020s",
+   "headers": "Year | Author(s) | Work | Result | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 21,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Julia Ward Howe",
+   "author": "Laura E. Richards & Maud Howe Elliott, assisted by Florence Howe Hall",
+   "year": 1917,
+   "kind": "c"
+  },
+  {
+   "title": "Benjamin Franklin, Self-Revealed",
+   "author": "William Cabell Bruce",
+   "year": 1918,
+   "kind": "c"
+  },
+  {
+   "title": "The Education of Henry Adams",
+   "author": "Henry Adams",
+   "year": 1919,
+   "kind": "w"
+  },
+  {
+   "title": "The Life of John Marshall, 4 vols.",
+   "author": "Albert J. Beveridge",
+   "year": 1920,
+   "kind": "c"
+  },
+  {
+   "title": "The Americanization of Edward Bok: The Autobiography of a Dutch Boy Fifty Years After",
+   "author": "Edward Bok",
+   "year": 1921,
+   "kind": "c"
+  },
+  {
+   "title": "A Daughter of the Middle Border",
+   "author": "Hamlin Garland",
+   "year": 1922,
+   "kind": "c"
+  },
+  {
+   "title": "The Life and Letters of Walter H. Page",
+   "author": "Burton J. Hendrick",
+   "year": 1923,
+   "kind": "c"
+  },
+  {
+   "title": "From Immigrant to Inventor",
+   "author": "Michael I. Pupin",
+   "year": 1924,
+   "kind": "c"
+  },
+  {
+   "title": "Barrett Wendell and His Letters",
+   "author": "M. A. De Wolfe Howe",
+   "year": 1925,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Sir William Osler, 2 vols.",
+   "author": "Harvey Cushing",
+   "year": 1926,
+   "kind": "c"
+  },
+  {
+   "title": "Whitman",
+   "author": "Emory Holloway",
+   "year": 1927,
+   "kind": "c"
+  },
+  {
+   "title": "The American Orchestra and Theodore Thomas",
+   "author": "Charles Edward Russell",
+   "year": 1928,
+   "kind": "c"
+  },
+  {
+   "title": "The Training of an American: The Earlier Life and Letters of Walter H. Page",
+   "author": "Burton J. Hendrick",
+   "year": 1929,
+   "kind": "c"
+  },
+  {
+   "title": "The Raven: A Biography of Sam Houston",
+   "author": "Marquis James",
+   "year": 1930,
+   "kind": "c"
+  },
+  {
+   "title": "Charles W. Eliot, President of Harvard University, 1869–1901",
+   "author": "Henry James",
+   "year": 1931,
+   "kind": "c"
+  },
+  {
+   "title": "Theodore Roosevelt: A Biography",
+   "author": "Henry F. Pringle",
+   "year": 1932,
+   "kind": "c"
+  },
+  {
+   "title": "Grover Cleveland: A Study in Courage",
+   "author": "Allan Nevins",
+   "year": 1933,
+   "kind": "c"
+  },
+  {
+   "title": "John Hay",
+   "author": "Tyler Dennett",
+   "year": 1934,
+   "kind": "c"
+  },
+  {
+   "title": "R. E. Lee",
+   "author": "Douglas S. Freeman",
+   "year": 1935,
+   "kind": "c"
+  },
+  {
+   "title": "The Thought and Character of William James",
+   "author": "Ralph Barton Perry",
+   "year": 1936,
+   "kind": "c"
+  },
+  {
+   "title": "Hamilton Fish",
+   "author": "Allan Nevins",
+   "year": 1937,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Andrew Jackson, 2 vols.",
+   "author": "Marquis James",
+   "year": 1938,
+   "kind": "c"
+  },
+  {
+   "title": "Pedlar's Progress: The Life of Bronson Alcott",
+   "author": "Odell Shepard",
+   "year": 1938,
+   "kind": "c"
+  },
+  {
+   "title": "Benjamin Franklin",
+   "author": "Carl Van Doren",
+   "year": 1939,
+   "kind": "c"
+  },
+  {
+   "title": "Woodrow Wilson, Life and Letters. Vols. VII and VIII",
+   "author": "Ray Stannard Baker",
+   "year": 1940,
+   "kind": "c"
+  },
+  {
+   "title": "Jonathan Edwards, 1703–1758: A Biography",
+   "author": "Ola Elizabeth Winslow",
+   "year": 1941,
+   "kind": "c"
+  },
+  {
+   "title": "Crusader in Crinoline: The Life of Harriet Beecher Stowe",
+   "author": "Forrest Wilson",
+   "year": 1942,
+   "kind": "c"
+  },
+  {
+   "title": "Admiral of the Ocean Sea",
+   "author": "Samuel Eliot Morison",
+   "year": 1943,
+   "kind": "c"
+  },
+  {
+   "title": "The American Leonardo: The Life of Samuel F. B. Morse",
+   "author": "Carleton Mabee",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "George Bancroft: Brahmin Rebel",
+   "author": "Russel Blaine Nye",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "Son of the Wilderness: The Life of John Muir",
+   "author": "Linnie Marsh Wolfe",
+   "year": 1946,
+   "kind": "c"
+  },
+  {
+   "title": "The Autobiography of William Allen White",
+   "author": "William Allen White",
+   "year": 1947,
+   "kind": "w"
+  },
+  {
+   "title": "Forgotten First Citizen: John Bigelow",
+   "author": "Margaret Clapp",
+   "year": 1948,
+   "kind": "c"
+  },
+  {
+   "title": "Roosevelt and Hopkins",
+   "author": "Robert E. Sherwood",
+   "year": 1949,
+   "kind": "c"
+  },
+  {
+   "title": "John Quincy Adams and the Foundations of American Foreign Policy",
+   "author": "Samuel Flagg Bemis",
+   "year": 1950,
+   "kind": "w"
+  },
+  {
+   "title": "John C. Calhoun: American Portrait",
+   "author": "Margaret Louise Coit",
+   "year": 1951,
+   "kind": "w"
+  },
+  {
+   "title": "Charles Evans Hughes",
+   "author": "Merlo J. Pusey",
+   "year": 1952,
+   "kind": "w"
+  },
+  {
+   "title": "Edmund Pendleton 1721–1803",
+   "author": "David J. Mays",
+   "year": 1953,
+   "kind": "w"
+  },
+  {
+   "title": "The Spirit of St. Louis",
+   "author": "Charles A. Lindbergh",
+   "year": 1954,
+   "kind": "w"
+  },
+  {
+   "title": "The Taft Story",
+   "author": "William S. White",
+   "year": 1955,
+   "kind": "w"
+  },
+  {
+   "title": "Benjamin Henry Latrobe",
+   "author": "Talbot Faulkner Hamlin",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "Profiles in Courage",
+   "author": "John F. Kennedy",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "George Washington, vols. I-VII",
+   "author": "Douglas Southall Freeman† with John Alexander Carroll & Mary Wells Ashworth",
+   "year": 1958,
+   "kind": "w"
+  },
+  {
+   "title": "Woodrow Wilson",
+   "author": "Arthur Walworth",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "John Paul Jones",
+   "author": "Samuel Eliot Morison",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "Charles Sumner and the Coming of the Civil War",
+   "author": "David Donald",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "Henry James",
+   "author": "Leon Edel",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "John Keats",
+   "author": "Walter Jackson Bate",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "Henry Adams, 3 vols.",
+   "author": "Ernest Samuels",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "A Thousand Days: John F. Kennedy in the White House",
+   "author": "Arthur M. Schlesinger, Jr.",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "Mr. Clemens and Mark Twain",
+   "author": "Justin Kaplan",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "Memoirs",
+   "author": "George F. Kennan",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "The Man from New York: John Quinn and His Friends",
+   "author": "Benjamin Lawrence Reid",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "Huey Long",
+   "author": "Thomas Harry Williams",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "Robert Frost: The Years of Triumph, 1915–1938",
+   "author": "Lawrance Thompson",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Eleanor and Franklin",
+   "author": "Joseph P. Lash",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Luce and His Empire",
+   "author": "W. A. Swanberg",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "O'Neill, Son and Artist",
+   "author": "Louis Sheaffer",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Power Broker: Robert Moses and the Fall of New York",
+   "author": "Robert Caro",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Edith Wharton: A Biography",
+   "author": "R. W. B. Lewis",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "A Prince of Our Disorder: The Life of T. E. Lawrence",
+   "author": "John E. Mack",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Samuel Johnson",
+   "author": "Walter Jackson Bate",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Days of Sorrow and Pain: Leo Baeck and the Berlin Jews",
+   "author": "Leonard Baker",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise of Theodore Roosevelt",
+   "author": "Edmund Morris",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Bernard Berenson, The Making of a Connoisseur",
+   "author": "Ernest Samuels",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Being Bernard Berenson",
+   "author": "Meryle Secrest",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Duke of Deception",
+   "author": "Geoffrey Wolff",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Peter the Great: His Life and World",
+   "author": "Robert K. Massie",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Walt Whitman: A Life",
+   "author": "Justin Kaplan",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Walter Lippmann and the American Century",
+   "author": "Ronald Steel",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Grant: A Biography",
+   "author": "William S. McFeely",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Waldo Emerson",
+   "author": "Gay Wilson Allen",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Mornings on Horseback",
+   "author": "David McCullough",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Growing Up",
+   "author": "Russell Baker",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Churchill: Young Man in a Hurry, 1874–1915",
+   "author": "Ted Morgan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Thomas E. Dewey and His Times",
+   "author": "Richard Norton Smith",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Booker T. Washington: The Wizard of Tuskegee, 1901–1915",
+   "author": "Louis R. Harlan",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Thomas Carlyle: A Biography",
+   "author": "Fred Kaplan",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Black Apollo of Science: The Life of Ernest Everett Just",
+   "author": "Kenneth Manning",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "The Life and Times of Cotton Mather",
+   "author": "Kenneth Silverman",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Becoming William James",
+   "author": "Howard M. Feinstein",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Seven Mountains of Thomas Merton",
+   "author": "Michael Mott",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Louise Bogan: A Portrait",
+   "author": "Elizabeth Frank",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "George Washington Williams: A Biography",
+   "author": "John Hope Franklin",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "A Hidden Childhood: A Jewish Girl's Sanctuary in a French Convent, 1942–1945",
+   "author": "Frida Scheps Weinstein",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Bearing The Cross: Martin Luther King Jr. and the Southern Christian Leadership Conference",
+   "author": "David J. Garrow",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Dostoevsky: The Stir of Liberation, 1860–1865",
+   "author": "Joseph Frank",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "The Life and Times of Congressman John Quincy Adams",
+   "author": "Leonard L. Richards",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Murrow: His Life and Times",
+   "author": "A.M. Sperber",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Look Homeward: A Life of Thomas Wolfe",
+   "author": "David Herbert Donald",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Hemingway",
+   "author": "Kenneth S. Lynn",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "George Santayana: A Biography",
+   "author": "John Owen McCormick",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Oscar Wilde",
+   "author": "Richard Ellmann",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Freud: A Life for Our Time",
+   "author": "Peter Gay",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Langston Hughes: Volume II, 1941–1967: I Dream a World",
+   "author": "Arnold Rampersad",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "A Bright Shining Lie: John Paul Vann and America in Vietnam",
+   "author": "Neil Sheehan",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Machiavelli in Hell",
+   "author": "Sebastian de Grazia",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "The Road from Coorain",
+   "author": "Jill Ker Conway",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Clear Pictures: First Loves, First Guides",
+   "author": "Reynolds Price",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "A First-Class Temperament: The Emergence of Franklin Roosevelt",
+   "author": "Geoffrey C. Ward",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Jackson Pollock: An American Saga",
+   "author": "Steven Naifeh & Gregory White Smith",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The Five of Hearts: An Intimate Portrait of Henry Adams and His Friends 1880–1918",
+   "author": "Patricia O'Toole",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Alfred I. Du Pont: The Man and His Family",
+   "author": "Joseph Frazier Wall",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Fortunate Son: The Autobiography of Lewis B. Puller Jr.",
+   "author": "Lewis B. Puller",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Frederick Douglass",
+   "author": "William S. McFeely",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Orwell: The Authorized Biography",
+   "author": "Michael Shelden",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Truman",
+   "author": "David McCullough",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Genius: The Life and Science of Richard Feynman",
+   "author": "James Gleick",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Kissinger: A Biography",
+   "author": "Walter Isaacson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "W. E. B. Du Bois: Biography of a Race, 1868–1919",
+   "author": "David Levering Lewis",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "In Extremis: The Life of Laura Riding",
+   "author": "Deborah Baker",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Genet: A Biography",
+   "author": "Edmund White",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Harriet Beecher Stowe: A Life",
+   "author": "Joan D. Hedrick",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Hugo Black: A Biography",
+   "author": "Roger K. Newman",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Saint-Exupery: A Biography",
+   "author": "Stacy Schiff",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "God: A Biography",
+   "author": "Jack Miles",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "John Sloan: Painter and Rebel",
+   "author": "John Loughery",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Mozart: A Life",
+   "author": "Maynard Solomon",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Angela's Ashes: A Memoir",
+   "author": "Frank McCourt",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "In the Wilderness: Coming of Age in Unknown Country",
+   "author": "Kim Barnes",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Herman Melville: A Biography, Volume 1, 1819–1851",
+   "author": "Hershel Parker",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Personal History",
+   "author": "Katharine Graham",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Alfred C. Kinsey: A Public-Private Life",
+   "author": "James H. Jones",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Whittaker Chambers: A Biography",
+   "author": "Sam Tanenhaus",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Lindbergh",
+   "author": "A. Scott Berg",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "At Home with the Marquis de Sade: A Life",
+   "author": "Francine du Plessix Gray",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "A Beautiful Mind",
+   "author": "Sylvia Nasar",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Vera, Mrs. Vladimir Nabokov",
+   "author": "Stacy Schiff",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Clear Springs: A Memoir",
+   "author": "Bobbie Ann Mason",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Galileo's Daughter: A Historical Memoir of Science, Faith, and Love",
+   "author": "Dava Sobel",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "W. E. B. Du Bois: The Fight for Equality and the American Century 1919-1963",
+   "author": "David Levering Lewis",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The First American: The Life and Times of Benjamin Franklin",
+   "author": "H.W. Brands",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Johann Sebastian Bach: The Learned Musician",
+   "author": "Christoph Wolff",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "John Adams",
+   "author": "David McCullough",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "An Hour Before Daylight: Memories of a Rural Boyhood",
+   "author": "Jimmy Carter",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Grant",
+   "author": "Jean Edward Smith",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Master of the Senate: The Years of Lyndon Johnson",
+   "author": "Robert Caro",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Fly Swatter: A Portrait of an Exceptional Character",
+   "author": "Nicholas Dawidoff",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Beethoven: The Music and the Life",
+   "author": "Lewis Lockwood",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Khrushchev: The Man and His Era",
+   "author": "William Taubman",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Isaac Newton",
+   "author": "James Gleick",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Arshile Gorky: His Life and Work",
+   "author": "Hayden Herrera",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "de Kooning: An American Master",
+   "author": "Mark Stevens & Annalyn Swan",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Will in the World: How Shakespeare Became Shakespeare",
+   "author": "Stephen Greenblatt",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Under a Wild Sky: John James Audubon and the Making of The Birds of America",
+   "author": "William Souder",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer",
+   "author": "Kai Bird & Martin J. Sherwin",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Year of Magical Thinking",
+   "author": "Joan Didion",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Peabody Sisters: Three Women Who Ignited American Romanticism",
+   "author": "Megan Marshall",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Most Famous Man in America: The Biography of Henry Ward Beecher",
+   "author": "Debby Applegate",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "John Wilkes: The Scandalous Father of Civil Liberty",
+   "author": "Arthur H. Cash",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Andrew Carnegie",
+   "author": "David Nasaw",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Eden's Outcasts: The Story of Louisa May Alcott and Her Father",
+   "author": "John Matteson",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Worlds of Lincoln Kirstein",
+   "author": "Martin Duberman",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Kingsley Amis",
+   "author": "Zachary Leader",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "American Lion: Andrew Jackson in the White House",
+   "author": "Jon Meacham",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt",
+   "author": "H.W. Brands",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Bin Ladens: An Arabian Family in the American Century",
+   "author": "Steve Coll",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The First Tycoon: The Epic Life of Cornelius Vanderbilt",
+   "author": "T. J. Stiles",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Cheever: A Life",
+   "author": "Blake Bailey",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Woodrow Wilson: A Biography",
+   "author": "John Milton Cooper, Jr.",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Washington: A Life",
+   "author": "Ron Chernow",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Publisher: Henry Luce and His American Century",
+   "author": "Alan Brinkley",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Mrs. Adams in Winter: A Journey in the Last Days of Napoleon",
+   "author": "Michael O'Brien",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "George F. Kennan: An American Life",
+   "author": "John Lewis Gaddis",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Love and Capital: Karl and Jenny Marx and the Birth of a Revolution",
+   "author": "Mary Gabriel",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Malcolm X: A Life of Reinvention",
+   "author": "Manning Marable",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Black Count: Glory, Revolution, Betrayal, and the Real Count of Monte Cristo",
+   "author": "Tom Reiss",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Portrait of a Novel: Henry James and the Making of an American Masterpiece",
+   "author": "Michael Gorra",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Patriarch: The Remarkable Life and Turbulent Times of Joseph P. Kennedy",
+   "author": "David Nasaw",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Margaret Fuller: A New American Life",
+   "author": "Megan Marshall",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Jonathan Swift: His Life and His World",
+   "author": "Leo Damrosch",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Karl Marx: A Nineteenth-Century Life",
+   "author": "Jonathan Sperber",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Pope and Mussolini: The Secret History of Pius XI and the Rise of Fascism in Europe",
+   "author": "David I. Kertzer",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Louis Armstrong: Master of Modernism",
+   "author": "Thomas Brothers",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Stalin: Paradoxes of Power, 1878–1928",
+   "author": "Stephen Kotkin",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Barbarian Days: A Surfing Life",
+   "author": "William Finnegan",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Light of the World: A Memoir",
+   "author": "Elizabeth Alexander",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Custer's Trials: A Life on the Frontier of a New America",
+   "author": "T. J. Stiles",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Return: Fathers, Sons and the Land in Between",
+   "author": "Hisham Matar",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "In the Darkroom",
+   "author": "Susan Faludi",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "When Breath Becomes Air",
+   "author": "Paul Kalanithi",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Prairie Fires: The American Dreams of Laura Ingalls Wilder",
+   "author": "Caroline Fraser",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Richard Nixon: The Life",
+   "author": "John A. Farrell",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Robert Lowell, Setting the River on Fire: A Study of Genius, Mania, and Character",
+   "author": "Kay Redfield Jamison",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The New Negro: The Life of Alain Locke",
+   "author": "Jeffrey C. Stewart",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Road Not Taken: Edward Lansdale and the American Tragedy in Vietnam",
+   "author": "Max Boot",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Proust's Duchess: How Three Celebrated Women Captured the Imagination of Fin-de-Siècle Paris",
+   "author": "Caroline Weber",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Sontag: Her Life and Work",
+   "author": "Benjamin Moser",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Our Man: Richard Holbrooke and the End of the American Century",
+   "author": "George Packer",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Parisian Lives: Samuel Beckett, Simone de Beauvoir, and Me",
+   "author": "Deirdre Bair",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Dead Are Arising: The Life of Malcolm X",
+   "author": "Les Payne† & Tamara Payne",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Red Comet: The Short Life and Blazing Art of Sylvia Plath",
+   "author": "Heather Clark",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Stranger in the Shogun's City: A Japanese Woman and Her World",
+   "author": "Amy Stanley",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Chasing Me to My Grave: An Artist's Memoir of the Jim Crow South",
+   "author": "Winfred Rembert† & Erin I. Kelly",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Pessoa: A Biography",
+   "author": "Richard Zenith",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Doctors Blackwell: How Two Pioneering Sisters Brought Medicine to Women and Women to Medicine",
+   "author": "Janice P. Nimura",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "G-Man: J. Edgar Hoover and the Making of the American Century",
+   "author": "Beverly Gage",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Mr. B: George Balanchine's 20th Century",
+   "author": "Jennifer Homans",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "His Name Is George Floyd: One Man's Life and the Struggle for Racial Justice",
+   "author": "Robert Samuels & Toluse Olorunnipa",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "King: A Life",
+   "author": "Jonathan Eig",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Master Slave Husband Wife: An Epic Journey from Slavery to Freedom",
+   "author": "Ilyon Woo",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Larry McMurtry: A Life",
+   "author": "Tracy Daugherty",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Every Living Thing: The Great and Deadly Race to Know All Life",
+   "author": "Jason Roberts",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "John Lewis: A Life",
+   "author": "David Greenberg",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The World She Edited: Katharine S. White at The New Yorker",
+   "author": "Amy Reading",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Pride and Pleasure: The Schuyler Sisters in an Age of Revolution",
+   "author": "Amanda Vaill",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "The Life and Poetry of Frank Stanford",
+   "author": "James McWilliams",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "True Nature: The Pilgrimage of Peter Matthiessen",
+   "author": "Lance Richardson",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

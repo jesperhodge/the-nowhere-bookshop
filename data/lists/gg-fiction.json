@@ -1,0 +1,1725 @@
+{
+ "slug": "gg-fiction",
+ "prize": "Governor General's Award for Fiction",
+ "rooms": [
+  "longroom",
+  "quiethouse",
+  "brokensentence"
+ ],
+ "page": "Governor General's Award for English-language fiction",
+ "url": "https://en.wikipedia.org/wiki/Governor_General's_Award_for_English-language_fiction",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1355748658",
+ "revid": 1355748658,
+ "fetchedAt": "2026-08-05T16:26:49.691Z",
+ "counts": {
+  "entries": 262,
+  "winners": 89,
+  "cited": 173
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1930s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 4,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "1940s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 2,
+   "heading": "1950s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 3,
+   "heading": "1960s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 9,
+   "dropped": 2,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 4,
+   "heading": "1970s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 12,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 5,
+   "heading": "1980s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 36,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 6,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 51,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 7,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 8,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 9,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 30,
+   "dropped": 0,
+   "winnerMark": "bold"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Think of the Earth",
+   "author": "Bertram Brooker",
+   "year": 1936,
+   "kind": "w"
+  },
+  {
+   "title": "The Dark Weaver",
+   "author": "Laura G. Salverson",
+   "year": 1937,
+   "kind": "w"
+  },
+  {
+   "title": "Swiss Sonata",
+   "author": "Gwethalyn Graham",
+   "year": 1938,
+   "kind": "w"
+  },
+  {
+   "title": "The Champlain Road",
+   "author": "Franklin D. McDowell",
+   "year": 1939,
+   "kind": "w"
+  },
+  {
+   "title": "Thirty Acres",
+   "author": "Ringuet",
+   "year": 1940,
+   "kind": "w"
+  },
+  {
+   "title": "Three Came to Ville Marie",
+   "author": "Alan Sullivan",
+   "year": 1941,
+   "kind": "w"
+  },
+  {
+   "title": "Little Man",
+   "author": "G. Herbert Sallans",
+   "year": 1942,
+   "kind": "w"
+  },
+  {
+   "title": "The Pied Piper of Dipper Creek",
+   "author": "Thomas H. Raddall",
+   "year": 1943,
+   "kind": "w"
+  },
+  {
+   "title": "Earth and High Heaven",
+   "author": "Gwethalyn Graham",
+   "year": 1944,
+   "kind": "w"
+  },
+  {
+   "title": "Two Solitudes",
+   "author": "Hugh MacLennan",
+   "year": 1945,
+   "kind": "w"
+  },
+  {
+   "title": "Continental Revue",
+   "author": "Winifred Bambrick",
+   "year": 1946,
+   "kind": "w"
+  },
+  {
+   "title": "The Tin Flute",
+   "author": "Gabrielle Roy",
+   "year": 1947,
+   "kind": "w"
+  },
+  {
+   "title": "The Precipice",
+   "author": "Hugh MacLennan",
+   "year": 1948,
+   "kind": "w"
+  },
+  {
+   "title": "Mr. Ames Against Time",
+   "author": "Philip Child",
+   "year": 1949,
+   "kind": "w"
+  },
+  {
+   "title": "The Outlander",
+   "author": "Germaine Guèvremont",
+   "year": 1950,
+   "kind": "w"
+  },
+  {
+   "title": "The Loved and the Lost",
+   "author": "Morley Callaghan",
+   "year": 1951,
+   "kind": "w"
+  },
+  {
+   "title": "The Pillar",
+   "author": "David Walker",
+   "year": 1952,
+   "kind": "w"
+  },
+  {
+   "title": "Digby",
+   "author": "David Walker",
+   "year": 1953,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall of a Titan",
+   "author": "Igor Gouzenko",
+   "year": 1954,
+   "kind": "w"
+  },
+  {
+   "title": "The Sixth of June",
+   "author": "Lionel Shapiro",
+   "year": 1955,
+   "kind": "w"
+  },
+  {
+   "title": "The Sacrifice",
+   "author": "Adele Wiseman",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "Street of Riches",
+   "author": "Gabrielle Roy",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "Execution",
+   "author": "Colin McDougall",
+   "year": 1958,
+   "kind": "w"
+  },
+  {
+   "title": "The Watch That Ends the Night",
+   "author": "Hugh MacLennan",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "The Luck of Ginger Coffey",
+   "author": "Brian Moore",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "Hear Us O Lord from Heaven Thy Dwelling Place",
+   "author": "Malcolm Lowry",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "Running to Paradise",
+   "author": "Kildare Dobbs",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "Hugh Garner's Best Stories",
+   "author": "Hugh Garner",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "The Deserter",
+   "author": "Douglas LePan",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "A Jest of God",
+   "author": "Margaret Laurence",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "Dance of the Happy Shades",
+   "author": "Alice Munro",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "Cocksure",
+   "author": "Mordecai Richler",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "The Studhorse Man",
+   "author": "Robert Kroetsch",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "The New Ancestors",
+   "author": "Dave Godfrey",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "St. Urbain's Horseman",
+   "author": "Mordecai Richler",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "The Manticore",
+   "author": "Robertson Davies",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "The Temptations of Big Bear",
+   "author": "Rudy Wiebe",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Diviners",
+   "author": "Margaret Laurence",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Victorian Collection",
+   "author": "Brian Moore",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Bear",
+   "author": "Marian Engel",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "The Wars",
+   "author": "Timothy Findley",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Who Do You Think You Are?",
+   "author": "Alice Munro",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "The Resurrection of Joseph Bourne",
+   "author": "Jack Hodgins",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Life Before Man",
+   "author": "Margaret Atwood",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The Sweet Second Summer of Kitty Malone",
+   "author": "Matt Cohen",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Burning Water",
+   "author": "George Bowering",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Charcoal Burners",
+   "author": "Susan Musgrave",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Fat Woman",
+   "author": "Leon Rooke",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Home Truths: Selected Canadian Stories",
+   "author": "Mavis Gallant",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Man Descending",
+   "author": "Guy Vanderhaeghe",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "The Moons of Jupiter",
+   "author": "Alice Munro",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Antichthon",
+   "author": "Chris Scott",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Shakespeare's Dog",
+   "author": "Leon Rooke",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "People Like Us in a Place Like This",
+   "author": "Philip Kreiner",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Painted Ladies",
+   "author": "H. R. Percy",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Biggest Modern Woman of the World",
+   "author": "Susan Swan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Engineer of Human Souls",
+   "author": "Josef Skvorecky",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Not Wanted on the Voyage",
+   "author": "Timothy Findley",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Fears",
+   "author": "Susan Kerslake",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Intertidal Life",
+   "author": "Audrey Thomas",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "The Handmaid's Tale",
+   "author": "Margaret Atwood",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Queen of the Headaches",
+   "author": "Sharon Butala",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Foreign Affairs",
+   "author": "Keath Fraser",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Road to the Stilt House",
+   "author": "David Adams Richards",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Progress of Love",
+   "author": "Alice Munro",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "A Stone Watermelon",
+   "author": "Lois Braun",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Adult Entertainment",
+   "author": "John Metcalf",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "No Fixed Address",
+   "author": "Aritha van Herk",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "A Dream Like Mine",
+   "author": "M. T. Kelly",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "The Ring Master",
+   "author": "David Gurr",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Tales from Firozsha Baag",
+   "author": "Rohinton Mistry",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "In the Skin of a Lion",
+   "author": "Michael Ondaatje",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Swann: A Mystery",
+   "author": "Carol Shields",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Nights Below Station Street",
+   "author": "David Adams Richards",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Cat's Eye",
+   "author": "Margaret Atwood",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Victory of Geraldine Gull",
+   "author": "Joan Clark",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Atmospheres Apollinaire",
+   "author": "Mark Frutkin",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Cost of Living",
+   "author": "Kenneth Radu",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Whale Music",
+   "author": "Paul Quarrington",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "The Golden Thread",
+   "author": "Ann Copeland",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "A View from the Roof",
+   "author": "Helen Weinzweig",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Lives of the Saints",
+   "author": "Nino Ricci",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Disappearing Moon Café",
+   "author": "Sky Lee",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Friend of My Youth",
+   "author": "Alice Munro",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "On Double Tracks",
+   "author": "Leslie Hall Pinder",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Man of My Dreams",
+   "author": "Diane Schoemperlen",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Such a Long Journey",
+   "author": "Rohinton Mistry",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Wilderness Tips",
+   "author": "Margaret Atwood",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Husbands",
+   "author": "Don Dickinson",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "A Guide to Animal Behaviour",
+   "author": "Douglas Glover",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Quickening",
+   "author": "Terry Griggs",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The English Patient",
+   "author": "Michael Ondaatje",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Chrome Suite",
+   "author": "Sandra Birdsell",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Bonus Deal",
+   "author": "Archie Crail",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Afterlife of George Cartwright",
+   "author": "John Steffler",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Deep Hollow Creek",
+   "author": "Sheila Watson",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Stone Diaries",
+   "author": "Carol Shields",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Bad Imaginings",
+   "author": "Caroline Adderson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Green Grass, Running Water",
+   "author": "Thomas King",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "For Those Who Hunt the Wounded Down",
+   "author": "David Adams Richards",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Visible Light",
+   "author": "Carol Windley",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "A Discovery of Strangers",
+   "author": "Rudy Wiebe",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Robber Bride",
+   "author": "Margaret Atwood",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Division of Surgery",
+   "author": "Donna McFarlane",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Open Secrets",
+   "author": "Alice Munro",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "How Insensitive",
+   "author": "Russell Smith",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The Roaring Girl",
+   "author": "Greg Hollingshead",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Highways and Dancehalls",
+   "author": "Diana Atkinson",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Mister Sandman",
+   "author": "Barbara Gowdy",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Jaguar Temple",
+   "author": "Julie Keith",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Longing",
+   "author": "Richard B. Wright",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Englishman's Boy",
+   "author": "Guy Vanderhaeghe",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Alias Grace",
+   "author": "Margaret Atwood",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Let Me Be the One",
+   "author": "Elisabeth Harvor",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Library",
+   "author": "Janice Kulyk Keefer",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Teaching Pigs to Sing",
+   "author": "Cordelia Strube",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Coming Down from Wa",
+   "author": "Audrey Thomas",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Underpainter",
+   "author": "Jane Urquhart",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Two-Headed Calf",
+   "author": "Sandra Birdsell",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Last Seen",
+   "author": "Matt Cohen",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Small Change",
+   "author": "Elizabeth Hay",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "First Blast of the Trumpet Against the Monstrous Regiment of Women",
+   "author": "Eric McCormack",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Forms of Devotion",
+   "author": "Diane Schoemperlen",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Strange Heaven",
+   "author": "Lynn Coady",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The White Bone",
+   "author": "Barbara Gowdy",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Colony of Unrequited Dreams",
+   "author": "Wayne Johnston",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Electrical Field",
+   "author": "Kerri Sakamoto",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Elizabeth and After",
+   "author": "Matt Cohen",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Worlds Within Her",
+   "author": "Neil Bissoondath",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Pool-hopping and Other Stories",
+   "author": "Anne Fleming",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Can You Wave Bye Bye, Baby?",
+   "author": "Elyse Gasco",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Gloria",
+   "author": "Keith Maillard",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Anil's Ghost",
+   "author": "Michael Ondaatje",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Blind Assassin",
+   "author": "Margaret Atwood",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Question",
+   "author": "Austin Clarke",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Mercy Among the Children",
+   "author": "David Adams Richards",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Monkey Beach",
+   "author": "Eden Robinson",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Clara Callan",
+   "author": "Richard B. Wright",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Life of Pi",
+   "author": "Yann Martel",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Dragons Cry",
+   "author": "Tessa McWatt",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Stone Carvers",
+   "author": "Jane Urquhart",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Salamander",
+   "author": "Thomas Wharton",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "A Song for Nettie Johnson",
+   "author": "Gloria Sawai",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Case of Lena S.",
+   "author": "David Bergen",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Exile",
+   "author": "Ann Ireland",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Navigator of New York",
+   "author": "Wayne Johnston",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Unless",
+   "author": "Carol Shields",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Elle",
+   "author": "Douglas Glover",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Oryx and Crake",
+   "author": "Margaret Atwood",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Garbo Laughs",
+   "author": "Elizabeth Hay",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Private View",
+   "author": "Jean McNeil",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Ten Thousand Lovers",
+   "author": "Edeet Ravel",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "A Complicated Kindness",
+   "author": "Miriam Toews",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Natasha and Other Stories",
+   "author": "David Bezmozgis",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Norman Bray, In the Performance of His Life",
+   "author": "Trevor Cole",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Some Great Thing",
+   "author": "Colin McAdam",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Runaway",
+   "author": "Alice Munro",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "A Perfect Night to Go to China",
+   "author": "David Gilmour",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Three Day Road",
+   "author": "Joseph Boyden",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Nellcott Is My Darling",
+   "author": "Golda Fried",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Ladykiller",
+   "author": "Charlotte Gill",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Alphabet",
+   "author": "Kathy Page",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Law of Dreams",
+   "author": "Peter Behrens",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Fearsome Particles",
+   "author": "Trevor Cole",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Gargoyles",
+   "author": "Bill Gaston",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Dodecahedron, or A Frame for Frames",
+   "author": "Paul Glennon",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "De Niro's Game",
+   "author": "Rawi Hage",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Divisadero",
+   "author": "Michael Ondaatje",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Soucouyant",
+   "author": "David Chariandy",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Helpless",
+   "author": "Barbara Gowdy",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Lullabies for Little Criminals",
+   "author": "Heather O'Neill",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Assassin's Song",
+   "author": "M. G. Vassanji",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Origin of Species",
+   "author": "Nino Ricci",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Atmospheric Disturbances",
+   "author": "Rivka Galchen",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Cockroach",
+   "author": "Rawi Hage",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Highway",
+   "author": "David Adams Richards",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Great Karoo",
+   "author": "Fred Stenson",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Mistress of Nothing",
+   "author": "Kate Pullinger",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Galore",
+   "author": "Michael Crummey",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Golden Mean",
+   "author": "Annabel Lyon",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Too Much Happiness",
+   "author": "Alice Munro",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Vanishing and Other Stories",
+   "author": "Deborah Willis",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Cool Water",
+   "author": "Dianne Warren",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Waiting for Joe",
+   "author": "Sandra Birdsell",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Room",
+   "author": "Emma Donoghue",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Motorcycles & Sweetgrass",
+   "author": "Drew Hayden Taylor",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Annabel",
+   "author": "Kathleen Winter",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Sisters Brothers",
+   "author": "Patrick deWitt",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Free World",
+   "author": "David Bezmozgis",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Half-Blood Blues",
+   "author": "Esi Edugyan",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Little Shadow",
+   "author": "Marina Endicott",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Touch",
+   "author": "Alexi Zentner",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Purchase",
+   "author": "Linda Spalding",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Siege 13",
+   "author": "Tamas Dobozy",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Dr. Brinkley's Tower",
+   "author": "Robert Hough",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Headmaster's Wager",
+   "author": "Vincent Lam",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Juliet Stories",
+   "author": "Carrie Snyder",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Luminaries",
+   "author": "Eleanor Catton",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Lion Seeker",
+   "author": "Kenneth Bonert",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Orenda",
+   "author": "Joseph Boyden",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Beautiful Truth",
+   "author": "Colin McAdam",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Hungry Ghosts",
+   "author": "Shyam Selvadurai",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Back of the Turtle",
+   "author": "Thomas King",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Sweetland",
+   "author": "Michael Crummey",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Juliet Was a Surprise",
+   "author": "Bill Gaston",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "My October",
+   "author": "Claire Holden Rothman",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Opening Sky",
+   "author": "Joan Thomas",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Daddy Lenin and Other Stories",
+   "author": "Guy Vanderhaeghe",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "How You Were Born",
+   "author": "Kate Cayley",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Outline",
+   "author": "Rachel Cusk",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Evening Chorus",
+   "author": "Helen Humphreys",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Winter Family",
+   "author": "Clifford Jackman",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Do Not Say We Have Nothing",
+   "author": "Madeleine Thien",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Yiddish for Pirates",
+   "author": "Gary Barwin",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Parcel",
+   "author": "Anosh Irani",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Willem de Kooning's Paintbrush",
+   "author": "Kerry Lee Powell",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Break",
+   "author": "Katherena Vermette",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "We'll All Be Burnt in Our Beds Some Night",
+   "author": "Joel Thomas Hynes",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Water Beetles",
+   "author": "Michael Kaan",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "All the Beloved Ghosts",
+   "author": "Alison MacLeod",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Uncertain Weights and Measures",
+   "author": "Jocelyn Parr",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Lost in September",
+   "author": "Kathleen Winter",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Red Word",
+   "author": "Sarah Henstra",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Zolitude",
+   "author": "Paige Cooper",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Beirut Hellfire Society",
+   "author": "Rawi Hage",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Women Talking",
+   "author": "Miriam Toews",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Jonny Appleseed",
+   "author": "Joshua Whitehead",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Five Wives",
+   "author": "Joan Thomas",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Innocents",
+   "author": "Michael Crummey",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Student",
+   "author": "Cary Fagan",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Eye",
+   "author": "Marianne Micros",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Late Breaking",
+   "author": "K. D. Miller",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Five Little Indians",
+   "author": "Michelle Good",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Butter Honey Pig Bread",
+   "author": "Francesca Ekwuyasi",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Indians on Vacation",
+   "author": "Thomas King",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Baudelaire Fractal",
+   "author": "Lisa Robertson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Noopiming: The Cure for White Ladies",
+   "author": "Leanne Betasamosake Simpson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Tainna",
+   "author": "Norma Dunning",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Second Place",
+   "author": "Rachel Cusk",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Home Waltz",
+   "author": "G. A. Grisenthwaite",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Fictional Father",
+   "author": "Joe Ollmann",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "You Are Eating an Orange. You Are Naked.",
+   "author": "Sheung-King",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Pure Colour",
+   "author": "Sheila Heti",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Most Precious Substance on Earth",
+   "author": "Shashi Bhat",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Probably Ruby",
+   "author": "Lisa Bird-Wilson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "All the Quiet Places",
+   "author": "Brian Thomas Isaac",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Finding Edward",
+   "author": "Sheila Murray",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Chrysalis",
+   "author": "Anuja Varghese",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Sleeping Car Porter",
+   "author": "Suzette Mayr",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A History of Burning",
+   "author": "Janika Oza",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "We Spread",
+   "author": "Iain Reid",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "In the Upper Country",
+   "author": "Kai Thomas",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Empty Spaces",
+   "author": "Jordan Abel",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Her Body Among Animals",
+   "author": "Paola Ferrante",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Naniki",
+   "author": "Oonya Kempadoo",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Code Noir",
+   "author": "Canisia Lubrin",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Memoirs of Miss Chief Eagle Testickle: Vol. 1: A True and Exact Accounting of the History of Turtle Island",
+   "author": "Kent Monkman, Gisèle Gordon",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Small Ceremonies",
+   "author": "Kyle Edwards",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Juiceboxers",
+   "author": "Benjamin Hertwig",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Hi, It's Me",
+   "author": "Fawn Parker",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Endling",
+   "author": "Maria Reva",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "real ones",
+   "author": "Katherena Vermette",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

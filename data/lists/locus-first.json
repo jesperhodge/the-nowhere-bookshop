@@ -1,0 +1,318 @@
+{
+ "slug": "locus-first",
+ "prize": "Locus Award for Best First Novel",
+ "rooms": [
+  "orrery",
+  "oak",
+  "slipstream"
+ ],
+ "page": "Locus Award for Best First Novel",
+ "url": "https://en.wikipedia.org/wiki/Locus_Award_for_Best_First_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1360465568",
+ "revid": 1360465568,
+ "fetchedAt": "2026-08-05T16:27:01.946Z",
+ "counts": {
+  "entries": 47,
+  "winners": 47,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Novel | Author | ",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2
+   },
+   "took": 47,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Dragon's Egg",
+   "author": "Robert L. Forward",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Starship & Haiku",
+   "author": "Somtow Sucharitkul",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Courtship Rite",
+   "author": "Donald Kingsbury",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Tea with the Black Dragon",
+   "author": "R. A. MacAvoy",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "The Wild Shore",
+   "author": "Kim Stanley Robinson",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Contact",
+   "author": "Carl Sagan",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "The Hercules Text",
+   "author": "Jack McDevitt",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "War for the Oaks",
+   "author": "Emma Bull",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Desolation Road",
+   "author": "Ian McDonald",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Orbital Decay",
+   "author": "Allen Steele",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "In the Country of the Blind",
+   "author": "Michael F. Flynn",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The Cipher",
+   "author": "Kathe Koja",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "China Mountain Zhang",
+   "author": "Maureen F. McHugh",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Cold Allies",
+   "author": "Patricia Anthony",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Gun, with Occasional Music",
+   "author": "Jonathan Lethem",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Bohr Maker",
+   "author": "Linda Nagata",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Reclamation",
+   "author": "Sarah Zettel",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Whiteout",
+   "author": "Sage Walker",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Wheel",
+   "author": "Ian R. MacLeod",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Brown Girl in the Ring",
+   "author": "Nalo Hopkinson",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Silk Code",
+   "author": "Paul Levinson",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Mars Crossing",
+   "author": "Geoffrey A. Landis",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Kushiel's Dart",
+   "author": "Jacqueline Carey",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "A Scattering of Jades",
+   "author": "Alexander C. Irvine",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Down and Out in the Magic Kingdom",
+   "author": "Cory Doctorow",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Jonathan Strange & Mr Norrell",
+   "author": "Susanna Clarke",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Hammered / Scardown / Worldwired",
+   "author": "Elizabeth Bear",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Temeraire: His Majesty's Dragon/ / Throne of Jade/Black Powder War",
+   "author": "Naomi Novik",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Heart-Shaped Box",
+   "author": "Joe Hill",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Singularity's Ring",
+   "author": "Paul Melko",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Windup Girl",
+   "author": "Paolo Bacigalupi",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Hundred Thousand Kingdoms",
+   "author": "N. K. Jemisin",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Night Circus",
+   "author": "Erin Morgenstern",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Throne of the Crescent Moon",
+   "author": "Saladin Ahmed",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Ancillary Justice",
+   "author": "Ann Leckie",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Memory Garden",
+   "author": "M. Rickert",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Grace of Kings",
+   "author": "Ken Liu",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Ninefox Gambit",
+   "author": "Yoon Ha Lee",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Strange Case of the Alchemist's Daughter",
+   "author": "Theodora Goss",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Trail of Lightning",
+   "author": "Rebecca Roanhorse",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Gideon the Ninth",
+   "author": "Tamsyn Muir",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Elatsoe",
+   "author": "Darcie Little Badger",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "A Master of Djinn",
+   "author": "P. Djèlí Clark",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Mountain in the Sea",
+   "author": "Ray Nayler",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Saint of Bright Doors",
+   "author": "Vajra Chandrasekera",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Someone You Can Build a Nest In",
+   "author": "John Wiswell",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Sour Cherry",
+   "author": "Natalia Theodoridou",
+   "year": 2026,
+   "kind": "w"
+  }
+ ]
+}

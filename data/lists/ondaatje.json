@@ -1,0 +1,174 @@
+{
+ "slug": "ondaatje",
+ "prize": "RSL Ondaatje Prize",
+ "rooms": [
+  "wanderingchair",
+  "saltline",
+  "longroom"
+ ],
+ "page": "Ondaatje Prize",
+ "url": "https://en.wikipedia.org/wiki/Ondaatje_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366714311",
+ "revid": 1366714311,
+ "fetchedAt": "2026-08-05T16:26:56.976Z",
+ "counts": {
+  "entries": 23,
+  "winners": 23,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 23,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Hearing Birds Fly",
+   "author": "Louisa Waugh",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Places in Between",
+   "author": "Rory Stewart",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "The People's Act of Love",
+   "author": "James Meek",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "In the Country of Men",
+   "author": "Hisham Matar",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Discovery of France",
+   "author": "Graham Robb",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Sissinghurst: an Unfinished History",
+   "author": "Adam Nicolson",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Dead Yard: Tales of Modern Jamaica",
+   "author": "Ian Thomson",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Hare with Amber Eyes",
+   "author": "Edmund de Waal",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Sly Company of People Who Care",
+   "author": "Rahul Bhattacharya",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Scenes from Early Life",
+   "author": "Philip Hensher",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "This Boy: A Memoir of a Childhood",
+   "author": "Alan Johnson",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Baghdad: City of Peace, City of Blood",
+   "author": "Justin Marozzi",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Nothing Is True and Everything Is Possible",
+   "author": "Peter Pomerantsev",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Golden Hill",
+   "author": "Francis Spufford",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Mama Amazonica",
+   "author": "Pascale Petit",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Wife's Tale",
+   "author": "Aida Edemariam",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "A Portable Paradise",
+   "author": "Roger Robinson",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Butchers (also published as The Butchers' Blessing)",
+   "author": "Ruth Gilligan",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Free: Coming of Age at the End of History",
+   "author": "Lea Ypi",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Heritage Aesthetics",
+   "author": "Anthony Anaxagorou",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Fassbinder: Thousands of Mirrors",
+   "author": "Ian Penman",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Clear",
+   "author": "Carys Davies",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "A House for Miss Pauline",
+   "author": "Diana McCaulay",
+   "year": 2026,
+   "kind": "w"
+  }
+ ]
+}

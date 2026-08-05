@@ -1,0 +1,1459 @@
+{
+ "slug": "orwell",
+ "prize": "Orwell Prize",
+ "rooms": [
+  "witnessbox",
+  "argument",
+  "readingroom"
+ ],
+ "page": "Orwell Prize",
+ "url": "https://en.wikipedia.org/wiki/Orwell_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1361857569",
+ "revid": 1361857569,
+ "fetchedAt": "2026-08-05T16:27:13.687Z",
+ "counts": {
+  "entries": 229,
+  "winners": 41,
+  "cited": 188
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "The Orwell Prize for Political Fiction (2019–present)",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 59,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "The Orwell Prize for Political Writing (2019–present)",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 64,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "Combined book category (1994–2018)",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 106,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "The Orwell Prize for Journalism (1994–present )",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 4,
+   "heading": "The Orwell Prize for Exposing Britain's Social Evils (2015–present)",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 5,
+   "heading": "The Orwell Prize for Reporting Homelessness (2023–present)",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 6,
+   "heading": "Blog category (2009–2012)",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Milkman",
+   "author": "Anna Burns",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Ironopolis",
+   "author": "Glen James Brown",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Sabrina",
+   "author": "Nick Drnaso",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary People",
+   "author": "Diana Evans",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "House of Stone",
+   "author": "Novuyo Rosa Tshuma",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Red Clocks",
+   "author": "Leni Zumas",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Nickel Boys",
+   "author": "Colson Whitehead",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Ducks, Newburyport",
+   "author": "Lucy Ellmann",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Girl, Woman, Other",
+   "author": "Bernardine Evaristo",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Wall",
+   "author": "John Lanchester",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Heaven, My Home",
+   "author": "Attica Locke",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Girl",
+   "author": "Edna O'Brien",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Summer",
+   "author": "Ali Smith",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Afterlives",
+   "author": "Abdulrazak Gurnah",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Apeirogon",
+   "author": "Colum McCann",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Leave the World Behind",
+   "author": "Rumaan Alam",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Death of Vivek Oji",
+   "author": "Akwaeke Emezi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Vanishing Half",
+   "author": "Brit Bennett",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Small Things Like These",
+   "author": "Claire Keegan",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Cwen",
+   "author": "Alice Albinia",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "A Passage North",
+   "author": "Anuk Arudpragasam",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Assembly",
+   "author": "Natasha Brown",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The High House",
+   "author": "Jessie Greengrass",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Colony",
+   "author": "Audrey Magee",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Appliance",
+   "author": "J. O. Morgan",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "There Are More Things",
+   "author": "Yara Rodrigues Fowler",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Sterling Karat Gold",
+   "author": "Isabel Waidner",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The New Life",
+   "author": "Tom Crewe",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Small Worlds",
+   "author": "Caleb Azumah Nelson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Birnam Wood",
+   "author": "Eleanor Catton",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Bournville",
+   "author": "Jonathan Coe",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A House for Alice",
+   "author": "Diana Evans",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Story of the Forest",
+   "author": "Linda Grant",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Demon Copperhead",
+   "author": "Barbara Kingsolver",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "After Sappho",
+   "author": "Selby Wynn Schwartz",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "My Friends",
+   "author": "Hisham Matar",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Ocean Stirrings",
+   "author": "Merle Collins",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "James",
+   "author": "Percival Everett",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Orbital",
+   "author": "Samantha Harvey",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary Human Failings",
+   "author": "Megan Nolan",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Caledonian Road",
+   "author": "Andrew O'Hagan",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Future Future",
+   "author": "Adam Thirlwell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Blackouts",
+   "author": "Justin Torres",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Heart, Be at Peace",
+   "author": "Donal Ryan",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Universality",
+   "author": "Natasha Brown",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "There are Rivers in the Sky",
+   "author": "Elif Shafak",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Harrow",
+   "author": "Noah Eaton",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Accidental Immigrants",
+   "author": "Jo McMillan",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Precipice",
+   "author": "Robert Harris",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Parallel Lines",
+   "author": "Edward St Aubyn",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Dream Count",
+   "author": "Chimamanda Ngozi Adichie",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Transcription",
+   "author": "Ben Lerner",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Uprising",
+   "author": "Tahmima Anam",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Comfort of Distant Stars",
+   "author": "I. O. Echeruo",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Flashlight",
+   "author": "Susan Choi",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "This Is Where the Serpent Lives",
+   "author": "Daniyal Mueenuddin",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Every One Still Here",
+   "author": "Liadan Ní Chuinn",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "John of John",
+   "author": "Douglas Stuart",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "A Private Man",
+   "author": "Stephanie Sy-Quia",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Say Nothing: A True Story Of Murder and Memory in Northern Ireland",
+   "author": "Patrick Radden Keefe",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Moneyland: Why Thieves and Crooks Now Rule the World and How to Take It Back",
+   "author": "Oliver Bullough",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Line Becomes a River: Dispatches from the Border",
+   "author": "Francisco Cantú",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Heimat: A German Family Album",
+   "author": "Nora Krug",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Growth Delusion: The Wealth and Well-Being of Nations",
+   "author": "David Pilling",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Nightmarch: Among India's Revolutionary Guerrillas",
+   "author": "Alpa Shah",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Some Kids I Taught and What They Taught Me",
+   "author": "Kate Clanchy",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Appeasing Hitler: Chamberlain, Churchill and the Road to War",
+   "author": "Tim Bouverie",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Women: Exposing Data Bias in a World Designed for Men",
+   "author": "Caroline Criado Perez",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Windrush Betrayal: Exposing the Hostile Environment",
+   "author": "Amelia Gentleman",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Underland: A Deep Time Journey",
+   "author": "Robert Macfarlane",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Margaret Thatcher--Herself Alone: The Authorized Biography Vol. 3",
+   "author": "Charles Moore",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Surveillance Capitalism",
+   "author": "Shoshana Zuboff",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Between Two Fires: Truth, Ambition and Compromise in Putin's Russia",
+   "author": "Joshua Yaffa",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Labours of Love: The Crisis of Care",
+   "author": "Madeleine Bunting",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Eat the Buddha: The Story of Modern Tibet through the People of One Town",
+   "author": "Barbara Demick",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "African Europeans: An Untold History",
+   "author": "Olivette Otele",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Our Bodies, Their Battlefield: What War Does to Women",
+   "author": "Christina Lamb",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "English Pastoral: An Inheritance",
+   "author": "James Rebanks",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Interest: How the British Establishment Resisted the Abolition of Slavery",
+   "author": "Michael Taylor",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "My Fourth Time, We Drowned",
+   "author": "Sally Hayden",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Behind Closed Doors",
+   "author": "Polly Curtis",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Dawn of Everything",
+   "author": "David Graeber & David Wengrow",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Spike: The Virus vs The People",
+   "author": "Jeremy Farrar & Anjana Ahuja",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Uncommon Wealth",
+   "author": "Kojo Koram",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Things I Have Withheld",
+   "author": "Kei Miller",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Orwell's Roses",
+   "author": "Rebecca Solnit",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Right to Sex: Feminism in the Twenty-First Century",
+   "author": "Amia Srinivasan",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Shutdown: How Covid Shook the World's Economy",
+   "author": "Adam Tooze",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Do Not Disturb: The Story of a Political Murder and an African Regime Gone Bad",
+   "author": "Michela Wrong",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Show Me the Bodies: How We Let Grenfell Happen",
+   "author": "Peter Apps",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Time to Think: The Inside Story of the Collapse of the Tavistock's Gender Service for Children",
+   "author": "Hannah Barnes",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Invasion: Russia's Bloody War and Ukraine's Fight for Survival",
+   "author": "Luke Harding",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Who Cares?: The Hidden Crisis of Caregiving, and How We Solve It",
+   "author": "Emily Kenway",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Inside Qatar: Hidden Stories from One of the Richest Nations on Earth",
+   "author": "John McManus",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Patriarchs: How Men Came to Rule",
+   "author": "Angela Saini",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Colony: A Tale of Exile, Justice and Britain's Colonial Legacy",
+   "author": "Philippe Sands",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Divided: Racism, Medicine and Why We Need to Decolonise Healthcare",
+   "author": "Annabel Sowemimo",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Fire of the Dragon: China's New Cold War",
+   "author": "Ian Williams",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Picnic",
+   "author": "Matthew Longo",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Eve: How the Female Body Drove 200 Million Years of Human Evolution",
+   "author": "Cat Bohannon",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Achilles Trap",
+   "author": "Steve Coll",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Hitler, Stalin, Mum and Dad: A Family Memoir of Miraculous Survival",
+   "author": "Daniel Finkelstein",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Revolutionary Acts: Love & Brotherhood in Black Gay Britain",
+   "author": "Jason Okundaye",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Incarcerations",
+   "author": "Alpa Shah",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "We Are Free to Change the World",
+   "author": "Lyndsey Stonebridge",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Day in the Life of Abed Salama: A Palestine Story",
+   "author": "Nathan Thrall",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Our Enemies Will Vanish: The Russian Invasion and Ukraine's War of Independence",
+   "author": "Yaroslav Trofimov",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Looking at Women, Looking at War",
+   "author": "Victoria Amelina",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The World of the Cold War: 1945–1991",
+   "author": "Vladislav Zubok",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Forbidden Garden of Leningrad",
+   "author": "Simon Parkin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Coming Storm: A Journey into the Heart of the Conspiracy Machine",
+   "author": "Gabriel Gatehouse",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Baton and the Cross",
+   "author": "Lucy Ash",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Broken Threads",
+   "author": "Mishal Husain",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Autocracy Inc.",
+   "author": "Anne Applebaum",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "At the Edge of Empire",
+   "author": "Edward Wong",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Escape From Kabul",
+   "author": "Karen Bartlett",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Shattered Lands",
+   "author": "Sam Dalrymple",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Israel: What Went Wrong?",
+   "author": "Omer Bartov",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "For the Sun After Long Nights",
+   "author": "Nilo Tabrizy & Fatemeh Jamalpour",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Three Years on Fire",
+   "author": "Andrey Kurkov",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Wall Dancers",
+   "author": "Yi-Ling Liu",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Elements of Power",
+   "author": "Nicolas Niarchos",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Stalin's Apostles",
+   "author": "Antonia Senior",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Baltic Revolution: Estonia, Latvia, Lithuania and the Path to Independence",
+   "author": "Anatol Lieven",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "In Search of a State: Catholics in Northern Ireland",
+   "author": "Fionnuala O'Connor",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Season of Blood: A Rwandan Journey",
+   "author": "Fergal Keane",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Mukiwa: A White Boy in Africa",
+   "author": "Peter Godwin",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Jennie Lee: A Life",
+   "author": "Patricia Hollis",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Alexander Solzhenitsyn: a Century in His Life",
+   "author": "D. M. Thomas",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Case of Stephen Lawrence",
+   "author": "Brian Cathcart",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Virtual War",
+   "author": "Michael Ignatieff",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Anthony Blunt: His Lives",
+   "author": "Miranda Carter",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Hoo-hahs and Passing Frenzies: Collected Journalism 1991–2000",
+   "author": "Francis Wheen",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Chance Witness: An Outsider's Life in Politics",
+   "author": "Matthew Parris",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "London Orbital: A Walk Around the M25",
+   "author": "Iain Sinclair",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Marianne in Chains: In Search of the German Occupation 1940-45",
+   "author": "Robert Gildea",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Patriots: National Identity in Britain 1940-2000",
+   "author": "Richard Weight",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Stone Voices: The Search for Scotland",
+   "author": "Neal Ascherson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Breaking of Nations: Order and Chaos in the Twenty-First Century",
+   "author": "Robert Cooper",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Brick Lane",
+   "author": "Monica Ali",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Margaret Thatcher: Volume Two: The Iron Lady",
+   "author": "John Campbell",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Rising '44: The Battle For Warsaw",
+   "author": "Norman Davies",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Supping with the Devils: Political Journalism from Thatcher to Blair",
+   "author": "Hugo Young",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Likes of Us: A Biography of the White Working Class",
+   "author": "Michael Collins",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Free World",
+   "author": "Timothy Garton Ash",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Just Law",
+   "author": "Helena Kennedy",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "My Trade: A Short History of British Journalism",
+   "author": "Andrew Marr",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Occidentalism: A Short History of Anti-Westernism",
+   "author": "Ian Buruma & Avishai Margalit",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Wartime: Britain 1939-1945",
+   "author": "Juliet Gardiner",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Moses, Citizen and Me",
+   "author": "Delia Jarrett-Macauley",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Urban Grimshaw and the Shed Crew",
+   "author": "Bernard Hare",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Secret of Bryn Estyn: The Making of a Modern Witch Hunt",
+   "author": "Richard Webster",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "I Didn't Do It For You: How the World Used and Abused a Small African Nation",
+   "author": "Michela Wrong",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Frontline: The True Story of the British Mavericks Who Changed the Face of War Reporting",
+   "author": "David Loyn",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Black Gold of the Sun: Searching for Home in England and Africa",
+   "author": "Ekow Eshun",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Having It So Good: Britain in the 1950s",
+   "author": "Peter Hennessy",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Thatcher and Sons: A Revolution in Three Acts",
+   "author": "Simon Jenkins",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Occupational Hazards: My Time Governing in Iraq",
+   "author": "Rory Stewart",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Lions, Donkeys And Dinosaurs: Waste and Blundering in the Military",
+   "author": "Lewis Page",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Faith: A Forgotten History of Family and Fatherland",
+   "author": "Carmen Callil",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Alexis de Tocqueville: Prophet of Democracy in the Age of Revolution",
+   "author": "Hugh Brogan",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Palestinian Walks: Forays into a Vanishing Landscape",
+   "author": "Raja Shehadeh",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "What's Left?",
+   "author": "Nick Cohen",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Wild",
+   "author": "Jay Griffiths",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "William Wilberforce",
+   "author": "William Hague",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Islamist",
+   "author": "Ed Husain",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Two Caravans",
+   "author": "Marina Lewycka",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Men",
+   "author": "Clive Stafford Smith",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Fishing in Utopia: Sweden and the future that disappeared",
+   "author": "Andrew Brown",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Reappraisals: Reflections on the Forgotten Twentieth Century",
+   "author": "Tony Judt",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Stalin's Children: Three Generations of Love and War",
+   "author": "Owen Matthews",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Chinese Whispers: The True Story Behind Britain's Hidden Army of Labour",
+   "author": "Hsiao-Hung Pai",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Descent into Chaos: The United States and the Failure of Nation Building in Pakistan, Afghanistan and Central Asia",
+   "author": "Ahmed Rashid",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The White War: Life and Death on the Italian Front 1915–1918",
+   "author": "Mark Thompson",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Keeper",
+   "author": "Andrea Gillies",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Rebel Land: Among Turkey's Forgotten Peoples",
+   "author": "Christopher de Bellaigue",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "An Elegy for Easterly",
+   "author": "Petina Gappah",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Freedom For Sale: How We Made Money and Lost Our Liberty",
+   "author": "John Kampfner",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "From Fatwa to Jihad: The Rushdie Affair and Its Legacy",
+   "author": "Kenan Malik",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "t's Our Turn to Eat: The Story of a Kenyan Whistle Blower",
+   "author": "Michela Wrong",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Rule of Law",
+   "author": "Tom Bingham",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Death to the Dictator!: Witnessing Iran's election and the Crippling of the Islamic Republic",
+   "author": "Afsaneh Moqadam",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Hitch-22",
+   "author": "Christopher Hitchens",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Let Our Fame Be Great: Journeys among the defiant people of the Caucasus",
+   "author": "Oliver Bullough",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Supermac: The Life of Harold Macmillan",
+   "author": "D. R. Thorpe",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Betrayal",
+   "author": "Helen Dunmore",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Dead Men Risen",
+   "author": "Toby Harnden",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "DarkMarket: CyberThieves, CyberCops and You",
+   "author": "Misha Glenny",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Hood Rat",
+   "author": "Gavin Knight",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "People Who Eat Darkness: The Fate of Lucie Blackman",
+   "author": "Richard Lloyd Parry",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Beautiful and the Damned: Life in the New India",
+   "author": "Siddhartha Deb",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Opium War",
+   "author": "Julia Lovell",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "A Very British Killing: The Death of Baha Mousa",
+   "author": "A. T. Williams",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Burying the Typewriter",
+   "author": "Carmen Bugan",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "From the Ruins of the Empire",
+   "author": "Pankaj Mishra",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Injustice",
+   "author": "Clive Stafford Smith",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Leaving Alexandria",
+   "author": "Richard Holloway",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Occupation Diaries",
+   "author": "Raja Shehadeh",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "On the Front Line: The Collected Journalism of Marie Colvin",
+   "author": "Marie Colvin",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "This Boy: A Memoir of a Childhood",
+   "author": "Alan Johnson",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Coolie Woman",
+   "author": "Gaiutra Bahadur",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Not for Turning",
+   "author": "Charles Moore",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The British Dream",
+   "author": "David Goodhart",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Tragedy of Liberation",
+   "author": "Frank Dikötter",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The World's Most Dangerous Place",
+   "author": "James Fergusson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Private Island: Why Britain Now Belongs to Someone Else",
+   "author": "James Meek",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Capital: The Eruption of Delhi",
+   "author": "Rana Dasgupta",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Hack Attack: How the Truth Caught Up with Rupert Murdoch",
+   "author": "Nick Davies",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "In Plain Sight: The Life and Lies of Jimmy Savile",
+   "author": "Dan Davies",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Modernity Britain: Opening the Box, 1957–1959",
+   "author": "David Kynaston",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "People's Republic of Amnesia: Tiananmen Revisited",
+   "author": "Louisa Lim",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Invention of Russia",
+   "author": "Arkady Ostrovsky",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Circling the Square",
+   "author": "Wendell Steavenson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Other People's Money",
+   "author": "John Kay",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The New Threat from Islamic Militancy",
+   "author": "Jason Burke",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Tears of the Rajas",
+   "author": "Ferdinand Mount",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Unravelling",
+   "author": "Emma Sky",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Citizen Clem: A Biography of Attlee",
+   "author": "John Bew",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Seven: The Lives and Legacies of the Founding Fathers of the Irish Republic",
+   "author": "Ruth Dudley Edwards",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "All Out War: The Full Story of How Brexit Sank Britain's Political Class",
+   "author": "Tim Shipman",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Island Story: Journeys Around Unfamiliar Britain",
+   "author": "J. D. Taylor",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "And the Sun Shines Now: How Hillsborough and the Premier League Changed Britain",
+   "author": "Adrian Tempany",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Another Day in the Death of America: A Chronicle of Ten Short Lives",
+   "author": "Gary Younge",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Poverty Safari",
+   "author": "Darren McGarvey",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Islamic Enlightenment: The Modern Struggle Between Faith and Reason",
+   "author": "Christopher de Bellaigue",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Testosterone Rex",
+   "author": "Cordelia Fine",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "What You Did Not Tell",
+   "author": "Mark Mazower",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Winter",
+   "author": "Ali Smith",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Lovers and Strangers: An Immigrant History of Post-War Britain",
+   "author": "Clair Wills",
+   "year": 2018,
+   "kind": "c"
+  }
+ ]
+}

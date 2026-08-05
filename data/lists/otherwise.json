@@ -1,0 +1,372 @@
+{
+ "slug": "otherwise",
+ "prize": "Otherwise (James Tiptree Jr.) Award",
+ "rooms": [
+  "brokenmirror",
+  "slipstream",
+  "orrery"
+ ],
+ "page": "Otherwise Award",
+ "url": "https://en.wikipedia.org/wiki/Otherwise_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1363876265",
+ "revid": 1363876265,
+ "fetchedAt": "2026-08-05T16:27:02.835Z",
+ "counts": {
+  "entries": 56,
+  "winners": 56,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Author(s) | Work | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 56,
+   "dropped": 2,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "A Woman of the Iron People",
+   "author": "Eleanor Arnason",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "White Queen",
+   "author": "Gwyneth Jones",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "China Mountain Zhang",
+   "author": "Maureen F. McHugh",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Ammonite",
+   "author": "Nicola Griffith",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "\"The Matter of Seggri\" in Crank! #3, spring 1994",
+   "author": "Ursula K. Le Guin",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Larque on the Wing",
+   "author": "Nancy Springer",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Waking the Moon",
+   "author": "Elizabeth Hand",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Memoirs of Elizabeth Frankenstein",
+   "author": "Theodore Roszak",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Motherlines",
+   "author": "Suzy McKee Charnas",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Walk to the End of the World",
+   "author": "Suzy McKee Charnas",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Left Hand of Darkness",
+   "author": "Ursula K. Le Guin",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Female Man",
+   "author": "Joanna Russ",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "\"When It Changed\" in Again, Dangerous Visions",
+   "author": "Joanna Russ",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "\"Mountain Ways\" in Asimov's Science Fiction, August 1996",
+   "author": "Ursula K. Le Guin",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Sparrow",
+   "author": "Mary Doria Russell",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Black Wine",
+   "author": "Candas Jane Dorsey",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "\"Travels with the Snow Queen\" in Lady Churchill's Rosebud Wristlet Volume 1, Number 1, winter 1996–1997",
+   "author": "Kelly Link",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "\"Congenital Agenesis of Gender Ideation\" in Starlight 2",
+   "author": "Raphael Carter",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The Conqueror's Child",
+   "author": "Suzy McKee Charnas",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Wild Life",
+   "author": "Molly Gloss",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Kappa Child",
+   "author": "Hiromi Goto",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Light",
+   "author": "M. John Harrison",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "\"Stories for Men\" in Asimov's Science Fiction, October/November 2002",
+   "author": "John Kessel",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Set This House in Order: A Romance of Souls",
+   "author": "Matt Ruff",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Camouflage",
+   "author": "Joe Haldeman",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Not Before Sundown (Ennen päivänlaskua ei voi) / Published in the United States as Troll – a love story",
+   "author": "Johanna Sinisalo",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Air",
+   "author": "Geoff Ryman",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Half Life",
+   "author": "Shelley Jackson",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Orphan's Tales: In the Night Garden",
+   "author": "Catherynne M. Valente",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "James Tiptree, Jr.: The Double Life of Alice B. Sheldon",
+   "author": "Julie Phillips",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Carhullan Army",
+   "author": "Sarah Hall",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Knife of Never Letting Go",
+   "author": "Patrick Ness",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Filter House",
+   "author": "Nisi Shawl",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Cloud and Ashes: Three Winter's Tales",
+   "author": "Greer Gilman",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Ōoku: The Inner Chambers",
+   "author": "Fumi Yoshinaga",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Baba Yaga Laid an Egg",
+   "author": "Dubravka Ugresic",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Redwood and Wildfire",
+   "author": "Andrea Hairston",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Drowning Girl",
+   "author": "Caitlín R. Kiernan",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Ancient, Ancient",
+   "author": "Kiini Ibura Salaam",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Rupetta",
+   "author": "N. A. Sulway",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Girl in the Road",
+   "author": "Monica Byrne",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "My Real Children",
+   "author": "Jo Walton",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "\"The New Mother\" in Asimov's Science Fiction, April/May 2015",
+   "author": "Eugene Fischer",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Lizard Radio",
+   "author": "Pat Schmatz",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "When the Moon Was Ours",
+   "author": "Anna-Marie McLemore",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Who Runs the World?",
+   "author": "Virginia Bergin",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "\"They Will Dream in the Garden\"",
+   "author": "Gabriela Damián Miravete",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Freshwater",
+   "author": "Akwaeke Emezi",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Ife-Iyoku, the Tale of Imadeyunuagbon",
+   "author": "Oghenechovwe Donald Ekpeki",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Light from Uncommon Stars",
+   "author": "Ryka Aoki",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Sorrowland",
+   "author": "Rivers Solomon",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "In Universes",
+   "author": "Emet North",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "\"Kiss of Life\"",
+   "author": "P. C. Verrone",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Rakesfall",
+   "author": "Vajra Chandrasekera",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Walking Practice",
+   "author": "Dolki Min, translated by Victoria Caudle",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Luminous",
+   "author": "Silvia Park",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

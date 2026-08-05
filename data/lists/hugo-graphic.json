@@ -1,0 +1,745 @@
+{
+ "slug": "hugo-graphic",
+ "prize": "Hugo Award for Best Graphic Story",
+ "rooms": [
+  "inkroom",
+  "panelwall",
+  "longstrip"
+ ],
+ "page": "Hugo Award for Best Graphic Story or Comic",
+ "url": "https://en.wikipedia.org/wiki/Hugo_Award_for_Best_Graphic_Story_or_Comic",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366884632",
+ "revid": 1366884632,
+ "fetchedAt": "2026-08-05T16:27:18.013Z",
+ "counts": {
+  "entries": 116,
+  "winners": 19,
+  "cited": 97
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and finalists",
+   "headers": "Year | Work | Creator(s) | Publisher(s) | Ref.",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2
+   },
+   "took": 99,
+   "dropped": 2,
+   "winnerMark": "star"
+  },
+  {
+   "t": 1,
+   "heading": "Retro Hugos",
+   "headers": "Year | Year awarded | Work | Creator(s) | Publisher(s) | Ref.",
+   "roles": {
+    "year": 0,
+    "title": 2,
+    "author": 3
+   },
+   "took": 17,
+   "dropped": 0,
+   "winnerMark": "star"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Girl Genius, Volume 8: Agatha Heterodyne and the Chapel of Bones",
+   "author": "Kaja Foglio (writer), Phil Foglio (writer, artist), Cheyenne Wright (colorist)",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Dresden Files: Welcome to the Jungle",
+   "author": "Jim Butcher (writer), Ardian Syaf (artist)",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Schlock Mercenary: The Body Politic",
+   "author": "Howard Tayler (writer, artist)",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Serenity: Better Days",
+   "author": "Joss Whedon (writer), Brett Matthews (writer), Will Conrad (artist), Michelle Madsen (colorist), Jo Chen (cover)",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Y: The Last Man, Volume 10: Whys and Wherefores",
+   "author": "Brian K. Vaughan (writer), Pia Guerra (penciller), Jose Marzan, Jr. (inker)",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Girl Genius, Volume 9: Agatha Heterodyne and the Heirs of the Storm",
+   "author": "Kaja Foglio (writer), Phil Foglio (writer, artist), Cheyenne Wright (colorist)",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Batman: Whatever Happened to the Caped Crusader?",
+   "author": "Neil Gaiman (writer), Andy Kubert (penciller), Scott Williams (inker)",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Captain Britain and MI13. Volume 3: Vampire State",
+   "author": "Paul Cornell (writer), Leonard Kirk (penciller), Mike Collins (penciller), Adrian Alphona (penciller), Ardian Syaf (penciller)",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Schlock Mercenary: The Longshoreman of the Apocalypse",
+   "author": "Howard Tayler (writer, artist)",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Girl Genius, Volume 10: Agatha Heterodyne and the Guardian Muse",
+   "author": "Kaja Foglio (writer), Phil Foglio (writer, artist), Cheyenne Wright (colorist)",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Fables: Witches",
+   "author": "Bill Willingham (writer), Mark Buckingham (artist)",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Grandville Mon Amour",
+   "author": "Bryan Talbot (writer, artist)",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Schlock Mercenary: Massively Parallel",
+   "author": "Howard Tayler (writer, artist)",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Unwritten, Volume 2: Inside Man",
+   "author": "Mike Carey (writer), Peter Gross (artist)",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Digger",
+   "author": "Ursula Vernon (writer, artist)",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Fables: Rose Red",
+   "author": "Bill Willingham (writer), Mark Buckingham (artist)",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Locke & Key Volume 4: Keys To The Kingdom",
+   "author": "Joe Hill (writer), Gabriel Rodriguez (artist)",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Schlock Mercenary: Force Multiplication",
+   "author": "Howard Tayler (writer, artist)",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Unwritten, Volume 4: Leviathan",
+   "author": "Mike Carey (writer), Peter Gross (artist)",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 1",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Grandville Bête Noire",
+   "author": "Bryan Talbot (writer, artist)",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Locke & Key Volume 5: Clockworks",
+   "author": "Joe Hill (writer), Gabriel Rodriguez (artist)",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Schlock Mercenary: Random Access Memorabilia",
+   "author": "Howard Tayler (writer, artist)",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Saucer Country, Volume 1: Run",
+   "author": "Paul Cornell (writer), Ryan Kelly (artist), Jimmy Broxton (artist), Goran Sudžuka (artist)",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "\"Time\"",
+   "author": "Randall Munroe",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Girl Genius, Volume 13: Agatha Heterodyne & The Sleeping City",
+   "author": "Kaja Foglio (writer), Phil Foglio (writer, artist), Cheyenne Wright (colorist)",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Girl Who Loved Doctor Who",
+   "author": "Paul Cornell (writer), Jimmy Broxton (artist)",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Meathouse Man",
+   "author": "Raya Golden (artist), George R. R. Martin (original work)",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 2",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Ms. Marvel, Volume 1: No Normal",
+   "author": "G. Willow Wilson (writer), Adrian Alphona (artist), Jake Wyatt (artist)",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Rat Queens, Volume 1: Sass and Sorcery",
+   "author": "Kurtis J. Weibe (writer), Roc Upchurch (artist)",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 3",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Sex Criminals, Volume 1: One Weird Trick",
+   "author": "Matt Fraction (writer), Chip Zdarsky (artist)",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Zombie Nation Book #2: Reduce Reuse Reanimate",
+   "author": "Carter Reid",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Sandman: Overture",
+   "author": "Neil Gaiman (writer), J. H. Williams III (artist)",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Divine",
+   "author": "Boaz Lavie (writer), Asaf Hanuka (artist), Tomer Hanuka (artist)",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Erin Dies Alone",
+   "author": "Grey Carter (writer), Cory Rydell (artist)",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Full Frontal Nerdity",
+   "author": "Aaron Williams",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Republic, Volume 1",
+   "author": "Corinna Bechko (writer), Gabriel Hardman (writer, artist)",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 1: Awakening",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Black Panther, Volume 1: A Nation Under Our Feet",
+   "author": "Ta-Nehisi Coates (writer), Brian Stelfreeze (artist)",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Ms. Marvel, Volume 5: Super Famous",
+   "author": "G. Willow Wilson (writer), Takeshi Miyazawa (artist)",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Paper Girls, Volume 1",
+   "author": "Brian K. Vaughan (writer), Cliff Chiang (artist), Matthew Wilson (colorist), Jared Fletcher (letterer)",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 6",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist), Fonografiks (letterer)",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Vision, Volume 1: Little Worse Than A Man",
+   "author": "Tom King (writer), Gabriel Hernandez Walta (artist)",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 2: The Blood",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Bitch Planet, Volume 2: President Bitch",
+   "author": "Kelly Sue DeConnick (writer), Valentine De Landro (artist), Taki Soma (artist), Kelly Fitzpatrick (colorist), Clayton Cowles (letterer)",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Black Bolt, Volume 1: Hard Time",
+   "author": "Saladin Ahmed (writer), Christian Ward (artist), Clayton Cowles (letterer)",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "My Favorite Thing Is Monsters",
+   "author": "Emil Ferris (writer, artist)",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Paper Girls, Volume 3",
+   "author": "Brian K. Vaughan (writer), Cliff Chiang (artist), Matthew Wilson (colorist), Jared Fletcher (letterer)",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 7",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 3: Haven",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Abbott",
+   "author": "Saladin Ahmed (writer), Sami Kivelä (artist), Jason Wordie (colorist), Jim Campbell (letterer)",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Black Panther: Long Live the King",
+   "author": "Nnedi Okorafor (writer), Aaron Covington (writer), André Lima Araújo (artist), Mario Del Pennino (artist), Tana Ford (artist)",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "On a Sunbeam",
+   "author": "Tillie Walden (writer, artist)",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Paper Girls, Volume 4",
+   "author": "Brian K. Vaughan (writer), Cliff Chiang (artist), Matthew Wilson (colorist), Jared Fletcher (letterer)",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 9",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "LaGuardia",
+   "author": "Nnedi Okorafor (writer), Tana Ford (artist), James Devlin (colorist)",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Die, Volume 1: Fantasy Heartbreaker",
+   "author": "Kieron Gillen (writer), Stephanie Hans (artist), Clayton Cowles (letterer)",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 4: The Chosen",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Mooncakes",
+   "author": "Suzanne Walker (writer), Wendy Xu (artist), Joamette Gil (letterer)",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Paper Girls, Volume 6",
+   "author": "Brian K. Vaughan (writer), Cliff Chiang (artist), Matt Wilson (colorist), Jared K. Fletcher (letterer)",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Wicked + The Divine, Volume 9: Okay",
+   "author": "Kieron Gillen (writer), Jamie McKelvie (artist), Matt Wilson (colorist), Clayton Cowles (letterer)",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Parable of the Sower: A Graphic Novel Adaptation",
+   "author": "Octavia E. Butler (original author), Damian Duffy (writer), John Jennings (artist)",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Die, Volume 2: Split the Party",
+   "author": "Kieron Gillen (writer), Stephanie Hans (artist), Clayton Cowles (letterer)",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost-Spider, Volume 1: Dog Days Are Over",
+   "author": "Seanan McGuire (writer), Takeshi Miyazawa (artist), Rosie Kämpe (artist)",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Kingdom, Volume 2: Edge of Everything",
+   "author": "G. Willow Wilson (writer), Christian Ward (artist)",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 5: Warchild",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Once & Future, Volume 1: The King Is Undead",
+   "author": "Kieron Gillen (writer), Dan Mora (artist), Tamra Bonvillain (colorist), Ed Dukeshire (letterer)",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Far Sector",
+   "author": "N. K. Jemisin (writer), Jamal Campbell (artist)",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Die, Volume 4: Bleed",
+   "author": "Kieron Gillen (writer), Stephanie Hans (artist), Clayton Cowles (letterer)",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Lore Olympus, Volume 1",
+   "author": "Rachel Smythe (writer, artist)",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 6: The Vow",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Once & Future, Volume 3: The Parliament of Magpies",
+   "author": "Kieron Gillen (writer), Dan Mora (artist), Tamra Bonvillain (colorist)",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Strange Adventures",
+   "author": "Tom King (writer), Mitch Gerads (artist), Evan \"Doc\" Shaner (artist)",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Cyberpunk 2077: Big City Dreams",
+   "author": "Bartosz Sztybor (writer), Filipe Andrade (artist), Alessio Fioriniello (artist), Roman Titov (colorist), Krzysztof Ostrowski (colorist)",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Dune: The Official Movie Graphic Novel",
+   "author": "Lilah Sturges (writer), Drew Johnson (artist), Zid (colorist)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 7: Devourer",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Once & Future, Volume 4: Monarchies in the UK",
+   "author": "Kieron Gillen (writer), Dan Mora (artist)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 10",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist), Fonografiks (letterer)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Supergirl: Woman of Tomorrow",
+   "author": "Tom King (writer), Bilquis Evely (artist), Matheus Lopes (colorist)",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Saga, Volume 11",
+   "author": "Brian K. Vaughan (writer), Fiona Staples (artist)",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Bea Wolf",
+   "author": "Zach Weinersmith (writer), Boulet (artist)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Shubeik Lubeik",
+   "author": "Deena Mohamed",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Three Body Problem, Part One",
+   "author": "Cai Jin (writer), Ge Wendi (writer), Bo Mu (writer), Caojijiuridong (artist), Liu Cixin (original novel)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Witches of World War II",
+   "author": "Paul Cornell (writer), Valeria Burzo (artist)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Wonder Woman Historia: The Amazons",
+   "author": "Kelly Sue DeConnick (writer), Phil Jimenez (artist), Gene Ha (artist), Nicola Scott (artist)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Star Trek: Lower Decks – Warp Your Own Way",
+   "author": "Ryan North (writer), Chris Fenoglio (artist)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Deep Dark",
+   "author": "Lee Knox Ostertag",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Hunger and the Dusk: Vol. 1",
+   "author": "G. Willow Wilson (writer), Chris Wildgoose (artist)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Monstress, Volume 9: The Possessed",
+   "author": "Marjorie Liu (writer), Sana Takeda (artist)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "My Favorite Thing Is Monsters, Book 2",
+   "author": "Emil Ferris",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "We Called Them Giants",
+   "author": "Kieron Gillen (writer), Stephanie Hans (artist), Clayton Cowles (letterer)",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Absolute Wonder Woman Vol. 1: The Last Amazon",
+   "author": "Kelly Thompson (writer), Hayden Sherman (artist), Mattia de Iulis (artist), Jordie Bellaire (colorist), Becca Carey (letterer)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "A Girl and Her Fed",
+   "author": "KB Spangler (writer), Ale Presser (artist)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "A Wizard of Earthsea: A Graphic Novel",
+   "author": "Fred Fordham (writer & artist), Ursula K LeGuin (original novel)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Invisible Parade",
+   "author": "Leigh Bardugo (writer), John Picacio (artist)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Power Fantasy Volume 1: The Superpowers",
+   "author": "Kieron Gillen (writer), Caspar Wijngaard (artist), Clayton Cowles (letterer)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Space Cat",
+   "author": "Nnedi Okorafor (writer), Tana Ford (artist)",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Batman #1",
+   "author": "Bill Finger (writer), Bob Kane (artist)",
+   "year": 1941,
+   "kind": "w"
+  },
+  {
+   "title": "Captain Marvel: \"Introducing Captain Marvel\"",
+   "author": "Bill Parker, C. C. Beck",
+   "year": 1941,
+   "kind": "c"
+  },
+  {
+   "title": "Flash Gordon: \"The Ice Kingdom of Mongo\"",
+   "author": "Alex Raymond, Don W. Moore",
+   "year": 1941,
+   "kind": "c"
+  },
+  {
+   "title": "The Origin of the Spirit",
+   "author": "Will Eisner",
+   "year": 1941,
+   "kind": "c"
+  },
+  {
+   "title": "The Spectre: \"The Spectre\"/\"The Spectre Strikes!\"",
+   "author": "Jerry Siegel (writer), Bernard Baily (artist)",
+   "year": 1941,
+   "kind": "c"
+  },
+  {
+   "title": "Wonder Woman #5: \"Battle for Womanhood\"",
+   "author": "William Moulton Marston (writer), H. G. Peter (artist)",
+   "year": 1944,
+   "kind": "w"
+  },
+  {
+   "title": "Buck Rogers: \"Martians Invade Jupiter\"",
+   "author": "Philip Francis Nowlan (writer), Dick Calkins (artist)",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "Flash Gordon: \"Fiery Desert of Mongo\"",
+   "author": "Alex Raymond (writer, artist)",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "Garth",
+   "author": "Steve Dowling (writer, artist)",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "Plastic Man #1: \"The Game of Death\"",
+   "author": "Jack Cole (writer, artist)",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "The Adventures of Tintin: The Secret of the Unicorn",
+   "author": "Hergé (writer, artist)",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "Superman: \"The Mysterious Mr. Mxyzptlk\"",
+   "author": "Jerry Siegel (writer), Ira Yarbrough (artist), Joe Shuster (artist)",
+   "year": 1945,
+   "kind": "w"
+  },
+  {
+   "title": "Buck Rogers: \"Hollow Planetoid\"",
+   "author": "Dick Calkins (artist)",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "Donald Duck: \"The Mad Chemist\"",
+   "author": "Carl Barks (writer, artist)",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "Flash Gordon: \"Battle for Tropica\"",
+   "author": "Alex Raymond (writer, artist)",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "Flash Gordon: \"Triumph in Tropica\"",
+   "author": "Alex Raymond (writer, artist)",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "The Spirit: \"For the Love of Clara Defoe\"",
+   "author": "Manly Wade Wellman (writer), Lou Fine (artist), Don Komisarow (artist)",
+   "year": 1945,
+   "kind": "c"
+  }
+ ]
+}

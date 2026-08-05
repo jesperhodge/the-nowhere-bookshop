@@ -1,0 +1,260 @@
+{
+ "slug": "forward",
+ "prize": "Forward Prize for Best Collection",
+ "rooms": [
+  "attic",
+  "rafters"
+ ],
+ "page": "Forward Prizes for Poetry",
+ "url": "https://en.wikipedia.org/wiki/Forward_Prizes_for_Poetry",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1328584223",
+ "revid": 1328584223,
+ "fetchedAt": "2026-08-05T16:27:16.020Z",
+ "counts": {
+  "entries": 35,
+  "winners": 35,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Best Collection",
+   "headers": "Year | Author | Title | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 35,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "Best First Collection",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 2,
+   "heading": "Best Single Poem (written)",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 3,
+   "heading": "Best Single Poem (performed)",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Man with Night Sweats",
+   "author": "Thom Gunn",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Mean Time",
+   "author": "Carol Ann Duffy",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Harm",
+   "author": "Alan Jenkins",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Ghost Train",
+   "author": "Sean O'Brien",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Stones and Fires",
+   "author": "John Fuller",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Marble Fly",
+   "author": "Jamie McKendrick",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Birthday Letters",
+   "author": "Ted Hughes",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "My Life Asleep",
+   "author": "Jo Shapcott",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Conjure",
+   "author": "Michael Donaghy",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Downriver",
+   "author": "Sean O'Brien",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Max is Missing",
+   "author": "Peter Porter",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Breaking News",
+   "author": "Ciaran Carson",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Tree House",
+   "author": "Kathleen Jamie",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Legion",
+   "author": "David Harsent",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Swithering",
+   "author": "Robin Robertson",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Drowned Book",
+   "author": "Sean O'Brien",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Lost Leader",
+   "author": "Mick Imlah",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Rain",
+   "author": "Don Paterson",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Human Chain",
+   "author": "Seamus Heaney",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Black Cat Bone",
+   "author": "John Burnside",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "PLACE",
+   "author": "Jorie Graham",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Drysalter",
+   "author": "Michael Symmons Roberts",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Cartographer Tries to Map a Way to Zion",
+   "author": "Kei Miller",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Citizen: An American Lyric",
+   "author": "Claudia Rankine",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Measures of Expatriation",
+   "author": "Vahni Capildeo",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "On Balance",
+   "author": "Sinéad Morrissey",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Don't Call Us Dead",
+   "author": "Danez Smith",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Vertigo and Ghost",
+   "author": "Fiona Benson",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Air Year",
+   "author": "Caroline Bird",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Notes on the Sonnets",
+   "author": "Luke Kennard",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "All the Men I Never Married",
+   "author": "Kim Moore",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Self-Portrait as Othello",
+   "author": "Jason Allen-Paisant",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "With My Back to the World",
+   "author": "Victoria Chang",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Avidyā",
+   "author": "Vidyan Ravinthiran",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Wellwater",
+   "author": "Karen Solie",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

@@ -1,0 +1,1066 @@
+{
+ "slug": "warwick-women-xlat",
+ "prize": "Warwick Prize for Women in Translation",
+ "rooms": [
+  "translator",
+  "hundredwindows"
+ ],
+ "page": "Warwick Prize for Women in Translation",
+ "url": "https://en.wikipedia.org/wiki/Warwick_Prize_for_Women_in_Translation",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1365939082",
+ "revid": 1365939082,
+ "fetchedAt": "2026-08-05T16:26:51.555Z",
+ "counts": {
+  "entries": 145,
+  "winners": 20,
+  "cited": 125
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Recipients",
+   "headers": "Year | Author | Translator(s) | Title | Original language | Publisher (UK/Ireland) | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "translator": 2,
+    "title": 3,
+    "result": 6
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "Recipients",
+   "headers": "Year | Author | Translator(s) | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "translator": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 135,
+   "dropped": 1,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Memoirs of a Polar Bear / 雪の練習生",
+   "author": "Yoko Tawada",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "Belladonna",
+   "author": "Daša Drndić",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Celia Hawkesworth"
+  },
+  {
+   "title": "The Years / Les Années",
+   "author": "Annie Ernaux",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Alison L. Strayer"
+  },
+  {
+   "title": "The Eighth Life (For Brilka) / Das achte Leben (Für Brilka)",
+   "author": "Nino Haratischwili",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Charlotte Collins & Ruth Martin"
+  },
+  {
+   "title": "An Inventory of Losses / Verzeichnis einiger Verluste",
+   "author": "Judith Schalansky",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Jackie Smith"
+  },
+  {
+   "title": "Osebol",
+   "author": "Marit Kapla",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Peter Graves"
+  },
+  {
+   "title": "Tomb of Sand / रेत समाधि",
+   "author": "Geetanjali Shree",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Daisy Rockwell"
+  },
+  {
+   "title": "Your Wish Is My Command / شبيك لبيك",
+   "author": "Deena Mohamed",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Deena Mohamed"
+  },
+  {
+   "title": "Revelation Freshly Erupting",
+   "author": "Nelly Sachs",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Andrew Shanks"
+  },
+  {
+   "title": "And the Walls Became the World All Around / Och väggarna förvandlades till världen runtomkring",
+   "author": "Johanna Ekström & Sigrid Rausing",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Sigrid Rausing"
+  },
+  {
+   "title": "Memoirs of a Polar Bear",
+   "author": "Yoko Tawada",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "Second-hand Time",
+   "author": "Svetlana Alexievich",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Bela Shayevich"
+  },
+  {
+   "title": "Swallow Summer",
+   "author": "Larissa Boehning",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Lyn Marven"
+  },
+  {
+   "title": "Clementine Loves Red",
+   "author": "Krystyna Boglar",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones & Zosia Krasodomska-Jones"
+  },
+  {
+   "title": "The Coast Road",
+   "author": "Ailbhe Ní Ghearbhuigh",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Swallowing Mercury",
+   "author": "Wioletta Greg",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Eliza Marciniak"
+  },
+  {
+   "title": "The Art of Being a Tiger",
+   "author": "Ana Luísa Amaral",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "The Song of Seven",
+   "author": "Tonke Dragt",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Laura Watkinson"
+  },
+  {
+   "title": "Life Begins on Friday",
+   "author": "Ioana Pârvulescu",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Alistair Ian Blyth"
+  },
+  {
+   "title": "The Fox Was Ever the Hunter",
+   "author": "Herta Müller",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Philip Boehm"
+  },
+  {
+   "title": "Eva Sleeps",
+   "author": "Francesca Melandri",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Katherine Gregor"
+  },
+  {
+   "title": "Mirror, Shoulder, Signal",
+   "author": "Dorthe Nors",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Misha Hoekstra"
+  },
+  {
+   "title": "Fever Dream",
+   "author": "Samanta Schweblin",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "The Dutch Maiden",
+   "author": "Marente de Moor",
+   "year": 2017,
+   "kind": "c",
+   "translator": "David Doherty"
+  },
+  {
+   "title": "Record of a Night Too Brief",
+   "author": "Hiromi Kawakami",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Lucy North"
+  },
+  {
+   "title": "Mårbacka",
+   "author": "Selma Lagerlöf",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Sarah Death"
+  },
+  {
+   "title": "Belladonna",
+   "author": "Daša Drndić",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Celia Hawkesworth"
+  },
+  {
+   "title": "Flights",
+   "author": "Olga Tokarczuk",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Go, Went, Gone",
+   "author": "Jenny Erpenbeck",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "River",
+   "author": "Esther Kinsky",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Iain Galbraith"
+  },
+  {
+   "title": "The House with the Stained-Glass Window",
+   "author": "Żanna Słoniowska",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "The White Book",
+   "author": "Han Kang",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Deborah Smith"
+  },
+  {
+   "title": "Bang",
+   "author": "Dorrit Willumsen",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Marina Allemano"
+  },
+  {
+   "title": "Hair Everywhere",
+   "author": "Tea Tulić",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Coral Petkovich"
+  },
+  {
+   "title": "Land of Smoke",
+   "author": "Sara Gallardo",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jessica Sequeira"
+  },
+  {
+   "title": "Letti Park",
+   "author": "Judith Hermann",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Margot Bettauer Dembo"
+  },
+  {
+   "title": "Maybe Esther",
+   "author": "Katja Petrowskaja",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Shelley Frisch"
+  },
+  {
+   "title": "Of Dogs and Walls",
+   "author": "Yūko Tsushima",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Geraldine Harcourt"
+  },
+  {
+   "title": "The Emperor of Portugallia",
+   "author": "Selma Lagerlöf",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Peter Graves"
+  },
+  {
+   "title": "Vernon Subutex One",
+   "author": "Virginie Despentes",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "The Years",
+   "author": "Annie Ernaux",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Alison L. Strayer"
+  },
+  {
+   "title": "Disoriental",
+   "author": "Négar Djavadi",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Tina Kover"
+  },
+  {
+   "title": "Drive Your Plow Over the Bones of the Dead",
+   "author": "Olga Tokarczuk",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "Katalin Street",
+   "author": "Magda Szabó",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Len Rix"
+  },
+  {
+   "title": "Negative of a Group Photograph",
+   "author": "Azita Ghahreman",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Maura Dooley with Elhum Shakerifar"
+  },
+  {
+   "title": "People in the Room",
+   "author": "Norah Lange",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Charlotte Whittle"
+  },
+  {
+   "title": "Brother In Ice",
+   "author": "Alicia Kopf",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Mara Faye Lethem"
+  },
+  {
+   "title": "Convenience Store Woman",
+   "author": "Sayaka Murata",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Ginny Tapley Takemori"
+  },
+  {
+   "title": "Picnic in the Storm",
+   "author": "Yukiko Motoya",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Asa Yoneda"
+  },
+  {
+   "title": "Season of the Shadow",
+   "author": "Léonora Miano",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Gila Walker"
+  },
+  {
+   "title": "Shadows on the Tundra",
+   "author": "Dalia Grinkevičiūtė",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Delija Valiukenas"
+  },
+  {
+   "title": "Thick of It",
+   "author": "Ulrike Almut Sandig",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Karen Leeder"
+  },
+  {
+   "title": "Zuleikha",
+   "author": "Guzel Yakhina",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Lisa C. Hayden"
+  },
+  {
+   "title": "The Eighth Life (for Brilka)",
+   "author": "Nino Haratischwili",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Charlotte Collins & Ruth Martin"
+  },
+  {
+   "title": "Letters from Tove",
+   "author": "Tove Jansson, edited by Boel Westin & Helen Svensson",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Sarah Death"
+  },
+  {
+   "title": "Lake Like a Mirror",
+   "author": "Ho Sok Fong",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Natascha Bruce"
+  },
+  {
+   "title": "White Horse",
+   "author": "Yan Ge",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Nicky Harman"
+  },
+  {
+   "title": "Happiness, As Such",
+   "author": "Natalia Ginzburg",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Minna Zalman Proctor"
+  },
+  {
+   "title": "Thirteen Months of Sunrise",
+   "author": "Rania Mamoun",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Elisabeth Jaquette"
+  },
+  {
+   "title": "Abigail",
+   "author": "Magda Szabó",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Len Rix"
+  },
+  {
+   "title": "Dependency",
+   "author": "Tove Ditlevsen",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Michael Favala Goldman"
+  },
+  {
+   "title": "Isabella",
+   "author": "Isabella Morra",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Caroline Maldonado"
+  },
+  {
+   "title": "Pixel",
+   "author": "Krisztina Tóth",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Owen Good"
+  },
+  {
+   "title": "Summer of Reckoning",
+   "author": "Marion Brunet",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Katherine Gregor"
+  },
+  {
+   "title": "The Adventures of China Iron",
+   "author": "Gabriela Cabezón Cámara",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Iona Macintyre & Fiona Macintosh"
+  },
+  {
+   "title": "The Chandelier",
+   "author": "Clarice Lispector",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Benjamin Moser & Magdalena Edwards"
+  },
+  {
+   "title": "The Way Through the Woods",
+   "author": "Long Litt Woon",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Barbara Haveland"
+  },
+  {
+   "title": "Things that Fall from the Sky",
+   "author": "Selja Ahava",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Emily Jeremiah & Fleur Jeremiah"
+  },
+  {
+   "title": "Vivian",
+   "author": "Christina Hesselholdt",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Paul Russell Garrett"
+  },
+  {
+   "title": "An Inventory of Losses",
+   "author": "Judith Schalansky",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Jackie Smith"
+  },
+  {
+   "title": "Strange Beasts of China",
+   "author": "Yan Ge",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Jeremy Tiang"
+  },
+  {
+   "title": "Our Lady of the Nile",
+   "author": "Scholastique Mukasonga",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Melanie Mauthner"
+  },
+  {
+   "title": "Breasts and Eggs",
+   "author": "Mieko Kawakami",
+   "year": 2021,
+   "kind": "c",
+   "translator": "David Boyd & Sam Bett"
+  },
+  {
+   "title": "In Memory of Memory",
+   "author": "Maria Stepanova",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sasha Dugdale"
+  },
+  {
+   "title": "War of the Beasts and the Animals",
+   "author": "Maria Stepanova",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sasha Dugdale"
+  },
+  {
+   "title": "Ellis Island: A People's History",
+   "author": "Małgorzata Szejnert",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sean Gasper Bye"
+  },
+  {
+   "title": "The Art of Losing",
+   "author": "Alice Zeniter",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "The Pear Field",
+   "author": "Nana Ekvtimishvili",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Elizabeth Heighway"
+  },
+  {
+   "title": "A Girl's Story",
+   "author": "Annie Ernaux",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Alison L. Strayer"
+  },
+  {
+   "title": "Not a Novel",
+   "author": "Jenny Erpenbeck",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Kurt Beals"
+  },
+  {
+   "title": "People From My Neighborhood",
+   "author": "Hiromi Kawakami",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Ted Goossen"
+  },
+  {
+   "title": "Grove",
+   "author": "Esther Kinsky",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Caroline Schmidt"
+  },
+  {
+   "title": "Little Dancer Aged Fourteen",
+   "author": "Camille Laurens",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Willard Wood"
+  },
+  {
+   "title": "Arid Dreams",
+   "author": "Duanwad Pimwana",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Mui Poopoksakul"
+  },
+  {
+   "title": "The Employees",
+   "author": "Olga Ravn",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "Minor Detail",
+   "author": "Adania Shibli",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Elisabeth Jaquette"
+  },
+  {
+   "title": "Osebol: Voices from a Swedish Village",
+   "author": "Marit Kapla",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Peter Graves"
+  },
+  {
+   "title": "Tomb of Sand",
+   "author": "Geetanjali Shree",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Daisy Rockwell"
+  },
+  {
+   "title": "Brickmakers",
+   "author": "Selva Almada",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Annie McDermott"
+  },
+  {
+   "title": "Marzahn, Mon Amour",
+   "author": "Katja Oskamp",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Jo Heinrich"
+  },
+  {
+   "title": "Men Don’t Cry",
+   "author": "Faïza Guène",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sarah Ardizzone"
+  },
+  {
+   "title": "Three Summers",
+   "author": "Margarita Liberaki",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Karen Van Dyck"
+  },
+  {
+   "title": "When I Sing, Mountains Dance",
+   "author": "Irene Solà",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Mara Faye Lethem"
+  },
+  {
+   "title": "The Book of Mother",
+   "author": "Violaine Huisman",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Leslie Camhi"
+  },
+  {
+   "title": "The Books of Jacob",
+   "author": "Olga Tokarczuk",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Planet of Clay",
+   "author": "Samar Yazbek",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Leri Price"
+  },
+  {
+   "title": "Slime: A Natural History",
+   "author": "Susanne Wedlich",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Ayça Türkoğlu"
+  },
+  {
+   "title": "Things Remembered and Things Forgotten",
+   "author": "Kyoko Nakajima",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Ginny Tapley Takemori & Ian McCullough MacDonald"
+  },
+  {
+   "title": "To Love A Woman",
+   "author": "Diana Bellessi",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Leo Boix"
+  },
+  {
+   "title": "Why I No Longer Write Poems",
+   "author": "Diana Anphimiadi",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Natalia Bukia-Peters & Jean Sprackland"
+  },
+  {
+   "title": "Your Wish Is My Command",
+   "author": "Deena Mohamed",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Deena Mohamed"
+  },
+  {
+   "title": "A Line in the World",
+   "author": "Dorthe Nors",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Caroline Waight"
+  },
+  {
+   "title": "A Silence Shared",
+   "author": "Lalla Romano",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Brian Robert Moore"
+  },
+  {
+   "title": "A System So Magnificent It Is Blinding",
+   "author": "Amanda Svensson",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Nichola Smalley"
+  },
+  {
+   "title": "Barcode",
+   "author": "Krisztina Tóth",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Peter Sherwood"
+  },
+  {
+   "title": "Cocoon",
+   "author": "Zhang Yueran",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Jeremy Tiang"
+  },
+  {
+   "title": "The Remains",
+   "author": "Margo Glantz",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Ellen Jones"
+  },
+  {
+   "title": "What Have You Left Behind?",
+   "author": "Bushra al-Maqtari",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Sawad Hussain"
+  },
+  {
+   "title": "Chinatown",
+   "author": "Thuận",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Nguyễn An Lý"
+  },
+  {
+   "title": "Forbidden Notebook",
+   "author": "Alba de Céspedes",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Ann Goldstein"
+  },
+  {
+   "title": "Owlish",
+   "author": "Dorothy Tse",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Natascha Bruce"
+  },
+  {
+   "title": "The Easy Life",
+   "author": "Marguerite Duras",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Olivia Baes & Emma Ramadan"
+  },
+  {
+   "title": "The Fawn",
+   "author": "Magda Szabó",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Len Rix"
+  },
+  {
+   "title": "The Lake",
+   "author": "Bianca Bellová",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Alex Zucker"
+  },
+  {
+   "title": "The Queen of Darkness",
+   "author": "Grazia Deledda",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Graham Anderson"
+  },
+  {
+   "title": "ti amo",
+   "author": "Hanne Ørstavik",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "Revelation Freshly Erupting",
+   "author": "Nelly Sachs",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Andrew Shanks"
+  },
+  {
+   "title": "Kairos",
+   "author": "Jenny Erpenbeck",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "Greek Lessons",
+   "author": "Han Kang",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Deborah Smith & e. yaewon"
+  },
+  {
+   "title": "Sleepless",
+   "author": "Marie Darrieussecq",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Penny Hueston"
+  },
+  {
+   "title": "Too Much of Life: Complete Chronicles",
+   "author": "Clarice Lispector",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Robin Patterson & Margaret Jull Costa"
+  },
+  {
+   "title": "White Nights",
+   "author": "Urszula Honek",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Kate Webster"
+  },
+  {
+   "title": "Ædnan: An Epic",
+   "author": "Linnea Axelsson",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Saskia Vogel"
+  },
+  {
+   "title": "Death of the Red Rider: A Leningrad Confidential",
+   "author": "Yulia Yakovleva",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Ruth Ahmedzai Kemp"
+  },
+  {
+   "title": "Edo’s Souls",
+   "author": "Stella Gaitano",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Sawad Hussain"
+  },
+  {
+   "title": "The Factory",
+   "author": "Hiroko Oyamada",
+   "year": 2024,
+   "kind": "c",
+   "translator": "David Boyd"
+  },
+  {
+   "title": "Holy Winter 20/21",
+   "author": "Maria Stepanova",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Sasha Dugdale"
+  },
+  {
+   "title": "The Hunger of Women",
+   "author": "Marosia Castaldi",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Jamie Richards"
+  },
+  {
+   "title": "Marianna Sirca",
+   "author": "Grazia Deledda",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Graham Anderson"
+  },
+  {
+   "title": "Mild Vertigo",
+   "author": "Mieko Kanai",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Polly Barton"
+  },
+  {
+   "title": "Yoghurt and Jam (or How My Mother Became Lebanese)",
+   "author": "Lena Merhej",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Nadiyah Abdullatif & Anam Zafar"
+  },
+  {
+   "title": "And the Walls Became the World All Around",
+   "author": "Johanna Ekström & Sigrid Rausing",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Sigrid Rausing"
+  },
+  {
+   "title": "Désirée Congo",
+   "author": "Evelyne Trouillot",
+   "year": 2025,
+   "kind": "c",
+   "translator": "M. A. Salvodon"
+  },
+  {
+   "title": "Francis Bacon’s Nanny",
+   "author": "Maylis Besserie",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Clíona Ní Ríordáin"
+  },
+  {
+   "title": "My Secret Life",
+   "author": "Krisztina Tóth",
+   "year": 2025,
+   "kind": "c",
+   "translator": "George Szirtes"
+  },
+  {
+   "title": "Too Great A Sky",
+   "author": "Liliana Corobca",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Monica Cure"
+  },
+  {
+   "title": "We Do Not Part",
+   "author": "Han Kang",
+   "year": 2025,
+   "kind": "c",
+   "translator": "e yaewon & Paige Aniyah Morris"
+  },
+  {
+   "title": "Djinns",
+   "author": "Fatma Aydemir",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Jon Cho-Polizzi"
+  },
+  {
+   "title": "The Empusium",
+   "author": "Olga Tokarczuk",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "Hungry for What",
+   "author": "María Bastarós",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Kevin Gerry Dunn"
+  },
+  {
+   "title": "Lies and Sorcery",
+   "author": "Elsa Morante",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Jenny McPhee"
+  },
+  {
+   "title": "Phantom Pain Wings",
+   "author": "Kim Hyesoon",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Don Mee Choi"
+  },
+  {
+   "title": "Translation of the Route",
+   "author": "Laura Wittner",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Juana Adcock"
+  },
+  {
+   "title": "Un Amor",
+   "author": "Sara Mesa",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Katie Whittemore"
+  },
+  {
+   "title": "Vanishing Points",
+   "author": "Lucija Stupica",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Andrej Peric"
+  }
+ ]
+}

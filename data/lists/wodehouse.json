@@ -1,0 +1,900 @@
+{
+ "slug": "wodehouse",
+ "prize": "Bollinger Everyman Wodehouse Prize",
+ "rooms": [
+  "longroom",
+  "quiethouse"
+ ],
+ "page": "Bollinger Everyman Wodehouse Prize",
+ "url": "https://en.wikipedia.org/wiki/Bollinger_Everyman_Wodehouse_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364217853",
+ "revid": 1364217853,
+ "fetchedAt": "2026-08-05T16:26:56.468Z",
+ "counts": {
+  "entries": 144,
+  "winners": 26,
+  "cited": 118
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and shortlists",
+   "headers": "Year | Author(s) | Title | Publisher | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 144,
+   "dropped": 1,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Mighty Walzer",
+   "author": "Howard Jacobson",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Bridget Jones: The Edge of Reason",
+   "author": "Helen Fielding",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Playing the Moldovans at Tennis",
+   "author": "Tony Hawks",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Obituaries",
+   "author": "Hugh Massingberd",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Adrian Mole: The Cappuccino Years",
+   "author": "Sue Townsend",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Rotters' Club",
+   "author": "Jonathan Coe",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Spies",
+   "author": "Michael Frayn",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Gatekeeper",
+   "author": "Terry Eagleton",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Spencer's List",
+   "author": "Lissa Evans",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Happiness™",
+   "author": "Will Ferguson",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Are You Dave Gorman?",
+   "author": "Dave Gorman & Danny Wallace",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Thief of Time",
+   "author": "Terry Pratchett",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Vernon God Little",
+   "author": "DBC Pierre",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Dot in the Universe",
+   "author": "Lucy Ellmann",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Don't You Want Me",
+   "author": "India Knight",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Life of Pi",
+   "author": "Yann Martel",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "I Don't Know How She Does It",
+   "author": "Allison Pearson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Autograph Man",
+   "author": "Zadie Smith",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Well of Lost Plots",
+   "author": "Jasper Fforde",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Penguin Lost",
+   "author": "Andrey Kurkov",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "These Foolish Things",
+   "author": "Deborah Moggach",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Overtaken",
+   "author": "Alexei Sayle",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "A Short History of Tractors in Ukrainian",
+   "author": "Marina Lewycka",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Cooking with Fernet Branca",
+   "author": "James Hamilton-Paterson",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Mr Vogel",
+   "author": "Lloyd Jones",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Happy Accidents",
+   "author": "Tiffany Murray",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Going Postal",
+   "author": "Terry Pratchett",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Unbearable Lightness of Being in Aberystwyth",
+   "author": "Malcolm Pryce",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "All Fun and Games Until Somebody Loses an Eye",
+   "author": "Christopher Brookmyre",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Wicked!",
+   "author": "Jilly Cooper",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Llanelli Train",
+   "author": "Robert Lewis",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "May Contain Nuts",
+   "author": "John O'Farrell",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Thud!",
+   "author": "Terry Pratchett",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "On Beauty",
+   "author": "Zadie Smith",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Salmon Fishing in the Yemen",
+   "author": "Paul Torday",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Kalooki Nights",
+   "author": "Howard Jacobson",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Two Caravans",
+   "author": "Marina Lewycka",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Cupid's Dart",
+   "author": "David Nobbs",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Butt",
+   "author": "Will Self",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Uncommon Reader",
+   "author": "Alan Bennett",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Submarine",
+   "author": "Joe Dunthorne",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Jude: Level 1",
+   "author": "Julian Gough",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Pontoon: A Novel of Lake Wobegon",
+   "author": "Garrison Keillor",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Sunday at the Cross Bones",
+   "author": "John Walsh",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Jeff in Venice, Death in Varanasi",
+   "author": "Geoff Dyer",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "A Snowball in Hell",
+   "author": "Christopher Brookmyre",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Their Finest Hour and a Half",
+   "author": "Lissa Evans",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Rancid Pansies",
+   "author": "James Hamilton-Paterson",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "How the Soldier Repairs the Gramophone",
+   "author": "Saša Stanišić",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Fraction of the Whole",
+   "author": "Steve Toltz",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Solar",
+   "author": "Ian McEwan",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Skippy Dies",
+   "author": "Paul Murray",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Diamond Star Halo",
+   "author": "Tiffany Murray",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "One Day",
+   "author": "David Nicholls",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "From Aberystwyth with Love",
+   "author": "Malcolm Pryce",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Super Sad True Love Story",
+   "author": "Gary Shteyngart",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Serious Men",
+   "author": "Manu Joseph",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Comfort and Joy",
+   "author": "India Knight",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Coincidence Engine",
+   "author": "Sam Leith",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The News Where You Are",
+   "author": "Catherine O'Flynn",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Snuff",
+   "author": "Terry Pratchett",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Jude in London",
+   "author": "Julian Gough",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Capital",
+   "author": "John Lanchester",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Man Who Forgot His Wife",
+   "author": "John O'Farrell",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Woman Who Went to Bed for a Year",
+   "author": "Sue Townsend",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Zoo Time",
+   "author": "Howard Jacobson",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "England's Lane",
+   "author": "Joseph Connolly",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Lightning Rods (and Other Stories)",
+   "author": "Helen DeWitt",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Skios",
+   "author": "Michael Frayn",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Heartbreak Hotel",
+   "author": "Deborah Moggach",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Lost for Words",
+   "author": "Edward St Aubyn",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Jeeves and the Wedding Bells",
+   "author": "Sebastian Faulks",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Bridget Jones: Mad About the Boy",
+   "author": "Helen Fielding",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Word",
+   "author": "Hanif Kureishi",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Straight White Male",
+   "author": "John Niven",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Thrill of it All",
+   "author": "Joseph O'Connor",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Fatty O'Leary's Dinner Party",
+   "author": "Alexander McCall Smith",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Losing It",
+   "author": "Helen Lederer",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "How to Build a Girl",
+   "author": "Caitlin Moran",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Dog",
+   "author": "Joseph O'Neill",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Man at the Helm",
+   "author": "Nina Stibbe",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A Decent Ride",
+   "author": "Irvine Welsh",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Mark and the Void",
+   "author": "Paul Murray",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Improbability of Love",
+   "author": "Hannah Rothschild",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Sellout",
+   "author": "Paul Beatty",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Lubetkin Legacy",
+   "author": "Marina Lewycka",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "There's Only Two David Beckhams",
+   "author": "John O'Farrell",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Bridget Jones's Baby",
+   "author": "Helen Fielding",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Razor Girl",
+   "author": "Carl Hiaasen",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "To Be Continued...",
+   "author": "James Robertson",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Everybody's Fool",
+   "author": "Richard Russo",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Paradise Lodge",
+   "author": "Nina Stibbe",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Here Comes Trouble",
+   "author": "Simon Wroe",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Reasons to be Cheerful",
+   "author": "Nina Stibbe",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Vacuum in the Dark",
+   "author": "Jen Beagin",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "In at the Deep End",
+   "author": "Kate Davies",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Charlie Savage",
+   "author": "Roddy Doyle",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Old Baggage",
+   "author": "Lissa Evans",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Francis Plug: Writer in Residence",
+   "author": "Paul Ewen",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Flake",
+   "author": "Matthew Dooley",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Nobber",
+   "author": "Oisín Fagan",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Rules for Visiting",
+   "author": "Jessica Francis Kane",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Weather",
+   "author": "Jenny Offill",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "46% Better than Dave",
+   "author": "Alastair Puddick",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "House of Trelawney",
+   "author": "Hannah Rothschild",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Accidental Collector",
+   "author": "Guy Kennaway",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Ghosts",
+   "author": "Dolly Alderton",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Between Beirut and the Moon",
+   "author": "A. Naji Bakhti",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Destination Wedding",
+   "author": "Diksha Basu",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Temporary",
+   "author": "Hilary Leichter",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Fake Accounts",
+   "author": "Lauren Oyler",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Trees",
+   "author": "Percival Everett",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Echo Chamber",
+   "author": "John Boyne",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Other Black Girl",
+   "author": "Zakiya Dalila Harris",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Again, Rachel",
+   "author": "Marian Keyes",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Last Resort",
+   "author": "Andrew Lipstein",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Impossible",
+   "author": "Sarah Lotz",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Lock-in",
+   "author": "Phoebe Luckhurst",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Are We Having Fun Yet?",
+   "author": "Lucy Mangan",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Man Who Died Twice",
+   "author": "Richard Osman",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Our Country Friends",
+   "author": "Gary Shteyngart",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "One Day I Shall Astonish the World",
+   "author": "Nina Stibbe",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Harrow",
+   "author": "Joy Williams",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Satsuma Complex",
+   "author": "Bob Mortimer",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Murder at Crime Manor",
+   "author": "Fergus Craig",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Didn't Nobody Give a Shit What Happened to Carlotta",
+   "author": "James Hannaham",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Teen Couple Have Fun Outdoors",
+   "author": "Aravind Jayan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Darling",
+   "author": "India Knight",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Mother Hens",
+   "author": "Sophie McCartney",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Glorious Exploits",
+   "author": "Ferdia Lennon",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Good Material",
+   "author": "Dolly Alderton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Ministry of Time",
+   "author": "Kaliane Bradley",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Beginner's Guide to Breaking and Entering",
+   "author": "Andrew Hunter Murray",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Rachel Incident",
+   "author": "Caroline O'Donoghue",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "You Are Here",
+   "author": "David Nicholls",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "High Vaultage",
+   "author": "Jen Sugden & and Chris Sugden",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Little Trickerie",
+   "author": "Rosanna Pike",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Unfinished Harauld Hughes",
+   "author": "Richard Ayoade",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of George",
+   "author": "Kate Greathead",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Murder Most Foul",
+   "author": "Guy Jenkin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Persians",
+   "author": "Sanam Mahloudji",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Last Acts",
+   "author": "Alexander Sammartino",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Friends of Dorothy",
+   "author": "Sandi Toksvig",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Fundamentally",
+   "author": "Nussaibah Younis",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

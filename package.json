@@ -8,7 +8,13 @@
     "start": "node server/index.js",
     "mock": "HARDCOVER_MOCK=1 node server/index.js",
     "qa": "node tools/qa.mjs",
-    "enrich": "node tools/hardcover.mjs enrich"
+    "enrich": "NODE_USE_ENV_PROXY=1 node tools/hardcover.mjs enrich",
+    "harvest": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs fetch",
+    "harvest:enrich": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs enrich",
+    "harvest:isbns": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs isbns",
+    "harvest:shelve": "node tools/harvest.mjs shelve",
+    "harvest:report": "node tools/harvest.mjs report",
+    "harvest:curated": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs curated"
   },
   "dependencies": {
     "express": "^5.2.1"

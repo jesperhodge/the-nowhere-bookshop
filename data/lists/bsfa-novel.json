@@ -1,0 +1,1537 @@
+{
+ "slug": "bsfa-novel",
+ "prize": "BSFA Award for Best Novel",
+ "rooms": [
+  "orrery",
+  "engine",
+  "longnow",
+  "brokenmirror",
+  "slipstream"
+ ],
+ "page": "BSFA Award for Best Novel",
+ "url": "https://en.wikipedia.org/wiki/BSFA_Award_for_Best_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364009979",
+ "revid": 1364009979,
+ "fetchedAt": "2026-08-05T16:27:00.430Z",
+ "counts": {
+  "entries": 249,
+  "winners": 57,
+  "cited": 192
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and Shortlists",
+   "skipped": "no header row"
+  },
+  {
+   "t": 1,
+   "heading": "Winners and Shortlists",
+   "headers": "Year | Author(s) | Work | Publisher/Publication | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 249,
+   "dropped": 1,
+   "winnerMark": "star"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Stand on Zanzibar",
+   "author": "John Brunner",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "The Jagged Orbit",
+   "author": "John Brunner",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "The Moment of Eclipse",
+   "author": "Brian W. Aldiss",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Rendezvous with Rama",
+   "author": "Arthur C. Clarke",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Inverted World",
+   "author": "Christopher Priest",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Orbitsville",
+   "author": "Bob Shaw",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Brontomek!",
+   "author": "Michael G. Coney",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "The Jonah Kit",
+   "author": "Ian Watson",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "A Scanner Darkly",
+   "author": "Philip K. Dick",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "The Unlimited Dream Company",
+   "author": "J. G. Ballard",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "A.K.A.: A Cosmic Fable",
+   "author": "Rob Swigart",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Blind Voices",
+   "author": "Tom Reamy",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The Fountains of Paradise",
+   "author": "Arthur C. Clarke",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "On Wings of Song",
+   "author": "Thomas M. Disch",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Timescape",
+   "author": "Gregory Benford",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Beyond the Blue Event Horizon",
+   "author": "Frederik Pohl",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Engine Summer",
+   "author": "John Crowley",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Molly Zero",
+   "author": "Keith Roberts",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Transfigurations",
+   "author": "Michael Bishop",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "A World Between",
+   "author": "Norman Spinrad",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Shadow of the Torturer",
+   "author": "Gene Wolfe",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Affirmation",
+   "author": "Christopher Priest",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Hello America",
+   "author": "J. G. Ballard",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Where Time Winds Blow",
+   "author": "Robert Holdstock",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Helliconia Spring",
+   "author": "Brian W. Aldiss",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "The Divine Invasion",
+   "author": "Philip K. Dick",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Little, Big",
+   "author": "John Crowley",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "No Enemy But Time",
+   "author": "Michael Bishop",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Sword of the Lictor",
+   "author": "Gene Wolfe",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Tik-Tok",
+   "author": "John Sladek",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Cat Karina",
+   "author": "Michael G. Coney",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Citadel of the Autarch",
+   "author": "Gene Wolfe",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Witchbreed",
+   "author": "Mary Gentle",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Helliconia Summer",
+   "author": "Brian W. Aldiss",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Mythago Wood",
+   "author": "Robert Holdstock",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Empire of the Sun",
+   "author": "J. G. Ballard",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "The Glamour",
+   "author": "Christopher Priest",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Neuromancer",
+   "author": "William Gibson",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Nights at the Circus",
+   "author": "Angela Carter",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Helliconia Winter",
+   "author": "Brian W. Aldiss",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Anubis Gates",
+   "author": "Tim Powers",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Free Live Free",
+   "author": "Gene Wolfe",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Kiteworld",
+   "author": "Keith Roberts",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Warrior Who Carried Life",
+   "author": "Geoff Ryman",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Ragged Astronauts",
+   "author": "Bob Shaw",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Blood Music",
+   "author": "Greg Bear",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Count Zero",
+   "author": "William Gibson",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Queen of the States",
+   "author": "Josephine Saxton",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Schismatrix",
+   "author": "Bruce Sterling",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Gráinne",
+   "author": "Keith Roberts",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Lavondyss",
+   "author": "Robert Holdstock",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "The Player of Games",
+   "author": "Iain M. Banks",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Mona Lisa Overdrive",
+   "author": "William Gibson",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Kairos",
+   "author": "Gwyneth Jones",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Wooden Spaceships",
+   "author": "Bob Shaw",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Life During Wartime",
+   "author": "Lucius Shepard",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Pyramids",
+   "author": "Terry Pratchett",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "A Child Across the Sky",
+   "author": "Jonathan Carroll",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The Child Garden",
+   "author": "Geoff Ryman",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Cyteen",
+   "author": "C. J. Cherryh",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The Gold Coast",
+   "author": "Kim Stanley Robinson",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Take Back Plenty",
+   "author": "Colin Greenland",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "The Difference Engine",
+   "author": "William Gibson & Bruce Sterling",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Hyperion",
+   "author": "Dan Simmons",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Rats and Gargoyles",
+   "author": "Mary Gentle",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Use of Weapons",
+   "author": "Iain M. Banks",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "The Fall of Hyperion",
+   "author": "Dan Simmons",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The Architecture of Desire",
+   "author": "Mary Gentle",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Eternal Light",
+   "author": "Paul J. McAuley",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Red Mars",
+   "author": "Kim Stanley Robinson",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Doomsday Book",
+   "author": "Connie Willis",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Hearts, Hands and Voices",
+   "author": "Ian McDonald",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Hot Head",
+   "author": "Simon Ings",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Lost Futures",
+   "author": "Lisa Tuttle",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Aztec Century",
+   "author": "Christopher Evans",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Ammonite",
+   "author": "Nicola Griffith",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Green Mars",
+   "author": "Kim Stanley Robinson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Harm's Way",
+   "author": "Colin Greenland",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Snow Crash",
+   "author": "Neal Stephenson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Feersum Endjinn",
+   "author": "Iain M. Banks",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Engineman",
+   "author": "Eric Brown",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Necroville",
+   "author": "Ian McDonald",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "North Wind",
+   "author": "Gwyneth Jones",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Permutation City",
+   "author": "Greg Egan",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The Time Ships",
+   "author": "Stephen Baxter",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Blood",
+   "author": "Michael Moorcock",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Chaga",
+   "author": "Ian McDonald",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Fairyland",
+   "author": "Paul J. McAuley",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Nano Flower",
+   "author": "Peter F. Hamilton",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Prestige",
+   "author": "Christopher Priest",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Excession",
+   "author": "Iain M. Banks",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Blue Mars",
+   "author": "Kim Stanley Robinson",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Holy Fire",
+   "author": "Bruce Sterling",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Interface",
+   "author": "Stephen Bury",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Memory Palace",
+   "author": "Gill Alderman",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Stone Canal",
+   "author": "Ken MacLeod",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Sparrow",
+   "author": "Mary Doria Russell",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Earthquake Weather",
+   "author": "Tim Powers",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Jack Faust",
+   "author": "Michael Swanwick",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "A Son of the Rock",
+   "author": "Jack Deighton",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Extremes",
+   "author": "Christopher Priest",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The Cassini Division",
+   "author": "Ken MacLeod",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Inversions",
+   "author": "Iain M. Banks",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Queen City Jazz",
+   "author": "Kathleen Ann Goonan",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "To Hold Infinity",
+   "author": "John Meaney",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Sky Road",
+   "author": "Ken MacLeod",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Children of God",
+   "author": "Mary Doria Russell",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Headlong",
+   "author": "Simon Ings",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Silver Screen",
+   "author": "Justina Robson",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "ThigMOO",
+   "author": "Eugene Byrne",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Ash: A Secret History",
+   "author": "Mary Gentle",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Paradox",
+   "author": "John Meaney",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Perdido Street Station",
+   "author": "China Miéville",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "redRobe",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Revelation Space",
+   "author": "Alastair Reynolds",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Chasm City",
+   "author": "Alastair Reynolds",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "American Gods",
+   "author": "Neil Gaiman",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Bold as Love",
+   "author": "Gwyneth Jones",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Lust",
+   "author": "Geoff Ryman",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Pashazade: The First Arabesk",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Secret of Life",
+   "author": "Paul McAuley",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Separation",
+   "author": "Christopher Priest",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Castles Made of Sand",
+   "author": "Gwyneth Jones",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Effendi: The Second Arabesk",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Light",
+   "author": "M. John Harrison",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Scar",
+   "author": "China Miéville",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Years of Rice and Salt",
+   "author": "Kim Stanley Robinson",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Felaheen: The Third Arabesk",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Absolution Gap",
+   "author": "Alastair Reynolds",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Maul",
+   "author": "Tricia Sullivan",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Midnight Lamp",
+   "author": "Gwyneth Jones",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Natural History",
+   "author": "Justina Robson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Pattern Recognition",
+   "author": "William Gibson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "River of Gods",
+   "author": "Ian McDonald",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Century Rain",
+   "author": "Alastair Reynolds",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Forty Signs of Rain",
+   "author": "Kim Stanley Robinson",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Jonathan Strange & Mr Norrell",
+   "author": "Susanna Clarke",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Newton's Wake",
+   "author": "Ken MacLeod",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Stamping Butterflies",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Air",
+   "author": "Geoff Ryman",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "9tail Fox",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Accelerando",
+   "author": "Charles Stross",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Learning the World",
+   "author": "Ken MacLeod",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Living Next Door to the God of Love",
+   "author": "Justina Robson",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "End of the World Blues",
+   "author": "Jon Courtenay Grimwood",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Darkland",
+   "author": "Liz Williams",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Icarus",
+   "author": "Roger Levy",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Witchfinder",
+   "author": "James Morrow",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Nova Swing",
+   "author": "M. John Harrison",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Brasyl",
+   "author": "Ian McDonald",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Alice in Sunderland",
+   "author": "Bryan Talbot",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Black Man",
+   "author": "Richard Morgan",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Execution Channel",
+   "author": "Ken MacLeod",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Prefect",
+   "author": "Alastair Reynolds",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Yiddish Policemen's Union",
+   "author": "Michael Chabon",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Sessions",
+   "author": "Ken MacLeod",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Anathem",
+   "author": "Neal Stephenson",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Flood",
+   "author": "Stephen Baxter",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Gone-Away World",
+   "author": "Nick Harkaway",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The City & the City",
+   "author": "China Miéville",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Ark",
+   "author": "Stephen Baxter",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Lavinia",
+   "author": "Ursula K. Le Guin",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Yellow Blue Tibia",
+   "author": "Adam Roberts",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Dervish House",
+   "author": "Ian McDonald",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Lightborn",
+   "author": "Tricia Sullivan",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Restoration Game",
+   "author": "Ken MacLeod",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Windup Girl",
+   "author": "Paolo Bacigalupi",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Zoo City",
+   "author": "Lauren Beukes",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Islanders",
+   "author": "Christopher Priest",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "By Light Alone",
+   "author": "Adam Roberts",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Cyber Circus",
+   "author": "Kim Lakin-Smith",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Embassytown",
+   "author": "China Miéville",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Osama",
+   "author": "Lavie Tidhar",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Jack Glass",
+   "author": "Adam Roberts",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Dark Eden",
+   "author": "Chris Beckett",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Empty Space",
+   "author": "M. John Harrison",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Intrusion",
+   "author": "Ken MacLeod",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Ancillary Justice",
+   "author": "Ann Leckie",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Ack-Ack Macaque",
+   "author": "Gareth L. Powell",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Adjacent",
+   "author": "Christopher Priest",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Evening's Empires",
+   "author": "Paul McAuley",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "God's War",
+   "author": "Kameron Hurley",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Ancillary Sword",
+   "author": "Ann Leckie",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Cuckoo Song",
+   "author": "Frances Hardinge",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Europe in Autumn",
+   "author": "Dave Hutchinson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The First Fifteen Lives of Harry August",
+   "author": "Claire North",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Lagoon",
+   "author": "Nnedi Okorafor",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Moon King",
+   "author": "Neil Williamson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Race",
+   "author": "Nina Allan",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Wolves",
+   "author": "Simon Ings",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The House of Shattered Wings",
+   "author": "Aliette de Bodard",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Europe at Midnight",
+   "author": "Dave Hutchinson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Glorious Angels",
+   "author": "Justina Robson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Luna: New Moon",
+   "author": "Ian McDonald",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Mother of Eden",
+   "author": "Chris Beckett",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Europe in Winter",
+   "author": "Dave Hutchinson",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Azanian Bridges",
+   "author": "Nick Wood",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "A Closed and Common Orbit",
+   "author": "Becky Chambers",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Daughter of Eden",
+   "author": "Chris Beckett",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Occupy Me",
+   "author": "Tricia Sullivan",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Rift",
+   "author": "Nina Allan",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Dreams Before the Start of Time",
+   "author": "Anne Charnock",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Exit West",
+   "author": "Mohsin Hamid",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Provenance",
+   "author": "Ann Leckie",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Embers of War",
+   "author": "Gareth L. Powell",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Europe at Dawn",
+   "author": "Dave Hutchinson",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Revenant Gun",
+   "author": "Yoon Ha Lee",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Before Mars",
+   "author": "Emma Newman",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Rosewater",
+   "author": "Tade Thompson",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Children of Ruin",
+   "author": "Adrian Tchaikovsky",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Green Man’s Foe",
+   "author": "Juliet E. McKenna",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Atlas Alone",
+   "author": "Emma Newman",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Fleet of Knives",
+   "author": "Gareth L. Powell",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Rosewater Insurrection",
+   "author": "Tade Thompson",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The City We Became",
+   "author": "N. K. Jemisin",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Threading the Labyrinth",
+   "author": "Tiffani Angus",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Piranesi",
+   "author": "Susanna Clarke",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Sunken Land Begins to Rise Again",
+   "author": "M. John Harrison",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Light of Impossible Stars",
+   "author": "Gareth L. Powell",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Ministry for the Future",
+   "author": "Kim Stanley Robinson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Club Ded",
+   "author": "Nikhil Singh",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Doors of Eden",
+   "author": "Adrian Tchaikovsky",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Comet Weather",
+   "author": "Liz Williams",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Water Must Fall",
+   "author": "Nick Wood",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Shards of Earth",
+   "author": "Adrian Tchaikovsky",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Blackthorn Winter",
+   "author": "Liz Williams",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A Desolation Called Peace",
+   "author": "Arkady Martine",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Skyward Inn",
+   "author": "Aliya Whiteley",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Purgatory Mount",
+   "author": "Adam Roberts",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Man's Challenge",
+   "author": "Juliet E. McKenna",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "City of Last Chances",
+   "author": "Adrian Tchaikovsky",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The This",
+   "author": "Adam Roberts",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Stars and Bones",
+   "author": "Gareth L. Powell",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Red Scholar's Wake",
+   "author": "Aliette de Bodard",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Coral Bones",
+   "author": "E.J. Swift",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Man’s Quarry",
+   "author": "Juliet E. McKenna",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Airside",
+   "author": "Christopher Priest",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Descendant Machine",
+   "author": "Gareth L. Powell",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "HIM",
+   "author": "Geoff Ryman",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Shigidi and the Brass Head of Obalufon",
+   "author": "Wole Talabi",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Three Eight One",
+   "author": "Aliya Whiteley",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Calypso",
+   "author": "Oliver K. Langmead",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Rabbit in the Moon",
+   "author": "Fiona Moore",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Alien Clay",
+   "author": "Adrian Tchaikovsky§",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "When There Are Wolves Again",
+   "author": "E.J. Swift",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Salt Oracle",
+   "author": "Lorraine Wilson",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Edge of Oblivion",
+   "author": "Kirk Weddell",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Project Hanuman",
+   "author": "Stewart Hotston",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "A Granite Silence",
+   "author": "Nina Allan",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

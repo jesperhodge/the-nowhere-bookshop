@@ -1,0 +1,310 @@
+{
+ "slug": "latimes-first",
+ "prize": "Los Angeles Times Book Prize, Art Seidenbaum Award for First Fiction",
+ "rooms": [
+  "longroom",
+  "smallpress"
+ ],
+ "page": "Los Angeles Times Book Prize",
+ "url": "https://en.wikipedia.org/wiki/Los_Angeles_Times_Book_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364873395",
+ "revid": 1364873395,
+ "fetchedAt": "2026-08-05T16:26:57.446Z",
+ "counts": {
+  "entries": 35,
+  "winners": 35,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Art Seidenbaum Award for First Fiction",
+   "headers": "Year | Author | Title | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 35,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "Biography",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 2,
+   "heading": "Christopher Isherwood Prize for Autobiographical Prose",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 3,
+   "heading": "Current interest",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 4,
+   "heading": "Fiction",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 5,
+   "heading": "Graphic Novel/Comics",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 6,
+   "heading": "History",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 7,
+   "heading": "Mystery/thriller",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 8,
+   "heading": "Poetry",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 9,
+   "heading": "Science Fiction, Fantasy, and Speculative Fiction",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 10,
+   "heading": "Science and technology",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 11,
+   "heading": "Young adult literature",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 12,
+   "heading": "Innovator's Award",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 13,
+   "heading": "Robert Kirsch Award",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Pangs of Love",
+   "author": "David Wong Louie",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "High Cotton",
+   "author": "Darryl Pinckney",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Love",
+   "author": "Paul Kafka",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Year of the Frog",
+   "author": "Martin M. Šimecka",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "American Studies",
+   "author": "Mark Merlis",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Smell of Apples",
+   "author": "Mark Behr",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Don't Erase Me: Stories",
+   "author": "Carolyn Ferrell",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Kalimantaan",
+   "author": "C. S. Godshalk",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Amy and Isabelle",
+   "author": "Elizabeth Strout",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Romantics",
+   "author": "Pankaj Mishra",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Dark Room",
+   "author": "Rachel Seiffert",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Prague",
+   "author": "Arthur Phillips",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Curious Incident of the Dog in the Night-Time",
+   "author": "Mark Haddon",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Harbor",
+   "author": "Lorraine Adams",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Beasts of No Nation",
+   "author": "Uzodinma Iweala",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "White Ghost Girls",
+   "author": "Alice Greenway",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Beautiful Things That Heaven Bears",
+   "author": "Dinaw Mengestu",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Finding Nouf",
+   "author": "Zoë Ferraris",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "American Rust",
+   "author": "Philipp Meyer",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The House of Tomorrow",
+   "author": "Peter Bognanni",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Shards",
+   "author": "Ismet Prcic",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Seating Arrangements",
+   "author": "Maggie Shipstead",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "We Need New Names",
+   "author": "NoViolet Bulawayo",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Faces in the Crowd",
+   "author": "Valeria Luiselli with Christina MacSweeney",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Fisherman",
+   "author": "Chigozie Obioma",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Nix",
+   "author": "Nathan Hill",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Sour Heart",
+   "author": "Jenny Zhang",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Heads of the Colored People",
+   "author": "Nafissa Thompson-Spires",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Old Drift",
+   "author": "Namwali Serpell",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Secret Lives of Church Ladies",
+   "author": "Deesha Philyaw",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Brood",
+   "author": "Jackie Polzin",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Return of Faraz Ali",
+   "author": "Aamina Ahmad",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Company: Stories",
+   "author": "Shannon Sanders",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Cinema Love",
+   "author": "Jiaming Tang",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Ibis: A Novel",
+   "author": "Justin Haynes",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

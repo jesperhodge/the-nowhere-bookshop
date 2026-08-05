@@ -1,0 +1,1347 @@
+{
+ "slug": "pulitzer-history",
+ "prize": "Pulitzer Prize for History",
+ "rooms": [
+  "longtable",
+  "readingroom"
+ ],
+ "page": "Pulitzer Prize for History",
+ "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_History",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364870666",
+ "revid": 1364870666,
+ "fetchedAt": "2026-08-05T16:27:11.606Z",
+ "counts": {
+  "entries": 207,
+  "winners": 52,
+  "cited": 155
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1910s–1970s",
+   "headers": "Year | Author | Title | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 62,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 1,
+   "heading": "1980s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 29,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 33,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 30,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 32,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 21,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "With Americans of Past and Present Days",
+   "author": "Jean Jules Jusserand",
+   "year": 1917,
+   "kind": "c"
+  },
+  {
+   "title": "A History of the Civil War, 1861–1865",
+   "author": "James Ford Rhodes",
+   "year": 1918,
+   "kind": "c"
+  },
+  {
+   "title": "The War with Mexico",
+   "author": "Justin H. Smith",
+   "year": 1920,
+   "kind": "c"
+  },
+  {
+   "title": "The Victory at Sea",
+   "author": "William Sowden Sims & Burton J. Hendrick",
+   "year": 1921,
+   "kind": "c"
+  },
+  {
+   "title": "The Founding of New England",
+   "author": "James Truslow Adams",
+   "year": 1922,
+   "kind": "c"
+  },
+  {
+   "title": "The Supreme Court in United States History",
+   "author": "Charles Warren",
+   "year": 1923,
+   "kind": "c"
+  },
+  {
+   "title": "The American Revolution: A Constitutional Interpretation",
+   "author": "Charles Howard McIlwain",
+   "year": 1924,
+   "kind": "c"
+  },
+  {
+   "title": "History of the American Frontier",
+   "author": "Frederic L. Paxson",
+   "year": 1925,
+   "kind": "c"
+  },
+  {
+   "title": "A History of the United States, Vol. VI: The War for Southern Independence (1849–1865)",
+   "author": "Edward Channing",
+   "year": 1926,
+   "kind": "c"
+  },
+  {
+   "title": "Pinckney's Treaty",
+   "author": "Samuel Flagg Bemis",
+   "year": 1927,
+   "kind": "c"
+  },
+  {
+   "title": "Main Currents in American Thought",
+   "author": "Vernon Louis Parrington",
+   "year": 1928,
+   "kind": "c"
+  },
+  {
+   "title": "The Organization and Administration of the Union Army, 1861–1865",
+   "author": "Fred Albert Shannon",
+   "year": 1929,
+   "kind": "c"
+  },
+  {
+   "title": "The War of Independence",
+   "author": "Claude H. Van Tyne",
+   "year": 1930,
+   "kind": "w"
+  },
+  {
+   "title": "The Coming of the War, 1914",
+   "author": "Bernadotte E. Schmitt",
+   "year": 1931,
+   "kind": "c"
+  },
+  {
+   "title": "My Experiences in the World War",
+   "author": "John J. Pershing",
+   "year": 1932,
+   "kind": "c"
+  },
+  {
+   "title": "The Significance of Sections in American History",
+   "author": "Frederick Jackson Turner",
+   "year": 1933,
+   "kind": "w"
+  },
+  {
+   "title": "The People's Choice",
+   "author": "Herbert Agar",
+   "year": 1934,
+   "kind": "c"
+  },
+  {
+   "title": "The Colonial Period of American History",
+   "author": "Charles McLean Andrews",
+   "year": 1935,
+   "kind": "c"
+  },
+  {
+   "title": "A Constitutional History of the United States",
+   "author": "Andrew C. McLaughlin",
+   "year": 1936,
+   "kind": "c"
+  },
+  {
+   "title": "The Flowering of New England, 1815–1865",
+   "author": "Van Wyck Brooks",
+   "year": 1937,
+   "kind": "c"
+  },
+  {
+   "title": "The Road to Reunion, 1865–1900",
+   "author": "Paul Herman Buck",
+   "year": 1938,
+   "kind": "c"
+  },
+  {
+   "title": "A History of American Magazines",
+   "author": "Frank Luther Mott",
+   "year": 1939,
+   "kind": "c"
+  },
+  {
+   "title": "Abraham Lincoln: The War Years",
+   "author": "Carl Sandburg",
+   "year": 1940,
+   "kind": "c"
+  },
+  {
+   "title": "The Atlantic Migration, 1607–1860",
+   "author": "Marcus Lee Hansen",
+   "year": 1941,
+   "kind": "w"
+  },
+  {
+   "title": "Reveille in Washington, 1860–1865",
+   "author": "Margaret Leech",
+   "year": 1942,
+   "kind": "c"
+  },
+  {
+   "title": "Paul Revere and the World He Lived In",
+   "author": "Esther Forbes",
+   "year": 1943,
+   "kind": "c"
+  },
+  {
+   "title": "The Growth of American Thought",
+   "author": "Merle Curti",
+   "year": 1944,
+   "kind": "c"
+  },
+  {
+   "title": "Unfinished Business",
+   "author": "Stephen Bonsal",
+   "year": 1945,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Jackson",
+   "author": "Arthur M. Schlesinger Jr.",
+   "year": 1946,
+   "kind": "c"
+  },
+  {
+   "title": "Scientists against Time",
+   "author": "James Phinney Baxter III",
+   "year": 1947,
+   "kind": "c"
+  },
+  {
+   "title": "Across the Wide Missouri",
+   "author": "Bernard DeVoto",
+   "year": 1948,
+   "kind": "c"
+  },
+  {
+   "title": "The Disruption of American Democracy",
+   "author": "Roy Franklin Nichols",
+   "year": 1949,
+   "kind": "c"
+  },
+  {
+   "title": "Art and Life in America",
+   "author": "Oliver W. Larkin",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "The Old Northwest, Pioneer Period 1815–1840",
+   "author": "R. Carlyle Buley",
+   "year": 1951,
+   "kind": "c"
+  },
+  {
+   "title": "The Uprooted",
+   "author": "Oscar Handlin",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "The Era of Good Feelings",
+   "author": "George Dangerfield",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "A Stillness at Appomattox",
+   "author": "Bruce Catton",
+   "year": 1954,
+   "kind": "c"
+  },
+  {
+   "title": "Great River: The Rio Grande in North American History",
+   "author": "Paul Horgan",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Reform",
+   "author": "Richard Hofstadter",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Russia Leaves the War: Soviet-American Relations, 1917–1920",
+   "author": "George F. Kennan",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Banks and Politics in America",
+   "author": "Bray Hammond",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "The Republican Era: 1869–1901",
+   "author": "Leonard D. White† & Jean Schneider",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "In the Days of McKinley",
+   "author": "Margaret Leech",
+   "year": 1960,
+   "kind": "c"
+  },
+  {
+   "title": "Between War and Peace: The Potsdam Conference",
+   "author": "Herbert Feis",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "The Triumphant Empire: Thunder-Clouds Gather in the West, 1763–1766",
+   "author": "Lawrence H. Gipson",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Washington: Village and Capital, 1800–1878",
+   "author": "Constance McLaughlin Green",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "Puritan Village: The Formation of a New England Town",
+   "author": "Sumner Chilton Powell",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Greenback Era: A Social and Political History of American Finance, 1865–1879",
+   "author": "Irwin Unger",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of the Mind in America",
+   "author": "Perry Miller",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "Exploration and Empire: The Explorer and the Scientist in the Winning of the American West",
+   "author": "William H. Goetzmann",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Ideological Origins of the American Revolution",
+   "author": "Bernard Bailyn",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Origins of the Fifth Amendment: The Right against Self-Incrimination",
+   "author": "Leonard W. Levy",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Present at the Creation: My Years in the State Department",
+   "author": "Dean Acheson",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Roosevelt: The Soldier of Freedom",
+   "author": "James MacGregor Burns",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Neither Black nor White: Slavery and Race Relations in Brazil and the United States",
+   "author": "Carl N. Degler",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "People of Paradox: An Inquiry Concerning the Origins of American Civilization",
+   "author": "Michael Kammen",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Americans: The Democratic Experience",
+   "author": "Daniel J. Boorstin",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Jefferson and His Time",
+   "author": "Dumas Malone",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Lamy of Santa Fe",
+   "author": "Paul Horgan",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Impending Crisis, 1848–1861",
+   "author": "David M. Potter† (Completed & edited by Don E. Fehrenbacher)",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Visible Hand: The Managerial Revolution in American Business",
+   "author": "Alfred D. Chandler, Jr.",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Dred Scott Case: Its Significance in American Law and Politics",
+   "author": "Don E. Fehrenbacher",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Been in the Storm So Long: The Aftermath of Slavery",
+   "author": "Leon F. Litwack",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Urban Crucible: Social Change, Political Consciousness and the Origins of the American Revolution",
+   "author": "Gary B. Nash",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Plains Across: The Overland Emigrants on the Trans-Mississippi West, 1840–60",
+   "author": "John B. Unruh",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "American Education: The National Experience, 1783–1876",
+   "author": "Lawrence A. Cremin",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Over Here: The First World War and American Society",
+   "author": "David M. Kennedy",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "A Search for Power: The 'Weaker Sex' in Seventeenth Century New England",
+   "author": "Lyle Koehler",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Mary Chesnut's Civil War",
+   "author": "C. Vann Woodward",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "White Supremacy: A Comparative Study in American and South African History",
+   "author": "George M. Fredrickson",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Power and Culture: The Japanese-American War, 1941–1945",
+   "author": "Akira Iriye",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Transformation of Virginia, 1740–1790",
+   "author": "Rhys L. Isaac",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Glorious Cause: The American Revolution, 1763–1789",
+   "author": "Robert Middlekauff",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Southern Honor: Ethics and Behavior in the Old South",
+   "author": "Bertram Wyatt-Brown",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Prophets of Regulation: Charles Francis Adams, Louis D. Brandeis, James M. Landis, Alfred E. Kahn",
+   "author": "Thomas K. McCraw",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Father: The United States Government and the American Indians",
+   "author": "Francis Paul Prucha",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "The Crucible of Race: Black-White Relations in the American South since Emancipation",
+   "author": "Joel Williamson",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "...the Heavens and the Earth: A Political History of the Space Age",
+   "author": "Walter A. McDougall",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Labor of Love, Labor of Sorrow: Black Women, Work and the Family from Slavery to the Present",
+   "author": "Jacqueline Jones",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Novus Ordo Seclorum: the Intellectual Origins of the Constitution",
+   "author": "Forrest McDonald",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Emigrants and Exiles: Ireland and the Irish Exodus to North America",
+   "author": "Kerby A. Miller",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Voyagers to the West: A Passage in the Peopling of America on the Eve of the Revolution",
+   "author": "Bernard Bailyn",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Eisenhower: At War, 1943–1945",
+   "author": "David Eisenhower",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Bearing the Cross: Martin Luther King, Jr., and the Southern Christian Leadership Conference",
+   "author": "David Garrow",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "The Launching of Modern American Science, 1846–1876",
+   "author": "Robert V. Bruce",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall of the House of Labor: The Workplace, the State, and American Labor Activism, 1865–1925",
+   "author": "David Montgomery",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "The Care of Strangers: The Rise of America's Hospital System",
+   "author": "Charles E. Rosenberg",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Parting the Waters: America in the King Years, 1954-1963",
+   "author": "Taylor Branch",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Battle Cry of Freedom: The Civil War Era",
+   "author": "James M. McPherson",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Reconstruction: America's Unfinished Revolution – 1863–1877",
+   "author": "Eric Foner",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "A Bright Shining Lie: John Paul Vann and America in Vietnam",
+   "author": "Neil Sheehan",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "In Our Image: America's Empire in the Philippines",
+   "author": "Stanley Karnow",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "The Image of the Black in Western Art, Volume IV: From the American Revolution to World War I",
+   "author": "Hugh Honour",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "American Genesis: A Century of Invention and Technological Enthusiasm 1870–1970",
+   "author": "Thomas P. Hughes",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "A Midwife's Tale",
+   "author": "Laurel Thatcher Ulrich",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Making a New Deal: Industrial Workers in Chicago, 1919–1939",
+   "author": "Lizabeth Cohen",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Civil Rights Era: Origins and Development of National Policy",
+   "author": "Hugh Davis Graham",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "America in 1857: A Nation on the Brink",
+   "author": "Kenneth M. Stampp",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Fate of Liberty: Abraham Lincoln and Civil Liberties",
+   "author": "Mark E. Neely, Jr.",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Nature's Metropolis: Chicago and the Great West",
+   "author": "William Cronon",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "A Very Thin Line: The Iran-Contra Affairs",
+   "author": "Theodore Draper",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Profits in the Wilderness: Entrepreneurship and the Founding of New England Towns in the Seventeenth Century",
+   "author": "John Frederick Martin",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Middle Ground: Indians, Empires, and Republics in the Great Lakes Region, 1650–1815",
+   "author": "Richard White",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Radicalism of the American Revolution",
+   "author": "Gordon S. Wood",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Promise of the New South: Life after Reconstruction",
+   "author": "Edward L. Ayers",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln at Gettysburg: The Words That Remade America",
+   "author": "Garry Wills",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Crime and Punishment in American History",
+   "author": "Lawrence M. Friedman",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Case Closed: Lee Harvey Oswald and the Assassination of JFK",
+   "author": "Gerald Posner",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "William Faulkner and Southern History",
+   "author": "Joel Williamson",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "No Ordinary Time: Franklin and Eleanor Roosevelt: The Home Front in World War II",
+   "author": "Doris Kearns Goodwin",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Stories of Scottsboro",
+   "author": "James Goodman",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln in American Memory",
+   "author": "Merrill D. Peterson",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "William Cooper's Town: Power and Persuasion on the Frontier of the Early American Republic",
+   "author": "Alan Taylor",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Sacred Fire of Liberty: James Madison and the Founding of the Federal Republic",
+   "author": "Lance Banning",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Sun: The Making of the Hydrogen Bomb",
+   "author": "Richard Rhodes",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Original Meanings: Politics and Ideas in the Making of the Constitution",
+   "author": "Jack N. Rakove",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Battle for Christmas: A Cultural History of America's Most Cherished Holiday",
+   "author": "Stephen Nissenbaum",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Founding Mothers and Fathers: Gendered Power and the Forming of American Society",
+   "author": "Mary Beth Norton",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Summer for the Gods: The Scopes Trial and America's Continuing Debate over Science and Religion",
+   "author": "Edward J. Larson",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Big Trouble: A Murder in a Small Western Town Sets off a Struggle for the Soul of America",
+   "author": "J. Anthony Lukas",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Civic Ideals: Conflicting Visions of Citizenship in U.S. History",
+   "author": "Rogers Smith",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Gotham: A History of New York City to 1898",
+   "author": "Edwin G. Burrows & Mike Wallace",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "This New Ocean: The Story of the First Space Age",
+   "author": "William E. Burrows",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "In a Barren Land: American Indian Dispossession and Survival",
+   "author": "Paula Mitchell Marks",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Freedom from Fear: The American People in Depression and War",
+   "author": "David M. Kennedy",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Into the American Woods: Negotiators on the Pennsylvania Frontier",
+   "author": "James H. Merrell",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Cousins' Wars: Religion, Politics and the Triumph of Anglo-America",
+   "author": "Kevin Phillips",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Founding Brothers: The Revolutionary Generation",
+   "author": "Joseph J. Ellis",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Way Out There in the Blue: Reagan, Star Wars and the End of the Cold War",
+   "author": "Frances FitzGerald",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Right to Vote: The Contested History of Democracy in the United States",
+   "author": "Alexander Keyssar",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Metaphysical Club: A Story of Ideas in America",
+   "author": "Louis Menand",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Deep Souths: Delta, Piedmont, and the Sea Island Society in the Age of Segregation",
+   "author": "J. William Harris",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Facing East from Indian Country: A Native History of Early America",
+   "author": "Daniel K. Richter",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "An Army at Dawn: The War in North Africa, 1942–1943",
+   "author": "Rick Atkinson",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "At the Hands of Persons Unknown: The Lynching of Black America",
+   "author": "Philip Dray",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Rereading Sex: Battles over Sexual Knowledge and Suppression in Nineteenth Century America",
+   "author": "Helen Lefkowitz Horowitz",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "A Nation Under Our Feet: Black Political Struggles in the Rural South from Slavery to the Great Migration",
+   "author": "Steven Hahn",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "They Marched into Sunlight: War and Peace, Vietnam and America, October 1967",
+   "author": "David Maraniss",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Great Fortune: The Epic of Rockefeller Center",
+   "author": "Daniel Okrent",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Washington's Crossing",
+   "author": "David Hackett Fischer",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Arc of Justice: A Saga of Race, Civil Rights, and Murder in the Jazz Age",
+   "author": "Kevin Boyle",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Conjectures of Order: Intellectual Life and the American South, 1810-1860, volumes 1 & 2",
+   "author": "Michael O'Brien",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Polio: An American Story",
+   "author": "David Oshinsky",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "New York Burning: Liberty, Slavery, and Conspiracy in Eighteenth-Century Manhattan",
+   "author": "Jill Lepore",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Rise of American Democracy: Jefferson to Lincoln",
+   "author": "Sean Wilentz",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Race Beat: The Press, the Civil Rights Struggle, and the Awakening of a Nation",
+   "author": "Gene Roberts & Hank Klibanoff",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Middle Passages: African American Journeys to Africa, 1787-2005",
+   "author": "James T. Campbell",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Mayflower: A Story of Courage, Community, and War",
+   "author": "Nathaniel Philbrick",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "What Hath God Wrought: The Transformation of America, 1815–1848",
+   "author": "Daniel Walker Howe",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Nixon and Kissinger: Partners in Power",
+   "author": "Robert Dallek",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Coldest Winter: America and the Korean War",
+   "author": "David Halberstam",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Hemingses of Monticello: An American Family",
+   "author": "Annette Gordon-Reed",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "This Republic of Suffering: Death and the American Civil War",
+   "author": "Drew Gilpin Faust",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Liberal Hour: Washington and the Politics of Change in the 1960s",
+   "author": "G. Calvin Mackenzie & Robert Weisbrot",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Lords of Finance: The Bankers Who Broke the World",
+   "author": "Liaquat Ahamed",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Fordlandia: The Rise and Fall of Henry Ford's Forgotten Jungle City",
+   "author": "Greg Grandin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Empire of Liberty: A History of the Early Republic, 1789–1815",
+   "author": "Gordon S. Wood",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Fiery Trial: Abraham Lincoln and American Slavery",
+   "author": "Eric Foner",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Confederate Reckoning: Power and Politics in the Civil War South",
+   "author": "Stephanie McCurry",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Eden on the Charles: The Making of Boston",
+   "author": "Michael J. Rawson",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Malcolm X: A Life of Reinvention",
+   "author": "Manning Marable",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Empires, Nations, and Families: A History of the North American West, 1800-1860",
+   "author": "Anne F. Hyde",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Eleventh Day: The Full Story of 9/11 and Osama Bin Laden",
+   "author": "Anthony Summers & Robbyn Swan",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Railroaded: The Transcontinentals and the Making of Modern America",
+   "author": "Richard White",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Embers of War: The Fall of an Empire and the Making of America's Vietnam",
+   "author": "Fredrik Logevall",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Barbarous Years: The Peopling of British North America: The Conflict of Civilizations, 1600-1675",
+   "author": "Bernard Bailyn",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln's Code: The Laws of War in American History",
+   "author": "John Fabian Witt",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Internal Enemy: Slavery and War in Virginia, 1772-1832",
+   "author": "Alan Taylor",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "A Dreadful Deceit: The Myth of Race from the Colonial Era to Obama's America",
+   "author": "Jacqueline Jones",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Command and Control: Nuclear Weapons, the Damascus Accident, and the Illusion of Safety",
+   "author": "Eric Schlosser",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Encounters at the Heart of the World: A History of the Mandan People",
+   "author": "Elizabeth A. Fenn",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Empire of Cotton: A Global History",
+   "author": "Sven Beckert",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "An Empire on the Edge: How Britain Came to Fight America",
+   "author": "Nick Bunker",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Custer's Trials: A Life on the Frontier of a New America",
+   "author": "T. J. Stiles",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Pentagon's Brain: An Uncensored History of DARPA, America's Top-Secret Military Research Agency",
+   "author": "Annie Jacobsen",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Marching Home: Union Veterans and Their Unending Civil War",
+   "author": "Brian Matthew Jordan",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Target Tokyo: Jimmy Doolittle and the Raid That Avenged Pearl Harbor",
+   "author": "James M. Scott",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Blood in the Water: The Attica Prison Uprising of 1971 and Its Legacy",
+   "author": "Heather Ann Thompson",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Brothers at Arms: American Independence and the Men of France and Spain Who Saved It",
+   "author": "Larrie D. Ferreiro",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "New England Bound: Slavery and Colonization in Early America",
+   "author": "Wendy Warren",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Gulf: The Making of an American Sea",
+   "author": "Jack E. Davis",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Fear City: New York's Fiscal Crisis and the Rise of Austerity Politics",
+   "author": "Kim Phillips-Fein",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Hitler in Los Angeles: How Jews Foiled Nazi Plots against Hollywood and America",
+   "author": "Steven J. Ross",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Frederick Douglass: Prophet of Freedom",
+   "author": "David W. Blight",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Civilizing Torture: An American Tradition",
+   "author": "W. Fitzhugh Brundage",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "American Eden: David Hosack, Botany, and Medicine in the Garden of the Early Republic",
+   "author": "Victoria Johnson",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Sweet Taste of Liberty: A True Story of Slavery and Restitution in America",
+   "author": "W. Caleb McDaniel",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The End of the Myth: From the Frontier to the Border Wall in the Mind of America",
+   "author": "Greg Grandin",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Race for Profit: How Banks and the Real Estate Industry Undermined Black Homeownership",
+   "author": "Keeanga-Yamahtta Taylor",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Franchise: The Golden Arches in Black America",
+   "author": "Marcia Chatelain",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Deviant's War: The Homosexual vs. the United States of America",
+   "author": "Eric Cervini",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Three-Cornered War: The Union, the Confederacy, and Native Peoples in the Fight for the West",
+   "author": "Megan Kate Nelson",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Covered with Night: A Story of Murder and Indigenous Justice in Early America",
+   "author": "Nicole Eustace",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Cuba: An American History",
+   "author": "Ada Ferrer",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Until Justice Be Done: America's First Civil Rights Movement, from the Revolution to Reconstruction",
+   "author": "Kate Masur",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Freedom's Dominion: A Saga of White Resistance to Federal Power",
+   "author": "Jefferson Cowie",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Watergate: A New History",
+   "author": "Garrett M. Graff",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Seeing Red: Indigenous Land, American Expansion, and the Political Economy of Plunder in North America",
+   "author": "Michael John Witgen",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "No Right to an Honest Living: The Struggles of Boston's Black Workers in the Civil War Era",
+   "author": "Jacqueline Jones",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Continental Reckoning: The American West in the Age of Expansion",
+   "author": "Elliott West",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "American Anarchy: The Epic Struggle between Immigrant Radicals and the US Government at the Dawn of the Twentieth Century",
+   "author": "Michael Willrich",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Native Nations: A Millennium in North America",
+   "author": "Kathleen DuVal",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Combee: Harriet Tubman, the Combahee River Raid, and Black Freedom during the Civil War",
+   "author": "Edda L. Fields-Black",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Plantation Goods: A Material History of American Slavery",
+   "author": "Seth Rockman",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "We the People: A History of the U.S. Constitution",
+   "author": "Jill Lepore",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "King of Kings: The Iranian Revolution: A Story of Hubris, Delusion and Catastrophic Miscalculation",
+   "author": "Scott Anderson",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Born in Flames: The Business of Arson and the Remaking of the American City",
+   "author": "Bench Ansfield",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

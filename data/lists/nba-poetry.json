@@ -1,0 +1,2959 @@
+{
+ "slug": "nba-poetry",
+ "prize": "National Book Award for Poetry",
+ "rooms": [
+  "attic",
+  "rafters",
+  "oldbeam"
+ ],
+ "page": "National Book Award for Poetry",
+ "url": "https://en.wikipedia.org/wiki/National_Book_Award_for_Poetry",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1355728854",
+ "revid": 1355728854,
+ "fetchedAt": "2026-08-05T16:27:17.056Z",
+ "counts": {
+  "entries": 486,
+  "winners": 72,
+  "cited": 414
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and Nominees",
+   "headers": "Year | Author | Title(s) | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 486,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "Multiple wins",
+   "skipped": "no title/author column",
+   "headers": "Wins | Poet | Years"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Paterson: Book Three and Selected Poems",
+   "author": "William Carlos Williams",
+   "year": 1950,
+   "kind": "w"
+  },
+  {
+   "title": "The Auroras of Autumn",
+   "author": "Wallace Stevens",
+   "year": 1951,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Marianne Moore",
+   "year": 1952,
+   "kind": "w"
+  },
+  {
+   "title": "Nones",
+   "author": "W. H. Auden",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "The Spirit of the Scene",
+   "author": "William Rose Benèt",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Richard Eberhart",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems of Horace Gregory",
+   "author": "Horace Gregory",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "The Seven-League Crutches",
+   "author": "Randall Jarrell",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Praise to the End!",
+   "author": "Theodore Roethke",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Muriel Rukeyser",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Paterson: Book Four",
+   "author": "William Carlos Williams",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Earlier Poems",
+   "author": "William Carlos Williams",
+   "year": 1952,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems, 1917–1952",
+   "author": "Archibald MacLeish",
+   "year": 1953,
+   "kind": "w"
+  },
+  {
+   "title": "Early and Late Testament",
+   "author": "Stanley Burnshaw",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems",
+   "author": "Thomas H. Ferril",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "The Suburb by the Sea",
+   "author": "Robert Hillyer",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "Cape Horns and Other Poems",
+   "author": "Ernest Kroll",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "A Mask For Janus",
+   "author": "W. S. Merwin",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "A Song of Joy",
+   "author": "Byron H. Reece",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "Ring Song",
+   "author": "Naomi Replansky",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "The Dragon and the Unicorn",
+   "author": "Kenneth Rexroth",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "Kentucky is My Land",
+   "author": "Jesse Stuart",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "Poems",
+   "author": "Ridgley Torrence",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "First Morning: First Poems",
+   "author": "Peter Viereck",
+   "year": 1953,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Conrad Aiken",
+   "year": 1954,
+   "kind": "w"
+  },
+  {
+   "title": "The Collected Poems of Wallace Stevens",
+   "author": "Wallace Stevens",
+   "year": 1955,
+   "kind": "w"
+  },
+  {
+   "title": "Poems: A Selection",
+   "author": "Léonie Adams",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems, 1923–1953",
+   "author": "Louise Brogan",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Poems, 1923–1954",
+   "author": "E. E. Cummings",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Hungerfield and Other Poems",
+   "author": "Robinson Jeffers",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Songs for Eve",
+   "author": "Archibald MacLeish",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "The Love Letters of Phyllis McGinley",
+   "author": "Phyllis McGinley",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "The Verse Diary of a Psychiatrist",
+   "author": "Merrill Moore",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "A Character Invented",
+   "author": "LeRoy Smith",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Another Animal",
+   "author": "May Swenson",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "The Desert Music and Other Poems",
+   "author": "William Carlos Williams",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Marya Zaturenska",
+   "year": 1955,
+   "kind": "c"
+  },
+  {
+   "title": "The Shield of Achilles",
+   "author": "W. H. Auden",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "Poems, North and South",
+   "author": "Elizabeth Bishop",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "As If",
+   "author": "John Ciardi",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Birthdays from the Ocean",
+   "author": "Isabella Gardner",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Exiles and Marriages",
+   "author": "Donald Hall",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Randall Jarrell",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "The Diamond Cutters",
+   "author": "Adrienne Rich",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Journey to Love",
+   "author": "William Carlos Williams",
+   "year": 1956,
+   "kind": "c"
+  },
+  {
+   "title": "Things of This World",
+   "author": "Richard Wilbur",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "The Form of Loss",
+   "author": "Egar Bowers",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "This Tilting Dust",
+   "author": "Leah Bodine Drake",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Greenhouse in the Garden",
+   "author": "Charles E. Eaton",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems",
+   "author": "Kenneth Fearing",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "In the Rose of Time: Poems, 1939–1956",
+   "author": "Robert Fitzgerald",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Villa Narcisse",
+   "author": "Katherine Hoskins",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Green Armor on Green Ground",
+   "author": "Rolph Humphries",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Poems in POEMS OF TODAY, III",
+   "author": "Joseph Langland",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "The Unicorn",
+   "author": "Anne Morrow Lindbergh",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Green with Beasts",
+   "author": "W. S. Merwin",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Like a Bulwark",
+   "author": "Marianne Moore",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Section: Rock Drill",
+   "author": "Ezra Pound",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "In Defense of the Earth",
+   "author": "Kenneth Rexroth",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Poems of Old and New",
+   "author": "John Hall Wheelock",
+   "year": 1957,
+   "kind": "c"
+  },
+  {
+   "title": "Promises: Poems, 1954–1956",
+   "author": "Robert Penn Warren",
+   "year": 1958,
+   "kind": "w"
+  },
+  {
+   "title": "Time without Number",
+   "author": "Daniel Berrigan",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Letter from a Distant Land",
+   "author": "Phillip Booth",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "The Arctic Tern",
+   "author": "Edwin G. Burrows",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "The Selected Poems of H.D.",
+   "author": "Hilda Doolittle",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Great Praises",
+   "author": "Richard Eberhart",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Poems",
+   "author": "Richmond Lattimore",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Swimmer in the Air",
+   "author": "Howard Moss",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "In Time Like Air",
+   "author": "May Sarton",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Hot Afternoons Have Been in Montana",
+   "author": "Eli Siegel",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Poems: 1947–1957",
+   "author": "William Jay Smith",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Opus Posthumous",
+   "author": "Wallace Stevens",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Wall",
+   "author": "James Wright",
+   "year": 1958,
+   "kind": "c"
+  },
+  {
+   "title": "Words for the Wind: Poems of Theodore Roethke",
+   "author": "Theodore Roethke",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "I Marry You",
+   "author": "John Ciardi",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems, 1923–1958",
+   "author": "E. E. Cummings",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "J.B.",
+   "author": "Archibald MacLeish",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Mirrors and Windows",
+   "author": "Howard Nemerov",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Theodore Roethke",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Poems of a Jew",
+   "author": "Karl Shapiro",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "A Cage of Spines",
+   "author": "May Swenson",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Paterson: Book Five",
+   "author": "William Carlos Williams",
+   "year": 1959,
+   "kind": "c"
+  },
+  {
+   "title": "Life Studies",
+   "author": "Robert Lowell",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "The Woman at the Washington Zoo: Poems and Translations",
+   "author": "Randall Jarrell",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "Homage to Clio",
+   "author": "W. H. Auden",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "The Exclusions of Rhyme",
+   "author": "J. V. Cunningham",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "The Opening of the Field",
+   "author": "Robert Duncan",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Richard Eberhart",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "The Summer Anniversaries",
+   "author": "Donald Justice",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems",
+   "author": "Howard Nemerov",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Knowledge of the Evening",
+   "author": "John Frederick Nims",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "To Bedlam and Part Way Back",
+   "author": "Anne Sexton",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Bone Thoughts",
+   "author": "George Starbuck",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Wilderness of Ladies",
+   "author": "Eleanor Ross Taylor",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Outlanders",
+   "author": "Theodore Weiss",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Yvor Winters",
+   "year": 1961,
+   "kind": "c"
+  },
+  {
+   "title": "Poems",
+   "author": "Alan Dugan",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "Madonna of the Cello",
+   "author": "Robert Bagg",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "The Islanders",
+   "author": "Phillip Booth",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "In the Stoneworks",
+   "author": "John Ciardi",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Helen in Egypt",
+   "author": "Hilda Doolittle",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Faces of Crystal",
+   "author": "Abbie Huston Evans",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "The Looking Glass",
+   "author": "Isabella Gardner",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Medusa in Gramercy Park",
+   "author": "Horace Gregory",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "The Fortune Teller",
+   "author": "John Holmes",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "The Jacob's Ladder",
+   "author": "Denise Levertov",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Adam Before His Mirror",
+   "author": "Ned O'Gorman",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "The Gardner and other Poems",
+   "author": "John Hall Wheelock",
+   "year": 1962,
+   "kind": "c"
+  },
+  {
+   "title": "Traveling Through the Dark",
+   "author": "William Stafford",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "For Love",
+   "author": "Robert Creeley",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "The Drawbridge",
+   "author": "Donald F. Drummond",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "In the Clearing",
+   "author": "Robert Frost",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "Thank You and Other Poems",
+   "author": "Kenneth Koch",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "The Next Room of the Dream",
+   "author": "Howard Nemerov",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Winfield T. Scott",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "All My Pretty Ones",
+   "author": "Anne Sexton",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "Pictures from Brueghel",
+   "author": "William Carlos Williams",
+   "year": 1963,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "John Crowe Ransom",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "The Moving Target",
+   "author": "W. S. Merwin",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "At the End of the Open Road",
+   "author": "Louis Simpson",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "To Mix With Time",
+   "author": "May Swenson",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Far Field (posth.)",
+   "author": "Theodore Roethke",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "The Enemy Joy",
+   "author": "Ben Belitt",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "77 Dream Songs",
+   "author": "John Berryman",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Helmets",
+   "author": "James Dickey",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Flower Herding on Mount Monadnock",
+   "author": "Galway Kinnell",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "For the Union Dead",
+   "author": "Robert Lowell",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Wreck of the Thresher",
+   "author": "William Meredith",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Buckdancer's Choice: Poems",
+   "author": "James Dickey",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "About the House",
+   "author": "W. H. Auden",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Questions of Travel",
+   "author": "Elizabeth Bishop",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems (1930–1965)",
+   "author": "Richard Eberhart",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Pripet Marshes",
+   "author": "Irving Feldman",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost World",
+   "author": "Randall Jarrell",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Louis Simpson",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Nights and Days",
+   "author": "James Merrill",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "Rivers and Mountains",
+   "author": "John Ashbery",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Looking Up at the Leaves",
+   "author": "Barbara Howes",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Tell Me, Tell Me",
+   "author": "Marianne Moore",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Necessities of Life",
+   "author": "Adrienne Rich",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Tin Can and Other Poems",
+   "author": "William Jay Smith",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Light Around the Body",
+   "author": "Robert Bly",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "The Biology of Ultimate Concern",
+   "author": "Theodosius Dobzhansky",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The Sorrow Dance",
+   "author": "Denise Levertov",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The Lice",
+   "author": "W. S. Merwin",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Complete Poems",
+   "author": "Kenneth Rexroth",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "A-12",
+   "author": "Louis Zukofsky",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "His Toy, His Dream, His Rest",
+   "author": "John Berryman",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "In the Mecca",
+   "author": "Gwendolyn Brooks",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Body Rags",
+   "author": "Galway Kinnell",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Talking Girl",
+   "author": "John Thompson",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "A Windmill Near Calvary",
+   "author": "Keith Waldrop",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Complete Poems",
+   "author": "Elizabeth Bishop",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "False Gods, Real Men",
+   "author": "Daniel Berrigan",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "The Secret Meaning of Things",
+   "author": "Lawrence Ferlinghetti",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Notebook, 1967–68",
+   "author": "Robert Lowell",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "On Bear's Head",
+   "author": "Philip Whalen",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "To See, to Take: Poems",
+   "author": "Mona Van Duyn",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Elegiac Feelings American",
+   "author": "Gregory Corso",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Carrier of Ladders",
+   "author": "W. S. Merwin",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Iconographs",
+   "author": "May Swenson",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Collected Poems of Frank O'Hara (posth.)",
+   "author": "Frank O'Hara",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Howard Moss",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Briefings: Poems Small and Easy",
+   "author": "A. R. Ammons",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Death & Friends",
+   "author": "Jon Anderson",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Spring Shade: Poems, 1931–1970",
+   "author": "Robert Fitzgerald",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Words in the Mourning Time",
+   "author": "Robert Hayden",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Mirror",
+   "author": "John Hollander",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Nightmares",
+   "author": "Galway Kinnell",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "A Man Holding an Acoustic Panel",
+   "author": "David Shapiro",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "The Swimmers and Other Selected Poems",
+   "author": "Allen Tate",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "James Wright",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems, 1951–1971",
+   "author": "A. R. Ammons",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Epistle to a Godson and Other Poems",
+   "author": "W. H. Auden",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Delusions, Etc.",
+   "author": "John Berryman",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Fields of Grace",
+   "author": "Richard Eberhart",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Once for the Last Bandit",
+   "author": "Samuel Hazo",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Town and Country Matters",
+   "author": "John Hollander",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "FootPrints",
+   "author": "Denise Levertov",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Human Season",
+   "author": "Archibald MacLeish",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Braving the Elements",
+   "author": "James Merrill",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "A Book of Change",
+   "author": "Frederick Morgan",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Conjure",
+   "author": "Ishmael Reed",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Adventures of the Letter I",
+   "author": "Louis Simpson",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Diving into the Wreck: Poems 1971–1972",
+   "author": "Adrienne Rich",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall of America: Poems of These States, 1965–1971",
+   "author": "Allen Ginsberg",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "From Snow and Rock, from Chaos",
+   "author": "Hayden Carruth",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Points for a Compass Rose",
+   "author": "Evan S. Connell Jr.",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Collecting the Animals",
+   "author": "Peter Everwine",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Lady in Kicking Horse Reservoir",
+   "author": "Richard Hugo",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Departures",
+   "author": "Donald Justice",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Armed Love",
+   "author": "Eleanor Lerman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "From a Land Where Other People Live",
+   "author": "Audre Lorde",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Revolutionary Petunias and Other Poems",
+   "author": "Alice Walker",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Hard Freight",
+   "author": "Charles Wright",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Presentation Piece",
+   "author": "Marilyn Hacker",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Sphere: The Form of a Motion",
+   "author": "A. R. Ammons",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "After Our War",
+   "author": "John Balaban",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Jan 31",
+   "author": "Albert Goldbarth",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Two-Part Inventions",
+   "author": "Richard Howard",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Shade-Seller",
+   "author": "Josephine Jacobsen",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Threats Instead of Trees",
+   "author": "Michael Ryan",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Granite Lady",
+   "author": "Susan Fromberg Schaeffer",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Sleeping in the Woods",
+   "author": "David Wagoner",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Mother's Breast and the Father's House",
+   "author": "Reed Whittemore",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Self-Portrait in a Convex Mirror",
+   "author": "John Ashbery",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "What Thou Lovest Well, Remains American",
+   "author": "Richard Hugo",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "D.C. Images",
+   "author": "P.J. Laska",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Life Beside This One",
+   "author": "John N. Morris",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Returning Your Call",
+   "author": "Leonard Nathan",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "George Oppen",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "How I Got Ovah",
+   "author": "Carolyn M. Rodgers",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Peacock Poems",
+   "author": "Sherley Anne Williams",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems, 1930–1976: Including 43 New Poems",
+   "author": "Richard Eberhart",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Leaping Clear and Other Poems",
+   "author": "Irving Feldman",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Snow Falls Upward",
+   "author": "Margaret Newlin",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Gates",
+   "author": "Muriel Rukeyser",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems, 1956–1976",
+   "author": "David Wagoner",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Collected Poems of Howard Nemerov",
+   "author": "Howard Nemerov",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Stars Which See, Stars Which Do Not See",
+   "author": "Marvin Bell",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Images of Kin",
+   "author": "Michael S. Harper",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "A Private Signal",
+   "author": "Barbara Howes",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Charon's Cosmology",
+   "author": "Charles Simic",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Mirabell: Books of Number",
+   "author": "James Merrill",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "American Journal",
+   "author": "Robert Hayden",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The Year of Our Birth",
+   "author": "Sandra McPherson",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Like Wings",
+   "author": "Philip Schultz",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "New & Selected Things Taking Place",
+   "author": "May Swenson",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Ashes: Poems New and Old",
+   "author": "Philip Levine",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Poems of Stanley Kunitz",
+   "author": "Stanley Kunitz",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "In Broken Country",
+   "author": "David Wagoner",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Need to Hold Still: Poems",
+   "author": "Lisel Mueller",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Before Sleep",
+   "author": "Philip Booth",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "That Was Then",
+   "author": "Isabella Gardner",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Mark Strand",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Being Here",
+   "author": "Robert Penn Warren",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Life Supports: New and Collected Poems",
+   "author": "William Bronk",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "A Coast of Trees",
+   "author": "A. R. Ammons",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Shadow Train",
+   "author": "John Ashbery",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Revisionist",
+   "author": "Douglas Crase",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Brotherly Love",
+   "author": "Daniel Hoffman",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Poems",
+   "author": "Galway Kinnell",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Country Music: Selected Early Poems",
+   "author": "Charles Wright",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Letters from a Father and Other Poems",
+   "author": "Mona Van Duyn",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Monolithos",
+   "author": "Jack Gilbert",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "PM/AM",
+   "author": "Linda Pastan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "What Work Is",
+   "author": "Philip Levine",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The Never-Ending",
+   "author": "Andrew Hudgins",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Eva-Mary",
+   "author": "Linda McCarriston",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "An Atlas of the Difficult World: Poems 1988–1991",
+   "author": "Adrienne Rich",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Homeplace: Poems",
+   "author": "Marilyn Nelson Waniek",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems (vol. 1 of two)",
+   "author": "Mary Oliver",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Shorter Poems",
+   "author": "Hayden Carruth",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "The Wild Iris",
+   "author": "Louise Glück",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Rapture",
+   "author": "Susan Mitchell",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "No Nature",
+   "author": "Gary Snyder",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Garbage",
+   "author": "A. R. Ammons",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "My Alexandria",
+   "author": "Mark Doty",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "The Vigil: A Poem in Four Voices",
+   "author": "Margaret Gibson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "The Museum of Clear Ideas",
+   "author": "Donald Hall",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "What We Don't Know About Each Other",
+   "author": "Lawrence Raab",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Worshipful Company of Fletchers",
+   "author": "James Tate",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Like Most Revelations",
+   "author": "Richard Howard",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "A Study for the World's Body",
+   "author": "David St. John",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Hinge and Sign: Poems, 1968–1993",
+   "author": "Heather McHugh",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "An Altogether Different Language",
+   "author": "Anne Porter",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Passing Through: The Later Poems",
+   "author": "Stanley Kunitz",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems, 1945–1990",
+   "author": "Barbara Howes",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "In the Crevice of Time: New and Collected Poems",
+   "author": "Josephine Jacobsen",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems",
+   "author": "Donald Justice",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "New and Selected Poems",
+   "author": "Gary Soto",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Scrambled Eggs & Whiskey: Poems, 1991–1995",
+   "author": "Hayden Carruth",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Terrible Stories",
+   "author": "Lucille Clifton",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Sun Under Wood",
+   "author": "Robert Hass",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Crack in Everything",
+   "author": "Alicia Suskin Ostriker",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Walking the Black Cat",
+   "author": "Charles Simic",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Effort at Speech: New and Selected Poems",
+   "author": "William Meredith",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Locusts at the Edge of Summer: New and Selected Poems",
+   "author": "John Balaban",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Desire",
+   "author": "Frank Bidart",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Primate Behavior",
+   "author": "Sarah Lindsay",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Fields of Praise: New and Selected Poems",
+   "author": "Marilyn Nelson",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "This Time: New and Selected Poems",
+   "author": "Gerald Stern",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The Art of the Lathe",
+   "author": "B. H. Fairchild",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Little Space: Poems Selected and New, 1968–1998",
+   "author": "Alicia Suskin Ostriker",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Carnival Evening: New and Selected Poems 1968–1998",
+   "author": "Linda Pastan",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "From the Devotions",
+   "author": "Carl Phillips",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Vice: New and Selected Poems",
+   "author": "Ai",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Vita Nova",
+   "author": "Louise Glück",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Configurations: New and Selected Poems, 1958–1998",
+   "author": "Clarence Major",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Pilot Star Elegies",
+   "author": "Sherod Santos",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Repair",
+   "author": "C.K. Williams",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Blessing the Boats: New and Selected Poems 1988–2000",
+   "author": "Lucille Clifton",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Tell Me",
+   "author": "Kim Addonizio",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "A New Selected Poems",
+   "author": "Galway Kinnell",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "New Addresses: Poems",
+   "author": "Kenneth Koch",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Other Lover",
+   "author": "Bruce Smith",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Poems Seven: New and Complete Poetry",
+   "author": "Alan Dugan",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Rooms are Never Finished",
+   "author": "Agha Shahid Ali",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Mercurochrome",
+   "author": "Wanda Coleman",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Brutal Imagination",
+   "author": "Cornelius Eady",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "They Can't Take That Away from Me",
+   "author": "Gail Mazur",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "In the Next Galaxy",
+   "author": "Ruth Stone",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Sleeping with the Dictionary",
+   "author": "Harryette Mullen",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Unswept Room",
+   "author": "Sharon Olds",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Smallest Muscle in the Human Body",
+   "author": "Alberto Rios",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Shadow of Heaven",
+   "author": "Ellen Bryant Voigt",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Singing",
+   "author": "C. K. Williams",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Sparrow",
+   "author": "Carol Muske-Dukes",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Voice at 3:00 A.M.: Selected Late and New Poems",
+   "author": "Charles Simic",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Owner of the House: New Collected Poems 1940–2001",
+   "author": "Louis Simpson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Jelly Roll: A Blues",
+   "author": "Kevin Young",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Door in the Mountain: New and Collected Poems, 1965–2003",
+   "author": "Jean Valentine",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Shoah Train",
+   "author": "William Heyen",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Donald Justice",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Rest of Love",
+   "author": "Carl Phillips",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Goest",
+   "author": "Cole Swensen",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Migration: New and Selected Poems",
+   "author": "W. S. Merwin",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Where Shall I Wander: New Poems",
+   "author": "John Ashbery",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Star Dust: Poems",
+   "author": "Frank Bidart",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Habitat: New and Selected Poems, 1965–2005",
+   "author": "Brendan Galvin",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Moment's Equation",
+   "author": "Vern Rutsala",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Splay Anthem",
+   "author": "Nathaniel Mackey",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Averno",
+   "author": "Louise Glück",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Chromatic",
+   "author": "H. L. Hix",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Angle of Yaw",
+   "author": "Ben Lerner",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Capacity",
+   "author": "James L. McMichael",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Time and Materials: Poems, 1997–2005",
+   "author": "Robert Hass",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Magnetic North",
+   "author": "Linda Gregerson",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The House on Boulevard St.",
+   "author": "David Kirby",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Old Heart",
+   "author": "Stanley Plumly",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Messenger: New and Selected Poems 1976–2006",
+   "author": "Ellen Bryant Voigt",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Fire to Fire: New and Selected Poems",
+   "author": "Mark Doty",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Watching the Spring Festival",
+   "author": "Frank Bidart",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Creatures of a Day",
+   "author": "Reginald Gibbons",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Without Saying",
+   "author": "Richard Howard",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Blood Dazzler",
+   "author": "Patricia Smith",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Transcendental Studies: A Trilogy",
+   "author": "Keith Waldrop",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Versed",
+   "author": "Rae Armantrout",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Or to Begin Again",
+   "author": "Ann Lauterbach",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Speak Low",
+   "author": "Carl Phillips",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Open Interval",
+   "author": "Lyrae van Clief-Stefanon",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Lighthead",
+   "author": "Terrance Hayes",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Eternal City",
+   "author": "Kathleen Graber",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "By the Numbers",
+   "author": "James Richardson",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "One with Others",
+   "author": "C.D. Wright",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Ignatz",
+   "author": "Monica Youn",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Head Off & Split: Poems",
+   "author": "Nikky Finney",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Chameleon Couch",
+   "author": "Yusef Komunyakaa",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Double Shadow",
+   "author": "Carl Phillips",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Tonight No Poetry Will Serve: Poems: 2007–2010",
+   "author": "Adrienne Rich",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Devotions",
+   "author": "Bruce Smith",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Bewilderment: New Poems and Translations",
+   "author": "David Ferry",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Meme",
+   "author": "Susan Wheeler",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Heavenly Bodies",
+   "author": "Cynthia Huntington",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Fast Animal",
+   "author": "Tim Seibles",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Night of the Republic",
+   "author": "Alan Shapiro",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Incarnadine",
+   "author": "Mary Szybist",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Metaphysical Dog",
+   "author": "Frank Bidart",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Stay, Illusion",
+   "author": "Lucie Brock-Broido",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Big Smoke",
+   "author": "Adrian Matejka",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Black Aperture",
+   "author": "Matt Rasmussen",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Bury My Clothes",
+   "author": "Roger Bonair-Agard",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "So Recently Rent a World, New and Selected Poems: 1968–2012",
+   "author": "Andrei Codrescu",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Seasonal Works with Letters on Fire",
+   "author": "Brenda Hillman",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "American Amnesiac",
+   "author": "Diane Raptosh",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Transfer of Qualities",
+   "author": "Martha Ronk",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Faithful and Virtuous Night",
+   "author": "Louise Glück",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Second Childhood",
+   "author": "Fanny Howe",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "This Blue",
+   "author": "Maureen N. McLane",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Feel Trio",
+   "author": "Fred Moten",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Citizen",
+   "author": "Claudia Rankine",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Roget's Illusion",
+   "author": "Linda Bierds",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "A Several World",
+   "author": "Brian Blanchfield",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Gabriel: A Poem",
+   "author": "Edward Hirsch",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Road to Emmaus",
+   "author": "Spencer Reece",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Collected Poems",
+   "author": "Mark Strand",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Voyage of the Sable Venus",
+   "author": "Robin Coste Lewis",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Catalog of Unabashed Gratitude",
+   "author": "Ross Gay",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "How to Be Drawn",
+   "author": "Terrance Hayes",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Bright Dead Things",
+   "author": "Ada Limón",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Elegy for a Broken Machine",
+   "author": "Patrick Phillips",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Scattered at Sea",
+   "author": "Amy Gerstler",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A Stranger's Mirror",
+   "author": "Marilyn Hacker",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Beauty",
+   "author": "Jane Hirshfield",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Mistaking Each Other for Ghosts",
+   "author": "Lawrence Raab",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Heaven",
+   "author": "Rowan Ricardo Phillips",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Performance of Becoming Human",
+   "author": "Daniel Borzutzky",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Collected Poems 1974–2004",
+   "author": "Rita Dove",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Archeophonics",
+   "author": "Peter Gizzi",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Abridged History of Rainfall",
+   "author": "Jay Hopler",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Look",
+   "author": "Solmaz Sharif",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Selected Poems of Donald Hall",
+   "author": "Donald Hall",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Bestiary",
+   "author": "Donika Kelly",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "World of Made and Unmade",
+   "author": "Jane Mead",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Blackacre",
+   "author": "Monica Youn",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Laws",
+   "author": "Kevin Young",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Half-light: Collected Poems 1965–2016",
+   "author": "Frank Bidart",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Book of Endings",
+   "author": "Leslie Harrison",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "WHEREAS",
+   "author": "Layli Long Soldier",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "In the Language of My Captor",
+   "author": "Shane McCrae",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Don't Call Us Dead",
+   "author": "Danez Smith",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "When I Grow Up I Want to Be a List of Further Possibilities",
+   "author": "Chen Chen",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Afterland",
+   "author": "Mai Der Vang",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Magdalene",
+   "author": "Marie Howe",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Where Now: New and Selected Poems",
+   "author": "Laura Kasischke",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Square Inch Hours",
+   "author": "Sherod Santos",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Indecency",
+   "author": "Justin Phillip Reed",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Wobble",
+   "author": "Rae Armantrout",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "American Sonnets for My Past and Future Assassin",
+   "author": "Terrance Hayes",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost Of",
+   "author": "Diana Khoi Nguyen",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Eye Level",
+   "author": "Jenny Xie",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "feeld",
+   "author": "Jos Charles",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Be With",
+   "author": "Forrest Gander",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Museum of the Americas",
+   "author": "J. Michael Martinez",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "lo terciario / the tertiary",
+   "author": "Roque Salas Rivera",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Monument: Poems New and Selected",
+   "author": "Natasha Trethewey",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Sight Lines",
+   "author": "Arthur Sze",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Tradition",
+   "author": "Jericho Brown",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "\"I\": New and Selected Poems",
+   "author": "Toi Derricotte",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Deaf Republic",
+   "author": "Ilya Kaminsky",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Be Recorder",
+   "author": "Carmen Giménez Smith",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Variations on Dawn and Dusk",
+   "author": "Dan Beachy-Quick",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Build Yourself a Boat",
+   "author": "Camonghne Felix",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "A Sand Book",
+   "author": "Ariana Reines",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Dunce",
+   "author": "Mary Ruefle",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Doomstead Days",
+   "author": "Brian Teare",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "DMZ Colony",
+   "author": "Don Mee Choi",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "A Treatise on Stars",
+   "author": "Mei-mei Berssenbrugge",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Fantasia for the Man in Blue",
+   "author": "Tommye Blount",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Borderland Apocrypha",
+   "author": "Anthony Cody",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Postcolonial Love Poem",
+   "author": "Natalie Diaz",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Galleons",
+   "author": "Rick Barot",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Travesty Generator",
+   "author": "Lillian-Yvonne Bertram",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Obit",
+   "author": "Victoria Chang",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Guillotine",
+   "author": "Eduardo C. Corral",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Phillis",
+   "author": "Honorée Fanonne Jeffers",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Floaters",
+   "author": "Martín Espada",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "What Noise Against the Cane",
+   "author": "Desiree C. Bailey",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Sho",
+   "author": "Douglas Kearney",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A Thousand Times You Lose Your Treasure",
+   "author": "Hoa Nguyen",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Sunflower Cast a Spell To Save Us From The Void",
+   "author": "Jackie Wang",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Wild Fox of Yemen",
+   "author": "Threa Almontaser",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost Letters",
+   "author": "Baba Badji",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Master Suffering",
+   "author": "CM Burroughs",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Vault",
+   "author": "Andrés Cerpa",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Twice Alive",
+   "author": "Forrest Gander",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Punks: New & Selected Poems",
+   "author": "John Keene",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Look at This Blue",
+   "author": "Allison Adelle Hedge Coke",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Balladz",
+   "author": "Sharon Olds",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Best Barbarian",
+   "author": "Roger Reeves",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Rupture Tense",
+   "author": "Jenny Xie",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Ax",
+   "author": "Rio Cortez",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Still Life",
+   "author": "Jay Hopler",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Mummy Eaters",
+   "author": "Sherry Shenoda",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Duende",
+   "author": "Quincy Troupe",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "As She Appears",
+   "author": "Shelley Wong",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "[[From Unincorporated Territory åmot|from unincorporated territory [åmot]]]",
+   "author": "Craig Santos Perez",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "How to Communicate",
+   "author": "John Lee Clark",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "suddenly we",
+   "author": "Evie Shockley",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Tripas",
+   "author": "Brandon Som",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "From From",
+   "author": "Monica Youn",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Diaspora Sonnets",
+   "author": "Oliver de la Paz",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Trace Evidence",
+   "author": "Charif Shanahan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "West: A Translation",
+   "author": "Paisley Rekdal",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Vexations",
+   "author": "Annelyse Gelman",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Promises of Gold",
+   "author": "José Olivarez",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Something About Living",
+   "author": "Lena Khalaf Tuffaha",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Wrong Norma",
+   "author": "Anne Carson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "[[... (poetry collection)|[...]]]",
+   "author": "Fady Joudah",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "mother",
+   "author": "m.s. RedCherries",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Modern Poetry",
+   "author": "Diane Seuss",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Life on Earth",
+   "author": "Dorianne Laux",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Spectral Evidence",
+   "author": "Gregory Pardlo",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Wounded Sparrows",
+   "author": "Octavio Quintanilla",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Silver",
+   "author": "Rowan Ricardo Phillips",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Liontaming in America",
+   "author": "Elizabeth Willis",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Intentions of Thunder: New and Selected Poems",
+   "author": "Patricia Smith",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The New Economy",
+   "author": "Gabrielle Calvocoressi",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Becoming Ghost",
+   "author": "Cathy Linh Che",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Scorched Earth",
+   "author": "Tiana Clark",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "I Do Know Some Things",
+   "author": "Richard Siken",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Death Does Not End at the Sea",
+   "author": "Gbenga Adesina",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Death of the First Idea",
+   "author": "Rickey Laurentiis",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Cold Thief Place",
+   "author": "Esther Lin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Stay Dead",
+   "author": "Natalie Shapero",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Terror Counter",
+   "author": "Fargo Nissim Tbakhi",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

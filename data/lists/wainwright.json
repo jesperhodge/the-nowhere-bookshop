@@ -1,0 +1,1055 @@
+{
+ "slug": "wainwright",
+ "prize": "Wainwright Prize",
+ "rooms": [
+  "glasshouse",
+  "understory",
+  "saltline",
+  "snowroom",
+  "smallkingdom"
+ ],
+ "page": "Wainwright Prize",
+ "url": "https://en.wikipedia.org/wiki/Wainwright_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1345286012",
+ "revid": 1345286012,
+ "fetchedAt": "2026-08-05T16:27:14.640Z",
+ "counts": {
+  "entries": 163,
+  "winners": 25,
+  "cited": 138
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "2014–2019: One prize",
+   "headers": "Year | Author | Book | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 39,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 1,
+   "heading": "2020–2021: Two prizes",
+   "headers": "Year | Author | Book | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 26,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 2,
+   "heading": "2022–2024: Addition of a children's prize",
+   "headers": "Year | Author | Book | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 59,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 3,
+   "heading": "2025–: Six prize categories",
+   "headers": "Year | Author | Book | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 39,
+   "dropped": 0,
+   "winnerMark": "star"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Green Road into the Trees: A Walk Through England",
+   "author": "Hugh Thomson",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Walking Home",
+   "author": "Simon Armitage",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Badgerlands",
+   "author": "Patrick Barkham",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Under Another Sky",
+   "author": "Charlotte Higgins",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Old Ways",
+   "author": "Robert Macfarlane",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Field Notes from a Hidden City",
+   "author": "Esther Woolfson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Meadowland",
+   "author": "John Lewis-Stempel",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Running Free: A Runner's Journey Back to Nature",
+   "author": "Richard Askwith",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Moor",
+   "author": "William Atkins",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Claxton: Field Notes from a Small Planet",
+   "author": "Mark Cocker",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "H is for Hawk",
+   "author": "Helen Macdonald",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Rising Ground: A Search for the Spirit of Place",
+   "author": "Philip Marsden",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Outrun",
+   "author": "Amy Liptrot",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Common Ground",
+   "author": "Rob Cowen",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Landmarks",
+   "author": "Robert Macfarlane",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Moth Snowstorm",
+   "author": "Michael McCarthy",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Fish Ladder",
+   "author": "Katharine Norbury",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Shepherd's Life",
+   "author": "James Rebanks",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Where Poppies Blow",
+   "author": "John Lewis-Stempel",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Love of Country",
+   "author": "Madeleine Bunting",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Otters' Tale",
+   "author": "Simon Cooper",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Running Hare",
+   "author": "John Lewis-Stempel",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Kingdom",
+   "author": "Stephen Moss",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The January Man",
+   "author": "Christopher Somerville",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Wild Other",
+   "author": "Clover Stroud",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Seabird's Cry",
+   "author": "Adam Nicolson",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Wilderness",
+   "author": "Neil Ansell",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Hidden Nature",
+   "author": "Alys Fowler",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Outskirts",
+   "author": "John Grindrod",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Dun Cow Rib",
+   "author": "John Lister-Kaye",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Words",
+   "author": "Robert Macfarlane & Jackie Morris",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Salt Path",
+   "author": "Raynor Winn",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Underland",
+   "author": "Robert Macfarlane",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Time Song",
+   "author": "Julia Blackburn",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Easternmost House",
+   "author": "Juliet Blaxland",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Our Place",
+   "author": "Mark Cocker",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Thinking on My Feet",
+   "author": "Kate Humble",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Wilding",
+   "author": "Isabella Tree",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Out of the Woods",
+   "author": "Luke Turner",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Rebirding: Restoring Britain's Wildlife",
+   "author": "Benedict Macdonald",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "What We Need to Do Now",
+   "author": "Chris Goodall",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Irreplaceable",
+   "author": "Julian Hoffman",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Life Changing: How Humans Are Altering Life on Earth",
+   "author": "Helen Pilcher",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Working With Nature",
+   "author": "Jeremy Purseglove",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Sitopia: How Food Can Save the World",
+   "author": "Carolyn Steel",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Diary of a Young Naturalist",
+   "author": "Dara McAnulty",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Dark, Salt, Clear: Life in a Cornish Fishing Town",
+   "author": "Lamorna Ash",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Frayed Atlantic Edge",
+   "author": "David Gange",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Native: Life in a Vanishing Landscape",
+   "author": "Patrick Laurie",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "On the Red Hill",
+   "author": "Mike Parker",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Wanderland: A Search for Magic in the Landscape",
+   "author": "Jini Reddy",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Dancing with Bees: A Journey Back to Nature",
+   "author": "Brigit Strawbridge Howard",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Entangled Life",
+   "author": "Merlin Sheldrake",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "A Life on Our Planet",
+   "author": "David Attenborough",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Islands of Abandonment",
+   "author": "Cal Flyn",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Fathoms: The World in the Whale",
+   "author": "Rebecca Giggs",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Net Zero: How We Stop Causing Climate Change",
+   "author": "Dieter Helm",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Under a White Sky",
+   "author": "Elizabeth Kolbert",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "English Pastoral: An Inheritance",
+   "author": "James Rebanks",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Screaming Sky",
+   "author": "Charles Foster",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Featherhood",
+   "author": "Charlie Gilmour",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Seed to Dust",
+   "author": "Marc Hamer",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Thin Places",
+   "author": "Kerri ní Dochartaigh",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "I Belong Here",
+   "author": "Anita Sethi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Wild Silence",
+   "author": "Raynor Winn",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Goshawk Summer: A New Forest Season Unlike Any Other",
+   "author": "James Aldred",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "On Gallows Down: Place, Protest and Belonging",
+   "author": "Nicola Chester",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Shadowlands: A Journey Through Lost Britain",
+   "author": "Matthew Green",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Instant",
+   "author": "Amy Liptrot",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Time on Rock: A Climber's Route into the Mountains",
+   "author": "Anna Fleming",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Otherlands: A World in the Making",
+   "author": "Thomas Halliday",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Eating to Extinction: The World's Rarest Foods and Why We Need to Save Them",
+   "author": "Dan Saladino",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Our Biggest Experiment: A History of the Climate Crisis",
+   "author": "Alice Bell",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Silent Earth: Averting the Insect Apocalypse",
+   "author": "Dave Goulson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Insect Crisis: The Fall of the Tiny Empires That Run the World",
+   "author": "Oliver Milman",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Regenesis: Feeding the World Without Devouring the Planet",
+   "author": "George Monbiot",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Treeline: The Last Forest and the Future of Life on Earth",
+   "author": "Ben Rawlence",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Fell: Fighting for Nature on a Lake District Hill Farm",
+   "author": "Lee Schofield",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Biggest Footprint: Eight Billion Humans. One Clumsy Giant",
+   "author": "Rob Sears & Illustrated by Tom Sears",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "October, October",
+   "author": "Katya Balen",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "One World: 24 Hours on Planet Earth",
+   "author": "Nicola Davies & Illustrated by Jenni Desmond",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Julia and the Shark",
+   "author": "Kiran Millwood Hargrave & Illustrated by Tom de Freston",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "By Rowan and Yew",
+   "author": "Melissa Harrison & Illustrated by Angela Harding",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Around the World in 80 Trees",
+   "author": "Ben Lerwill & Illustrated by Kaja Kajfež",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Child: A Journey Through Nature",
+   "author": "Dara McAnulty & Illustrated by Barry Falls",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Flow: Rivers, Water and Wildness",
+   "author": "Amy-Jane Beer",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Twelve Words for Moss",
+   "author": "Elizabeth-Jane Burnett",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Ten Birds That Changed the World",
+   "author": "Stephen Moss",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A Line in the World: A Year on the North Sea Coast",
+   "author": "Dorthe Nors & Translated by Caroline Waight",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Golden Mole: And Other Living Treasure",
+   "author": "Katherine Rundell & Illustrated by Talya Baldwin",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Belonging: Natural Histories of Place, Identity and Home",
+   "author": "Amanda Thomson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Rainforests of Britain",
+   "author": "Guy Shrubsole",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Beastly: A New History of Animals and Us",
+   "author": "Keggie Carew",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Rewilding the Sea: How to Save Our Oceans",
+   "author": "Charles Clover",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Rooted: How Regenerative Farming Can Change the World",
+   "author": "Sarah Langford",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Black Ops and Beaver Bombing: Adventures with Britain's Wild Mammals",
+   "author": "Fiona Mathews & Tim Kendall",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Nomad Century: How to Survive the Climate Upheaval",
+   "author": "Gaia Vince",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Leila and the Blue Fox",
+   "author": "Kiran Millwood Hargrave & Illustrated by Tom de Freston",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Protecting the Planet: The Season of Giraffes",
+   "author": "Nicola Davies & Illustrated by Emily Sutton",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Blobfish",
+   "author": "Olaf Falafel",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Spark",
+   "author": "M. G. Leonard",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A Wild Child's Book of Birds",
+   "author": "Dara McAnulty & Illustrated by Barry Falls",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Grandpa and the Kingfisher",
+   "author": "Anna Wilson & Illustrated by Sarah Massini",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Late Light: The Secret Wonders of a Disappearing World",
+   "author": "Michael Malay",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Uprooting: From the Caribbean to the Countryside",
+   "author": "Marchelle Farrell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Bothy: In Search of Simple Shelter",
+   "author": "Kat Hill",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Local: A Search for Nearby Nature and Wildness",
+   "author": "Alastair Humphreys",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Dispersals: On Plants, Borders and Belonging",
+   "author": "Jessica J. Lee",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Garden Against Time: In Search of a Common Paradise",
+   "author": "Olivia Laing",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Rural: The Lives of the Working Class Countryside",
+   "author": "Rebecca Smith",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Machine: How the Ocean Shapes Our World",
+   "author": "Helen Czerski",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Wasteland: The Dirty Truth About What We Throw Away, Where It Goes, and Why It Matters",
+   "author": "Oliver Franklin-Wallis",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Groundbreakers: The Return of Britain's Wild Boar",
+   "author": "Chantal Lyons",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "It's Not Just You: How to Navigate Eco-Anxiety and the Climate Crisis",
+   "author": "Tori Tsui",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Fire Weather: A True Story from a Hotter World",
+   "author": "John Vaillant",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Nature's Ghosts: The World We Lost and How to Bring it Back",
+   "author": "Sophie Yeo",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Foxlight",
+   "author": "Katya Balen",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Observologist",
+   "author": "Giselle Clarkson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Global",
+   "author": "Eoin Colfer & Andrew Donkin & Illustrated by Giovanni Rigano",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Skrimsli",
+   "author": "Nicola Davies & Illustrated by Jackie Morris",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Fly: A Child's Guide to Birds and Where to Spot Them",
+   "author": "David Lindo & Illustrated by Sara Boccaccini Meadows",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Geomancer: In the Shadow of the Wolf Queen",
+   "author": "Kiran Millwood Hargrave",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Impossible Creatures",
+   "author": "Katherine Rundell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Wilding: How to Bring Wildlife Back",
+   "author": "Isabella Tree & Illustrated by Angela Harding",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Raising Hare",
+   "author": "Chloe Dalton",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Possibility of Tenderness",
+   "author": "Jason Allen-Paisant",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Intertidal",
+   "author": "Yuvan Aves",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Our Oaken Bones",
+   "author": "Merlin Hanbury-Tenison",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Of Thorn & Briar",
+   "author": "Paul Lamb",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Accidental Garden",
+   "author": "Richard Mabey",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Ingrained",
+   "author": "Callum Robinson",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Lie of the Land",
+   "author": "Guy Shrubsole",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Nature's Genius",
+   "author": "David Farrier",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Is a River Alive?",
+   "author": "Robert Macfarlane",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Red Pockets",
+   "author": "Alice Mah",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Climate Injustice",
+   "author": "Friederike Otto & Translared by Sarah Pybus",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "A Training School for Elephants",
+   "author": "Sophy Roberts",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "What the Wild Sea Can Be",
+   "author": "Helen Scales",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Feed the Planet",
+   "author": "George Steinmetz, Joel K. Bourne Jr. & Michael Pollan",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Swoop Sing Perch Paddle",
+   "author": "John McEwen & Illustrated by Carry Akroyd",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Homecoming",
+   "author": "Melissa Harrison & Illustrated by Amanda Dilworth",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Insectopolis",
+   "author": "Peter Kuper",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Perimeter",
+   "author": "Quintin Lake",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Trees in Winter",
+   "author": "Richard Shimell",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Wildlands",
+   "author": "Brogen Murphy",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Ghostlines",
+   "author": "Katya Balen",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Turtle Moon",
+   "author": "Hannah Gold & Illustrated by Levi Pinfold",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Ettie and the Midnight Pool",
+   "author": "Julia Green & Illustrated by Pam Smy",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Wildful",
+   "author": "Kengo Kurimoto",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Land of the Last Wildcat",
+   "author": "Lui Sit & Illustrated by David Dean",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "University of Cambridge: Think Big: Secrets of Bees",
+   "author": "Ben Hoare & Illustrated by Nina Chakrabarti",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "National Trust: Look What I Found by the River",
+   "author": "Moira Butterfield & Illustrated by Jesús Verona",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "MEGA",
+   "author": "Jules Howard & Illustrated by Gavin Scott",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Cloudspotting for Beginners",
+   "author": "Gavin Pretor-Pinney & Illustrated by William Grill",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Wildlife in the Balances",
+   "author": "Sharon Wismer & Illustrated by Terri Po",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Hamza’s Wild World",
+   "author": "Hamza Yassin & Illustrated by Louise Forshaw",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Flower Block",
+   "author": "Lanisha Butterfield & Illustrated by Hoang Giang",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Bothered By Bugs",
+   "author": "Emily Gravett",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "HERD",
+   "author": "Stephen Hogtun",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The World to Come",
+   "author": "Robert Macfarlane & Johnny Flynn & Illustrated by Emily Sutton",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Frog",
+   "author": "Isabel Thomas & Illustrated by Daniel Egnéus",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Leave the Trees, Please",
+   "author": "Benjamin Zephaniah & Illustrated by Melissa Castrillon",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Wild",
+   "author": "Yuval Zommer",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

@@ -1,0 +1,1957 @@
+{
+ "slug": "ned-kelly",
+ "prize": "Ned Kelly Award",
+ "rooms": [
+  "lamproom",
+  "quietvillage",
+  "wrongman"
+ ],
+ "page": "Ned Kelly Awards",
+ "url": "https://en.wikipedia.org/wiki/Ned_Kelly_Awards",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1355948811",
+ "revid": 1355948811,
+ "fetchedAt": "2026-08-05T16:27:07.225Z",
+ "counts": {
+  "entries": 302,
+  "winners": 58,
+  "cited": 244
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1990s",
+   "skipped": "no title/author column",
+   "headers": "Year | Best Novel | Best First Novel | Best Non-Fiction | Lifetime Achievement | Ref."
+  },
+  {
+   "t": 1,
+   "heading": "2000s",
+   "skipped": "no title/author column",
+   "headers": "Year | Best Novel | Best First Novel | Best True Crime | Best Teenage /Young Adult | Reader's Vote | Lifetime Achievement | Ref."
+  },
+  {
+   "t": 2,
+   "heading": "2010s",
+   "skipped": "no title/author column",
+   "headers": "Year | Best Novel | Best First Novel | Best True Crime | Lifetime Achievement | Ref."
+  },
+  {
+   "t": 3,
+   "heading": "2020s",
+   "skipped": "no title/author column",
+   "headers": "Year | Best Novel | Best First Novel | Best True Crime | Best International Crime | Ref."
+  },
+  {
+   "t": 4,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 41,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 6,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 45,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 7,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 42,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 8,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 29,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 9,
+   "heading": "Best International Crime Novel",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 26,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 10,
+   "heading": "Best True Crime",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 69,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "White Dog",
+   "author": "Peter Temple",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Affair",
+   "author": "Bunty Avieson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Open For inspection",
+   "author": "Carmel Bird",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Eye of the Abyss",
+   "author": "Marshall Browne",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Salt and Blood",
+   "author": "Peter Corris",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Deadly Tide",
+   "author": "Sandy Curtis",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Who Killed Bianca?",
+   "author": "Emma Darcy",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Kittyhawk Down",
+   "author": "Garry Disher",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Murder in Montparnasse",
+   "author": "Kerry Greenwood",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Analyst",
+   "author": "Fred Guilhaus",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Breakfast in Fur",
+   "author": "Michael Herrmann",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Baby Did a Bad Bad Thing",
+   "author": "Gabrielle Lord",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Babel",
+   "author": "Barry Maitland",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Something Fishy",
+   "author": "Shane Maloney",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Chance",
+   "author": "Andy Shea",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Empty Bed",
+   "author": "Paul Thomas",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Evidence",
+   "author": "Emma Tom",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Lost",
+   "author": "Michael Robotham",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Spiking the Girl",
+   "author": "Gabrielle Lord",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Happiness Punch",
+   "author": "Kirsty Brooks",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Covet",
+   "author": "Tara Moss",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Murder by Manuscript",
+   "author": "Steve J. Spears",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Heavenly Pleasures",
+   "author": "Kerry Greenwood",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "No Trace",
+   "author": "Barry Maitland",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Queen of the Flowers",
+   "author": "Kerry Greenwood",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Domino Game",
+   "author": "Wilson Greg",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Dangerous Deception",
+   "author": "Sandy Curtis",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Static",
+   "author": "Randall Longmire",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "A Hand in the Bush",
+   "author": "Jane Clifton",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Crook as Rookwood",
+   "author": "Chris Nyst",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Broken Shore",
+   "author": "Peter Temple",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Rendezvous at Kamakura Inn",
+   "author": "Marshall Browne",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Saving Billie",
+   "author": "Peter Corris",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Rubdown",
+   "author": "Leigh Redhead",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Five Oranges",
+   "author": "Graham Reilly",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Chain of Evidence",
+   "author": "Garry Disher",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Cleaner",
+   "author": "Paul Cleave",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Undertow",
+   "author": "Peter Corris",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Unknown Terrorist",
+   "author": "Richard Flanagan",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Spider Trap",
+   "author": "Barry Maitland",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Ferry",
+   "author": "Michael Robotham",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Wyatt",
+   "author": "Garry Disher",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Black Russian",
+   "author": "Lenny Bartulin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Bleed For Me",
+   "author": "Michael Robotham",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Diggers Rest Hotel",
+   "author": "Geoffrey McGeachin",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Half-Child",
+   "author": "Angela Savage",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Bereft",
+   "author": "Chris Womersley",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Pig Boy",
+   "author": "J. C. Burke",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Life",
+   "author": "Malcolm Knox",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Chelsea Mansions",
+   "author": "Barry Maitland",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Blackwattle Creek",
+   "author": "Geoffrey McGeachin",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Holiday Murders",
+   "author": "Robert Gott",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Web of Deceit",
+   "author": "Katherine Howell",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "I Hear The Sirens In The Street",
+   "author": "Adrian McKinty",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Silent Valley",
+   "author": "Malla Nunn",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "In The Morning I'll Be Gone",
+   "author": "Adrian McKinty",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Bitter Wash Road",
+   "author": "Garry Disher",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Fatal Impact",
+   "author": "Kathryn Fox",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Beams Falling",
+   "author": "PM Newton",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "One Boy Missing",
+   "author": "Stephen Orr",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Dying Beach",
+   "author": "Angela Savage",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Eden",
+   "author": "Candice Fox",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Sweet One",
+   "author": "Peter Docker",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A Murder Unmentioned",
+   "author": "Sulari Gentill",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Crucifixion Creek",
+   "author": "Barry Maitland",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Gun Street Girl",
+   "author": "Adrian McKinty",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Present Darkness",
+   "author": "Malla Nunn",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Before It Breaks",
+   "author": "Dave Warner",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "R&R",
+   "author": "Mark Dapin",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Heat",
+   "author": "Garry Disher",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Fall",
+   "author": "Candice Fox",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Ash Island",
+   "author": "Barry Maitland",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Rain Dogs",
+   "author": "Adrian McKinty",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Police at the Station and They Don't Look Friendly",
+   "author": "Adrian McKinty",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Crimson Lake",
+   "author": "Candice Fox",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Golden Child",
+   "author": "Wendy James",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "An Isolated Incident",
+   "author": "Emily Maguire",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Rules of Backyard Cricket",
+   "author": "Jock Serong",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Out of the Ice",
+   "author": "Ann Turner",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Crossing the Lines",
+   "author": "Sulari Gentill",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Marlborough Man",
+   "author": "Alan Carter",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Under Cold Bright Lights",
+   "author": "Garry Disher",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Redemption Point",
+   "author": "Candice Fox",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Lone Child",
+   "author": "Anna George",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Student",
+   "author": "Iain Ryan",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Man",
+   "author": "Jane Harper",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Kill Shot: A Wyatt Thriller",
+   "author": "Garry Disher",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Gone by Midnight",
+   "author": "Candice Fox",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Spotted Dog",
+   "author": "Kerry Greenwood",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Other Wife",
+   "author": "Michael Robotham",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Live and Let Fry",
+   "author": "Sue Williams",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Wife and the Widow",
+   "author": "Christian White",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Strangers We Know",
+   "author": "Pip Drysdale",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Death of a Typographer",
+   "author": "Nick Gadd",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Scholar",
+   "author": "Dervla McTiernan",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "River of Salt",
+   "author": "Dave Warner",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "True West",
+   "author": "David Whish-Wilson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Consolation",
+   "author": "Garry Disher",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Gathering Dark",
+   "author": "Candice Fox",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A Testament of Character",
+   "author": "Sulari Gentill",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Survivors",
+   "author": "Jane Harper",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Good Turn",
+   "author": "Dervla McTiernan",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Tell Me Lies",
+   "author": "J P Pomare",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "When She Was Good",
+   "author": "Michael Robotham",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "White Throat",
+   "author": "Sarah Thornton",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Chase",
+   "author": "Candice Fox",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Enemy Within",
+   "author": "Tim Ayliffe",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Others",
+   "author": "Mark Brandi",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "You Had it Coming",
+   "author": "B M Carroll",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Kill Your Brother",
+   "author": "Jack Heath",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Family Doctor",
+   "author": "Debra Oswald",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Deep",
+   "author": "Kyle Perry",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Exiles",
+   "author": "Jane Harper",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "When We Fall",
+   "author": "Aoife Clifford",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Tilt",
+   "author": "Chris Hammer",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Soulmate",
+   "author": "Sally Hepworth",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Seven Sisters",
+   "author": "Katherine Kovacic",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Lying Beside You",
+   "author": "Michael Robotham",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Those Who Perish",
+   "author": "Emma Viskic",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Carnival Is Over",
+   "author": "Greg Woodland",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Darling Girls",
+   "author": "Sally Hepworth",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Killer Traitor Spy",
+   "author": "Tim Ayliffe",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Mode",
+   "author": "Ashley Kalagian Blunt",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Ripper",
+   "author": "Shelley Burr",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Corners",
+   "author": "Megan Goldin",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Seven",
+   "author": "Chris Hammer",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Tea Ladies",
+   "author": "Amanda Hampson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Everyone On This Train is a Suspect",
+   "author": "Benjamin Stevenson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Creeper",
+   "author": "Margaret Hickey",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Shadow City",
+   "author": "Natalie Conyer",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Sanctuary",
+   "author": "Garry Disher",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Unbury the Dead",
+   "author": "Fiona Hardy",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Cold Truth",
+   "author": "Ashley Kalagian Blunt",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Highway 13",
+   "author": "Fiona McFarlane",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "17 Years Later",
+   "author": "J P Pomare",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Storm Child",
+   "author": "Michael Robotham",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "King of the Cross",
+   "author": "Mark Dapin",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Death and the Running Patterer",
+   "author": "Robin Adair",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Document Z",
+   "author": "Andrew Coome",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Prime Cut",
+   "author": "Alan Carter",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Old School",
+   "author": "P.M. Newton",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Line of Sight",
+   "author": "David Whish-Wilson",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Cartographer",
+   "author": "Peter Twohig",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "When We Have Wings",
+   "author": "Claire Corbett",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Courier's New Bicycle",
+   "author": "Kim Westwood",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Midnight Promise",
+   "author": "Zane Lovitt",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Robbers",
+   "author": "Paul Anderson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Richmond Conspiracy",
+   "author": "Andrew Grimes",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Marmalade Files",
+   "author": "Steve Lewis & Chris Uhlmann",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Murder with the Lot",
+   "author": "Sue Williams",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Hades",
+   "author": "Candice Fox",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Dead Cat Bounce",
+   "author": "Peter Cotton",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Blood Witness",
+   "author": "Alex Hammond",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Every Breath",
+   "author": "Ellie Marney",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Quota",
+   "author": "Jock Serong",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "King of the Road",
+   "author": "Nigel Bartlett",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "What Came Before",
+   "author": "Anna George",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Chasing the Ace",
+   "author": "Nicholas J. Johnson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Resurrection Bay",
+   "author": "Emma Viskic",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Please Don't Leave Me Here",
+   "author": "Tania Chandler",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Good Money",
+   "author": "J. M. Green",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Amplify",
+   "author": "Mark Hollands",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Skin Deep",
+   "author": "Gary Kemble",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Four Days",
+   "author": "Iain Ryan",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Dry",
+   "author": "Jane Harper",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Burn Patterns",
+   "author": "Ron Elliott",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Something for Nothing",
+   "author": "Andy Muir",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Only Daughter",
+   "author": "Anna Snoekstra",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Goodwood",
+   "author": "Holly Throsby",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Love of a Bad Man",
+   "author": "Laura Elizabeth Woollett",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Lake",
+   "author": "Sarah Bailey",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Wimmera",
+   "author": "Mark Brandi",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Girl in Keller's Way",
+   "author": "Megan Goldin",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "See What I Have Done",
+   "author": "Sarah Schmidt",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Rúin",
+   "author": "Dervla McTiernan",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Portrait of Molly Dean",
+   "author": "Katherine Kovacic",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Yellow House",
+   "author": "Emily O'Grady",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Greenlight",
+   "author": "Ben Stevenson",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Present Tense",
+   "author": "Natalie Conyer",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Eight Lives",
+   "author": "Susan Hurley",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Where the Truth Lies",
+   "author": "Karina Kilmore",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Nancys",
+   "author": "R W R McDonald",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Six Minutes",
+   "author": "Petronella McGovern",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Lapse",
+   "author": "Sarah Thornton",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Second Son",
+   "author": "Lorraine Peck",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Good Mother",
+   "author": "Rae Cairns",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Bluffs",
+   "author": "Kyle Perry",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Whistler",
+   "author": "Greg Woodlands",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Banjawarn",
+   "author": "Josh Kemp",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Sweet Jimmy",
+   "author": "Bryan Brown",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Shadow Over Edmund Street",
+   "author": "Suzanne Frankham",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Cutters End",
+   "author": "Margaret Hickey",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Wake",
+   "author": "Shelley Burr",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The House of Now and Then",
+   "author": "Jo Dixon",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "How to Kill a Client",
+   "author": "Joanna Jenkins",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Lenny Marks Gets Away with Murder",
+   "author": "Kerryn Mayne",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Dirt Town",
+   "author": "Hayley Scrivenor",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Black River",
+   "author": "Matthew Spencer",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "No Country for Girls",
+   "author": "Emma Styles",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Denizen",
+   "author": "James McKenzie Watson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Murder in the Pacific: Ifira Point",
+   "author": "Matt Francis",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Violet Kelly and the Jade Owl",
+   "author": "Fiona Britton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Lowbridge",
+   "author": "Lucy Campbell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Four Dogs Missing",
+   "author": "Rhys Gard",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Gus and the Missing Boy",
+   "author": "Troy Hunter",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Fall Between",
+   "author": "Darcy Tindale",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Beacon",
+   "author": "P. A. Thomas",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Chain",
+   "author": "Adrian McKinty",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "We Begin at the End",
+   "author": "Chris Whitaker",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Guest List",
+   "author": "Lucy Foley",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Secrets of Strangers",
+   "author": "Charity Norman",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Take Me Apart",
+   "author": "Sara Sligar",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Broken",
+   "author": "Don Winslow",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Maid",
+   "author": "Nita Prose",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Case Study",
+   "author": "Graeme Macrae Burnet",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Heron's Cry",
+   "author": "Ann Cleeves",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Cry Wolf",
+   "author": "Hans Rosenfeldt",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Lemon Man",
+   "author": "Keith Bruton",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Paper Cage",
+   "author": "Tom Baragwanath",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Favour",
+   "author": "Nicci French",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Hitchhiker",
+   "author": "Gerwin van der Werf",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Only Suspect",
+   "author": "Louise Candlish",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Dice",
+   "author": "Claire Baylis",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Birnam Wood",
+   "author": "Eleanor Catton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Resurrection Walk",
+   "author": "Michael Connelly",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Search Party",
+   "author": "Hannah Richell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Zero Days",
+   "author": "Ruth Ware",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Case of Matricide",
+   "author": "Graeme Macrae Burnet",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Return to Blood",
+   "author": "Michael Bennett",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Leave the Girls Behind",
+   "author": "Jacqueline Bublitz",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Waiting",
+   "author": "Michael Connelly",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Moscow X",
+   "author": "David McCloskey",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Home Truths",
+   "author": "Charity Norman",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Pitcairn: Paradise Lost",
+   "author": "Kathy Marks",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Crooks like Us",
+   "author": "Peter Doyle",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Medical Murder: Disturbing Cases of Doctors Who Kill",
+   "author": "Robert M. Kaplan",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Abandoned: The Sad Death of Dianne Brimble",
+   "author": "Geesche Jacobson",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Wasted",
+   "author": "Ross Honeywill",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Honeymoon Dive",
+   "author": "Lindsay Simpson & Jennifer Cooke",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Sins of the Father",
+   "author": "Eamonn Duff",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Call Me Cruel",
+   "author": "Michael Duffy",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Cold Case File",
+   "author": "Liz Porter",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The People Smuggler",
+   "author": "Robin de Crespigny",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Every Parent's Nightmare",
+   "author": "Belinda Hawkins",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil's Cinema",
+   "author": "Steve Lillebuen",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Dead by Friday",
+   "author": "Derek Pedley",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Eugenia",
+   "author": "Mark Tedeschi",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Murder in Mississippi",
+   "author": "John Safran",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Disgraced?",
+   "author": "Paul Dale",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Forever Nine",
+   "author": "John Kidman & Denise Hofman",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "No Mercy",
+   "author": "Eleanor Learmonth & Jenny Tabakoff",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "JFK: The Smoking Gun",
+   "author": "Colin McLaren",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Outlaw Bikers in Australia",
+   "author": "Duncan McNab",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "This House of Grief: The Story of a Murder Trial",
+   "author": "Helen Garner",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall",
+   "author": "Amy Dale",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Family Court Murders",
+   "author": "Debi Marshall",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "He Who Must Be Obeid",
+   "author": "Kate McClymont & Linton Besser",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Murder of Allison Baden-Clay",
+   "author": "David Murray",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Feel-Good Hit of the Year",
+   "author": "Liam Pieper",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Certain Admissions",
+   "author": "Gideon Haigh",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Sting",
+   "author": "Kate Kyriacou",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "A Murder Without Motive",
+   "author": "Martin Mckenzie-Murray",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Killing Love",
+   "author": "Rebecca Poulson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Kidnapped",
+   "author": "Mark Tedeschi",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Getting Away with Murder",
+   "author": "Duncan McNab",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Drowned Man",
+   "author": "Brendan James Murray",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Code of Silence",
+   "author": "Colin Dillon",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Roger Rogerson",
+   "author": "Duncan McNab",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Denny Day",
+   "author": "Terry Smyth",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Murder at Myall Creek",
+   "author": "Mark Tedeschi",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Unmaking A Murder: The Mysterious Death of Anna Jane Cheney",
+   "author": "Graham Archer",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Contractor",
+   "author": "Mark Abernethy",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Suitcase Baby",
+   "author": "Tanya Bretherton",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Whiteley on Trial",
+   "author": "Gabriella Coslovich",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Fatalist",
+   "author": "Campbell McConachie",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Eggshell Skull",
+   "author": "Bri Lee",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Arsonist",
+   "author": "Chloe Hooper",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Siege: Inside the Lindt Cafe",
+   "author": "Deborah Snow",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Waiting for Elijah",
+   "author": "Kate Wild",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Bowraville",
+   "author": "Dan Box",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Dead Man Walking: The murky world of Michael McGurk and Ron Medich",
+   "author": "Kate McClymont",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Shark Arm",
+   "author": "Phillip Roope & Kevin Meagher",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Snakes and Ladders",
+   "author": "Angela Williams",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Stalking Claremont: Inside the hunt for a serial killer",
+   "author": "Bret Christian",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Husband Poisoner",
+   "author": "Tanya Bretherton",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Public Enemies",
+   "author": "Mark Dapin",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Hazelwood",
+   "author": "Tom Doig",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Witness",
+   "author": "Louise Milligan",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Banquet: The untold story of Adelaide's family murders",
+   "author": "Debi Marshall",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Larrimah",
+   "author": "Caroline Graham & Kylie Stevenson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Mother Wound",
+   "author": "Amani Haydar",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "A Witness of Fact",
+   "author": "Drew Rooke",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Betrayed",
+   "author": "Sandi Logan",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Tiger! Tiger! Tiger!",
+   "author": "Officer A",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Rattled",
+   "author": "Ellis Gunn",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Out of the Ashes",
+   "author": "Megan Norris",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Death Row at Truro",
+   "author": "Geoff Plunkett",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Crossing the Line",
+   "author": "Nick McKenzie",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Murder Squad",
+   "author": "Michael Adams",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Reckless",
+   "author": "Marele Day",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Killing for Country",
+   "author": "David Marr",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Teacher's Pet",
+   "author": "Hedley Thomas",
+   "year": 2024,
+   "kind": "c"
+  }
+ ]
+}

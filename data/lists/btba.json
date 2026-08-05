@@ -1,0 +1,1855 @@
+{
+ "slug": "btba",
+ "prize": "Best Translated Book Award",
+ "rooms": [
+  "translator",
+  "hundredwindows",
+  "foreignwindow",
+  "othersuns"
+ ],
+ "page": "Best Translated Book Award",
+ "url": "https://en.wikipedia.org/wiki/Best_Translated_Book_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1361702834",
+ "revid": 1361702834,
+ "fetchedAt": "2026-08-05T16:26:52.055Z",
+ "counts": {
+  "entries": 212,
+  "winners": 0,
+  "cited": 212
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Fiction",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 1,
+   "heading": "Poetry",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 2,
+   "heading": "2008",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 3,
+   "heading": "2008",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 3,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 4,
+   "heading": "2009",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 9,
+   "dropped": 1,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 5,
+   "heading": "2009",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 6,
+   "heading": "2010",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 7,
+   "heading": "2010",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 11,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 8,
+   "heading": "2011",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 9,
+   "heading": "2011",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 5,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 10,
+   "heading": "2012",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 11,
+   "heading": "2012",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 12,
+   "heading": "2013",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 13,
+   "heading": "2013",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 14,
+   "heading": "2014",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 15,
+   "heading": "2014",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 16,
+   "heading": "2015",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 17,
+   "heading": "2015",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 18,
+   "heading": "2016",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 19,
+   "heading": "2016",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 20,
+   "heading": "2017",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 21,
+   "heading": "2017",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 5,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 22,
+   "heading": "2018",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 23,
+   "heading": "2018",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 24,
+   "heading": "2019",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 25,
+   "heading": "2019",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 5,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 26,
+   "heading": "2020",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 9,
+   "dropped": 1,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 27,
+   "heading": "2020",
+   "headers": "Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 2
+   },
+   "took": 5,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Guantanamo / Guantánamo",
+   "author": "Germany Dorothea Dieckmann",
+   "year": null,
+   "kind": "c",
+   "translator": "Tim Mohr"
+  },
+  {
+   "title": "The Savage Detectives / Los detectives salvajes",
+   "author": "Chile Roberto Bolaño",
+   "year": null,
+   "kind": "c",
+   "translator": "Natasha Wimmer"
+  },
+  {
+   "title": "Autonauts of the Cosmoroute / Los autonautas de la cosmopista",
+   "author": "Argentina Julio Cortázar",
+   "year": null,
+   "kind": "c",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "Missing Soluch / جای خالی سلوچ",
+   "author": "Iran Mahmoud Dowlatabadi",
+   "year": null,
+   "kind": "c",
+   "translator": "Kamran Rastegar"
+  },
+  {
+   "title": "Ravel",
+   "author": "France Jean Echenoz",
+   "year": null,
+   "kind": "c",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "Sunflower / Napraforgó",
+   "author": "Hungary Gyula Krúdy",
+   "year": null,
+   "kind": "c",
+   "translator": "John Batki"
+  },
+  {
+   "title": "Out Stealing Horses / Ut og stjæle hester",
+   "author": "Norway Per Petterson",
+   "year": null,
+   "kind": "c",
+   "translator": "Anne Born"
+  },
+  {
+   "title": "Omega Minor",
+   "author": "Belgium Paul Verhaeghen",
+   "year": null,
+   "kind": "c",
+   "translator": "Paul Verhaeghen"
+  },
+  {
+   "title": "Montano's Malady / El mal de Montano",
+   "author": "Spain Enrique Vila-Matas",
+   "year": null,
+   "kind": "c",
+   "translator": "Jonathan Dunne"
+  },
+  {
+   "title": "The Assistant / Der Gehülfe",
+   "author": "Switzerland Robert Walser",
+   "year": null,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "The Drug of Art",
+   "author": "Czechia Ivan Blatný",
+   "year": null,
+   "kind": "c",
+   "translator": "Justin Quinn and others"
+  },
+  {
+   "title": "The Dream of the Poem: Hebrew Poetry from Muslim and Christian Spain, 950–1492",
+   "author": "Various",
+   "year": null,
+   "kind": "c",
+   "translator": "Peter Cole"
+  },
+  {
+   "title": "The Collected Poems: 1956–1998",
+   "author": "Poland Zbigniew Herbert",
+   "year": null,
+   "kind": "c",
+   "translator": "Czesław Miłosz & Peter Dale Scott & Alissa Valles"
+  },
+  {
+   "title": "Tranquility / A nyugalom",
+   "author": "HungaryRomania Attila Bartis",
+   "year": null,
+   "kind": "c",
+   "translator": "Imre Goldstein"
+  },
+  {
+   "title": "Nazi Literature in the Americas / La literatura nazi en América",
+   "author": "Chile Roberto Bolaño",
+   "year": null,
+   "kind": "c",
+   "translator": "Chris Andrews"
+  },
+  {
+   "title": "Voice Over / Voix sans issue",
+   "author": "France Céline Curiol",
+   "year": null,
+   "kind": "c",
+   "translator": "Sam Richard"
+  },
+  {
+   "title": "The Darkroom of Damocles / De donkere kamer van Damokles",
+   "author": "Netherlands Willem Frederik Hermans",
+   "year": null,
+   "kind": "c",
+   "translator": "Ina Rilke"
+  },
+  {
+   "title": "Yalo / يالو",
+   "author": "Lebanon Elias Khoury",
+   "year": null,
+   "kind": "c",
+   "translator": "Peter Theroux"
+  },
+  {
+   "title": "Senselessness / Insensatez",
+   "author": "El SalvadorHonduras Horacio Castellanos Moya",
+   "year": null,
+   "kind": "c",
+   "translator": "Katherine Silver"
+  },
+  {
+   "title": "Unforgiving Years / Les Années sans pardon",
+   "author": "RussiaBelgium Victor Serge",
+   "year": null,
+   "kind": "c",
+   "translator": "Richard Greeman"
+  },
+  {
+   "title": "Bonsai / Bonsái",
+   "author": "Chile Alejandro Zambra",
+   "year": null,
+   "kind": "c",
+   "translator": "Caro De Robertis"
+  },
+  {
+   "title": "The Post Office Girl / Rausch der Verwandlung",
+   "author": "Austria Stefan Zweig",
+   "year": null,
+   "kind": "c",
+   "translator": "Joel Rotenberg"
+  },
+  {
+   "title": "For the Fighting Spirit of the Walnut / 胡桃の戦意のために",
+   "author": "Japan Takashi Hiraide",
+   "year": null,
+   "kind": "c",
+   "translator": "Sawako Nakayasu"
+  },
+  {
+   "title": "Essential Poems and Writings",
+   "author": "France Robert Desnos",
+   "year": null,
+   "kind": "c",
+   "translator": "Mary Ann Caws and others"
+  },
+  {
+   "title": "You Are the Business / C'est toi le business",
+   "author": "France Caroline Dubois",
+   "year": null,
+   "kind": "c",
+   "translator": "Cole Swensen"
+  },
+  {
+   "title": "As It Turned Out",
+   "author": "Russia Dmitry Golynko",
+   "year": null,
+   "kind": "c",
+   "translator": "Eugene Ostashevsky & Rebecca Bella & Simona Schneider"
+  },
+  {
+   "title": "Poems of A. O. Barnabooth / Les Poésies de A. O. Barnabooth",
+   "author": "France Valery Larbaud",
+   "year": null,
+   "kind": "c",
+   "translator": "Ron Padgett & Bill Zavatsky"
+  },
+  {
+   "title": "Night Wraps the Sky",
+   "author": "Russia Vladimir Mayakovsky",
+   "year": null,
+   "kind": "c",
+   "translator": "Katya Apekina & Val Vinokur & Matvei Yankelevich"
+  },
+  {
+   "title": "A Different Practice / En annorlunda praktik",
+   "author": "Sweden Fredrik Nyberg",
+   "year": null,
+   "kind": "c",
+   "translator": "Jennifer Hayashida"
+  },
+  {
+   "title": "EyeSeas / C'est toi le business",
+   "author": "France Raymond Queneau",
+   "year": null,
+   "kind": "c",
+   "translator": "Daniela Hurezanu & Stephen Kessler"
+  },
+  {
+   "title": "Peregrinary / Peregrynarz",
+   "author": "Poland Eugeniusz Tkaczyszyn-Dycki",
+   "year": null,
+   "kind": "c",
+   "translator": "Bill Johnston"
+  },
+  {
+   "title": "Eternal Enemies",
+   "author": "Poland Adam Zagajewski",
+   "year": null,
+   "kind": "c",
+   "translator": "Clare Cavanagh"
+  },
+  {
+   "title": "The Confessions of Noa Weber / שאהבה נפשי",
+   "author": "Israel Gail Hareven",
+   "year": null,
+   "kind": "c",
+   "translator": "Dalya Bilu"
+  },
+  {
+   "title": "Anonymous Celebrity / O Anônimo Célebre",
+   "author": "Brazil Ignácio de Loyola Brandão",
+   "year": null,
+   "kind": "c",
+   "translator": "Nelson Vieira"
+  },
+  {
+   "title": "The Discoverer / Oppdageren",
+   "author": "Norway Jan Kjærstad",
+   "year": null,
+   "kind": "c",
+   "translator": "Barbara Haveland"
+  },
+  {
+   "title": "Ghosts / Los fantasmas",
+   "author": "Argentina César Aira",
+   "year": null,
+   "kind": "c",
+   "translator": "Chris Andrews"
+  },
+  {
+   "title": "Memories of the Future / Воспоминания о будущем",
+   "author": "Russia Sigizmund Krzhizhanovsky",
+   "year": null,
+   "kind": "c",
+   "translator": "Joanne Turnbull"
+  },
+  {
+   "title": "Rex",
+   "author": "Cuba José Manuel Prieto",
+   "year": null,
+   "kind": "c",
+   "translator": "Esther Allen"
+  },
+  {
+   "title": "The Tanners / Geschwister Tanner",
+   "author": "Switzerland Robert Walser",
+   "year": null,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "The Twin / Boven is het stil",
+   "author": "Netherlands Gerbrand Bakker",
+   "year": null,
+   "kind": "c",
+   "translator": "David Colmer"
+  },
+  {
+   "title": "The Weather Fifteen Years Ago / Das Wetter vor 15 Jahren",
+   "author": "Austria Wolf Haas",
+   "year": null,
+   "kind": "c",
+   "translator": "Stephanie Gilardi & Thomas S. Hansen"
+  },
+  {
+   "title": "Wonder / De verwondering",
+   "author": "Belgium Hugo Claus",
+   "year": null,
+   "kind": "c",
+   "translator": "Michael Henry Heim"
+  },
+  {
+   "title": "The Russian Version / Русская версия",
+   "author": "Russia Elena Fanailova",
+   "year": null,
+   "kind": "c",
+   "translator": "Genya Turovskaya & Stephanie Sandler"
+  },
+  {
+   "title": "Selections",
+   "author": "Canada Nicole Brossard",
+   "year": null,
+   "kind": "c",
+   "translator": "Various"
+  },
+  {
+   "title": "The Brittle Age and Returning Upland",
+   "author": "France René Char",
+   "year": null,
+   "kind": "c",
+   "translator": "Gustaf Sobin"
+  },
+  {
+   "title": "If I Were Another",
+   "author": "Palestine Mahmoud Darwish",
+   "year": null,
+   "kind": "c",
+   "translator": "Fady Joudah"
+  },
+  {
+   "title": "Poems of A. O. Barnabooth / Les Poésies de A. O. Barnabooth",
+   "author": "France Valery Larbaud",
+   "year": null,
+   "kind": "c",
+   "translator": "Ron Padgett & Bill Zavatsky"
+  },
+  {
+   "title": "Killing Kanoko / カノコ殺し",
+   "author": "Japan Hiromi Itō",
+   "year": null,
+   "kind": "c",
+   "translator": "Jeffrey Angles"
+  },
+  {
+   "title": "K. B.: The Suspect / K. B. Įtariamas",
+   "author": "Lithuania Marcelijus Martinaitis",
+   "year": null,
+   "kind": "c",
+   "translator": "Laima Vince"
+  },
+  {
+   "title": "Scale and Stairs",
+   "author": "South Korea Ra Heeduck",
+   "year": null,
+   "kind": "c",
+   "translator": "Woo-Chung Kim & Christopher Merrill"
+  },
+  {
+   "title": "Dark Things / Тамне ствари",
+   "author": "Serbia Novica Tadić",
+   "year": null,
+   "kind": "c",
+   "translator": "Charles Simic"
+  },
+  {
+   "title": "Lightwall",
+   "author": "Romania Liliana Ursu",
+   "year": null,
+   "kind": "c",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "In Such Hard Times",
+   "author": "China Wei Yingwu",
+   "year": null,
+   "kind": "c",
+   "translator": "Red Pine"
+  },
+  {
+   "title": "The True Deceiver / Den ärliga bedragaren",
+   "author": "Finland Tove Jansson",
+   "year": null,
+   "kind": "c",
+   "translator": "Thomas Teal"
+  },
+  {
+   "title": "The Literary Conference / El congreso de literatura",
+   "author": "Argentina César Aira",
+   "year": null,
+   "kind": "c",
+   "translator": "Katherine Silver"
+  },
+  {
+   "title": "The Golden Age / Zlatý věk",
+   "author": "Czechia Michal Ajvaz",
+   "year": null,
+   "kind": "c",
+   "translator": "Andrew Oakland"
+  },
+  {
+   "title": "A Life on Paper",
+   "author": "France Georges-Olivier Châteaureynaud",
+   "year": null,
+   "kind": "c",
+   "translator": "Edward Gauvin"
+  },
+  {
+   "title": "The Jokers / La violence et la dérision",
+   "author": "France Albert Cossery",
+   "year": null,
+   "kind": "c",
+   "translator": "Anna Moschovakis"
+  },
+  {
+   "title": "Visitation / Heimsuchung",
+   "author": "Germany Jenny Erpenbeck",
+   "year": null,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "Hocus Bogus / Pseudo",
+   "author": "France Romain Gary (as Émile Ajar)",
+   "year": null,
+   "kind": "c",
+   "translator": "David Bellos"
+  },
+  {
+   "title": "On Elegance While Sleeping / De la elegancia mientras se duerme",
+   "author": "Argentina Emilio Lascano Tegui",
+   "year": null,
+   "kind": "c",
+   "translator": "Idra Novey"
+  },
+  {
+   "title": "Agaat",
+   "author": "South Africa Marlene van Niekerk",
+   "year": null,
+   "kind": "c",
+   "translator": "Michiel Heyns"
+  },
+  {
+   "title": "Georg Letham: Physician and Murderer / Georg Letham, Arzt und Mörder",
+   "author": "Austria Ernst Weiss",
+   "year": null,
+   "kind": "c",
+   "translator": "Joel Rotenberg"
+  },
+  {
+   "title": "The Book of Things / Knjiga reči",
+   "author": "Slovenia Aleš Šteger",
+   "year": null,
+   "kind": "c",
+   "translator": "Brian Henry"
+  },
+  {
+   "title": "Geometries",
+   "author": "France Eugène Guillevic",
+   "year": null,
+   "kind": "c",
+   "translator": "Richard Sieburth"
+  },
+  {
+   "title": "Flash Cards / 便條集",
+   "author": "China Yu Jian",
+   "year": null,
+   "kind": "c",
+   "translator": "Wang Ping & Ron Padgett"
+  },
+  {
+   "title": "Time of Sky & Castles in the Air / 空の時間 詩集 & 空中楼閣 夢のノート",
+   "author": "Japan Ayane Kawata",
+   "year": null,
+   "kind": "c",
+   "translator": "Sawako Nakayasu"
+  },
+  {
+   "title": "Child of Nature / Fëmijët e natyrës",
+   "author": "Albania Luljeta Lleshanaku",
+   "year": null,
+   "kind": "c",
+   "translator": "Henry Israeli & Shpresa Qatipi"
+  },
+  {
+   "title": "Stone Upon Stone / Kamień na kamieniu",
+   "author": "Poland Wiesław Myśliwski",
+   "year": null,
+   "kind": "c",
+   "translator": "Bill Johnston"
+  },
+  {
+   "title": "Lightning / Des éclairs",
+   "author": "France Jean Echenoz",
+   "year": null,
+   "kind": "c",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "Upstaged / La Scène usurpée",
+   "author": "France Jacques Jouet",
+   "year": null,
+   "kind": "c",
+   "translator": "Leland de la Durantaye"
+  },
+  {
+   "title": "Kornél Esti / Esti Kornél",
+   "author": "Hungary Dezső Kosztolányi",
+   "year": null,
+   "kind": "c",
+   "translator": "Bernard Adams"
+  },
+  {
+   "title": "I Am a Japanese Writer / Je suis un écrivain japonais",
+   "author": "HaitiCanada Dany Laferrière",
+   "year": null,
+   "kind": "c",
+   "translator": "David Homel"
+  },
+  {
+   "title": "New Finnish Grammar / Nuova grammatica finlandese",
+   "author": "Italy Diego Marani",
+   "year": null,
+   "kind": "c",
+   "translator": "Judith Landry"
+  },
+  {
+   "title": "Scars / Cicatrices",
+   "author": "Argentina Juan José Saer",
+   "year": null,
+   "kind": "c",
+   "translator": "Steve Dolph"
+  },
+  {
+   "title": "Kafka's Leopards / Os Leopardos de Kafka",
+   "author": "Brazil Moacyr Scliar",
+   "year": null,
+   "kind": "c",
+   "translator": "Thomas O. Beebee"
+  },
+  {
+   "title": "In Red / W czerwieni",
+   "author": "Poland Magdalena Tulli",
+   "year": null,
+   "kind": "c",
+   "translator": "Bill Johnston"
+  },
+  {
+   "title": "Never Any End to Paris / París no se acaba nunca",
+   "author": "Spain Enrique Vila-Matas",
+   "year": null,
+   "kind": "c",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "Spectacle & Pigsty",
+   "author": "Japan Kiwao Nomura",
+   "year": null,
+   "kind": "c",
+   "translator": "Kyoko Yoshida & Forrest Gander"
+  },
+  {
+   "title": "Hagar Before the Occupation, Hagar After the Occupation / هاجر قبل الاحتلال، هاجر بعد الاحتلال",
+   "author": "Iraq Amal al-Jubouri",
+   "year": null,
+   "kind": "c",
+   "translator": "Rebecca Gayle Howell & Husam Qaisi"
+  },
+  {
+   "title": "Last Verses / Derniers vers",
+   "author": "France Jules Laforgue",
+   "year": null,
+   "kind": "c",
+   "translator": "Donald Revell"
+  },
+  {
+   "title": "A Fireproof Box",
+   "author": "Russia Gleb Shulpyakov",
+   "year": null,
+   "kind": "c",
+   "translator": "Christopher Mattison"
+  },
+  {
+   "title": "engulf — enkindle / münden — entzüngeln",
+   "author": "Germany Anja Utler",
+   "year": null,
+   "kind": "c",
+   "translator": "Kurt Beals"
+  },
+  {
+   "title": "False Friends / Falsche Freunde",
+   "author": "Germany Uljana Wolf",
+   "year": null,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "Satantango / Sátántangó",
+   "author": "Hungary László Krasznahorkai",
+   "year": null,
+   "kind": "c",
+   "translator": "George Szirtes"
+  },
+  {
+   "title": "The Planets / Los planetas",
+   "author": "Argentina Sergio Chejfec",
+   "year": null,
+   "kind": "c",
+   "translator": "Heather Cleary"
+  },
+  {
+   "title": "Prehistoric Times / Préhistoire",
+   "author": "France Éric Chevillard",
+   "year": null,
+   "kind": "c",
+   "translator": "Alyson Waters"
+  },
+  {
+   "title": "The Colonel / زوال کلنل",
+   "author": "Iran Mahmoud Dowlatabadi",
+   "year": null,
+   "kind": "c",
+   "translator": "Tom Patterdale"
+  },
+  {
+   "title": "Autoportrait",
+   "author": "France Édouard Levé",
+   "year": null,
+   "kind": "c",
+   "translator": "Lorin Stein"
+  },
+  {
+   "title": "A Breath of Life: Pulsations / Um Sopro de Vida: Pulsações",
+   "author": "Brazil Clarice Lispector",
+   "year": null,
+   "kind": "c",
+   "translator": "Johnny Lorenz"
+  },
+  {
+   "title": "The Hunger Angel / Atemschaukel",
+   "author": "Romania Herta Müller",
+   "year": null,
+   "kind": "c",
+   "translator": "Philip Boehm"
+  },
+  {
+   "title": "Maidenhair / Венерин волос",
+   "author": "Russia Mikhail Shishkin",
+   "year": null,
+   "kind": "c",
+   "translator": "Marian Schwartz"
+  },
+  {
+   "title": "Transit",
+   "author": "DjiboutiFrance Abdourahman Waberi",
+   "year": null,
+   "kind": "c",
+   "translator": "David Ball & Nicole Ball"
+  },
+  {
+   "title": "My Father's Book / Das Buch des Vaters",
+   "author": "Switzerland Urs Widmer",
+   "year": null,
+   "kind": "c",
+   "translator": "Donal McLaughlin"
+  },
+  {
+   "title": "Wheel with a Single Spoke / Roata cu o singură spiță",
+   "author": "Romania Nichita Stănescu",
+   "year": null,
+   "kind": "c",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "Transfer Fat / Forsla fett",
+   "author": "Sweden Aase Berg",
+   "year": null,
+   "kind": "c",
+   "translator": "Johannes Göransson"
+  },
+  {
+   "title": "pH Neutral History / pH неутрална за животот и смртта",
+   "author": "North Macedonia Lidija Dimkovska",
+   "year": null,
+   "kind": "c",
+   "translator": "Ljubica Arsovska & Peggy Reid"
+  },
+  {
+   "title": "The Invention of Glass / L'Invention du verre",
+   "author": "France Emmanuel Hocquard",
+   "year": null,
+   "kind": "c",
+   "translator": "Cole Swensen & Rod Smith"
+  },
+  {
+   "title": "Notes on the Mosquito",
+   "author": "China Xi Chuan",
+   "year": null,
+   "kind": "c",
+   "translator": "Lucas Klein"
+  },
+  {
+   "title": "Almost 1 Book / Almost 1 Life / Fast 1 Leben",
+   "author": "Austria Elfriede Czurda",
+   "year": null,
+   "kind": "c",
+   "translator": "Rosmarie Waldrop"
+  },
+  {
+   "title": "Seiobo There Below / Seiobo járt odalent",
+   "author": "Hungary László Krasznahorkai",
+   "year": null,
+   "kind": "c",
+   "translator": "Ottilie Mulzet"
+  },
+  {
+   "title": "A True Novel / 本格小説",
+   "author": "Japan Minae Mizumura",
+   "year": null,
+   "kind": "c",
+   "translator": "Juliet Winters"
+  },
+  {
+   "title": "The African Shore / La orilla africana",
+   "author": "Guatemala Rodrigo Rey Rosa",
+   "year": null,
+   "kind": "c",
+   "translator": "Jeffrey Gray"
+  },
+  {
+   "title": "Horses of God / Les étoiles de Sidi Moumen",
+   "author": "Morocco Mahi Binebine",
+   "year": null,
+   "kind": "c",
+   "translator": "Lulu Norman"
+  },
+  {
+   "title": "Blinding / Orbitor",
+   "author": "Romania Mircea Cărtărescu",
+   "year": null,
+   "kind": "c",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "The Story of a New Name / Storia del nuovo cognome",
+   "author": "Italy Elena Ferrante",
+   "year": null,
+   "kind": "c",
+   "translator": "Ann Goldstein"
+  },
+  {
+   "title": "Tirza",
+   "author": "Netherlands Arnon Grunberg",
+   "year": null,
+   "kind": "c",
+   "translator": "Sam Garrett"
+  },
+  {
+   "title": "My Struggle: Book Two / Min kamp 2",
+   "author": "Norway Karl Ove Knausgård",
+   "year": null,
+   "kind": "c",
+   "translator": "Don Bartlett"
+  },
+  {
+   "title": "Leg Over Leg / الساق على الساق",
+   "author": "Lebanon Ahmad Faris al-Shidyaq",
+   "year": null,
+   "kind": "c",
+   "translator": "Humphrey Davies"
+  },
+  {
+   "title": "The Forbidden Kingdom / Het verboden rijk",
+   "author": "Netherlands J. Slauerhoff",
+   "year": null,
+   "kind": "c",
+   "translator": "Paul Vincent"
+  },
+  {
+   "title": "The Guest in the Wood",
+   "author": "Italy Elisa Biagini",
+   "year": null,
+   "kind": "c",
+   "translator": "Diana Thow & Sarah Stickney & Eugene Ostashevsky"
+  },
+  {
+   "title": "Four Elemental Bodies",
+   "author": "France Claude Royet-Journaud",
+   "year": null,
+   "kind": "c",
+   "translator": "Keith Waldrop"
+  },
+  {
+   "title": "The Oasis of Now / واحه‌ای در لحظ",
+   "author": "Iran Sohrab Sepehri",
+   "year": null,
+   "kind": "c",
+   "translator": "Kazim Ali & Mohammad Jafar Mahallati"
+  },
+  {
+   "title": "Relocations: 3 Contemporary Russian Women Poets",
+   "author": "Russia Polina Barskova & Russia Anna Glazova & Russia Maria Stepanova",
+   "year": null,
+   "kind": "c",
+   "translator": "Catherine Ciepiela & Anna Khasin & Sibelan Forrester"
+  },
+  {
+   "title": "The Unknown University / La Universidad Desconocida",
+   "author": "Chile Roberto Bolaño",
+   "year": null,
+   "kind": "c",
+   "translator": "Laura Healy"
+  },
+  {
+   "title": "White Piano / Piano blanc",
+   "author": "Canada Nicole Brossard",
+   "year": null,
+   "kind": "c",
+   "translator": "Robert Majzels & Erín Moure"
+  },
+  {
+   "title": "Murder / Meurtre",
+   "author": "France Danielle Collobert",
+   "year": null,
+   "kind": "c",
+   "translator": "Nathanaël"
+  },
+  {
+   "title": "In the Moremarrow / En la masmédula",
+   "author": "Argentina Oliverio Girondo",
+   "year": null,
+   "kind": "c",
+   "translator": "Molly Weigel"
+  },
+  {
+   "title": "Paul Klee's Boat",
+   "author": "Russia Anzhelina Polonskaya",
+   "year": null,
+   "kind": "c",
+   "translator": "Andrew Wachtel"
+  },
+  {
+   "title": "His Days Go By the Way Her Years",
+   "author": "Taiwan Ye Mimi",
+   "year": null,
+   "kind": "c",
+   "translator": "Steve Bradbury"
+  },
+  {
+   "title": "The Last Lover / 最后的情人",
+   "author": "China Can Xue",
+   "year": null,
+   "kind": "c",
+   "translator": "Annelise Finegan Wasmoen"
+  },
+  {
+   "title": "The Author and Me / L'Auteur et moi",
+   "author": "France Éric Chevillard",
+   "year": null,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "Fantomas Versus the Multinational Vampires / Fantomas contra los vampiros multinacionales",
+   "author": "Argentina Julio Cortázar",
+   "year": null,
+   "kind": "c",
+   "translator": "David Kurnick"
+  },
+  {
+   "title": "Pushkin Hills / Заповедник",
+   "author": "Russia Sergei Dovlatov",
+   "year": null,
+   "kind": "c",
+   "translator": "Katherine Dovlatov"
+  },
+  {
+   "title": "Those Who Leave and Those Who Stay / Storia di chi fugge e di chi resta",
+   "author": "Italy Elena Ferrante",
+   "year": null,
+   "kind": "c",
+   "translator": "Ann Goldstein"
+  },
+  {
+   "title": "Things Look Different in the Light / A la luz cambian las cosas",
+   "author": "Spain Medardo Fraile",
+   "year": null,
+   "kind": "c",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "Harlequin's Millions / Harlekýnovy milióny",
+   "author": "Czechia Bohumil Hrabal",
+   "year": null,
+   "kind": "c",
+   "translator": "Stacey Knecht"
+  },
+  {
+   "title": "The Woman Who Borrowed Memories / Kvinnan som lånade minnen",
+   "author": "Finland Tove Jansson",
+   "year": null,
+   "kind": "c",
+   "translator": "Thomas Teal & Silvester Mazzarella"
+  },
+  {
+   "title": "Faces in the Crowd / Los ingrávidos",
+   "author": "Mexico Valeria Luiselli",
+   "year": null,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "La Grande / La grande",
+   "author": "Argentina Juan José Saer",
+   "year": null,
+   "kind": "c",
+   "translator": "Steve Dolph"
+  },
+  {
+   "title": "Diorama",
+   "author": "Mexico Rocío Cerón",
+   "year": null,
+   "kind": "c",
+   "translator": "Anna Rosenwong"
+  },
+  {
+   "title": "Lazy Suzie",
+   "author": "France Suzanne Doppelt",
+   "year": null,
+   "kind": "c",
+   "translator": "Cole Swensen"
+  },
+  {
+   "title": "Where Are the Trees Going? / Où vont les arbres ?",
+   "author": "LebanonFrance Vénus Khoury-Ghata",
+   "year": null,
+   "kind": "c",
+   "translator": "Marilyn Hacker"
+  },
+  {
+   "title": "Diana's Tree / Árbol de Diana",
+   "author": "Argentina Alejandra Pizarnik",
+   "year": null,
+   "kind": "c",
+   "translator": "Yvette Siegert"
+  },
+  {
+   "title": "Compleat Catalogue of Comedic Novelties",
+   "author": "Russia Lev Rubinstein",
+   "year": null,
+   "kind": "c",
+   "translator": "Philip Metres & Tatiana Tulchinsky"
+  },
+  {
+   "title": "End of the City Map / Ende des Stadtplans",
+   "author": "Germany Farhad Showghi",
+   "year": null,
+   "kind": "c",
+   "translator": "Rosmarie Waldrop"
+  },
+  {
+   "title": "Signs Preceding the End of the World / Señales que precederán al fin del mundo",
+   "author": "Mexico Yuri Herrera",
+   "year": null,
+   "kind": "c",
+   "translator": "Lisa Dillman"
+  },
+  {
+   "title": "A General Theory of Oblivion / Teoria Geral do Esquecimento",
+   "author": "Angola José Eduardo Agualusa",
+   "year": null,
+   "kind": "c",
+   "translator": "Daniel Hahn"
+  },
+  {
+   "title": "Arvida",
+   "author": "Canada Samuel Archibald",
+   "year": null,
+   "kind": "c",
+   "translator": "Donald Winkler"
+  },
+  {
+   "title": "The Story of the Lost Child / Storia della bambina perduta",
+   "author": "Italy Elena Ferrante",
+   "year": null,
+   "kind": "c",
+   "translator": "Ann Goldstein"
+  },
+  {
+   "title": "The Physics of Sorrow / Физика на тъгата",
+   "author": "Bulgaria Georgi Gospodinov",
+   "year": null,
+   "kind": "c",
+   "translator": "Angela Rodel"
+  },
+  {
+   "title": "Moods / מצבי רוח",
+   "author": "Israel Yoel Hoffmann",
+   "year": null,
+   "kind": "c",
+   "translator": "Peter Cole"
+  },
+  {
+   "title": "The Complete Stories",
+   "author": "Brazil Clarice Lispector",
+   "year": null,
+   "kind": "c",
+   "translator": "Katrina Dodson"
+  },
+  {
+   "title": "The Story of My Teeth / La historia de mis dientes",
+   "author": "Mexico Valeria Luiselli",
+   "year": null,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "War, So Much War / Quanta, quanta guerra…",
+   "author": "Spain Mercè Rodoreda",
+   "year": null,
+   "kind": "c",
+   "translator": "Maruxa Relaño & Martha Tennent"
+  },
+  {
+   "title": "Murder Most Serene / Sérénissime assassinat",
+   "author": "France Gabrielle Wittkop",
+   "year": null,
+   "kind": "c",
+   "translator": "Louise Rogers Lalaurie"
+  },
+  {
+   "title": "Rilke Shake",
+   "author": "Brazil Angélica Freitas",
+   "year": null,
+   "kind": "c",
+   "translator": "Hilary Kaplan"
+  },
+  {
+   "title": "Empty Chairs: Selected Poems",
+   "author": "China Liu Xia",
+   "year": null,
+   "kind": "c",
+   "translator": "Ming Di"
+  },
+  {
+   "title": "Load Poems Like Guns: Women's Poetry from Herat, Afghanistan",
+   "author": "Afghanistan Various",
+   "year": null,
+   "kind": "c",
+   "translator": "Farzana Marie"
+  },
+  {
+   "title": "Silvina Ocampo",
+   "author": "Argentina Silvina Ocampo",
+   "year": null,
+   "kind": "c",
+   "translator": "Jason Weiss"
+  },
+  {
+   "title": "The Nomads, My Brothers, Go Out to Drink from the Big Dipper / Les nomades, mes frères, vont boire à la Grande Ourse",
+   "author": "DjiboutiFrance Abdourahman Waberi",
+   "year": null,
+   "kind": "c",
+   "translator": "Nancy Naomi Carlson"
+  },
+  {
+   "title": "Sea Summit / 海中的山峰",
+   "author": "China Yi Lu",
+   "year": null,
+   "kind": "c",
+   "translator": "Fiona Sze-Lorrain"
+  },
+  {
+   "title": "Chronicle of the Murdered House / Crônica da casa assassinada",
+   "author": "Brazil Lúcio Cardoso",
+   "year": null,
+   "kind": "c",
+   "translator": "Margaret Jull Costa & Robin Patterson"
+  },
+  {
+   "title": "Among Strange Victims / En medio de extrañas víctimas",
+   "author": "Mexico Daniel Saldaña París",
+   "year": null,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "Doomi Golo",
+   "author": "Senegal Boubacar Boris Diop",
+   "year": null,
+   "kind": "c",
+   "translator": "Vera Wülfing-Leckie & El Hadji Moustapha Diop"
+  },
+  {
+   "title": "Eve Out of Her Ruins / Ève de ses décombres",
+   "author": "Mauritius Ananda Devi",
+   "year": null,
+   "kind": "c",
+   "translator": "Jeffrey Zuckerman"
+  },
+  {
+   "title": "Ladivine",
+   "author": "France Marie NDiaye",
+   "year": null,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "Oblivion / Предел забвения",
+   "author": "Russia Sergei Lebedev",
+   "year": null,
+   "kind": "c",
+   "translator": "Antonina W. Bouis"
+  },
+  {
+   "title": "Umami",
+   "author": "Mexico Laia Jufresa",
+   "year": null,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "War and Turpentine / Oorlog en terpentijn",
+   "author": "Belgium Stefan Hertmans",
+   "year": null,
+   "kind": "c",
+   "translator": "David McKay"
+  },
+  {
+   "title": "Wicked Weeds / Malas hierbas",
+   "author": "Dominican Republic Pedro Cabiya",
+   "year": null,
+   "kind": "c",
+   "translator": "Jessica Powell"
+  },
+  {
+   "title": "Zama",
+   "author": "Argentina Antonio Di Benedetto",
+   "year": null,
+   "kind": "c",
+   "translator": "Esther Allen"
+  },
+  {
+   "title": "Extracting the Stone of Madness / Extracción de la piedra de locura",
+   "author": "Argentina Alejandra Pizarnik",
+   "year": null,
+   "kind": "c",
+   "translator": "Yvette Siegert"
+  },
+  {
+   "title": "Berlin-Hamlet",
+   "author": "Hungary Szilárd Borbély",
+   "year": null,
+   "kind": "c",
+   "translator": "Ottilie Mulzet"
+  },
+  {
+   "title": "Of Things",
+   "author": "Austria Michael Donhauser",
+   "year": null,
+   "kind": "c",
+   "translator": "Nick Hoff & Andrew Joron"
+  },
+  {
+   "title": "Cheer Up, Femme Fatale / 명랑하라 팜 파탈",
+   "author": "South Korea Kim Yi-deum",
+   "year": null,
+   "kind": "c",
+   "translator": "Ji Yoon Lee & Don Mee Choi & Johannes Göransson"
+  },
+  {
+   "title": "In Praise of Defeat",
+   "author": "Morocco Abdellatif Laabi",
+   "year": null,
+   "kind": "c",
+   "translator": "Donald Nicholson-Smith"
+  },
+  {
+   "title": "The Invented Part / La parte inventada",
+   "author": "Argentina Rodrigo Fresán",
+   "year": null,
+   "kind": "c",
+   "translator": "Will Vanderhyden"
+  },
+  {
+   "title": "Suzanne / La Femme qui fuit",
+   "author": "Canada Anaïs Barbeau-Lavalette",
+   "year": null,
+   "kind": "c",
+   "translator": "Rhonda Mullins"
+  },
+  {
+   "title": "Tómas Jónsson, Bestseller / Tómas Jónsson, metsölubók",
+   "author": "Iceland Guðbergur Bergsson",
+   "year": null,
+   "kind": "c",
+   "translator": "Lytton Smith"
+  },
+  {
+   "title": "Compass / Boussole",
+   "author": "France Mathias Énard",
+   "year": null,
+   "kind": "c",
+   "translator": "Charlotte Mandell"
+  },
+  {
+   "title": "Return to the Dark Valley / Volver al valle oscuro",
+   "author": "Colombia Santiago Gamboa",
+   "year": null,
+   "kind": "c",
+   "translator": "Howard Curtis"
+  },
+  {
+   "title": "Old Rendering Plant / Alte Abdeckerei",
+   "author": "Germany Wolfgang Hilbig",
+   "year": null,
+   "kind": "c",
+   "translator": "Isabel Fargo Cole"
+  },
+  {
+   "title": "I Am the Brother of XX / Sono il fratello di XX",
+   "author": "Switzerland Fleur Jaeggy",
+   "year": null,
+   "kind": "c",
+   "translator": "Gini Alhadeff"
+  },
+  {
+   "title": "My Heart Hemmed In / Mon cœur à l'étroit",
+   "author": "France Marie NDiaye",
+   "year": null,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "August / Agosto",
+   "author": "Argentina Romina Paula",
+   "year": null,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Remains of Life / 餘生",
+   "author": "Taiwan Wu He",
+   "year": null,
+   "kind": "c",
+   "translator": "Michael Berry"
+  },
+  {
+   "title": "Before Lyricism / Πριν απο το λυρισμό",
+   "author": "Greece Eleni Vakalo",
+   "year": null,
+   "kind": "c",
+   "translator": "Karen Emmerich"
+  },
+  {
+   "title": "Hackers",
+   "author": "Sweden Aase Berg",
+   "year": null,
+   "kind": "c",
+   "translator": "Johannes Göransson"
+  },
+  {
+   "title": "Paraguayan Sea / Mar paraguayo",
+   "author": "Brazil Wilson Bueno",
+   "year": null,
+   "kind": "c",
+   "translator": "Erín Moure"
+  },
+  {
+   "title": "Third-Millennium Heart / Det 3. årtusindes hjerte",
+   "author": "Denmark Ursula Andkjær Olsen",
+   "year": null,
+   "kind": "c",
+   "translator": "Katrine Øgaard Jensen"
+  },
+  {
+   "title": "Spiral Staircase",
+   "author": "Japan Hirato Renkichi",
+   "year": null,
+   "kind": "c",
+   "translator": "Sho Sugita"
+  },
+  {
+   "title": "Directions for Use",
+   "author": "Serbia Ana Ristović",
+   "year": null,
+   "kind": "c",
+   "translator": "Steven Teref & Maja Teref"
+  },
+  {
+   "title": "Slave Old Man / L'esclave vieil homme et le molosse",
+   "author": "France Patrick Chamoiseau",
+   "year": null,
+   "kind": "c",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "Congo Inc.: Bismarck's Testament / Congo Inc. : Le testament de Bismarck",
+   "author": "DR Congo In Koli Jean Bofane",
+   "year": null,
+   "kind": "c",
+   "translator": "Marjolijn de Jager"
+  },
+  {
+   "title": "The Hospital / L'hôpital",
+   "author": "Morocco Ahmed Bouanani",
+   "year": null,
+   "kind": "c",
+   "translator": "Lara Vergnaud"
+  },
+  {
+   "title": "Pretty Things / Les jolies choses",
+   "author": "France Virginie Despentes",
+   "year": null,
+   "kind": "c",
+   "translator": "Emma Ramadan"
+  },
+  {
+   "title": "Moon Brow / عقرب‌کِشی",
+   "author": "Iran Shahriar Mandanipour",
+   "year": null,
+   "kind": "c",
+   "translator": "Sara Khalili"
+  },
+  {
+   "title": "Bricks and Mortar / Im Stein",
+   "author": "Germany Clemens Meyer",
+   "year": null,
+   "kind": "c",
+   "translator": "Katy Derbyshire"
+  },
+  {
+   "title": "Convenience Store Woman / コンビニ人間",
+   "author": "Japan Sayaka Murata",
+   "year": null,
+   "kind": "c",
+   "translator": "Ginny Tapley Takemori"
+  },
+  {
+   "title": "The Governesses / Les gouvernantes",
+   "author": "France Anne Serre",
+   "year": null,
+   "kind": "c",
+   "translator": "Mark Hutchinson"
+  },
+  {
+   "title": "Öræfi: The Wasteland / Öræfi",
+   "author": "Iceland Ófeigur Sigurðsson",
+   "year": null,
+   "kind": "c",
+   "translator": "Lytton Smith"
+  },
+  {
+   "title": "Fox / Lisica",
+   "author": "Croatia Dubravka Ugrešić",
+   "year": null,
+   "kind": "c",
+   "translator": "Ellen Elias-Bursać & David Williams"
+  },
+  {
+   "title": "Of Death: Minimal Odes / Da Morte: Odes Mínimas",
+   "author": "Brazil Hilda Hilst",
+   "year": null,
+   "kind": "c",
+   "translator": "Laura Cesarco Eglin"
+  },
+  {
+   "title": "The Future Has an Appointment with the Dawn / L'avenir a rendez-vous avec l'aube",
+   "author": "Ivory Coast Tanella Boni",
+   "year": null,
+   "kind": "c",
+   "translator": "Todd Fredson"
+  },
+  {
+   "title": "Moss and Silver / Mah in srebro",
+   "author": "Slovenia Jure Detela",
+   "year": null,
+   "kind": "c",
+   "translator": "Raymond Miller & Tatjana Jamnik"
+  },
+  {
+   "title": "Autobiography of Death / 죽음의 자서전",
+   "author": "South Korea Kim Hyesoon",
+   "year": null,
+   "kind": "c",
+   "translator": "Don Mee Choi"
+  },
+  {
+   "title": "Negative Space / Pothuajse dje and Homo Antarcticus",
+   "author": "Albania Luljeta Lleshanaku",
+   "year": null,
+   "kind": "c",
+   "translator": "Ani Gjika"
+  },
+  {
+   "title": "EEG",
+   "author": "Croatia Daša Drndić",
+   "year": null,
+   "kind": "c",
+   "translator": "Celia Hawkesworth"
+  },
+  {
+   "title": "Animalia / Règne animal",
+   "author": "France Jean-Baptiste Del Amo",
+   "year": null,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "Stalingrad / За правое дело",
+   "author": "Russia Vasily Grossman",
+   "year": null,
+   "kind": "c",
+   "translator": "Robert Chandler & Elizabeth Chandler"
+  },
+  {
+   "title": "Die, My Love / Matate, amor",
+   "author": "Argentina Ariana Harwicz",
+   "year": null,
+   "kind": "c",
+   "translator": "Sara Moses & Carolina Orloff"
+  },
+  {
+   "title": "Good Will Come from the Sea / Το καλό θα 'ρθει από τη θάλασσα",
+   "author": "Greece Christos Ikonomou",
+   "year": null,
+   "kind": "c",
+   "translator": "Karen Emmerich"
+  },
+  {
+   "title": "The Memory Police / 密やかな結晶",
+   "author": "Japan Yōko Ogawa",
+   "year": null,
+   "kind": "c",
+   "translator": "Stephen Snyder"
+  },
+  {
+   "title": "Beyond Babylon / Oltre Babilonia",
+   "author": "Italy Igiaba Scego",
+   "year": null,
+   "kind": "c",
+   "translator": "Aaron Robertson"
+  },
+  {
+   "title": "Drive Your Plow Over the Bones of the Dead / Prowadź swój pług przez kości umarłych",
+   "author": "Poland Olga Tokarczuk",
+   "year": null,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "Territory of Light / 光の領分",
+   "author": "Japan Yūko Tsushima",
+   "year": null,
+   "kind": "c",
+   "translator": "Geraldine Harcourt"
+  },
+  {
+   "title": "Time",
+   "author": "Lebanon Etel Adnan",
+   "year": null,
+   "kind": "c",
+   "translator": "Sarah Riggs"
+  },
+  {
+   "title": "Aviva-No / אביבה־לא",
+   "author": "Israel Shimon Adaf",
+   "year": null,
+   "kind": "c",
+   "translator": "Yael Segalovitz"
+  },
+  {
+   "title": "Materia Prima / Materia prima",
+   "author": "Uruguay Amanda Berenguer",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Next Loves / Les amours suivants",
+   "author": "France Stéphane Bouquet",
+   "year": null,
+   "kind": "c",
+   "translator": "Lindsay Turner"
+  },
+  {
+   "title": "Camouflage / Camuflaxe",
+   "author": "Spain Lupe Gómez",
+   "year": null,
+   "kind": "c",
+   "translator": "Erín Moure"
+  }
+ ]
+}

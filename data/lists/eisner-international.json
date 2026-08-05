@@ -1,0 +1,999 @@
+{
+ "slug": "eisner-international",
+ "prize": "Eisner Award for Best U.S. Edition of International Material",
+ "rooms": [
+  "longstrip",
+  "inkroom"
+ ],
+ "page": "Eisner Award for Best U.S. Edition of International Material",
+ "url": "https://en.wikipedia.org/wiki/Eisner_Award_for_Best_U.S._Edition_of_International_Material",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366827750",
+ "revid": 1366827750,
+ "fetchedAt": "2026-08-05T16:27:19.011Z",
+ "counts": {
+  "entries": 153,
+  "winners": 29,
+  "cited": 124
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and nominees",
+   "headers": "Year | Title | Authors | Translators | Ref.",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2,
+    "translator": 3
+   },
+   "took": 153,
+   "dropped": 4,
+   "winnerMark": "bold"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Gon Swimmin'",
+   "author": "Masashi Tanaka",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Corto Maltese",
+   "author": "Hugo Pratt",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "A Jew in Communist Prague",
+   "author": "Vittorio Giardino",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Nausica of the Valley of the Wind",
+   "author": "Hayao Miyazaki",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "What's Michael?",
+   "author": "Makoto Kobayashi",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Star Wars: A New Hope--Manga",
+   "author": "Hisao Tamaki",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Blade of the Immortal",
+   "author": "Hiroaki Samura",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Intron Depot 2: Blades",
+   "author": "Masamune Shirow",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "A Jew in Communist Prague, vol. 3: Rebellion",
+   "author": "Vittorio Giardino",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Strain, vol. 1",
+   "author": "Buronson & Ryoichi Ikegami",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Blade of the Immortal",
+   "author": "Hiroaki Samura",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "After the Rain",
+   "author": "André Juillard",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Comix 2000 (L'Association)",
+   "author": "edited by Jean-Christophe Menu",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Jetlag (Actus Tragicus)",
+   "author": "Etgar Keret, Mira Friedmann, Batia Kolton, Rutu Modan, Yirmi Pinkus & Itzik Rennert",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Nimrod (Fantagraphics)",
+   "author": "Lewis Trondheim",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Lone Wolf and Cub",
+   "author": "Kazuo Koike & Goseki Kojima",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Akira, Book One",
+   "author": "Katsuhiro Otomo",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Eagle: The Making of an Asian-American President",
+   "author": "Kaiji Kawaguchi",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Extended Dream of Mr. D (Drawn & Quarterly)",
+   "author": "Max",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "From Cloud 99: Memories, Part I",
+   "author": "Yslaire",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Nimrod (Fantagraphics)",
+   "author": "Lewis Trondheim",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Akira",
+   "author": "Katsuhiro Otomo",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Eagle: The Making of an Asian-American President",
+   "author": "Kaiji Kawaguchi",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Hey, Wait... (Fantagraphics)",
+   "author": "Jason",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Nogegon",
+   "author": "Luc Schuiten & François Schuiten",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Uzumaki",
+   "author": "Junji Ito",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Dr. Jekyll & Mr. Hyde",
+   "author": "Robert Louis Stevenson, adapted by Jerry Kramsky & Lorenzo Mattotti",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Dead End (Fantagraphics)",
+   "author": "Thomas Ott",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Epileptic, vol. 1 (Fantagraphics)",
+   "author": "David B.",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Frontier, vol. 1",
+   "author": "Benoît Peeters & François Schuiten",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Sshhhh! (Fantagraphics)",
+   "author": "Jason",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Uzumaki, vols. 2-3",
+   "author": "Junji Ito",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Buddha, vols. 1 and 2 (Vertical)",
+   "author": "Osamu Tezuka",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Blacksad (ibooks)",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Chaland Anthology: Freddy Lombard, vols. 1 & 2",
+   "author": "Yves Chaland",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Little Vampire Does Kung Fu! (Simon & Schuster)",
+   "author": "Joann Sfar",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Persepolis",
+   "author": "Marjane Satrapi",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Buddha, vols. 3-4 (Vertical)",
+   "author": "Osamu Tezuka",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Barefoot Gen: A Cartoon Story of Hiroshima, vols. 1-2 (Last Gasp)",
+   "author": "Keiji Nakazawa",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Blacksad Book 2: Arctic Nation (iBooks)",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Persepolis 2: The Story of a Return",
+   "author": "Marjane Satrapi",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Tokyo Tribes (Tokyopop)",
+   "author": "Santa Inoue",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Rabbi's Cat",
+   "author": "Joann Sfar",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Cromartie High School",
+   "author": "Eiji Nonaka",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Dungeon: The Early Years, vol. 1",
+   "author": "Joann Sfar, Lewis Trondheim & Christophe Blain",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary Victories",
+   "author": "Manu Larcenet",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Six Hundred Seventy-Six Apparitions of Killoffer",
+   "author": "Killoffer",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Left Bank Gang (Fantagraphics)",
+   "author": "Jason",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "A.L.I.E.E.E.N.",
+   "author": "Lewis Trondheim",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "De:TALES",
+   "author": "Fábio Moon & Gabriel Bá",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Hwy 115 (Fantagraphics)",
+   "author": "Matthias Lehmann",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Pizzeria Kamikaze",
+   "author": "Etgar Keret & Asaf Hanuka",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "I Killed Adolf Hitler (Fantagraphics)",
+   "author": "Jason",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Arrival",
+   "author": "Shaun Tan",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Aya (Drawn & Quarterly)",
+   "author": "Marguerite Abouet & Clément Oubrerie",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Garage Band",
+   "author": "Gipi",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Killer",
+   "author": "Matz & Luc Jacamon",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Musketeer (Fantagraphics)",
+   "author": "Jason",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Alan's War",
+   "author": "Emmanuel Guibert",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Gus & His Gang",
+   "author": "Christophe Blain",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Rabbi’s Cat 2",
+   "author": "Joann Sfar",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Tamara Drewe",
+   "author": "Posy Simmonds",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Photographer",
+   "author": "Emmanuel Guibert, Didier Lefèvre & Frédéric Lemercier",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "My mommy is in America and she met Buffalo Bill (Fanfare/Ponent Mon)",
+   "author": "Jean Regnaud & Émile Bravo",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Tiny Tyrant vol. 1: The Ethelbertosaurus",
+   "author": "Lewis Trondheim & Fabrice Parme",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "West Coast Blues (Fantagraphics)",
+   "author": "Jean-Patrick Manchette, adapted by Jacques Tardi",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Years of the Elephant (Fanfare/Ponent Mon)",
+   "author": "Willy Linthout",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "It Was the War of the Trenches (Fantagraphics)",
+   "author": "Jacques Tardi",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Killer: Modus Vivendi",
+   "author": "Matz & Luc Jacamon",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "King of the Flies, Book One: Hallorave (Fantagraphics)",
+   "author": "Mezzo & Pirus",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Littlest Pirate King (Fantagraphics)",
+   "author": "David B. & Pierre Mac Orlan",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Salvatore",
+   "author": "Nicolas de Crécy",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Manara Library, vol. 1: Indian Summer and Other Stories",
+   "author": "Milo Manara with Hugo Pratt",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Bubbles & Gondola",
+   "author": "Renaud Dillies",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Isle of 100,000 Graves (Fantagraphics)",
+   "author": "Fabien Vehlmann & Jason",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Like a Sniper Lining Up His Shot (Fantagraphics)",
+   "author": "Jacques Tardi & Jean-Patrick Manchette",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Night Animals: A Diptych About What Rushes Through the Bushes (Top Shelf Productions)",
+   "author": "Brecht Evens",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Blacksad: Silent Hell",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Abelard",
+   "author": "Régis Hautière & Renaud Dillies",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Athos in America (Fantagraphics)",
+   "author": "Jason",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of (Drawn & Quarterly)",
+   "author": "Brecht Evens",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Monsieur Jean: The Singles Theory",
+   "author": "Philippe Dupuy & Charles Berberian",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "New York Mon Amour (Fantagraphics)",
+   "author": "Benjamin Legrand, Dominique Grange & Jacques Tardi",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Goddam This War! (Fantagraphics)",
+   "author": "Jacques Tardi & Jean-Pierre Verney",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Adventures of a Japanese Businessman",
+   "author": "José Domingo",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Incidents in the Night, Book One",
+   "author": "David B.",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Today Is the Last Day of the Rest of Your Life (Fantagraphics)",
+   "author": "Ulli Lust",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "When David Lost His Voice (SelfMadeHero)",
+   "author": "Judith Vanistendael",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Blacksad: Amarillo",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Beautiful Darkness (Drawn & Quarterly)",
+   "author": "Fabien Vehlmann & Kerascoët",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Corto Maltese: Under the Sign of Capricorn",
+   "author": "Hugo Pratt",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Jaybird",
+   "author": "Lauri Ahonen & Jaakko Ahonen",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Leaning Girl",
+   "author": "Benoît Peeters & François Schuiten",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Realist",
+   "author": "Asaf Hanuka",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Alpha...Directions",
+   "author": "Jens Harder",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Eternaut (Fantagraphics)",
+   "author": "Héctor Germán Oesterheld & Francisco Solano López",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "A Glance Backward",
+   "author": "Pierre Paquet & Tony Sandoval",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The March of the Crabs",
+   "author": "Arthur de Pins",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Moebius Library: The World of Edena",
+   "author": "Jean “Moebius” Giraud, et al.",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Equinoxes",
+   "author": "Cyril Pedrosa",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Joe Johnson"
+  },
+  {
+   "title": "Irmina (SelfMadeHero)",
+   "author": "Barbara Yelin",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Michael Waaler"
+  },
+  {
+   "title": "Love: The Lion",
+   "author": "Frédéric Brrémaud & Federico Bertolucci",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Wrinkles (Fantagraphics)",
+   "author": "Paco Roca",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Erica Mena"
+  },
+  {
+   "title": "Run for It: Stories of Slaves Who Fought for the Freedom (Fantagraphics)",
+   "author": "Marcelo D’Salete",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "Audubon: On the Wings of the World",
+   "author": "Fabien Grolleau & Jerémie Royer",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Etienne Gilfillan"
+  },
+  {
+   "title": "Flight of the Raven",
+   "author": "Jean-Pierre Gibrat",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Diana Schutz & Brandon Kander"
+  },
+  {
+   "title": "FUN (SelfMadeHero)",
+   "author": "Paolo Bacilieri",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jamie Richards"
+  },
+  {
+   "title": "Ghost of Gaudi",
+   "author": "El Torres & Jesús Alonso Iglesias",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Esther Villardón Grande"
+  },
+  {
+   "title": "The Ladies-in-Waiting (Fantagraphics)",
+   "author": "Santiago García & Javier Olivares",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Brazen: Rebel Ladies Who Rocked the World",
+   "author": "Pénélope Bagieu",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Montana Kane"
+  },
+  {
+   "title": "About Betty's Boob",
+   "author": "Vero Cazot & Julie Rocheleau",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Edward Gauvin"
+  },
+  {
+   "title": "Herakles, Book 1",
+   "author": "Édouard Cour",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Jeremy Melloul"
+  },
+  {
+   "title": "Niourk",
+   "author": "Stefan Wul & Olivier Vatine",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Brandon Kander & Diana Schutz"
+  },
+  {
+   "title": "A Sea of Love",
+   "author": "Wilfrid Lupano & Grégory Panaccione",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The House (Fantagraphics)",
+   "author": "Paco Roca",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "Diabolical Summer",
+   "author": "Thierry Smolderen & Alexandre Clérisse",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Edward Gauvin"
+  },
+  {
+   "title": "Gramercy Park",
+   "author": "Timothée de Fombelle & Christian Cailleaux",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Edward Gauvin"
+  },
+  {
+   "title": "Maggy Garrisson (SelfMadeHero)",
+   "author": "Lewis Trondheim & Stéphane Oiry",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Emma Wilson"
+  },
+  {
+   "title": "Stay",
+   "author": "Lewis Trondheim & Hubert Chevillard",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Mike Kennedy"
+  },
+  {
+   "title": "Wrath of Fantômas",
+   "author": "Olivier Bouquet & Julie Rocheleau",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Goblin Girl (Fantagraphics)",
+   "author": "Moa Romanova",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Melissa Bowers"
+  },
+  {
+   "title": "Altitude (SelfMadeHero)",
+   "author": "Olivier Bocquet & Jean-Marc Rochette",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Edward Gauvin"
+  },
+  {
+   "title": "Gamayun Tales I: An Anthology of Modern Russian Folk Tales (Nobrow)",
+   "author": "Alexander Utkin",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Lada Morozova"
+  },
+  {
+   "title": "Irena Books 2-3",
+   "author": "Jean-David Morvan, Severine Tréfouël & David Evrard",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Dan Christensen"
+  },
+  {
+   "title": "When You Look Up",
+   "author": "Decur",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Chloe Garcia Roberts"
+  },
+  {
+   "title": "The Winter of the Cartoonist (Fantagraphics)",
+   "author": "Paco Roca",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "The Shadow of a Man",
+   "author": "Benoît Peeters & François Schuiten",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Stephen D. Smith"
+  },
+  {
+   "title": "Ballad For Sophie (Top Shelf Productions)",
+   "author": "Filipe Melo, Juan Cavia",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Gabriela Soares"
+  },
+  {
+   "title": "Between Snow and Wolf",
+   "author": "Agnes Domergue, Helene Canac",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Maria Vahrenhorst"
+  },
+  {
+   "title": "Love: The Mastiff",
+   "author": "Frederic Brrémaud, Federico Bertolucci",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Parakeet",
+   "author": "Espé",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Hannah Chute"
+  },
+  {
+   "title": "Blacksad: They All Fall Down Part 1",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Diana Schutz & Brandon Kander"
+  },
+  {
+   "title": "Always Never",
+   "author": "Jordi Lafebre",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Montana Kane"
+  },
+  {
+   "title": "Down to the Bone: A Leukemia Story",
+   "author": "Catherine Pioli",
+   "year": 2023,
+   "kind": "c",
+   "translator": "J. T. Mahany"
+  },
+  {
+   "title": "The Pass",
+   "author": "Espé",
+   "year": 2023,
+   "kind": "c",
+   "translator": "J. T. Mahany"
+  },
+  {
+   "title": "Tiki: A Very Ruff Year (Life Drawn/Humanoids)",
+   "author": "David Azencot & Fred Leclerc",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Nanette McGuinness"
+  },
+  {
+   "title": "Blacksad, Vol 7: They All Fall Down Part 2",
+   "author": "Juan Díaz Canales & Juanjo Guarnido",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Diana Schutz & Brandon Kander"
+  },
+  {
+   "title": "Ashes (Top Shelf/IDW)",
+   "author": "Álvaro Ortiz",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Eva Ibarzabal"
+  },
+  {
+   "title": "A Boy Named Rose",
+   "author": "Gaëlle Geniller",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Fabrice Sapolsky"
+  },
+  {
+   "title": "The Great Beyond (Drawn & Quarterly)",
+   "author": "Léa Murawiec",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Aleshia Jensen"
+  },
+  {
+   "title": "Shubeik Lubeik",
+   "author": "Deena Mohamed",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Spa (Fantagraphics)",
+   "author": "Erik Svetoft",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Melissa Bowers"
+  },
+  {
+   "title": "The Jellyfish",
+   "author": "Boum",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Robin Lang & Helge Dascher"
+  },
+  {
+   "title": "All Princesses Die Before Dawn (Abrams ComicArts)",
+   "author": "Quentin Zuttion",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Mothballs (Fantagraphics)",
+   "author": "Sole Otero",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "Return to Eden (Fantagraphics)",
+   "author": "Paco Roca",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "Sunday (Fantagraphics)",
+   "author": "Olivier Schrauwen",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Nocturnos (Fantagraphics)",
+   "author": "Laura Perez",
+   "year": 2026,
+   "kind": "w",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "Buff Soul (Fantagraphics)",
+   "author": "Moa Romanova",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Melissa Bowers"
+  },
+  {
+   "title": "Cornelius: The Merry Life of a Wretched Dog (Drawn & Quarterly)",
+   "author": "Marc Torices",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Andrea Rosenberg"
+  },
+  {
+   "title": "In the End We All Die (Helvetiq)",
+   "author": "Tobias Aeschbacher",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Andrew Shields"
+  },
+  {
+   "title": "Raging Clouds (Fantagraphics)",
+   "author": "Yudori",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Mothballs (Abrams ComicArts)",
+   "author": "Anaïs Flogny",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Dan Christensen"
+  }
+ ]
+}

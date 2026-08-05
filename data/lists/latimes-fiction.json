@@ -1,0 +1,377 @@
+{
+ "slug": "latimes-fiction",
+ "prize": "Los Angeles Times Book Prize for Fiction",
+ "rooms": [
+  "longroom",
+  "quiethouse",
+  "brokensentence"
+ ],
+ "page": "Los Angeles Times Book Prize",
+ "url": "https://en.wikipedia.org/wiki/Los_Angeles_Times_Book_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1364873395",
+ "revid": 1364873395,
+ "fetchedAt": "2026-08-05T16:26:57.446Z",
+ "counts": {
+  "entries": 46,
+  "winners": 46,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Art Seidenbaum Award for First Fiction",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 1,
+   "heading": "Biography",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 2,
+   "heading": "Christopher Isherwood Prize for Autobiographical Prose",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 3,
+   "heading": "Current interest",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 4,
+   "heading": "Fiction",
+   "headers": "Year | Author | Title | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 46,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 5,
+   "heading": "Graphic Novel/Comics",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 6,
+   "heading": "History",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 7,
+   "heading": "Mystery/thriller",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 8,
+   "heading": "Poetry",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 9,
+   "heading": "Science Fiction, Fantasy, and Speculative Fiction",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 10,
+   "heading": "Science and technology",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 11,
+   "heading": "Young adult literature",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 12,
+   "heading": "Innovator's Award",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 13,
+   "heading": "Robert Kirsch Award",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Second Coming",
+   "author": "Walker Percy",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The White Hotel",
+   "author": "D.M. Thomas",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "A Flag for Sunrise",
+   "author": "Robert Stone",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Schindler's Ark",
+   "author": "Thomas Keneally",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Unbearable Lightness of Being",
+   "author": "Milan Kundera",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Love Medicine",
+   "author": "Louise Erdrich",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Handmaid's Tale",
+   "author": "Margaret Atwood",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Fools Crow",
+   "author": "James Welch",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Love in the Time of Cholera",
+   "author": "Gabriel García Marquez",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "The Heart of the Country",
+   "author": "Fay Weldon",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Lantern Slides",
+   "author": "Edna O'Brien",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "White People",
+   "author": "Allan Gurganus",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Maus II, A Survivor's Tale: And Here My Troubles Began",
+   "author": "Art Spiegelman",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Pigs in Heaven",
+   "author": "Barbara Kingsolver",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Remembering Babylon",
+   "author": "David Malouf",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Blue Afternoon",
+   "author": "William Boyd",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "A Fine Balance",
+   "author": "Rohinton Mistry",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "In the Rogue Blood",
+   "author": "James Carlos Blake",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Rings of Saturn",
+   "author": "W. G. Sebald with Michael Hulse",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Freedom Song: Three Novels",
+   "author": "Amit Chaudhuri",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Assorted Fire Events",
+   "author": "David Means",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Why Did I Ever",
+   "author": "Mary Robison",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Atonement",
+   "author": "Ian McEwan",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Train",
+   "author": "Pete Dexter",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Master",
+   "author": "Colm Tóibín",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Memories of My Melancholy Whores",
+   "author": "Gabriel García Márquez with Edith Grossman",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "A Woman in Jerusalem",
+   "author": "A. B. Yehoshua with Hillel Halkin",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Be Near Me",
+   "author": "Andrew O'Hagan",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Home",
+   "author": "Marilynne Robinson",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "A Happy Marriage",
+   "author": "Rafael Yglesias",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "A Visit from the Goon Squad",
+   "author": "Jennifer Egan",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Luminarium",
+   "author": "Alex Shakar",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Billy Lynn's Long Halftime Walk",
+   "author": "Ben Fountain",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "A Tale for the Time Being",
+   "author": "Ruth Ozeki",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Blazing World",
+   "author": "Siri Hustvedt",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Story of My Teeth",
+   "author": "Valeria Luiselli",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Imagine Me Gone",
+   "author": "Adam Haslett",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Exit West",
+   "author": "Mohsin Hamid",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Believers",
+   "author": "Rebecca Makkai",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Topeka School",
+   "author": "Ben Lerner",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "At Night All Blood Is Black",
+   "author": "David Diop with Anna Moschovakis",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "In the Company of Men",
+   "author": "Véronique Tadjo",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Solenoid",
+   "author": "Mircea Cărtărescu with Sean Cotter",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Same Bed Different Dreams",
+   "author": "Ed Park",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Say Hello to My Little Friend",
+   "author": "Jennine Capó Crucet",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Palaver: A Novel",
+   "author": "Bryan Washington",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

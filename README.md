@@ -25,7 +25,8 @@ No build step, no dependencies, no bundler. It is HTML, CSS and ES modules.
 | | |
 |---|---|
 | Rooms | 50, arranged as a tree three levels deep |
-| Books | 409, each with a blurb, a curator's note and accolades |
+| Books | ~2,500 — 409 with a blurb, a curator's note and accolades, the rest harvested from prize lists |
+| The shopkeeper's picks | the 409 with a note, marked on the spine and in every list |
 | Assets | none — every cover, spine, prop and room is generated in the browser |
 | Dependencies | none |
 
@@ -78,8 +79,9 @@ src/js/
   data/
     rooms.js    the plan of the shop: palettes, wall kinds, props
     props.js    SVG set dressing (ladders, globes, moths, candles…)
-    books/*.js  the shelves, one file per hall
-    enrich.js   ISBNs and page counts, fetched (see tools/hardcover.mjs)
+    books/*.js  the hand-written shelves, one file per hall
+    generated/  the harvested shelves + where every accolade came from
+    enrich.js   ISBNs and page counts, fetched (see tools/harvest.mjs)
 ```
 
 **The rooms are DOM, not canvas.** Walls, shelves and books are ordinary
@@ -108,8 +110,15 @@ and Open Library so you can borrow it for nothing instead.
 
 Every link prefers an ISBN-13 where the book has one, so it lands on the book
 rather than on a search page you then have to pick through. ISBNs are fetched
-by `tools/hardcover.mjs` into `src/js/data/enrich.js`; a book without one still
-works, it just searches by title and author.
+by `tools/harvest.mjs` (Hardcover if you have a token, otherwise Open Library —
+see `server/lookup.js`); a book without one still works, it just searches by
+title and author.
+
+An ISBN is only ever taken from a **specific edition record**, and only when
+that edition is in English. The search endpoints of both APIs hand back every
+ISBN of every printing in a heap, unattributed, and picking one out of that
+heap is how a reader ends up ordering a German paperback. No ISBN at all is
+better than the wrong one.
 
 To earn affiliate income, put your id in `AFFILIATE.bookshop` at the top of that
 file; every Bookshop link then carries it. Nothing else needs changing, and
@@ -117,11 +126,24 @@ there is no tracking of any kind in the page.
 
 ## Curation
 
-Accolades shown on each book are the shopkeeper's notes: prizes won, prizes
-shortlisted for, and the critical judgements that put the book on the shelf.
-Where a book is here on reputation rather than a specific prize, the note says
-so. Translators are named on the cover panel, because they wrote the book you
-are actually going to read.
+There are two tiers on every shelf, and the shop says which is which.
+
+**The shopkeeper's picks** are the 409 books with a curator's note — why *this*
+book is on *this* shelf, written by hand. They stand in the top row of every
+case with a gilt band on the spine, they are marked in search and in the shelf
+list, and their note is the first thing in the panel. The note is the product.
+
+**The rest are harvested**, and their accolades are checkable. Each one was
+parsed out of a prize list that was actually fetched, and the exact page *and
+revision id* it came from is committed beside it in
+`src/js/data/generated/sources.js` — so any claim on any shelf can be traced
+back rather than taken on trust. Nothing is written from memory: a list that
+would not fetch or would not parse is recorded as a gap instead of filled in.
+Harvested books get a title, an author, a year, a page count, an ISBN and the
+publisher's description, and no hand-written note, tags or opening line.
+
+Translators are named on the cover panel, because they wrote the book you are
+actually going to read.
 
 The shop will not quote a book's opening lines unless it can say where the
 quotation came from. Instead each book points at somewhere you can read the

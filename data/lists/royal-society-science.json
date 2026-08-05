@@ -1,0 +1,1135 @@
+{
+ "slug": "royal-society-science",
+ "prize": "Royal Society Science Book Prize",
+ "rooms": [
+  "glasscase",
+  "smallkingdom",
+  "readingroom"
+ ],
+ "page": "Royal Society Science Book Prize",
+ "url": "https://en.wikipedia.org/wiki/Royal_Society_Science_Book_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366148823",
+ "revid": 1366148823,
+ "fetchedAt": "2026-08-05T16:27:09.639Z",
+ "counts": {
+  "entries": 175,
+  "winners": 38,
+  "cited": 137
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "History",
+   "skipped": "no title/author column",
+   "headers": "Years | Name | Sponsor"
+  },
+  {
+   "t": 1,
+   "heading": "1988–2000",
+   "headers": "Year | Author | Title | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 12,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2000–2010",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 67,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2011–2019",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 54,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "Since 2020",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 42,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Living with Risk",
+   "author": "British Medical Association Board of Science",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Bones of Contention: Controversies in the Search for Human Origins",
+   "author": "Roger Lewin",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "The Emperor's New Mind",
+   "author": "Roger Penrose",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Wonderful Life: The Burgess Shale and the Nature of History",
+   "author": "Stephen Jay Gould",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise and Fall of the Third Chimpanzee",
+   "author": "Jared Diamond",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Making of Memory",
+   "author": "Steven Rose",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Language of the Genes",
+   "author": "Steve Jones",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Consumer’s Good Chemical Guide",
+   "author": "John Emsley",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Plague's Progress",
+   "author": "Arno Karlen",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Wisdom of Bones",
+   "author": "Alan Walker & Pat Shipman",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Guns, Germs, and Steel",
+   "author": "Jared Diamond",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The Man Who Loved Only Numbers",
+   "author": "Paul Hoffman",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Elegant Universe",
+   "author": "Brian Greene",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The White Death",
+   "author": "Thomas Dormandy",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "A Brief History of the Future",
+   "author": "John Naughton",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Genome",
+   "author": "Matt Ridley",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Time, Love, Memory: A Great Biologist and His Quest for the Origins of Behavior",
+   "author": "Jonathan Weiner",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Children of Prometheus",
+   "author": "Christopher Wills",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Mapping the Deep",
+   "author": "Robert Kunzig",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Creation: Life and How to Make It",
+   "author": "Steve Grand",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Strange Beauty",
+   "author": "George Johnson",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Mendel's Demon",
+   "author": "Mark Ridley",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Mendeleyev's Dream",
+   "author": "Paul Strathern",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Malignant Sadness",
+   "author": "Lewis Wolpert",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Universe in a Nutshell",
+   "author": "Stephen Hawking",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Aeons:The Search for the Beginning of Time",
+   "author": "Martin Gorst",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Secret Life of Dust",
+   "author": "Hannah Holmes",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Madness of Adam and Eve: Did Schizophrenia Shape Humanity?",
+   "author": "David Horrobin",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "A Primate's Memoir",
+   "author": "Robert M. Sapolsky",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Rivals: Conflict as the Fuel of Science",
+   "author": "Michael White",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Right Hand, Left Hand",
+   "author": "Chris McManus",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Small World",
+   "author": "Mark Buchanan",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Reckoning With Risk",
+   "author": "Gerd Gigerenzer",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Extravagant Universe",
+   "author": "Robert P. Kirshner",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Blank Slate",
+   "author": "Steven Pinker",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Where Is Everybody?",
+   "author": "Stephen Webb",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "A Short History of Nearly Everything",
+   "author": "Bill Bryson",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "In The Beginning Was the Worm",
+   "author": "Andrew Brown",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Magic Universe",
+   "author": "Nigel Calder",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Mutants: On Genetic Variety and the Human Body",
+   "author": "Armand Marie Leroi",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "How to Clone the Perfect Blonde",
+   "author": "Sue Nelson & Richard Hollingham",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Nature Via Nurture",
+   "author": "Matt Ridley",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Backroom Boys",
+   "author": "Francis Spufford",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Critical Mass: How One Thing Leads to Another",
+   "author": "Philip Ball",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "The Ancestor's Tale",
+   "author": "Richard Dawkins",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Why Life Speeds Up As You Get Older",
+   "author": "Douwe Draaisma",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Matters Of Substance: Drugs - And Why Everyone's A User",
+   "author": "Griffith Edwards",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Earth: An Intimate History",
+   "author": "Richard Fortey",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Human Mind",
+   "author": "Robert Winston",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Electric Universe: How Electricity Switched on the Modern World",
+   "author": "David Bodanis",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Collapse: How Societies Choose to Fail or Succeed",
+   "author": "Jared Diamond",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Parallel Worlds: The Science of Alternative Universes and our Future in the Cosmos",
+   "author": "Michio Kaku",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Power, Sex, Suicide: Mitochondria and the Meaning of Life",
+   "author": "Nick Lane",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Empire of the Stars: Friendship, Obsession and Betrayal in the Quest for Black Holes",
+   "author": "Arthur I. Miller",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Truth About Hormones: What's Going on when We're Tetchy, Spotty, Fearful, Tearful or Just Plain Awful",
+   "author": "Vivienne Parry",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Stumbling on Happiness",
+   "author": "Daniel Gilbert",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Rough Guide to Climate Change",
+   "author": "Robert Henson",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "In Search of Memory",
+   "author": "Eric R. Kandel",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Lonesome George",
+   "author": "Henry Nicholls",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Homo Britannicus",
+   "author": "Chris Stringer",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "One in Three",
+   "author": "Adam Wishart",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Six Degrees: Our Future on a Hotter Planet",
+   "author": "Mark Lynas",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Sun Kings: The Unexpected Tragedy of Richard Carrington and the Tale of How Modern Astronomy Began",
+   "author": "Stuart Clark",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Gut Feelings",
+   "author": "Gerd Gigerenzer",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Coral: A Pessimist in Paradise",
+   "author": "Steve Jones",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Why Beauty is Truth: A History of Symmetry",
+   "author": "Ian Stewart",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "A Life Decoded, My Genome: My Life",
+   "author": "J. Craig Venter",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Wonder",
+   "author": "Richard Holmes",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "What the Nose Knows",
+   "author": "Avery Gilbert",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Science",
+   "author": "Ben Goldacre",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Decoding the Heavens",
+   "author": "Jo Marchant",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Drunkard's Walk: How Randomness Rules Our Lives",
+   "author": "Leonard Mlodinow",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Your Inner Fish: A Journey Into the 3.5-Billion-Year History of the Human Body",
+   "author": "Neil Shubin",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Life Ascending",
+   "author": "Nick Lane",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "We Need To Talk About Kelvin",
+   "author": "Marcus Chown",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Why Does E=mc2?",
+   "author": "Brian Cox & Jeff Forshaw",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Everyday Practice of Science: Where Intuition and Passion Meet Objectivity and Logic",
+   "author": "Frederick Grinnell",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "God's Philosophers: How the Medieval World Laid the Foundations of Modern Science",
+   "author": "James Hannam",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "A World Without Ice",
+   "author": "Henry Pollack",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Wavewatcher's Companion",
+   "author": "Gavin Pretor-Pinney",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Alex's Adventures in Numberland",
+   "author": "Alex Bellos",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Through the Language Glass: How Words Colour Your World",
+   "author": "Guy Deutscher",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Disappearing Spoon",
+   "author": "Sam Kean",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Massive: The Missing Particle That Sparked the Greatest Hunt in Science",
+   "author": "Ian Sample",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Rough Guide to The Future",
+   "author": "Jon Turney",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Information",
+   "author": "James Gleick",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Moonwalking with Einstein",
+   "author": "Joshua Foer",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "My Beautiful Genome",
+   "author": "Lone Frank",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Hidden Reality",
+   "author": "Brian Greene",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Better Angels of Our Nature",
+   "author": "Steven Pinker",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Viral Storm",
+   "author": "Nathan Wolfe",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Particle at the End of the Universe",
+   "author": "Sean Carroll",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Bird Sense",
+   "author": "Tim Birkhead",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Cells to Civilizations: The Principles of Change That Shape Life",
+   "author": "Enrico Coen",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Pieces of Light: The New Science of Memory",
+   "author": "Charles Fernyhough",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Barely Imagined Beings",
+   "author": "Caspar Henderson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Ocean of Life",
+   "author": "Callum Roberts",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Stuff Matters: The Strange Stories of the Marvellous Materials that Shape Our Man-made World",
+   "author": "Mark Miodownik",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Serving the Reich: The Struggle for the Soul of Physics under Hitler",
+   "author": "Philip Ball",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Seven Elements That Have Changed The World: Iron, Carbon, Gold, Silver, Uranium, Titanium, Silicon",
+   "author": "John Browne",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Perfect Theory: A Century of Geniuses and the Battle over General Relativity",
+   "author": "Pedro G. Ferreira",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Cancer Chronicles: Unlocking Medicine's Deepest Mystery",
+   "author": "George Johnson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Gulp: Adventures on the Alimentary Canal",
+   "author": "Mary Roach",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Adventures in the Anthropocene: A Journey to the Heart of the Planet We Made",
+   "author": "Gaia Vince",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Man Who Couldn’t Stop",
+   "author": "David Adam",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Alex Through the Looking-Glass: How Life Reflects Numbers and Numbers Reflect Life",
+   "author": "Alex Bellos",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Smashing Physics",
+   "author": "Jon Butterworth",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Life's Greatest Secret",
+   "author": "Matthew Cobb",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Life on the Edge: The Coming of Age of Quantum Biology",
+   "author": "Johnjoe McFadden & Jim Al-Khalili",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Invention of Nature: The Adventures of Alexander von Humboldt, the Lost Hero of Science",
+   "author": "Andrea Wulf",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Most Perfect Thing: Inside (and Outside) a Bird's Egg",
+   "author": "Tim Birkhead",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Hunt for Vulcan: ... and How Albert Einstein Destroyed a Planet, Discovered Relativity, and Deciphered the Universe",
+   "author": "Thomas Levenson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Cure: A Journey Into the Science of Mind over Body",
+   "author": "Jo Marchant",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Planet Remade: How Geoengineering Could Change the World",
+   "author": "Oliver Morton",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Gene: An Intimate History",
+   "author": "Siddhartha Mukherjee",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Testosterone Rex: Unmaking the Myths of Our Gendered Minds",
+   "author": "Cordelia Fine",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Beyond Infinity: An Expedition to the Outer Limits of the Mathematical Universe",
+   "author": "Eugenia Cheng",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Other Minds: The Octopus and the Evolution of Intelligent Life",
+   "author": "Peter Godfrey-Smith",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "In Pursuit of Memory: The Fight Against Alzheimer's",
+   "author": "Joseph Jebelli",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "To Be a Machine: Adventures Among Cyborgs, Utopians, Hackers, and the Futurists Solving the Modest Problem of Death",
+   "author": "Mark O'Connell",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "I Contain Multitudes: The Microbes Within Us and a Grander View of Life",
+   "author": "Ed Yong",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Inventing Ourselves: The Secret Life of the Teenage Brain",
+   "author": "Sarah-Jayne Blakemore",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Unexpected Truth About Animals",
+   "author": "Lucy Cooke",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Beautiful Cure: Harnessing Your Body’s Natural Defences",
+   "author": "Daniel M. Davis",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Hello World: How to be Human in the Age of the Machine",
+   "author": "Hannah Fry",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Liquid: The Delightful and Dangerous Substances That Flow Through Our Lives",
+   "author": "Mark Miodownik",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Exactly: How Precision Engineers Created the Modern World",
+   "author": "Simon Winchester",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Women: Exposing Data Bias in a World Designed for Men",
+   "author": "Caroline Criado Perez",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Six Impossible Things",
+   "author": "John Gribbin",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Remarkable Life of the Skin",
+   "author": "Monty Lyman",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Clearing the Air",
+   "author": "Tim Smedley",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Second Kind of Impossible",
+   "author": "Paul Steinhardt",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Infinite Powers",
+   "author": "Steven Strogatz",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Explaining Humans",
+   "author": "Camilla Pang",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The World According to Physics",
+   "author": "Jim Al-Khalili",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Body: A Guide for Occupants",
+   "author": "Bill Bryson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Great Pretender",
+   "author": "Susannah Cahalan",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Double X Economy",
+   "author": "Linda Scott",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Transcendence",
+   "author": "Gaia Vince",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Entangled Life",
+   "author": "Merlin Sheldrake",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Stargazers",
+   "author": "Emily Levesque",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Breath",
+   "author": "James Nestor",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The End of Bias",
+   "author": "Jessica Nordell",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Sleeping Beauties",
+   "author": "Suzanne O'Sullivan",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Science Fictions",
+   "author": "Stuart J. Ritchie",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A (Very) Short History of Life on Earth: 4.6 Billion Years in 12 Pithy Chapters",
+   "author": "Henry Gee",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Greywacke: How a Priest, a Soldier and a School Teacher Uncovered 300 Million Years of History",
+   "author": "Nick Davidson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Different: What Apes Can Teach Us About Gender",
+   "author": "Frans de Waal",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Spike: The Virus vs. The People – the Inside Story",
+   "author": "Jeremy Farrar with Anjana Ahuja",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Age Proof: The New Science of Living a Longer and Healthier Life",
+   "author": "Rose Anne Kenny",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Hot Air: The Inside Story of the Battle Against Climate Change Denial",
+   "author": "Peter A. Stott",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "An Immense World: How Animal Senses Reveal the Hidden Realms Around Us",
+   "author": "Ed Yong",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Nuts and Bolts: Seven Small Inventions That Changed the World (in a Big Way)",
+   "author": "Roma Agrawal",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Jellyfish Age Backwards: Nature's Secrets to Longevity",
+   "author": "Nicklas Brendborg, trans. by Elizabeth de Noma",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Taking Flight: The Evolutionary Story of Life on the Wing",
+   "author": "Lev Parikian",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Breathless: The Scientific Race to Defeat a Deadly Virus",
+   "author": "David Quammen",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Exceptions: Nancy Hopkins, MIT, and the Fight for Women in Science",
+   "author": "Kate Zernike",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A City on Mars: Can We Settle Space, Should We Settle Space, and Have We Really Thought This Through?",
+   "author": "Kelly Weinersmith & Zach Weinersmith",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Eve: How the Female Body Drove 200 Million Years of Human Evolution",
+   "author": "Cat Bohannon",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Everything Is Predictable: How Bayes' Remarkable Theorem Explains the World",
+   "author": "Tom Chivers",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Your Face Belongs to Us: The Secretive Startup Dismantling Your Privacy",
+   "author": "Kashmir Hill",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Last of Its Kind: The Search for the Great Auk and the Discovery of Extinction",
+   "author": "Gísli Pálsson",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Why We Die: The New Science of Ageing and the Quest for Immortality",
+   "author": "Venki Ramakrishnan",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Our Brains, Our Selves: What a Neurologist's Patients Taught Him About the Brain",
+   "author": "Masud Husain",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Ends of the Earth: Journeys to the Polar Regions in Search of Life, the Cosmos, and our Future",
+   "author": "Neil Shubin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Music as Medicine: How We Can Harness Its Therapeutic Power",
+   "author": "Daniel Levitin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Forbidden Garden of Leningrad: A True Story of Science and Sacrifice in a City under Siege",
+   "author": "Simon Parkin",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Vanished: An Unnatural History of Extinction",
+   "author": "Sadiah Qureshi",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Your Life is Manufactured: How We Make Things, Why It Matters and How We Can Do It Better",
+   "author": "Tim Minshall",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Every Last Fish: A Deep Dive Into Everything They Do for Us and We Do to Them",
+   "author": "Rose George",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Hidden Guests: Migrating Cells and How the New Science of Microchimerism Is Redefining Human Identity",
+   "author": "Lise Barnéoud, translated by Bronwyn Haslam",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "How To Change a Memory: One Neuroscientist’s Quest To Alter the Past",
+   "author": "Steve Ramirez",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Alchemy: The Secret History of Chemistry From Ancient Magic to Modern Science",
+   "author": "Kit Chapman",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Influence: How the Internet Hijacked Our Health",
+   "author": "Deborah Cohen",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Despite It All: A Handbook for Climate Hopefuls",
+   "author": "Fred Pearce",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

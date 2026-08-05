@@ -1,0 +1,1033 @@
+{
+ "slug": "pulitzer-nonfiction",
+ "prize": "Pulitzer Prize for General Nonfiction",
+ "rooms": [
+  "readingroom",
+  "glasscase",
+  "witnessbox",
+  "argument"
+ ],
+ "page": "Pulitzer Prize for General Nonfiction",
+ "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_General_Nonfiction",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366861452",
+ "revid": 1366861452,
+ "fetchedAt": "2026-08-05T16:27:12.083Z",
+ "counts": {
+  "entries": 166,
+  "winners": 69,
+  "cited": 97
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Recipients",
+   "headers": "Year | Author(s) | Book | Publisher | Rationale",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 166,
+   "dropped": 0,
+   "winnerMark": "bold"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Making of the President 1960",
+   "author": "Theodore H. White",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "The Guns of August",
+   "author": "Barbara W. Tuchman",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "Anti-Intellectualism in American Life",
+   "author": "Richard Hofstadter",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "O Strange New World: American Culture: The Formative Years",
+   "author": "Howard Mumford Jones",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "Wandering through Winter: A Naturalist's Record of a 20,000-Mile Journey through the North American Winter",
+   "author": "Edwin Way Teale",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "The Problem of Slavery in Western Culture",
+   "author": "David Brion Davis",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "The Story of Civilization: Rousseau and Revolution",
+   "author": "Ariel Durant & Will Durant",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "So Human an Animal: How We Are Shaped by Surroundings and Events",
+   "author": "René Dubos",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "The Armies of the Night: History as a Novel, the Novel as History",
+   "author": "Norman Mailer",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "Gandhi's Truth: On the Origins of Militant Nonviolence",
+   "author": "Erik Erikson",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "The Rising Sun: The Decline and Fall of the Japanese Empire, 1936–1945",
+   "author": "John Toland",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Stilwell and the American Experience in China, 1911–1945",
+   "author": "Barbara W. Tuchman",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Children of Crisis, Volumes II and III",
+   "author": "Robert Coles",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Fire in the Lake: The Vietnamese and the Americans in Vietnam",
+   "author": "Frances FitzGerald",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Denial of Death",
+   "author": "Ernest Becker",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Pilgrim at Tinker Creek",
+   "author": "Annie Dillard",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Why Survive?: Being Old in America",
+   "author": "Robert N. Butler",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Beautiful Swimmers: Watermen, Crabs and the Chesapeake Bay",
+   "author": "William W. Warner",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "The Dragons of Eden: Speculations on the Evolution of Human Intelligence",
+   "author": "Carl Sagan",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "On Human Nature",
+   "author": "Edward O. Wilson",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+   "author": "Douglas Hofstadter",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Madwoman in the Attic: The Woman Writer and the Nineteenth-Century Literary Imagination",
+   "author": "Sandra Gilbert & Susan Gubar",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Medusa and the Snail: More Notes of a Biology Watcher",
+   "author": "Lewis Thomas",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Fin-de-Siècle Vienna: Politics and Culture",
+   "author": "Carl E. Schorske",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Southerners: A Journalist's Odyssey",
+   "author": "Marshall Frady",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "China Men",
+   "author": "Maxine Hong Kingston",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Goodbye, Darkness: A Memoir of the Pacific War",
+   "author": "William Manchester",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Soul of a New Machine",
+   "author": "Tracy Kidder",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Basin and Range",
+   "author": "John McPhee",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Mrs. Harris: The Death of the Scarsdale Diet Doctor",
+   "author": "Diana Trilling",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Is There No Place on Earth for Me?",
+   "author": "Susan Sheehan",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Terrorists and Novelists",
+   "author": "Diane Johnson",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Fate of the Earth",
+   "author": "Jonathan Schell",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Social Transformation of American Medicine",
+   "author": "Paul Starr",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Conversations with the Enemy",
+   "author": "Winston Groom & Duncan Spencer",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Justice",
+   "author": "Susan Jacoby",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "\"The Good War\": An Oral History of World War II",
+   "author": "Studs Terkel",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Dawn to the West: Japanese Literature in the Modern Era",
+   "author": "Donald Keene",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Endless Enemies: The Making of an Unfriendly World",
+   "author": "Jonathan Kwitny",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Move Your Shadow: South Africa, Black and White",
+   "author": "Joseph Lelyveld",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Common Ground: A Turbulent Decade in the Lives of Three American Families",
+   "author": "J. Anthony Lukas",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Habits and the Heart: Individualism and Commitment in American Life",
+   "author": "Robert N. Bellah",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Arab and Jew: Wounded Spirits in a Promised Land",
+   "author": "David K. Shipler",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Rain or Shine: A Family Memoir",
+   "author": "Cyra McFadden",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Rising from the Plains",
+   "author": "John McPhee",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of the Atomic Bomb",
+   "author": "Richard Rhodes",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Setting Limits: Medical Goals in an Aging Society",
+   "author": "Daniel Callahan",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Chaos: Making a New Science",
+   "author": "James Gleick",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "A Bright Shining Lie: John Paul Vann and America in Vietnam",
+   "author": "Neil Sheehan",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Danger and Survival: Choices about the Bomb in the First Fifty Years",
+   "author": "McGeorge Bundy",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Coming of Age in the Milky Way",
+   "author": "Timothy Ferris",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Farmer",
+   "author": "Howard Kohn",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "And Their Children after Them",
+   "author": "Dale Maharidge & Michael Williamson",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "A Peace to End All Peace: Creating the Modern Middle East, 1914–1922",
+   "author": "David Fromkin",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Wonderful Life: The Burgess Shale and the Nature of History",
+   "author": "Stephen Jay Gould",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "The Ants",
+   "author": "Bert Hölldobler & Edward O. Wilson",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "River of Traps: A Village Life",
+   "author": "William deBuys & Alex Harris",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Looking for a Ship",
+   "author": "John McPhee",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Prize: The Epic Quest for Oil, Money, and Power",
+   "author": "Daniel Yergin",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Broken Vessels",
+   "author": "Andre Dubus",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Chain Reaction: The Impact of Race, Rights, and Taxes on American Politics",
+   "author": "Mary Edsall & Thomas B. Edsall",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln at Gettysburg: The Words That Remade America",
+   "author": "Garry Wills",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "A Chorus of Stones: The Private Life of War",
+   "author": "Susan Griffin",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Where the Buffalo Roam: Restoring America's Great Plains",
+   "author": "Anne Matthews",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Days of Obligation: An Argument with My Mexican Father",
+   "author": "Richard Rodriguez",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Lenin's Tomb: The Last Days of the Soviet Empire",
+   "author": "David Remnick",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Cultivation of Hatred: The Bourgeois Experience, Victoria to Freud",
+   "author": "Peter Gay",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The End of the Twentieth Century: And the End of the Modern Age",
+   "author": "John Lukacs",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The Beak of the Finch: A Story of Evolution in Our Time",
+   "author": "Jonathan Weiner",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Midnight in the Garden of Good and Evil: A Savannah Story",
+   "author": "John Berendt",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "How We Die: Reflections on Life's Final Chapter",
+   "author": "Sherwin B. Nuland",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Haunted Land: Facing Europe's Ghosts after Communism",
+   "author": "Tina Rosenberg",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Darwin's Dangerous Idea: Evolution and the Meanings of Life",
+   "author": "Daniel Dennett",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Mr. Wilson's Cabinet of Wonder: Pronged Ants, Horned Humans, Mice on Toast, and Other Marvels of Jurassic Technology",
+   "author": "Lawrence Weschler",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Ashes to Ashes: America's Hundred-Year Cigarette War, the Public Health, and the Unabashed Triumph of Philip Morris",
+   "author": "Richard Kluger",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Inheritance: How Three Families and America Moved from Roosevelt to Reagan and Beyond",
+   "author": "Samuel G. Freedman",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Fame and Folly",
+   "author": "Cynthia Ozick",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+   "author": "Jared Diamond",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Into Thin Air: A Personal Account of the Mount Everest Disaster",
+   "author": "Jon Krakauer",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "How the Mind Works",
+   "author": "Steven Pinker",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Annals of the Former World",
+   "author": "John McPhee",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Crime and Punishment in America",
+   "author": "Elliott Currie",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Nurture Assumption: Why Children Turn Out the Way They Do",
+   "author": "Judith Rich Harris",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Embracing Defeat: Japan in the Wake of World War II",
+   "author": "John W. Dower",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",
+   "author": "Brian Greene",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Living on the Wind: Across the Hemisphere with Migratory Birds",
+   "author": "Scott Weidensaul",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Hirohito and the Making of Modern Japan",
+   "author": "Herbert P. Bix",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Newjack: Guarding Sing Sing",
+   "author": "Ted Conover",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "A Heartbreaking Work of Staggering Genius",
+   "author": "Dave Eggers",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Carry Me Home: Birmingham, Alabama, the Climactic Battle of the Civil Rights Revolution",
+   "author": "Diane McWhorter",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "War in a Time of Peace: Bush, Clinton, and the Generals",
+   "author": "David Halberstam",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Noonday Demon: An Atlas of Depression",
+   "author": "Andrew Solomon",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "\"A Problem from Hell\": America and the Age of Genocide",
+   "author": "Samantha Power",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The Anthropology of Turquoise: Meditations on Landscape, Art, and Spirit",
+   "author": "Ellen Meloy",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Blank Slate: The Modern Denial of Human Nature",
+   "author": "Steven Pinker",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Gulag: A History of the Soviet Camps",
+   "author": "Anne Applebaum",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Rembrandt's Jews",
+   "author": "Steven Nadler",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Mission: Waging War and Keeping Peace with America's Military",
+   "author": "Dana Priest",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Ghost Wars: The Secret History of the CIA, Afghanistan, and Bin Laden, from the Soviet Invasion to September 10, 2001",
+   "author": "Steve Coll",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Maximum City: Bombay Lost and Found",
+   "author": "Suketu Mehta",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil's Highway: A True Story",
+   "author": "Luis Alberto Urrea",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Imperial Reckoning: The Untold Story of Britain's Gulag in Kenya",
+   "author": "Caroline Elkins",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Postwar: A History of Europe since 1945",
+   "author": "Tony Judt",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Assassins' Gate: America in Iraq",
+   "author": "George Packer",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Looming Tower: Al-Qaeda and the Road to 9/11",
+   "author": "Lawrence Wright",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Crazy: A Father's Search through America's Mental Health Madness",
+   "author": "Pete Earley",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Fiasco: The American Military Adventure in Iraq",
+   "author": "Thomas E. Ricks",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Years of Extermination: Nazi Germany and the Jews, 1939–1945",
+   "author": "Saul Friedländer",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Cigarette Century: The Rise, Fall, and Deadly Persistence of the Product That Defined America",
+   "author": "Allan Brandt",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Rest Is Noise: Listening to the Twentieth Century",
+   "author": "Alex Ross",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Slavery by Another Name: The Re-Enslavement of Black Americans from the Civil War to World War II",
+   "author": "Douglas A. Blackmon",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Gandhi and Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age",
+   "author": "Arthur Herman",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Bitter Road to Freedom: A New History of the Liberation of Europe",
+   "author": "William I. Hitchcock",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Dead Hand: The Untold Story of the Cold War Arms Race and Its Dangerous Legacy",
+   "author": "David E. Hoffman",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "How Markets Fail: The Logic of Economic Calamities",
+   "author": "John Cassidy",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Evolution of God",
+   "author": "Robert Wright",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Emperor of All Maladies: A Biography of Cancer",
+   "author": "Siddhartha Mukherjee",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Shallows: What the Internet Is Doing to Our Brains",
+   "author": "Nicholas G. Carr",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Empire of the Summer Moon: Quanah Parker and the Rise and Fall of the Comanches, the Most Powerful Indian Tribe in American History",
+   "author": "S. C. Gwynne",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Swerve: How the World Became Modern",
+   "author": "Stephen Greenblatt",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "One Hundred Names for Love: A Stroke, a Marriage, and the Language of Healing",
+   "author": "Diane Ackerman",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Unnatural Selection: Choosing Boys over Girls, and the Consequences of a World Full of Men",
+   "author": "Mara Hvistendahl",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Devil in the Grove: Thurgood Marshall, the Groveland Boys, and the Dawn of a New America",
+   "author": "Gilbert King",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Behind the Beautiful Forevers: Life, Death and Hope in a Mumbai Undercity",
+   "author": "Katherine Boo",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Forest Unseen: A Year's Watch in Nature",
+   "author": "David G. Haskell",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Toms River: A Story of Science and Salvation",
+   "author": "Dan Fagin",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide",
+   "author": "Gary J. Bass",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Insurgents: David Petraeus and the Plot to Change the American Way of War",
+   "author": "Fred Kaplan",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Sixth Extinction: An Unnatural History",
+   "author": "Elizabeth Kolbert",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "No Good Men among the Living: America, the Taliban, and the War through Afghan Eyes",
+   "author": "Anand Gopal",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Age of Ambition: Chasing Fortune, Truth, and Faith in the New China",
+   "author": "Evan Osnos",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Black Flags: The Rise of ISIS",
+   "author": "Joby Warrick",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Between the World and Me",
+   "author": "Ta-Nehisi Coates",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "If the Oceans Were Ink: An Unlikely Friendship and a Journey to the Heart of the Quran",
+   "author": "Carla Power",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Evicted: Poverty and Profit in the American City",
+   "author": "Matthew Desmond",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "In a Different Key: The Story of Autism",
+   "author": "John Donvan & Caren Zucker",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Politics of Mourning: Death and Honor in Arlington National Cemetery",
+   "author": "Micki McElya",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Locking Up Our Own: Crime and Punishment in Black America",
+   "author": "James Forman Jr.",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Notes on a Foreign Country: An American Abroad in a Post-America World",
+   "author": "Suzy Hansen",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Evolution of Beauty: How Darwin's Forgotten Theory of Mate Choice Shapes the Animal World—and Us",
+   "author": "Richard Prum",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Amity and Prosperity: One Family and the Fracturing of America",
+   "author": "Eliza Griswold",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Rising: Dispatches from the New American Shore",
+   "author": "Elizabeth Rush",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "In a Day's Work: The Fight to End Sexual Violence against America's Most Vulnerable Workers",
+   "author": "Bernice Yeung",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Undying: Pain, Vulnerability, Mortality, Medicine, Art, Time, Dreams, Data, Exhaustion, Cancer, and Care",
+   "author": "Anne Boyer",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The End of the Myth: From the Frontier to the Border Wall in the Mind of America",
+   "author": "Greg Grandin",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Elderhood: Redefining Aging, Transforming Medicine, Reimagining Life",
+   "author": "Louise Aronson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Solitary",
+   "author": "Leslie George & Albert Woodfox",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Wilmington's Lie: The Murderous Coup of 1898 and the Rise of White Supremacy",
+   "author": "David Zucchino",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Yellow Bird: Oil, Murder, and a Woman's Search for Justice in Indian Country",
+   "author": "Sierra Crane Murdoch",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Minor Feelings: An Asian American Reckoning",
+   "author": "Cathy Park Hong",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Child: Poverty, Survival and Hope in an American City",
+   "author": "Andrea Elliott",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Home, Land, Security: Deradicalization and the Journey Back from Extremism",
+   "author": "Carla Power",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Family Roe: An American Story",
+   "author": "Joshua Prager",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "His Name Is George Floyd: One Man's Life and the Struggle for Racial Justice",
+   "author": "Toluse Olorunnipa & Robert Samuels",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Sounds Wild and Broken: Sonic Marvels, Evolution's Creativity, and the Crisis of Sensory Extinction",
+   "author": "David G. Haskell",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Kingdom of Characters: The Language Revolution That Made China Modern",
+   "author": "Jing Tsu",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Under the Skin: The Hidden Toll of Racism on American Lives and on the Health of Our Nation",
+   "author": "Linda Villarosa",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "A Day in the Life of Abed Salama: Anatomy of a Jerusalem Tragedy",
+   "author": "Nathan Thrall",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Cobalt Red: How the Blood of the Congo Powers Our Lives",
+   "author": "Siddharth Kara",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Fire Weather: A True Story from a Hotter World",
+   "author": "John Vaillant",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "To the Success of Our Hopeless Cause: The Many Lives of the Soviet Dissident Movement",
+   "author": "Benjamin Nathans",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Until I Find You: Disappeared Children and Coercive Adoptions in Guatemala",
+   "author": "Rachel Nolan",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "I Am on the Hit List: A Journalist's Murder and the Rise of Autocracy in India",
+   "author": "Rollo Romig",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "There Is No Place for Us: Working and Homeless in America",
+   "author": "Brian Goldstone",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "A Flower Traveled in My Blood: The Incredible True Story of the Grandmothers Who Fought to Find a Stolen Generation of Children",
+   "author": "Haley Cohen Gilliland",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Mother Emanuel: Two Centuries of Race, Resistance, and Forgiveness in One Charleston Church",
+   "author": "Kevin Sack",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

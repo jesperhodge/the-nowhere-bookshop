@@ -1,0 +1,695 @@
+{
+ "slug": "eisner-reality",
+ "prize": "Eisner Award for Best Reality-Based Work",
+ "rooms": [
+  "panelwall",
+  "inkroom"
+ ],
+ "page": "Eisner Award for Best Reality-Based Work",
+ "url": "https://en.wikipedia.org/wiki/Eisner_Award_for_Best_Reality-Based_Work",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1367588753",
+ "revid": 1367588753,
+ "fetchedAt": "2026-08-05T16:27:18.519Z",
+ "counts": {
+  "entries": 110,
+  "winners": 21,
+  "cited": 89
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and nominees",
+   "headers": "Year | Title | Authors | Ref.",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2
+   },
+   "took": 110,
+   "dropped": 3,
+   "winnerMark": "bold"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Nat Turner",
+   "author": "Kyle Baker",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Embroideries",
+   "author": "Marjane Satrapi",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Epileptic",
+   "author": "David B.",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Pyongyang: A Journey in North Korea (Drawn & Quarterly)",
+   "author": "Guy Delisle",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "True Story, Swear to God (Clib's Boy Comics) and True Story, Swear to God: This One Goes to Eleven (AiT/Planet Lar)",
+   "author": "Tom Beland",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Fun Home (Houghton Mifflin)",
+   "author": "Alison Bechdel",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "I Love Led Zeppelin (Fantagraphics)",
+   "author": "Ellen Forney",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Mom's Cancer",
+   "author": "Brian Fies",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Project X: Cup Noodle",
+   "author": "Tadashi Katoh (author) & Akira Imai (artist)",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Stagger Lee",
+   "author": "Derek McCulloch & Shepherd Hendrix",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Satchel Paige: Striking Out Jim Crow",
+   "author": "James Sturm & Rich Tommaso",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Laika",
+   "author": "Nick Abadzis",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Magical Life of Long Tack Sam",
+   "author": "Ann Marie Fleming",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Sentences: The Life of MF Grimm",
+   "author": "Percy Carey & Ronald Wimberly",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "White Rapids (Drawn & Quarterly)",
+   "author": "Pascal Blanchet",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "What It Is (Drawn & Quarterly)",
+   "author": "Lynda Barry",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Alan's War",
+   "author": "Emmanuel Guibert",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Pills: A Positive Love Story (Houghton Mifflin)",
+   "author": "Frederik Peeters",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Fishtown",
+   "author": "Kevin Colden",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Treasury of XXth Century Murder: The Lindbergh Child",
+   "author": "Rick Geary",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Drifting Life (Drawn & Quarterly)",
+   "author": "Yoshihiro Tatsumi",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Footnotes in Gaza",
+   "author": "Joe Sacco",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Impostor's Daughter: A True Memoir (Little, Brown)",
+   "author": "Laurie Sandell",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Monsters (Secret Acres)",
+   "author": "Ken Dahl",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Photographer",
+   "author": "Emmanuel Guibert, Didier Lefèvre & Frédéric Lemercier",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Stitches (W. W. Norton & Company)",
+   "author": "David Small",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "It Was the War of the Trenches (Fantagraphics)",
+   "author": "Jacques Tardi",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Picture This: The Nearsighted Monkey Book (Drawn & Quarterly)",
+   "author": "Lynda Barry",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Special Exits: A Graphic Memoir (Fantagraphics)",
+   "author": "Joyce Farmer",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Treasury of XXth Century Murder: The Terrible Axe Man of New Orleans",
+   "author": "Rick Geary",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Two Generals (McClelland & Stewart)",
+   "author": "Scott Chantler",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "You'll Never Know Book 2: Collateral Damage (Fantagraphics)",
+   "author": "Carol Tyler",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Green River Killer: A True Detective Story",
+   "author": "Jeff Jensen & Jonathan Case",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Around the World",
+   "author": "Matt Phelan",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Marzi: A Memoir",
+   "author": "Marzena Sowa & Sylvain Savoia",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Onward Towards Our Noble Deaths (Drawn & Quarterly)",
+   "author": "Shigeru Mizuki",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Vietnamerica (Villard)",
+   "author": "GB Tran",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Annie Sullivan and the Trials of Helen Keller",
+   "author": "Joseph Lambert",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Carter Family: Don't Forget This Song (Abrams ComicArts)",
+   "author": "Frank M. Young & David Lasky",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "A Chinese Life (SelfMadeHero)",
+   "author": "Li Kunwu & Philippe Ôtié, translated by Edward Gauvin",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Infinite Wait and Other Stories",
+   "author": "Julia Wertz",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Marbles: Mania Depression Michelangelo & Me",
+   "author": "Ellen Forney",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "You'll Never Know Book 3: A Soldier's Heart (Fantagraphics)",
+   "author": "Carol Tyler",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Fifth Beatle: The Brian Epstein Story",
+   "author": "Vivek J. Tiwary, Andrew C. Robinson & Kyle Baker",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "A Bag of Marbles",
+   "author": "Joseph Joffo, Kris & Vincent Bailly",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Hip Hop Family Tree, Book 1: 1970s-1981 (Fantagraphics)",
+   "author": "Ed Piskor",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "March: Book One (Top Shelf Productions)",
+   "author": "John Lewis, Andrew Aydin & Nate Powell",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Today Is the Last Day of the Rest of Your Life (Fantagraphics)",
+   "author": "Ulli Lust",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Woman Rebel: The Margaret Sanger Story (Drawn & Quarterly)",
+   "author": "Peter Bagge",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Hip Hop Family Tree, Book 2: 1981-1983 (Fantagraphics)",
+   "author": "Ed Piskor",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Can't We Talk About Something More Pleasant?",
+   "author": "Roz Chast",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Dragon’s Breath and Other True Stories",
+   "author": "MariNaomi",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "El Deafo",
+   "author": "Cece Bell",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Nathan Hale’s Hazardous Tales: Treaties Trenches Mud and Blood",
+   "author": "Nathan Hale",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "To End All Wars: The Graphic Anthology of The First World War",
+   "author": "edited by Jonathan Clode & John Stuart Clark",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "March: Book Two",
+   "author": "John Lewis, Andrew Aydin & Nate Powell",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Arab of the Future: A Childhood in the Middle East 1978–1984",
+   "author": "Riad Sattouf",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Displacement: A Travelogue (Fantagraphics)",
+   "author": "Lucy Knisley",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Hip Hop Family Tree Book 3: 1983–1984 (Fantagraphics)",
+   "author": "Ed Piskor",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Ink: My Mother’s Secret Love Affair with a Famous Cartoonist (Fantagraphics)",
+   "author": "Bill Griffith",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Story of My Tits",
+   "author": "Jennifer Hayden",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "March: Book Three (Top Shelf Productions)",
+   "author": "John Lewis, Andrew Aydin & Nate Powell",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Dark Night: A True Batman Story",
+   "author": "Paul Dini & Eduardo Risso",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Glenn Gould: A Life Off Tempo",
+   "author": "Sandrine Revel",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Rosalie Lightning: A Graphic Memoir",
+   "author": "Tom Hart",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Tetris: The Games People Play",
+   "author": "Box Brown",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Spinning",
+   "author": "Tillie Walden",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Audubon: On the Wings of the World",
+   "author": "Fabien Grolleau & Jerémie Royer, translated by Etienne Gilfillan",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Best We Could Do (Abrams ComicArts)",
+   "author": "Thi Bui",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Calamity Jane: The Calamitous Life of Martha Jane Cannary 1852–1903",
+   "author": "Christian Perrissin & Matthieu Blanchin, translated by Diana Schutz & Brandon Kander",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Lennon: The New York Years",
+   "author": "David Foenkinos, Éric Corbeyran & Horne Perreard, translated by Ivanka Hahnenberger",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Is This Guy For Real? The Unbelievable Andy Kaufman",
+   "author": "Box Brown",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "All the Answers: A Graphic Memoir (Gallery 13)",
+   "author": "Michael Kupperman",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "All the Sad Songs",
+   "author": "Summer Pierre",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Monk!",
+   "author": "Youssef Daoudi",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "One Dirty Tree",
+   "author": "Noah Van Sciver",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "They Called Us Enemy (Top Shelf Productions)",
+   "author": "George Takei, Justin Eisinger, Steven Scott & Harmony Becker",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Good Talk: A Memoir in Conversations (One World/Random House)",
+   "author": "Mira Jacob",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Grass (Drawn & Quarterly)",
+   "author": "Keum Suk Gendry-Kim, translation by Janet Hong",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Kid Gloves: Nine Months of Careful Chaos",
+   "author": "Lucy Knisley",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Moonbound: Apollo 11 and the Dream of Spaceflight (Hill & Wang)",
+   "author": "Jonathan Fetter-Vorm",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "My Solo Exchange Diary, vol. 2",
+   "author": "Nagata Kabi, translation Jocelyne Allen",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Kent State: Four Dead in Ohio",
+   "author": "Derf Backderf",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Big Black: Stand at Attica",
+   "author": "Frank “Big Black” Smith, Jared Reinmuth & Améziane",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Dragon Hoops",
+   "author": "Gene Luen Yang",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Differences: A Story of Asperger’s, Adulting, and Living a Life in Full Color",
+   "author": "Mademoiselle Caroline & Julie Dachez, translation by Edward Gauvin",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Paying the Land",
+   "author": "Joe Sacco",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Year of the Rabbit (Drawn & Quarterly)",
+   "author": "Tian Veasna, translation by Helge Dascher",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Flung Out of Space (Abrams ComicArts)",
+   "author": "Grace Ellis & Hannah Templer",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Alfred Hitchcock: The Master of Suspense (HBM)",
+   "author": "Noël Simsolo & Dominique Hé, translation by Montana Kane",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Alice Guy: First Lady of Film (Self Made Hero)",
+   "author": "José-Louis Bocquet & Catel Muller, translation by Edward Gauvin",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "But I Live: Three Stories of Child Survivors of the Holocaust",
+   "author": "edited by Charlotte Schallié",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Invisible Wounds: Graphic Journalism (Fantagraphics)",
+   "author": "Jess Ruliffson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Pinball: A Graphic History of the Silver Ball (First Second/Macmillan)",
+   "author": "Jon Chad",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Three Rocks: The story of Ernie Bushmiller: The Man Who Created Nancy (Abrams ComicArts)",
+   "author": "Bill Griffith",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Are You Willing to Die for the Cause? (Drawn and Quarterly)",
+   "author": "Chris Oliveros",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Last on His Feet: Jack Jackson and the Battle of the Century (Liveright)",
+   "author": "Adrian Matejka & Youssef Daoudi",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Messenger: The Legend of Muhammad Ali (First Second/Macmillan)",
+   "author": "Marc Bernardin & Ron Salas",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Thing: Inside the Struggle for Animal Personhood",
+   "author": "Samuel Machado & Cynthia Sousa Machado with Steven M. Wise",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Suffrage Song: The Haunted History of Gender, Race, and Voting Rights in the U.S. (Fantagraphics)",
+   "author": "Caitlin Cass",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Heart That Fed: A Father, a Son, and the Long Shadow of War (Gallery 13)",
+   "author": "Carl Sciacchitano",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Mythmakers: The Remarkable Fellowship of C. S. Lewis & J. R. R. Tolkien (Abrams Fanfare)",
+   "author": "John Hendrix",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Djuna",
+   "author": "Jon Macy",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Puerto Rican War: A Graphic History (Union Square)",
+   "author": "John Vasquez Mejias",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Black Arms to Hold You Up: A History of Black Resistance (Pantheon)",
+   "author": "Ben Passmore",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Do Admit: The Mitford Sisters and Me (Drawn & Quarterly)",
+   "author": "Mimi Pond",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Fela: Music is the Weapon (Amistad)",
+   "author": "Jibola Fagbamiye, Conor McCreery",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Globetrotters: Nellie Bly and Elizabeth Bisland’s World Tour (Abrams ComicArts)",
+   "author": "Julian Voloj & Julie Rocheleau",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Muybridge (Drawn & Quarterly)",
+   "author": "Guy Delisle, translated by Helge Daschert, Rob Aspinal",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Surrounded: America's First School for Black Girls, 1832 (Ablaze)",
+   "author": "Wilfrid Lupano, Stéphane Fert, translated by Montana Kane",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

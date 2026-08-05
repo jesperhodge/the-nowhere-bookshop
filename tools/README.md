@@ -74,3 +74,39 @@ override it for one run.
 The token can read *and write* your Hardcover account. If it ever reaches a
 chat window, a screenshot, a commit or a log, generate a new one — the old one
 stays valid until you do.
+
+## harvest.mjs — phase 9's pipeline (`IMPLEMENTATION.md` §6)
+
+Fills the shelves with real books: **harvest → enrich → shelve.**
+
+    npm run harvest              # prize lists  → data/lists/*.json
+    npm run harvest:enrich       # Open Library → data/cache/openlibrary.json
+    npm run harvest:shelve       # allocate     → src/js/data/generated/
+    npm run harvest:isbns        # one edition request per shelved book
+    npm run harvest:shelve       # again, to pick the ISBNs up
+    npm run harvest:report       # counts, per list, with permalinks
+
+Every step is resumable and cached to disk; a crash at book 1,400 restarts at
+1,400. All four npm scripts set `NODE_USE_ENV_PROXY=1`, which is not optional
+— see `IMPLEMENTATION.md` §8.2.
+
+**The rule the whole thing exists to enforce.** A title, an author and an
+accolade may only come from a page that was actually fetched, and that page's
+URL *and revision id* are written into the committed data next to them
+(`src/js/data/generated/sources.js`; every book's `acc[].s` is a key in it).
+Nothing is reconstructed from memory. A list that will not fetch or will not
+parse is skipped and counted in `data/lists/_gaps.json`, because a
+plausible-looking wrong shortlist is worse than a missing one — once the
+session that made it is over, the two are indistinguishable.
+
+`fetch` also refuses to be quiet about the one failure mode that produces a
+false claim rather than a missing one: if a list's winners run to more than
+2.5 a year it says so, because that is what "every shortlisting recorded as a
+win" looks like. It caught 240 CWA shortlistings being written up as Gold
+Dagger wins.
+
+`tools/lists.js` is the list configuration (page, prize, which rooms it may
+shelve into). `tools/rooms-rules.js` decides which of those rooms a given book
+lands in, from Open Library subjects and publication year. `tools/wikitable.js`
+is the wikitext table reader — rowspan, templates and all five different
+winner-marking conventions these pages use.

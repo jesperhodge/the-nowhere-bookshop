@@ -1,0 +1,559 @@
+{
+ "slug": "writers-prize",
+ "prize": "The Writers' Prize",
+ "rooms": [
+  "longroom",
+  "fronttable",
+  "readingroom"
+ ],
+ "page": "The Writers' Prize",
+ "url": "https://en.wikipedia.org/wiki/The_Writers'_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1345888804",
+ "revid": 1345888804,
+ "fetchedAt": "2026-08-05T16:26:53.974Z",
+ "counts": {
+  "entries": 87,
+  "winners": 14,
+  "cited": 73
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Recipients",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 87,
+   "dropped": 1,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Tenth of December: Stories",
+   "author": "George Saunders",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Benediction",
+   "author": "Kent Haruf",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Flamethrowers",
+   "author": "Rachel Kushner",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "A Girl Is a Half-formed Thing",
+   "author": "Eimear McBride",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Last Friends",
+   "author": "Jane Gardam",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "A Naked Singularity",
+   "author": "Sergio De La Pava",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Red Doc",
+   "author": "Anne Carson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Schroder",
+   "author": "Amity Gaige",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Family Life",
+   "author": "Akhil Sharma",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "All My Puny Sorrows",
+   "author": "Miriam Toews",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Dept. of Speculation",
+   "author": "Jenny Offill",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Dust",
+   "author": "Yvonne Adhiambo Owuor",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "How to Be Both",
+   "author": "Ali Smith",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Nora Webster",
+   "author": "Colm Tóibín",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Outline",
+   "author": "Rachel Cusk",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Return: Fathers, Sons and the Land in Between",
+   "author": "Hisham Matar",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Burning Country: Syrians in Revolution and War",
+   "author": "Robin Yassin-Kassab & Leila Al-Shami",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Argonauts",
+   "author": "Maggie Nelson",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Do Not Say We Have Nothing",
+   "author": "Madeleine Thien",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Hill",
+   "author": "Francis Spufford",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Sport of Kings",
+   "author": "C. E. Morgan",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "This Census-Taker",
+   "author": "China Miéville",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Vanishing Man: In Pursuit of Velazquez",
+   "author": "Laura Cumming",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Ghosts of the Tsunami: Death and Life in Japan's Disaster Zone",
+   "author": "Richard Lloyd Parry",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Anything Is Possible",
+   "author": "Elizabeth Strout",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Conversations With Friends",
+   "author": "Sally Rooney",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Day That Went Missing",
+   "author": "Richard Beard",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Exit West",
+   "author": "Mohsin Hamid",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Once Upon a Time in the East: A Story of Growing Up",
+   "author": "Xiaolu Guo",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Reservoir 13",
+   "author": "Jon McGregor",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "White Tears",
+   "author": "Hari Kunzru",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Perseverance",
+   "author": "Raymond Antrobus",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Can You Tolerate This?",
+   "author": "Ashleigh Young",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Crossway",
+   "author": "Guy Stagg",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Mary Ann Sate, Imbecile",
+   "author": "Alice Jolly",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Milkman",
+   "author": "Anna Burns",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary People",
+   "author": "Diana Evans",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "There There",
+   "author": "Tommy Orange",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "West",
+   "author": "Carys Davies",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Lost Children Archive",
+   "author": "Valeria Luiselli",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Constellations",
+   "author": "Sinéad Gleeson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Grand Union",
+   "author": "Zadie Smith",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Guest House for Young Widows",
+   "author": "Azadeh Moaveni",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "On Chapel Sands",
+   "author": "Laura Cumming",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Topeka School",
+   "author": "Ben Lerner",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Vertigo & Ghost",
+   "author": "Fiona Benson",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Victory",
+   "author": "James Lasdun",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "In the Dream House",
+   "author": "Carmen Maria Machado",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "As You Were",
+   "author": "Elaine Feeney",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "A Ghost in the Throat",
+   "author": "Doireann Ní Ghríofa",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "handiwork",
+   "author": "Sara Baume",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Indelicacy",
+   "author": "Amina Cain",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Mermaid of Black Conch",
+   "author": "Monique Roffey",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "My Darling from the Lions",
+   "author": "Rachel Long",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Poor",
+   "author": "Caleb Femi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Magician",
+   "author": "Colm Tóibín",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Albert & the Whale",
+   "author": "Philip Hoare",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Assembly",
+   "author": "Natasha Brown",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "China Room",
+   "author": "Sunjeev Sahota",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Men Who Feed Pigeons",
+   "author": "Selima Hill",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "My Phantoms",
+   "author": "Gwendoline Riley",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Promise",
+   "author": "Damon Galgut",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Small Things Like These",
+   "author": "Claire Keegan",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Constructing a Nervous System",
+   "author": "Margo Jefferson",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Passengers",
+   "author": "Will Ashon",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "In Love",
+   "author": "Amy Bloom",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Escape Artist",
+   "author": "Jonathan Freedland",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Social Distance Between Us",
+   "author": "Darren McGarvey",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Scary Monsters",
+   "author": "Michelle de Kretser",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Glory",
+   "author": "NoViolet Bulawayo",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Pure Colour",
+   "author": "Sheila Heti",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Emergency",
+   "author": "Daisy Hildyard",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Lucy by the Sea",
+   "author": "Elizabeth Strout",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Quiet",
+   "author": "Victoria Adukwei Bulley",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Ephemeron",
+   "author": "Fiona Benson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Cane, Corn & Gully",
+   "author": "Safiya Kamaria Kinshasa",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "England's Green",
+   "author": "Zaffar Kunial",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Manorism",
+   "author": "Yomi Ṣode",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Thunderclap: A Memoir of Life and Art and Sudden Death",
+   "author": "Laura Cumming",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Doppelganger: A Trip into the Mirror World",
+   "author": "Naomi Klein",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Thread of Violence: A Story of Truth, Invention and Murder",
+   "author": "Mark O'Connell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Wren, The Wren",
+   "author": "Anne Enright",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Bee Sting",
+   "author": "Paul Murray",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Fraud",
+   "author": "Zadie Smith",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Home Child",
+   "author": "Liz Berry",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Self-Portrait as Othello",
+   "author": "Jason Allen-Paisant",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Bright Fear",
+   "author": "Mary Jean Chan",
+   "year": 2024,
+   "kind": "c"
+  }
+ ]
+}

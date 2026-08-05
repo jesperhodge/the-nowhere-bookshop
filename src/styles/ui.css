@@ -335,6 +335,42 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
 }
 .bd__note em { color: var(--brass); font-style: italic; }
 
+/* ── the shopkeeper's picks ────────────────────────────────────
+   409 of the books in this shop carry a curator's note; since phase 9 the
+   rest are harvested from prize lists and carry none by design. The note is
+   the thing this shop has that a catalogue does not, so a pick is marked
+   in all three places a book appears: on the spine (scene.css), in every
+   list (.res--pick), and at the head of its own note. */
+.vh {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
+.pickmark { display: inline-flex; align-items: center; margin-left: .4em; vertical-align: -.1em; }
+.pickmark svg {
+  width: .78em; height: .78em;
+  fill: var(--brass); stroke: none;
+}
+.bd__h .pickmark { margin: 0; }
+.bd__h .pickmark svg { width: 1em; height: 1em; }
+.bd__sec--pick .bd__note {
+  border-left-color: var(--brass);
+  background: rgba(217,164,79,.09);
+}
+/* A book with no note says so plainly rather than leaving a gap where a
+   section used to be — the shelf is honest about which books the shopkeeper
+   has actually written about. */
+.bd__nonote {
+  margin: 0;
+  font-size: .88rem;
+  line-height: 1.6;
+  color: rgba(226,213,191,.5);
+  font-style: italic;
+  padding-left: .9rem;
+  border-left: 1px solid rgba(217,164,79,.2);
+}
+.res--pick .res__t { color: #f2e2c4; }
+
 /* the opening line, set like a first page */
 .firstpage {
   position: relative;

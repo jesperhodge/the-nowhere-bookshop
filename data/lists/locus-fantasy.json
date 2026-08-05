@@ -1,0 +1,326 @@
+{
+ "slug": "locus-fantasy",
+ "prize": "Locus Award for Best Fantasy Novel",
+ "rooms": [
+  "oak",
+  "cartographer",
+  "thorngate",
+  "kitchendoor",
+  "bonelibrary"
+ ],
+ "page": "Locus Award for Best Fantasy Novel",
+ "url": "https://en.wikipedia.org/wiki/Locus_Award_for_Best_Fantasy_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1360465423",
+ "revid": 1360465423,
+ "fetchedAt": "2026-08-05T16:27:04.207Z",
+ "counts": {
+  "entries": 48,
+  "winners": 48,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year | Novel | Author | ",
+   "roles": {
+    "year": 0,
+    "title": 1,
+    "author": 2
+   },
+   "took": 48,
+   "dropped": 1,
+   "winnerMark": "all winners"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Silmarillion",
+   "author": "J. R. R. Tolkien",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Harpist in the Wind",
+   "author": "Patricia A. McKillip",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Lord Valentine's Castle",
+   "author": "Robert Silverberg",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Claw of the Conciliator",
+   "author": "Gene Wolfe",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "The Sword of the Lictor",
+   "author": "Gene Wolfe",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Mists of Avalon",
+   "author": "Marion Zimmer Bradley",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Job: A Comedy of Justice",
+   "author": "Robert A. Heinlein",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Trumps of Doom",
+   "author": "Roger Zelazny",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Soldier of the Mist",
+   "author": "Gene Wolfe",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Seventh Son",
+   "author": "Orson Scott Card",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Red Prophet",
+   "author": "Orson Scott Card",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Prentice Alvin",
+   "author": "Orson Scott Card",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Tehanu: The Last Book of Earthsea",
+   "author": "Ursula K. Le Guin",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Beauty",
+   "author": "Sheri S. Tepper",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Last Call",
+   "author": "Tim Powers",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Innkeeper's Song",
+   "author": "Peter S. Beagle",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Brittle Innings",
+   "author": "Michael Bishop",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Alvin Journeyman",
+   "author": "Orson Scott Card",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "A Game of Thrones",
+   "author": "George R. R. Martin",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Earthquake Weather",
+   "author": "Tim Powers",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "A Clash of Kings",
+   "author": "George R. R. Martin",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Harry Potter and the Prisoner of Azkaban",
+   "author": "J. K. Rowling",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "A Storm of Swords",
+   "author": "George R. R. Martin",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "American Gods",
+   "author": "Neil Gaiman",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Scar",
+   "author": "China Miéville",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Paladin of Souls",
+   "author": "Lois McMaster Bujold",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Iron Council",
+   "author": "China Miéville",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Anansi Boys",
+   "author": "Neil Gaiman",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Privilege of the Sword",
+   "author": "Ellen Kushner",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Making Money",
+   "author": "Terry Pratchett",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Lavinia",
+   "author": "Ursula K. Le Guin",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The City & the City",
+   "author": "China Miéville",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Kraken",
+   "author": "China Miéville",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "A Dance with Dragons",
+   "author": "George R. R. Martin",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Apocalypse Codex",
+   "author": "Charles Stross",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Ocean at the End of the Lane",
+   "author": "Neil Gaiman",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Goblin Emperor",
+   "author": "Katherine Addison",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Uprooted",
+   "author": "Naomi Novik",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "All the Birds in the Sky",
+   "author": "Charlie Jane Anders",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Stone Sky",
+   "author": "N. K. Jemisin",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Spinning Silver",
+   "author": "Naomi Novik",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Middlegame",
+   "author": "Seanan McGuire",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The City We Became",
+   "author": "N. K. Jemisin",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Jade Legacy",
+   "author": "Fonda Lee",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Babel, or the Necessity of Violence",
+   "author": "R. F. Kuang",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Witch King",
+   "author": "Martha Wells",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "A Sorceress Comes to Call",
+   "author": "T. Kingfisher",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Everlasting",
+   "author": "Alix E. Harrow",
+   "year": 2026,
+   "kind": "w"
+  }
+ ]
+}

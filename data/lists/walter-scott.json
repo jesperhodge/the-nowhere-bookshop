@@ -1,0 +1,643 @@
+{
+ "slug": "walter-scott",
+ "prize": "Walter Scott Prize for Historical Fiction",
+ "rooms": [
+  "longroom",
+  "quiethouse",
+  "longtable"
+ ],
+ "page": "Walter Scott Prize",
+ "url": "https://en.wikipedia.org/wiki/Walter_Scott_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366822473",
+ "revid": 1366822473,
+ "fetchedAt": "2026-08-05T16:26:51.082Z",
+ "counts": {
+  "entries": 101,
+  "winners": 17,
+  "cited": 84
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Recipients",
+   "headers": "Year | Author | Title | Story and setting | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 101,
+   "dropped": 1,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Wolf Hall",
+   "author": "Hilary Mantel",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Hodd",
+   "author": "Adam Thorpe",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Lustrum",
+   "author": "Robert Harris",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Sacred Hearts",
+   "author": "Sarah Dunant",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Stone's Fall",
+   "author": "Iain Pears",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Glass Room",
+   "author": "Simon Mawer",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Quickening Maze",
+   "author": "Adam Foulds",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Long Song",
+   "author": "Andrea Levy",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Ghost Light",
+   "author": "Joseph O'Connor",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Heartstone",
+   "author": "C. J. Sansom",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Thousand Autumns of Jacob de Zoet",
+   "author": "David Mitchell",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "To Kill a Tsar",
+   "author": "Andrew Williams",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "On Canaan's Side",
+   "author": "Sebastian Barry",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Half-Blood Blues",
+   "author": "Esi Edugyan",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Pure",
+   "author": "Andrew Miller",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Quality of Mercy",
+   "author": "Barry Unsworth",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Sisters Brothers",
+   "author": "Patrick deWitt",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Stranger's Child",
+   "author": "Alan Hollinghurst",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Garden of Evening Mists",
+   "author": "Tan Twan Eng",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Bring Up the Bodies",
+   "author": "Hilary Mantel",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Merivel: A Man of His Time",
+   "author": "Rose Tremain",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Daughters of Mars",
+   "author": "Thomas Keneally",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Streets",
+   "author": "Anthony Quinn",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Toby's Room",
+   "author": "Pat Barker",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "An Officer and a Spy",
+   "author": "Robert Harris",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Fair Helen",
+   "author": "Andrew Greig",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Harvest",
+   "author": "Jim Crace",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Life After Life",
+   "author": "Kate Atkinson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Luminaries",
+   "author": "Eleanor Catton",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Promise",
+   "author": "Ann Weisgarber",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Ten Thousand Things",
+   "author": "John Spurling",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "A God in Every Stone",
+   "author": "Kamila Shamsie",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Arctic Summer",
+   "author": "Damon Galgut",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "In the Wolf's Mouth",
+   "author": "Adam Foulds",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Lie",
+   "author": "Helen Dunmore",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Zone of Interest",
+   "author": "Martin Amis",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Viper Wine",
+   "author": "Hermione Eyre",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Tightrope",
+   "author": "Simon Mawer",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "A Place Called Winter",
+   "author": "Patrick Gale",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "End Games in Bordeaux",
+   "author": "Allan Massie",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Mrs Engels",
+   "author": "Gavin McCrea",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Salt Creek",
+   "author": "Lucy Treloar",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Sweet Caress",
+   "author": "William Boyd",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Days Without End",
+   "author": "Sebastian Barry",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "A Country Road, a Tree",
+   "author": "Jo Baker",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Hill",
+   "author": "Francis Spufford",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Mothering Sunday",
+   "author": "Graham Swift",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Good People",
+   "author": "Hannah Kent",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Gustav Sonata",
+   "author": "Rose Tremain",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Vanishing Futurist",
+   "author": "Charlotte Hobson",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Gallows Pole",
+   "author": "Ben Myers",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Grace",
+   "author": "Paul Lynch",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Manhattan Beach",
+   "author": "Jennifer Egan",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Miss Boston and Miss Hargreaves",
+   "author": "Rachel Malik",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Sugar Money",
+   "author": "Jane Harris",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Wardrobe Mistress",
+   "author": "Patrick McGrath",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Long Take",
+   "author": "Robin Robertson",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "A Long Way From Home",
+   "author": "Peter Carey",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "After the Party",
+   "author": "Cressida Connolly",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Now We Shall Be Entirely Free",
+   "author": "Andrew Miller",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Western Wind",
+   "author": "Samantha Harvey",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Warlight",
+   "author": "Michael Ondaatje",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Narrow Land",
+   "author": "Christine Dwyer Hickey",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "A Sin of Omission",
+   "author": "Marguerite Poland",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Shadowplay",
+   "author": "Joseph O'Connor",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Parisian",
+   "author": "Isabella Hammad",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Redeemed",
+   "author": "Tim Pears",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "To Calais, in Ordinary Time",
+   "author": "James Meek",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Mirror & the Light",
+   "author": "Hilary Mantel",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "A Room Made of Leaves",
+   "author": "Kate Grenville",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Hamnet",
+   "author": "Maggie O'Farrell",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Dictionary of Lost Words",
+   "author": "Pip Williams",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Tolstoy Estate",
+   "author": "Steven Conte",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "News of the Dead",
+   "author": "James Robertson",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Rose Nicholson",
+   "author": "Andrew Greig",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Fortune",
+   "author": "Amanda Smyth",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Magician",
+   "author": "Colm Tóibín",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "These Days",
+   "author": "Lucy Caldwell",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Geometer Lobochevsky",
+   "author": "Adrian Duncan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Act of Oblivion",
+   "author": "Robert Harris",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Chosen",
+   "author": "Elizabeth Lowry",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Sun Walks Down",
+   "author": "Fiona McFarlane",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Ancestry",
+   "author": "Simon Mawer",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "I Am Not Your Eve",
+   "author": "Devika Ponnambalam",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Hungry Ghosts",
+   "author": "Kevin Jared Hosein",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The New Life",
+   "author": "Tom Crewe",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "My Father's House",
+   "author": "Joseph O'Connor",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "In the Upper Country",
+   "author": "Kai Thomas",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Absolutely and Forever",
+   "author": "Rose Tremain",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The House of Doors",
+   "author": "Tan Twan Eng",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Land in Winter",
+   "author": "Andrew Miller",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Heart in Winter",
+   "author": "Kevin Barry",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Mare",
+   "author": "Angharad Hampshire",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Days",
+   "author": "Francesca Kay",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Glorious Exploits",
+   "author": "Ferdia Lennon",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Safekeep",
+   "author": "Yael van der Wouden",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Matchbox Girl",
+   "author": "Alice Jolly",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Benbecula",
+   "author": "Graeme Macrae Burnet",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Once the Deed Is Done",
+   "author": "Rachel Seiffert",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Pretender",
+   "author": "Jo Harkin",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Seascraper",
+   "author": "Benjamin Wood",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

@@ -247,9 +247,9 @@ export function attachScenePicking(stage, groups, opts = {}) {
 
 /**
  * Mouse/touch raycasting for a room's real book meshes. `entries` is
- * books.js's `buildRoomBooks().entries` (real books only — filler is
- * intentionally excluded, matching the CSS build's
- * `.fill { pointer-events: none }`). A one-group call into
+ * books.js's `buildRoomBooks().entries`, which since phase 9 is every
+ * spine in the room — the filler that used to stand in the rows and be
+ * excluded from here is gone. A one-group call into
  * attachScenePicking() — see its doc comment for why picking is now a
  * single shared raycaster rather than one per kind.
  * @returns {() => void} detach

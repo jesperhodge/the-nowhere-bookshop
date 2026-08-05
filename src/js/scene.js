@@ -204,6 +204,7 @@ export function buildBook(book, index) {
   const h = Math.min(g.h, MAX_BOOK_H);
 
   const b = el('button', 'bk');
+  if (book.pick) b.classList.add('bk--pick');
   b.type = 'button';
   b.dataset.book = book.id;
   b.dataset.index = String(index);
@@ -212,7 +213,7 @@ export function buildBook(book, index) {
     `--sp-bg:${s.bg}; --sp-ink:${s.ink}; --sp-band:${s.band}; --sp-font:${s.font};` +
     `--cv-bg:${s.coverFlat}; --cv-bg2:${s.coverFlat2};` +
     `--sp-size:${g.t >= 34 ? 14 : g.t >= 26 ? 12 : 11}px;`;
-  b.setAttribute('aria-label', `${book.title} by ${book.author}. Take it off the shelf.`);
+  b.setAttribute('aria-label', `${book.title} by ${book.author}.${book.pick ? " The shopkeeper's pick." : ''} Take it off the shelf.`);
 
   b.innerHTML =
     `<span class="bk__f bk__spine">${g.t >= 19 ? `<span class="bk__title">${escapeHtml(shortTitle(book.title))}</span>` : ''}</span>` +
@@ -228,17 +229,19 @@ function shortTitle(t) {
   return clean.length > 34 ? clean.slice(0, 32).trim() + '…' : clean;
 }
 
-function buildFiller(seed, hue) {
-  const f = fillerStyle(seed, hue);
-  const b = el('span', 'bk fill');
-  b.setAttribute('aria-hidden', 'true');
-  b.style.cssText =
-    `--bt:${px(f.t)}; --bh:${px(f.h)}; --bd:${px(f.d)}; --btilt:${f.tilt}deg;` +
-    `--sp-bg:${f.bg}; --sp-band:${f.band}; --cv-bg:${f.base}; --cv-bg2:${f.base};`;
-  /* scenery: only the two faces you can see from the front */
-  b.innerHTML = `<span class="bk__f bk__spine"></span><span class="bk__f bk__top"></span>`;
-  return b;
-}
+/* buildFiller() lived here until phase 9.
+
+   Every room carried exactly 40 anonymous spines — 2,000 across the shop —
+   because there were only 409 real books and a half-empty case looks broken.
+   IMPLEMENTATION.md §7 asks for zero filler spines once the shelves are
+   filled with harvested books, and that could never be reached by adding
+   data alone: fillRow() padded to a fixed 20 per row and stopped, so more
+   real books just meant a fuller row with the same 20 fillers still in it.
+
+   So the generator is gone rather than tuned. A slot now holds a real book
+   or it holds nothing. fillerStyle() itself stays in covers.js — the front
+   table's stacks are still made of it, and those are décor on a table
+   rather than spines on a shelf.  */
 
 /* ── bookcases ────────────────────────────────────────────── */
 
@@ -264,21 +267,41 @@ function buildCase({ x, y, z, ry = 0, w, rows, cd = CASE_D }) {
   return { node: c, shelves, height: ch };
 }
 
-function fillRow(shelf, books, startIndex, innerW, hue, seed) {
-  let used = books.reduce((a, b) => a + Math.min(shelfSize(b).t, 58) + 5, 0);
-  const pad = [];
-  let s = seed;
-  while (used < innerW - 30 && pad.length < 20) {
-    const f = buildFiller(s++, hue);
-    const t = parseInt(f.style.getPropertyValue('--bt'), 10) + 5;
-    if (used + t > innerW - 6) break;
-    used += t;
-    pad.push(f);
-  }
-  const half = Math.ceil(pad.length / 2);
-  pad.slice(0, half).forEach((n) => shelf.appendChild(n));
+function fillRow(shelf, books, startIndex) {
   books.forEach((b, i) => shelf.appendChild(buildBook(b, startIndex + i)));
-  pad.slice(half).forEach((n) => shelf.appendChild(n));
+}
+
+/* A spine's own width in the units the row is laid out in: shelfSize()'s
+   thickness, capped at its own 58 maximum, plus the 5px gutter. */
+const bookWidth = (b) => Math.min(shelfSize(b).t, 58) + 5;
+const runWidth = (books) => books.reduce((a, b) => a + bookWidth(b), 0);
+
+/* Split a shelf across `rows` by the WIDTH each book takes, not by how many
+   there are. Splitting by count was safe while every row was padded to a
+   fixed 20 fillers and could never overflow; with real books it is not —
+   a page count of 640 gives a 58px spine and one of 170 gives 15px, so an
+   even count split can hand one row 1,575px of books to fit in 1,152 and
+   spill them out of the case. Anything that still will not fit is left off
+   rather than allowed to overflow, and buildRoom() reports it. */
+function planRows(books, rows, innerW) {
+  const target = runWidth(books) / rows;
+  const out = [];
+  let i = 0;
+  for (let r = 0; r < rows; r++) {
+    const slice = [];
+    let used = 0;
+    const last = r === rows - 1;
+    while (i < books.length) {
+      const w = bookWidth(books[i]);
+      if (!last && slice.length && used + w > target) break;
+      if (used + w > innerW) break;
+      slice.push(books[i]);
+      used += w;
+      i++;
+    }
+    out.push(slice);
+  }
+  return { rows: out, left: books.length - i };
 }
 
 /* ── passages ─────────────────────────────────────────────── */
@@ -403,14 +426,24 @@ export function buildRoom(room, books) {
   const hue = room.pal?.hue ?? 30;
   const seedBase = hash(room.id);
 
-  /* ── main case on the back wall ── */
-  const n = books.length;
-  const rows = n === 0 ? 3 : Math.min(3, Math.max(2, Math.ceil(n / 9)));
+  /* ── main case on the back wall ──
+     Row count is driven by how much shelf the books actually need, not by
+     their number. The old rule (`ceil(n/9)`, clamped 2..3) was tuned when a
+     room held eight real books and forty fillers; with ~50 harvested books
+     it grew a third row and made the case LOOK emptier — 3 rows at 51%
+     against 2 rows at 76%. Still clamped to 2..3: two rows is the measured
+     shape of every case in the shop (IMPLEMENTATION.md §4.6) and three is
+     as tall as the wall allows. */
+  const innerW = CASE_W - 40;
+  const rows = Math.min(3, Math.max(2, Math.ceil(runWidth(books) / (innerW * 0.92))));
   const main = buildCase({ x: -CASE_W / 2, y: WORLD.hh, z: -1160, w: CASE_W, rows });
-  const per = Math.ceil(n / rows) || 0;
+  const plan = planRows(books, rows, innerW);
+  let index = 0;
   for (let i = 0; i < rows; i++) {
-    fillRow(main.shelves[i], books.slice(i * per, (i + 1) * per), i * per, CASE_W - 40, hue, seedBase + i * 977);
+    fillRow(main.shelves[i], plan.rows[i], index);
+    index += plan.rows[i].length;
   }
+  if (plan.left) console.warn(`${room.id}: ${plan.left} books do not fit the case`);
   world.appendChild(main.node);
 
   /* ── passages, and side cases in whatever wall is left over ── */

@@ -1,0 +1,324 @@
+{
+ "slug": "nero",
+ "prize": "Nero Book Award",
+ "rooms": [
+  "longroom",
+  "fronttable"
+ ],
+ "page": "Nero Book Awards",
+ "url": "https://en.wikipedia.org/wiki/Nero_Book_Awards",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366126084",
+ "revid": 1366126084,
+ "fetchedAt": "2026-08-05T16:26:53.538Z",
+ "counts": {
+  "entries": 48,
+  "winners": 12,
+  "cited": 36
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Shortlists and winners",
+   "headers": "Year | Author | Title | Publisher | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 48,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Bee Sting",
+   "author": "Paul Murray",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Birnam Wood",
+   "author": "Eleanor Catton",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary Human Failings",
+   "author": "Megan Nolan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Fifteen Wild Decembers",
+   "author": "Karen Powell",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Close to Home",
+   "author": "Michael Magee",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Five Sorrowful Mysteries of Andy Africa",
+   "author": "Stephen Buoro",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The New Life",
+   "author": "Tom Crewe",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Sunburn",
+   "author": "Chloe Michelle Howarth",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Swifts",
+   "author": "Beth Lincoln",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Gwen and Art Are Not in Love",
+   "author": "Lex Croucher",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Bitterthorn",
+   "author": "Kat Dunn",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Song",
+   "author": "Candy Gourlay",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Strong Female Character",
+   "author": "Fern Brady",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Tidal Year",
+   "author": "Freya Bromley",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Undercurrent",
+   "author": "Natasha Carthew",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Hags",
+   "author": "Victoria Smith",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Maurice and Maralyn",
+   "author": "Sophie Elmhirst",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Pixel Flesh",
+   "author": "Ellen Atlanta",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "An African History of Africa",
+   "author": "Zeinab Badawi",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "All That Glitters",
+   "author": "Orlando Whitfield",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Lost in the Garden",
+   "author": "Adam S. Leslie",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Levitation for Beginners",
+   "author": "Suzannah Dunn",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Hypocrite",
+   "author": "Jo Hamya",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Heart, Be at Peace",
+   "author": "Donal Ryan",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Houses",
+   "author": "Colin Barrett",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Monumenta",
+   "author": "Lara Haworth",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Glorious Exploits",
+   "author": "Ferdia Lennon",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "No Small Thing",
+   "author": "Orlaine McDonald",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Twelve",
+   "author": "Liz Hyder (illus. Tom de Freston)",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Bird Boy",
+   "author": "Catherine Bruton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "How to Survive a Horror Movie",
+   "author": "Scarlet Dunmore",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Chronicles of a Lizard Nobody",
+   "author": "Patrick Ness (illus. Tim Miller)",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Family Matter",
+   "author": "Claire Lynch",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Expansion Project",
+   "author": "Ben Pester",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Lush",
+   "author": "Rochelle Dowden-Lord",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Season",
+   "author": "George Harrison",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Seascraper",
+   "author": "Benjamin Wood",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Cursed Daughters",
+   "author": "Oyinkan Braithwaite",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "What We Can Know",
+   "author": "Ian McEwan",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Two Roberts",
+   "author": "Damian Barr",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Death of an Ordinary Man",
+   "author": "Sarah Perry",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Finest Hotel in Kabul",
+   "author": "Lyse Doucet",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Craftland",
+   "author": "James Fox",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "We Came by Sea",
+   "author": "Horatio Clare",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "My Soul, A Shining Tree",
+   "author": "Jamila Gavin",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "People Like Stars",
+   "author": "Patrice Lawrence",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Dragonborn",
+   "author": "Struan Murray",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Shrapnel Boys",
+   "author": "Jenny Pearson",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

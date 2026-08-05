@@ -1,0 +1,5402 @@
+{
+ "slug": "nba-nonfiction",
+ "prize": "National Book Award for Nonfiction",
+ "rooms": [
+  "readingroom",
+  "longtable",
+  "glasscase",
+  "argument",
+  "witnessbox"
+ ],
+ "page": "National Book Award for Nonfiction",
+ "url": "https://en.wikipedia.org/wiki/National_Book_Award_for_Nonfiction",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1366557146",
+ "revid": 1366557146,
+ "fetchedAt": "2026-08-05T16:27:13.116Z",
+ "counts": {
+  "entries": 840,
+  "winners": 167,
+  "cited": 673
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Multiple nonfiction categories (1964–1983)",
+   "skipped": "no title/author column",
+   "headers": "timespan | of all awards | list of \"Nonfiction\" categories covered below"
+  },
+  {
+   "t": 1,
+   "heading": "1935–1940",
+   "headers": "Year | Category | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 14,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "1950s",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 15,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "1960–1963",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 4,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "Arts and Letters",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 32,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "History and Biography",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 34,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 6,
+   "heading": "Science, Philosophy and Religion",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 32,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 7,
+   "heading": "Arts and Letters",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 63,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 8,
+   "heading": "History, biography, and Autobiography",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 126,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 9,
+   "heading": "Philosophy and Religion",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 35,
+   "dropped": 1,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 10,
+   "heading": "The Sciences",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 36,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 11,
+   "heading": "Contemporary Affairs",
+   "headers": "Year | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 55,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 12,
+   "heading": "Autobiography and Biography",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 42,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 13,
+   "heading": "Current Interest",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 14,
+   "heading": "General nonfiction",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 38,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 15,
+   "heading": "General reference",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 16,
+   "heading": "History",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 40,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 17,
+   "heading": "Religion/Inspiration",
+   "headers": "Year | Category | Author | Title | Subject | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 5
+   },
+   "took": 8,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 18,
+   "heading": "Science",
+   "headers": "Year | Category | Author | Title | Result",
+   "roles": {
+    "year": 0,
+    "category": 1,
+    "author": 2,
+    "title": 3,
+    "result": 4
+   },
+   "took": 38,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 19,
+   "heading": "1984–1989",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 28,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 20,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 21,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 22,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 50,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 23,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Subject | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 4
+   },
+   "took": 30,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "North to the Orient",
+   "author": "Anne Morrow Lindbergh",
+   "year": 1935,
+   "kind": "w"
+  },
+  {
+   "title": "Personal History",
+   "author": "Vincent Sheean",
+   "year": 1935,
+   "kind": "c"
+  },
+  {
+   "title": "The Country Kitchen",
+   "author": "Della T. Lutes",
+   "year": 1936,
+   "kind": "w"
+  },
+  {
+   "title": "The Flowering of New England: 1815–1865",
+   "author": "Van Wyck Brooks",
+   "year": 1936,
+   "kind": "w"
+  },
+  {
+   "title": "Four Hundred Million Customers: The Experiences—Some Happy, Some Sad, of an American Living in China, and What They Taught Him",
+   "author": "Carl Crow",
+   "year": 1937,
+   "kind": "w"
+  },
+  {
+   "title": "Madame Curie",
+   "author": "Ève Curie",
+   "year": 1937,
+   "kind": "w"
+  },
+  {
+   "title": "The Importance of Living",
+   "author": "Lin Yutang",
+   "year": 1937,
+   "kind": "c"
+  },
+  {
+   "title": "The World Was My Garden: Travels of a Plant Explorer",
+   "author": "David Fairchild",
+   "year": 1938,
+   "kind": "w"
+  },
+  {
+   "title": "With Malice Toward Some",
+   "author": "Margaret Halsey",
+   "year": 1938,
+   "kind": "w"
+  },
+  {
+   "title": "Listen! The Wind",
+   "author": "Anne Morrow Lindbergh",
+   "year": 1938,
+   "kind": "w"
+  },
+  {
+   "title": "Wind, Sand and Stars",
+   "author": "Antoine de Saint-Exupéry",
+   "year": 1939,
+   "kind": "w"
+  },
+  {
+   "title": "Days of Our Years",
+   "author": "Pierre van Paassen",
+   "year": 1939,
+   "kind": "c"
+  },
+  {
+   "title": "Who Walk Alone",
+   "author": "Perry Burgess",
+   "year": 1940,
+   "kind": "w"
+  },
+  {
+   "title": "As I Remember Him: The Biography of R.S.",
+   "author": "Hans Zinsser",
+   "year": 1940,
+   "kind": "w"
+  },
+  {
+   "title": "The Life of Ralph Waldo Emerson",
+   "author": "Ralph L. Rusk",
+   "year": 1950,
+   "kind": "w"
+  },
+  {
+   "title": "The Universe and Dr. Einstein",
+   "author": "Lincoln Barnett",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "The Mature Mind",
+   "author": "Harry Allen Overstreet",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "This I Remember",
+   "author": "Eleanor Roosevelt",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "Killers of the Dream",
+   "author": "Lillian Smith",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln Finds a General",
+   "author": "Kenneth P. Williams",
+   "year": 1950,
+   "kind": "c"
+  },
+  {
+   "title": "Herman Melville",
+   "author": "Newton Arvin",
+   "year": 1951,
+   "kind": "w"
+  },
+  {
+   "title": "The Sea Around Us",
+   "author": "Rachel Carson",
+   "year": 1952,
+   "kind": "w"
+  },
+  {
+   "title": "The Course of Empire",
+   "author": "Bernard De Voto",
+   "year": 1953,
+   "kind": "w"
+  },
+  {
+   "title": "A Stillness at Appomattox",
+   "author": "Bruce Catton",
+   "year": 1954,
+   "kind": "w"
+  },
+  {
+   "title": "The Measure of Man",
+   "author": "Joseph Wood Krutch",
+   "year": 1955,
+   "kind": "w"
+  },
+  {
+   "title": "An American in Italy",
+   "author": "Herbert Kubly",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "Russia Leaves the War",
+   "author": "George F. Kennan",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "The Lion and the Throne",
+   "author": "Catherine Drinker Bowen",
+   "year": 1958,
+   "kind": "w"
+  },
+  {
+   "title": "Mistress to an Age: A Life of Madame de Staël",
+   "author": "J. Christopher Herold",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "James Joyce",
+   "author": "Richard Ellmann",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise and Fall of the Third Reich",
+   "author": "William L. Shirer",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "The City in History: Its Origins, its Transformations and its Prospects",
+   "author": "Lewis Mumford",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "Henry James",
+   "author": "Leon Edel",
+   "year": 1963,
+   "kind": "w"
+  },
+  {
+   "title": "John Keats: The Making of a Poet",
+   "author": "Aileen Ward",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "John Keats",
+   "author": "Walter Jackson Bate",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "Apollinaire: Poet among the Painters",
+   "author": "Francis Steegmuller",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Oysters of Locmariaquer",
+   "author": "Eleanor Clark",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "The Life of the Drama",
+   "author": "Eric Bentley",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Theater of Revolt: An Approach to Modern Drama",
+   "author": "Robert Brustein",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Because I Was Flesh",
+   "author": "Edward Dahlberg",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Shadow and Act",
+   "author": "Ralph Ellison",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "O Strange New World: American Culture, the Formative Years",
+   "author": "Howard Mumford Jones",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Paris Journal, 1944–1965",
+   "author": "Janet Flanner",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "Starting Out in the Thirties",
+   "author": "Alfred Kazin",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Trials of the Word: Essays in American Literature and the Humanistic Tradition",
+   "author": "R. W. B. Lewis",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Myth and the Powerhouse",
+   "author": "Philip Rahv",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Beyond Culture: Essays on Literature and Learning",
+   "author": "Lionel Trilling",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "History of Modern Criticism: 1750–1950",
+   "author": "René Wellek",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Mr. Clemens and Mark Twain: A Biography",
+   "author": "Justin Kaplan",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "Daumier: Man of His Time",
+   "author": "Oliver Larkin",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "James Boswell: The Earlier Years",
+   "author": "Frederick A. Pottle",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "In My Father's Court",
+   "author": "Isaac Bashevis Singer",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Against Interpretation and Other Essays",
+   "author": "Susan Sontag",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Robert Frost: The Early Years",
+   "author": "Lawrance Thompson",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Selected Essays",
+   "author": "William Troy",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "A Primer of Ignorance",
+   "author": "R. P. Blackmur",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Stop-Time",
+   "author": "Frank Conroy",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Music, the Arts and Ideas",
+   "author": "Leonard B. Meyer",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The New Poets",
+   "author": "M. L. Rosenthal",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Beardsley: A Biography",
+   "author": "Stanley Weintraub",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The Armies of the Night: History as a Novel, The Novel as History",
+   "author": "Norman Mailer",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "Men in Dark Times",
+   "author": "Hannah Arendt",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Weimar Culture: The Outsider as Insider",
+   "author": "Peter Gay",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "George Eliot: A Biography",
+   "author": "Gordon S. Haight",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Victorian Minds",
+   "author": "Gertrude Himmelfarb",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Rise of the West: A History of the Human Community",
+   "author": "William H. McNeill",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "The Civil War: A Narrative, Vol. II, Fredericksburg to Meridian",
+   "author": "Shelby Foote",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "Anti-intellectualism in American Life",
+   "author": "Richard Hofstadter",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The First New Nation: The United States in Historical and Comparative Perspective",
+   "author": "Seymour Martin Lipset",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "Success Story: The Life and Times of S. S. McClure",
+   "author": "Peter Lyon",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Fabulous Life of Diego Rivera",
+   "author": "Bertram D. Wolfe",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Lenin",
+   "author": "Louis Fischer",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "Pedro Martinez: A Mexican Peasant and His Family",
+   "author": "Oscar Lewis",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Age of the Democratic Revolution: A Political History of Europe and America, 1760–1800",
+   "author": "R. R. Palmer",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Rehearsal for Reconstruction: The Port Royal Experiment",
+   "author": "Willie Lee Nichols Rose",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Henry Adams: The Major Phase",
+   "author": "Ernest Samuels",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Founding Father: The Story of Joseph P. Kennedy",
+   "author": "Richard J. Whalen",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "A Thousand Days: John F. Kennedy in the White House",
+   "author": "Arthur M. Schlesinger, Jr.",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "The Bill of Rights: Its Origin and Meaning",
+   "author": "Irving Brant",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Charles Francis Adams, Jr., 1835–1915: Patrician at Bay",
+   "author": "Edward Chase Kirkland",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Peacemakers: The Great Powers and American Independence",
+   "author": "Richard B. Morris",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Revolution: The U.S. in Vietnam, 1946–1966",
+   "author": "Robert Shaplen",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of the President, 1964",
+   "author": "Theodore H. White",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "The Enlightenment, Vol. I: The Rise of Modern Paganism",
+   "author": "Peter Gay",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "The Icon and the Axe: An Interpretative History of Russian Culture",
+   "author": "James H. Billington",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Problem of Slavery in Western Culture",
+   "author": "David Brion Davis",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "James Russell Lowell",
+   "author": "Martin Duberman",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Social Origins of Dictatorship and Democracy: Lord and Peasant in the Making of the Modern World",
+   "author": "Barrington Moore, Jr.",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Journey to the Frontier: Two roads to the Spanish Civil War",
+   "author": "Peter Štanský & William Abrahams",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Memoirs: 1925–1950",
+   "author": "George F. Kennan",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "Woodrow Wilson: The Academic Years",
+   "author": "Henry Bragdon",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The Cold War as History",
+   "author": "Louis J. Halle",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "To Move a Nation: The Politics of Foreign Policy in the Administration of John F. Kennedy",
+   "author": "Roger Hilsman",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Lost New York",
+   "author": "Nathan Silver",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "White over Black: American Attitudes Toward the Negro, 1550–1812",
+   "author": "Winthrop Jordan",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "Lawrence and Oppenheimer",
+   "author": "Nuel Pharr Davis",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Indian Heritage of America",
+   "author": "Alvin M. Josephy, Jr.",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Miami and the Siege of Chicago: An Informal History of the Republic and Democratic Conventions of 1968",
+   "author": "Norman Mailer",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The South and the Sectional Conflict",
+   "author": "David M. Potter",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "Man-made America: Chaos or Control?",
+   "author": "Christopher Tunnard & Boris Pushkarev",
+   "year": 1964,
+   "kind": "w"
+  },
+  {
+   "title": "The Fire Next Time",
+   "author": "James Baldwin",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Horizon",
+   "author": "Raymond Fredric Dasmann",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "Wasp Farm",
+   "author": "Howard Ensign Evans",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "Beyond the Melting Pot: The Negroes, Puerto Ricans, Jews, Italians and Irish of New York City",
+   "author": "Nathan Glazer & Daniel Patrick Moynihan",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "The Quiet Crisis",
+   "author": "Stewart Udall",
+   "year": 1964,
+   "kind": "c"
+  },
+  {
+   "title": "God & Golem, Inc.: A Comment on Certain Points Where Cybernetics Impinges on Religion",
+   "author": "Norbert Wiener",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "With God in Russia",
+   "author": "Walter Ciszek",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "Heredity and the Nature of Man",
+   "author": "Theodosius Dobzhansky",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Language of Nature: An Essay on the Philosophy of Science",
+   "author": "David Hawkins",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "The Problem of God, Yesterday and Today",
+   "author": "John Courtney Murray",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "We Are Not Alone: The Search for Intelligent Life on Other Worlds",
+   "author": "Walter S. Sullivan",
+   "year": 1965,
+   "kind": "c"
+  },
+  {
+   "title": "\"The Love of Anxiety\" and Other Essays",
+   "author": "Charles Frankel",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Coming of Age in America",
+   "author": "Edgar Z. Friedenberg",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "Science and Ethical Values",
+   "author": "Bentley Glass",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "A Peril and a Hope: The Scientists' Movement in America, 1945–47",
+   "author": "Alice Kimball Smith",
+   "year": 1966,
+   "kind": "c"
+  },
+  {
+   "title": "La Vida: A Puerto Rican Family in the Culture of Poverty—San Juan and New York",
+   "author": "Oscar Lewis",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "Marcello Malpighi and the Evolution of Embryology",
+   "author": "Howard B. Adelmann",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Language of Life: An Introduction to the Science of Genetics",
+   "author": "George Beadle & Muriel Beadle",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Essays in Economics",
+   "author": "Wassily W. Leontief",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "The Triumph of the Therapeutic: Uses of Faith After Freud",
+   "author": "Philip Rieff",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Phenomenological Psychology: The Selected Papers of Erwin W. Straus",
+   "author": "Erwin Straus",
+   "year": 1967,
+   "kind": "c"
+  },
+  {
+   "title": "Death at an Early Age",
+   "author": "Jonathan Kozol",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "The Biology of Ultimate Concern",
+   "author": "Theodosius Dobzhansky",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The New Industrial State",
+   "author": "John Kenneth Galbraith",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Mind: An Essay on Human Feeling",
+   "author": "Suzanne K. Langer",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "The Myth of the Machine: Technics and Human Development",
+   "author": "Lewis Mumford",
+   "year": 1968,
+   "kind": "c"
+  },
+  {
+   "title": "Death in Life: Survivors of Hiroshima",
+   "author": "Robert Jay Lifton",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "So Human an Animal: How We Are Shaped by Surroundings and Events",
+   "author": "René Dubos",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "A Portrait of Isaac Newton",
+   "author": "Frank E. Manuel",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Crime of Punishment",
+   "author": "Karl Menninger, M.D.",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "The Double Helix: A Personal Account of the Discovery of the Structure of DNA",
+   "author": "James D. Watson",
+   "year": 1969,
+   "kind": "c"
+  },
+  {
+   "title": "An Unfinished Woman: A Memoir",
+   "author": "Lillian Hellman",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "Alone with America: Essays on the Art of Poetry in the United States Since 1950",
+   "author": "Richard Howard",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Dr. Bowdler's Legacy: A History of Expurgated Books in England and America",
+   "author": "Noel Perrin",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Voyager: A Life of Hart Crane",
+   "author": "John Unterecker",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Reflections Upon a Sinking Ship",
+   "author": "Gore Vidal",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Cocteau: A Biography",
+   "author": "Francis Steegmuller",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Yeats",
+   "author": "Harold Bloom",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Erik H. Erikson: the Growth of His Work",
+   "author": "Robert Coles",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Zelda",
+   "author": "Nancy Milford",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Myth of the Machine: The Pentagon of Power",
+   "author": "Lewis Mumford",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Alternative Society: Essays from the Other World",
+   "author": "Kenneth Rexroth",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Classical Style: Haydn, Mozart, Beethoven",
+   "author": "Charles Rosen",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Natural Supernaturalism: Tradition and Revolution in Romantic Literature",
+   "author": "M. H. Abrams",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Sorties",
+   "author": "James Dickey",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Imagination and Power: A Study of Poetry on Public Themes",
+   "author": "Thomas R. Edwards",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Coleridge, the Damaged Archangel",
+   "author": "Norman Fruman",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Fact and Symbol: Essays in the Sociology of Art and Literature",
+   "author": "César Graña",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Ballet Chronicle",
+   "author": "B. H. Haggin",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Harlem Renaissance",
+   "author": "Nathan Huggins",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Images and Shadows",
+   "author": "Iris Origo",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Movies into Films: Film Criticism, 1967–1970",
+   "author": "John Simon",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Diderot",
+   "author": "Arthur M. Wilson",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Jean Renoir: The World of His Films",
+   "author": "Leo Braudy",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Fred Astaire & Ginger Rogers Book",
+   "author": "Arlene Croce",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Self-Consuming Artifacts: The Experience of Seventeenth-Century Literature",
+   "author": "Stanley Fish",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Shakespeare and the Energies of Drama",
+   "author": "Michael Goldman",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Poe Poe Poe Poe Poe Poe Poe",
+   "author": "Daniel Hoffman",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "South to a Very Old Place",
+   "author": "Albert Murray",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Realism",
+   "author": "Linda Nochlin",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The De-Definition of Art: Action Art to Pop to Earthworks",
+   "author": "Harold Rosenberg",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Other Criteria: Confrontations with Twentieth-Century Art",
+   "author": "Leo Steinberg",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Sincerity and Authenticity",
+   "author": "Lionel Trilling",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "American Popular Song: The Great Innovators, 1900–1950",
+   "author": "Alec Wilder",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "On Film: Unpopular Essays on a Popular Art",
+   "author": "Vernon Young",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Deeper into Movies",
+   "author": "Pauline Kael",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Unwritten War: American Writers and the Civil War",
+   "author": "Daniel Aaron",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Forewords and Afterwords",
+   "author": "W. H. Auden",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Mandelstam",
+   "author": "Clarence Brown (scholar)",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Codgers: Biographical Speculations",
+   "author": "Richard Ellmann",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "A Decade of Music",
+   "author": "B. H. Haggin",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Pentimento: A Book of Portraits",
+   "author": "Lillian Hellman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Walking the Dead Diamond River",
+   "author": "Edward Hoagland",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Elie Nadelman",
+   "author": "Lincoln Kirstein",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Explaining Music: Essays and Explorations",
+   "author": "Leonard B. Meyer",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Inspector",
+   "author": "Saul Steinberg",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Americans and the California Dream, 1850–1915",
+   "author": "Kevin Starr",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Marcel Proust",
+   "author": "Roger Shattuck",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "The Lives of a Cell: Notes of a Biology Watcher",
+   "author": "Lewis Thomas",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Eight Contemporary Poets: Charles Tomlinson, Donald Davie, R. S. Thomas, Philip Larkin, Ted Hughes, Thomas Kinsella, Stevie Smith, W. S. Graham",
+   "author": "Calvin Bedient",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Egon Schiele's Portraits",
+   "author": "Alessandra Comini",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Style in History",
+   "author": "Peter Gay",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of Modern Drama: A Study of Büchner, Ibsen, Strindberg, Chekhov, Pirandello, Brecht, Beckett, Handke",
+   "author": "Richard Gilman",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Seduction and Betrayal",
+   "author": "Elizabeth Hardwick",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Meyerhold: The Art of Conscious Theater",
+   "author": "Marjorie L. Hoover",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "16 Studies",
+   "author": "H. W. Janson",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Liszt: The Artist as Romantic Hero",
+   "author": "Eleanor Perényi",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Essays on Music in the Western World",
+   "author": "Oliver Strunk",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Great War and Modern Memory",
+   "author": "Paul Fussell",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Njinsky Dancing",
+   "author": "Lincoln Kirstein",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Holocaust and the Literary Imagination",
+   "author": "Lawrence L. Langer",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Modern Painting and the Northern Romantic Tradition: Friedrich to Rothko",
+   "author": "Robert Rosenblum",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Female Imagination",
+   "author": "Patricia Meyer Spacks",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Michelangelo's Last Paintings",
+   "author": "Leo Steinberg",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Huey Long",
+   "author": "T. Harry William",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "Present at the Creation: My Years in the State Department",
+   "author": "Dean Acheson",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "The Limits of Intervention",
+   "author": "Townsend Hoopes",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Zapata and the Mexican Revolution",
+   "author": "John Womack",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "The Creation of the American Republic",
+   "author": "Gordon S. Wood",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Roosevelt: The Soldier of Freedom",
+   "author": "James MacGregor Burns",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "Charles Sumner and the Rights of Man",
+   "author": "David Herbert Donald",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Against the Evidence: The Becker-Rosenthal Affair",
+   "author": "Andy Logan",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Jefferson the President: First Term, 1801–1805",
+   "author": "Dumas Malone",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Last of the Giants",
+   "author": "C. L. Sulzberger",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Eleanor and Franklin: The Story of Their Relationship, Based on Eleanor Roosevelt's Private Papers",
+   "author": "Joseph P. Lash",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "After Great Pain: The Inner Life of Emily Dickinson",
+   "author": "John Cody",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Charles Demuth: Behind A Laughing Mask",
+   "author": "Emily Farnham",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Benjamin Rush: Revolutionary Gadfly",
+   "author": "David Freeman Hawke",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "James Madison: A Biography",
+   "author": "Ralph Ketcham",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Inside, Looking Out: A Personal Memoir",
+   "author": "Harding Lemay",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Indian Man: A Life of Oliver La Farge",
+   "author": "D'Arcy McNickle",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Hogarth: His Life, Art, and Times",
+   "author": "Ronald Paulson",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Henry VIII: The Mask of Royalty",
+   "author": "Lacey Baldwin Smith",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "Stilwell and the American Experience in China, 1911-45",
+   "author": "Barbara Tuchman",
+   "year": 1972,
+   "kind": "c"
+  },
+  {
+   "title": "The Organized War, 1863–1864 and The Organized War to Victory, 1864–1865",
+   "author": "Allan Nevins",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "George Washington: Anguish and Farewell, 1793–1799",
+   "author": "James Thomas Flexner",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Combat in the Erogenous Zone: Writings on Love, Hate, and Sex",
+   "author": "Ingrid Bengis",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Herself",
+   "author": "Hortense Calisher",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "FDR: The Beckoning of Destiny, 1882–1928",
+   "author": "Kenneth S. Davis",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Henry James: The Master, 1901–1916",
+   "author": "Leon Edel",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mary Wollstonecraft: A Biography",
+   "author": "Eleanor Flexner",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Gemini: An Extended Autobiographical Statement on My First Twenty-Five Years of Being A Black Poet",
+   "author": "Nikki Giovanni",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Run-Through",
+   "author": "John Houseman",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Lesser Lives",
+   "author": "Diane Johnson",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Memoirs, 1950–1963",
+   "author": "George F. Kennan",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Eleanor: The Years Alone",
+   "author": "Joseph P. Lash",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Blackberry Winter: My Earlier Years",
+   "author": "Margaret Mead",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Unknown Orwell",
+   "author": "Peter Štanský & William Abrahams",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Children of Pride: A True Story of Georgia and the Civil War",
+   "author": "Robert Manson Myers",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Judenrat: The Jewish Councils in Eastern Europe under Nazi Occupation",
+   "author": "Isaiah Trunk",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Presidential Character: Predicting Performance in the White House",
+   "author": "James David Barber",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mussolini and Fascism: The View from America",
+   "author": "John Diggins",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Sugar and Slaves: The Rise of the Planter Class in the English West Indies, 1624–1713",
+   "author": "Richard Dunn",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Science and Philosophy in the Soviet Union",
+   "author": "Loren Graham",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Glorious Revolution in America",
+   "author": "David Lovejoy",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Dream and the Deal: The Federal Writers Project, 1935–43",
+   "author": "Jerre Mangione",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Vichy France: Old Guard and New Order, 1940–1944",
+   "author": "Robert O. Paxton",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mao's Way",
+   "author": "Edward E. Rice",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Thomas Babington Macaulay: The Shaping of the Historian",
+   "author": "John Leonard Clive",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Malcolm Lowry: A Biography",
+   "author": "Douglas Day",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Sir Harry Vane: His Life and Times (1613–1662)",
+   "author": "J. H. Adamson & H. F. Folland",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Bell: Alexander Graham Bell and The Conquest of Solitude",
+   "author": "Robert V. Bruce",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Bukharin and the Bolshevik Revolution: A Political Biography, 1888–1938",
+   "author": "Stephen F. Cohen",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Jean-Jacques Rousseau: The Prophetic Voice, Vol. II",
+   "author": "Lester G. Crocker",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Buried Alive: The Biography of Janis Joplin",
+   "author": "Myra Friedman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Lawyer's Lawyer: The Life of John W. Davis",
+   "author": "William H. Harbaugh",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil and John Foster Dulles",
+   "author": "Townsend Hoopes",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "O'Neill Volume II: Son and Artist",
+   "author": "Louis Sheaffer",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Catherine Beecher",
+   "author": "Kathryn Kish Sklar",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Stalin",
+   "author": "Adam Ulam",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Thomas Babington Macaulay: The Shaping of the Historian",
+   "author": "John Leonard Clive",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Frederick Jackson Turner: Historian, Teacher, Scholar",
+   "author": "Ray Allen Billington",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Americans",
+   "author": "Daniel J. Boorstin",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Franklin D. Roosevelt",
+   "author": "Frank Freidel",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "A History of American Law",
+   "author": "Lawrence M. Friedman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Venice: Maritime Republic",
+   "author": "Frederic C. Lane",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Riches, Class and Power Before the Civil War",
+   "author": "Edward Pessen",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Regeneration Through Violence: the Mythology of the American Frontier, 1600–1860",
+   "author": "Richard Slotkin",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Other Bostonians: Poverty and Progress in the American Metropolis, 1880–1970",
+   "author": "Stephan Thernstrom",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Stalin as Revolutionary, 1879–1929: A Study in History and Personality",
+   "author": "Robert C. Tucker",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Emily Dickinson",
+   "author": "Richard B. Sewall",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Patrick Henry: A Biography",
+   "author": "Richard Beeman",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Carrying the Fire: An Astronaut's Journeys",
+   "author": "Michael Collins",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Edward Weston: Fifty Years; The Definitive Volume of His Photographic Work",
+   "author": "Ben Maddow",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Charmed Circle: Gertrude Stein and Company",
+   "author": "James R. Mellow",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "\"Your Isadora\": The Love Story of Isadora Duncan & Gordon Craig",
+   "author": "Francis Steegmuller",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Uneasy Chair: A Biography of Bernard DeVoto",
+   "author": "Wallace Stegner",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Bix: Man and Legend",
+   "author": "Richard M. Sudhalter & Philip R. Evans",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Gesualdo: The Man and His Music",
+   "author": "Glenn Watkins",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Friar Thomas D'Aquino: his life, thought, and work",
+   "author": "James A. Weisheipl",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Ordeal of Thomas Hutchinson",
+   "author": "Bernard Bailyn",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Salem Possessed: The Social Origins of Witchcraft",
+   "author": "Paul Boyer & Stephen Nissenbaum",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Rome Before Avignon",
+   "author": "Robert Brentano",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Civil War: A Narrative",
+   "author": "Shelby Foote",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Roll, Jordan, Roll: The World the Slaves Made",
+   "author": "Eugene D. Genovese",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Youth and History: Tradition and Change in European Age Relations, 1750–Present",
+   "author": "John R. Gillis",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Generation of the Roman Republic",
+   "author": "Erich S. Gruen",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Utopian Communism in France",
+   "author": "Christopher H. Johnson",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Revolutionary Left in Spain",
+   "author": "Gerald H. Meaker",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Strikes in France, 1830–1968",
+   "author": "Edward Shorter & Charles Tilly",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Maturing of Multinational Enterprise",
+   "author": "Mira Wilkins",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Black Majority: Negroes in Colonial South Carolina from 1670 through the Stono Rebellion",
+   "author": "Peter H. Wood",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Problem of Slavery in the Age of Revolution, 1770–1823",
+   "author": "David Brion Davis",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Lamy of Santa Fe",
+   "author": "Paul Horgan",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Edith Wharton",
+   "author": "R. W. B. Lewis",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Recasting Bourgeois Europe: Stabilization in France, Germany and Italy in the Decade after World War",
+   "author": "Charles S. Maier",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "American Slavery, American Freedom",
+   "author": "Edmund S. Morgan",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Russia Under the Old Regime",
+   "author": "Richard Pipes",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Charles Ives and His America",
+   "author": "Frank R. Rossiter",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "A World Destroyed: Hiroshima and its Legacies",
+   "author": "Martin J. Sherwin",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Norman Thomas: The Last Idealist",
+   "author": "W. A. Swanberg",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "The Rockefellers: An American Dynasty",
+   "author": "Peter Collier & David Horowitz",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Diary of Anaïs Nin: Volume VI 1955–1966",
+   "author": "Anaïs Nin",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "The Lives of Roger Casement",
+   "author": "B. L. Reid",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Letters of E. B. White",
+   "author": "E. B. White",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "World of Our Fathers: The Journey of the East European Jews to America and the Life They Found and Made",
+   "author": "Irving Howe",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Democratic Promise: The Populist Moment in America",
+   "author": "Lawrence Goodwyn",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Woman's Body, Woman's Right: The History of Birth Control in America",
+   "author": "Linda Gordon",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Simple Justice: The History of Brown v. Board of Education and Black America's Struggle for Equality",
+   "author": "Richard Kluger",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "America as Art",
+   "author": "Joshua C. Taylor",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Samuel Johnson",
+   "author": "W. Jackson Bate",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Delmore Schwartz: The Life of an American Poet",
+   "author": "James Atlas",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Brother to a Dragonfly",
+   "author": "Will D. Campbell",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "A Dual Autobiography",
+   "author": "Will Durant & Ariel Durant",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Black Jack: The Life and Times of John J. Pershing",
+   "author": "Frank Vandiver",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Path Between the Seas: The Creation of the Panama Canal 1870–1914",
+   "author": "David McCullough",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "The Empire of Reason: How Europe Imagined and America Realized",
+   "author": "Henry Steele Commager",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Conflict and Crisis: The Presidency of Harry S. Truman, 1945–48",
+   "author": "Robert J. Donovan",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "A Species of Eternity",
+   "author": "Joseph Kastner",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Gold and Iron",
+   "author": "Fritz Stern",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Robert Kennedy and His Times",
+   "author": "Arthur M. Schlesinger Jr.",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Remembering Poets",
+   "author": "Donald Hall",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "American Caesar: Douglas MacArthur",
+   "author": "William Manchester",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Prodigal Father: The Life of John Butler Yeats",
+   "author": "William M. Murphy",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Woman of Letters: A Life of Virginia Woolf",
+   "author": "Phyllis Rose",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Intellectual Life in the Colonial South, 1585–1763",
+   "author": "Richard Beale Davis",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Kings or People: Power and the Mandate to Rule",
+   "author": "Reinhard Bendix",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Germany, 1866–1945",
+   "author": "Gordon A. Craig",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "The American Railroad Passenger Car",
+   "author": "John H. White, Jr.",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Inventing America: Jefferson's Declaration of Independence",
+   "author": "Garry Wills",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Gandhi's Truth: On the Origins of Militant Nonviolence",
+   "author": "Erik Erikson",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "Beyond Economics: Essays on Society, Religion, and Ethics",
+   "author": "Kenneth E. Boulding",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "The Unexpected Universe",
+   "author": "Loren Eiseley",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Love and Will",
+   "author": "Rollo May",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of a Counter Culture: Reflections on the Technocratic Society and Its Youthful Opposition",
+   "author": "Theodore Roszak",
+   "year": 1970,
+   "kind": "c"
+  },
+  {
+   "title": "Righteous Empire: The Protestant Experience in America",
+   "author": "Martin E. Marty",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "A Religious History of the American People",
+   "author": "S. E. Ahlstrom",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Will to be Human",
+   "author": "Silvano Arieti, M.D.",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Camus and Sartre",
+   "author": "Germaine Brée",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mysticism and Morality: Oriental Thought and Moral Philosophy",
+   "author": "Arthur Danto",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Senses of Walden",
+   "author": "Stanley Cavell",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Person and God in a Spanish Valley",
+   "author": "William A. Christian",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Domination of Nature",
+   "author": "William Leiss",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Where the Wasteland Ends",
+   "author": "Theodore Roszak",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Science and Sentiment in America",
+   "author": "Morton White",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Fictional Transfigurations of Jesus",
+   "author": "Theodore Ziolkowski",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Edmund Husserl: Philosopher of Infinite Tasks",
+   "author": "Maurice Natanson",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Generative Man: Psychoanalytic Perspectives",
+   "author": "Don Browning",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Seduction of the Spirit: The Use and Misuse of People's Religion",
+   "author": "Harvey Cox",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Anatomy of Human Destructiveness",
+   "author": "Erich Fromm",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Jean-Paul Sartre",
+   "author": "Marjorie Grene",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Critique of Domination: The Origins and Development of Critical Theory",
+   "author": "Trent Schroyer",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Communal Experience: Anarchist and Mystical Counter-Cultures in America",
+   "author": "Laurence Veysey",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "History and Will: Philosophical Perspectives of Mao Tse-Tung's Thought",
+   "author": "Frederic Wakeman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Studies in the History of Philosophy and Religion, Vol. 1",
+   "author": "Harry Austryn Wolfson",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Puritanism in America: New Culture in a New World",
+   "author": "Larzer Ziff",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Anarchy, State, and Utopia",
+   "author": "Robert Nozick",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Myths, Models and Paradigms",
+   "author": "Ian Barbour",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Soul-Force: African Heritage in Afro-American Religion",
+   "author": "Leonard E. Barrett",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Ordeal of Civility: Freud, Marx, Lévi-Strauss and the Jewish Struggle with Modernity",
+   "author": "John Murray Cuddihy",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Religious America",
+   "author": "Philip Garvin & Julia Welch",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Religion and Revolution",
+   "author": "Guenter Lewy",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Peyote Hunt: The Sacred Journey of the Huichol Indians",
+   "author": "Barbara Myerhoff",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Spirit of Eastern Christendom 600–1700",
+   "author": "Jaroslav Pelikan",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Faith and Fratricide: The Theological Roots of Anti-Semitism",
+   "author": "Rosemary Radford Ruether",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Science in the British Colonies of America",
+   "author": "Raymond Phineas Stearns",
+   "year": 1971,
+   "kind": "w"
+  },
+  {
+   "title": "The Body Has a Head",
+   "author": "Gustav Eckstein",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Technological Man",
+   "author": "Victor C. Ferkiss",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Design with Nature",
+   "author": "Ian L. McHarg",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "Life on Man",
+   "author": "Theodor Rosebury",
+   "year": 1971,
+   "kind": "c"
+  },
+  {
+   "title": "The Blue Whale",
+   "author": "George L. Small",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "The Serengeti Lion: A Study of Predator-Prey Relations",
+   "author": "George B. Schaller",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "Aquaculture: the farming and husbandry of freshwater and marine organisms",
+   "author": "John E. Bardach, John H. Ryther & William O. McLarney",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Computer from Pascal to Von Neumann",
+   "author": "Herman H. Goldstine",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Exploring New Ethics for Survival: The Voyage of the Spaceship Beagle",
+   "author": "Garrett Hardin",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mathematical Thought from Ancient to Modern Times",
+   "author": "Morris Kline",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Tree Where Man Was Born",
+   "author": "Peter Matthiessen",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Wallace and Natural Selection",
+   "author": "H. Lewis McKinney",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Cancer: The Wayward Cell; its origins, nature, and treatment",
+   "author": "Victor Richards, M.D.",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Land Above the Trees: A Guide to American Alpine Tundra",
+   "author": "Ann Zwinger & Beatrice Willard",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Life: The Unfinished Experiment",
+   "author": "S. E. Luria",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Einstein",
+   "author": "Jeremy Bernstein",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Genetic Diversity and Human Equality",
+   "author": "Theodosius Dobzhansky",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Genetic Fix: The Next Technological Revolution",
+   "author": "Amitai Etzioni",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Are Quanta Real?: A Galilean Dialogue",
+   "author": "J. M. Jauch",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Desert: The American Southwest",
+   "author": "Ruth Kirk & Louis Kirk",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Mind: An Essay on Human Feeling, Vol. II",
+   "author": "Suzanne K. Langer",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Autumn of the Eagle",
+   "author": "George Laycock",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Tahitians: Mind and Experience in the Society Islands",
+   "author": "Robert I. Levy",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Behavior: The Control of Perception",
+   "author": "William T. Powers",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Deaths of Man",
+   "author": "Edwin S. Shneidman",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Interpretation of Schizophrenia",
+   "author": "Silvano Arieti",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "The Lives of a Cell: Notes of a Biology Watcher",
+   "author": "Lewis Thomas",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Einstein and the Generation of Science",
+   "author": "Lewis Feuer",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Darwin on Man: A Psychological Study of Scientific Creativity",
+   "author": "Howard E. Gruber & Paul H. Barrett",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "H. G. J. Moseley: The Life and Letters of an English Physicist, 1887–1915",
+   "author": "J. L. Heilbron",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Voyages of Apollo: The Exploration of the Moon",
+   "author": "Richard S. Lewis",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Curve of Binding Energy",
+   "author": "John McPhee",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Obedience to Authority: An Experimental View",
+   "author": "Stanley Milgram",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Continents in Motion: The New Earth Debate",
+   "author": "Walter S. Sullivan",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Legends of the Earth: Their Geologic Origins",
+   "author": "Dorothy B. Vitaliano",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Whole Earth Catalogue",
+   "author": "Stewart Brand",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Fire in the Lake: The Vietnamese and the Americans in Vietnam",
+   "author": "Frances FitzGerald",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Almanac of American Politics",
+   "author": "Michael Barone, Grant Ujifusa & Douglas Matthews",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Herblock's State of the Union",
+   "author": "Herbert Block",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Crisis in Watertown: The Polarization of an American Community",
+   "author": "Lynn Eden",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Best and the Brightest",
+   "author": "David Halberstam",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Cover-Up: The Army's Secret Investigation of the Massacre at My Lai 4",
+   "author": "Seymour Hersh",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Mao and China: From Revolution to Revolution",
+   "author": "Stanley Karnow",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Hidden Injuries of Class",
+   "author": "Richard Sennett & Jonathan Cobb",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Mountain People",
+   "author": "Colin M. Turnbull",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Bare Ruined Choirs: Doubt, Prophecy, and Radical Religion",
+   "author": "Garry Wills",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "Attica: The Official Report of the New York State Special Commission on Attica",
+   "author": "Garry Wills",
+   "year": 1973,
+   "kind": "c"
+  },
+  {
+   "title": "The Briar Patch: The People of the State of New York versus Lumumba Shakur, et al.",
+   "author": "Murray Kempton",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "The Truth About Kent State: A Challenge to the American Conscience",
+   "author": "Peter Davies",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Economics and the Public Purpose",
+   "author": "John Kenneth Galbraith",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "In Search of Ali Mahmoud: An American Woman in Egypt",
+   "author": "Vivian Gornick",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Indispensable Enemies: The Politics of Misrule in America",
+   "author": "Walter Karp",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Home from the War: Vietnam Veterans—Neither Victims nor Executioners",
+   "author": "Robert Jay Lifton",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Kind and Usual Punishment: The Prison Business",
+   "author": "Jessica Mitford",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "Sixties Going on Seventies (Perspectives on the Sixties)",
+   "author": "Nora Sayre",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Imperial Presidency",
+   "author": "Arthur M. Schlesinger, Jr.",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "The Saturday Night Special and Other Guns",
+   "author": "Robert Sherrill",
+   "year": 1974,
+   "kind": "c"
+  },
+  {
+   "title": "All God's Dangers: The Life of Nate Shaw",
+   "author": "Theodore Rosengarten",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Executive Privilege: A Constitutional Myth",
+   "author": "Raoul Berger",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "All the President's Men",
+   "author": "Carl Bernstein & Bob Woodward",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Chasm: The Life and Death of a Great Experiment in Ghetto Education",
+   "author": "Robert Jean Campbell, M.D.",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Power Broker: Robert Moses and the Fall of New York",
+   "author": "Robert Caro",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Charlie Simpson's Apocalypse",
+   "author": "Joe Eszterhas",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Black Book",
+   "author": "Middleton A. Harris with others (uncredited editor Toni Morrison)",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Working Class Majority",
+   "author": "Andrew Levinson",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Zen and the Art of Motorcycle Maintenance: An Inquiry into Values",
+   "author": "Robert M. Pirsig",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "The Logic of World Power: An Inquiry into the Origins, Currents, and Contradictions of World Politics",
+   "author": "Franz Schurmann",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Muscle and Blood",
+   "author": "Rachel Scott",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Working",
+   "author": "Studs Terkel",
+   "year": 1975,
+   "kind": "c"
+  },
+  {
+   "title": "Passage to Ararat",
+   "author": "Michael J. Arlen",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Global Reach: The Power of the Multinational Corporations",
+   "author": "Richard Barnet & Ronald E. Muller",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Pyramids of Sacrifice: Political Ethics and Social Change",
+   "author": "Peter L. Berger",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Money: Whence It Came, Where It Went",
+   "author": "John Kenneth Galbraith",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "Minamata",
+   "author": "W. Eugene Smith & Aileen M. Smith",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "A Time to Die",
+   "author": "Tim Wicker",
+   "year": 1976,
+   "kind": "c"
+  },
+  {
+   "title": "The Uses of Enchantment: The Meaning and Importance of Fairy Tales",
+   "author": "Bruno Bettelheim",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "The Mermaid and the Minotaur: Sexual Arrangements and Human Malaise",
+   "author": "Dorothy Dinnerstein",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Dostoyevsky: A Writer in His Time",
+   "author": "Joseph Frank",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Kicked a Building Lately?",
+   "author": "Ada Louise Huxtable",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Awakening from the American Dream",
+   "author": "Rufus E. Miles, Jr.",
+   "year": 1977,
+   "kind": "c"
+  },
+  {
+   "title": "Winners and Losers",
+   "author": "Gloria Emerson",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Everything in Its Path: Destruction of Community in the Buffalo Creek Flood",
+   "author": "Kai T. Erikson",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Vast Majority",
+   "author": "Michael Harrington",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "Pink Collar Workers",
+   "author": "Louise Kapp Howe",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Origin of Consciousness in the Breakdown of the Bicameral Mind",
+   "author": "Julian Jaynes",
+   "year": 1978,
+   "kind": "c"
+  },
+  {
+   "title": "The Snow Leopard",
+   "author": "Peter Matthiessen",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Stable Peace",
+   "author": "Kenneth E. Boulding",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "This House of Sky: Landscapes of the Western Wind",
+   "author": "Ivan Doig",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "New York Jew",
+   "author": "Alfred Kazin",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Modern Art: 19th and 20th Centuries",
+   "author": "Meyer Schapiro",
+   "year": 1979,
+   "kind": "c"
+  },
+  {
+   "title": "Lauren Bacall by Myself",
+   "author": "Lauren Bacall",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "I'm Dancing As Fast As I Can",
+   "author": "Barbara Gordon",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Front and Center",
+   "author": "John Houseman",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Obituaries",
+   "author": "William Saroyan",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "And I Worked at the Writer's Trade: Chapters of Literary History 1918–1978",
+   "author": "Malcolm Cowley",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise of Theodore Roosevelt",
+   "author": "Edmund Morris",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Marquand: An American Life",
+   "author": "Millicent Bell",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Bloomsbury: A House of Lions",
+   "author": "Leon Edel",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Bernard Berenson: The Making of a Connoisseur",
+   "author": "Ernest Samuels",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Max Perkins: Editor of Genius",
+   "author": "A. Scott Berg",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Samuel Johnson",
+   "author": "W. Jackson Bate",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "American Caesar: Douglas MacArthur, 1880–1964",
+   "author": "William Manchester",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Robert Kennedy and His Times",
+   "author": "Arthur Schlesinger",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Walt Whitman: A Life",
+   "author": "Justin Kaplan",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Peter the Great: His Life and World",
+   "author": "Robert K. Massie",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Nathaniel Hawthorne in His Times",
+   "author": "James R. Mellow",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Orwell: The Transformation",
+   "author": "Peter Štanský & William Abrahams",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Samuel Beckett: A Biography",
+   "author": "Deirdre Bair",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Willa Cather: A Critical Biography",
+   "author": "E. K. Brown",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Bloomsbury: A House of Lions",
+   "author": "Leon Edel",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Facts of Life",
+   "author": "Maureen Howard",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Being Bernard Berenson",
+   "author": "Meryle Secrest",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Mornings on Horseback",
+   "author": "David McCullough",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Waldo Emerson: A Biography",
+   "author": "Gay Wilson Allen",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Jefferson and His Time: The Sage of Monticello",
+   "author": "Dumas Malone",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Grant: A Biography",
+   "author": "William S. McFeely",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Beechers",
+   "author": "Milton Rugoff",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Walter Lippmann and the American Century",
+   "author": "Ronald Steel",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Helen and Teacher: The Story of Helen Keller and Anne Sullivan Macy",
+   "author": "Joseph P. Lash",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Peter the Great: His Life and World",
+   "author": "Robert K. Massie",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Maugham",
+   "author": "Ted Morgan",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Bernard Berenson: The Making of a Connoisseur",
+   "author": "Ernest Samuels",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Isak Dinesen: The Life of a Storyteller",
+   "author": "Judith Thurman",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Growing Up",
+   "author": "Russell Baker",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Years of Lyndon Johnson: The Path to Power",
+   "author": "Robert A. Caro",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Tumultuous Years: The Presidency of Harry S. Truman, 1949–1953",
+   "author": "Robert J. Donovan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Sketches from Life: The Autobiography of Lewis Mumford: The Early Years",
+   "author": "Lewis Mumford",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Nathaniel Hawthorne in His Times",
+   "author": "James R. Mellow",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Jefferson and His Time: The Sage of Monticello",
+   "author": "Dumas Malone",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "William Carlos Williams: A New World Naked",
+   "author": "Paul Mariani",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Grant: A Biography",
+   "author": "William S. McFeely",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Alice James: A Biography",
+   "author": "Jean Strouse",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Julia Child and More Company",
+   "author": "Julia Child",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Design for Independent Living: The Environment and Physically Disabled People",
+   "author": "Raymond Lifchez & Barbara Winslow",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Your Second Life: Vitality and Growth in Middle and Later Years from the Experiences of the Sage Program",
+   "author": "Gay Gaer Luce",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Pritikin Program for Diet and Exercise",
+   "author": "Nathan Pritikin with Patrick M. McGrady",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Privacy: How to Protect What's Left of It",
+   "author": "Robert Ellis Smith",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Culture of Narcissism: American Life in an Age of Diminishing Expectations",
+   "author": "Christopher Lasch",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Babysense: A Practical and Supportive Guide to Baby Care",
+   "author": "Frances Wells Burck",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Integral Urban House: Self-Reliant Living in the City",
+   "author": "Farallones Institute",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Pregnancy and Childbirth: The Complete Guide for a New Life",
+   "author": "Tracy Hotchner",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Alice, Let's Eat: Further Adventures of a Happy Eater",
+   "author": "Calvin Trillin",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Right Stuff",
+   "author": "Tom Wolfe",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "America Revised",
+   "author": "Frances FitzGerald",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Powers That Be",
+   "author": "David Halberstam",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "A Nervous Splendor: Vienna, 1888–1889",
+   "author": "Frederic Morton",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Man Who Kept the Secrets: Richard Helms and the CIA",
+   "author": "Thomas Powers",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Snow Leopard",
+   "author": "Peter Matthiessen",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Lying: Moral Choice in Public and Private Life",
+   "author": "Sissela Bok",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Of Wolves and Men",
+   "author": "Barry Lopez",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "China Men",
+   "author": "Maxine Hong Kingston",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Dream of the Golden Mountains: Remembering the 1930s",
+   "author": "Malcolm Cowley",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "From a Limestone Ledge",
+   "author": "John Graves",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Naming Names",
+   "author": "Victor S. Navasky",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "American Dreams: Lost and Found",
+   "author": "Studs Terkel",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Cowboy: Europeans and The Politics of Memory",
+   "author": "Jane Kramer",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The White Album",
+   "author": "Joan Didion",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Powers That Be",
+   "author": "David Halberstam",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Merchants of Grain: The Power and Profits of the Five Giant Companies at the Center of the World's Food Supply",
+   "author": "Dan Morgan",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Old Patagonian Express",
+   "author": "Paul Theroux",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Soul of a New Machine",
+   "author": "Tracy Kidder",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "The Geography of the Imagination: Forty Essays",
+   "author": "Guy Davenport",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "National Defense",
+   "author": "James Fallows",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Psychoanalysis: The Impossible Profession",
+   "author": "Janet Malcolm",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Russian Journal",
+   "author": "Andrea Lee",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Naming Names",
+   "author": "Victor S. Navasky",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Anatomy of an Illness As Perceived by the Patient: Reflections on Healing",
+   "author": "Norman Cousins",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "African Calliope: A Journey to the Sudan",
+   "author": "Edward Hoagland",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Great Expectations: America and the Baby Boom Generation",
+   "author": "Landon Jones",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Nature and Culture: American Landscape Painting, 1825–1875",
+   "author": "Barbara Novak",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "China: Alive in the Bitter Sea",
+   "author": "Fox Butterfield",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Nuclear Delusion: Soviet-American Relations in the Atomic Age",
+   "author": "George F. Kennan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Indecent Exposure: A True Story of Hollywood and Wall Street",
+   "author": "David McClintock",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Fate of the Earth",
+   "author": "Jonathan Schell",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Is There No Place on Earth for Me?",
+   "author": "Susan Sheehan",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "National Defense",
+   "author": "James Fallows",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Joe McCarthy and the Press",
+   "author": "Edwin R. Bayley",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Abroad: British Literary Traveling Between the Wars",
+   "author": "Paul Fussell",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Everything We Had: An Oral History of the Vietnam War",
+   "author": "Al Santoli",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Pioneer Women: Voices from the Kansas Frontier",
+   "author": "Joanna Stratton",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Congressional Quarterly's Guide to the U.S. Supreme Court",
+   "author": "Elder Witt",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Encyclopedia of China Today",
+   "author": "Frederic M. Kaplan, Julian M. Sopin & Stephen Andors (eds.)",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Arts in America: A Bibliography",
+   "author": "Bernard Karpel",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Encyclopedia of American Religions",
+   "author": "J. Gordon Melton",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Index to Children's Songs",
+   "author": "Carolyn Sue Peterson & Ann D. Fenton (eds.)",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Complete Directory to Prime Time Network and Cable TV Shows 1946–present",
+   "author": "Tim Brooks & Earle Marsh",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Ms. Guide to a Woman's Health",
+   "author": "Cynthia W. Cooke, M.D. & Susan Dworkin",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Solar Age Resource Book",
+   "author": "Solar Age magazine editors",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "I Hear America Talking: An Illustrated History of American Words and Phrases",
+   "author": "Stuart Berg Flexner",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Kids: Day In and Day Out: a parents' manual",
+   "author": "Elisabeth L. Scharlatt",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The White House Years",
+   "author": "Henry A. Kissinger",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Franklin D. Roosevelt and American Foreign Policy, 1932–1945",
+   "author": "Robert Dallek",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Decline of Bismarck's European Order: Franco-Russian Relations, 1875–1890",
+   "author": "George F. Kennan",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Utopian Thought in the Western World",
+   "author": "Frank E. Manuel & Fritzie P. Manuel",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Munich: The Price of Peace",
+   "author": "Telford Taylor",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "A Distant Mirror: The Calamitous 14th Century",
+   "author": "Barbara W. Tuchman",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Making of Jazz: A Comprehensive History",
+   "author": "James Lincoln Collier",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Physicists: The History of a Scientific Community in Modern America",
+   "author": "Daniel J. Kevles",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Perjury: The Hiss–Chambers Case",
+   "author": "Allen Weinstein",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "In Search of History: A Personal Adventure",
+   "author": "Theodore H. White",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Christianity, Social Tolerance and Homosexuality",
+   "author": "John Boswell",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Fire in the Minds of Men: Origins of the Revolutionary Faith",
+   "author": "James H. Billington",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Reform, 1250–1550: An Intellectual and Religious History of Late Medieval and Reformation Europe",
+   "author": "Steven Ozment",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Fin-de-Siècle Vienna: Politics and Culture",
+   "author": "Carl E. Schorske",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Shaping of America: A People's History of the Young Republic",
+   "author": "Page Smith",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Been in the Storm So Long: The Aftermath of Slavery",
+   "author": "Leon F. Litwack",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Metaphysics of Indian-Hating and Empire-Building",
+   "author": "Richard Drinnon",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "In the Matter of Color: The Colonial Period",
+   "author": "A. Leon Higginbotham, Jr.",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Munich: The Price of Peace",
+   "author": "Telford Taylor",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "A People's History of the United States",
+   "author": "Howard Zinn",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "People of the Sacred Mountain: A History of the Northern Cheyenne Chiefs and Warrior Societies, 1830–1879",
+   "author": "Peter J. Powell",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "1587, a Year of No Significance: The Ming Dynasty in Decline",
+   "author": "Ray Huang",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Warriors at Suez: Eisenhower Takes America into the Middle East",
+   "author": "Donald Neff",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Eisenhower's Lieutenants: The Campaign of France and Germany, 1944–1945",
+   "author": "Russell F. Weigley",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Mary Chestnut's Civil War",
+   "author": "C. Vann Woodward",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Generation of 1914",
+   "author": "Robert Wohl",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "The Dream of the Golden Mountains",
+   "author": "Malcolm Cowley",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Franklin D. Roosevelt and American Foreign Policy, 1932–1945",
+   "author": "Robert Dallek",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "At Odds: Women and the Family in America from the Revolution to the Present",
+   "author": "Carl N. Degler",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Law of the Land: The Evolution of Our Legal System",
+   "author": "Charles Rembar",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Voices of Protest: Huey Long, Father Coughlin and the Great Depression",
+   "author": "Alan Brinkley",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Germans",
+   "author": "Gordon A. Craig",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Literary Underground of the Old Regime",
+   "author": "Robert Darnton",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Entertaining Satan: Witchcraft and the Culture of Early New England",
+   "author": "John Putnam Demos",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Pursuit of Power: Technology, Armed Force and Society Since A.D. 1000",
+   "author": "William H. McNeill",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Southern Honor: Ethics and Behavior in the Old South",
+   "author": "Bertram Wyatt-Brown",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Utopian Thought in the Western World",
+   "author": "Frank E. Manuel & Fritzie P. Manuel",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "White Supremacy: A Comparative Study in American and South African History",
+   "author": "George M. Fredrickson",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "1587, a Year of No Significance: The Ming Dynasty in Decline",
+   "author": "Ray Huang",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Mapmakers",
+   "author": "John Noble Wilford",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Gnostic Gospels",
+   "author": "Elaine Pagels",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Heretical Imperative: Contemporary Possibilities of Religious Affirmation",
+   "author": "Peter L. Berger",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Introduction to the Old Testament as Scripture",
+   "author": "Brevard S. Childs",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Love Is Stronger Than Death",
+   "author": "Peter Kreeft",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Authority and Interpretation of the Bible: An Historical Approach",
+   "author": "Jack B. Rogers & Donald K. McKim",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "A Severe Mercy",
+   "author": "Sheldon Vanauken",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Illusions: The Adventures of a Reluctant Messiah",
+   "author": "Richard Bach",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Helper",
+   "author": "Catherine Marshall",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+   "author": "Douglas Hofstadter",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Disturbing the Universe",
+   "author": "Freeman Dyson",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Living Corals",
+   "author": "Douglas Faulkner & Richard Chesher",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "Bumblebee Economics",
+   "author": "Bernd Heinrich",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Eighth Day of Creation: Makers of the Revolution in Biology",
+   "author": "Horace Freeland Judson",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Dancing Wu Li Masters: An Overview of the New Physics",
+   "author": "Gary Zukav",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "Black Holes and Warped Spacetime",
+   "author": "William J. Kaufmann",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Essential Tension: Selected Studies in Scientific Tradition and Change",
+   "author": "Thomas S. Kuhn",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Thin Edge: Coast and Man in Crisis",
+   "author": "Anne W. Simon",
+   "year": 1980,
+   "kind": "c"
+  },
+  {
+   "title": "The Panda's Thumb: More Reflections on Natural History",
+   "author": "Stephen Jay Gould",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "The Abyss of Time: Changing Conceptions of the Earth's Antiquity after the Sixteenth Century",
+   "author": "Claude C. Albritton",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Wooing of Earth",
+   "author": "René Dubos",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Galaxies",
+   "author": "Timothy Ferris",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Cosmos",
+   "author": "Carl Sagan",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Medusa and the Snail: More Notes of a Biology Watcher",
+   "author": "Lewis Thomas",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Broca's Brain: Reflections on the Romance of Science",
+   "author": "Carl Sagan",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "The Big Bang: The Creation and Evolution of the Universe",
+   "author": "Joseph Silk",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Black Holes: the Edge of the Space, the End of Time",
+   "author": "Walter Sullivan",
+   "year": 1981,
+   "kind": "c"
+  },
+  {
+   "title": "Lucy: The Beginnings of Humankind",
+   "author": "Donald C. Johanson & Maitland A. Edey",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Life in Darwin's Universe: Evolution and the Cosmos",
+   "author": "Gene Bylinsky",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Cosmic Dawn: The Origins of Matter and Life",
+   "author": "Eric Chaisson",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Mismeasure of Man",
+   "author": "Steven J. Gould",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The New Evolutionary Timetable: Fossils, Genes and the Origin of Species",
+   "author": "Steven M. Stanley",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Taking the Quantum Leap: The New Physics for Nonscientists",
+   "author": "Fred Alan Wolf",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Disturbing the Universe",
+   "author": "Freeman Dyson",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Darwin on Man: A Psychological Study of Scientific Creativity",
+   "author": "Howard E. Gruber",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "Bumblebee Economics",
+   "author": "Bernd Heinrich",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "The Seven Mysteries of Life: An Exploration in Science & Philosophy",
+   "author": "Guy Murchie",
+   "year": 1982,
+   "kind": "c"
+  },
+  {
+   "title": "\"Subtle is the Lord ...\": The Science and the Life of Albert Einstein",
+   "author": "Abraham Pais",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "Scientific Temperaments: Three Lives in Contemporary Science",
+   "author": "Philip J. Hilts",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Tangled Wing: Biological Constraints on the Human Spirit",
+   "author": "Melvin Konner",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Growth of Biological Thought: Diversity, Evolution and Inheritance",
+   "author": "Ernst Mayr",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Cosmic Code: Quantum Physics as the Language of Nature",
+   "author": "Heinz R. Pagels",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Mathematical Experience",
+   "author": "Philip J. Davis & Reuben Hersh",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Mathematics: The Loss of Certainty",
+   "author": "Morris Kline",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Portrait in the Wild: Animal Behavior in the Western World",
+   "author": "Cynthia Moss",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "The Medical Detectives",
+   "author": "Berton Roueché",
+   "year": 1983,
+   "kind": "c"
+  },
+  {
+   "title": "Darwin to DNA: Molecules to Humanity (new)",
+   "author": "G. Ledyard Stebbins",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Andrew Jackson and the Course of American Democracy, 1833–1845",
+   "author": "Robert V. Remini",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Becoming William James",
+   "author": "Howard M. Feinstein",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Thomas More: A Biography",
+   "author": "Richard Marius",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "The Nightmare of Reason: A Life of Franz Kafka",
+   "author": "Ernst Pawel",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "One Writer's Beginnings",
+   "author": "Eudora Welty",
+   "year": 1984,
+   "kind": "c"
+  },
+  {
+   "title": "Common Ground: A Turbulent Decade in the Lives of Three American Families",
+   "author": "J. Anthony Lukas",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "In the Name of Eugenics: Genetics and the Use of Human Heredity",
+   "author": "Daniel J. Kevles",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "...the Heavens and the Earth: A Political History of the Space Age",
+   "author": "Walter A. McDougall",
+   "year": 1985,
+   "kind": "c"
+  },
+  {
+   "title": "Arctic Dreams: Imagination and Desire in a Northern Landscape",
+   "author": "Barry Lopez",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "War Without Mercy: Race and Power in the Pacific War",
+   "author": "John W. Dower",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "The Paper: The Life and Times of the New York Herald Tribune",
+   "author": "Richard Kluger",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "The Young Hemingway",
+   "author": "Michael S. Reynolds",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "Tombee: Portrait of a Cotton Planter",
+   "author": "Theodore Rosengarten",
+   "year": 1986,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of the Atomic Bomb",
+   "author": "Richard Rhodes",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Look Homeward: A Life of Thomas Wolfe",
+   "author": "David Herbert Donald",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Chaos: Making a New Science",
+   "author": "James Gleick",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "Mothers in the Fatherland",
+   "author": "Claudia Koonz",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "New York 1930: Architecture and Urbanism Between the Two World Wars",
+   "author": "Robert A.M. Stern, Gregory Gilmartin & Thomas Mellins",
+   "year": 1987,
+   "kind": "c"
+  },
+  {
+   "title": "A Bright Shining Lie: John Paul Vann and America in Vietnam",
+   "author": "Neil Sheehan",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Reconstruction: America's Unfinished Revolution, 1863–1877",
+   "author": "Eric Foner",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Freud: A Life for Our Time",
+   "author": "Peter Gay",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Nora: The Real Life of Molly Bloom",
+   "author": "Brenda Maddox",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "Jefferson and Monticello: The Biography of a Builder",
+   "author": "Jack McLaughlin",
+   "year": 1988,
+   "kind": "c"
+  },
+  {
+   "title": "From Beirut to Jerusalem",
+   "author": "Thomas L. Friedman",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Parting the Waters: America in the King Years, 1954–63",
+   "author": "Taylor Branch",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Danger and Survival: Choices about the Bomb in the First Fifty Years",
+   "author": "McGeorge Bundy",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Barbarian Sentiments: How the American Century Ends",
+   "author": "William Pfaff",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "Mother Country: Britain, the Welfare State and Nuclear Pollution",
+   "author": "Marilynne Robinson",
+   "year": 1989,
+   "kind": "c"
+  },
+  {
+   "title": "The House of Morgan: An American Banking Dynasty and the Rise of Modern Finance",
+   "author": "Ron Chernow",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Small Victories: The Real World of a Teacher, Her Students and Their High School",
+   "author": "Samuel G. Freedman",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Richard Milhous Nixon: The Rise of an American Politician",
+   "author": "Roger Morris",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Jackson Pollock: An American Saga",
+   "author": "Steven Naifeh & Gregory White Smith",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Righteous Pilgrim: The Life and Times of Harold L. Ickes, 1847–1952",
+   "author": "T.H. Watkins",
+   "year": 1990,
+   "kind": "c"
+  },
+  {
+   "title": "Freedom, Vol. 1: Freedom in the Making of Western Culture",
+   "author": "Orlando Patterson",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Why Americans Hate Politics",
+   "author": "E.J. Dionne, Jr.",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Praying for Sheetrock",
+   "author": "Melissa Fay Greene",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "The Jameses: A Family Narrative",
+   "author": "R.W.B. Lewis",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Anne Sexton: A Biography",
+   "author": "Diane Wood Middlebrook",
+   "year": 1991,
+   "kind": "c"
+  },
+  {
+   "title": "Becoming a Man: Half a Life Story",
+   "author": "Paul Monette",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Promise of the New South",
+   "author": "Edward L. Ayers",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Genius: The Life and Science of Richard Feynman",
+   "author": "James Gleick",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Truman",
+   "author": "David McCullough",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln at Gettysburg: The Words That Remade America",
+   "author": "Garry Wills",
+   "year": 1992,
+   "kind": "c"
+  },
+  {
+   "title": "United States: Essays 1952–1992",
+   "author": "Gore Vidal",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Land of Desire: Merchants, Power, and the Rise of a New American Culture",
+   "author": "William Leach",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "W. E. B. Du Bois: Biography of a Race, 1868–1919",
+   "author": "David Levering Lewis",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Gunfighter Nation: The Myth of the Frontier in Twentieth-Century America",
+   "author": "Richard Slotkin",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "Battlefield: Farming a Civil War Battleground",
+   "author": "Peter Svenson",
+   "year": 1993,
+   "kind": "c"
+  },
+  {
+   "title": "How We Die: Reflections on Life's Final Chapter",
+   "author": "Sherwin B. Nuland",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "The Unredeemed Captive: A Family Story from Early America",
+   "author": "John Putnam Demos",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Strange Justice: The Selling of Clarence Thomas",
+   "author": "Jane Mayer & Jill Abramson",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "Fatheralong: A Meditation on Fathers, Sons, Race and Society",
+   "author": "John Edgar Wideman",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "In Pharoah's Army: Memories of the Lost War",
+   "author": "Tobias Wolff",
+   "year": 1994,
+   "kind": "c"
+  },
+  {
+   "title": "The Haunted Land: Facing Europe's Ghosts After Communism",
+   "author": "Tina Rosenberg",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Salvation on Sand Mountain: Snake Handling and Redemption in Southern Appalachia",
+   "author": "Dennis Covington",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Darwin's Dangerous Idea: Evolution and the Meaning of Life",
+   "author": "Daniel C. Dennett",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "A Civil Action",
+   "author": "Jonathan Harr",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Ghosts of Mississippi",
+   "author": "Maryanne Vollers",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "An American Requiem: God, My Father, and the War that Came Between Us",
+   "author": "James P. Carroll",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Temple Bombing",
+   "author": "Melissa Fay Greene",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Living and the Dead: Robert McNamara and Five Lives of a Lost War",
+   "author": "Paul Hendrickson",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Life of Nelson A. Rockefeller: Worlds to Conquer, 1908–1958",
+   "author": "Cary Reich",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Fruitful: A Real Mother in the Modern World",
+   "author": "Anne Roiphe",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "American Sphinx: The Character of Thomas Jefferson",
+   "author": "Joseph J. Ellis",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Kidnapping of Edgardo Mortara",
+   "author": "David I. Kertzer",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "My Brother",
+   "author": "Jamaica Kincaid",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Undertaking: Life Studies from the Dismal Trade",
+   "author": "Thomas Lynch",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Whittaker Chambers: A Biography",
+   "author": "Sam Tanenhaus",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Slaves in the Family",
+   "author": "Edward Ball",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Shakespeare: The Invention of the Human",
+   "author": "Harold Bloom",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "There Once Was a World: A 900-Year Chronicle of the Shtetl of Eishyshok",
+   "author": "Yaffa Eliach",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "A Slant of Sun: One Child's Courage",
+   "author": "Beth Kephart",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "All on Fire: William Lloyd Garrison and the Abolition of Slavery",
+   "author": "Henry Mayer",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Embracing Defeat: Japan in the Wake of World War II",
+   "author": "John W. Dower",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Woman: An Intimate Geography",
+   "author": "Natalie Angier",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Black Hawk Down: A Story of Modern War",
+   "author": "Mark Bowden",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Places Left Unfinished at the Time of Creation",
+   "author": "John Phillip Santos",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Secrets of the Flesh: A Life of Colette",
+   "author": "Judith Thurman",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "In the Heart of the Sea: The Tragedy of the Whaleship Essex",
+   "author": "Nathaniel Philbrick",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "From Dawn to Decadence: 500 Years of Western Cultural Life, 1500 to the Present",
+   "author": "Jacques Barzun",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Collaborator: The Trial and Execution of Robert Brasillach",
+   "author": "Alice Kaplan",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "W.E.B. Du Bois: The Fight for Equality and the American Century, 1919–1963",
+   "author": "David Levering Lewis",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Darkness in El Dorado: How Scientists and Journalists Devastated the Amazon",
+   "author": "Patrick Tierney",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Noonday Demon: An Atlas of Depression",
+   "author": "Andrew Solomon",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "American Chica: Two Worlds, One Childhood",
+   "author": "Marie Arana",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost Children of Wilder: The Epic Struggle to Change Foster Care",
+   "author": "Nina Bernstein",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "My Story as Told by Water",
+   "author": "David James Duncan",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Neighbors: The Destruction of the Jewish Community in Jedwabne, Poland",
+   "author": "Jan T. Gross",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Master of the Senate: The Years of Lyndon Johnson",
+   "author": "Robert A. Caro",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "When Smoke Ran Like Water: Tales of Environmental Deception and the Battle Against Pollution",
+   "author": "Devra Davis",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Complications: A Surgeon's Notes on an Imperfect Science",
+   "author": "Atul Gawande",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Last American Man",
+   "author": "Elizabeth Gilbert",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Mapping Human History: Discovering the Past through Our Genes",
+   "author": "Steve Olson",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Waiting for Snow in Havana: Confessions of a Cuban Boy",
+   "author": "Carlos Eire",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Gulag: A History",
+   "author": "Anne Applebaum",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Big House: A Century in the Life of an American Summer Home",
+   "author": "George Howe Colt",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Lost Prophet: The Life and Times of Bayard Rustin",
+   "author": "John D'Emilio",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil in the White City: Murder, Magic, and Madness at the Fair that Changed America",
+   "author": "Erik Larson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Arc of Justice: A Saga of Race, Civil Rights, and Murder in the Jazz Age",
+   "author": "Kevin Boyle",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Washington's Crossing",
+   "author": "David Hackett Fischer",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Life on the Outside: The Prison Odyssey of Elaine Bartlett",
+   "author": "Jennifer Gonnerman",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Will in the World: How Shakespeare Became Shakespeare",
+   "author": "Stephen Greenblatt",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "9/11 Commission Report",
+   "author": "9 & 11 Commission",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Year of Magical Thinking",
+   "author": "Joan Didion",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Out of Eden: An Odyssey of Ecological Invasion",
+   "author": "Alan Burdick",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Jean-Jacques Rousseau: Restless Genius",
+   "author": "Leo Damrosch",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "102 Minutes: The Untold Story of the Fight to Survive Inside the Twin Towers",
+   "author": "Jim Dwyer & Kevin Flynn",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Bury the Chains: Prophets and Rebels in the Fight to Free an Empire's Slaves",
+   "author": "Adam Hochschild",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Worst Hard Time: The Untold Story of Those Who Survived the Great American Dust Bowl",
+   "author": "Timothy Egan",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "At Canaan's Edge: America in the King Years, 1965-68",
+   "author": "Taylor Branch",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Imperial Life in the Emerald City: Inside Iraq's Green Zone",
+   "author": "Rajiv Chandrasekaran",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Oracle Bones: A Journey Between China's Past and Present",
+   "author": "Peter Hessler",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Looming Tower: Al-Qaeda and the Road to 9/11",
+   "author": "Lawrence Wright",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Legacy of Ashes: The History of the CIA",
+   "author": "Tim Weiner",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Brother, I'm Dying",
+   "author": "Edwidge Danticat",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "God Is Not Great: How Religion Poisons Everything",
+   "author": "Christopher Hitchens",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Unruly Americans and the Origins of the Constitution",
+   "author": "Woody Holton",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Ralph Ellison: A Biography",
+   "author": "Arnold Rampersad",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Hemingses of Monticello: An American Family",
+   "author": "Annette Gordon-Reed",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "This Republic of Suffering: Death and the American Civil War",
+   "author": "Drew Gilpin Faust",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Side: The Inside Story of How the War on Terror Turned into a War on American Ideals",
+   "author": "Jane Mayer",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Final Salute: A Story of Unfinished Lives",
+   "author": "Jim Sheeler",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Suicide Index: Putting My Father's Death in Order",
+   "author": "Joan Wickersham",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The First Tycoon: The Epic Life of Cornelius Vanderbilt",
+   "author": "T. J. Stiles",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Following the Water: A Hydromancer's Notebook",
+   "author": "David M. Carroll",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Remarkable Creatures: Epic Adventures in the Search for the Origins of Species",
+   "author": "Sean B. Carroll",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Fordlândia: The Rise and Fall of Henry Ford's Forgotten Jungle City",
+   "author": "Greg Grandin",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Poison King: The Life and Legend of Mithradates, Rome's Deadliest Enemy",
+   "author": "Adrienne Mayor",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Just Kids",
+   "author": "Patti Smith",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Nothing to Envy: Ordinary Lives in North Korea",
+   "author": "Barbara Demick",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Cultures of War: Pearl Harbor, Hiroshima, 9-11, Iraq",
+   "author": "John W. Dower",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Secret Historian: The Life and Times of Samuel Steward, Professor, Tattoo Artist, and Sexual Renegade",
+   "author": "Justin Spring",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Every Man in This Village Is a Liar: An Education in War",
+   "author": "Megan K. Stack",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Swerve: How the World Became Modern",
+   "author": "Stephen Greenblatt",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Convert: A Tale of Exile and Extremism",
+   "author": "Deborah Baker",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Love and Capital: Karl and Jenny Marx and the Birth of a Revolution",
+   "author": "Mary Gabriel",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Malcolm X: A Life of Reinvention",
+   "author": "Manning Marable",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Radioactive: Marie & Pierre Curie, A Tale of Love & Fallout",
+   "author": "Lauren Redniss",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity",
+   "author": "Katherine Boo",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Iron Curtain: The Crushing of Eastern Europe, 1945–1956",
+   "author": "Anne Applebaum",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Passage of Power: The Years of Lyndon Johnson",
+   "author": "Robert A. Caro",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Boy Kings of Texas",
+   "author": "Domingo Martinez",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "House of Stone: A Memoir of Home, Family, and a Lost Middle East",
+   "author": "Anthony Shadid",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Unwinding: An Inner History of the New America",
+   "author": "George Packer",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Book of Ages: The Life and Opinions of Jane Franklin",
+   "author": "Jill Lepore",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Hitler's Furies: German Women in the Nazi Killing Fields",
+   "author": "Wendy Lower",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Internal Enemy: Slavery and War in Virginia, 1772–1832",
+   "author": "Alan Taylor",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Going Clear: Scientology, Hollywood, and the Prison of Belief",
+   "author": "Lawrence Wright",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Age of Ambition: Chasing Fortune, Truth, and Faith in the New China",
+   "author": "Evan Osnos",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Can't We Talk About Something More Pleasant?",
+   "author": "Roz Chast",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "No Good Men Among The Living",
+   "author": "Anand Gopal",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Tennessee Williams: Mad Pilgrimage of the Flesh",
+   "author": "John Lahr",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Meaning of Human Existence",
+   "author": "E.O. Wilson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Between the World and Me",
+   "author": "Ta-Nehisi Coates",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Hold Still: A Memoir with Photographs",
+   "author": "Sally Mann",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Soul of an Octopus: A Surprising Exploration into the Wonder of Consciousness",
+   "author": "Sy Montgomery",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "If the Oceans Were Ink: An Unlikely Friendship and a Journey to the Heart of the Quran",
+   "author": "Carla Power",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary Light: A Memoir",
+   "author": "Tracy K. Smith",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Stamped from the Beginning: The Definitive History of Racist Ideas in America",
+   "author": "Ibram X. Kendi",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Strangers in Their Own Land: Anger and Mourning on the American Right",
+   "author": "Arlie Russell Hochschild",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Nothing Ever Dies: Vietnam and the Memory of War",
+   "author": "Viet Thanh Nguyen",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Other Slavery: The Uncovered Story of Indian Enslavement in America",
+   "author": "Andrés Reséndez",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Blood in the Water: The Attica Prison Uprising of 1971 and Its Legacy",
+   "author": "Heather Ann Thompson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Future Is History: How Totalitarianism Reclaimed Russia",
+   "author": "Masha Gessen",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Never Caught: The Washingtons’ Relentless Pursuit of Their Runaway Slave, Ona Judge",
+   "author": "Erica Armstrong Dunbar",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Evangelicals: The Struggle to Shape America",
+   "author": "Frances FitzGerald",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Killers of the Flower Moon: The Osage Murders and the Birth of the FBI",
+   "author": "David Grann",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Democracy in Chains: The Deep History of the Radical Right's Stealth Plan for America",
+   "author": "Nancy MacLean",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The New Negro: The Life of Alain Locke",
+   "author": "Jeffrey C. Stewart",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Indian World of George Washington: The First President, the First Americans, and the Birth of the Nation",
+   "author": "Colin G. Calloway",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "American Eden: David Hosack, Botany, and Medicine in the Garden of the Early Republic",
+   "author": "Victoria Johnson",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Heartland: A Memoir of Working Hard and Being Broke in the Richest Country on Earth",
+   "author": "Sarah Smarsh",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "We the Corporations: How American Businesses Won Their Civil Rights",
+   "author": "Adam Winkler",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Yellow House",
+   "author": "Sarah M. Broom",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Thick: And Other Essays",
+   "author": "Tressie McMillan Cottom",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "What You Have Heard is True: A Memoir of Witness and Resistance",
+   "author": "Carolyn Forché",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Heartbeat of Wounded Knee: Native America from 1890 to the Present",
+   "author": "David Treuer",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Solitary",
+   "author": "Albert Woodfox with Leslie George",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Dead Are Arising: The Life of Malcolm X",
+   "author": "Les Payne & Tamara Payne",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Unworthy Republic: The Dispossession of Native Americans and the Road to Indian Territory",
+   "author": "Claudio Saunt",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "My Autobiography of Carson McCullers: A Memoir",
+   "author": "Jenn Shapland",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Undocumented Americans",
+   "author": "Karla Cornejo Villavicencio",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "How To Make a Slave and Other Essays",
+   "author": "Jerald Walker",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "All That She Carried: The Journey of Ashley's Sack, a Black Family Keepsake",
+   "author": "Tiya Miles",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "A Little Devil in America: Notes in Praise of Black Performance",
+   "author": "Hanif Abdurraqib",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Running Out: In Search of Water on the High Plains",
+   "author": "Lucas Bessire",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Tastes Like War: A Memoir",
+   "author": "Grace M. Cho",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Covered with Night: A Story of Murder and Indigenous Justice in Early America",
+   "author": "Nicole Eustace",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "South to America: A Journey Below the Mason-Dixon To Understand the Soul of a Nation",
+   "author": "Imani Perry",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Invisible Kingdom: Reimagining Chronic Illness",
+   "author": "Meghan O'Rourke",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Breathless: The Scientific Race To Defeat a Deadly Virus",
+   "author": "David Quammen",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Man Who Could Move Clouds: A Memoir",
+   "author": "Ingrid Rojas Contreras",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "His Name Is George Floyd: One Man’s Life and the Struggle for Racial Justice",
+   "author": "Robert Samuels & Toluse Olorunnipa",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Rediscovery of America: Native Peoples and the Unmaking of US History",
+   "author": "Ned Blackhawk",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Liliana's Invincible Summer: A Sister's Search for Justice",
+   "author": "Cristina Rivera Garza",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary Notes",
+   "author": "Christina Sharpe",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "We Could Have Been Friends, My Father and I: A Palestinian Memoir",
+   "author": "Raja Shehadeh",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Fire Weather: A True Story from a Hotter World",
+   "author": "John Vaillant",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Soldiers and Kings: Survival and Hope in the World of Human Smuggling",
+   "author": "Jason De León",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Circle of Hope: A Reckoning With Love, Power, and Justice in an American Church",
+   "author": "Eliza Griswold",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Unshrinking: How to Face Fatphobia",
+   "author": "Kate Manne",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Knife: Meditations After an Attempted Murder",
+   "author": "Salman Rushdie",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Whiskey Tender",
+   "author": "Deborah Jackson Taffa",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "One Day, Everyone Will Have Always Been Against This",
+   "author": "Omar El Akkad",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Motherland: A Feminist History of Modern Russia, from Revolution to Autocracy",
+   "author": "Julia Ioffe",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Things in Nature Merely Grow",
+   "author": "Yiyun Li",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Wards of the State: The Long Shadow of American Foster Care",
+   "author": "Claudia Rowe",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "When It All Burns: Fighting Fire in a Transformed World",
+   "author": "Jordan Thomas",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

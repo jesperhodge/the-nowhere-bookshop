@@ -4,10 +4,9 @@
    Per IMPLEMENTATION.md §4.6 / PLAN-ARCH.md "Books at scale":
 
    - one canvas2d texture atlas per room, holding every spine (real
-     books AND filler) as one composited image each: ground gradient,
-     head/tail bands, title — exactly what covers.js's spineStyle()
-     already produces together for a real book, and fillerStyle() for
-     decor.
+     books; phase 9 removed the filler) as one composited image each:
+     ground gradient, head/tail bands, title — exactly what covers.js's
+     spineStyle() already produces together for a real book.
    - books are individual THREE.Mesh boxes sharing that one atlas
      material via per-book UV sub-rects, not merged into one geometry
      — keeps per-book hover trivial (the brief's explicit reasoning).
@@ -30,9 +29,7 @@
    Geometry constants (CASE_W, CASE_D, ROW_H, BOARD, the side-case
    BAY/near/far/width-cap numbers) are measured facts from
    IMPLEMENTATION.md §4.6, carried over from scene.js — not
-   re-derived. The row-packing algorithm (real books flanked by
-   filler, filler capped at 20/row) is ported from scene.js's
-   fillRow()/buildFiller(), not reinvented.
+   re-derived.
 
    Book box convention (matches the CSS .bk model exactly, so the
    port is a coordinate change, not a redesign): a book's local +z
@@ -47,7 +44,7 @@
    ============================================================ */
 
 import * as THREE from 'three';
-import { spineStyle, shelfSize, fillerStyle, hash } from '../covers.js';
+import { spineStyle, shelfSize, hash } from '../covers.js';
 import { WORLD } from './coords.js';
 import { BAY, doorSlots } from './passages.js';
 
@@ -123,9 +120,9 @@ function realItem(book, index) {
   const s = spineStyle(book);
   const g = shelfSize(book);
   return {
-    isFiller: false,
     book,
     index,
+    pick: !!book.pick,
     w: g.t,
     h: g.h,
     d: g.d,
@@ -141,88 +138,85 @@ function realItem(book, index) {
   };
 }
 
-let fillerSerial = 0;
-function fillerItem(seed, hue) {
-  const f = fillerStyle(seed, hue);
-  return {
-    isFiller: true,
-    // a stable-enough key for the atlas Map even though two filler
-    // items can otherwise be structurally identical
-    key: `fill:${seed}:${hue}:${fillerSerial++}`,
-    w: f.t,
-    h: f.h,
-    d: f.d,
-    tilt: f.tilt,
-    bgGrad: f.bg,
-    band: f.band,
-    ink: '#000000',
-    font: 'sans-serif',
-    title: '',
-    fontSizeWorld: 0,
-    coverColor: f.base,
-    coverColor2: f.base,
-  };
-}
+/* fillerItem(), packFiller() and planSideRows()'s filler pack lived here
+   until phase 9.
 
-/* Back-wall case: exactly 2 rows (measured fact), row usable width
-   CASE_W-40 (~1152px measured). Real books split evenly across the
-   two rows in shelf order, then each row is flanked by filler up to
-   a 20-per-row cap — ported directly from scene.js's fillRow():
-   `while (used < innerW - 30 && pad.length < 20)`, which is exactly
-   why the whole shop nets out at 40 filler/room (2 rows * 20). */
-function packFiller(realItems, hue, seed, innerW) {
-  let used = realItems.reduce((a, it) => a + Math.min(it.w, 58) + 5, 0);
-  const pad = [];
-  let s = seed;
-  while (used < innerW - 30 && pad.length < 20) {
-    const f = fillerItem(s, hue);
-    const t = f.w + 5;
-    if (used + t > innerW - 6) break;
-    used += t;
-    pad.push(f);
-    s++;
-  }
-  const half = Math.ceil(pad.length / 2);
-  return { before: pad.slice(0, half), after: pad.slice(half) };
-}
+   Measured before they went: the back cases held 2,000 filler spines (40 a
+   room, the same figure PLAN.md counted on the CSS build) and the side
+   cases — real meshes here, a painted spineRun() gradient over there —
+   held a further 3,923. Nearly six thousand anonymous books.
 
-function planBackRows(books, hue, seedBase) {
+   IMPLEMENTATION.md §7 wants zero filler spines once the shelves are
+   filled, and no amount of harvested data gets there while a generator
+   pads every row to a fixed count. So a slot now holds a real book or it
+   holds nothing, and an empty stretch of shelf is left empty — which is
+   what a second-hand bookshop actually looks like, and is honest about how
+   much of the shop is real.
+
+   fillerStyle() stays in covers.js — scene.js's front-table stacks are
+   still made of it, and those are décor on a table rather than spines on a
+   shelf — but nothing in this file imports it any more. */
+
+/* Back-wall case: exactly 2 rows (measured fact, IMPLEMENTATION.md §4.6),
+   row usable width CASE_W-40 (~1152px measured). Books are split across
+   the two rows by the width they take up rather than by their number, so
+   both rows end up equally full — a 22px spine and a 58px spine are the
+   same one book and very different amounts of shelf. Shelf order is
+   preserved, which is what the a11y mirror walks. */
+function planBackRows(books) {
   const rows = 2;
-  const per = Math.ceil(books.length / rows) || 0;
   const innerW = CASE_W - 40;
+  const items = books.map((b, i) => realItem(b, i));
+  const total = items.reduce((a, it) => a + Math.min(it.w, 58) + 5, 0);
+  const perRow = total / rows;
+
   const out = [];
+  let cursor = 0;
   for (let i = 0; i < rows; i++) {
-    const slice = books.slice(i * per, (i + 1) * per);
-    const startIndex = i * per;
-    const realItems = slice.map((b, j) => realItem(b, startIndex + j));
-    const { before, after } = packFiller(realItems, hue, seedBase + i * 977, innerW);
-    out.push({ items: [...before, ...realItems, ...after] });
+    const slice = [];
+    let used = 0;
+    const last = i === rows - 1;
+    while (cursor < items.length) {
+      const it = items[cursor];
+      const t = Math.min(it.w, 58) + 5;
+      if (!last && slice.length && used + t > perRow) break;
+      if (used + t > innerW) break;
+      slice.push(it);
+      used += t;
+      cursor++;
+    }
+    out.push({ items: slice });
   }
   return out;
 }
 
-/* Side cases: no real books left once the back wall has them all —
-   this is exactly the situation spineRun() painted over on the CSS
-   build (see covers.js's spineRun() doc comment). Pack filler
-   edge-to-edge (spineRun()'s own `x += w + 1` gutter), same
-   generation function, real geometry instead of a painted gradient. */
-function planSideRows(w, hue, seedBase) {
-  const rows = 2;
-  const innerW = w - 68; // measured fact: usable width is cw-68
+/* Side cases hold whatever a room's shelf does not fit on the back wall.
+   With the current harvest that is nothing — tools/harvest.mjs sizes each
+   room's allocation to its back case — so these stand as empty shelves
+   rather than as a wall of filler. The shortfall is real and is counted,
+   not hidden; see HANDOFF-PHASE10.md.
+
+   Width-capped all the same. `w - 68` is the measured usable width of a
+   side case, and a row that is filled by count rather than by width spills
+   its books out through the end panel the first time the allocation grows. */
+function planSideRows(overflow, w) {
+  const items = overflow || [];
+  const innerW = w - 68;
+  const half = Math.ceil(items.length / 2);
   const out = [];
-  for (let i = 0; i < rows; i++) {
-    const items = [];
+  let cursor = 0;
+  for (let i = 0; i < 2; i++) {
+    const slice = [];
     let used = 0;
-    let s = seedBase + i * 313;
-    while (used < innerW - 6) {
-      const f = fillerItem(s, hue);
-      const t = f.w + 1;
+    const stop = i === 0 ? half : items.length;
+    while (cursor < stop) {
+      const t = Math.min(items[cursor].w, 58) + 5;
       if (used + t > innerW) break;
-      items.push(f);
+      slice.push(items[cursor]);
       used += t;
-      s++;
+      cursor++;
     }
-    out.push({ items });
+    out.push({ items: slice });
   }
   return out;
 }
@@ -308,7 +302,21 @@ function paintSpineCell(ctx, x, y, w, h, item) {
     ctx.restore();
   }
 
-  if (!item.isFiller && item.title && w >= 19 * ATLAS_SCALE) {
+  /* the shopkeeper's pick: a gilt band low on the spine, the same mark
+     scene.css draws on the CSS build and the book panel repeats, so the
+     book you spotted across the room is the one you end up holding */
+  if (item.pick) {
+    ctx.save();
+    const bandY = y + h * 0.79;
+    const bandH = Math.max(2, h * 0.08);
+    ctx.fillStyle = 'rgba(0,0,0,.35)';
+    ctx.fillRect(x, bandY - 1, w, bandH + 2);
+    ctx.fillStyle = '#d9a44f';
+    ctx.fillRect(x, bandY, w, bandH);
+    ctx.restore();
+  }
+
+  if (item.title && w >= 19 * ATLAS_SCALE) {
     ctx.save();
     ctx.translate(x + w / 2, y + h / 2);
     ctx.rotate(-Math.PI / 2);
@@ -597,28 +605,29 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
       if (item.tilt) mesh.rotation.z = THREE.MathUtils.degToRad(item.tilt);
       g.add(mesh);
 
-      if (!item.isFiller) {
-        const spineMat = mesh.material[4];
-        const entry = {
-          book: item.book,
-          index: item.index,
-          // Which case this book lives on — set from the case
-          // currently being built, not hard-coded, even though side
-          // cases hold only filler today: a11y focus uses this to fly
-          // to the right shelf (see mountA11yMirror()'s opts.onFocus).
-          caseId,
-          mesh,
-          ariaLabel: `${item.book.title} by ${item.book.author}. Take it off the shelf.`,
-          setHighlight(on) {
-            mesh.position.z = on ? baseZ + HOVER_LIFT : baseZ;
-            mesh.rotation.x = on ? -HOVER_TILT : 0;
-            spineMat.emissive.setHex(on ? HOVER_EMISSIVE : 0x000000);
-            spineMat.emissiveIntensity = on ? 0.55 : 0;
-          },
-        };
-        mesh.userData.entry = entry;
-        entries.push(entry);
-      }
+      const spineMat = mesh.material[4];
+      const entry = {
+        book: item.book,
+        index: item.index,
+        // Which case this book lives on — set from the case
+        // currently being built, not hard-coded: side cases now take
+        // a room's overflow, and a11y focus uses this to fly to the
+        // right shelf (see mountA11yMirror()'s opts.onFocus).
+        caseId,
+        mesh,
+        /* The picks tier has to exist for a screen reader too — the gilt
+           band on the spine is worth nothing without colour or shape.
+           Same wording as scene.js's CSS build, deliberately. */
+        ariaLabel: `${item.book.title} by ${item.book.author}.${item.pick ? " The shopkeeper's pick." : ''} Take it off the shelf.`,
+        setHighlight(on) {
+          mesh.position.z = on ? baseZ + HOVER_LIFT : baseZ;
+          mesh.rotation.x = on ? -HOVER_TILT : 0;
+          spineMat.emissive.setHex(on ? HOVER_EMISSIVE : 0x000000);
+          spineMat.emissiveIntensity = on ? 0.55 : 0;
+        },
+      };
+      mesh.userData.entry = entry;
+      entries.push(entry);
       x += item.w + 5;
     }
   });
@@ -639,13 +648,13 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
  *   `shop.js`'s `booksIn(room.id)`
  * @returns {{ group: THREE.Group, entries: object[], atlas: object,
  *   cases: object[] }}
- *   `entries` is real books only, in shelf order, one per book —
- *   exactly what the a11y mirror (src/js/scene/a11y.js) and the
- *   pointer raycaster (src/js/scene/interact.js) both need. Filler
- *   spines are real meshes too (so the shelf looks full) but are
- *   deliberately not in `entries`: they are decor, not focusable or
- *   clickable, matching scene.css's `.fill { pointer-events: none }`
- *   / `aria-hidden` treatment of the CSS build's filler `<span>`s.
+ *   `entries` is every book on every case, in shelf order, one per
+ *   book — exactly what the a11y mirror (src/js/scene/a11y.js) and the
+ *   pointer raycaster (src/js/scene/interact.js) both need. Phase 9
+ *   removed the filler spines that used to stand in the rows without
+ *   appearing here, so `entries.length` is now simply the number of
+ *   spines on the shelves: every mesh is a book and every book is
+ *   focusable and clickable.
  *
  *   `cases` is one descriptor per case actually built (back wall
  *   always; each side wall only if sideCaseSpec() allows one), shaped
@@ -666,11 +675,28 @@ export function buildRoomBooks(room, books) {
   const wood = room.pal?.wood || '#7d5539';
   const woodDark = room.pal?.['wood-dark'] || '#452c1d';
 
-  const backRows = planBackRows(books, hue, seedBase);
+  const backRows = planBackRows(books);
+  const shelved = backRows.reduce((a, r) => a + r.items.length, 0);
+  /* anything the back case could not take, in shelf order, split between
+     whichever side cases the room has */
+  const overflow = books.slice(shelved).map((b, i) => realItem(b, shelved + i));
   const sideLeft = sideCaseSpec(room, 'l');
   const sideRight = sideCaseSpec(room, 'r');
-  const leftRows = sideLeft ? planSideRows(sideLeft.w, hue, seedBase + 5101) : null;
-  const rightRows = sideRight ? planSideRows(sideRight.w, hue, seedBase + 7307) : null;
+  const sides = [sideLeft, sideRight].filter(Boolean).length;
+  const perSide = sides ? Math.ceil(overflow.length / sides) : 0;
+  const leftRows = sideLeft ? planSideRows(overflow.slice(0, perSide), sideLeft.w) : null;
+  const rightRows = sideRight
+    ? planSideRows(overflow.slice(sideLeft ? perSide : 0, sideLeft ? perSide * 2 : perSide), sideRight.w)
+    : null;
+  /* A room with more books than its cases can hold would lose them silently:
+     no mesh, no entry, and therefore no button in the a11y mirror either —
+     the one failure here that a screenshot cannot show. The allocator sizes
+     each room to its back case so this does not fire, which is exactly why
+     it is worth saying out loud if it ever does. */
+  const seated = (leftRows || []).concat(rightRows || []).reduce((a, r) => a + r.items.length, shelved);
+  if (seated < books.length) {
+    console.warn(`books.js: ${room.id} has ${books.length - seated} books with nowhere to stand`);
+  }
 
   const allItems = [];
   for (const row of backRows) allItems.push(...row.items);
@@ -724,9 +750,10 @@ export function buildRoomBooks(room, books) {
     cases.push({ id: 'right', group: right.group, w: right.w, ch: right.ch, depth: right.depth, entry: right.entry });
   }
 
-  // shelf order: back wall (row 0 then row 1) already comes first, in
-  // the order books were passed in; side cases only ever hold filler
-  // (no entries pushed for them), so `entries` is already exactly
-  // `books` in the same order the caller passed them.
+  // shelf order: back wall (row 0 then row 1) first, then any overflow on
+  // the side cases — all in the order books were passed in, because
+  // planBackRows()/planSideRows() only ever slice, never reorder. So
+  // `entries` is `books` in the caller's order, which is what a11y.js's
+  // mirror walks and what interact.js's prev/next steps through.
   return { group, entries, atlas, cases };
 }

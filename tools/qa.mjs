@@ -4,7 +4,13 @@ import fs from 'node:fs';
 const median = (xs) => { const s = [...xs].sort((a, b) => a - b); return s[s.length >> 1]; };
 
 const shots = process.argv.includes('--shots');
-const browser = await chromium.launch();
+/* Playwright 1.62 wants Chromium build 1234 and this box has 1194, so a bare
+   launch() fails on the version check. Taking the path from the environment
+   means the tracked file runs as committed instead of needing a sed'd copy
+   every session, which is what phases 7 and 8 both ended up doing.
+     PW_CHROMIUM=/opt/pw-browsers/chromium-1194/chrome-linux/chrome npm run qa */
+const browser = await chromium.launch(
+  process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {});
 const page = await browser.newPage({ viewport: { width: 1600, height: 1000 } });
 
 const errors = [];
@@ -83,29 +89,65 @@ console.log(clipped.length
 
 /* ── data integrity ── */
 const data = await page.evaluate(() => {
-  const { ROOMS, ALL_BOOKS } = window.__shop;
+  const { ROOMS, ALL_BOOKS, SOURCES, PICKS } = window.__shop;
   const ids = new Set();
   const dupes = [];
   const missing = [];
   const longBlurb = [];
+  const unsourced = [];
+  const heldBack = [];
+  const badIsbn = [];
   for (const b of ALL_BOOKS) {
     if (ids.has(b.id)) dupes.push(b.id);
     ids.add(b.id);
-    for (const f of ['title', 'author', 'blurb', 'note']) if (!b[f]) missing.push(`${b.id}.${f}`);
+    /* `note` is OPTIONAL since phase 9. Only 409 of the books on these
+       shelves have a curator's note; the rest are harvested from prize
+       lists and have none by design (IMPLEMENTATION.md §6). Requiring it
+       here would fail a couple of thousand times a run and say nothing. */
+    for (const f of ['title', 'author']) if (!b[f]) missing.push(`${b.id}.${f}`);
     if (!b.won.length && !b.cited.length) longBlurb.push(b.id);
+    /* Provenance: every harvested accolade has to trace to a fetched
+       source. A book whose acc[].s does not resolve in SOURCES is exactly
+       the failure this phase exists to make impossible. */
+    if (b.acc) for (const a of b.acc) if (!SOURCES[a.s]?.permalink) unsourced.push(`${b.id}:${a.s}`);
+    /* No GENERATED book may carry an opening line at all (§6 step 3), and
+       nothing rendered may quote one without a source. The 44 curated books
+       that carry an unsourced `first` are the existing, correct state — the
+       rule is that the line stays HELD BACK, which views/book.js does — so
+       they are not a failure here; a generated book having one would be. */
+    if (b.acc && (b.first || b.firstSource)) heldBack.push(b.id);
+    /* An ISBN-13 carries its own check digit. Thirteen digits is not the
+       test — one Open Library record held an ISBN-10 with three characters
+       stuck on the end, which is 13 digits and is not an ISBN. */
+    if (b.isbn) {
+      const d = String(b.isbn).replace(/[^0-9]/g, '');
+      let sum = 0;
+      for (let i = 0; i < 12; i++) sum += Number(d[i]) * (i % 2 ? 3 : 1);
+      if (!/^\d{13}$/.test(d) || (10 - (sum % 10)) % 10 !== Number(d[12])) badIsbn.push(`${b.id}:${b.isbn}`);
+    }
   }
   const emptyRooms = ROOMS.filter((r) => !r.books.length).map((r) => r.id);
   const noChildNoBooks = ROOMS.filter((r) => !r.books.length && !r.children.length).map((r) => r.id);
   const orphanArt = ALL_BOOKS.filter((b) => b.art && b.art.p && !window.__pal?.[b.art.p]).length;
   return {
-    books: ALL_BOOKS.length, rooms: ROOMS.length,
+    books: ALL_BOOKS.length, rooms: ROOMS.length, picks: PICKS.length,
+    sources: Object.keys(SOURCES).length,
+    withIsbn: ALL_BOOKS.filter((b) => b.isbn).length,
+    withBlurb: ALL_BOOKS.filter((b) => b.blurb).length,
     dupes, missing, noAccolade: longBlurb, emptyRooms, noChildNoBooks, orphanArt,
+    unsourced, heldBack, badIsbn,
     roomIds: ROOMS.map((r) => r.id),
   };
 });
-console.log('books:', data.books, 'rooms:', data.rooms);
-if (data.dupes.length) console.log('DUPLICATE IDS:', data.dupes);
-if (data.missing.length) console.log('MISSING FIELDS:', data.missing);
+console.log(`books: ${data.books} (${data.picks} shopkeeper's picks), rooms: ${data.rooms}`);
+console.log(`provenance: ${data.sources} harvested lists; with isbn ${data.withIsbn}; with blurb ${data.withBlurb}`);
+if (data.dupes.length) console.log('DUPLICATE IDS:', data.dupes.slice(0, 20), data.dupes.length);
+if (data.missing.length) console.log('MISSING FIELDS:', data.missing.slice(0, 20), data.missing.length);
+if (data.unsourced.length) console.log('ACCOLADE WITH NO FETCHED SOURCE:', data.unsourced.slice(0, 20), data.unsourced.length);
+else console.log('every harvested accolade traces to a fetched source');
+if (data.heldBack.length) console.log('GENERATED BOOK WITH AN OPENING LINE:', data.heldBack);
+if (data.badIsbn.length) console.log('MALFORMED ISBN:', data.badIsbn.slice(0, 20), data.badIsbn.length);
+else console.log(`every ISBN on the shelves passes its own check digit (${data.withIsbn} of them)`);
 if (data.noAccolade.length) console.log('NO ACCOLADE:', data.noAccolade.join(', '));
 if (data.emptyRooms.length) console.log('rooms with no shelf:', data.emptyRooms.join(', '));
 if (data.noChildNoBooks.length) console.log('DEAD ROOMS:', data.noChildNoBooks.join(', '));
@@ -119,6 +161,9 @@ for (const id of data.roomIds) {
   const info = await page.evaluate(() => ({
     room: window.__shop.state.room,
     shelf: document.querySelectorAll('.bk[data-book]').length,
+    /* IMPLEMENTATION.md §7: zero filler spines once phase 9 lands */
+    filler: document.querySelectorAll('.bk.fill').length,
+    picks: document.querySelectorAll('.bk--pick').length,
     doors: document.querySelectorAll('#room [data-go]').length,
     signs: document.querySelectorAll('#room .dsign__n').length,
     nodes: document.querySelectorAll('#room *').length,
@@ -129,9 +174,16 @@ for (const id of data.roomIds) {
   if (info.room !== id) console.log('ROUTE MISMATCH', id, '->', info.room);
   /* every way out of a room must say where it goes */
   if (info.doors !== info.signs) console.log(`SIGNS ${id}: ${info.doors} doors, ${info.signs} named`);
+  if (info.filler) console.log(`FILLER SPINES in ${id}: ${info.filler}`);
   if (ms > SETTLE_BUDGET) slow.push(`${id} ${ms}ms`);
   if (shots) await page.screenshot({ path: new URL(`rooms/${id}.png`, import.meta.url).pathname });
 }
+
+const totalFiller = report.reduce((a, r) => a + r.filler, 0);
+console.log(totalFiller
+  ? `FILLER SPINES REMAIN: ${totalFiller} across ${report.filter((r) => r.filler).length} rooms`
+  : `zero filler spines across all ${report.length} rooms`);
+console.log(`shelved spines: ${report.reduce((a, r) => a + r.shelf, 0)}, of which picks ${report.reduce((a, r) => a + r.picks, 0)}`);
 
 const heaviest = [...report].sort((a, b) => b.nodes - a.nodes)[0];
 console.log(`room transition: median ${median(report.map((r) => r.ms))}ms, worst ${Math.max(...report.map((r) => r.ms))}ms`);

@@ -1,0 +1,1090 @@
+{
+ "slug": "baillie-gifford",
+ "prize": "Baillie Gifford Prize for Non-Fiction",
+ "rooms": [
+  "readingroom",
+  "longtable",
+  "glasscase",
+  "argument",
+  "witnessbox"
+ ],
+ "page": "Baillie Gifford Prize",
+ "url": "https://en.wikipedia.org/wiki/Baillie_Gifford_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1361664134",
+ "revid": 1361664134,
+ "fetchedAt": "2026-08-05T16:27:08.950Z",
+ "counts": {
+  "entries": 166,
+  "winners": 28,
+  "cited": 138
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 60,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 58,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 36,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "25th Anniversary Winner of Winners Award",
+   "headers": "Author | Title | Win Year | Result | Ref.",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "result": 3
+   },
+   "took": 6,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Stalingrad",
+   "author": "Antony Beevor",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Hitler 1889–1936: Hubris (about Adolf Hitler)",
+   "author": "Ian Kershaw",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Pilate: The Biography of an Invented Man (about Pontius Pilate)",
+   "author": "Ann Wroe",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "C: Because Cowards Get Cancer Too",
+   "author": "John Diamond",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Coleridge: Darker Reflections (about Samuel Taylor Coleridge)",
+   "author": "Richard Holmes",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Wealth and Poverty of Nations",
+   "author": "David Landes",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Berlioz: Volume 2",
+   "author": "David Cairns",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Playing the Moldovans at Tennis",
+   "author": "Tony Hawks",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Yeats's Ghosts: The Secret Life of W. B. Yeats (about W. B. Yeats)",
+   "author": "Brenda Maddox",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Genome: The Autobiography of a Species in 23 Chapters",
+   "author": "Matt Ridley",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Deliver us from Evil: Warlords, Peacekeepers and a World of Endless Conflict",
+   "author": "William Shawcross",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Karl Marx (about Karl Marx)",
+   "author": "Francis Wheen",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Third Reich: A New History",
+   "author": "Michael Burleigh",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Trilobite!: Eyewitness to Evolution",
+   "author": "Richard Fortey",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Night of Stone: Death and Memory in Russia",
+   "author": "Catherine Merridale",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Rimbaud (about Arthur Rimbaud)",
+   "author": "Graham Robb",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Prince of Princes: The Life of Potemkin (about Grigory Potemkin)",
+   "author": "Simon Sebag Montefiore",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "John Maynard Keynes: Fighting for Britain, 1937–1946 (about John Maynard Keynes)",
+   "author": "Robert Skidelsky",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Peacemakers: The Paris Peace Conference of 1919 and Its Attempt to End War",
+   "author": "Margaret MacMillan",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "The Voices of Morebath: Reformation and Rebellion in an English Village",
+   "author": "Eamon Duffy",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Snow Geese",
+   "author": "William Fiennes",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Invention of Clouds: How an Amateur Meteorologist Forged the Language of the Skies",
+   "author": "Richard Hamblyn",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Churchill: a Biography (about Winston Churchill)",
+   "author": "Roy Jenkins",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Unfinest Hour: Britain and the Destruction of Bosnia",
+   "author": "Brendan Simms",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Pushkin: A Biography (about Alexander Pushkin)",
+   "author": "T. J. Binyon",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Natasha's Dance: A Cultural History of Russia",
+   "author": "Orlando Figes",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil that Danced on the Water: A Daughter's Memoir of her Father, her Family, her Country and a Continent",
+   "author": "Aminatta Forna",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Dr Tatiana's Sex Advice to All Creation: The Definitive Guide to the Evolutionary Biology of Sex",
+   "author": "Olivia Judson",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Samuel Pepys: The Unequalled Self",
+   "author": "Claire Tomalin",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Nelson: Love and Fame (about Lord Nelson)",
+   "author": "Edgar Vincent",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Stasiland: Stories from Behind the Berlin Wall",
+   "author": "Anna Funder",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Gulag: A History of the Soviet Camps",
+   "author": "Anne Applebaum",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "John Clare: A Biography (about John Clare)",
+   "author": "Jonathan Bate",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "A Short History of Nearly Everything",
+   "author": "Bill Bryson",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Zanzibar Chest: A Memoir of Love and War",
+   "author": "Aidan Hartley",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Rubicon: The Last Years of the Roman Republic",
+   "author": "Tom Holland",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Like a Fiery Elephant: The Story of B. S. Johnson (about B. S. Johnson)",
+   "author": "Jonathan Coe",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Stuart: A Life Backwards",
+   "author": "Alexander Masters",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Maximum City: Bombay Lost and Found",
+   "author": "Suketu Mehta",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Istanbul: Memories and the City",
+   "author": "Orhan Pamuk",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Matisse the Master: The Conquest of Colour 1909–1954 (about Henri Matisse)",
+   "author": "Hilary Spurling",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Italian Boy: Murder and Grave-Robbery in 1830s London",
+   "author": "Sarah Wise",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "1599: A Year in the Life of William Shakespeare",
+   "author": "James S. Shapiro",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Untold Stories",
+   "author": "Alan Bennett",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Sale of the Late King's Goods: Charles I and His Art Collection",
+   "author": "Jerry Brotton",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Faith: A Forgotten History of Family & Fatherland",
+   "author": "Carmen Callil",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Postwar: A History of Europe Since 1945",
+   "author": "Tony Judt",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Orientalist: In Search of a Man Caught Between East and West",
+   "author": "Tom Reiss",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Imperial Life in the Emerald City: Inside Iraq's Green Zone",
+   "author": "Rajiv Chandrasekaran",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Murder in Amsterdam: The Death of Theo Van Gogh and the Limits of Tolerance",
+   "author": "Ian Buruma",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Having It So Good: Britain in the Fifties",
+   "author": "Peter Hennessy",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Daughter of the Desert: The Extraordinary Life of Gertrude Bell (about Gertrude Bell)",
+   "author": "Georgina Howell",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Brainwash: The Secret History of Mind Control",
+   "author": "Dominic Streatfeild",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Verneys: A True Story of Love, War, and Madness in Seventeenth-Century England",
+   "author": "Adrian Tinniswood",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Suspicions of Mr Whicher or the Murder at Road Hill House",
+   "author": "Kate Summerscale",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Blood River: A Journey to Africa's Broken Heart",
+   "author": "Tim Butcher",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Crow Country",
+   "author": "Mark Cocker",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Whisperers: Private Life in Stalin's Russia",
+   "author": "Orlando Figes",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The World Is What It Is: The Authorised Biography of VS Naipaul (about V. S. Naipaul)",
+   "author": "Patrick French",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Rest is Noise: Listening to the Twentieth Century",
+   "author": "Alex Ross",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Leviathan or, The Whale",
+   "author": "Philip Hoare",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Lords of Finance: The Bankers Who Broke the World",
+   "author": "Liaquat Ahamed",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Science",
+   "author": "Ben Goldacre",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Lost City of Z: A Tale of Deadly Obsession in the Amazon",
+   "author": "David Grann",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Age of Wonder: How the Romantic Generation Discovered the Beauty and Terror of Science",
+   "author": "Richard Holmes",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Quantum: Einstein, Bohr and the Great Debate about the Nature of Reality",
+   "author": "Manjit Kumar",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Nothing to Envy: Ordinary Lives in North Korea",
+   "author": "Barbara Demick",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Alex's Adventures in Numberland: Dispatches from the Wonderful World of Mathematics",
+   "author": "Alex Bellos",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Blood Knots: On Fathers, Friendship and Fishing",
+   "author": "Luke Jennings",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System—and Themselves",
+   "author": "Andrew Ross Sorkin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "A Gambling Man: Charles II and the Restoration",
+   "author": "Jenny Uglow",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Catching Fire: How Cooking Made Us Human",
+   "author": "Richard Wrangham",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Mao's Great Famine: The History of China's Most Devastating Catastrophe, 1958–1962",
+   "author": "Frank Dikötter",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Caravaggio: A Life Sacred and Profane (biography of Caravaggio)",
+   "author": "Andrew Graham-Dixon",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Liberty's Exiles: American Loyalists in the Revolutionary World",
+   "author": "Maya Jasanoff",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Rational Optimist: How Prosperity Evolves",
+   "author": "Matt Ridley",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Bismarck: A Life (biography of Otto von Bismarck)",
+   "author": "Jonathan Steinberg",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Reprobates: The Cavaliers of the English Civil War",
+   "author": "John Stubbs",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Into the Silence: The Great War, Mallory and the Conquest of Everest",
+   "author": "Wade Davis",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Behind the Beautiful Forevers: Life, Death and Hope in a Mumbai Slum",
+   "author": "Katherine Boo",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Old Ways: A Journey on Foot",
+   "author": "Robert Macfarlane",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Better Angels of our Nature: A History of Violence and Humanity",
+   "author": "Steven Pinker",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Spanish Holocaust: Inquisition and Extermination in Twentieth-Century Spain",
+   "author": "Paul Preston",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Strindberg: A Life (about August Strindberg)",
+   "author": "Sue Prideaux",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Pike: Gabriele D'Annunzio, Poet, Seducer and Preacher of War",
+   "author": "Lucy Hughes-Hallett",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Empires of the Dead: How One Man's Vision led to the Creation of WWI's World Graves",
+   "author": "David Crane",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Return of a King: The Battle for Afghanistan",
+   "author": "William Dalrymple",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Sting in the Tale: My Adventures with Bumblebees",
+   "author": "Dave Goulson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Under Another Sky: Journeys in Roman Britain",
+   "author": "Charlotte Higgins",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Margaret Thatcher: The Authorised Biography",
+   "author": "Charles Moore",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "H Is for Hawk",
+   "author": "Helen Macdonald",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Roy Jenkins: A Biography (about Roy Jenkins)",
+   "author": "John Campbell",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Iceberg: A Memoir",
+   "author": "Marion Coutts",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Empire of Necessity: Slavery, Freedom, and Deception in the New World",
+   "author": "Greg Grandin",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Common People: The History of an English Family",
+   "author": "Alison Light",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Village of Secrets: Defying the Nazis in Vichy France",
+   "author": "Caroline Moorehead",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "NeuroTribes: The Legacy of Autism and How to Think Smarter About People Who Think Differently",
+   "author": "Steve Silberman",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Ted Hughes: The Unauthorised Life (about Ted Hughes)",
+   "author": "Jonathan Bate",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Landmarks",
+   "author": "Robert Macfarlane",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Four-Dimensional Human: Ways of Being in the Digital World",
+   "author": "Laurence Scott",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Unravelling: High Hopes and Missed Opportunities in Iraq",
+   "author": "Emma Sky",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "This Divided Island: Stories from the Sri Lankan Civil War",
+   "author": "Samanth Subramanian",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "East West Street: On the Origins of Genocide and Crimes Against Humanity",
+   "author": "Philippe Sands",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Secondhand Time: The Last of the Soviets",
+   "author": "Svetlana Alexievich",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Negroland: A Memoir",
+   "author": "Margo Jefferson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Return: Fathers, Sons and the Land in Between",
+   "author": "Hisham Matar",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "How to Survive a Plague: The Inside Story of How Citizens and Science Tamed AIDS",
+   "author": "David France",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The Islamic Enlightenment The Modern Struggle Between Faith and Reason",
+   "author": "Christopher de Bellaigue",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Border: A Journey to the Edge of Europe",
+   "author": "Kapka Kassabova",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "An Odyssey: A Father, a Son and an Epic",
+   "author": "Daniel Mendelsohn",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "To Be a Machine: Adventures Among Cyborgs, Utopians, Hackers, and the Futurists Solving the Modest Problem of Death",
+   "author": "Mark O'Connell",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Belonging: The Story of the Jews, 1492–1900",
+   "author": "Simon Schama",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Chernobyl: History of a Tragedy",
+   "author": "Serhii Plokhy",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Hello World: How to Be Human in the Age of the Machine",
+   "author": "Hannah Fry",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Spy and the Traitor: The Greatest Espionage Story of the Cold War",
+   "author": "Ben Macintyre",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Amateur: A True Story About What Makes a Man",
+   "author": "Thomas Page McBee",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Imperial Twilight: The Opium War and the End of China's Last Golden Age",
+   "author": "Stephen R. Platt",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "She Has Her Mother's Laugh: The Powers, Perversions and Potential of Heredity",
+   "author": "Carl Zimmer",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Five: The Untold Lives of the Women Killed by Jack the Ripper",
+   "author": "Hallie Rubenhold",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Furious Hours: Murder, Fraud and the Last Trial of Harper Lee",
+   "author": "Casey Cep",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "On Chapel Sands: My Mother and Other Missing Persons",
+   "author": "Laura Cumming",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Lives of Lucian Freud: Youth (about Lucian Freud)",
+   "author": "William Feaver",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Maoism: A Global History",
+   "author": "Julia Lovell",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Guest House for Young Widows: Among the Women of ISIS",
+   "author": "Azadeh Moaveni",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "One Two Three Four: The Beatles in Time",
+   "author": "Craig Brown",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Idea of the Brain: A History",
+   "author": "Matthew Cobb",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Black Spartacus: The Epic Life of Toussaint Louverture",
+   "author": "Sudhir Hazareesingh",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Our Bodies, Their Battlefield: What War Does to Women",
+   "author": "Christina Lamb",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Stranger in the Shogun's City: A Japanese Woman and Her World",
+   "author": "Amy Stanley",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Haunting of Alma Fielding: A True Ghost Story",
+   "author": "Kate Summerscale",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Empire of Pain: The Secret History of the Sackler Dynasty",
+   "author": "Patrick Radden Keefe",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Islands of Abandonment: Life in the Post-Human Landscape",
+   "author": "Cal Flyn",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Aftermath: Life in the Fallout of the Third Reich, 1945–1955",
+   "author": "Harald Jähner",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Things I Have Withheld",
+   "author": "Kei Miller",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Fall: The Mystery of Robert Maxwell (about Robert Maxwell)",
+   "author": "John Preston",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Free: Coming of Age at the End of History",
+   "author": "Lea Ypi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Super-Infinite: The Transformations of John Donne (about John Donne)",
+   "author": "Katherine Rundell",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Legacy of Violence: A History of the British Empire",
+   "author": "Caroline Elkins",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Escape Artist: The Man Who Broke Out of Auschwitz to Warn the World (about Rudolf Vrba)",
+   "author": "Jonathan Freedland",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "My Fourth Time, We Drowned: Seeking Refuge on the World's Deadliest Migration Route",
+   "author": "Sally Hayden",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Restless Republic: Britain Without a Crown",
+   "author": "Anna Keay",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "A Fortunate Woman: A Country Doctor’s Story",
+   "author": "Polly Morland",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Fire Weather: A True Story from a Hotter World",
+   "author": "John Vaillant",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Time to Think: The Inside Story of the Collapse of the Tavistock's Gender Service for Children",
+   "author": "Hannah Barnes",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Red Memory: Living, Remembering and Forgetting China's Cultural Revolution",
+   "author": "Tania Branigan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Revolutionary Spring: Fighting for a New World 1848–1849",
+   "author": "Christopher Clark",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Time's Echo: The Second World War, The Holocaust, and The Music of Remembrance",
+   "author": "Jeremy Eichler",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Mr. B: George Balanchine's Twentieth Century",
+   "author": "Jennifer Homans",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Question 7",
+   "author": "Richard Flanagan",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Story of a Heart",
+   "author": "Rachel Clarke",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Nuclear War: A Scenario",
+   "author": "Annie Jacobsen",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "A Man of Two Faces: A Memoir, a History, a Memorial",
+   "author": "Viet Thanh Nguyen",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Wild Thing: A Life of Paul Gauguin",
+   "author": "Sue Prideaux",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Revolusi: Indonesia and the Birth of the Modern World",
+   "author": "David Van Reybrouck",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "How to End a Story: Collected Diaries",
+   "author": "Helen Garner",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Revolutionists: The Story of the Extremists Who Hijacked the 1970s",
+   "author": "Jason Burke",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Boundless Deep: Young Tennyson, Science and the Crisis of Belief",
+   "author": "Richard Holmes",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Captives and Companions: A History of Slavery and the Slave Trade in the Islamic World",
+   "author": "Justin Marozzi",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Lone Wolf: Walking the Faultlines of Europe",
+   "author": "Adam Weymouth",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Electric Spark: The Enigma of Muriel Spark",
+   "author": "Frances Wilson",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "1599: A Year in the Life of William Shakespeare",
+   "author": "James S. Shapiro",
+   "year": null,
+   "kind": "w"
+  },
+  {
+   "title": "One Two Three Four: The Beatles in Time",
+   "author": "Craig Brown",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Into the Silence: The Great War, Mallory and the Conquest of Everest",
+   "author": "Wade Davis",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Nothing to Envy: Ordinary Lives in North Korea",
+   "author": "Barbara Demick",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Empire of Pain: The Secret History of the Sackler Dynasty",
+   "author": "Patrick Radden Keefe",
+   "year": null,
+   "kind": "c"
+  },
+  {
+   "title": "Peacemakers: The Paris Peace Conference of 1919 and Its Attempt to End War",
+   "author": "Margaret MacMillan",
+   "year": null,
+   "kind": "c"
+  }
+ ]
+}

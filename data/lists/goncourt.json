@@ -1,0 +1,526 @@
+{
+ "slug": "goncourt",
+ "prize": "Prix Goncourt",
+ "rooms": [
+  "translator",
+  "hundredwindows"
+ ],
+ "page": "Prix Goncourt",
+ "url": "https://en.wikipedia.org/wiki/Prix_Goncourt",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1363466420",
+ "revid": 1363466420,
+ "fetchedAt": "2026-08-05T16:26:52.575Z",
+ "counts": {
+  "entries": 81,
+  "winners": 81,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners",
+   "headers": "Year |  | Author | French title | English title | Transl. year | Film title | Film year | Notes | Publisher (x time)",
+   "roles": {
+    "title": 4,
+    "year": 0,
+    "author": 2
+   },
+   "took": 81,
+   "dropped": 42,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "Other awards",
+   "skipped": "no header row"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Enemy Force",
+   "author": "John Antoine Nau",
+   "year": 1903,
+   "kind": "w"
+  },
+  {
+   "title": "The Keynote",
+   "author": "Alphonse de Châteaubriant",
+   "year": 1911,
+   "kind": "w"
+  },
+  {
+   "title": "The Call of the Soil",
+   "author": "Adrien Bertrand",
+   "year": 1914,
+   "kind": "w"
+  },
+  {
+   "title": "Private Gaspard",
+   "author": "René Benjamin",
+   "year": 1915,
+   "kind": "w"
+  },
+  {
+   "title": "Under Fire",
+   "author": "Henri Barbusse",
+   "year": 1916,
+   "kind": "w"
+  },
+  {
+   "title": "The Flame That Is France",
+   "author": "Henry Malherbe",
+   "year": 1917,
+   "kind": "w"
+  },
+  {
+   "title": "Civilization",
+   "author": "Georges Duhamel",
+   "year": 1918,
+   "kind": "w"
+  },
+  {
+   "title": "Within a Budding Grove",
+   "author": "Marcel Proust",
+   "year": 1919,
+   "kind": "w"
+  },
+  {
+   "title": "Nêne",
+   "author": "Ernest Pérochon",
+   "year": 1920,
+   "kind": "w"
+  },
+  {
+   "title": "Batouala",
+   "author": "René Maran",
+   "year": 1921,
+   "kind": "w"
+  },
+  {
+   "title": "Jerome: or, The Latitude of Love",
+   "author": "Maurice Bedel",
+   "year": 1927,
+   "kind": "w"
+  },
+  {
+   "title": "A Man Scans His Past",
+   "author": "Maurice Constantin-Weyer",
+   "year": 1928,
+   "kind": "w"
+  },
+  {
+   "title": "The Soul of Malaya or Malaisie",
+   "author": "H. Fauconnier",
+   "year": 1930,
+   "kind": "w"
+  },
+  {
+   "title": "Desire",
+   "author": "Jean Fayard",
+   "year": 1931,
+   "kind": "w"
+  },
+  {
+   "title": "The Wolves",
+   "author": "Guy Mazeline",
+   "year": 1932,
+   "kind": "w"
+  },
+  {
+   "title": "Man's Fate",
+   "author": "André Malraux",
+   "year": 1933,
+   "kind": "w"
+  },
+  {
+   "title": "Captain Conan",
+   "author": "Roger Vercel",
+   "year": 1934,
+   "kind": "w"
+  },
+  {
+   "title": "Hath Not the Potter",
+   "author": "Maxence Van Der Meersch",
+   "year": 1936,
+   "kind": "w"
+  },
+  {
+   "title": "The Long Holiday",
+   "author": "Francis Ambrière",
+   "year": 1940,
+   "kind": "w"
+  },
+  {
+   "title": "When the Man Passed By",
+   "author": "Marius Grout",
+   "year": 1943,
+   "kind": "w"
+  },
+  {
+   "title": "A Fine of Two Hundred Francs",
+   "author": "Elsa Triolet",
+   "year": 1944,
+   "kind": "w"
+  },
+  {
+   "title": "The Forests of the Night",
+   "author": "Jean-Louis Curtis",
+   "year": 1947,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise of Simon Lachaume",
+   "author": "Maurice Druon",
+   "year": 1948,
+   "kind": "w"
+  },
+  {
+   "title": "Week-end at Zuydcoote",
+   "author": "Robert Merle",
+   "year": 1949,
+   "kind": "w"
+  },
+  {
+   "title": "Savage Play",
+   "author": "Paul Colin",
+   "year": 1950,
+   "kind": "w"
+  },
+  {
+   "title": "The Opposing Shore",
+   "author": "Julien Gracq",
+   "year": 1951,
+   "kind": "w"
+  },
+  {
+   "title": "The Priest (UK), The Passionate Heart (US)",
+   "author": "Béatrix Beck",
+   "year": 1952,
+   "kind": "w"
+  },
+  {
+   "title": "The Mandarins",
+   "author": "Simone de Beauvoir",
+   "year": 1954,
+   "kind": "w"
+  },
+  {
+   "title": "The Roots of Heaven",
+   "author": "Romain Gary",
+   "year": 1956,
+   "kind": "w"
+  },
+  {
+   "title": "The Law",
+   "author": "Roger Vailland",
+   "year": 1957,
+   "kind": "w"
+  },
+  {
+   "title": "The Last of the Just",
+   "author": "André Schwarz-Bart",
+   "year": 1959,
+   "kind": "w"
+  },
+  {
+   "title": "God Was Born in Exile",
+   "author": "Vintilă Horia",
+   "year": 1960,
+   "kind": "w"
+  },
+  {
+   "title": "The Mercy of God",
+   "author": "Jean Cau",
+   "year": 1961,
+   "kind": "w"
+  },
+  {
+   "title": "The Lost Shore",
+   "author": "Anna Langfus",
+   "year": 1962,
+   "kind": "w"
+  },
+  {
+   "title": "The Bond",
+   "author": "Jacques Borel",
+   "year": 1965,
+   "kind": "w"
+  },
+  {
+   "title": "To Forget Palermo",
+   "author": "Edmonde Charles-Roux",
+   "year": 1966,
+   "kind": "w"
+  },
+  {
+   "title": "The Margin",
+   "author": "André Pieyre de Mandiargues",
+   "year": 1967,
+   "kind": "w"
+  },
+  {
+   "title": "The Fruits of Winter",
+   "author": "Bernard Clavel",
+   "year": 1968,
+   "kind": "w"
+  },
+  {
+   "title": "Creezy",
+   "author": "Félicien Marceau",
+   "year": 1969,
+   "kind": "w"
+  },
+  {
+   "title": "The Erl-King (UK) or The Ogre (US)",
+   "author": "Michel Tournier",
+   "year": 1970,
+   "kind": "w"
+  },
+  {
+   "title": "A Father's Love (1975) or The Tyrant (2012)",
+   "author": "Jacques Chessex",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "A Web of Lace (1976) or The Lacemaker (2008)",
+   "author": "Pascal Lainé",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Momo (1978) or The Life Before Us (1986)",
+   "author": "Émile Ajar (Romain Gary)",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "Missing Person",
+   "author": "Patrick Modiano",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Pélagie: The Return to Acadie",
+   "author": "Antonine Maillet",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Cronus' Children",
+   "author": "Yves Navarre",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Lost Ones",
+   "author": "Frédérick Tristan",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Lover",
+   "author": "Marguerite Duras",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "The Wedding",
+   "author": "Yann Queffélec",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Sacred Night",
+   "author": "Tahar Ben Jelloun",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "Love and Empire",
+   "author": "Érik Orsenna",
+   "year": 1988,
+   "kind": "w"
+  },
+  {
+   "title": "Fields of Glory",
+   "author": "Jean Rouaud",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "Texaco",
+   "author": "Patrick Chamoiseau",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "The Rock of Tanios",
+   "author": "Amin Maalouf",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "One-Way",
+   "author": "Didier Van Cauwelaert",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Dreams of My Russian Summers",
+   "author": "Andreï Makine",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Battle",
+   "author": "Patrick Rambaud",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Trading Secrets",
+   "author": "Paule Constant",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "I'm Gone (US) or I'm Off (UK)",
+   "author": "Jean Echenoz",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Ingrid Caven",
+   "author": "Jean-Jacques Schuhl",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Brazil Red",
+   "author": "Jean-Christophe Rufin",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The Roving Shadows",
+   "author": "Pascal Quignard",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Brecht's Lover (US) or Brecht's Mistress (UK)",
+   "author": "Jacques-Pierre Amette",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "The House of Scorta (US 2006) The Scortas' Sun (UK 2007)",
+   "author": "Laurent Gaudé",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Kindly Ones",
+   "author": "Jonathan Littell",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Stone of Patience (UK) or The Patience Stone (US)",
+   "author": "Atiq Rahimi",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Three Strong Women",
+   "author": "Marie NDiaye",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Map and the Territory",
+   "author": "Michel Houellebecq",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The French Art of War",
+   "author": "Alexis Jenni",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Sermon on the Fall of Rome",
+   "author": "Jérôme Ferrari",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Great Swindle",
+   "author": "Pierre Lemaitre",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Cry, Mother Spain",
+   "author": "Lydie Salvayre",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Compass",
+   "author": "Mathias Énard",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Lullaby (UK) / The Perfect Nanny (USA)",
+   "author": "Leïla Slimani",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "The Order of the Day",
+   "author": "Éric Vuillard",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "And Their Children After Them",
+   "author": "Nicolas Mathieu",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Not Everybody Lives the Same Way",
+   "author": "Jean-Paul Dubois",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Anomaly",
+   "author": "Hervé Le Tellier",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Most Secret Memory of Men",
+   "author": "Mohamed Mbougar Sarr",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Live Fast",
+   "author": "Brigitte Giraud",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Watching Over Her",
+   "author": "Jean-Baptiste Andrea",
+   "year": 2023,
+   "kind": "w"
+  }
+ ]
+}

@@ -1,0 +1,941 @@
+{
+ "slug": "wolfson-history",
+ "prize": "Wolfson History Prize",
+ "rooms": [
+  "longtable",
+  "readingroom"
+ ],
+ "page": "Wolfson History Prize",
+ "url": "https://en.wikipedia.org/wiki/Wolfson_History_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1354099398",
+ "revid": 1354099398,
+ "fetchedAt": "2026-08-05T16:27:10.143Z",
+ "counts": {
+  "entries": 140,
+  "winners": 81,
+  "cited": 59
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1970s",
+   "headers": "Year | Author | Title | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 16,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "1980s",
+   "headers": "Year | Author | Title | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 16,
+   "dropped": 1,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 2,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 17,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 3,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 23,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 4,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Publisher | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 32,
+   "dropped": 0,
+   "winnerMark": "bold"
+  },
+  {
+   "t": 5,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 36,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Grand Strategy: August 1942 – September 1943",
+   "author": "Michael Howard",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Religion and the Decline of Magic",
+   "author": "Keith Thomas",
+   "year": 1972,
+   "kind": "w"
+  },
+  {
+   "title": "Henry II",
+   "author": "W. L. Warren",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Rosicrucian Enlightenment",
+   "author": "Frances Yates",
+   "year": 1973,
+   "kind": "w"
+  },
+  {
+   "title": "The Ancient Economy",
+   "author": "Moses Finley",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "France, 1848–1945: Ambition, Love and Politics",
+   "author": "Theodore Zeldin",
+   "year": 1974,
+   "kind": "w"
+  },
+  {
+   "title": "Edward VIII",
+   "author": "Frances Donaldson",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "The Poor of Eighteenth-century France 1750–1789",
+   "author": "Olwen Hufton",
+   "year": 1975,
+   "kind": "w"
+  },
+  {
+   "title": "A History of Building Types",
+   "author": "Nikolaus Pevsner",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "The Eastern Front: 1914–17",
+   "author": "Norman Stone",
+   "year": 1976,
+   "kind": "w"
+  },
+  {
+   "title": "Patriots and Liberators: Revolution in the Netherlands 1780–1813",
+   "author": "Simon Schama",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "Mussolini's Roman Empire",
+   "author": "Denis Mack Smith",
+   "year": 1977,
+   "kind": "w"
+  },
+  {
+   "title": "A Savage War of Peace: Algeria, 1954–1962",
+   "author": "Alistair Horne",
+   "year": 1978,
+   "kind": "w"
+  },
+  {
+   "title": "Death in Paris: The Records of the Basse-Geôle de la Seine, October 1795 – September 1801, Vendémiaire Year IV-Fructidor Year IX",
+   "author": "Richard Cobb",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "The Foundations of Modern Political Thought",
+   "author": "Quentin Skinner",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Clementine Churchill: The Biography of a Marriage",
+   "author": "Mary Soames",
+   "year": 1979,
+   "kind": "w"
+  },
+  {
+   "title": "Culture and Anarchy in Ireland, 1890–1939",
+   "author": "F. S. L. Lyons",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "The Making of the Habsburg Monarchy, 1550–1700: An Interpretation",
+   "author": "Robert Evans",
+   "year": 1980,
+   "kind": "w"
+  },
+  {
+   "title": "A Liberal Descent: Victorian Historians and the English Past",
+   "author": "John Wyon Burrow",
+   "year": 1981,
+   "kind": "w"
+  },
+  {
+   "title": "Death and the Enlightenment: Changing Attitudes to Death Among Christians and Unbelievers in Eighteenth-Century France",
+   "author": "John McManners",
+   "year": 1982,
+   "kind": "w"
+  },
+  {
+   "title": "Winston S. Churchill: Finest Hour, 1939–1941",
+   "author": "Martin Gilbert",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "George V",
+   "author": "Kenneth Rose",
+   "year": 1983,
+   "kind": "w"
+  },
+  {
+   "title": "The Weaker Vessel",
+   "author": "Antonia Fraser",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Chivalry",
+   "author": "Maurice Keen",
+   "year": 1984,
+   "kind": "w"
+  },
+  {
+   "title": "Lloyd George, From Peace To War 1912–1916",
+   "author": "John Grigg",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "Dudley Docker: The Life and Times of a Trade Warrior",
+   "author": "Richard Davenport-Hines",
+   "year": 1985,
+   "kind": "w"
+  },
+  {
+   "title": "The Count-Duke of Olivares: The Statesman in an Age of Decline",
+   "author": "J. H. Elliott",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "European Jewry in the Age of Mercantilism, 1550–1750",
+   "author": "Jonathan Israel",
+   "year": 1986,
+   "kind": "w"
+  },
+  {
+   "title": "Conquest, Coexistence, and Change: Wales, 1063–1415",
+   "author": "R. R. Davies",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "The Mediterranean Passion: Victorians And Edwardians in the South",
+   "author": "John Pemble",
+   "year": 1987,
+   "kind": "w"
+  },
+  {
+   "title": "The Rise and Fall of the Great Powers: Economic Change and Military Conflict from 1500 To 2000",
+   "author": "Paul Kennedy",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "Death in Hamburg: Society and Politics in the Cholera Years, 1830–1910",
+   "author": "Richard J. Evans",
+   "year": 1989,
+   "kind": "w"
+  },
+  {
+   "title": "The Quest for El Cid",
+   "author": "Richard A. Fletcher",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "How War Came: The Immediate Origins of the Second World War, 1938–1939",
+   "author": "Donald Cameron Watt",
+   "year": 1990,
+   "kind": "w"
+  },
+  {
+   "title": "The Architecture of Medieval Britain: A Social History",
+   "author": "Colin Platt",
+   "year": 1991,
+   "kind": "w"
+  },
+  {
+   "title": "Giordano Bruno and the Embassy Affair",
+   "author": "John Bossy",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Hitler and Stalin: Parallel Lives",
+   "author": "Alan Bullock",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Britons: Forging the Nation 1707-1837",
+   "author": "Linda Colley",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "John Maynard Keynes: The Economist as Saviour, 1920–1937",
+   "author": "Robert Skidelsky",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "The Making of Europe: Conquest, Colonization and Cultural Change, 950–1350",
+   "author": "Robert Bartlett",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Living and Dying in England, 1100–1540: The Monastic Experience",
+   "author": "Barbara Harvey",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "William Morris: A Life for Our Time",
+   "author": "Fiona MacCarthy",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Kaiser and His Court: Wilhelm II and the Government of Germany",
+   "author": "John C. G. Rohl",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Gladstone 1875–1898",
+   "author": "H. C. G. Matthew",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "A People's Tragedy: A History of the Russian Revolution",
+   "author": "Orlando Figes",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Pleasures of the Imagination: English Culture in the Eighteenth Century",
+   "author": "John Brewer",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Jennie Lee: A Life",
+   "author": "Patricia Hollis",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Stalingrad",
+   "author": "Antony Beevor",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Gentleman's Daughter: Women's Lives in Georgian England",
+   "author": "Amanda Vickery",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "An Intimate History of Killing",
+   "author": "Joanna Bourke",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Salisbury: Victorian Titan",
+   "author": "Andrew Roberts",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "Hitler, 1936–1945: Nemesis",
+   "author": "Ian Kershaw",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The Balkans",
+   "author": "Mark Mazower",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Enlightenment: Britain and the Creation of the Modern World",
+   "author": "Roy Porter",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Facing the Ocean: The Atlantic and Its Peoples",
+   "author": "Barry Cunliffe",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "London in the 20th Century: A City and Its Peoples",
+   "author": "Jerry White",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "White Mughals: Love and Betrayal in Eighteenth-century India",
+   "author": "William Dalrymple",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Marianne in Chains: In Search of the German Occupation",
+   "author": "Robert Gildea",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Transformations of Love: The Friendship of John Evelyn and Margaret Godolphin",
+   "author": "Frances Harris",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Fall of France: The Nazi Invasion of 1940",
+   "author": "Julian T. Jackson",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Reformation: Europe's House Divided 1490–1700",
+   "author": "Diarmaid MacCulloch",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "The Dictators: Hitler's Germany; Stalin's Russia",
+   "author": "Richard Overy",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "In Command of History: Churchill Fighting and Writing the Second World War",
+   "author": "David Reynolds",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Shopping in the Renaissance",
+   "author": "Evelyn Welch",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Framing the Early Middle Ages: Europe and the Mediterranean, 400–800",
+   "author": "Christopher Wickham",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Iron Kingdom: The Rise and Downfall of Prussia, 1600–1947",
+   "author": "Christopher Clark",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "City of Laughter: Sex and Satire in Eighteenth-Century London",
+   "author": "Vic Gatrell",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Wages of Destruction: The Making and Breaking of the Nazi Economy",
+   "author": "Adam Tooze",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "After Tamerlane: The Global Story of Empire",
+   "author": "John Darwin",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "God's Architect: Pugin & the Building of Romantic Britain",
+   "author": "Rosemary Hill",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Pompeii: The Life of a Roman Town",
+   "author": "Mary Beard",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Dance in the Renaissance: European Fashion, French Obsession",
+   "author": "Margaret M. McGowan",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Russia Against Napoleon: The Battle for Europe, 1807–1814",
+   "author": "Dominic Lieven",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Divided Houses: The Hundred Years War. Vol. 3",
+   "author": "Jonathan Sumption",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Man on Devil's Island: The Affair that Divided France",
+   "author": "Ruth Harris",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Islanders: The Pacific in the Age of Empire",
+   "author": "Nicholas Thomas",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Nikolaus Pevsner: The Life",
+   "author": "Susie Harries",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Reformation of the Landscape",
+   "author": "Alexandra Walsham",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Thomas Wyatt: The Heart's Forest",
+   "author": "Susan Brigden",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Fascist Voices: An Intimate History of Mussolini's Italy",
+   "author": "Christopher Duggan",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Making of the Middle Sea",
+   "author": "Cyprian Broodbank",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Red Fortress: The Secret Heart of Russia's History",
+   "author": "Catherine Merridale",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "National Service: Conscription in Britain, 1945–1963",
+   "author": "Richard Vinen",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Ring of Steel: Germany and Austria-Hungary at War, 1914-1918",
+   "author": "Alexander Watson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Augustine: Conversions and Confessions",
+   "author": "Robin Lane Fox",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "KL: A History of the Nazi Concentration Camps",
+   "author": "Nikolaus Wachsmann",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Meetings with Remarkable Manuscripts: Twelve Journeys into the Medieval World",
+   "author": "Christopher de Hamel",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "The House of The Dead: Siberian Exile Under the Tsar",
+   "author": "Daniel Beer",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Henry IV",
+   "author": "Chris Given-Wilson",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Sleep in Early Modern England",
+   "author": "Sasha Handley",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Martin Luther: Renegade and Prophet",
+   "author": "Lyndal Roper",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Henry the Young King, 1155–1183",
+   "author": "Matthew Strickland",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Heretics and Believers: A History of the English Reformation",
+   "author": "Peter Marshall",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Out of China: How the Chinese Ended the Era of Western Domination",
+   "author": "Robert Bickers",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Butchering Art: Joseph Lister's Quest to Transform the Grisly World of Victorian Medicine",
+   "author": "Lindsey Fitzharris",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "A Deadly Legacy: German Jews and the Great War",
+   "author": "Tim Grady",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Black Tudors: The Untold Story",
+   "author": "Miranda Kaufmann",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Heligoland: Britain, Germany and the Struggle for the North Sea",
+   "author": "Jan Ruger",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Reckonings: Legacies of Nazi Persecution and the Quest for Justice",
+   "author": "Mary Fulbrook",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Building Anglo-Saxon England",
+   "author": "John Blair",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Trading in War: London's Maritime World in the Age of Cook and Nelson",
+   "author": "Margarette Lincoln",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Birds in the Ancient World: Winged Words",
+   "author": "Jeremy Mynott",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Oscar: A Life",
+   "author": "Matthew Sturgis",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Empress: Queen Victoria and India",
+   "author": "Miles Taylor",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Boundless Sea: A Human History of the Oceans",
+   "author": "David Abulafia",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "A Fistful of Shells: West Africa from the Rise of the Slave Trade to the Age of Revolution",
+   "author": "Toby Green",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "A History of the Bible: The Book and Its Faiths",
+   "author": "John Barton",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Five: The Untold Lives of the Women Killed by Jack the Ripper",
+   "author": "Hallie Rubenhold",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Chaucer: A European Life",
+   "author": "Marion Turner",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Cricket Country: An Indian Odyssey in the Age of Empire",
+   "author": "Prashant Kidambi",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Black Spartacus: The Epic Life of Toussaint Louverture",
+   "author": "Sudhir Hazareesingh",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Atlantic Wars: From the Fifteenth Century to the Age of Revolution",
+   "author": "Geoffrey Plank",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Burning the Books: A History of Knowledge Under Attack",
+   "author": "Richard Ovenden",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Double Lives: A History of Working Motherhood",
+   "author": "Helen McCarthy",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Ravenna: Capital of Empire, Crucible of Europe",
+   "author": "Judith Herrin",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Survivors: Children's Lives After the Holocaust",
+   "author": "Rebecca Clifford",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Devil-Land: England Under Siege, 1588–1688",
+   "author": "Clare Jackson",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Ottomans: Khans, Caesars and Caliphs",
+   "author": "Marc David Baer",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Ruin of All Witches: Life and Death in the New World",
+   "author": "Malcolm Gaskill",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Fallen Idols: Twelve Statues That Made History",
+   "author": "Alex von Tunzelmann",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "God: An Anatomy",
+   "author": "Francesca Stavrakopoulou",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Going to Church in Medieval England",
+   "author": "Nicholas Orme",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Resistance: The Underground War in Europe 1939-1945",
+   "author": "Halik Kochanski",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "African and Caribbean People in Britain: A History",
+   "author": "Hakim Adi",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The World the Plague Made: The Black Death and the Rise of Europe",
+   "author": "James Belich",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Perils of Interpreting: The Extraordinary Lives of Two Translators between Qing China and the British Empire",
+   "author": "Henrietta Harrison",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Vagabonds: Life on the Streets of Nineteenth Century London",
+   "author": "Oskar Jensen",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Portable Magic: A History of Books and their Readers",
+   "author": "Emma Smith",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Shadows at Noon: The South Asian Twentieth Century",
+   "author": "Joya Chatterji",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Courting India: England, Mughal India and the Origins of Empire",
+   "author": "Nandini Das",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Traders in Men: Merchants and the Transformation of the Transatlantic Slave Trade",
+   "author": "Nicholas Radburn",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Our NHS: A History of Britain’s Best-Loved Institution",
+   "author": "Andrew Seaton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Winnie & Nelson: Portrait of a Marriage",
+   "author": "Jonny Steinberg",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Out of the Darkness: The Germans, 1942-2022",
+   "author": "Frank Trentmann",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Survivors: The Lost Stories of the Last Captives of the Atlantic Slave Trade",
+   "author": "Hannah Durkin",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Embers of the Hands: Hidden Histories of the Viking Age",
+   "author": "Eleanor Barraclough",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Eagle and the Hart: The Tragedy of Richard II and Henry IV",
+   "author": "Helen Castor",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Multicultural Britain: A People's History",
+   "author": "Kieran Connell",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Gravity of Feathers: Fame, Fortune and the Story of St Kilda",
+   "author": "Andrew Fleming",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Mysterious Case of the Victorian Female Detective",
+   "author": "Sara Lodge",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

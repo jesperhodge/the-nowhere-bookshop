@@ -1,0 +1,1196 @@
+{
+ "slug": "womens",
+ "prize": "Women's Prize for Fiction",
+ "rooms": [
+  "longroom",
+  "quiethouse",
+  "brokensentence",
+  "fronttable"
+ ],
+ "page": "List of Women's Prize for Fiction winners",
+ "url": "https://en.wikipedia.org/wiki/List_of_Women's_Prize_for_Fiction_winners",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1358927917",
+ "revid": 1358927917,
+ "fetchedAt": "2026-08-05T16:26:45.638Z",
+ "counts": {
+  "entries": 186,
+  "winners": 31,
+  "cited": 155
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 24,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 60,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 60,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 42,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "A Spell of Winter",
+   "author": "Helen Dunmore",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "The Book of Colour",
+   "author": "Julia Blackburn",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Spinsters",
+   "author": "Pagan Kennedy",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Hundred Secret Senses",
+   "author": "Amy Tan",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Ladder of Years",
+   "author": "Anne Tyler",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Eveless Eden",
+   "author": "Marianne Wiggins",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Fugitive Pieces",
+   "author": "Anne Michaels",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Alias Grace",
+   "author": "Margaret Atwood",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "One by One in the Darkness",
+   "author": "Deirdre Madden",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "I Was Amelia Earhart",
+   "author": "Jane Mendelsohn",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Accordion Crimes",
+   "author": "Annie Proulx",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Hen's Teeth",
+   "author": "Manda Scott",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Larry's Party",
+   "author": "Carol Shields",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Lives of the Monster Dogs",
+   "author": "Kirsten Bakis",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Ventriloquist's Tale",
+   "author": "Pauline Melville",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Magician's Assistant",
+   "author": "Ann Patchett",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Love Like Hate Adore",
+   "author": "Deirdre Purcell",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Weight of Water",
+   "author": "Anita Shreve",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "A Crime in the Neighborhood",
+   "author": "Suzanne Berne",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "The Leper's Companions",
+   "author": "Julia Blackburn",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Visible Worlds",
+   "author": "Marilyn Bowering",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Short History of a Prince",
+   "author": "Jane Hamilton",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Poisonwood Bible",
+   "author": "Barbara Kingsolver",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Paradise",
+   "author": "Toni Morrison",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "When I Lived in Modern Times",
+   "author": "Linda Grant",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "If I Told You Once",
+   "author": "Judy Budnitz",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Dancers Dancing",
+   "author": "Éilís Ní Dhuibhne",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "White Teeth",
+   "author": "Zadie Smith",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Amy and Isabelle",
+   "author": "Elizabeth Strout",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Divine Secrets of the Ya-Ya Sisterhood",
+   "author": "Rebecca Wells",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Idea of Perfection",
+   "author": "Kate Grenville",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The Blind Assassin",
+   "author": "Margaret Atwood",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Fred & Edie",
+   "author": "Jill Dawson",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Homestead",
+   "author": "Rosina Lippi",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Horse Heaven",
+   "author": "Jane Smiley",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Hotel World",
+   "author": "Ali Smith",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Bel Canto",
+   "author": "Ann Patchett",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "No Bones",
+   "author": "Anna Burns",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Siege",
+   "author": "Helen Dunmore",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The White Family",
+   "author": "Maggie Gee",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "A Child's Book of True Crime",
+   "author": "Chloe Hooper",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Fingersmith",
+   "author": "Sarah Waters",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Property",
+   "author": "Valerie Martin",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Buddha Da",
+   "author": "Anne Donovan",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Heligoland",
+   "author": "Shena Mackay",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Unless",
+   "author": "Carol Shields",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Autograph Man",
+   "author": "Zadie Smith",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Little Friend",
+   "author": "Donna Tartt",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Small Island",
+   "author": "Andrea Levy",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Purple Hibiscus",
+   "author": "Chimamanda Ngozi Adichie",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Oryx and Crake",
+   "author": "Margaret Atwood",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Great Fire",
+   "author": "Shirley Hazzard",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Ice Road",
+   "author": "Gillian Slovo",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Colour",
+   "author": "Rose Tremain",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "We Need to Talk About Kevin",
+   "author": "Lionel Shriver",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Billie Morgan",
+   "author": "Joolz Denby",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Old Filth",
+   "author": "Jane Gardam",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Mammoth Cheese",
+   "author": "Sheri Holman",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "A Short History of Tractors in Ukrainian",
+   "author": "Marina Lewycka",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Liars and Saints",
+   "author": "Maile Meloy",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "On Beauty",
+   "author": "Zadie Smith",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The History of Love",
+   "author": "Nicole Krauss",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Beyond Black",
+   "author": "Hilary Mantel",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Accidental",
+   "author": "Ali Smith",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Everyman's Rules for Scientific Living",
+   "author": "Carrie Tiffany",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Watch",
+   "author": "Sarah Waters",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Half of a Yellow Sun",
+   "author": "Chimamanda Ngozi Adichie",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Arlington Park",
+   "author": "Rachel Cusk",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Inheritance of Loss",
+   "author": "Kiran Desai",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "A Concise Chinese-English Dictionary for Lovers",
+   "author": "Xiaolu Guo",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Observations",
+   "author": "Jane Harris",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Digging to America",
+   "author": "Anne Tyler",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Road Home",
+   "author": "Rose Tremain",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Fault Lines",
+   "author": "Nancy Huston",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Outcast",
+   "author": "Sadie Jones",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "When We Were Bad",
+   "author": "Charlotte Mendelson",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Lullabies for Little Criminals",
+   "author": "Heather O'Neill",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Lottery",
+   "author": "Patricia Wood",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Home",
+   "author": "Marilynne Robinson",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Scottsboro",
+   "author": "Ellen Feldman",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Wilderness",
+   "author": "Samantha Harvey",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Invention of Everything Else",
+   "author": "Samantha Hunt",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Molly Fox's Birthday",
+   "author": "Deirdre Madden",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Burnt Shadows",
+   "author": "Kamila Shamsie",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Lacuna",
+   "author": "Barbara Kingsolver",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Very Thought of You",
+   "author": "Rosie Alison",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Black Water Rising",
+   "author": "Attica Locke",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Wolf Hall",
+   "author": "Hilary Mantel",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "A Gate at the Stairs",
+   "author": "Lorrie Moore",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The White Woman on the Green Bicycle",
+   "author": "Monique Roffey",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Tiger's Wife",
+   "author": "Téa Obreht",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Room",
+   "author": "Emma Donoghue",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Memory of Love",
+   "author": "Aminatta Forna",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Grace Williams Says it Loud",
+   "author": "Emma Henderson",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Great House",
+   "author": "Nicole Krauss",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Annabel",
+   "author": "Kathleen Winter",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Song of Achilles",
+   "author": "Madeline Miller",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Half-Blood Blues",
+   "author": "Esi Edugyan",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Forgotten Waltz",
+   "author": "Anne Enright",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Painter of Silence",
+   "author": "Georgina Harding",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Foreign Bodies",
+   "author": "Cynthia Ozick",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "State of Wonder",
+   "author": "Ann Patchett",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "May We Be Forgiven",
+   "author": "A. M. Homes",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Life After Life",
+   "author": "Kate Atkinson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Flight Behaviour",
+   "author": "Barbara Kingsolver",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Bring Up the Bodies",
+   "author": "Hilary Mantel",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Where'd You Go, Bernadette",
+   "author": "Maria Semple",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "NW",
+   "author": "Zadie Smith",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Girl Is a Half-formed Thing",
+   "author": "Eimear McBride",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Americanah",
+   "author": "Chimamanda Ngozi Adichie",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Burial Rites",
+   "author": "Hannah Kent",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Lowland",
+   "author": "Jhumpa Lahiri",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Undertaking",
+   "author": "Audrey Magee",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Goldfinch",
+   "author": "Donna Tartt",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "How to Be Both",
+   "author": "Ali Smith",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Outline",
+   "author": "Rachel Cusk",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Bees",
+   "author": "Laline Paull",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A God in Every Stone",
+   "author": "Kamila Shamsie",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A Spool of Blue Thread",
+   "author": "Anne Tyler",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Paying Guests",
+   "author": "Sarah Waters",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Glorious Heresies",
+   "author": "Lisa McInerney",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Ruby",
+   "author": "Cynthia Bond",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Green Road",
+   "author": "Anne Enright",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Portable Veblen",
+   "author": "Elizabeth McKenzie",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Improbability of Love",
+   "author": "Hannah Rothschild",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "A Little Life",
+   "author": "Hanya Yanagihara",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The Power",
+   "author": "Naomi Alderman",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Stay With Me",
+   "author": "Ayọ̀bámi Adébáyọ̀",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Circle",
+   "author": "Linda Grant",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Sport of Kings",
+   "author": "C. E. Morgan",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "First Love",
+   "author": "Gwendoline Riley",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Do Not Say We Have Nothing",
+   "author": "Madeleine Thien",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Home Fire",
+   "author": "Kamila Shamsie",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Idiot",
+   "author": "Elif Batuman",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Mermaid and Mrs. Hancock",
+   "author": "Imogen Hermes Gowar",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Sight",
+   "author": "Jessie Greengrass",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "When I Hit You: Or, A Portrait of the Writer as a Young Wife",
+   "author": "Meena Kandasamy",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Sing, Unburied, Sing",
+   "author": "Jesmyn Ward",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "An American Marriage",
+   "author": "Tayari Jones",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Silence of the Girls",
+   "author": "Pat Barker",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "My Sister, the Serial Killer",
+   "author": "Oyinkan Braithwaite",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Milkman",
+   "author": "Anna Burns",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Ordinary People",
+   "author": "Diana Evans",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Circe",
+   "author": "Madeline Miller",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Hamnet",
+   "author": "Maggie O'Farrell",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Dominicana",
+   "author": "Angie Cruz",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Girl, Woman, Other",
+   "author": "Bernardine Evaristo",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "A Thousand Ships",
+   "author": "Natalie Haynes",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Mirror & the Light",
+   "author": "Hilary Mantel",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Weather",
+   "author": "Jenny Offill",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Piranesi",
+   "author": "Susanna Clarke",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Vanishing Half",
+   "author": "Brit Bennett",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Unsettled Ground",
+   "author": "Claire Fuller",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Transcendent Kingdom",
+   "author": "Yaa Gyasi",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "How the One-Armed Sister Sweeps Her House",
+   "author": "Cherie Jones",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "No One Is Talking About This",
+   "author": "Patricia Lockwood",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Form and Emptiness",
+   "author": "Ruth Ozeki",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "The Bread the Devil Knead",
+   "author": "Lisa Allen-Agostini",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Sentence",
+   "author": "Louise Erdrich",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Sorrow and Bliss",
+   "author": "Meg Mason",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Island of Missing Trees",
+   "author": "Elif Shafak",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Great Circle",
+   "author": "Maggie Shipstead",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Demon Copperhead",
+   "author": "Barbara Kingsolver",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Fire Rush",
+   "author": "Jacqueline Crooks",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Trespasses",
+   "author": "Louise Kennedy",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Black Butterflies",
+   "author": "Priscilla Morris",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Marriage Portrait",
+   "author": "Maggie O'Farrell",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Pod",
+   "author": "Laline Paull",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Brotherless Night",
+   "author": "V. V. Ganeshananthan",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Wren, The Wren",
+   "author": "Anne Enright",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Restless Dolly Maunder",
+   "author": "Kate Grenville",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Enter Ghost",
+   "author": "Isabella Hammad",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Soldier Sailor",
+   "author": "Claire Kilroy",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "River East, River West",
+   "author": "Aube Rey Lescure",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Safekeep",
+   "author": "Yael van der Wouden",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "Good Girl",
+   "author": "Aria Aber",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "All Fours",
+   "author": "Miranda July",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Persians",
+   "author": "Sanam Mahloudji",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Tell Me Everything",
+   "author": "Elizabeth Strout",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Fundamentally",
+   "author": "Nussaibah Younis",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Correspondent",
+   "author": "Virginia Evans",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Flashlight",
+   "author": "Susan Choi",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Dominion",
+   "author": "Addie E Citchens",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "The Mercy Step",
+   "author": "Marcia Hutchinson",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Kingfisher",
+   "author": "Rozie Kelly",
+   "year": 2026,
+   "kind": "c"
+  },
+  {
+   "title": "Heart the Lover",
+   "author": "Lily King",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

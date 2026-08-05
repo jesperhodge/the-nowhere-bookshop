@@ -1,0 +1,1732 @@
+{
+ "slug": "dublin",
+ "prize": "Dublin Literary Award",
+ "rooms": [
+  "longroom",
+  "quiethouse",
+  "translator"
+ ],
+ "page": "Dublin Literary Award",
+ "url": "https://en.wikipedia.org/wiki/Dublin_Literary_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1361746492",
+ "revid": 1361746492,
+ "fetchedAt": "2026-08-05T16:26:48.168Z",
+ "counts": {
+  "entries": 259,
+  "winners": 30,
+  "cited": 229
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "1990s",
+   "headers": "Year | Author | Title | Translator | Language | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 33,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "2000s",
+   "headers": "Year | Author | Title | Translator | Language | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 82,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2010s",
+   "headers": "Year | Author | Title | Translator | Language | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 98,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2020s",
+   "headers": "Year | Author | Title | Translator | Language | Result | ",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 46,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "Wins by language",
+   "skipped": "no title/author column",
+   "headers": "Total | Language | Years"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Remembering Babylon",
+   "author": "David Malouf",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Ghosts",
+   "author": "John Banville",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "A Way in the World",
+   "author": "V. S. Naipaul",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The Following Story / Het volgende verhaal",
+   "author": "Cees Nooteboom",
+   "year": 1996,
+   "kind": "c",
+   "translator": "Ina Rilke"
+  },
+  {
+   "title": "The Laws / De wetten",
+   "author": "Connie Palmen",
+   "year": 1996,
+   "kind": "c",
+   "translator": "Richard Huijing"
+  },
+  {
+   "title": "The Gospel According to Jesus Christ / O Evangelho segundo Jesus Cristo",
+   "author": "José Saramago",
+   "year": 1996,
+   "kind": "c",
+   "translator": "Giovanni Pontiero"
+  },
+  {
+   "title": "Away",
+   "author": "Jane Urquhart",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "A Heart So White / Corazón tan blanco",
+   "author": "Javier Marías",
+   "year": 1997,
+   "kind": "w",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "Reservation Blues",
+   "author": "Sherman Alexie",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "A Tiler's Afternoon / En kakelsättares eftermiddag",
+   "author": "Lars Gustafsson",
+   "year": 1997,
+   "kind": "c",
+   "translator": "Tom Geddes"
+  },
+  {
+   "title": "Novel Without a Name / Tiểu thuyết vô đề",
+   "author": "Dương Thu Hương",
+   "year": 1997,
+   "kind": "c",
+   "translator": "Huy Duong Phan & Nina McPherson"
+  },
+  {
+   "title": "A Fine Balance",
+   "author": "Rohinton Mistry",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Pereira Maintains / Sostiene Pereira",
+   "author": "Antonio Tabucchi",
+   "year": 1997,
+   "kind": "c",
+   "translator": "Patrick Creagh"
+  },
+  {
+   "title": "The Good Negress",
+   "author": "A. J. Verdelle",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Morvern Callar",
+   "author": "Alan Warner",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Land of Green Plums / Herztier",
+   "author": "Herta Müller",
+   "year": 1998,
+   "kind": "w",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "Alias Grace",
+   "author": "Margaret Atwood",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Imaginings of Sand / Sandkastele",
+   "author": "André Brink",
+   "year": 1998,
+   "kind": "c",
+   "translator": "André Brink"
+  },
+  {
+   "title": "The Counting House",
+   "author": "David Dabydeen",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Glade Within the Grove",
+   "author": "David Foster",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Autobiography of my Mother",
+   "author": "Jamaica Kincaid",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Salt",
+   "author": "Earl Lovelace",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Pope's Rhinoceros",
+   "author": "Lawrence Norfolk",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Last Orders",
+   "author": "Graham Swift",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Englishman's Boy",
+   "author": "Guy Vanderhaeghe",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Ingenious Pain",
+   "author": "Andrew Miller",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Quarantine",
+   "author": "Jim Crace",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Underworld",
+   "author": "Don DeLillo",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Ordinary Seaman",
+   "author": "Francisco Goldman",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Enduring Love",
+   "author": "Ian McEwan",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Wind-Up Bird Chronicle / ねじまき鳥クロニクル",
+   "author": "Haruki Murakami",
+   "year": 1999,
+   "kind": "c",
+   "translator": "Jay Rubin"
+  },
+  {
+   "title": "The Puttermesser Papers",
+   "author": "Cynthia Ozick",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Reader / Der Vorleser",
+   "author": "Bernhard Schlink",
+   "year": 1999,
+   "kind": "c",
+   "translator": "Carol Janeway"
+  },
+  {
+   "title": "Wide Open",
+   "author": "Nicola Barker",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Hours",
+   "author": "Michael Cunningham",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Trumpet",
+   "author": "Jackie Kay",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "This Side of Brightness",
+   "author": "Colum McCann",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Charming Billy",
+   "author": "Alice McDermott",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Paradise",
+   "author": "Toni Morrison",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "I Married a Communist",
+   "author": "Philip Roth",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "No Great Mischief",
+   "author": "Alistair MacLeod",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "The True History of Paradise",
+   "author": "Margaret Cezair-Thompson",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Love You Promised Me / El amor que me juraste",
+   "author": "Silvia Molina",
+   "year": 2001,
+   "kind": "c",
+   "translator": "David Unger"
+  },
+  {
+   "title": "Our Fathers",
+   "author": "Andrew O'Hagan",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "The Clay Machine-Gun / Чапаев и Пустота",
+   "author": "Victor Pelevin",
+   "year": 2001,
+   "kind": "c",
+   "translator": "Andrew Bromfield"
+  },
+  {
+   "title": "The Blackwater Lightship",
+   "author": "Colm Tóibín",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Atomised / Les Particules élémentaires",
+   "author": "Michel Houellebecq",
+   "year": 2002,
+   "kind": "w",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "The Blind Assassin",
+   "author": "Margaret Atwood",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "True History of the Kelly Gang",
+   "author": "Peter Carey",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Keepers of Truth",
+   "author": "Michael Collins",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Samurai",
+   "author": "Helen DeWitt",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "The Years with Laura Diaz / Los años con Laura Díaz",
+   "author": "Carlos Fuentes",
+   "year": 2002,
+   "kind": "c",
+   "translator": "Alfred MacAdam"
+  },
+  {
+   "title": "Madame",
+   "author": "Antoni Libera",
+   "year": 2002,
+   "kind": "c",
+   "translator": "Agnieszka Kołakowska"
+  },
+  {
+   "title": "My Name Is Red / Benim Adım Kırmızı",
+   "author": "Orhan Pamuk",
+   "year": 2003,
+   "kind": "w",
+   "translator": "Erdağ Göknar"
+  },
+  {
+   "title": "The Ash Garden",
+   "author": "Dennis Bock",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Bitter Fruit",
+   "author": "Achmat Dangor",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Visit of the Royal Physician / Livläkarens besök",
+   "author": "Per Olov Enquist",
+   "year": 2003,
+   "kind": "c",
+   "translator": "Tiina Nunnally"
+  },
+  {
+   "title": "The Corrections",
+   "author": "Jonathan Franzen",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Migrant Painter of Birds / O Vale da Paixão",
+   "author": "Lídia Jorge",
+   "year": 2003,
+   "kind": "c",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "That They May Face the Rising Sun",
+   "author": "John McGahern",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Bel Canto",
+   "author": "Ann Patchett",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "This Blinding Absence of Light / Cette aveuglante absence de lumière",
+   "author": "Tahar Ben Jelloun",
+   "year": 2004,
+   "kind": "w",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "The Book of Illusions",
+   "author": "Paul Auster",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Any Human Heart",
+   "author": "William Boyd",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Caramelo",
+   "author": "Sandra Cisneros",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Middlesex",
+   "author": "Jeffrey Eugenides",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The White Family",
+   "author": "Maggie Gee",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Balthasar's Odyssey / Le Périple de Baldassare",
+   "author": "Amin Maalouf",
+   "year": 2004,
+   "kind": "c",
+   "translator": "Barbara Bray"
+  },
+  {
+   "title": "Family Matters",
+   "author": "Rohinton Mistry",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Earth and Ashes / خاکستر و خاک",
+   "author": "Atiq Rahimi",
+   "year": 2004,
+   "kind": "c",
+   "translator": "Erdağ Göknar"
+  },
+  {
+   "title": "House of Day, House of Night / Dom dzienny, dom nocny",
+   "author": "Olga Tokarczuk",
+   "year": 2004,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "The Known World",
+   "author": "Edward P. Jones",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Gardening at Night",
+   "author": "Diane Awerbuck",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Half Brother / Halvbroren",
+   "author": "Lars Saabye Christensen",
+   "year": 2005,
+   "kind": "c",
+   "translator": "Kenneth Steven"
+  },
+  {
+   "title": "The Good Doctor",
+   "author": "Damon Galgut",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Elle",
+   "author": "Douglas Glover",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Phantom Pain / Fantoompijn",
+   "author": "Arnon Grunberg",
+   "year": 2005,
+   "kind": "c",
+   "translator": "Sam Garrett"
+  },
+  {
+   "title": "The Great Fire",
+   "author": "Shirley Hazzard",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Willenbrock",
+   "author": "Christoph Hein",
+   "year": 2005,
+   "kind": "c",
+   "translator": "Philip Boehm"
+  },
+  {
+   "title": "Deafening",
+   "author": "Frances Itani",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Fortress of Solitude",
+   "author": "Jonathan Lethem",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Master",
+   "author": "Colm Tóibín",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "GraceLand",
+   "author": "Chris Abani",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Maps for Lost Lovers",
+   "author": "Nadeem Aslam",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Havoc in Its Third Year",
+   "author": "Ronan Bennett",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Closed Circle",
+   "author": "Jonathan Coe",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "An Altered Light / Et andet lys",
+   "author": "Jens Christian Grøndahl",
+   "year": 2006,
+   "kind": "c",
+   "translator": "Anne Born"
+  },
+  {
+   "title": "The Swallows of Kabul / Les Hirondelles de Kaboul",
+   "author": "Yasmina Khadra",
+   "year": 2006,
+   "kind": "c",
+   "translator": "John Cullen"
+  },
+  {
+   "title": "Breaking the Tongue",
+   "author": "Vyvyane Loh",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Don't Move / Non ti muovere",
+   "author": "Margaret Mazzantini",
+   "year": 2006,
+   "kind": "c",
+   "translator": "John Cullen"
+  },
+  {
+   "title": "The Logogryph",
+   "author": "Thomas Wharton",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Out Stealing Horses / Ut og stjæle hester",
+   "author": "Per Petterson",
+   "year": 2007,
+   "kind": "w",
+   "translator": "Anne Born"
+  },
+  {
+   "title": "Arthur & George",
+   "author": "Julian Barnes",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "A Long Long Way",
+   "author": "Sebastian Barry",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Slow Man",
+   "author": "J. M. Coetzee",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Extremely Loud & Incredibly Close",
+   "author": "Jonathan Safran Foer",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Short Day Dying",
+   "author": "Peter Hobbs",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "No Country for Old Men",
+   "author": "Cormac McCarthy",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Shalimar the Clown",
+   "author": "Salman Rushdie",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "De Niro's Game",
+   "author": "Rawi Hage",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Speed of Light / La velocidad de la luz",
+   "author": "Javier Cercas",
+   "year": 2008,
+   "kind": "c",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "The Sweet & Simple Kind",
+   "author": "Yasmine Gooneratne",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Dreams of Speaking",
+   "author": "Gail Jones",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Let It Be Morning / ויהי בוקר",
+   "author": "Sayed Kashua",
+   "year": 2008,
+   "kind": "c",
+   "translator": "Miriam Shlesinger"
+  },
+  {
+   "title": "The Attack / L'Attentat",
+   "author": "Yasmina Khadra",
+   "year": 2008,
+   "kind": "c",
+   "translator": "John Cullen"
+  },
+  {
+   "title": "The Woman Who Waited / La femme qui attendait",
+   "author": "Andreï Makine",
+   "year": 2008,
+   "kind": "c",
+   "translator": "Geoffrey Strachan"
+  },
+  {
+   "title": "Winterwood",
+   "author": "Patrick McCabe",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Man Gone Down",
+   "author": "Michael Thomas",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Brief Wondrous Life of Oscar Wao",
+   "author": "Junot Díaz",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Ravel",
+   "author": "Jean Echenoz",
+   "year": 2009,
+   "kind": "c",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "The Reluctant Fundamentalist",
+   "author": "Mohsin Hamid",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Archivist's Story",
+   "author": "Travis Holland",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Burnt-Out Town of Miracles / Hoggerne",
+   "author": "Roy Jacobsen",
+   "year": 2009,
+   "kind": "c",
+   "translator": "Don Shaw & Don Bartlett"
+  },
+  {
+   "title": "The Indian Clerk",
+   "author": "David Leavitt",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Animal's People",
+   "author": "Indra Sinha",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Twin / Boven is het stil",
+   "author": "Gerbrand Bakker",
+   "year": 2010,
+   "kind": "w",
+   "translator": "David Colmer"
+  },
+  {
+   "title": "The Elegance of the Hedgehog / L'Élégance du hérisson",
+   "author": "Muriel Barbery",
+   "year": 2010,
+   "kind": "c",
+   "translator": "Alison Anderson"
+  },
+  {
+   "title": "In Zodiac Light",
+   "author": "Robert Edric",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Settlement / Landnahme",
+   "author": "Christoph Hein",
+   "year": 2010,
+   "kind": "c",
+   "translator": "Philip Boehm"
+  },
+  {
+   "title": "The Believers",
+   "author": "Zoë Heller",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Netherland",
+   "author": "Joseph O'Neill",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "God's Own Country",
+   "author": "Ross Raisin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Home",
+   "author": "Marilynne Robinson",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Let the Great World Spin",
+   "author": "Colum McCann",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Galore",
+   "author": "Michael Crummey",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Lacuna",
+   "author": "Barbara Kingsolver",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Vagrants",
+   "author": "Yiyun Li",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Ransom",
+   "author": "David Malouf",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Little Bird of Heaven",
+   "author": "Joyce Carol Oates",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Jasper Jones",
+   "author": "Craig Silvey",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Brooklyn",
+   "author": "Colm Tóibín",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Love and Summer",
+   "author": "William Trevor",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "After the Fire, A Still Small Voice",
+   "author": "Evie Wyld",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Even the Dogs",
+   "author": "Jon McGregor",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Rocks in the Belly",
+   "author": "Jon Bauer",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Matter with Morris",
+   "author": "David Bergen",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "A Visit from the Goon Squad",
+   "author": "Jennifer Egan",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Memory of Love",
+   "author": "Aminatta Forna",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Matterhorn",
+   "author": "Karl Marlantes",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Landed",
+   "author": "Tim Pears",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Limassol / לימסול",
+   "author": "Yishai Sarid",
+   "year": 2012,
+   "kind": "c",
+   "translator": "Barbara Harshav"
+  },
+  {
+   "title": "The Eternal Son / O Filho Eterno",
+   "author": "Cristóvão Tezza",
+   "year": 2012,
+   "kind": "c",
+   "translator": "Alison Entrekin"
+  },
+  {
+   "title": "Lean on Pete",
+   "author": "Willy Vlautin",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "City of Bohane",
+   "author": "Kevin Barry",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Map and the Territory / La carte et le territoire",
+   "author": "Michel Houellebecq",
+   "year": 2013,
+   "kind": "c",
+   "translator": "Gavin Bowd"
+  },
+  {
+   "title": "Pure",
+   "author": "Andrew Miller",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "1Q84",
+   "author": "Haruki Murakami",
+   "year": 2013,
+   "kind": "c",
+   "translator": "Jay Rubin & Philip Gabriel"
+  },
+  {
+   "title": "The Buddha in the Attic",
+   "author": "Julie Otsuka",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Tragedy of Arthur",
+   "author": "Arthur Phillips",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Swamplandia!",
+   "author": "Karen Russell",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "From the Mouth of the Whale / Rökkurbýsnir",
+   "author": "Sjón",
+   "year": 2013,
+   "kind": "c",
+   "translator": "Victoria Cribb"
+  },
+  {
+   "title": "The Faster I Walk, the Smaller I Am / Jo fortere jeg går, jo mindre er jeg",
+   "author": "Kjersti Annesdatter Skomsvold",
+   "year": 2013,
+   "kind": "c",
+   "translator": "Kerri Pierce"
+  },
+  {
+   "title": "Caesarion",
+   "author": "Tommy Wieringa",
+   "year": 2013,
+   "kind": "c",
+   "translator": "Sam Garrett"
+  },
+  {
+   "title": "The Sound of Things Falling / El ruido de las cosas al caer",
+   "author": "Juan Gabriel Vásquez",
+   "year": 2014,
+   "kind": "w",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "The Detour / De omweg",
+   "author": "Gerbrand Bakker",
+   "year": 2014,
+   "kind": "c",
+   "translator": "David Colmer"
+  },
+  {
+   "title": "Questions of Travel",
+   "author": "Michelle de Kretser",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Garden of Evening Mists",
+   "author": "Tan Twan Eng",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Absolution",
+   "author": "Patrick Flanery",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "My Struggle 1: A Death in the Family / Min kamp 1",
+   "author": "Karl Ove Knausgård",
+   "year": 2014,
+   "kind": "c",
+   "translator": "Don Bartlett"
+  },
+  {
+   "title": "Three Strong Women / Trois Femmes puissantes",
+   "author": "Marie NDiaye",
+   "year": 2014,
+   "kind": "c",
+   "translator": "John Fletcher"
+  },
+  {
+   "title": "Traveller of the Century / El viajero del siglo",
+   "author": "Andrés Neuman",
+   "year": 2014,
+   "kind": "c",
+   "translator": "Nick Caistor & Lorenza Garcia"
+  },
+  {
+   "title": "The Light of Amsterdam",
+   "author": "David Park",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Spinning Heart",
+   "author": "Donal Ryan",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Harvest",
+   "author": "Jim Crace",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Americanah",
+   "author": "Chimamanda Ngozi Adichie",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Horses of God / Les étoiles de Sidi Moumen",
+   "author": "Mahi Binebine",
+   "year": 2015,
+   "kind": "c",
+   "translator": "Lulu Norman"
+  },
+  {
+   "title": "The Narrow Road to the Deep North",
+   "author": "Richard Flanagan",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Burial Rites",
+   "author": "Hannah Kent",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "K.",
+   "author": "Bernardo Kucinski",
+   "year": 2015,
+   "kind": "c",
+   "translator": "Sue Branford"
+  },
+  {
+   "title": "Brief Loves That Live Forever / Le Livre des brèves amours éternelles",
+   "author": "Andreï Makine",
+   "year": 2015,
+   "kind": "c",
+   "translator": "Geoffrey Strachan"
+  },
+  {
+   "title": "TransAtlantic",
+   "author": "Colum McCann",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Someone",
+   "author": "Alice McDermott",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Sparta",
+   "author": "Roxana Robinson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Family Life",
+   "author": "Akhil Sharma",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Outlaws / Las leyes de la frontera",
+   "author": "Javier Cercas",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "Academy Street",
+   "author": "Mary Costello",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Your Fathers, Where Are They? And the Prophets, Do They Live Forever?",
+   "author": "Dave Eggers",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The End of Days / Aller Tage Abend",
+   "author": "Jenny Erpenbeck",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "A Brief History of Seven Killings",
+   "author": "Marlon James",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Diary of the Fall / Diário da Queda",
+   "author": "Michel Laub",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Margaret Jull Costa"
+  },
+  {
+   "title": "Our Lady of the Nile / Notre-Dame du Nil",
+   "author": "Scholastique Mukasonga",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Melanie Mauthner"
+  },
+  {
+   "title": "Dept. of Speculation",
+   "author": "Jenny Offill",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Lila",
+   "author": "Marilynne Robinson",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "A General Theory of Oblivion / Teoria Geral do Esquecimento",
+   "author": "José Eduardo Agualusa",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Daniel Hahn"
+  },
+  {
+   "title": "Confession of the Lioness / A Confissão da Leoa",
+   "author": "Mia Couto",
+   "year": 2017,
+   "kind": "c",
+   "translator": "David Brookshaw"
+  },
+  {
+   "title": "The Green Road",
+   "author": "Anne Enright",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Prophets of Eternal Fjord / Profeterne i Evighedsfjorden",
+   "author": "Kim Leine",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "The Story of My Teeth / La historia de mis dientes",
+   "author": "Valeria Luiselli",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "The Sympathizer",
+   "author": "Viet Thanh Nguyen",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Under the Udala Trees",
+   "author": "Chinelo Okparanta",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "A Strangeness in My Mind / Kafamda Bir Tuhaflık",
+   "author": "Orhan Pamuk",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Ekin Oklap"
+  },
+  {
+   "title": "A Whole Life / Ein ganzes Leben",
+   "author": "Robert Seethaler",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Charlotte Collins"
+  },
+  {
+   "title": "A Little Life",
+   "author": "Hanya Yanagihara",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Solar Bones",
+   "author": "Mike McCormack",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Baba Dunja's Last Love / Baba Dunjas letzte Liebe",
+   "author": "Alina Bronsky",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Tim Mohr"
+  },
+  {
+   "title": "The Transmigration of Bodies / La transmigración de los cuerpos",
+   "author": "Yuri Herrera",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Lisa Dillman"
+  },
+  {
+   "title": "The Unseen / De usynlige",
+   "author": "Roy Jacobsen",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Don Bartlett & Don Shaw"
+  },
+  {
+   "title": "Human Acts / 소년이 온다",
+   "author": "Han Kang",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Deborah Smith"
+  },
+  {
+   "title": "The Lesser Bohemians",
+   "author": "Eimear McBride",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Distant Light / La lucina",
+   "author": "Antonio Moresco",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Richard Dixon"
+  },
+  {
+   "title": "Ladivine",
+   "author": "Marie NDiaye",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "The Woman Next Door",
+   "author": "Yewande Omotoso",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "My Name Is Lucy Barton",
+   "author": "Elizabeth Strout",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Idaho",
+   "author": "Emily Ruskovich",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Compass / Boussole",
+   "author": "Mathias Énard",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Charlotte Mandell"
+  },
+  {
+   "title": "History of Wolves",
+   "author": "Emily Fridlund",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Exit West",
+   "author": "Mohsin Hamid",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Midwinter Break",
+   "author": "Bernard MacLaverty",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Reservoir 13",
+   "author": "Jon McGregor",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Conversations with Friends",
+   "author": "Sally Rooney",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Lincoln in the Bardo",
+   "author": "George Saunders",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "A Boy in Winter",
+   "author": "Rachel Seiffert",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Home Fire",
+   "author": "Kamila Shamsie",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Milkman",
+   "author": "Anna Burns",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Winner"
+  },
+  {
+   "title": "The Silence of the Girls",
+   "author": "Pat Barker",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Disoriental / Désorientale",
+   "author": "Négar Djavadi",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Tina Kover"
+  },
+  {
+   "title": "Washington Black",
+   "author": "Esi Edugyan",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "An American Marriage",
+   "author": "Tayari Jones",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "History of Violence / Histoire de la violence",
+   "author": "Édouard Louis",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Lorin Stein"
+  },
+  {
+   "title": "The Friend",
+   "author": "Sigrid Nunez",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "There There",
+   "author": "Tommy Orange",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "All the Lives We Never Lived",
+   "author": "Anuradha Roy",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Drive Your Plow Over the Bones of the Dead / Prowadź swój pług przez kości umarłych",
+   "author": "Olga Tokarczuk",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "Lost Children Archive",
+   "author": "Valeria Luiselli",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Girl, Woman, Other",
+   "author": "Bernardine Evaristo",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Apeirogon",
+   "author": "Colum McCann",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Hurricane Season / Temporada de huracanes",
+   "author": "Fernanda Melchor",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "On Earth We're Briefly Gorgeous",
+   "author": "Ocean Vuong",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Nickel Boys",
+   "author": "Colson Whitehead",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Art of Losing / L'Art de perdre",
+   "author": "Alice Zeniter",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "Remote Sympathy",
+   "author": "Catherine Chidgey",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "At Night All Blood Is Black / Frère d'âme",
+   "author": "David Diop",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Anna Moschovakis"
+  },
+  {
+   "title": "The Death of Vivek Oji",
+   "author": "Akwaeke Emezi",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Art of Falling",
+   "author": "Danielle McLaughlin",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Noopiming: The Cure for White Ladies",
+   "author": "Leanne Betasamosake Simpson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Marzahn, Mon Amour / Marzahn, mon amour: Geschichten einer Fußpflegerin",
+   "author": "Katja Oskamp",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Jo Heinrich"
+  },
+  {
+   "title": "Cloud Cuckoo Land",
+   "author": "Anthony Doerr",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Trees",
+   "author": "Percival Everett",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Paradais / Páradais",
+   "author": "Fernanda Melchor",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "Love Novel / Ljubavni roman",
+   "author": "Ivana Sajko",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Mima Simić"
+  },
+  {
+   "title": "Em",
+   "author": "Kim Thuy",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Sheila Fischman"
+  },
+  {
+   "title": "Solenoid",
+   "author": "Mircea Cărtărescu",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "Old God's Time",
+   "author": "Sebastian Barry",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Haven",
+   "author": "Emma Donoghue",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "If I Survive You",
+   "author": "Jonathan Escoffery",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Sleeping Car Porter",
+   "author": "Suzette Mayr",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Praiseworthy",
+   "author": "Alexis Wright",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Adversary",
+   "author": "Michael Crummey",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "James",
+   "author": "Percival Everett",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "North Woods",
+   "author": "Daniel Mason",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Not a River / No es un río",
+   "author": "Selva Almada",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Annie McDermott"
+  },
+  {
+   "title": "Prophet Song",
+   "author": "Paul Lynch",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "We Are Light / Wij zijn licht",
+   "author": "Gerda Blees",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Michele Hutchison"
+  },
+  {
+   "title": "Gliff",
+   "author": "Ali Smith",
+   "year": 2026,
+   "kind": "w"
+  },
+  {
+   "title": "Perspective(s)",
+   "author": "Laurent Binet",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Sam Taylor"
+  },
+  {
+   "title": "In Late Summer / U kasno ljeto",
+   "author": "Magdalena Blažević",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Anđelka Raguž"
+  },
+  {
+   "title": "What I Know About You / Ce que je sais de toi",
+   "author": "Éric Chacour",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Pablo Strauss"
+  },
+  {
+   "title": "Live Fast / Vivre vite",
+   "author": "Brigitte Giraud",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Cory Stockwell"
+  },
+  {
+   "title": "The Emperor of Gladness",
+   "author": "Ocean Vuong",
+   "year": 2026,
+   "kind": "c"
+  }
+ ]
+}

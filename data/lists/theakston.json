@@ -1,0 +1,897 @@
+{
+ "slug": "theakston",
+ "prize": "Theakston Old Peculier Crime Novel of the Year",
+ "rooms": [
+  "lamproom",
+  "fogline",
+  "wrongman",
+  "quietvillage",
+  "coldcoast"
+ ],
+ "page": "Theakston Old Peculier Crime Novel of the Year Award",
+ "url": "https://en.wikipedia.org/wiki/Theakston_Old_Peculier_Crime_Novel_of_the_Year_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1359659925",
+ "revid": 1359659925,
+ "fetchedAt": "2026-08-05T16:27:07.759Z",
+ "counts": {
+  "entries": 142,
+  "winners": 21,
+  "cited": 121
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Recipients",
+   "headers": "Year | Author | Title | Result | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "result": 3
+   },
+   "took": 142,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "Outstanding Contribution",
+   "skipped": "no title/author column",
+   "headers": "Year | Author | Result | Ref."
+  }
+ ],
+ "entries": [
+  {
+   "title": "Lazybones",
+   "author": "Mark Billingham",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "The American Boy",
+   "author": "Andrew Taylor",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Distant Echo",
+   "author": "Val McDermid",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Murder Exchange",
+   "author": "Simon Kernick",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "A Question of Blood",
+   "author": "Ian Rankin",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Disordered Minds",
+   "author": "Minette Walters",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "The Torment of Others",
+   "author": "Val McDermid",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "The Coffin Trail",
+   "author": "Martin Edwards",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Various Haunts of Men",
+   "author": "Susan Hill",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Fleshmarket Close",
+   "author": "Ian Rankin",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "One Last Breath",
+   "author": "Stephen Booth",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Strange Blood",
+   "author": "Lindsay Ashford",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Two-Way Split",
+   "author": "Allan Guthrie",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "The Dead Place",
+   "author": "Stephen Booth",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Death Ship of Dartmouth",
+   "author": "Michael Jecks",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "All Fun and Games Until Somebody Loses an Eye",
+   "author": "Christopher Brookmyre",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Blood and Honey",
+   "author": "Graham Hurley",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Cold Granite",
+   "author": "Stuart MacBride",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "The Tenderness of Wolves",
+   "author": "Stef Penney",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Blue Shoes and Happiness",
+   "author": "Alexander McCall Smith",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Buried",
+   "author": "Mark Billingham",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Dying Light",
+   "author": "Stuart MacBride",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Not Dead Enough",
+   "author": "Peter James",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "One Under",
+   "author": "Graham Hurley",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Piece of My Heart",
+   "author": "Peter Robinson",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Relentless",
+   "author": "Simon Kernick",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Sovereign",
+   "author": "C.J. Sansom",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Chemistry of Death",
+   "author": "Simon Beckett",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Death of Dalzeil",
+   "author": "Reginald Hill",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "A Tale Etched in Blood and Hard Black Pencil",
+   "author": "Christopher Brookmyre",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Death Message",
+   "author": "Mark Billingham",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Accident Man",
+   "author": "Tom Cain",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Colour of Blood",
+   "author": "Declan Hughes",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Cure for All Diseases",
+   "author": "Reginald Hill",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Bad Luck and Trouble",
+   "author": "Lee Child",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Beneath the Bleeding",
+   "author": "Val McDermid",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Broken Skin",
+   "author": "Stuart MacBride",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Dead Man's Footsteps",
+   "author": "Peter James",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Exit Music",
+   "author": "Ian Rankin",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Friend of the Devil",
+   "author": "Peter Robinson",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Garden of Evil",
+   "author": "David Hewson",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Gone to Ground",
+   "author": "John Harvey",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Ritual",
+   "author": "Mo Hayder",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Savage Moon",
+   "author": "Chris Simms",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "A Simple Act of Violence",
+   "author": "R. J. Ellory",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "The Crossing Places",
+   "author": "Elly Griffiths",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Surrogate",
+   "author": "Tania Carver",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Child 44",
+   "author": "Tom Rob Smith",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Dead Tomorrow",
+   "author": "Peter James",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Doors Open",
+   "author": "Ian Rankin",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Gallows Lane",
+   "author": "Brian McGilloway",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "In the Dark",
+   "author": "Mark Billingham",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "61 Hours",
+   "author": "Lee Child",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "The Anatomy of Ghosts",
+   "author": "Andrew Taylor",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Holy Thief",
+   "author": "William Ryan",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Blood Harvest",
+   "author": "S. J. Bolton",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Blood",
+   "author": "Stuart MacBride",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "From the Dead",
+   "author": "Mark Billingham",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The End of the Wasp Season",
+   "author": "Denise Mina",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Burning Soul",
+   "author": "John Connolly",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Before I Go to Sleep",
+   "author": "S. J. Watson",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Black Flowers",
+   "author": "Steve Mosby",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Now You See Me",
+   "author": "S. J. Bolton",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Where the Bodies are Buried",
+   "author": "Christopher Brookmyre",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Gods and Beasts",
+   "author": "Denise Mina",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "A Dark Redemption",
+   "author": "Stav Sherez",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Lewis Man",
+   "author": "Peter May",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Rush of Blood",
+   "author": "Mark Billingham",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Safe House",
+   "author": "Chris Ewan",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Stolen Souls",
+   "author": "Stuart Neville",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Rubbernecker",
+   "author": "Belinda Bauer",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Chess Men",
+   "author": "Peter May",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The Red Road",
+   "author": "Denise Mina",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Death of Lewis Winter",
+   "author": "Malcolm Mackay",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Dying Fall",
+   "author": "Elly Griffiths",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Eleven Days",
+   "author": "Stav Sherez",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Someone Else's Skin",
+   "author": "Sarah Hilary",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "The Axeman’s Jazz",
+   "author": "Ray Celestin",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Devil in the Marshalsea",
+   "author": "Antonia Hodgson",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Facts of Life and Death",
+   "author": "Belinda Bauer",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Outcast Dead",
+   "author": "Elly Griffiths",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Entry Island",
+   "author": "Peter May",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "I Let You Go",
+   "author": "Clare Mackintosh",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Career of Evil",
+   "author": "Robert Galbraith",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Disclaimer",
+   "author": "Renee Knight",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Rain Dogs",
+   "author": "Adrian McKinty",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Tell No Tales",
+   "author": "Eva Dolan",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Time of Death",
+   "author": "Mark Billingham",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Black Widow",
+   "author": "Christopher Brookmyre",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "After You Die",
+   "author": "Eva Dolan",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Lie with Me",
+   "author": "Sabine Durrant",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Missing, Presumed",
+   "author": "Susie Steiner",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Out of Bounds",
+   "author": "Val McDermid",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Real Tigers",
+   "author": "Mick Herron",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "The Intrusions",
+   "author": "Stav Sherez",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "The Long Drop",
+   "author": "Denise Mina",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "A Rising Man",
+   "author": "Abir Mukherjee",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Insidious Intent",
+   "author": "Val McDermid",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Persons Unknown",
+   "author": "Susie Steiner",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Spook Street",
+   "author": "Mick Herron",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Thirteen",
+   "author": "Steve Cavanagh",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Quaker",
+   "author": "Liam McIlvanney",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Broken Ground",
+   "author": "Val McDermid",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "East of Hounslow",
+   "author": "Khurrum Rahman",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "London Rules",
+   "author": "Mick Herron",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Snap",
+   "author": "Belinda Bauer",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Chain",
+   "author": "Adrian McKinty",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Lost Man",
+   "author": "Jane Harper",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Joe Country",
+   "author": "Mick Herron",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "My Sister, the Serial Killer",
+   "author": "Oyinkan Braithwaite",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Smoke and Ashes",
+   "author": "Abir Mukherjee",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Worst Case Scenario",
+   "author": "Helen Fitzgerald",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "We Begin at the End",
+   "author": "Chris Whitaker",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The Lantern Men",
+   "author": "Elly Griffiths",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Crossing",
+   "author": "Brian McGilloway",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Man on the Street",
+   "author": "Trevor Wood",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Three Hours",
+   "author": "Rosamund Lupton",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Death in the East",
+   "author": "Abir Mukherjee",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Slough House",
+   "author": "Mick Herron",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Daughters of Night",
+   "author": "Laura Shepherd-Robinson",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Midnight at Malabar House",
+   "author": "Vaseem Khan",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Thing to Burn",
+   "author": "Will Dean",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Hawks",
+   "author": "Elly Griffiths",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "True Crime Story",
+   "author": "Joseph Knox",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Botanist",
+   "author": "M. W. Craven",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Into the Dark",
+   "author": "Fiona Cummins",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Locked Room",
+   "author": "Elly Griffiths",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Black Hearts",
+   "author": "Doug Johnstone",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Wrong Place, Wrong time",
+   "author": "Gillian McAllister",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The It Girl",
+   "author": "Ruth Ware",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "In the Blink of an Eye",
+   "author": "Jo Callaghan",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Dance",
+   "author": "Mark Billingham",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Secret Hours",
+   "author": "Mick Herron",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Killing Jericho",
+   "author": "William Hussey",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "None of This is True",
+   "author": "Lisa Jewell",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Strange Sally Diamond",
+   "author": "Liz Nugent",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Hunted",
+   "author": "Abir Mukherjee",
+   "year": 2025,
+   "kind": "w"
+  },
+  {
+   "title": "The Cracked Mirror",
+   "author": "Chris Brookmyre",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Mercy Chair",
+   "author": "M W Craven",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Last Word",
+   "author": "Elly Griffiths",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Deadly Animals",
+   "author": "Marie Tierney",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "All the Colours of the Dark",
+   "author": "Chris Whitaker",
+   "year": 2025,
+   "kind": "c"
+  }
+ ]
+}

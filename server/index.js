@@ -16,7 +16,7 @@ import express from 'express';
 import path from 'node:path';
 import fs from 'node:fs';
 import { ROOT } from './env.js';
-import { MODE, lookupBook } from './hardcover.js';
+import { MODE, lookupBook } from './lookup.js';
 
 const PORT = Number(process.env.PORT || 8099);
 const app = express();
@@ -35,23 +35,37 @@ app.get('/api/book', async (req, res) => {
     year: result.year,
     description: result.description,
     source: result.source,
+    via: result.via,
   });
 });
 
 /* ── /api/list/:slug — a harvested award list ────────────────
-   Phase 9 (harvest ~2,000 books) is what populates these. Until
-   then every slug reports a clean miss rather than a 404, so the
-   client's fallback chain has one shape to handle. */
-const LISTS_DIR = path.join(ROOT, 'server/fixtures/lists');
+   Phase 9 populated these: data/lists/<slug>.json, written by
+   tools/harvest.mjs and committed. server/fixtures/lists/ stays as
+   a second place to look, so a hand-recorded fixture still works.
+   An unknown slug still reports a clean miss rather than a 404, so
+   the client's fallback chain has one shape to handle. */
+const LIST_DIRS = [path.join(ROOT, 'data/lists'), path.join(ROOT, 'server/fixtures/lists')];
 app.get('/api/list/:slug', (req, res) => {
   const slug = req.params.slug.replace(/[^a-z0-9-]/gi, '');
-  const file = path.join(LISTS_DIR, `${slug}.json`);
-  if (fs.existsSync(file)) {
+  for (const dir of LIST_DIRS) {
+    const file = path.join(dir, `${slug}.json`);
+    if (!fs.existsSync(file)) continue;
     try {
-      const items = JSON.parse(fs.readFileSync(file, 'utf8'));
-      return res.json({ slug, items, source: 'fixture' });
+      const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
+      /* A harvested list is a recorded response, which is what §5 means by
+         `fixture` — so the contract's three source values do not grow a
+         fourth. What it does carry is its provenance: the exact page and
+         revision it was parsed from, so a caller can check the accolades
+         rather than take them on trust. */
+      const items = Array.isArray(raw) ? raw : raw.entries || [];
+      const prov = Array.isArray(raw) ? {} : {
+        prize: raw.prize, page: raw.page, url: raw.url,
+        permalink: raw.permalink, revid: raw.revid, fetchedAt: raw.fetchedAt,
+      };
+      return res.json({ slug, items, source: 'fixture', ...prov });
     } catch {
-      /* fall through to miss */
+      /* unreadable — try the next directory, then report a miss */
     }
   }
   res.json({ slug, items: [], source: 'miss' });

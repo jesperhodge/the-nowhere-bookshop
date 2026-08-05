@@ -1,0 +1,254 @@
+{
+ "slug": "forward-first",
+ "prize": "Forward Prize for Best First Collection",
+ "rooms": [
+  "attic",
+  "rafters"
+ ],
+ "page": "Forward Prizes for Poetry",
+ "url": "https://en.wikipedia.org/wiki/Forward_Prizes_for_Poetry",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1328584223",
+ "revid": 1328584223,
+ "fetchedAt": "2026-08-05T16:27:16.020Z",
+ "counts": {
+  "entries": 34,
+  "winners": 34,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Best Collection",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 1,
+   "heading": "Best First Collection",
+   "headers": "Year | Author | Title | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 34,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 2,
+   "heading": "Best Single Poem (written)",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 3,
+   "heading": "Best Single Poem (performed)",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Kid",
+   "author": "Simon Armitage",
+   "year": 1992,
+   "kind": "w"
+  },
+  {
+   "title": "Nil Nil",
+   "author": "Don Paterson",
+   "year": 1993,
+   "kind": "w"
+  },
+  {
+   "title": "Progeny of Air",
+   "author": "Kwame Dawes",
+   "year": 1994,
+   "kind": "w"
+  },
+  {
+   "title": "Breathe Now, Breathe",
+   "author": "Jane Duran",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "The Thing in the Gap Stone Stile",
+   "author": "Alice Oswald",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "A Painted Field",
+   "author": "Robin Robertson",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "The Boy from the Chemist is Here to See You",
+   "author": "Paul Farley",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "The Man in the White Suit",
+   "author": "Nick Drake",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "In",
+   "author": "Andrew Waterhouse",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Panoramic Lounge Bar",
+   "author": "John Stammers",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Touching the Bones",
+   "author": "Tom French",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Fire Stations",
+   "author": "A. B. Jackson",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "These Days",
+   "author": "Leontia Flynn",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Intimates",
+   "author": "Helen Farish",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Countries of the Body",
+   "author": "Tishani Doshi",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Look We Have Coming to Dover!",
+   "author": "Daljit Nagra",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Sunday at the Skin Launderette",
+   "author": "Kathryn Simmonds",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "The Striped World",
+   "author": "Emma Jones",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "Berg",
+   "author": "Hilary Menos",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Sidereal",
+   "author": "Rachael Boast",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "81 Austerities",
+   "author": "Sam Riviere",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Dear Boy",
+   "author": "Emily Berry",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Black Country",
+   "author": "Liz Berry",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Small Hands",
+   "author": "Mona Arshi",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Wife",
+   "author": "Tiphanie Yanique",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Night Sky with Exit Wounds",
+   "author": "Ocean Vuong",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Shrines of Upper Austria",
+   "author": "Phoebe Power",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "If All the World and Love Were Young",
+   "author": "Stephen Sexton",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "RENDANG",
+   "author": "Will Harris",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Poor",
+   "author": "Caleb Femi",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "Amnion",
+   "author": "Stephanie Sy-Quia",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Bad Diaspora Poems",
+   "author": "Momtaza Mehri",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "The Wrong Person to Ask",
+   "author": "Marjorie Lotfi",
+   "year": 2024,
+   "kind": "w"
+  },
+  {
+   "title": "Chaotic Good",
+   "author": "Isabelle Baafi",
+   "year": 2025,
+   "kind": "w"
+  }
+ ]
+}

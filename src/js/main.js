@@ -2,7 +2,7 @@
    The Nowhere Bookshop
    ============================================================ */
 
-import { ROOMS, ROOM_BY_ID, pathTo, booksIn, search, surprise, STATS, BOOK_BY_ID, ALL_BOOKS } from './shop.js';
+import { ROOMS, ROOM_BY_ID, pathTo, booksIn, search, surprise, STATS, BOOK_BY_ID, ALL_BOOKS, PICKS, SOURCES } from './shop.js';
 import { buildRoom } from './scene.js';
 import { Ambience } from './ambience.js';
 import { RoomTone } from './audio.js';
@@ -14,6 +14,19 @@ import { buyLink } from './links.js';
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/* The shopkeeper's picks — the books with a curator's note. Since phase 9
+   they are a minority of a shelf rather than all of it, so the tier has to
+   be visible wherever a book is listed, not only in the room. Same ribbon
+   as the gilt band on the spine (scene.css) and the book panel's heading
+   (views/book.js), so it reads as one thing in three places.
+
+   The title attribute, not just the glyph: an icon nobody can name is
+   decoration. `aria-hidden` on the mark and a visually-hidden word beside
+   it, because a screen reader gets no colour and no shape. */
+const PICKMARK = '<span class="pickmark" title="The shopkeeper\'s pick">'
+  + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v13l-4-3-4 3V3z"/></svg>'
+  + '<span class="vh"> — the shopkeeper\'s pick</span></span>';
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -393,9 +406,9 @@ function runSearch(q) {
     books.forEach((b) => {
       findItems.push({ kind: 'book', id: b.id });
       const where = pathTo(b.room).slice(1).map((r) => r.name).join(' › ') || ROOM_BY_ID[b.room].name;
-      html += `<button class="res" type="button" data-book="${esc(b.id)}" role="option">
+      html += `<button class="res${b.pick ? ' res--pick' : ''}" type="button" data-book="${esc(b.id)}" role="option">
         <span class="res__mini">${coverSVG(b, { w: 30, h: 44, detail: 'mini' })}</span>
-        <span class="res__txt"><span class="res__t">${esc(b.title)}</span><span class="res__s">${esc(b.author)}${b.year ? ` · ${b.year}` : ''}</span></span>
+        <span class="res__txt"><span class="res__t">${esc(b.title)}${b.pick ? PICKMARK : ''}</span><span class="res__s">${esc(b.author)}${b.year ? ` · ${b.year}` : ''}</span></span>
         <span class="res__where">${esc(where)}</span>
       </button>`;
     });
@@ -459,14 +472,17 @@ function renderShelf() {
   dom.shelfBody.innerHTML = `
     <div class="parcel__hd">
       <h2 class="plan__title">${esc(room.name)}</h2>
-      <span class="plan__sub">${list.length ? `${list.length} book${list.length === 1 ? '' : 's'} on this shelf` : 'no shelves in this room'}</span>
+      <span class="plan__sub">${list.length
+        ? `${list.length} book${list.length === 1 ? '' : 's'} on this shelf${
+            list.filter((b) => b.pick).length ? `, ${list.filter((b) => b.pick).length} of them the shopkeeper's own` : ''}`
+        : 'no shelves in this room'}</span>
     </div>
     <div class="parcel__body scroll">
       ${list.length ? list.map((b) => `
-        <button class="res" type="button" data-book="${esc(b.id)}">
+        <button class="res${b.pick ? ' res--pick' : ''}" type="button" data-book="${esc(b.id)}">
           <span class="res__mini">${coverSVG(b, { w: 34, h: 50, detail: 'mini' })}</span>
           <span class="res__txt">
-            <span class="res__t">${esc(b.title)}</span>
+            <span class="res__t">${esc(b.title)}${b.pick ? PICKMARK : ''}</span>
             <span class="res__s">${esc(b.author)}${b.year ? ` · ${b.year}` : ''}${b.translator ? ` · tr. ${esc(b.translator)}` : ''}</span>
           </span>
           <span class="res__where">${esc(b.won[0] || b.cited[0] || '')}</span>
@@ -738,4 +754,4 @@ function boot() {
 boot();
 
 /* handy in the console, and used by the tests */
-window.__shop = { state, go, openBook, ringBell, ROOMS, ALL_BOOKS, search, STATS };
+window.__shop = { state, go, openBook, ringBell, ROOMS, ALL_BOOKS, PICKS, SOURCES, search, STATS };

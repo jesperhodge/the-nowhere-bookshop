@@ -1,0 +1,972 @@
+{
+ "slug": "aurealis-sf",
+ "prize": "Aurealis Award for Best Science Fiction Novel",
+ "rooms": [
+  "orrery",
+  "engine"
+ ],
+ "page": "Aurealis Award for Best Science Fiction Novel",
+ "url": "https://en.wikipedia.org/wiki/Aurealis_Award_for_Best_Science_Fiction_Novel",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1367823854",
+ "revid": 1367823854,
+ "fetchedAt": "2026-08-05T16:27:02.397Z",
+ "counts": {
+  "entries": 154,
+  "winners": 30,
+  "cited": 124
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and nominees",
+   "headers": "Year | Author(s) | Novel | Publisher | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 152,
+   "dropped": 0,
+   "winnerMark": "star"
+  },
+  {
+   "t": 1,
+   "heading": "Honourable mentions",
+   "headers": "Year | Author | Novel | Publisher | Ref",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 2,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Distress",
+   "author": "Greg Egan",
+   "year": 1995,
+   "kind": "w"
+  },
+  {
+   "title": "Mirrorsun Rising",
+   "author": "Sean McMullen",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Set Piece",
+   "author": "Kate Orman",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "The Unknown Soldier",
+   "author": "Sean Williams & Shane Dix",
+   "year": 1995,
+   "kind": "c"
+  },
+  {
+   "title": "Metal Fatigue",
+   "author": "Sean Williams",
+   "year": 1996,
+   "kind": "w"
+  },
+  {
+   "title": "Privateer",
+   "author": "Simon Brown",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "Map of Power",
+   "author": "Tess Williams",
+   "year": 1996,
+   "kind": "c"
+  },
+  {
+   "title": "The White Abacus",
+   "author": "Damien Broderick",
+   "year": 1997,
+   "kind": "w"
+  },
+  {
+   "title": "Zones",
+   "author": "Damien Broderick & Rory Barnes",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Winter",
+   "author": "Simon Brown",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "Diaspora",
+   "author": "Greg Egan",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Edge",
+   "author": "Richard Harland",
+   "year": 1997,
+   "kind": "c"
+  },
+  {
+   "title": "The Centurion's Empire",
+   "author": "Sean McMullen",
+   "year": 1998,
+   "kind": "w"
+  },
+  {
+   "title": "Singing the Dogstar Blues",
+   "author": "Alison Goodman",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Night Is for Hunting",
+   "author": "John Marsden",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The New Adventures: Walking to Babylon",
+   "author": "Kate Orman",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "The Resurrected Man",
+   "author": "Sean Williams",
+   "year": 1998,
+   "kind": "c"
+  },
+  {
+   "title": "Teranesia",
+   "author": "Greg Egan",
+   "year": 1999,
+   "kind": "w"
+  },
+  {
+   "title": "Doctor Who: Unnatural History",
+   "author": "Jonathan Blum & Kate Orman",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Book of Revelation",
+   "author": "Damien Broderick & Rory Barnes",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Letter Girl",
+   "author": "Andrew Masterson",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "Spare Parts",
+   "author": "Sally Rogers-Davidson",
+   "year": 1999,
+   "kind": "c"
+  },
+  {
+   "title": "The Miocene Arrow",
+   "author": "Sean McMullen",
+   "year": 2000,
+   "kind": "w"
+  },
+  {
+   "title": "The Deep Field",
+   "author": "James Bradley",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Dying Light",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "Sea as Mirror",
+   "author": "Tess Williams",
+   "year": 2000,
+   "kind": "c"
+  },
+  {
+   "title": "The Dark Imbalance",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2001,
+   "kind": "w"
+  },
+  {
+   "title": "Cosmonaut",
+   "author": "Peter McAllister",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Eyes of the Calculor",
+   "author": "Sean McMullen",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Crossover",
+   "author": "Joel Shepherd",
+   "year": 2001,
+   "kind": "c"
+  },
+  {
+   "title": "Transcension",
+   "author": "Damien Broderick",
+   "year": 2002,
+   "kind": "w"
+  },
+  {
+   "title": "Blue Silence",
+   "author": "Michelle Marquardt",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Echoes of Earth",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2002,
+   "kind": "c"
+  },
+  {
+   "title": "Fallen Gods",
+   "author": "Jonathan Blum & Kate Orman",
+   "year": 2003,
+   "kind": "w"
+  },
+  {
+   "title": "Wyrmhole",
+   "author": "Jay Caselberg",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Terminator Gene",
+   "author": "Ian Irvine",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Blue Box",
+   "author": "Kate Orman",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Orphans of Earth",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "Less Than Human",
+   "author": "Maxine McArthur",
+   "year": 2004,
+   "kind": "w"
+  },
+  {
+   "title": "Orbital Burn",
+   "author": "K. A. Bedford",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "The Rebel",
+   "author": "Jack Dann",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Nylon Angel",
+   "author": "Marianne de Pierres",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Heirs of Earth",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2004,
+   "kind": "c"
+  },
+  {
+   "title": "Eclipse",
+   "author": "K. A. Bedford",
+   "year": 2005,
+   "kind": "w"
+  },
+  {
+   "title": "Designated Targets",
+   "author": "John Birmingham",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Crash Deluxe",
+   "author": "Marianne de Pierres",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "Ascent",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2005,
+   "kind": "c"
+  },
+  {
+   "title": "K-Machines",
+   "author": "Damien Broderick",
+   "year": 2006,
+   "kind": "w"
+  },
+  {
+   "title": "Hydrogen Steel",
+   "author": "K. A. Bedford",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Underground",
+   "author": "Andrew McGahan",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "Descent",
+   "author": "Sean Williams & Shane Dix",
+   "year": 2006,
+   "kind": "c"
+  },
+  {
+   "title": "The Company of the Dead",
+   "author": "David Kowalski",
+   "year": 2007,
+   "kind": "w"
+  },
+  {
+   "title": "Dark Space",
+   "author": "Marianne de Pierres",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Remote Control",
+   "author": "Jack Heath",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Saturn Returns",
+   "author": "Sean Williams",
+   "year": 2007,
+   "kind": "c"
+  },
+  {
+   "title": "Time Machines Repaired While-U-Wait",
+   "author": "K. A. Bedford",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Chaos Space",
+   "author": "Marianne de Pierres",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Hal Spacejock: No Free Lunch",
+   "author": "Simon Haynes",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "The Daughters of Moab",
+   "author": "Kim Westwood",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Earth Ascendant",
+   "author": "Sean Williams",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Wonders of a Godless World",
+   "author": "Andrew McGahan",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "The Grand Conjunction",
+   "author": "Sean Williams",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "Transformation Space",
+   "author": "Marianne de Pierres",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Song of Scarabaeus",
+   "author": "Sara Creasy",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Mirror Space",
+   "author": "Marianne de Pierres",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "The Courier's New Bicycle",
+   "author": "Kim Westwood",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Machine Man",
+   "author": "Max Barry",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Children of Scarabaeus",
+   "author": "Sara Creasy",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Waterboys",
+   "author": "Peter Docker",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Black Glass",
+   "author": "Meg Mundell",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Rook",
+   "author": "Daniel O'Malley",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "Suited",
+   "author": "Jo Anderton",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Last City",
+   "author": "Nina D'Aleo",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "And All the Stars",
+   "author": "Andrea K. Höst",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Interrogation of Ashala Wolf",
+   "author": "Ambelin Kwaymullina",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "A Confusion of Princes",
+   "author": "Garth Nix",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "Lexicon",
+   "author": "Max Barry",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "Trucksong",
+   "author": "Andrew Macrae",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Wrong Turn at the Office of Unmade Lists",
+   "author": "Jane Rawson",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "True Path",
+   "author": "Graham Storrs",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Rupetta",
+   "author": "Nike Sulway",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "Peacemaker",
+   "author": "Marianne de Pierres",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "Aurora: Meridian",
+   "author": "Amanda Bridgeman",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Nil By Mouth",
+   "author": "LynC",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "The White List",
+   "author": "Nina D'Aleo",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Their Shattered World",
+   "author": "Amie Kaufman & Meagan Spooner",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Foresight",
+   "author": "Graham Storrs",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Illuminae",
+   "author": "Amie Kaufman & Jay Kristoff",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Crossed",
+   "author": "Evelyn Blackwell",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Clade",
+   "author": "James Bradley",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Their Fractured Light",
+   "author": "Amie Kaufman & Meagan Spooner",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Renegade",
+   "author": "Joel Shepherd",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Twinmaker: Fall",
+   "author": "Sean Williams",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "Gemima: The Illuminae Files 2",
+   "author": "Amie Kaufman & Jay Kristoff",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Watershed",
+   "author": "Jane Abbott",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Confluence",
+   "author": "S. K. Dunstall",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Squid's Grief",
+   "author": "D. K. Mok",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Stiletto",
+   "author": "Daniel O'Malley",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Threader",
+   "author": "Rebekah Turner",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "From the Wreck",
+   "author": "Jane Rawson",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "Closing Down",
+   "author": "Sally Abbott",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Terra Nullius",
+   "author": "Claire G. Coleman",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Year of the Orphan",
+   "author": "Daniel Findlay",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "An Uncertain Grace",
+   "author": "Krissy Kneen",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Lotus Blue",
+   "author": "Cat Sparks",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Lifel1k3",
+   "author": "Jay Kristoff",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "Scales of Empire",
+   "author": "Kylie Chan",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Obsidio",
+   "author": "Amie Kaufman & Jay Kristoff",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "A Superior Spectre",
+   "author": "Angela Meyer",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Dyschronia",
+   "author": "Jennifer Mills",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "The Second Cure",
+   "author": "Margaret Morgan",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Aurora Rising",
+   "author": "Amie Kaufman* & Jay Kristoff",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "The Subjects",
+   "author": "Sarah Hopkins",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Trespassers",
+   "author": "Meg Mundell",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Year of the Fruit Cake",
+   "author": "Gillian Polack",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Glad Shout",
+   "author": "Alice Robinson",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Daughter of Bad Times",
+   "author": "Rohan Wilson",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "The Animals in That Country",
+   "author": "Laura Jean McKay",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Repo Virtual",
+   "author": "Corey J. White",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "Ghost Species",
+   "author": "James Bradley",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Aurora Burning",
+   "author": "Amie Kaufman & Jay Kristoff",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Fauna",
+   "author": "Donna Mazza",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Mother Fault",
+   "author": "Kate Mildenhall",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "Waking Romeo",
+   "author": "Kathryn Barker",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "The 22 Murders of Madison May",
+   "author": "Max Barry",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Stealing Time",
+   "author": "Rebecca Bowyer",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Papa Lucy & The Boneman",
+   "author": "Jason Fischer",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Aurora’s End",
+   "author": "Amie Kaufman & Jay Kristoff",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Deepwater King",
+   "author": "Claire McKenna",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "36 Streets",
+   "author": "T. R. Napper",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Hovering",
+   "author": "Rhett Davis",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "The Stranger",
+   "author": "Kathryn Hore",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Here Goes Nothing",
+   "author": "Steve Toltz",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Bootstrap",
+   "author": "Georgina Young",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Time of the Cat",
+   "author": "Tansy Rayner Roberts",
+   "year": 2023,
+   "kind": "w"
+  },
+  {
+   "title": "Minds of Sand and Light",
+   "author": "Kylie Chan",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "The Comforting Weight of Water",
+   "author": "Roanna McClelland",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Aliens: Bishop",
+   "author": "T. R. Napper",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Dronikus",
+   "author": "Marko Newman",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Traitor's Run",
+   "author": "Keith Stevenson",
+   "year": 2023,
+   "kind": "c"
+  },
+  {
+   "title": "Temporal Boom",
+   "author": "J. M. Voss",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Transported",
+   "author": "Kate Fitzpatrick",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Inheritance",
+   "author": "Genevieve Gannon",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "The Temp",
+   "author": "Martin Livings",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Juice",
+   "author": "Tim Winton",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Big Time",
+   "author": "Jordan Prosser",
+   "year": 2024,
+   "kind": "c"
+  },
+  {
+   "title": "Wastelands",
+   "author": "Samira Lloyd",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Letters to Our Robot Son",
+   "author": "Candace Bell",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Arborescence",
+   "author": "Rhett Davis",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Volatile Memory",
+   "author": "Seth Haddon",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "Dark Sands",
+   "author": "J. S. Harman",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "All We Have",
+   "author": "Tony Shillitoe",
+   "year": 2025,
+   "kind": "c"
+  },
+  {
+   "title": "The Earthborn",
+   "author": "Paul Collins",
+   "year": 2003,
+   "kind": "c"
+  },
+  {
+   "title": "The Asking Game",
+   "author": "Rose Michael",
+   "year": 2007,
+   "kind": "c"
+  }
+ ]
+}

@@ -1,0 +1,357 @@
+{
+ "slug": "btba-winners",
+ "prize": "Best Translated Book Award",
+ "rooms": [
+  "translator",
+  "hundredwindows",
+  "foreignwindow",
+  "othersuns"
+ ],
+ "page": "Best Translated Book Award",
+ "url": "https://en.wikipedia.org/wiki/Best_Translated_Book_Award",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1361702834",
+ "revid": 1361702834,
+ "fetchedAt": "2026-08-05T16:26:52.055Z",
+ "counts": {
+  "entries": 25,
+  "winners": 25,
+  "cited": 0
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Fiction",
+   "headers": "Year | Author | Title | Translator(s) | Language | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 1,
+   "heading": "Poetry",
+   "headers": "Year | Author | Title | Translator | Language | Publisher",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2,
+    "translator": 3
+   },
+   "took": 12,
+   "dropped": 0,
+   "winnerMark": "all winners"
+  },
+  {
+   "t": 2,
+   "heading": "2008",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 3,
+   "heading": "2008",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 4,
+   "heading": "2009",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 5,
+   "heading": "2009",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 6,
+   "heading": "2010",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 7,
+   "heading": "2010",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 8,
+   "heading": "2011",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 9,
+   "heading": "2011",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 10,
+   "heading": "2012",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 11,
+   "heading": "2012",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 12,
+   "heading": "2013",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 13,
+   "heading": "2013",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 14,
+   "heading": "2014",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 15,
+   "heading": "2014",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 16,
+   "heading": "2015",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 17,
+   "heading": "2015",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 18,
+   "heading": "2016",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 19,
+   "heading": "2016",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 20,
+   "heading": "2017",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 21,
+   "heading": "2017",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 22,
+   "heading": "2018",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 23,
+   "heading": "2018",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 24,
+   "heading": "2019",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 25,
+   "heading": "2019",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 26,
+   "heading": "2020",
+   "skipped": "heading filter"
+  },
+  {
+   "t": 27,
+   "heading": "2020",
+   "skipped": "heading filter"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Guantanamo / Guantánamo",
+   "author": "Germany Dorothea Dieckmann",
+   "year": 2008,
+   "kind": "w",
+   "translator": "Tim Mohr"
+  },
+  {
+   "title": "Tranquility / A nyugalom",
+   "author": "Hungary Attila Bartis",
+   "year": 2009,
+   "kind": "w",
+   "translator": "Imre Goldstein"
+  },
+  {
+   "title": "The Confessions of Noa Weber / שאהבה נפשי",
+   "author": "Israel Gail Hareven",
+   "year": 2010,
+   "kind": "w",
+   "translator": "Dalya Bilu"
+  },
+  {
+   "title": "The True Deceiver / Den ärliga bedragaren",
+   "author": "Finland Tove Jansson",
+   "year": 2011,
+   "kind": "w",
+   "translator": "Thomas Teal"
+  },
+  {
+   "title": "Stone Upon Stone / Kamień na kamieniu",
+   "author": "Poland Wiesław Myśliwski",
+   "year": 2012,
+   "kind": "w",
+   "translator": "Bill Johnston"
+  },
+  {
+   "title": "Satantango / Sátántangó",
+   "author": "Hungary László Krasznahorkai",
+   "year": 2013,
+   "kind": "w",
+   "translator": "George Szirtes"
+  },
+  {
+   "title": "Seiobo There Below / Seiobo járt odalent",
+   "author": "Hungary László Krasznahorkai",
+   "year": 2014,
+   "kind": "w",
+   "translator": "Ottilie Mulzet"
+  },
+  {
+   "title": "The Last Lover / 最后的情人",
+   "author": "China Can Xue",
+   "year": 2015,
+   "kind": "w",
+   "translator": "Annelise Finegan Wasmoen"
+  },
+  {
+   "title": "Signs Preceding the End of the World / Señales que precederán al fin del mundo",
+   "author": "Mexico Yuri Herrera",
+   "year": 2016,
+   "kind": "w",
+   "translator": "Lisa Dillman"
+  },
+  {
+   "title": "Chronicle of the Murdered House / Crônica da casa assassinada",
+   "author": "Brazil Lúcio Cardoso",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Margaret Jull Costa & Robin Patterson"
+  },
+  {
+   "title": "The Invented Part / La parte inventada",
+   "author": "Argentina Rodrigo Fresán",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Will Vanderhyden"
+  },
+  {
+   "title": "Slave Old Man / L'esclave vieil homme et le molosse",
+   "author": "France Patrick Chamoiseau",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Linda Coverdale"
+  },
+  {
+   "title": "EEG",
+   "author": "Croatia Daša Drndić",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Celia Hawkesworth"
+  },
+  {
+   "title": "For the Fighting Spirit of the Walnut / 胡桃の戦意のために",
+   "author": "Japan Takashi Hiraide",
+   "year": 2009,
+   "kind": "w",
+   "translator": "Sawako Nakayasu"
+  },
+  {
+   "title": "The Russian Version / Русская версия",
+   "author": "Russia Elena Fanailova",
+   "year": 2010,
+   "kind": "w",
+   "translator": "Genya Turovskaya & Stephanie Sandler"
+  },
+  {
+   "title": "The Book of Things / Knjiga reči",
+   "author": "Slovenia Aleš Šteger",
+   "year": 2011,
+   "kind": "w",
+   "translator": "Brian Henry"
+  },
+  {
+   "title": "Spectacle & Pigsty",
+   "author": "Japan Kiwao Nomura",
+   "year": 2012,
+   "kind": "w",
+   "translator": "Kyoko Yoshida & Forrest Gander"
+  },
+  {
+   "title": "Wheel with a Single Spoke",
+   "author": "Romania Nichita Stănescu",
+   "year": 2013,
+   "kind": "w",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "The Guest in the Wood",
+   "author": "Italy Elisa Biagini",
+   "year": 2014,
+   "kind": "w",
+   "translator": "Diana Thow & Sarah Stickney & Eugene Ostashevsky"
+  },
+  {
+   "title": "Diorama",
+   "author": "Mexico Rocío Cerón",
+   "year": 2015,
+   "kind": "w",
+   "translator": "Anna Rosenwong"
+  },
+  {
+   "title": "Rilke Shake",
+   "author": "Brazil Angélica Freitas",
+   "year": 2016,
+   "kind": "w",
+   "translator": "Hilary Kaplan"
+  },
+  {
+   "title": "Extracting the Stone of Madness / Extracción de la piedra de locura",
+   "author": "Argentina Alejandra Pizarnik",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Yvette Siegert"
+  },
+  {
+   "title": "Before Lyricism",
+   "author": "Greece Eleni Vakalo",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Karen Emmerich"
+  },
+  {
+   "title": "Of Death. Minimal Odes / Da morte. Odes mínimas",
+   "author": "Brazil Hilda Hilst",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Laura Cesarco Eglin"
+  },
+  {
+   "title": "Time",
+   "author": "Lebanon Etel Adnan",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Sarah Riggs"
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+{
+ "slug": "desmond-elliott",
+ "prize": "Desmond Elliott Prize",
+ "rooms": [
+  "longroom",
+  "smallpress"
+ ],
+ "page": "Desmond Elliott Prize",
+ "url": "https://en.wikipedia.org/wiki/Desmond_Elliott_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1312760932",
+ "revid": 1312760932,
+ "fetchedAt": "2026-08-05T16:26:54.875Z",
+ "counts": {
+  "entries": 45,
+  "winners": 15,
+  "cited": 30
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Winners and shortlists",
+   "headers": "Year | Author | Book | Publisher | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "title": 2
+   },
+   "took": 45,
+   "dropped": 0,
+   "winnerMark": "bg"
+  }
+ ],
+ "entries": [
+  {
+   "title": "Gifted",
+   "author": "Nikita Lalwani",
+   "year": 2008,
+   "kind": "w"
+  },
+  {
+   "title": "Child 44",
+   "author": "Tom Rob Smith",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Sunday at The Cross Bones",
+   "author": "John Walsh",
+   "year": 2008,
+   "kind": "c"
+  },
+  {
+   "title": "Blackmoor",
+   "author": "Edward Hogan",
+   "year": 2009,
+   "kind": "w"
+  },
+  {
+   "title": "A Girl Made of Dust",
+   "author": "Nathalie Abi-Ezzi",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Rescue Man",
+   "author": "Anthony Quinn",
+   "year": 2009,
+   "kind": "c"
+  },
+  {
+   "title": "The Girl with Glass Feet",
+   "author": "Ali Shaw",
+   "year": 2010,
+   "kind": "w"
+  },
+  {
+   "title": "Before the Earthquake",
+   "author": "Maria Allen",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Talk of the Town",
+   "author": "Jacob Polley",
+   "year": 2010,
+   "kind": "c"
+  },
+  {
+   "title": "Saraswati Park",
+   "author": "Anjali Joseph",
+   "year": 2011,
+   "kind": "w"
+  },
+  {
+   "title": "Boxer, Beetle",
+   "author": "Ned Beauman",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "Pigeon English",
+   "author": "Stephen Kelman",
+   "year": 2011,
+   "kind": "c"
+  },
+  {
+   "title": "The Land of Decoration",
+   "author": "Grace McCleen",
+   "year": 2012,
+   "kind": "w"
+  },
+  {
+   "title": "The Last Hundred Days",
+   "author": "Patrick McGuinness",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Unlikely Pilgrimage of Harold Fry",
+   "author": "Rachel Joyce",
+   "year": 2012,
+   "kind": "c"
+  },
+  {
+   "title": "The Marlowe Papers",
+   "author": "Ros Barber",
+   "year": 2013,
+   "kind": "w"
+  },
+  {
+   "title": "The Panopticon",
+   "author": "Jenni Fagan",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "The Universe Versus Alex Woods",
+   "author": "Gavin Extence",
+   "year": 2013,
+   "kind": "c"
+  },
+  {
+   "title": "A Girl Is a Half-formed Thing",
+   "author": "Eimear McBride",
+   "year": 2014,
+   "kind": "w"
+  },
+  {
+   "title": "The Letter Bearer",
+   "author": "Robert Allison",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Ballistics",
+   "author": "D. W. Wilson",
+   "year": 2014,
+   "kind": "c"
+  },
+  {
+   "title": "Our Endless Numbered Days",
+   "author": "Claire Fuller",
+   "year": 2015,
+   "kind": "w"
+  },
+  {
+   "title": "Elizabeth Is Missing",
+   "author": "Emma Healey",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "A Song for Issy Bradley",
+   "author": "Carys Bray",
+   "year": 2015,
+   "kind": "c"
+  },
+  {
+   "title": "The Glorious Heresies",
+   "author": "Lisa McInerney",
+   "year": 2016,
+   "kind": "w"
+  },
+  {
+   "title": "Mrs. Engels",
+   "author": "Gavin McCrea",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "The House at the Edge of the World",
+   "author": "Julia Rochester",
+   "year": 2016,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Hill",
+   "author": "Francis Spufford",
+   "year": 2017,
+   "kind": "w"
+  },
+  {
+   "title": "My Name Is Leon",
+   "author": "Kit de Waal",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "Harmless Like You",
+   "author": "Rowan Hisayo Buchanan",
+   "year": 2017,
+   "kind": "c"
+  },
+  {
+   "title": "We That Are Young",
+   "author": "Preti Taneja",
+   "year": 2018,
+   "kind": "w"
+  },
+  {
+   "title": "How to Be Human",
+   "author": "Paula Cocozza",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Eleanor Oliphant Is Completely Fine",
+   "author": "Gail Honeyman",
+   "year": 2018,
+   "kind": "c"
+  },
+  {
+   "title": "Golden Child",
+   "author": "Claire Adam",
+   "year": 2019,
+   "kind": "w"
+  },
+  {
+   "title": "Hold",
+   "author": "Michael Donkor",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "Devoured",
+   "author": "Anna Mackmin",
+   "year": 2019,
+   "kind": "c"
+  },
+  {
+   "title": "That Reminds Me",
+   "author": "Derek Owusu",
+   "year": 2020,
+   "kind": "w"
+  },
+  {
+   "title": "The Private Joys of Nnenna Maloney",
+   "author": "Okechukwu Nzelu",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Girl with the Louding Voice",
+   "author": "Abi Daré",
+   "year": 2020,
+   "kind": "c"
+  },
+  {
+   "title": "The Manningtree Witches",
+   "author": "A. K. Blakemore",
+   "year": 2021,
+   "kind": "w"
+  },
+  {
+   "title": "little scratch",
+   "author": "Rebecca Watson",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "The Liar's Dictionary",
+   "author": "Eley Williams",
+   "year": 2021,
+   "kind": "c"
+  },
+  {
+   "title": "Maps of Our Spectacular Bodies",
+   "author": "Maddie Mortimer",
+   "year": 2022,
+   "kind": "w"
+  },
+  {
+   "title": "Iron Annie",
+   "author": "Luke Cassidy",
+   "year": 2022,
+   "kind": "c"
+  },
+  {
+   "title": "Keeping the House",
+   "author": "Tice Cin",
+   "year": 2022,
+   "kind": "c"
+  }
+ ]
+}

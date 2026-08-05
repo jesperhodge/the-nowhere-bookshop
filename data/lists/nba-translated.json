@@ -1,0 +1,694 @@
+{
+ "slug": "nba-translated",
+ "prize": "National Book Award for Translated Literature",
+ "rooms": [
+  "translator",
+  "hundredwindows"
+ ],
+ "page": "National Book Award for Translated Literature",
+ "url": "https://en.wikipedia.org/wiki/National_Book_Award_for_Translated_Literature",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1355878022",
+ "revid": 1355878022,
+ "fetchedAt": "2026-08-05T16:26:47.186Z",
+ "counts": {
+  "entries": 80,
+  "winners": 8,
+  "cited": 72
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "2018",
+   "headers": "Author | Title | Original language | Translator | Country of Publication | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 6
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 1,
+   "heading": "2019",
+   "headers": "Author | Title | Original language | Translator | Country of Publication | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 6
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 2,
+   "heading": "2020",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2021",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "2022",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "2023",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 6,
+   "heading": "2024",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 7,
+   "heading": "2025",
+   "headers": "Author | Title | Original language | Translator | Publisher | Result",
+   "roles": {
+    "author": 0,
+    "title": 1,
+    "translator": 3,
+    "result": 5
+   },
+   "took": 10,
+   "dropped": 0,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Emissary",
+   "author": "Yoko Tawada",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Margaret Mitsutani"
+  },
+  {
+   "title": "Disoriental",
+   "author": "Négar Djavadi",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Tina Kover"
+  },
+  {
+   "title": "Trick",
+   "author": "Domenico Starnone",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jhumpa Lahiri"
+  },
+  {
+   "title": "Flights",
+   "author": "Olga Tokarczuk",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Love",
+   "author": "Hanne Ørstavik",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "Comemadre",
+   "author": "Roque Larraquy",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Heather Cleary"
+  },
+  {
+   "title": "The Beekeeper: Rescuing the Stolen Women of Iraq",
+   "author": "Dunya Mikhail",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Max Weiss"
+  },
+  {
+   "title": "One Part Woman",
+   "author": "Perumal Murugan",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Aniruddhan Vasudevan"
+  },
+  {
+   "title": "Aetherial Worlds",
+   "author": "Tatyana Tolstaya",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Anya Migdal"
+  },
+  {
+   "title": "Wait, Blink: A Perfect Picture of Inner Life",
+   "author": "Gunnhild Øyehaug",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Kari Dickson"
+  },
+  {
+   "title": "Baron Wenckheim's Homecoming",
+   "author": "László Krasznahorkai",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Ottilie Mulzet"
+  },
+  {
+   "title": "Death is Hard Work",
+   "author": "Khaled Khalifa",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Leri Price"
+  },
+  {
+   "title": "The Barefoot Woman",
+   "author": "Scholastique Mukasonga",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "The Memory Police",
+   "author": "Yoko Ogawa",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Stephen Snyder"
+  },
+  {
+   "title": "Crossing",
+   "author": "Pajtim Statovci",
+   "year": 2019,
+   "kind": "c",
+   "translator": "David Hackston"
+  },
+  {
+   "title": "The Collector of Leftover Souls",
+   "author": "Eliane Brum",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Diane Grosklaus Whitty"
+  },
+  {
+   "title": "Space Invaders",
+   "author": "Nona Fernández",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Natasha Wimmer"
+  },
+  {
+   "title": "Will and Testament",
+   "author": "Vigdis Hjorth",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Charlotte Barslund"
+  },
+  {
+   "title": "Drive Your Plow Over the Bones of the Dead",
+   "author": "Olga Tokarczuk",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "When Death Takes Something From You Give it Back",
+   "author": "Naja Marie Aidt",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Denise Newman"
+  },
+  {
+   "title": "Tokyo Ueno Station",
+   "author": "Miri Yu",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Morgan Giles"
+  },
+  {
+   "title": "High as the Waters Rise",
+   "author": "Anja Kampmann",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Anne Posten"
+  },
+  {
+   "title": "The Family Clause",
+   "author": "Jonas Hassen Khemiri",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Alice Menzies"
+  },
+  {
+   "title": "The Bitch",
+   "author": "Pilar Quintana",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Lisa Dillman"
+  },
+  {
+   "title": "Minor Detail",
+   "author": "Adania Shibli",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Elisabeth Jaquette"
+  },
+  {
+   "title": "The Enlightenment of the Greengage Tree",
+   "author": "Shokoofeh Azar",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Anonymous"
+  },
+  {
+   "title": "Kim Jiyoung, Born 1982",
+   "author": "Cho Nam-Joo",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Jamie Chang"
+  },
+  {
+   "title": "The Story of a Goat",
+   "author": "Perumal Murugan",
+   "year": 2020,
+   "kind": "c",
+   "translator": "N. Kalyan Raman"
+  },
+  {
+   "title": "Hurricane Season",
+   "author": "Fernanda Melchor",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "The Helios Disaster",
+   "author": "Linda Boström Knausgård",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Rachel Willson-Broyles"
+  },
+  {
+   "title": "Winter in Sokcho",
+   "author": "Elisa Shua Dusapin",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Aneesa Abbas Higgins"
+  },
+  {
+   "title": "Peach Blossom Paradise",
+   "author": "Ge Fei",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Canaan Morse"
+  },
+  {
+   "title": "The Twilight Zone",
+   "author": "Nona Fernández",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Natasha Wimmer"
+  },
+  {
+   "title": "When We Cease to Understand the World",
+   "author": "Benjamín Labatut",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Adrian Nathan West"
+  },
+  {
+   "title": "Planet of Clay",
+   "author": "Samar Yazbek",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Leri Price"
+  },
+  {
+   "title": "Waiting for the Waters to Rise",
+   "author": "Maryse Condé",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Richard Philcox"
+  },
+  {
+   "title": "On the Origin of Species and Other Stories",
+   "author": "Bo-young Kim",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Joungmin Lee Comfort & Sora Kim-Russell"
+  },
+  {
+   "title": "Rabbit Island",
+   "author": "Elvira Navarro",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "An Inventory of Losses",
+   "author": "Judith Schalansky",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Jackie Smith"
+  },
+  {
+   "title": "In Memory of Memory",
+   "author": "Maria Stepanova",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sasha Dugdale"
+  },
+  {
+   "title": "Seven Empty Houses",
+   "author": "Samanta Schweblin",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "A New Name: Septology VI-VII",
+   "author": "Jon Fosse",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Damion Searls"
+  },
+  {
+   "title": "Kibogo",
+   "author": "Scholastique Mukasonga",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Mark Polizzotti"
+  },
+  {
+   "title": "Jawbone",
+   "author": "Mónica Ojeda",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sarah Booker"
+  },
+  {
+   "title": "Scattered All Over the Earth",
+   "author": "Yoko Tawada",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Margaret Mitsutani"
+  },
+  {
+   "title": "Ibn Arabi's Small Death",
+   "author": "Mohammed Hasan Alwan",
+   "year": 2022,
+   "kind": "c",
+   "translator": "William M"
+  },
+  {
+   "title": "Seasons of Purgatory",
+   "author": "Shahriar Mandanipour",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sara Khalili"
+  },
+  {
+   "title": "The Employees",
+   "author": "Olga Ravn",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "Where You Come From",
+   "author": "Saša Stanišić",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Damion Searls"
+  },
+  {
+   "title": "The Books of Jacob",
+   "author": "Olga Tokarczuk",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "The Words That Remain",
+   "author": "Stênio Gardel",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Bruna Dantas Lobato"
+  },
+  {
+   "title": "Cursed Bunny",
+   "author": "Bora Chung",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Anton Hur"
+  },
+  {
+   "title": "Beyond the Door of No Return",
+   "author": "David Diop",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Sam Taylor"
+  },
+  {
+   "title": "Abyss",
+   "author": "Pilar Quintana",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Lisa Dillman"
+  },
+  {
+   "title": "On a Woman's Madness",
+   "author": "Astrid Roemer",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Lucy Scott"
+  },
+  {
+   "title": "The Devil of the Provinces",
+   "author": "Juan Cárdenas",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Lizzie Davis"
+  },
+  {
+   "title": "Kairos",
+   "author": "Jenny Erpenbeck",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "No One Prayed Over Their Graves",
+   "author": "Khaled Khalifa",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Leri Price"
+  },
+  {
+   "title": "This is Not Miami",
+   "author": "Fernanda Melchor",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "The Most Secret Memory of Men",
+   "author": "Mohamed Mbougar Sarr",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Lara Vergnaud"
+  },
+  {
+   "title": "Taiwan Travelogue",
+   "author": "Yáng Shuāng-zǐ",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Lin King"
+  },
+  {
+   "title": "The Book Censor's Library",
+   "author": "Bothayna El Essa",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Ranya Abdelrahman & Sawad Hussain"
+  },
+  {
+   "title": "Ædnan",
+   "author": "Linnea Axelsson",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Saskia Vogel"
+  },
+  {
+   "title": "The Villain's Dance",
+   "author": "Fiston Mwanza Mujila",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Roland Glasser"
+  },
+  {
+   "title": "Where the Wind Calls Home",
+   "author": "Samar Yazbek",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Leri Price"
+  },
+  {
+   "title": "The Tale of a Wall: Reflections on the Meaning of Hope and Freedom",
+   "author": "Nasser Abu Srour",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Luke Leafgren"
+  },
+  {
+   "title": "On the Calculation of Volume",
+   "author": "Solvej Balle",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Barbara J. Haveland"
+  },
+  {
+   "title": "Woodworm",
+   "author": "Layla Martínez",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Sophie Hughes & Annie McDermott"
+  },
+  {
+   "title": "Pink Slime",
+   "author": "Fernanda Trías",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Heather Cleary"
+  },
+  {
+   "title": "The Abyss",
+   "author": "Fernando Vallejo",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Yvette Siegert"
+  },
+  {
+   "title": "We Are Green and Trembling",
+   "author": "Gabriela Cabezón Cámara",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Robin Myers"
+  },
+  {
+   "title": "On the Calculation of Volume",
+   "author": "Solvej Balle",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Sophia Hersi Smith & Jennifer Russell"
+  },
+  {
+   "title": "The Remembered Soldier",
+   "author": "Anjet Daanje",
+   "year": 2025,
+   "kind": "c",
+   "translator": "David McKay"
+  },
+  {
+   "title": "We Computers: A Ghazal Novel",
+   "author": "Hamid Ismailov",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Shelley Fairweather-Vega"
+  },
+  {
+   "title": "Sad Tiger",
+   "author": "Neige Sinno",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Natasha Lehrer"
+  },
+  {
+   "title": "The Queen of Swords",
+   "author": "Jazmina Barrera",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Christina MacSweeney"
+  },
+  {
+   "title": "Hunchback",
+   "author": "Saou Ichikawa",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Polly Barton"
+  },
+  {
+   "title": "We Do Not Part",
+   "author": "Han Kang",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Paige Aniyah Morris"
+  },
+  {
+   "title": "Sleep Phase",
+   "author": "Mohamed Kheir",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Robin Moger"
+  },
+  {
+   "title": "Perfection",
+   "author": "Vincenzo Latronico",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  }
+ ]
+}

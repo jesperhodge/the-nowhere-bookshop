@@ -1,0 +1,1275 @@
+{
+ "slug": "intbooker",
+ "prize": "International Booker Prize",
+ "rooms": [
+  "translator",
+  "hundredwindows",
+  "fronttable"
+ ],
+ "page": "International Booker Prize",
+ "url": "https://en.wikipedia.org/wiki/International_Booker_Prize",
+ "permalink": "https://en.wikipedia.org/w/index.php?oldid=1365154313",
+ "revid": 1365154313,
+ "fetchedAt": "2026-08-05T16:26:45.171Z",
+ "counts": {
+  "entries": 154,
+  "winners": 11,
+  "cited": 143
+ },
+ "audit": [
+  {
+   "t": 0,
+   "heading": "Pre-2016",
+   "skipped": "no title/author column",
+   "headers": "Year | Author | Country | Translator | Language | Ref."
+  },
+  {
+   "t": 1,
+   "heading": "2016 onwards",
+   "headers": "Year | Author | Home country | Translator | Translation published in (country) | Work | Language | Ref.",
+   "roles": {
+    "year": 0,
+    "author": 1,
+    "translator": 3,
+    "title": 5
+   },
+   "took": 11,
+   "dropped": 0,
+   "winnerMark": "none — all cited"
+  },
+  {
+   "t": 2,
+   "heading": "2016",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 3,
+   "heading": "2017",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 4,
+   "heading": "2018",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 5,
+   "heading": "2019",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 6,
+   "heading": "2020",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 7,
+   "heading": "2021",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 8,
+   "heading": "2022",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 9,
+   "heading": "2023",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 10,
+   "heading": "2024",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 11,
+   "heading": "2025",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 0,
+   "winnerMark": "result column"
+  },
+  {
+   "t": 12,
+   "heading": "2026",
+   "headers": "Award | Author | Country | Language | Translator | Title | Publisher | Judges",
+   "roles": {
+    "result": 0,
+    "author": 1,
+    "translator": 4,
+    "title": 5
+   },
+   "took": 13,
+   "dropped": 1,
+   "winnerMark": "result column"
+  }
+ ],
+ "entries": [
+  {
+   "title": "The Vegetarian / 채식주의자",
+   "author": "Han Kang",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Deborah Smith"
+  },
+  {
+   "title": "A Horse Walks into a Bar / סוס אחד נכנס לבר‎",
+   "author": "David Grossman",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Jessica Cohen"
+  },
+  {
+   "title": "Flights / Bieguni",
+   "author": "Olga Tokarczuk",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Celestial Bodies / سيدات القمر",
+   "author": "Jokha al-Harthi",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Marilyn Booth"
+  },
+  {
+   "title": "The Discomfort of Evening / De avond is ongemak",
+   "author": "Marieke Lucas Rijneveld",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Michele Hutchison"
+  },
+  {
+   "title": "At Night All Blood Is Black / Frère d'âme",
+   "author": "David Diop",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Anna Moschovakis"
+  },
+  {
+   "title": "Tomb of Sand / रेत समाधि",
+   "author": "Geetanjali Shree",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Daisy Rockwell"
+  },
+  {
+   "title": "Time Shelter / Времеубежище",
+   "author": "Georgi Gospodinov",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Angela Rodel"
+  },
+  {
+   "title": "Kairos",
+   "author": "Jenny Erpenbeck",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "Heart Lamp: Selected Stories / ಎದೆಯ ಹಣತೆ /",
+   "author": "Banu Mushtaq",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Deepa Bhasthi"
+  },
+  {
+   "title": "Taiwan Travelogue / 臺灣漫遊錄 /",
+   "author": "Yang Shuang-zi",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Lin King"
+  },
+  {
+   "title": "The Vegetarian / 채식주의자",
+   "author": "Han Kang",
+   "year": 2016,
+   "kind": "w",
+   "translator": "Deborah Smith"
+  },
+  {
+   "title": "A General Theory of Oblivion / Teoria Geral do Esquecimento",
+   "author": "José Eduardo Agualusa",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Daniel Hahn"
+  },
+  {
+   "title": "The Story of the Lost Child / Storia della bambina perduta",
+   "author": "Elena Ferrante",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Ann Goldstein"
+  },
+  {
+   "title": "A Strangeness in My Mind / Kafamda Bir Tuhaflık",
+   "author": "Orhan Pamuk",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Ekin Oklap"
+  },
+  {
+   "title": "A Whole Life / Ein ganzes Leben",
+   "author": "Robert Seethaler",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Charlotte Collins"
+  },
+  {
+   "title": "The Four Books / 四書",
+   "author": "Yan Lianke",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Carlos Rojas"
+  },
+  {
+   "title": "Mend the Living / Réparer les vivants",
+   "author": "Maylis de Kerangal",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Jessica Moore"
+  },
+  {
+   "title": "Man Tiger / Lelaki Harimau",
+   "author": "Eka Kurniawan",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Labodalih Sembiring"
+  },
+  {
+   "title": "Tram 83",
+   "author": "Fiston Mwanza Mujila",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Roland Glasser"
+  },
+  {
+   "title": "A Cup of Rage / Um Copo de Cólera",
+   "author": "Raduan Nassar",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Stefan Tobler"
+  },
+  {
+   "title": "Ladivine",
+   "author": "Marie NDiaye",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "Death by Water / 水死",
+   "author": "Kenzaburō Ōe",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Deborah Boliver Boehm"
+  },
+  {
+   "title": "White Hunger / Nälkävuosi",
+   "author": "Aki Ollikainen",
+   "year": 2016,
+   "kind": "c",
+   "translator": "Emily Jeremiah & Fleur Jeremiah"
+  },
+  {
+   "title": "A Horse Walks into a Bar / סוס אחד נכנס לבר",
+   "author": "David Grossman",
+   "year": 2017,
+   "kind": "w",
+   "translator": "Jessica Cohen"
+  },
+  {
+   "title": "Compass / Boussole",
+   "author": "Mathias Énard",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Charlotte Mandell"
+  },
+  {
+   "title": "The Unseen / De usynlige",
+   "author": "Roy Jacobsen",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Don Bartlett & Don Shaw"
+  },
+  {
+   "title": "Mirror, Shoulder, Signal / Spejl, skulder, blink",
+   "author": "Dorthe Nors",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Misha Hoekstra"
+  },
+  {
+   "title": "Judas / הבשורה על-פי יהודה",
+   "author": "Amos Oz",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Nicholas de Lange"
+  },
+  {
+   "title": "Fever Dream / Distancia de rescate",
+   "author": "Samanta Schweblin",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "Swallowing Mercury / Guguły",
+   "author": "Wioletta Greg",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Eliza Marciniak"
+  },
+  {
+   "title": "War and Turpentine / Oorlog en terpentijn",
+   "author": "Stefan Hertmans",
+   "year": 2017,
+   "kind": "c",
+   "translator": "David McKay"
+  },
+  {
+   "title": "The Traitor's Niche / Kamarja e turpit",
+   "author": "Ismail Kadare",
+   "year": 2017,
+   "kind": "c",
+   "translator": "John Hodgson"
+  },
+  {
+   "title": "Black Moses / Petit Piment",
+   "author": "Alain Mabanckou",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Helen Stevenson"
+  },
+  {
+   "title": "Bricks and Mortar / Im Stein",
+   "author": "Clemens Meyer",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Katy Derbyshire"
+  },
+  {
+   "title": "Fish Have No Feet / Fiskarnir hafa enga fætur",
+   "author": "Jón Kalman Stefánsson",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Phil Roughton"
+  },
+  {
+   "title": "The Explosion Chronicles / 炸裂志",
+   "author": "Yan Lianke",
+   "year": 2017,
+   "kind": "c",
+   "translator": "Carlos Rojas"
+  },
+  {
+   "title": "Flights / Bieguni",
+   "author": "Olga Tokarczuk",
+   "year": 2018,
+   "kind": "w",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "Vernon Subutex 1",
+   "author": "Virginie Despentes",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "The White Book / 흰",
+   "author": "Han Kang",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Deborah Smith"
+  },
+  {
+   "title": "The World Goes On / Megy a világ",
+   "author": "László Krasznahorkai",
+   "year": 2018,
+   "kind": "c",
+   "translator": "John Batki, Ottilie Mulzet & George Szirtes"
+  },
+  {
+   "title": "Like a Fading Shadow / Como la sombra que se va",
+   "author": "Antonio Muñoz Molina",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Camilo A. Ramirez"
+  },
+  {
+   "title": "Frankenstein in Baghdad / فرانكشتاين في بغداد",
+   "author": "Ahmed Saadawi",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Jonathan Wright"
+  },
+  {
+   "title": "The 7th Function of Language / La Septième Fonction du langage",
+   "author": "Laurent Binet",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Sam Taylor"
+  },
+  {
+   "title": "The Impostor / El impostor",
+   "author": "Javier Cercas",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "Go, Went, Gone / Gehen, ging, gegangen",
+   "author": "Jenny Erpenbeck",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Susan Bernofsky"
+  },
+  {
+   "title": "Die, My Love / Mátate, amor",
+   "author": "Ariana Harwicz",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Sarah Moses & Carolina Orloff"
+  },
+  {
+   "title": "The Flying Mountain / Der fliegende Berg",
+   "author": "Christoph Ransmayr",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Simon Pare"
+  },
+  {
+   "title": "The Stolen Bicycle / 單車失竊記",
+   "author": "Wu Ming-Yi",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Darryl Sterk"
+  },
+  {
+   "title": "The Dinner Guest / El comensal",
+   "author": "Gabriela Ybarra",
+   "year": 2018,
+   "kind": "c",
+   "translator": "Natasha Wimmer"
+  },
+  {
+   "title": "Celestial Bodies / سيدات القمر",
+   "author": "Jokha Alharthi",
+   "year": 2019,
+   "kind": "w",
+   "translator": "Marilyn Booth"
+  },
+  {
+   "title": "The Years / Les années",
+   "author": "Annie Ernaux",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Alison L. Strayer"
+  },
+  {
+   "title": "The Pine Islands / Die Kieferninseln",
+   "author": "Marion Poschmann",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Jen Calleja"
+  },
+  {
+   "title": "Drive Your Plow over the Bones of the Dead / Prowadź swój pług przez kości umarłych",
+   "author": "Olga Tokarczuk",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Antonia Lloyd-Jones"
+  },
+  {
+   "title": "The Shape of the Ruins / La forma de las ruinas",
+   "author": "Juan Gabriel Vásquez",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Anne McLean"
+  },
+  {
+   "title": "The Remainder / La resta",
+   "author": "Alia Trabucco Zerán",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "Love in the New Millennium / 新世纪爱情故事",
+   "author": "Can Xue",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Annelise Finegan Wasmoen"
+  },
+  {
+   "title": "At Dusk / 해질무렵",
+   "author": "Hwang Sok-yong",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Sora Kim-Russell"
+  },
+  {
+   "title": "Jokes for the Gunmen / نكات للمسلحين",
+   "author": "Mazen Maarouf",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Jonathan Wright"
+  },
+  {
+   "title": "Four Soldiers / Quatre soldats",
+   "author": "Hubert Mingarelli",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Sam Taylor"
+  },
+  {
+   "title": "Mouthful of Birds / Pájaros en la boca",
+   "author": "Samanta Schweblin",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "The Faculty of Dreams / Drömfakulteten",
+   "author": "Sara Stridsberg",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Deborah Bragan-Turner"
+  },
+  {
+   "title": "The Death of Murat Idrissi / De dood van Murat Idrissi",
+   "author": "Tommy Wieringa",
+   "year": 2019,
+   "kind": "c",
+   "translator": "Sam Garrett"
+  },
+  {
+   "title": "The Discomfort of Evening / De avond is ongemak",
+   "author": "Marieke Lucas Rijneveld",
+   "year": 2020,
+   "kind": "w",
+   "translator": "Michele Hutchison"
+  },
+  {
+   "title": "The Enlightenment of the Greengage Tree / اشراق درخت گوجه سبز",
+   "author": "Shokoofeh Azar",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Anonymous"
+  },
+  {
+   "title": "The Adventures of China Iron / Las aventuras de la China Iron",
+   "author": "Gabriela Cabezón Cámara",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Iona Macintyre & Fiona Mackintosh"
+  },
+  {
+   "title": "Tyll",
+   "author": "Daniel Kehlmann",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Ross Benjamin"
+  },
+  {
+   "title": "Hurricane Season / Temporada de huracanes",
+   "author": "Fernanda Melchor",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "The Memory Police / 密やかな結晶",
+   "author": "Yōko Ogawa",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Stephen Snyder"
+  },
+  {
+   "title": "Red Dog / Buys: 'n grensroman",
+   "author": "Willem Anker",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Michiel Heyns"
+  },
+  {
+   "title": "The Other Name: Septology I – II / Det andre namnet – Septologien I – II",
+   "author": "Jon Fosse",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Damion Searls"
+  },
+  {
+   "title": "The Eighth Life / Das achte Leben (Für Brilka)",
+   "author": "Nino Haratischvili",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Charlotte Collins & Ruth Martin"
+  },
+  {
+   "title": "Serotonin / Sérotonine",
+   "author": "Michel Houellebecq",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Shaun Whiteside"
+  },
+  {
+   "title": "Faces on the Tip of My Tongue / Un renard à mains nues",
+   "author": "Emmanuelle Pagano",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Sophie Lewis & Jennifer Higgins"
+  },
+  {
+   "title": "Little Eyes / Kentukis",
+   "author": "Samanta Schweblin",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "Mac and His Problem / Mac y su contratiempo",
+   "author": "Enrique Vila-Matas",
+   "year": 2020,
+   "kind": "c",
+   "translator": "Margaret Jull Costa & Sophie Hughes"
+  },
+  {
+   "title": "At Night All Blood Is Black / Frère d'âme",
+   "author": "David Diop",
+   "year": 2021,
+   "kind": "w",
+   "translator": "Anna Moschovakis"
+  },
+  {
+   "title": "The Dangers of Smoking in Bed / Los peligros de fumar en la cama",
+   "author": "Mariana Enríquez",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Megan McDowell"
+  },
+  {
+   "title": "When We Cease to Understand the World / Un verdor terrible",
+   "author": "Benjamín Labatut",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Adrian Nathan West"
+  },
+  {
+   "title": "The Employees / De ansatte",
+   "author": "Olga Ravn",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "In Memory of Memory / Памяти памяти",
+   "author": "Maria Stepanova",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Sasha Dugdale"
+  },
+  {
+   "title": "The War of the Poor / La Guerre des pauvres",
+   "author": "Éric Vuillard",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Mark Polizzotti"
+  },
+  {
+   "title": "I Live in the Slums",
+   "author": "Can Xue",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Karen Gernant & Chen Zeping"
+  },
+  {
+   "title": "The Pear Field / მსხლების მინდორი",
+   "author": "Nana Ekvtimishvili",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Elizabeth Heighway"
+  },
+  {
+   "title": "The Perfect Nine: The Epic of Gĩkũyũ and Mũmbi / Kenda Mũiyũru: Rũgano rwa Gĩkũyũ na Mũmbi",
+   "author": "Ngũgĩ wa Thiong'o",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Ngũgĩ wa Thiong'o"
+  },
+  {
+   "title": "Summer Brother / Zomervacht",
+   "author": "Jaap Robben",
+   "year": 2021,
+   "kind": "c",
+   "translator": "David Doherty"
+  },
+  {
+   "title": "An Inventory of Losses / Verzeichnis einiger Verluste",
+   "author": "Judith Schalansky",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Jackie Smith"
+  },
+  {
+   "title": "Minor Detail / تفصيل ثانوي",
+   "author": "Adania Shibli",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Elisabeth Jaquette"
+  },
+  {
+   "title": "Wretchedness / Eländet",
+   "author": "Andrzej Tichý",
+   "year": 2021,
+   "kind": "c",
+   "translator": "Nichola Smalley"
+  },
+  {
+   "title": "Tomb of Sand / रेत समाधि",
+   "author": "Geetanjali Shree",
+   "year": 2022,
+   "kind": "w",
+   "translator": "Daisy Rockwell"
+  },
+  {
+   "title": "Cursed Bunny / 저주토끼",
+   "author": "Bora Chung",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Anton Hur"
+  },
+  {
+   "title": "A New Name: Septology VI-VII / Eit nytt namn – Septologien VI – VII",
+   "author": "Jon Fosse",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Damion Searls"
+  },
+  {
+   "title": "Heaven / ヘヴン",
+   "author": "Mieko Kawakami",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sam Bett & David Boyd"
+  },
+  {
+   "title": "Elena Knows / Elena sabe",
+   "author": "Claudia Piñeiro",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Frances Riddle"
+  },
+  {
+   "title": "The Books of Jacob / Księgi Jakubowe",
+   "author": "Olga Tokarczuk",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Jennifer Croft"
+  },
+  {
+   "title": "After the Sun / Efter solen",
+   "author": "Jonas Eika",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sherilyn Hellberg"
+  },
+  {
+   "title": "More Than I Love My Life / אתי החיים משחק הרבה",
+   "author": "David Grossman",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Jessica Cohen"
+  },
+  {
+   "title": "The Book of Mother / Fugitive parce que reine",
+   "author": "Violaine Huisman",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Leslie Camhi"
+  },
+  {
+   "title": "Paradais / Páradais",
+   "author": "Fernanda Melchor",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "Love in the Big City / 대도시의 사랑법",
+   "author": "Sang Young Park",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Anton Hur"
+  },
+  {
+   "title": "Happy Stories, Mostly / Cerita-cerita Bahagia, Hampir Seluruhnya",
+   "author": "Norman Erikson Pasaribu",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Tiffany Tsao"
+  },
+  {
+   "title": "Phenotypes / Marrom e Amarelo",
+   "author": "Paulo Scott",
+   "year": 2022,
+   "kind": "c",
+   "translator": "Daniel Hahn"
+  },
+  {
+   "title": "Time Shelter / Времеубежище",
+   "author": "Georgi Gospodinov",
+   "year": 2023,
+   "kind": "w",
+   "translator": "Angela Rodel"
+  },
+  {
+   "title": "Boulder",
+   "author": "Eva Baltasar",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Julia Sanches"
+  },
+  {
+   "title": "Whale / 고래",
+   "author": "Cheon Myeong-kwan",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Chi-Young Kim"
+  },
+  {
+   "title": "The Gospel According to the New World / L'Évangile du nouveau monde",
+   "author": "Maryse Condé",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Richard Philcox"
+  },
+  {
+   "title": "Standing Heavy / Debout-payé",
+   "author": "GauZ'",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Frank Wynne"
+  },
+  {
+   "title": "Still Born / La hija única",
+   "author": "Guadalupe Nettel",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Rosalind Harvey"
+  },
+  {
+   "title": "Is Mother Dead / Er mor død",
+   "author": "Vigdis Hjorth",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Charlotte Barslund"
+  },
+  {
+   "title": "Jimi Hendrix Live in Lviv / Львовская гастроль Джими Хендрикса",
+   "author": "Andrey Kurkov",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Reuben Woolley"
+  },
+  {
+   "title": "The Birthday Party / Histoires de la nuit",
+   "author": "Laurent Mauvignier",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Daniel Levin Becker"
+  },
+  {
+   "title": "While We Were Dreaming / Als wir träumten",
+   "author": "Clemens Meyer",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Katy Derbyshire"
+  },
+  {
+   "title": "Pyre / பூக்குழி",
+   "author": "Perumal Murugan",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Aniruddhan Vasudevan"
+  },
+  {
+   "title": "A System So Magnificent It Is Blinding / Ett system så magnifikt att det bländar",
+   "author": "Amanda Svensson",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Nichola Smalley"
+  },
+  {
+   "title": "Ninth Building / 九栋",
+   "author": "Zou Jingzhi",
+   "year": 2023,
+   "kind": "c",
+   "translator": "Jeremy Tiang"
+  },
+  {
+   "title": "Kairos",
+   "author": "Jenny Erpenbeck",
+   "year": 2024,
+   "kind": "w",
+   "translator": "Michael Hofmann"
+  },
+  {
+   "title": "Not a River / No es un río",
+   "author": "Selva Almada",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Annie McDermott"
+  },
+  {
+   "title": "The Details / Detaljerna",
+   "author": "Ia Genberg",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Kira Josefsson"
+  },
+  {
+   "title": "Mater 2-10 / 철도원 삼대",
+   "author": "Hwang Sok-yong",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Sora Kim-Russell & Youngjae Josephine Bae"
+  },
+  {
+   "title": "What I’d Rather Not Think About / Waar ik liever niet aan denk",
+   "author": "Jente Posthuma",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Sarah Timmer Harvey"
+  },
+  {
+   "title": "Crooked Plow / Torto Arado",
+   "author": "Itamar Vieira Junior",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Johnny Lorenz"
+  },
+  {
+   "title": "Simpatía",
+   "author": "Rodrigo Blanco Calderón",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Noel Hernández González & Daniel Hahn"
+  },
+  {
+   "title": "White Nights / Białe noce",
+   "author": "Urszula Honek",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Kate Webster"
+  },
+  {
+   "title": "A Dictator Calls / Kur sunduesit grinden",
+   "author": "Ismail Kadare",
+   "year": 2024,
+   "kind": "c",
+   "translator": "John Hodgson"
+  },
+  {
+   "title": "The Silver Bone / Самсон и Надежда",
+   "author": "Andrey Kurkov",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Boris Dralyuk"
+  },
+  {
+   "title": "Lost on Me / Niente di vero",
+   "author": "Veronica Raimo",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Leah Janeczko"
+  },
+  {
+   "title": "The House on Via Gemito / Via Gemito",
+   "author": "Domenico Starnone",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Oonagh Stransky"
+  },
+  {
+   "title": "Undiscovered (novel) / Huaco retrato",
+   "author": "Gabriela Wiener",
+   "year": 2024,
+   "kind": "c",
+   "translator": "Julia Sanches"
+  },
+  {
+   "title": "Heart Lamp: Selected Stories / ಎದೆಯ ಹಣತೆ",
+   "author": "Banu Mushtaq",
+   "year": 2025,
+   "kind": "w",
+   "translator": "Deepa Bhasthi"
+  },
+  {
+   "title": "A Leopard-Skin Hat / Un chapeau léopard",
+   "author": "Anne Serre",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Mark Hutchinson"
+  },
+  {
+   "title": "Perfection / Le perfezioni",
+   "author": "Vincenzo Latronico",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Sophie Hughes"
+  },
+  {
+   "title": "Under the Eye of the Big Bird / 大きな鳥にさらわれないよう",
+   "author": "Hiromi Kawakami",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Asa Yoneda"
+  },
+  {
+   "title": "Small Boat / Naufrage",
+   "author": "Vincent Delecroix",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Helen Stevenson"
+  },
+  {
+   "title": "On the Calculation of Volume I / Om udregning af rumfang",
+   "author": "Solvej Balle",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Barbara J Haveland"
+  },
+  {
+   "title": "The Book of Disappearance / سفر الإختفاء",
+   "author": "Ibtisam Azem",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Sinan Antoon"
+  },
+  {
+   "title": "There's a Monster behind the Door / Un monstre est là, derrière la porte",
+   "author": "Gaëlle Bélem",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Karen Fleetwood & Laëtitia Saint-Loubert"
+  },
+  {
+   "title": "Solenoid",
+   "author": "Mircea Cărtărescu",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Sean Cotter"
+  },
+  {
+   "title": "Reservoir Bitches / Perras de reserva",
+   "author": "Dahlia de la Cerda",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Heather Cleary & Julia Sanches"
+  },
+  {
+   "title": "Hunchback / ハンチバック",
+   "author": "Saou Ichikawa",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Polly Barton"
+  },
+  {
+   "title": "Eurotrash",
+   "author": "Christian Kracht",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Daniel Bowles"
+  },
+  {
+   "title": "On a Woman's Madness / Over de gekte van een vrouw",
+   "author": "Astrid Roemer",
+   "year": 2025,
+   "kind": "c",
+   "translator": "Lucy Scott"
+  },
+  {
+   "title": "Taiwan Travelogue / 臺灣漫遊錄",
+   "author": "Yáng Shuāng-zǐ",
+   "year": 2026,
+   "kind": "w",
+   "translator": "Lin King"
+  },
+  {
+   "title": "The Witch / La Sorcière",
+   "author": "Marie NDiaye",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Jordan Stump"
+  },
+  {
+   "title": "On Earth As It Is Beneath / Assim na Terra como embaixo da Terra",
+   "author": "Ana Paula Maia",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Padma Viswanathan"
+  },
+  {
+   "title": "The Director / Lichtspiel",
+   "author": "Daniel Kehlmann",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Ross Benjamin"
+  },
+  {
+   "title": "She Who Remains / Остайница",
+   "author": "Rene Karabash",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Izidora Angel"
+  },
+  {
+   "title": "The Nights Are Quiet in Tehran / Nachts ist es leise in Teheran",
+   "author": "Shida Bazyar",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Ruth Martin"
+  },
+  {
+   "title": "The Wax Child / Voksbarnet",
+   "author": "Olga Ravn",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Martin Aitken"
+  },
+  {
+   "title": "Women without Men / زنان بدون مردان",
+   "author": "Shahrnush Parsipur",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Faridoun Farrokh"
+  },
+  {
+   "title": "The Duke / Il Duca",
+   "author": "Matteo Melchiorre",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Antonella Lettieri"
+  },
+  {
+   "title": "Small Comfort / Klen tröst",
+   "author": "Ia Genberg",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Kira Josefsson"
+  },
+  {
+   "title": "The Deserters / Déserter",
+   "author": "Mathias Énard",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Charlotte Mandell"
+  },
+  {
+   "title": "The Remembered Soldier / De herinnerde soldaat",
+   "author": "Anjet Daanje",
+   "year": 2026,
+   "kind": "c",
+   "translator": "David McKay"
+  },
+  {
+   "title": "We Are Green and Trembling / Las niñas del naranjel",
+   "author": "Gabriela Cabezón Cámara",
+   "year": 2026,
+   "kind": "c",
+   "translator": "Robin Myers"
+  }
+ ]
+}

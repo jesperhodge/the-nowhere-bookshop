@@ -117,6 +117,47 @@ const DIST_SCALES = [1, 0.78, 0.6, 0.45];
    just "outside": a camera flush against the back case's side panel
    renders its inside faces across half the frame. */
 const CLEAR_PAD = 40;
+
+/* ── the table blind spot (phase 7's carried-forward item) ───────
+   In the 3 rooms with a table, the table stands between the shelf:back
+   camera and the bottom row of the back case. Camera at z -58.5, table
+   spanning z -630…-330 at x -535…-65, case face at z -960: the sight line
+   to a bottom-left book crosses the table's near edge at y 221, which is
+   under a 232-tall table top. Phase 7 left it because every occluded
+   spine was filler. Phase 9 is what makes them real books that cannot be
+   seen, and phase 7 was right that the answer is a design call and not a
+   clamp.
+
+   Worked through, three of the four obvious moves are dead ends:
+
+     move the table sideways   the sight cone is ±178 wide at the table's
+                               near edge and ±374 at its far edge, so the
+                               table would have to sit beyond x -374 — and
+                               the 470-wide table does not fit in the 296
+                               units left between there and the side case.
+     move the table forward    the far edge would have to reach z -176 for
+                               a level sight line to clear it, which is
+                               outside the room.
+     stand past the table      a camera at z < -330 is 630 from the case
+                               face and frames 162 of its 530 height.
+
+   What is left is to look OVER it: raise the camera and tilt down. At
+   y 610 the sight line to the base of a bottom-row book stays above the
+   table top until z -694, past the table's far edge, and the case still
+   fits the frame (300 units of half-height covered against the 295 the
+   pose asks for). So LIFTS below, tried after the square-on position and
+   before any turn, because a lifted camera is still square-on in x —
+   a gentler thing to give up than the framing. Zero first, so every pose
+   that already worked is untouched.
+
+   The extra check that makes the search bother is isClear()'s third test:
+   the two lower corners of the case's bottom row, tested against tables
+   ONLY. Testing the bottom corners against every obstacle
+   is what phase 7 rejected — it would push the camera 280 units from a
+   1180-wide case for the sake of a case corner grazing an oblique view.
+   Tables are the narrow case where the obstruction is real, in front, and
+   hides content rather than framing. */
+const LIFTS = [0, 130, 240, 345];
 /* Keep the camera off the walls, floor and ceiling too — this is
    what makes PLAN-PHASE7 §4 step 4's "the camera stays inside the
    room box" a structural property of the pose rather than a lucky
@@ -248,30 +289,52 @@ export function createPoseRig(stage, opts = {}) {
     const fovRad = THREE.MathUtils.degToRad(camera.fov);
     const want = Math.max((c.ch / 2 + 30) / Math.tan(fovRad / 2), 420);
 
+    // The two lower corners of the case's bottom row, in world space.
+    // These are the points a table hides, and the reason for LIFTS.
+    const bottom = [
+      c.group.localToWorld(new THREE.Vector3(30, 20, c.depth)),
+      c.group.localToWorld(new THREE.Vector3(c.w - 30, 20, c.depth)),
+    ];
+
     // Search order: keep the framing, turn as little as possible; only
     // give up framing if turning never finds free floor (see the
     // CLEARANCE block at the top of this file for why that ordering,
     // and why turning is the thing to spend first).
+    //
+    // Lift is the INNER loop, so every lift is tried at a given yaw
+    // before the yaw widens. Measured with it the other way round: the
+    // three table rooms found a clear camera at 60° of yaw, x +666,
+    // almost against the right wall — legal, unblocked, and a much
+    // worse picture than standing square-on and looking down. Lift 0
+    // is first at every yaw, so nothing that already worked moves.
     let fallback = null;
     for (const scale of DIST_SCALES) {
       const dist = want * scale;
       for (const yawDeg of YAW_STEPS_DEG) {
         const yaw = THREE.MathUtils.degToRad(yawDeg);
-        const tries = (yawDeg === 0 ? [0] : [yaw, -yaw]).map((a) =>
+        // Built once per yaw, not once per lift: dolly() calls this on every
+        // wheel event, and the lift loop would otherwise rebuild the same
+        // two vectors four times over. Each lift CLONES rather than adding
+        // to the base — raising the shared vector in place would stack the
+        // lifts on top of each other.
+        const bases = (yawDeg === 0 ? [0] : [yaw, -yaw]).map((a) =>
           face.clone().addScaledVector(normal.clone().applyAxisAngle(YAW_AXIS, a), dist));
         // Prefer whichever of the two turn directions lands nearer the
         // room's OPEN front (larger z). Not a heuristic about this
         // particular room: the back case fills the far wall and both
         // side cases fill the side walls, so in this room shape the
         // free floor a blocked pose needs is always forward.
-        tries.sort((a, b) => b.z - a.z);
-        for (const p of tries) {
-          // The very first candidate (scale 1, yaw 0) is exactly the
-          // pre-clearance pose — so if the search finds nothing, the
-          // rig degrades to phase 7's original behaviour rather than
-          // to something new and unexamined.
-          if (!fallback) fallback = p;
-          if (isClear(p, c, face)) return { position: p, target: face };
+        bases.sort((a, b) => b.z - a.z);
+        for (const lift of LIFTS) {
+          for (const base of bases) {
+            const p = lift ? base.clone().setY(base.y + lift) : base;
+            // The very first candidate (scale 1, yaw 0, lift 0) is
+            // exactly the pre-clearance pose — so if the search finds
+            // nothing, the rig degrades to phase 7's original behaviour
+            // rather than to something new and unexamined.
+            if (!fallback) fallback = p;
+            if (isClear(p, c, face, bottom)) return { position: p, target: face };
+          }
         }
       }
     }
@@ -294,7 +357,7 @@ export function createPoseRig(stage, opts = {}) {
       c.group.updateWorldMatrix(true, true);
       obstacleCache.push({ owner: c, box: new THREE.Box3().setFromObject(c.group) });
     }
-    for (const tb of tables) obstacleCache.push({ owner: tb, box: tableObstacleBox(tb) });
+    for (const tb of tables) obstacleCache.push({ owner: tb, box: tableObstacleBox(tb), isTable: true });
     return obstacleCache;
   }
 
@@ -358,7 +421,7 @@ export function createPoseRig(stage, opts = {}) {
    * the frame. Only the centre sight line is checked, not the whole
    * case — see this file's CLEARANCE block for what that still leaves.
    */
-  function isClear(pos, ownCase, target) {
+  function isClear(pos, ownCase, target, bottom) {
     if (pos.x < -WORLD.hw + ROOM_MARGIN || pos.x > WORLD.hw - ROOM_MARGIN) return false;
     if (pos.z < -WORLD.d + ROOM_MARGIN || pos.z > 0) return false;
     if (pos.y < ROOM_MARGIN || pos.y > WORLD.h - ROOM_MARGIN) return false;
@@ -367,6 +430,12 @@ export function createPoseRig(stage, opts = {}) {
       padded.copy(ob.box).expandByScalar(CLEAR_PAD);
       if (padded.containsPoint(pos)) return false;
       if (segmentHitsBox(pos, target, ob.box)) return false;
+      /* (3) The bottom row, against TABLES only. Deliberately narrower
+         than (2) — see the table blind spot block for why every other
+         obstacle is left out of this one. */
+      if (bottom && ob.isTable) {
+        for (const b of bottom) if (segmentHitsBox(pos, b, ob.box)) return false;
+      }
     }
     return true;
   }
