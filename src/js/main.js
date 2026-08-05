@@ -17,11 +17,16 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* Where "home" is. fromHash() falls back to the same room and boot() tests
+   for the same hash; those two are left spelled out on the entry path. */
+const HOME_ID = 'front';
+
 const dom = {
   door: $('#door'), enter: $('#enter'), doorCount: $('#doorCount'),
   shop: $('#shop'), stage: $('#stage'), fit: $('#fit'), room: $('#room'),
-  crumbs: $('#crumbs'), placard: $('#placard'), dockDoors: $('#dockDoors'),
-  back: $('#btnBack'), backLabel: $('#backLabel'), bell: $('#btnBell'),
+  crumbs: $('#crumbs'), placard: $('#placard'),
+  back: $('#btnBack'), backLabel: $('#backLabel'),
+  home: $('#btnHome'), shelf: $('#btnShelf'), bell: $('#btnBell'),
   sheet: $('#sheet'), sheetBody: $('#sheetBody'),
   mapOverlay: $('#mapOverlay'), mapBody: $('#mapBody'),
   searchOverlay: $('#searchOverlay'), findInput: $('#findInput'), findResults: $('#findResults'),
@@ -217,23 +222,16 @@ function paintChrome(room) {
   void dom.placard.offsetWidth;
   dom.placard.style.animation = '';
 
-  /* Ways on, in the dock. These used to sit there permanently, which made
-     the doorways decorative — why walk when there is a button? They now
-     show for a few seconds when you arrive and then get out of the way;
-     the doorways are the way through, and the plan and search are still
-     the reliable route to anywhere. Focus or hover brings them back. */
-  const kids = room.children || [];
-  dom.dockDoors.innerHTML = kids.map((k) =>
-    `<a class="godoor${k.depth > 2 ? ' godoor--deep' : ''}" href="#/${k.id}">
-       <span class="godoor__n">${esc(k.name)}</span>
-       <span class="godoor__s">${esc(k.sub || '')} · ${k.total}</span>
-     </a>`).join('');
-  showWaysOn(kids.length > 0);
+  /* The two ways back. The dock used to list every way *on* out of this room
+     too, which made the doorways decorative — why walk when there is a
+     button? The doorways are the way through now; the plan (M), search (/)
+     and the shelf list (S) are still the reliable route to anywhere.
 
-  /* back */
+     Both states are set on every room paint, never once at startup. */
   const parent = room.parent ? ROOM_BY_ID[room.parent] : null;
-  dom.back.disabled = !parent;
+  setDisabled(dom.back, !parent);
   dom.backLabel.textContent = parent ? `Back to ${parent.name}` : 'Back';
+  setDisabled(dom.home, room.id === HOME_ID);
 
   /* mark books you have already picked up */
   requestAnimationFrame(() => {
@@ -245,13 +243,24 @@ function paintChrome(room) {
   document.title = `${room.name} — The Nowhere Bookshop`;
 }
 
-let waysTimer;
-function showWaysOn(any) {
-  clearTimeout(waysTimer);
-  dom.dockDoors.hidden = !any;
-  if (!any) return;
-  dom.dockDoors.classList.remove('is-resting');
-  waysTimer = setTimeout(() => dom.dockDoors.classList.add('is-resting'), 6500);
+/* Disabling the control you are standing on hands focus back to <body>, and
+   a keyboard reader loses their place mid-shop. Pass it along the dock
+   instead. Both back controls go through here for that reason. */
+function setDisabled(btn, off) {
+  if (off && !btn.disabled && btn === document.activeElement) dom.shelf.focus();
+  btn.disabled = off;
+}
+
+/* The way home from any depth, from the button and from H alike.
+   'out' matters: it drives the travel animation, and arriving home
+   "inward" reads wrong. */
+function goHome() {
+  if (dom.home.disabled) return;
+  /* The dock is reachable with a keyboard from inside the open book sheet,
+     and closeBook()'s default rewrites the hash to *the book's* room — which
+     would leave the address bar pointing at a room you had just left. */
+  if (state.book) closeBook(true);
+  go(HOME_ID, 'out');
 }
 
 /* ── hovering a book shows its name ───────────────────────── */
@@ -557,13 +566,8 @@ function wire() {
     const r = ROOM_BY_ID[state.room];
     if (r?.parent) go(r.parent, 'out');
   });
+  dom.home.addEventListener('click', goHome);
   dom.bell.addEventListener('click', ringBell);
-  dom.dockDoors.addEventListener('click', (e) => {
-    const a = e.target.closest('.godoor');
-    if (!a) return;
-    e.preventDefault();
-    go(a.getAttribute('href').slice(2), 'in');
-  });
   dom.crumbs.addEventListener('click', (e) => {
     const a = e.target.closest('a.crumb');
     if (!a) return;
@@ -583,7 +587,7 @@ function wire() {
     });
   });
   $('#btnParcel').addEventListener('click', () => openOverlay(dom.parcelOverlay, renderParcel));
-  $('#btnShelf').addEventListener('click', () => openOverlay(dom.shelfOverlay, renderShelf));
+  dom.shelf.addEventListener('click', () => openOverlay(dom.shelfOverlay, renderShelf));
   $('#btnSound').addEventListener('click', (e) => {
     const on = tone.toggle();
     e.currentTarget.setAttribute('aria-pressed', String(on));
@@ -685,6 +689,11 @@ function wire() {
       openOverlay(dom.shelfOverlay, renderShelf);
     } else if (e.key === 'b' || e.key === 'B') {
       ringBell();
+    } else if ((e.key === 'h' || e.key === 'H') && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      /* Ctrl-H is the browser's own history in more than one browser. The
+         four shortcuts above this one do not check modifiers and so double
+         up with ⌘S/⌘P — inherited, not copied. */
+      goHome();
     } else if (state.book && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
       const shelf = booksIn(BOOK_BY_ID[state.book].room);
       const i = shelf.findIndex((b) => b.id === state.book) + (e.key === 'ArrowRight' ? 1 : -1);

@@ -78,6 +78,12 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
       <span id="backLabel">Back</span>
     </button>
+    <!-- The way home from any depth. The accessible name has to contain the
+         visible label word for word (WCAG 2.5.3) — change one, change both. -->
+    <button class="dock__btn dock__btn--home" id="btnHome" type="button" title="Back to The Front Room (press H)" aria-label="Go to The Front Room">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+      <span>The Front Room</span>
+    </button>
     <button class="dock__btn dock__btn--shelf" id="btnShelf" type="button" title="Everything on this shelf (press S)">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4v16H4zM10 6h4v14h-4zM16 4h4v16h-4z"/></svg>
       <span>The shelf</span>
@@ -88,7 +94,6 @@
       </span>
       <span>Ring the bell</span>
     </button>
-    <div class="dock__doors" id="dockDoors"></div>
   </footer>
 
   <!-- Shelf paging hint -->

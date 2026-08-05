@@ -154,71 +154,17 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   transition: color .2s, border-color .2s, transform .2s var(--ease), background .2s;
 }
 .dock__btn svg { width: 18px; height: 18px; }
-.dock__btn:hover { color: var(--paper); border-color: rgba(217,164,79,.55); transform: translateY(-2px); }
-.dock__btn--back[disabled] { opacity: .32; pointer-events: none; }
+.dock__btn:hover:not([disabled]) { color: var(--paper); border-color: rgba(217,164,79,.55); transform: translateY(-2px); }
+/* Both back controls: Back is disabled in the front room, and so is the way
+   home, because you are already standing in it. No `pointer-events: none` —
+   a real disabled button swallows the click by itself, whereas that makes it
+   a hole in the dock and the click lands on whatever book or doorway happens
+   to be behind. :not([disabled]) on the hover rule is what it was there for. */
+.dock__btn[disabled] { opacity: .32; cursor: default; }
 .dock__btn--bell { color: var(--brass); }
 .dock__btn--bell:hover .dock__bell { animation: ring .5s var(--ease); }
 @keyframes ring { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-16deg) } 60% { transform: rotate(12deg) } }
 .dock__bell { display: grid; place-items: center; }
-
-.dock__doors {
-  display: flex;
-  gap: .5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-  padding-bottom: 2px;
-  transition: opacity .7s var(--ease), translate .7s var(--ease);
-}
-.dock__doors::-webkit-scrollbar { display: none; }
-/* they announce the ways on when you arrive, then step back so the
-   doorways are the thing you reach for */
-.dock__doors.is-resting { opacity: 0; translate: 0 12px; pointer-events: none; }
-.dock__doors.is-resting:focus-within,
-.dock:hover .dock__doors.is-resting { opacity: 1; translate: 0; pointer-events: auto; }
-
-.godoor {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: .12rem;
-  padding: .5rem .95rem .55rem;
-  border-radius: 10px;
-  text-align: left;
-  text-decoration: none;
-  background: linear-gradient(180deg, rgba(48,34,26,.82), rgba(26,18,14,.86));
-  border: 1px solid rgba(217,164,79,.22);
-  backdrop-filter: blur(8px);
-  transition: transform .22s var(--ease), border-color .22s, background .22s;
-  max-width: 15rem;
-}
-.godoor:hover, .godoor:focus-visible {
-  transform: translateY(-3px);
-  border-color: var(--brass);
-  background: linear-gradient(180deg, rgba(66,47,34,.92), rgba(34,24,18,.92));
-}
-.godoor__n {
-  font-family: var(--font-display);
-  font-size: .96rem;
-  line-height: 1.15;
-  color: var(--paper);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.godoor__s {
-  font-family: var(--font-ui);
-  font-size: .64rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  color: var(--brass-soft);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.godoor--deep { border-color: rgba(140,190,255,.28); }
-.godoor--deep .godoor__s { color: #8fb6d8; }
 
 .hint {
   position: absolute;
@@ -725,7 +671,6 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
   .placard__line { display: none; }
   .placard__name { font-size: 1.5rem; }
   .dock { flex-wrap: wrap; gap: .5rem; padding: .7rem .8rem .9rem; }
-  .dock__doors { order: 3; width: 100%; justify-content: flex-start; }
   .dock__btn { padding: .55rem .8rem; font-size: .78rem; }
   .topbar { padding: .7rem .8rem; }
   .crumbs { font-size: .74rem; max-width: 56vw; }

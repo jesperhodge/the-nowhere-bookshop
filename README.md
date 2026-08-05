@@ -48,12 +48,14 @@ Stair*.
 | `/` or `⌘K` | search titles, authors, prizes and moods — try *islands*, *grief*, *Booker* |
 | `M` | the shop plan |
 | `P` | your parcel |
+| `S` | everything on this shelf, as a list |
 | `B` | ring the bell — the shopkeeper hands you something from anywhere in the shop, weighted towards the deep rooms |
+| `H` | back to The Front Room, from however deep in you are |
 | `Esc` | put the book back, or step back a room |
 
-The ways on are named along the bottom of the screen when you arrive and then
-step out of the way; the doorways are how you get about. Everything is also on
-the plan and in search, so nothing is reachable only by finding it in the 3D
+The doorways are how you get about — the dock at the bottom holds only the two
+ways back, one room at a time and all the way to the front. Everything is also
+on the plan and in search, so nothing is reachable only by finding it in the 3D
 view.
 
 ## How it is built
