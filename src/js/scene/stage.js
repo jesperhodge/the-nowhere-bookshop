@@ -126,7 +126,25 @@ export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
 
   let raf = null;
   let frame = 0;
+  // Per-frame callbacks (phase 7: camera pose tweens) — see onFrame()
+  // below for the registration API and why this beats a caller
+  // running its own requestAnimationFrame loop alongside this one.
+  const frameCallbacks = new Set();
   function tick() {
+    // Run registered callbacks BEFORE render — this ordering is
+    // load-bearing, not incidental. A camera tween has to move the
+    // camera for THIS frame, and that moved camera has to be what
+    // renderer.render() below actually renders THIS SAME frame. A
+    // separate requestAnimationFrame loop — the pattern the harness
+    // uses today for doors/props polling (tools/preview-stage.html's
+    // pollSigns()/pollProps()) — runs on its own rAF callback with no
+    // guaranteed ordering against this tick(), so the camera move
+    // could just as easily land after this frame's render: a visible
+    // one-frame lag, worse under a fast tween. Calling back into this
+    // same loop, before render, is the only way to guarantee it lands
+    // in time.
+    const now = performance.now();
+    for (const fn of frameCallbacks) fn(now);
     renderer.render(scene, camera);
     frame++;
     // a real, pollable "a frame has actually rendered" signal for
@@ -137,11 +155,29 @@ export function createStage(canvas, { toneMappingExposure = 1.05 } = {}) {
   }
   function start() { if (raf === null) raf = requestAnimationFrame(tick); }
   function stop() { if (raf !== null) { cancelAnimationFrame(raf); raf = null; } }
-  function dispose() { stop(); window.removeEventListener('resize', resize); renderer.dispose(); }
+  function dispose() {
+    stop();
+    window.removeEventListener('resize', resize);
+    renderer.dispose();
+    frameCallbacks.clear();
+  }
+
+  /**
+   * Register a per-frame callback, run with performance.now() every
+   * tick BEFORE renderer.render() — see tick()'s own comment for why
+   * that order is load-bearing rather than a caller-side rAF loop.
+   * @param {(now: number) => void} fn
+   * @returns {() => void} unsubscribe — same convention as
+   *   interact.js's onActivate()/attach*Picking()'s detach.
+   */
+  function onFrame(fn) {
+    frameCallbacks.add(fn);
+    return () => frameCallbacks.delete(fn);
+  }
 
   return {
     renderer, scene, camera,
-    resize, start, stop, dispose,
+    resize, start, stop, dispose, onFrame,
     get frame() { return frame; },
   };
 }

@@ -17,6 +17,15 @@
      with real meshes once the side shelves become real. spineRun()
      itself is NOT deleted from covers.js — scene.js (the still-live
      CSS scene) still calls it. See HANDOFF-PHASE5.md.
+   - phase 7 (PLAN.md point 6): every case is ALSO a focusable pose
+     target, not just a books container. buildRoomBooks() returns a
+     `cases` array (one descriptor per case, keyed 'back'/'left'/
+     'right') alongside `entries`: the geometry (`w`/`ch`/`depth`/
+     `group`) poses.js needs to frame a `shelf:<caseId>` pose, and a
+     pickable `entry` (`.meshes`/`.pose`/`.ariaLabel`/`.setHighlight`)
+     shaped so interact.js's attachScenePicking() and a11y.js's mirror
+     both work on it unmodified. See buildCaseGroup()'s own comments
+     for the sensor-placement and mesh-tagging mechanics.
 
    Geometry constants (CASE_W, CASE_D, ROW_H, BOARD, the side-case
    BAY/near/far/width-cap numbers) are measured facts from
@@ -444,6 +453,19 @@ function makeBookMesh(item, atlas) {
 
 /* ── carcass ──────────────────────────────────────────────── */
 
+/**
+ * The wood housing around one case's books: back panel, two side
+ * panels, top/bottom, and one shelf board per row. `matWood`/
+ * `matDark` are created fresh PER CALL — deliberately not shared
+ * across cases — which is exactly what lets buildCaseGroup()'s
+ * setHighlight() light up ONE case's emissive without also lighting
+ * up every other case in the room (they'd share a material instance
+ * otherwise, the same reasoning makeBookMesh() already documents for
+ * why the spine material is cloned per book). Returns the materials
+ * (not just the group) so that highlight can reach them, and returns
+ * every mesh so buildCaseGroup() can tag each one with the case's
+ * pickable entry.
+ */
 function buildCarcass(w, ch, depth, rowFloors, wood, woodDark) {
   const g = new THREE.Group();
   const matWood = new THREE.MeshStandardMaterial({ color: wood, roughness: 0.88 });
@@ -474,8 +496,27 @@ function buildCarcass(w, ch, depth, rowFloors, wood, woodDark) {
     board.position.set(w / 2, floorY - BOARD / 2, depth / 2);
     g.add(board);
   }
-  return g;
+  return { group: g, matWood, matDark };
 }
+
+/* Every case ariaLabel, per PLAN.md point 6 ("Every case ... becomes
+   a focusable target"). Keyed by caseId, the same string that names
+   its `shelf:<caseId>` pose. */
+const CASE_ARIA = {
+  back: 'Step up to the shelves on the back wall',
+  left: 'Step up to the shelves on the left wall',
+  right: 'Step up to the shelves on the right wall',
+};
+
+/* How far BEHIND the books' own spine plane (baseZ = depth -
+   item.d/2 - 6, so at most depth - 6 — see the rows loop below) the
+   case's click/hover sensor sits. Rays through the gaps BETWEEN
+   spines still need to land on the case, so "step up to this shelf"
+   works from anywhere on it, not only exactly on a book — but the
+   sensor must never be the NEARER hit when a ray also crosses a book,
+   or one click would both open the book and fire the shelf pose. 12
+   clears the deepest possible spine position (6) with margin. */
+const CASE_SENSOR_SETBACK = 12;
 
 /**
  * One case (back wall or one side wall) as a THREE.Group: carcass +
@@ -485,8 +526,16 @@ function buildCarcass(w, ch, depth, rowFloors, wood, woodDark) {
  * the case's rotation for free, so a side-case book's spine correctly
  * faces into the room without this function knowing which wall it's
  * on.
+ *
+ * @param {string} caseId  'back'|'left'|'right' — threaded through to
+ *   every real book pushed onto `entries` (so a11y focus can fly to
+ *   the right shelf) and to this case's own pose entry's `.pose`
+ *   (`shelf:<caseId>`).
+ * @returns {{group: THREE.Group, w: number, ch: number, depth: number,
+ *   entry: object}} `entry` is this case's own pickable target — see
+ *   buildRoomBooks()'s doc comment for its exact shape.
  */
-function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, entries }) {
+function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, entries, caseId }) {
   const g = new THREE.Group();
   g.position.copy(origin);
   g.rotation.y = rotY;
@@ -494,7 +543,48 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
   const ch = rows.length * (ROW_H + BOARD) + 26;
   const rowFloors = rows.map((_, i) => ch - 26 - i * (ROW_H + BOARD) - ROW_H);
 
-  g.add(buildCarcass(w, ch, depth, rowFloors, wood, woodDark));
+  const carcass = buildCarcass(w, ch, depth, rowFloors, wood, woodDark);
+  g.add(carcass.group);
+
+  // Invisible sensor behind the spine plane (see CASE_SENSOR_SETBACK
+  // above) so the case is clickable/hoverable through the gaps
+  // between spines too, not only on a book. A plane, not a box like
+  // doors.js's sensor recipe — the carcass already gives this case a
+  // silhouette on every other side, this only needs to cover the open
+  // face.
+  const sensor = new THREE.Mesh(
+    new THREE.PlaneGeometry(w, ch),
+    new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false }),
+  );
+  sensor.position.set(w / 2, ch / 2, depth - CASE_SENSOR_SETBACK);
+  g.add(sensor);
+
+  // The case's own pickable entry — "move the camera to this shelf",
+  // per PLAN.md point 6. Tagged onto every carcass mesh AS WELL AS
+  // the sensor: the carcass is the visible wood, which sits at local
+  // z up to `depth`, IN FRONT of the sensor, so without tagging it
+  // too, hovering the case's own frame (as opposed to a gap between
+  // spines) would hover nothing.
+  const caseEntry = {
+    caseId,
+    meshes: [...carcass.group.children, sensor],
+    pose: `shelf:${caseId}`,
+    ariaLabel: CASE_ARIA[caseId],
+    setHighlight(on) {
+      // Deliberately replaces CSS's hover `filter` — a grouping
+      // property, and the direct cause of PLAN.md's Finding B — with
+      // a real material property on the carcass's own materials (see
+      // buildCarcass()'s doc comment for why mutating them here is
+      // safe: they're per-case, not shared).
+      const emissive = on ? 0x2a2114 : 0x000000;
+      const intensity = on ? 0.35 : 0;
+      carcass.matWood.emissive.setHex(emissive);
+      carcass.matWood.emissiveIntensity = intensity;
+      carcass.matDark.emissive.setHex(emissive);
+      carcass.matDark.emissiveIntensity = intensity;
+    },
+  };
+  for (const mesh of caseEntry.meshes) mesh.userData.entry = caseEntry;
 
   rows.forEach((row, i) => {
     const floorY = rowFloors[i];
@@ -512,6 +602,11 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
         const entry = {
           book: item.book,
           index: item.index,
+          // Which case this book lives on — set from the case
+          // currently being built, not hard-coded, even though side
+          // cases hold only filler today: a11y focus uses this to fly
+          // to the right shelf (see mountA11yMirror()'s opts.onFocus).
+          caseId,
           mesh,
           ariaLabel: `${item.book.title} by ${item.book.author}. Take it off the shelf.`,
           setHighlight(on) {
@@ -528,7 +623,7 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
     }
   });
 
-  return g;
+  return { group: g, w, ch, depth, entry: caseEntry };
 }
 
 /* ── the room's books ─────────────────────────────────────── */
@@ -542,7 +637,8 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
  *   props, children)
  * @param {object[]} books  room's real books in shelf order, e.g.
  *   `shop.js`'s `booksIn(room.id)`
- * @returns {{ group: THREE.Group, entries: object[], atlas: object }}
+ * @returns {{ group: THREE.Group, entries: object[], atlas: object,
+ *   cases: object[] }}
  *   `entries` is real books only, in shelf order, one per book —
  *   exactly what the a11y mirror (src/js/scene/a11y.js) and the
  *   pointer raycaster (src/js/scene/interact.js) both need. Filler
@@ -550,6 +646,16 @@ function buildCaseGroup({ origin, rotY, w, depth, rows, wood, woodDark, atlas, e
  *   deliberately not in `entries`: they are decor, not focusable or
  *   clickable, matching scene.css's `.fill { pointer-events: none }`
  *   / `aria-hidden` treatment of the CSS build's filler `<span>`s.
+ *
+ *   `cases` is one descriptor per case actually built (back wall
+ *   always; each side wall only if sideCaseSpec() allows one), shaped
+ *   `{ id: 'back'|'left'|'right', group, w, ch, depth, entry }` —
+ *   `w`/`ch`/`depth`/`group` are the geometry poses.js needs to frame
+ *   a `shelf:<caseId>` pose (phase 7, PLAN.md point 6); `entry` is the
+ *   case's own pickable target, `{ caseId, meshes, pose, ariaLabel,
+ *   setHighlight }`, shaped so interact.js's attachScenePicking() and
+ *   a11y.js's mirror both work on it exactly as they do on a book or
+ *   door entry.
  */
 export function buildRoomBooks(room, books) {
   const group = new THREE.Group();
@@ -573,6 +679,7 @@ export function buildRoomBooks(room, books) {
 
   const atlas = buildAtlas(allItems);
   const entries = [];
+  const cases = [];
 
   const back = buildCaseGroup({
     origin: new THREE.Vector3(-CASE_W / 2, 0, -WORLD.d),
@@ -581,9 +688,11 @@ export function buildRoomBooks(room, books) {
     depth: CASE_D,
     rows: backRows,
     wood, woodDark, atlas, entries,
+    caseId: 'back',
   });
-  back.name = 'case:back';
-  group.add(back);
+  back.group.name = 'case:back';
+  group.add(back.group);
+  cases.push({ id: 'back', group: back.group, w: back.w, ch: back.ch, depth: back.depth, entry: back.entry });
 
   if (sideLeft) {
     const left = buildCaseGroup({
@@ -593,9 +702,11 @@ export function buildRoomBooks(room, books) {
       depth: SIDE_CD,
       rows: leftRows,
       wood, woodDark, atlas, entries,
+      caseId: 'left',
     });
-    left.name = 'case:left';
-    group.add(left);
+    left.group.name = 'case:left';
+    group.add(left.group);
+    cases.push({ id: 'left', group: left.group, w: left.w, ch: left.ch, depth: left.depth, entry: left.entry });
   }
 
   if (sideRight) {
@@ -606,14 +717,16 @@ export function buildRoomBooks(room, books) {
       depth: SIDE_CD,
       rows: rightRows,
       wood, woodDark, atlas, entries,
+      caseId: 'right',
     });
-    right.name = 'case:right';
-    group.add(right);
+    right.group.name = 'case:right';
+    group.add(right.group);
+    cases.push({ id: 'right', group: right.group, w: right.w, ch: right.ch, depth: right.depth, entry: right.entry });
   }
 
   // shelf order: back wall (row 0 then row 1) already comes first, in
   // the order books were passed in; side cases only ever hold filler
   // (no entries pushed for them), so `entries` is already exactly
   // `books` in the same order the caller passed them.
-  return { group, entries, atlas };
+  return { group, entries, atlas, cases };
 }

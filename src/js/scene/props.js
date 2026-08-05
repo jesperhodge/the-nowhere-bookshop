@@ -13,8 +13,10 @@
      candle, mushrooms, stack, starchart, shipmodel, umbrella, herbs,
      typewriter, ladder, cat, and any future ART entry) — src/js/data/
      props.js's artURI()/ART registry, rendered to a canvas via an
-     Image decode of the SVG data URI (see artTexture()'s doc comment
-     for why that was chosen over THREE.TextureLoader), alpha-mapped
+     Image decode of the SVG data URI (see textures.js's svgTexture()
+     doc comment for why that was chosen over THREE.TextureLoader — the
+     rasterise step now lives there, hoisted for tables.js's book
+     covers, a second real consumer), alpha-mapped
      onto a PlaneGeometry sized by CONTAIN-fit (matches CSS
      `.prop-art { background: var(--art) center/contain no-repeat }` —
      the art keeps its own aspect ratio inside the prop's w/h box
@@ -56,7 +58,7 @@
 import * as THREE from 'three';
 import { ART } from '../data/props.js';
 import { WORLD, placeProp, propBoxCenter, lampAnchor } from './coords.js';
-import { rgba, mix, pinstripe } from './textures.js';
+import { rgba, mix, pinstripe, svgTexture } from './textures.js';
 import { sideCaseExists, SIDE_CD } from './books.js';
 
 const GROUNDED = /^(floor|tall)/;
@@ -106,36 +108,22 @@ function clearSideCase(room, at, box) {
 }
 
 /* ── 'art' props: SVG -> canvas texture ──────────────────────────
-   Why an Image().decode()-into-canvas, not THREE.TextureLoader
-   directly on the data URI: src/js/data/props.js's S() helper
-   deliberately omits width/height on the <svg> root (it was authored
-   for CSS `background-size: contain`, which only needs the intrinsic
-   ASPECT RATIO from viewBox, not a pixel size) — this is exactly the
-   class of ambiguity phase 2's "Finding C" (viewBox overflow) was
-   about. A bare <img>/Texture load of such an SVG can rasterize at
-   an arbitrary browser-chosen default size; drawImage(img, 0, 0, W, H)
-   sidesteps that entirely by specifying the OUTPUT size explicitly, so
-   the raster is always exactly the resolution this file chooses,
-   independent of whatever intrinsic-size fallback the browser would
-   otherwise pick. The aspect ratio itself is read synchronously from
-   the same viewBox string (regex, not the image), so the display
-   plane's contain-fit geometry never has to wait on image decode —
-   only the texture's PIXELS arrive late. Verified by screenshot this
-   session that alpha survives the round trip (see HANDOFF-PHASE7.md).
+   The rasterise step itself (Image -> canvas -> Texture, and the full
+   reasoning for why that's not THREE.TextureLoader on the data URI
+   directly) now lives in textures.js's svgTexture() — hoisted there
+   this phase once tables.js became a second real consumer (book
+   covers, via covers.js's coverSVG()). See that function's doc
+   comment for the complete explanation. This file keeps only what's
+   specific to 'art' props: the cache (keyed by name+args, not by book
+   id, so it can't share tables.js's cache even if the two were merged)
+   and the ART registry lookup.
    ============================================================ */
 
 const artCache = new Map();
 
-function viewBoxSize(svgMarkup) {
-  const m = /viewBox="[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)"/.exec(svgMarkup);
-  return m ? { w: parseFloat(m[1]), h: parseFloat(m[2]) } : { w: 100, h: 100 };
-}
-
-/** SVG name + positional args -> { texture, aspect, ready }. `ready`
- *  resolves once the texture's pixels have actually loaded (or, on a
- *  decode failure, resolves anyway with a blank texture rather than
- *  hanging Promise.all() forever — a missing/blank prop is a much
- *  smaller problem than a room that never reports "settled"). */
+/** ART registry name + positional args -> { texture, aspect, ready }.
+ *  See textures.js's svgTexture() for what each field means and when
+ *  `ready` resolves. */
 function artTexture(name, args) {
   const key = `${name}::${args.join(',')}`;
   const hit = artCache.get(key);
@@ -143,32 +131,7 @@ function artTexture(name, args) {
 
   const fn = ART[name];
   const svg = fn ? fn(...args) : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>';
-  const { w: vbW, h: vbH } = viewBoxSize(svg);
-
-  const texture = new THREE.Texture();
-  texture.colorSpace = THREE.SRGBColorSpace;
-
-  const scale = 4; // canvas px per SVG viewBox unit -- crisp at close range
-  const cw = Math.max(2, Math.min(1600, Math.round(vbW * scale)));
-  const ch = Math.max(2, Math.min(1600, Math.round(vbH * scale)));
-
-  const img = new Image();
-  const ready = new Promise((resolve) => {
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = cw; canvas.height = ch;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, cw, ch);
-      ctx.drawImage(img, 0, 0, cw, ch);
-      texture.image = canvas;
-      texture.needsUpdate = true;
-      resolve();
-    };
-    img.onerror = () => resolve();
-  });
-  img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
-
-  const entry = { texture, aspect: vbW / vbH, ready };
+  const entry = svgTexture(svg);
   artCache.set(key, entry);
   return entry;
 }

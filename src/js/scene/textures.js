@@ -46,6 +46,86 @@ const BLACK = '#000000', WHITE = '#ffffff';
    PLAN-ARCH.md's "Keeping the look". Behaviour unchanged, additive. */
 export { hex, rgba, mix, pinstripe, BLACK, WHITE };
 
+/* ── SVG rasterise pipeline ───────────────────────────────────────
+   Hoisted here from props.js's original artTexture() (phase 6) now
+   that tables.js (phase 7 — book covers via covers.js's coverSVG())
+   is a second, real consumer of the exact same rasterise step — same
+   "two callers earns a hoist" reasoning phase 5 used for passages.js
+   (see HANDOFF-PHASE5.md). Only the RASTERISE step moves; caching
+   does not, because the two callers' cache keys have nothing in
+   common — props.js's artCache is keyed by `name::args`, tables.js's
+   by book id — so baking a cache in here would force one key shape
+   on both. Callers cache; this function is a bare, uncached
+   rasteriser.
+
+   Why an Image().onload -> ctx.drawImage() round trip, and NOT
+   THREE.TextureLoader directly on the data URI: src/js/data/props.js's
+   S() helper (and covers.js's coverSVG(), for the identical reason)
+   omits width/height on the <svg> root — both were authored for CSS
+   `background-size: contain`, which only needs the intrinsic ASPECT
+   RATIO from viewBox, not a pixel size. This is exactly the class of
+   ambiguity PLAN.md's "Finding C" (viewBox overflow) is about. A bare
+   <img>/Texture load of such an SVG can rasterize at an arbitrary
+   browser-chosen default size; drawImage(img, 0, 0, W, H) sidesteps
+   that entirely by specifying the OUTPUT size explicitly, so the
+   raster is always exactly the resolution this function chooses,
+   independent of whatever intrinsic-size fallback the browser would
+   otherwise pick. The aspect ratio itself is read synchronously from
+   the same viewBox string (regex, not the image), so a caller's
+   display geometry never has to wait on image decode — only the
+   texture's PIXELS arrive late. Verified by screenshot in phase 6
+   that alpha survives the round trip (see HANDOFF-PHASE7.md).
+   ============================================================ */
+
+function viewBoxSize(svgMarkup) {
+  const m = /viewBox="[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)"/.exec(svgMarkup);
+  return m ? { w: parseFloat(m[1]), h: parseFloat(m[2]) } : { w: 100, h: 100 };
+}
+
+/**
+ * SVG markup -> { texture, aspect, ready }. `aspect` (viewBox w/h) is
+ * available synchronously, before the image has decoded, so a caller
+ * can size its display geometry immediately. `ready` resolves once
+ * the texture's pixels have actually loaded (or, on a decode failure,
+ * resolves anyway with a blank texture rather than hanging
+ * Promise.all() forever — a missing/blank surface is a much smaller
+ * problem than a room, or a table, that never reports "settled").
+ * Uncached — see the header comment above for why caching is each
+ * caller's own job.
+ * @param {string} markup  raw <svg ...>...</svg> markup (no wrapping
+ *   `url(...)` — this function builds the data: URI itself)
+ * @param {{scale?: number, maxPx?: number}} [opts]  `scale` is canvas
+ *   px per SVG viewBox unit (default 4, matching props.js's original
+ *   constant); `maxPx` caps either canvas dimension (default 1600).
+ */
+export function svgTexture(markup, { scale = 4, maxPx = 1600 } = {}) {
+  const { w: vbW, h: vbH } = viewBoxSize(markup);
+
+  const texture = new THREE.Texture();
+  texture.colorSpace = THREE.SRGBColorSpace;
+
+  const cw = Math.max(2, Math.min(maxPx, Math.round(vbW * scale)));
+  const ch = Math.max(2, Math.min(maxPx, Math.round(vbH * scale)));
+
+  const img = new Image();
+  const ready = new Promise((resolve) => {
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = cw; canvas.height = ch;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, cw, ch);
+      ctx.drawImage(img, 0, 0, cw, ch);
+      texture.image = canvas;
+      texture.needsUpdate = true;
+      resolve();
+    };
+    img.onerror = () => resolve();
+  });
+  img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(markup)}`;
+
+  return { texture, aspect: vbW / vbH, ready };
+}
+
 /* ── small generic pattern drawers, each period given in CSS px and
    scaled to canvas px by `s` ──────────────────────────────────── */
 
