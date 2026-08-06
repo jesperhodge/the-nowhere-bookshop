@@ -35,13 +35,20 @@
   a fourth input: opts.onFocus flies the camera to whatever was just
   Tab'd to, closing the TODO(phase 7) phase 5 left in a11y.js.
 
-  Serve with a plain static server from the repo root, e.g.:
-    python3 -m http.server 8099
-  then open http://localhost:8099/tools/preview-stage.html
-  (npm start's Express app only serves /src, /vendor and index.html
-  as of phase 4 — see server/index.js — but NOT /tools, so this
-  harness itself still needs the plain static server; only the real
-  site's own eventual vendor/three import would work under npm start.)
+  Serve with `npm start`, then open
+  http://localhost:8099/tools/preview-stage.html — phase 10 gave
+  server/index.js a route for exactly this path (see there), so this
+  harness no longer needs a server of its own. Do NOT run
+  `python3 -m http.server 8099` instead: a stray one of those, left
+  running from an earlier session, is the exact two-server port trap
+  that has already cost this project two sessions (HANDOFF-PHASE9.md) —
+  it silently holds :8099 so `npm start`'s own Express server dies on
+  bind, and a whole QA pass then runs against the static server none the
+  wiser (no `/api/book`, no other route this repo's server serves —
+  the only symptom last time was a single easy-to-miss console 404).
+  `npm start` is the one server now, for the live site and this harness
+  alike; if you must check who is actually answering :8099, `curl -sI`
+  it and look at the `Server:` header.
 
   Query params:
     ?room=<id>   which room to build (default: glasshouse)

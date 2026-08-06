@@ -169,15 +169,27 @@ function offerShelf() {
 /* ── travelling ───────────────────────────────────────────── */
 
 let queued = null;
-let pendingPose = null;   // a table deep link asked for a camera pose on arrival
+/* A table deep link asked for a camera pose on arrival — scoped to the
+   room it was meant for (`{ room, pose }`, not a bare pose name).
+   go() sets this BEFORE the `state.travelling` guard below, same as
+   `queued`; unlike `queued`, a second go() arriving mid-travel used to
+   leave a stale pose name sitting here, so applyPendingPose() fired it
+   into whatever room happened to finish building first rather than the
+   room it was actually meant for. Scoping it to `room` fixes that at
+   the read side: applyPendingPose() only ever consumes it once
+   `state.room` matches, so a pose for a superseded room simply waits —
+   harmlessly, since this is a plain data field, not a timer — until
+   its own room actually arrives (via the queued replay, typically). */
+let pendingPose = null;
 
 function go(id, dir = 'in', replace = false) {
   /* A table is not a room: #/fronttable means "stand in the front room
      and look down at the table" (PLAN.md point 10). Resolved here, once,
      for every caller — the plan, search, a stale bookmark, the router. */
   if (isTable(id)) {
-    pendingPose = `table:${id}`;
-    id = standIn(id);
+    const standingRoom = standIn(id);
+    pendingPose = { room: standingRoom, pose: `table:${id}` };
+    id = standingRoom;
     if (state.room === id) { applyPendingPose(); return; }
   }
 
@@ -198,15 +210,34 @@ function go(id, dir = 'in', replace = false) {
   const paint = () => {
     hideTag();          /* it points at a mesh that is about to be disposed */
     handle?.dispose();
-    handle = stage ? buildRoom(stage, room, {
-      booksFor: booksIn,
-      mirrorContainer: dom.mirror,
-      signContainer: dom.signs,
-      reducedMotion: REDUCED,
-      onBookActivate: (entry) => openBook(entry.book.id),
-      onDoorActivate: (entry) => go(entry.room.id, 'in'),
-      onBookHover: (entry) => (entry ? showTag(entry) : hideTag()),
-    }) : null;
+    handle = null;
+    /* buildRoom() assembles a whole room's geometry, atlas and mirror
+       in one call, unguarded — a bad room record, a texture that fails
+       to decode, or a context loss landing mid-build is enough to
+       throw here. paint() runs from a bare setTimeout() (below), where
+       nothing else could ever catch it: uncaught, `state.travelling`
+       would stay true for the life of the page and go()'s guard above
+       would queue every later navigation and replay none of them —
+       doors, the dock, the plan, search and the shelf all stop
+       responding at once, silently. Caught, the room is simply empty
+       and flat() — the file's existing no-WebGL escape hatch — gives
+       the reader the complete text UI instead of a dead page. */
+    let buildErr = null;
+    if (stage) {
+      try {
+        handle = buildRoom(stage, room, {
+          booksFor: booksIn,
+          mirrorContainer: dom.mirror,
+          signContainer: dom.signs,
+          reducedMotion: REDUCED,
+          onBookActivate: (entry) => openBook(entry.book.id),
+          onDoorActivate: (entry) => go(entry.room.id, 'in'),
+          onBookHover: (entry) => (entry ? showTag(entry) : hideTag()),
+        });
+      } catch (err) {
+        buildErr = err;
+      }
+    }
 
     if (handle) {
       for (const e of handle.entries) if (state.seen.has(e.book.id)) e.setSeen?.();
@@ -223,7 +254,13 @@ function go(id, dir = 'in', replace = false) {
     tone.apply(room.amb || 'dust');
     state.travelling = false;
     applyPendingPose();
-    offerShelf();
+    restoreFocusAfterRoomChange();
+    if (buildErr) {
+      console.error(`buildRoom() failed for "${id}" — falling back to the text shop:`, buildErr);
+      flat('This room could not be drawn, so here is the shop as a list instead.');
+    } else {
+      offerShelf();
+    }
     if (queued) { const q = queued; queued = null; go(q.id, q.dir, q.replace); }
   };
 
@@ -240,12 +277,44 @@ function go(id, dir = 'in', replace = false) {
    #/fronttable link resolves to. Poses are transient UI state and never
    touch `history` (§4.3), so this is deliberately not part of the route:
    the hash says which room you are in, and this says where you are
-   looking when you get there. */
+   looking when you get there.
+
+   Consumed ONLY when it belongs to the room that just arrived — see
+   `pendingPose`'s own comment above for why a bare pose name isn't
+   enough. A mismatch is left alone rather than discarded: the room it
+   was meant for may still be on its way in via `queued`. */
 function applyPendingPose() {
-  if (!pendingPose) return;
-  const name = pendingPose;
+  if (!pendingPose || pendingPose.room !== state.room) return;
+  const { pose } = pendingPose;
   pendingPose = null;
-  handle?.rig?.goTo(name);
+  handle?.rig?.goTo(pose);
+}
+
+/* Walking through a door is the primary action in the shop, and until
+   now it dropped focus every time: `handle?.dispose()` above tears
+   down the OLD room's a11y mirror, which removes the very <button> a
+   keyboard/AT user's Tab had just landed on and activated — a focused
+   element removed from the document has its focus fall to <body> per
+   spec — so the next Tab restarted at the top of the page and a screen
+   reader lost its place entirely.
+
+   Rescue focus ONLY when it was actually lost (activeElement is null,
+   <body>, or no longer attached to the document): an open overlay, the
+   search input, the book panel, or a dock button just pressed with the
+   keyboard are all legitimately focused elsewhere and must not be
+   interrupted. `dom.placard` is the landing spot — paintChrome() just
+   named the new room into it, above, and index.html gives it
+   `tabindex="-1"` and sits it BEFORE `.stage` in the document for
+   exactly this: Tab onward from a focused placard reaches the a11y
+   mirror's first button, continuing the reader into the room rather
+   than back out to the dock. Same shape as setDisabled()'s own focus
+   rescue below (phase 8: don't strand a keyboard user on a control you
+   just disabled/destroyed out from under them) — this is that same
+   fix, for the same reason, at the room-change site instead. */
+function restoreFocusAfterRoomChange() {
+  const el = document.activeElement;
+  if (el && el !== document.body && document.body.contains(el)) return;
+  dom.placard.focus({ preventScroll: true });
 }
 
 function paintChrome(room) {
@@ -635,10 +704,10 @@ function fromHash(replace) {
 
   if (roomId !== state.room) {
     const goingDeeper = !state.room || (ROOM_BY_ID[roomId].depth >= ROOM_BY_ID[state.room].depth);
-    if (wantPose) pendingPose = wantPose;
+    if (wantPose) pendingPose = { room: roomId, pose: wantPose };
     go(roomId, goingDeeper ? 'in' : 'out', replace);
   } else if (wantPose) {
-    pendingPose = wantPose;
+    pendingPose = { room: roomId, pose: wantPose };
     applyPendingPose();
   }
   if (bookId) setTimeout(() => openBook(bookId, false), state.room === roomId ? 0 : 340);

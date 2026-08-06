@@ -452,6 +452,68 @@ expect('no filter above a preserve-3d node', kb.bad3d.length === 0, kb.bad3d.joi
 await page.keyboard.press('Escape');
 await page.waitForFunction(() => document.getElementById('sheet').hidden, null, { timeout: 20000 }).catch(() => {});
 
+/* ── REVIEW-PHASE10.md #2: a room change must not drop focus ──────
+   The actual defect: Tab to a doorway in the a11y mirror, press Enter
+   on it. main.js's onDoorActivate() calls go(), whose paint() disposes
+   the OLD room's mirror BEFORE building the new one — removing the
+   very <button> that had focus, whose focus then falls to <body> per
+   spec. Reproduced here exactly that way (focus + a real Enter, not a
+   synthetic go() call), asserting focus lands on the arriving room's
+   placard rather than <body>. index.html's own comment covers why the
+   placard sits where Tab onward from it reaches the mirror; this check
+   is only "did focus survive at all", which is the part most likely to
+   silently regress. */
+await goRoom('front');
+const doorFocus = await page.evaluate(() => {
+  const btn = [...document.querySelectorAll('#mirror button')].find((b) => b.dataset.roomId);
+  if (!btn) return null;
+  btn.focus();
+  return {
+    wasFocused: document.activeElement === btn,
+    target: btn.dataset.roomId,
+    before: window.__shop.state.room,
+  };
+});
+expect('a doorway button exists in the mirror and can take focus', !!doorFocus?.wasFocused, JSON.stringify(doorFocus));
+if (doorFocus?.wasFocused) {
+  await page.keyboard.press('Enter');
+  await settle(doorFocus.target);
+  const afterDoor = await page.evaluate(() => ({
+    room: window.__shop.state.room,
+    onPlacard: document.activeElement === document.getElementById('placard'),
+    onBody: document.activeElement === document.body || document.activeElement === null,
+    tag: document.activeElement?.tagName,
+  }));
+  expect('activating a door with the keyboard actually changed the room',
+    afterDoor.room === doorFocus.target && afterDoor.room !== doorFocus.before,
+    JSON.stringify({ doorFocus, afterDoor }));
+  expect('focus lands on the room placard after a keyboard-driven room change, not on <body>',
+    afterDoor.onPlacard && !afterDoor.onBody, JSON.stringify(afterDoor));
+}
+
+/* ...and the negative half of the same fix: a room change must NOT
+   steal focus from somewhere the user is legitimately already at.
+   The search input, specifically — called out by name in the review —
+   since search staying open while the room underneath it changes (a
+   result for a different room, a stale link, the bell) is a real path
+   through this exact code, not a contrived one. */
+await goRoom('front');
+await page.evaluate(() => {
+  document.getElementById('btnSearch').click();
+  document.getElementById('findInput').focus();
+});
+const searchHadFocus = await page.evaluate(() => document.activeElement === document.getElementById('findInput'));
+await page.evaluate(() => window.__shop.go('oak', 'in'));
+await settle('oak');
+const keptFocus = await page.evaluate(() => ({
+  room: window.__shop.state.room,
+  stillOnInput: document.activeElement === document.getElementById('findInput'),
+  searchOpen: !document.getElementById('searchOverlay').hidden,
+}));
+expect('a room change does not steal focus from the search input',
+  searchHadFocus && keptFocus.room === 'oak' && keptFocus.stillOnInput, JSON.stringify(keptFocus));
+await page.evaluate(() => document.querySelector('#searchOverlay [data-close]')?.click());
+
 /* ── the raycaster: one real pointer click on a real spine ─────
    Dispatched as a genuine mouse click at the projected screen position
    of a book mesh, because that is the only thing that tests picking. */

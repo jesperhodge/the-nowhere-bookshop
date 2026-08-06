@@ -713,9 +713,11 @@ export function fillerStyle(seed, hue) {
 
    fillerStyle() above is kept even though its last caller (scene.js's
    front-table stacks) went at the same time: it is the jacket
-   generator's own colour logic for a book with no data, and phase 11's
-   description backfill is the phase most likely to want it back. The
-   deliberately-kept-dead call is recorded in HANDOFF-PHASE11.md rather
-   than left for someone to find. */
+   generator's own colour logic for a book with no data, and a future
+   description-backfill phase is the one most likely to want it back.
+   Decided in phase 10's own review (REVIEW-PHASE10.md), recorded here
+   rather than left for someone to find: it is genuinely dead right now
+   (nothing in src/ calls it) and kept anyway, on purpose, as the one
+   named exception to "delete what nothing calls." */
 
 export { hash, rngFrom };

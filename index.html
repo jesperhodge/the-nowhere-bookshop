@@ -46,6 +46,17 @@
 <!-- ─── The shop ─────────────────────────────────────────────── -->
 <main id="shop" class="shop" hidden>
 
+  <!-- Room caption. Placed BEFORE .stage (though it paints on top of it —
+       z-index:25 vs .stage's auto — so DOM order is free to serve a
+       different purpose): main.js focuses this, tabindex="-1", after a
+       room change that dropped focus (the a11y mirror's own button just
+       got disposed under the reader). Sitting here means Tab onward from
+       it lands on the a11y mirror's first button, not back out to the
+       dock — the reader continues into the room rather than out of it.
+       Never in the normal forward-Tab sequence itself (tabindex="-1"),
+       so a page-top-to-bottom Tab walk is unaffected. -->
+  <div class="placard" id="placard" tabindex="-1" aria-live="polite"></div>
+
   <div class="stage" id="stage">
     <!-- The room. The canvas carries no semantics at all — every book,
          doorway, shelf and table in it is a real focusable button in
@@ -96,9 +107,6 @@
       </button>
     </div>
   </header>
-
-  <!-- Room caption -->
-  <div class="placard" id="placard" aria-live="polite"></div>
 
   <!-- Bottom bar -->
   <footer class="dock">
