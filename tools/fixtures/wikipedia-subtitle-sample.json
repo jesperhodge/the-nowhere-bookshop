@@ -1,0 +1,40 @@
+{
+  "_fixture": true,
+  "_note": "Real fetched data, not invented — every case is copied verbatim from data/cache/describe.json and data/cache/describe/wikipedia/*.json (the raw responses this repo already fetched for these exact books). Used only by `node tools/describe.mjs selftest` to exercise verifyWikipediaCandidate()'s subtitle-corroboration gate (REVIEW-PHASE11.md) offline, with no network. The first two are the cases the review names as the constraint on any fix to the gate, and they pull in opposite directions: one must be rejected, the other must still be accepted. The third was found by re-running the gate against all 301 already-accepted matches and hand-checking what it dropped — a genre-label subtitle ('Stories') that the gate must not demand verbatim from a page that instead says 'short story collection'.",
+
+  "cases": [
+    {
+      "name": "REVIEW-PHASE11 #18 — book title extends the series' first-volume title, rejected (Abarat)",
+      "book": { "title": "Abarat: Days of Magic, Nights of War", "author": "Clive Barker" },
+      "page": {
+        "title": "Abarat",
+        "extract": "Abarat (2002) is a fantasy novel written and illustrated by Clive Barker, the first in Barker's The Books of Abarat series. It is aimed primarily at young adults. The eponymous Abarat is a fictional archipelago which is the setting for the majority of the story.\nThe title image contains an ambigram, which may indicate that it is derived from the Russian word 'наоборот' commonly meaning 'the other way around'. The paintings in the book are done with oils. Barker had already completed 300 paintings before he started working on the first book.",
+        "pageprops": { "displaytitle": "<i>Abarat</i>", "wikibase-shortdesc": "2002 young adult novel by Clive Barker" }
+      },
+      "expectOk": false,
+      "expectReasonContains": "subtitle"
+    },
+
+    {
+      "name": "REVIEW-PHASE11 #8 — UK/US editions subtitled differently, still the same book, accepted (Moneyland)",
+      "book": { "title": "Moneyland: Why Thieves and Crooks Now Rule the World and How to Take It Back", "author": "Oliver Bullough" },
+      "page": {
+        "title": "Moneyland",
+        "extract": "Moneyland: The Inside Story of the Crooks and Kleptocrats Who Rule the World is a 2018 book by British writer Oliver Bullough about 'Moneyland', which he defines as a metaphorical virtual space and secret country that is used by kleptocratic governments and the lawless super-wealthy to steal, conceal and spend wealth with the aid of offshore financial centres, money laundering and tax evasion.\nBullough argues that 'Moneyland' is key to the flow of anonymous and uncontrolled money into politics, which contributes to a broad loss of trust in democratic processes and the spread of political instability. He also highlights the role of Western legal and financial institutions and consultancies in enabling and obscuring these acts, and emphasises the need for greater global regulation.\nMoneyland was well-received, garnering praise for its accessible writing and detailed insight, however some criticism was aimed at the scant discussion of solutions to the issues discussed in the book. The book was shortlisted for the 2019 Orwell Prize.\nThe concept of 'Moneyland' has been used in reference to state capture, and the three-step process of kleptocracy ('steal-hide-spend') outlined in the book has been further explored in academic research.",
+        "pageprops": { "displaytitle": "<i>Moneyland</i>", "wikibase-shortdesc": "2018 book by Oliver Bullough" }
+      },
+      "expectOk": true
+    },
+
+    {
+      "name": "genre-label subtitle ('Stories') is not demanded verbatim, accepted (Your Utopia)",
+      "book": { "title": "Your Utopia: Stories", "author": "Bora Chung" },
+      "page": {
+        "title": "Your Utopia",
+        "extract": "Your Utopia is a 2024 short story collection by Bora Chung. The collection was translated into English by Anton Hur.",
+        "pageprops": { "displaytitle": "<i>Your Utopia</i>", "wikibase-shortdesc": "2024 short story collection by Bora Chung" }
+      },
+      "expectOk": true
+    }
+  ]
+}

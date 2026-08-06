@@ -665,23 +665,20 @@
   },
   "wikipedia": {
    "tried": true,
-   "accepted": true,
-   "candidate": "Abarat",
-   "url": "https://en.wikipedia.org/wiki/Abarat",
-   "revid": 1364961007,
-   "blurb": "Abarat (2002) is a fantasy novel written and illustrated by Clive Barker, the first in Barker's The Books of Abarat series. It is aimed primarily at young adults. The eponymous Abarat is a fictional archipelago which is the setting for the majority of the story. The title image contains an ambigram, which may indicate that it is derived from the Russian word 'наоборот' commonly meaning 'the other way around'. The paintings in the book are done with oils."
+   "accepted": false,
+   "reason": "rejected: Abarat — reads as an early volume in a series and the book title carries a subtitle the page does not (REVIEW-PHASE11.md gate tightened after hand-check)"
   },
   "wikidata": {
    "tried": true,
    "accepted": false,
    "reason": "no candidate cleared the gate"
   },
-  "blurb": "Abarat (2002) is a fantasy novel written and illustrated by Clive Barker, the first in Barker's The Books of Abarat series. It is aimed primarily at young adults. The eponymous Abarat is a fictional archipelago which is the setting for the majority of the story. The title image contains an ambigram, which may indicate that it is derived from the Russian word 'наоборот' commonly meaning 'the other way around'. The paintings in the book are done with oils.",
-  "blurbSrc": "wikipedia",
-  "blurbUrl": "https://en.wikipedia.org/wiki/Abarat",
+  "blurb": null,
+  "blurbSrc": null,
+  "blurbUrl": null,
   "fact": null,
   "factUrl": null,
-  "cachedAt": "2026-08-05T22:55:29.691Z"
+  "cachedAt": "2026-08-06T01:14:20.039Z"
  },
  "adam gboyega odubanjo": {
   "title": "Adam",

@@ -218,6 +218,72 @@ const ANTI_RE = /\b(television|tv)\s+(mini-?)?series\b|\bfilm\b|\bmovie\b|\bvide
 const WORK_RE = /\bnovels?\b|\bnovellas?\b|\bcollections?\b|\bmemoirs?\b|\bshort\s+stories\b|\bstories\b|\bpoems?\b|\bpoetry\b|\bgraphic\s+novels?\b|\banthology\b|\bnon-?fiction\b|\bbooks?\b/i;
 const LIST_RE = /^list of /i;
 
+/* ── the Abarat guard ─────────────────────────────────────────
+   REVIEW-PHASE11.md: a book whose title extends a *series* title
+   (e.g. "Abarat: Days of Magic, Nights of War") can pass the plain
+   title test above by matching the first volume's page ("Abarat"),
+   because bareTitle() strips the subtitle off both sides before
+   comparing. That is correct for editions that only differ by
+   subtitle (Moneyland's UK/US covers) and wrong for a later volume
+   whose subtitle IS the book. The fix: a book title with a subtitle
+   must have that subtitle corroborated somewhere on the page — not
+   merely left unmentioned-and-forgiven — before the match counts. */
+
+/** Everything after the first subtitle separator in a title, same split
+    bareTitle() uses to discard it — kept here instead, minus a trailing
+    "(Top Shelf Productions)"-style parenthetical, the same disambiguator
+    bareTitle() strips (there, only from the already-subtitle-free head; a
+    subtitle can carry one too — an imprint credit, not book content, and it
+    fooled the first cut of this check into "corroborating" March: Book
+    Three's mismatch against the March (comics) series page on the word
+    "Productions"). '' when there is no subtitle. */
+const subtitleOf = (t) => {
+  const m = String(t || '').match(/[:;–—](.*)$/);
+  return m ? m[1].replace(/\s*\([^)]*\)\s*$/, '') : '';
+};
+
+/** Common function words a subtitle is mostly made of and that would match
+    almost any page by accident — filtered out so what is left is actually
+    distinctive. Deliberately conservative (errs toward dropping a word, not
+    toward keeping one); a subtitle contributing no word at all just can't be
+    checked and is skipped rather than forced to fail. */
+const SUBTITLE_STOPWORDS = new Set([
+  'the', 'a', 'an', 'of', 'and', 'or', 'but', 'to', 'in', 'on', 'at', 'for', 'from', 'by', 'with',
+  'now', 'how', 'why', 'who', 'what', 'when', 'where', 'it', 'its', 'that', 'this', 'these', 'those',
+  'is', 'are', 'was', 'were', 'be', 'been', 'being', 'as', 'so', 'if', 'than', 'then', 'no', 'not', 'yet',
+  'all', 'more', 'most', 'some', 'any', 'into', 'over', 'under', 'up', 'down', 'out', 'off', 'again',
+  'once', 'here', 'there', 'own', 'same', 'too', 'very', 'can', 'will', 'just', 'should', 'could',
+  'would', 'may', 'might', 'must', 'shall', 'you', 'your', 'we', 'our', 'i', 'he', 'she', 'they', 'them',
+]);
+
+/** Genre-label words ("Stories", "A Novel", "Poems") are a subtitle in form
+    only — they say what kind of book it is, the same handful of words
+    WORK_RE already checks for, not anything specific to this book. A page
+    that is correctly about a story collection will not necessarily use the
+    literal word "stories" (it may say "short story collection" instead, as
+    the real Your Utopia page does) — so these cannot be asked to corroborate
+    themselves and are excluded from "distinctive" rather than left in to
+    manufacture a false rejection. */
+const GENRE_LABEL_WORDS = new Set([
+  'novel', 'novels', 'novella', 'novellas', 'story', 'stories', 'memoir', 'memoirs',
+  'poem', 'poems', 'poetry', 'essay', 'essays', 'anthology', 'anthologies',
+  'collection', 'collections', 'tale', 'tales', 'saga', 'fiction', 'nonfiction',
+  'biography', 'autobiography', 'book', 'books',
+]);
+
+/** Words from a title's subtitle distinctive enough to corroborate a match:
+    not a stopword, not a bare genre label, and long enough (>=4 chars) that
+    a coincidental hit on an unrelated page is unlikely. */
+function distinctiveSubtitleWords(t) {
+  return norm(subtitleOf(t)).split(' ')
+    .filter((w) => w.length >= 4 && !SUBTITLE_STOPWORDS.has(w) && !GENRE_LABEL_WORDS.has(w));
+}
+
+/** The extract naming the matched work as an early volume of a series — the
+    Abarat page's own words ("the first in Barker's ... series"). Stated
+    directly in REVIEW-PHASE11.md as the signature of the failure mode. */
+const SERIES_FIRST_RE = /\bthe first (?:novel |book |entry |title |volume |instal{1,2}ment )?(?:in|of)\b/i;
+
 /** The strict gate DESCRIPTIONS-FEASIBILITY.md calls for. Reject first,
     verify second — a rejection is the expected outcome for most candidates. */
 export function verifyWikipediaCandidate(p, book) {
@@ -253,6 +319,27 @@ export function verifyWikipediaCandidate(p, book) {
   if (!extractNorm.includes(want)) return { ok: false, reason: 'extract does not mention the title' };
   if (!authorSurname || !extractNorm.includes(authorSurname)) return { ok: false, reason: 'extract does not mention the author' };
   if (!WORK_RE.test(shortdesc) && !WORK_RE.test(extract)) return { ok: false, reason: 'does not read as a work' };
+
+  /* The Abarat guard (REVIEW-PHASE11.md). A subtitle on the book's title has
+     to be corroborated by the page, not just absent-and-forgiven — otherwise
+     "Abarat: Days of Magic, Nights of War" passes on "Abarat" alone. */
+  const bookHasSubtitle = !!subtitleOf(book.title);
+  const pageHasSubtitle = !!subtitleOf(title);
+
+  /* Cheap guard: the page frames itself as an early series entry while the
+     book carries a subtitle the page's own title doesn't — the Abarat
+     signature stated directly, independent of word overlap below. */
+  if (bookHasSubtitle && !pageHasSubtitle && SERIES_FIRST_RE.test(extract)) {
+    return { ok: false, reason: 'reads as an early volume in a series and the book title carries a subtitle the page does not' };
+  }
+
+  const subtitleWords = distinctiveSubtitleWords(book.title);
+  if (subtitleWords.length) {
+    const haystack = norm(`${title} ${extract}`);
+    if (!subtitleWords.some((w) => haystack.includes(w))) {
+      return { ok: false, reason: 'subtitle not corroborated by page title or extract' };
+    }
+  }
 
   return { ok: true };
 }
@@ -519,9 +606,10 @@ async function cmdReport() {
 }
 
 async function cmdSelftest() {
-  const fixture = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools/fixtures/googlebooks-sample.json'), 'utf8'));
   let pass = 0, fail = 0;
-  for (const t of fixture.cases) {
+
+  const gbFixture = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools/fixtures/googlebooks-sample.json'), 'utf8'));
+  for (const t of gbFixture.cases) {
     const items = t.response.items || [];
     const match = t.isbn ? (items[0] || null) : pickGoogleMatch(items, t.book);
     const blurb = match ? cleanDescription(match.volumeInfo?.description) : null;
@@ -532,6 +620,21 @@ async function cmdSelftest() {
     if (!ok) console.log(`    expected accepted=${t.expectAccepted}${t.expectBlurbContains ? ` containing "${t.expectBlurbContains}"` : ''}; got accepted=${accepted} blurb=${JSON.stringify(blurb)}`);
     ok ? pass++ : fail++;
   }
+
+  /* REVIEW-PHASE11.md — the subtitle-corroboration gate on Wikipedia matches.
+     Both cases are permanent regression tests: a book title extending a
+     series' first-volume title must be rejected, and a book whose UK/US
+     editions carry genuinely different subtitles must still be accepted. */
+  const wpFixture = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools/fixtures/wikipedia-subtitle-sample.json'), 'utf8'));
+  for (const t of wpFixture.cases) {
+    const v = verifyWikipediaCandidate(t.page, t.book);
+    const ok = v.ok === t.expectOk
+      && (!t.expectReasonContains || (v.reason && v.reason.includes(t.expectReasonContains)));
+    console.log(`${ok ? 'PASS' : 'FAIL'}  ${t.name}`);
+    if (!ok) console.log(`    expected ok=${t.expectOk}${t.expectReasonContains ? ` reason containing "${t.expectReasonContains}"` : ''}; got ${JSON.stringify(v)}`);
+    ok ? pass++ : fail++;
+  }
+
   console.log(`\n${pass} passed, ${fail} failed`);
   if (fail) process.exitCode = 1;
 }

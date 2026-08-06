@@ -120,7 +120,7 @@ as a fetched source will actually support, in order:
     NODE_USE_ENV_PROXY=1 node tools/describe.mjs run     # google books → wikipedia → wikidata
                          node tools/describe.mjs apply   # replay the store onto generated/*.js, no network
                          node tools/describe.mjs report  # counts, by source
-                         node tools/describe.mjs selftest # google books matcher, against a fixture — no network
+                         node tools/describe.mjs selftest # google books matcher + wikipedia subtitle gate, against fixtures — no network
 
 Same conventions as `harvest.mjs`: disk-cached under `data/cache/describe/`
 (gitignored — regenerable from the URL), resumable via a persistent record at
@@ -136,7 +136,11 @@ fixture instead. **Wikipedia** sits behind a strict gate
 (`verifyWikipediaCandidate`) because its search is confidently wrong about as
 often as it is right: it will hand back the author's own page, an award's
 page, or a screen adaptation ahead of the book. Expect most candidates to be
-rejected — that is the gate working. **Wikidata**'s one-line fact
+rejected — that is the gate working. It also requires a book title's subtitle
+to be corroborated by the page's own title or extract (`REVIEW-PHASE11.md`) —
+otherwise a book whose title extends a series' first-volume title (`Abarat:
+Days of Magic, Nights of War` vs. the `Abarat` page) passes on the main title
+alone. **Wikidata**'s one-line fact
 ("1982 novel by Gene Wolfe") is stored separately as `fact`/`factUrl`, never
 as `blurb` — it is a fact, not a description.
 
