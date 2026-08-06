@@ -72,7 +72,18 @@ export function renderBook(book, ctx) {
      blurbs, notes or tags for generated books). So the section is rendered
      only when there is something in it, and when there is, it says whose
      opinion it is. A book without a note is not a lesser book; it is one
-     the shopkeeper has not got round to writing about. */
+     the shopkeeper has not got round to writing about.
+
+     Sourcing a blurb for the rest was never going to reach 100% either
+     (tools/describe.mjs, DESCRIPTIONS-FEASIBILITY.md), so a book with
+     neither leans on the one thing the shop is sure of: what it won. Every
+     accolade here traces through acc[].s to a fetched prize-list page and
+     revision id (data/generated/sources.js) — real and specific, and more
+     interesting than an apology for a note that was never going to exist. */
+  const accProse = [
+    ...book.won.map((w) => `Winner, ${w}`),
+    ...book.cited,
+  ].join(' · ');
   const note = book.note
     ? `<section class="bd__sec bd__sec--pick">
         <h3 class="bd__h">
@@ -81,10 +92,14 @@ export function renderBook(book, ctx) {
         </h3>
         <p class="bd__note">${rich(book.note)}</p>
       </section>`
-    : `<section class="bd__sec bd__sec--nonote">
-        <p class="bd__nonote">On the shelf for what it won, not for a note —
-          the shopkeeper hasn't written about this one.</p>
-      </section>`;
+    : accProse
+      ? `<section class="bd__sec bd__sec--nonote">
+          <h3 class="bd__h">On the shelf for what it won</h3>
+          <p class="bd__note">${esc(accProse)}</p>
+        </section>`
+      : `<section class="bd__sec bd__sec--nonote">
+          <p class="bd__nonote">On the shelf, but there's nothing on record about this one yet.</p>
+        </section>`;
 
   const sample = `<section class="bd__sec">
       <h3 class="bd__h">Before you buy it</h3>

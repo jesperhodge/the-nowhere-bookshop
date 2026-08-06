@@ -110,3 +110,37 @@ shelve into). `tools/rooms-rules.js` decides which of those rooms a given book
 lands in, from Open Library subjects and publication year. `tools/wikitable.js`
 is the wikitext table reader — rowspan, templates and all five different
 winner-marking conventions these pages use.
+
+## describe.mjs — phase 11's backfill (`DESCRIPTIONS-FEASIBILITY.md`)
+
+1,105 of the 2,096 generated books came out of `harvest.mjs shelve` with no
+`blurb` — Open Library's genuine gap, not a bug in phase 9. This fills as many
+as a fetched source will actually support, in order:
+
+    NODE_USE_ENV_PROXY=1 node tools/describe.mjs run     # google books → wikipedia → wikidata
+                         node tools/describe.mjs apply   # replay the store onto generated/*.js, no network
+                         node tools/describe.mjs report  # counts, by source
+                         node tools/describe.mjs selftest # google books matcher, against a fixture — no network
+
+Same conventions as `harvest.mjs`: disk-cached under `data/cache/describe/`
+(gitignored — regenerable from the URL), resumable via a persistent record at
+`data/cache/describe.json` (committed, same footing as `openlibrary.json`), and
+throttled. A crash or a kill mid-run loses nothing already resolved; `run`
+only ever fetches a source for a book it has not already tried that source
+against, and `--force` overrides that.
+
+**Google Books** is gated on `GOOGLE_BOOKS_KEY` (`.env` or the shell) and does
+most of the work — but 429s from this sandbox's IP at any pacing, keyed or
+not, so `run` skips it cleanly here and the path is proven with `selftest`'s
+fixture instead. **Wikipedia** sits behind a strict gate
+(`verifyWikipediaCandidate`) because its search is confidently wrong about as
+often as it is right: it will hand back the author's own page, an award's
+page, or a screen adaptation ahead of the book. Expect most candidates to be
+rejected — that is the gate working. **Wikidata**'s one-line fact
+("1982 novel by Gene Wolfe") is stored separately as `fact`/`factUrl`, never
+as `blurb` — it is a fact, not a description.
+
+`run` calls `apply` itself when it finishes. Run `apply` on its own after
+`harvest.mjs shelve` regenerates `src/js/data/generated/` from scratch — shelve
+does not know this tool exists and will wipe its fills; `apply` puts them back
+without a single new request.

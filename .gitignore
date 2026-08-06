@@ -23,3 +23,11 @@ tools/suggestions/
 data/cache/wiki/
 # handoff file between `harvest shelve` and `harvest isbns`, rewritten by both
 data/cache/isbn-wanted.json
+
+# Phase 11's backfill (tools/describe.mjs). Same split as data/cache/wiki/
+# above: the raw per-book Google Books / Wikipedia / Wikidata responses under
+# data/cache/describe/ are regenerable from the URL alone and are NOT
+# committed. data/cache/describe.json — the derived record of what was
+# accepted, rejected and why, per book — IS committed, on the same footing as
+# openlibrary.json and harvest-attempts.json.
+data/cache/describe/

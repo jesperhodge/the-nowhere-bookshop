@@ -14,7 +14,11 @@
     "harvest:isbns": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs isbns",
     "harvest:shelve": "node tools/harvest.mjs shelve",
     "harvest:report": "node tools/harvest.mjs report",
-    "harvest:curated": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs curated"
+    "harvest:curated": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs curated",
+    "describe": "NODE_USE_ENV_PROXY=1 node tools/describe.mjs run",
+    "describe:apply": "node tools/describe.mjs apply",
+    "describe:report": "node tools/describe.mjs report",
+    "describe:selftest": "node tools/describe.mjs selftest"
   },
   "dependencies": {
     "express": "^5.2.1"

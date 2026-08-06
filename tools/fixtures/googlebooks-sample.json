@@ -1,0 +1,112 @@
+{
+  "_fixture": true,
+  "_note": "Synthetic responses shaped like the real Google Books Volumes API (https://www.googleapis.com/books/v1/volumes), used only by `node tools/describe.mjs selftest` to exercise pickGoogleMatch()/cleanDescription() offline. None of this is real book data and none of it is ever written to src/js/data/generated/ — the titles, authors and blurb text below are made up for the test. This exists because the live endpoint 429s from this sandbox's IP (DESCRIPTIONS-FEASIBILITY.md) so the Google Books path cannot be run to completion here, but it still has to be correct before the owner runs it for real with a key.",
+
+  "cases": [
+    {
+      "name": "isbn query — single confident hit, description accepted",
+      "book": { "title": "Test Volume One", "author": "Fixture Author", "isbn": "9781234567897" },
+      "isbn": true,
+      "response": {
+        "kind": "books#volumes",
+        "totalItems": 1,
+        "items": [
+          {
+            "id": "abc123",
+            "volumeInfo": {
+              "title": "Test Volume One",
+              "authors": ["Fixture Author"],
+              "description": "In a town that does not appear on any map, a locksmith discovers a door that was never built. <b>What follows</b> is a story about the things we lock away and the ones who come looking for the key. Fixture Author's first novel is a slow, exact piece of work about memory and repair.\n\nSource: publisher.",
+              "infoLink": "https://books.google.com/books?id=abc123"
+            }
+          }
+        ]
+      },
+      "expectAccepted": true,
+      "expectBlurbContains": "locksmith discovers a door"
+    },
+
+    {
+      "name": "title/author query — items[0] is a decoy study guide, items[1] is the real book",
+      "book": { "title": "Test Volume One", "author": "Fixture Author" },
+      "isbn": false,
+      "response": {
+        "kind": "books#volumes",
+        "totalItems": 2,
+        "items": [
+          {
+            "id": "decoy999",
+            "volumeInfo": {
+              "title": "Test Volume One: A Study Guide",
+              "authors": ["Study Notes Inc."],
+              "description": "Chapter-by-chapter questions and summaries for classroom use.",
+              "infoLink": "https://books.google.com/books?id=decoy999"
+            }
+          },
+          {
+            "id": "abc123",
+            "volumeInfo": {
+              "title": "Test Volume One",
+              "authors": ["Fixture Author"],
+              "description": "In a town that does not appear on any map, a locksmith discovers a door that was never built.",
+              "infoLink": "https://books.google.com/books?id=abc123"
+            }
+          }
+        ]
+      },
+      "expectAccepted": true,
+      "expectBlurbContains": "locksmith discovers a door"
+    },
+
+    {
+      "name": "title/author query — no candidate has the right author, rejected rather than guessed",
+      "book": { "title": "Test Volume One", "author": "Fixture Author" },
+      "isbn": false,
+      "response": {
+        "kind": "books#volumes",
+        "totalItems": 1,
+        "items": [
+          {
+            "id": "wrongauthor",
+            "volumeInfo": {
+              "title": "Test Volume One",
+              "authors": ["A Completely Different Person"],
+              "description": "An unrelated book that happens to share a title.",
+              "infoLink": "https://books.google.com/books?id=wrongauthor"
+            }
+          }
+        ]
+      },
+      "expectAccepted": false
+    },
+
+    {
+      "name": "matched volume has no description field — absent, not fabricated",
+      "book": { "title": "Test Volume One", "author": "Fixture Author", "isbn": "9781234567897" },
+      "isbn": true,
+      "response": {
+        "kind": "books#volumes",
+        "totalItems": 1,
+        "items": [
+          {
+            "id": "abc123",
+            "volumeInfo": {
+              "title": "Test Volume One",
+              "authors": ["Fixture Author"],
+              "infoLink": "https://books.google.com/books?id=abc123"
+            }
+          }
+        ]
+      },
+      "expectAccepted": false
+    },
+
+    {
+      "name": "no results at all",
+      "book": { "title": "A Book That Does Not Exist Anywhere", "author": "Nobody Wrote This" },
+      "isbn": false,
+      "response": { "kind": "books#volumes", "totalItems": 0 },
+      "expectAccepted": false
+    }
+  ]
+}
