@@ -1,27 +1,29 @@
 # Trying it out, and seeing what changed
 
-Written mid-project, during phase 10. Read `HANDOFF-PHASE10.md` for the
-swap-over's own brief, and the "What is not done" section at the bottom of
-this file for the current state.
+Written mid-project, during phase 10, and updated at the close of phase 12 —
+the last phase. Read `HANDOFF-FINAL.md` for that phase's own account of what
+shipped and what is still open; the "What is not done" section at the bottom
+of this file is the standing, itemised worklist it closes most of out.
 
 ## The one thing to know first
 
-**There is one build now.** Phase 10 retired the CSS-3D scene and made the
+**There is one build.** Phase 10 retired the CSS-3D scene and made the
 three.js stage the actual shop, so `npm start` gives you real geometry, real
 lights, doorway openings, tables and camera poses — everything phases 3–7
-built beside the live site is now *in* it.
+built beside the live site is *in* it. Phase 12 added a Vercel deployment
+(`vercel.json`, `api/index.js`) on top, without touching how any of this
+runs locally.
 
 `src/js/scene.js`, `src/styles/scene.css` and `src/styles/themes.css` are
 gone. The whole DOM UI stayed exactly as it was: dock, book panel, search,
 plan, parcel, and the grain and vignette overlays that sit on top of the
 canvas and carry a lot of the mood.
 
-**Status:** phase 10 is committed as a reviewed-pending draft (`d7b0f4c`). It
-has been smoke-verified — the front room and a second room both build with
-zero console errors, the a11y mirror is intact with no `role="listitem"` on a
-button, and the table reads correctly at both poses — but it has **not** had
-the full adversarial review pass every earlier phase got. See "What is not
-done" at the bottom.
+**Status:** phases 10 and 11 both got their adversarial review pass
+(`REVIEW-PHASE10.md`, `REVIEW-PHASE11.md`) and their findings were fixed.
+Phase 12 (this one) ran `npm run qa` clean end to end — see "Check it
+yourself" below — and closed three previously-carried bugs. See "What is not
+done" at the bottom for what is still genuinely open.
 
 ## Run the live site
 
@@ -109,48 +111,68 @@ npm run harvest:report   # the harvest's coverage counts
 ```
 
 `tools/qa.mjs` was rewritten in phase 10 against `IMPLEMENTATION.md` §7 — it
-now checks the canvas, the a11y mirror and the camera poses rather than the
-retired CSS build's `.bk[data-book]` nodes. **It has not been run since the
-rewrite**, so treat a failure as "unverified", not necessarily "regressed".
+checks the canvas, the a11y mirror and the camera poses rather than the
+retired CSS build's `.bk[data-book]` nodes. It ran clean at the end of phase
+12 — 67 checks, zero failures, zero console/page errors, zero failed
+requests, across a full 50-room sweep. A failure now is a real regression.
 
 ---
 
 ## What is not done
 
 Being straight about the state, because a doc that overstates it costs the
-next person a session.
+next person a session. This is phase 12's closing account — see
+`HANDOFF-FINAL.md` for the full detail behind every line here.
 
-**Phase 10 (the swap-over) is a reviewed-pending draft.** It was implemented
-and visually checked, and it has been smoke-verified since — two rooms build
-with zero console errors, the a11y mirror carries no `role="listitem"` on a
-button, room teardown survives walking between rooms, and the table reads
-correctly at both poses. But the **separate adversarial review pass** that
-every earlier phase got was interrupted and never ran. In phases 7, 8 and 9
-that pass is where essentially every real defect was found — phase 9 found
-eleven, none of which were in its plan. So assume defects remain, and run
-that pass before trusting this in production.
+**Closed this phase, previously carried forward:**
 
-Specifically **not** verified since the swap: the full 50-room sweep, the
-rewritten `tools/qa.mjs`, the no-WebGL fallback, deep links and browser
-back/forward, the parcel surviving a reload, `fronttable`'s removal as a room
-being consistent across the plan/breadcrumbs/shelf overlay, and performance
-in the heaviest room.
+- **Four keyboard shortcuts didn't guard modifiers** — ⌘P opened the parcel
+  *and* the print dialog. `m`/`p`/`s`/`b` now check the same
+  no-modifiers guard `h` already had. Fixed in `src/js/main.js`.
+- **`Back` rewrote the address bar to the room you'd just left**, when a
+  book panel was still open. `dom.back`'s click handler now closes the book
+  first, the same way `goHome()` already did. Fixed in `src/js/main.js`.
+- **The far end of a `used===2` side case can't be seen from any camera
+  pose.** Re-measured fresh against the current three.js geometry (not
+  re-quoted from the pre-swap CSS build): still true, same shape as phases
+  7-10 found it — the case's own run is 342 units wide and its far ~40% sits
+  behind the back case's right edge from every position the room's own
+  floor allows a camera to stand. **Recorded as accepted**, not fixed — see
+  `HANDOFF-FINAL.md` for the measurement, the screenshot, and why a real fix
+  needs a change to the pose model (more than one named pose per case, or a
+  moved case) rather than a search-tuning patch.
+- **Vercel deployment.** `vercel.json` + `api/index.js` now exist —
+  static CDN for `index.html`/`src/`/`vendor/`, one serverless function
+  wrapping the same router `server/index.js` uses locally
+  (`server/routes.js`). Proved with a local `vercel build` (no Vercel
+  account in this sandbox — see `HANDOFF-FINAL.md` for exactly what that
+  does and does not prove) and a direct simulated invocation of the built
+  function.
+- **`March: Book Three`'s description never mentioned the third book** —
+  a truncation artifact in `cleanDescription()`, not a gate failure. Fixed;
+  151 previously-generated blurbs across the whole catalogue improved by the
+  same fix (107 re-cleaned from cached raw Wikipedia text, no network; 44
+  more repaired by a live Open Library re-fetch). 11 remain ending in the
+  old mid-word "…" fallback — genuinely hard cases with no reachable
+  sentence boundary in budget, or where a live re-fetch came back with
+  nothing better. See `HANDOFF-FINAL.md` for the count broken down by
+  source.
 
-**Phase 11 — book descriptions.** 1,105 of 2,096 harvested books still have
-no blurb. `DESCRIPTIONS-FEASIBILITY.md` records every source measured against
-books that are actually missing one, and the design for a single programmatic
-backfill tool. Nothing has been built yet. The short version: Open Library is
-exhausted, Google Books is the right primary source but needs an API key,
-Wikipedia works only behind a strict verification gate, and Goodreads is
-declined on robots.txt grounds.
+**Still open:**
 
-**Phase 12 — final polish and Vercel.** Not started. There is no
-`vercel.json`, and the `/api` routes would need to become serverless
-functions. The static site itself deploys as-is.
-
-**Carried forward, still unfixed:** the far end of a deep side case is not
-reachable from any camera pose; no real screen reader has ever been used on
-the a11y mirror; `Back` rewrites the URL hash to the room you just left when
-a book panel is open (phase 8 documented it, deliberately out of scope); and
-four keyboard shortcuts don't guard modifiers, so ⌘P opens the parcel *and*
-the print dialog.
+- **No real screen reader has ever been used on the a11y mirror.** Every
+  phase since 4 has asserted names/roles/focus order programmatically; none
+  has had an actual AT session. `IMPLEMENTATION.md` §4.7 says an axe pass is
+  green on a page that is unusable — that risk is still live.
+- **Vercel's own deploy step was never exercised end to end.** This
+  sandbox has no Vercel account, so nothing here confirms that a real
+  `vercel deploy` places `includeFiles`-matched data where the function
+  expects it at request time — only that the config is valid, the glob
+  matches the intended files, and a *simulated* copy of the built function
+  answers correctly. Confirm with one real deploy before treating the
+  Vercel path as load-bearing.
+- Everything phase 11 already flagged about description coverage:
+  `DESCRIPTIONS-FEASIBILITY.md`'s numbers on Open Library/Google
+  Books/Wikipedia stand; 805 of 2,096 harvested books still have no blurb
+  at all (not a truncation issue — nothing verifiable was ever found for
+  them).

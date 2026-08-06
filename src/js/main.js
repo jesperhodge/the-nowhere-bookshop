@@ -742,7 +742,20 @@ function wire() {
   /* dock */
   dom.back.addEventListener('click', () => {
     const r = ROOM_BY_ID[state.room];
-    if (r?.parent) go(r.parent, 'out');
+    if (!r?.parent) return;
+    /* PLAN-PHASE12.md §1.2's bug 2, documented since phase 8 and left
+       out of scope until now. Back used to leave the book panel open and
+       state.book set while walking the room out from under it — closeBook()
+       was never called, unlike goHome() a few lines up, which already does
+       this for the same reason (see its own comment). The visible half of
+       the bug is cosmetic (the sheet stays open over the wrong room for a
+       moment); the real one is that the NEXT Escape then sees state.book
+       still set and runs closeBook()'s default, which rewrites the hash to
+       *the book's* room — the one you just left — leaving the address bar
+       pointing at a room you are no longer in. Reproduce (was; now fixed):
+       open a book, Tab to Back, Enter, then Escape. */
+    if (state.book) closeBook(true);
+    go(r.parent, 'out');
   });
   dom.home.addEventListener('click', goHome);
   dom.bell.addEventListener('click', ringBell);
@@ -859,25 +872,31 @@ function wire() {
     }
     if (typing) return;
 
+    /* PLAN-PHASE12.md §1.2's bug 1: `m`/`p`/`s`/`b` fired on every
+       Cmd/Ctrl combination that happens to share the letter, so ⌘P opened
+       the parcel *and* the print dialog, ⌘S the shelf *and* Save. `h`
+       already guarded itself (phase 8, right below); the other four
+       inherited the gap rather than being fixed alongside it. One flag,
+       checked by all five now, closes it without touching the un-modified
+       single-key behaviour a click on the dock also produces. */
+    const noMods = !e.metaKey && !e.ctrlKey && !e.altKey;
+
     if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
       e.preventDefault();
       openOverlay(dom.searchOverlay, () => { dom.findInput.value = ''; runSearch(''); });
       setTimeout(() => dom.findInput.focus(), 60);
-    } else if (e.key === 'm' || e.key === 'M') {
+    } else if ((e.key === 'm' || e.key === 'M') && noMods) {
       openOverlay(dom.mapOverlay, () => {
         dom.mapBody.textContent = '';
         dom.mapBody.appendChild(renderMap(state.room));
       });
-    } else if (e.key === 'p' || e.key === 'P') {
+    } else if ((e.key === 'p' || e.key === 'P') && noMods) {
       openOverlay(dom.parcelOverlay, renderParcel);
-    } else if (e.key === 's' || e.key === 'S') {
+    } else if ((e.key === 's' || e.key === 'S') && noMods) {
       openOverlay(dom.shelfOverlay, renderShelf);
-    } else if (e.key === 'b' || e.key === 'B') {
+    } else if ((e.key === 'b' || e.key === 'B') && noMods) {
       ringBell();
-    } else if ((e.key === 'h' || e.key === 'H') && !e.metaKey && !e.ctrlKey && !e.altKey) {
-      /* Ctrl-H is the browser's own history in more than one browser. The
-         four shortcuts above this one do not check modifiers and so double
-         up with ⌘S/⌘P — inherited, not copied. */
+    } else if ((e.key === 'h' || e.key === 'H') && noMods) {
       goHome();
     } else if (state.book && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
       const shelf = booksIn(BOOK_BY_ID[state.book].room);

@@ -18,13 +18,10 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { ROOT, loadDotEnv } from './env.js';
 import { cacheKey, getCached, setCached } from './cache.js';
 
 loadDotEnv();
-
-const HERE = path.dirname(fileURLToPath(import.meta.url));
 
 export const ENDPOINT = process.env.HARDCOVER_ENDPOINT || 'https://api.hardcover.app/v1/graphql';
 const TOKEN = (process.env.HARDCOVER_TOKEN || '').replace(/^Bearer\s+/i, '').trim();
@@ -171,7 +168,11 @@ export function pickEdition(full, book = {}) {
 
 /* ── fixture data source: same shapes, no network ────────────── */
 
-const FIXTURES = JSON.parse(fs.readFileSync(path.join(HERE, 'fixtures/catalogue.json'), 'utf8'));
+/* ROOT-relative rather than this file's own import.meta.url — one fewer
+   thing to keep in sync with env.js's own path logic, now that both
+   ultimately answer the same question ("where's the repo root") the same
+   way. See env.js's comment for what that answer rests on under Vercel. */
+const FIXTURES = JSON.parse(fs.readFileSync(path.join(ROOT, 'server/fixtures/catalogue.json'), 'utf8'));
 
 function fixtureSearch(q) {
   const words = norm(q).split(' ');

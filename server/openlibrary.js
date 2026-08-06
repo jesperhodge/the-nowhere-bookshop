@@ -296,9 +296,34 @@ export function cleanDescription(raw, max = 460) {
   s = s.replace(/\n+/g, ' ').trim();
   if (!s || s.length < 40) return null;
   if (s.length > max) {
-    const cut = s.slice(0, max);
-    const stop = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
-    s = stop > max * 0.5 ? cut.slice(0, stop + 1) : cut.replace(/\s+\S*$/, '') + '…';
+    /* Cut at the LAST real sentence boundary, searched across the WHOLE
+       string rather than only inside `s.slice(0, max)` — the bug phase 12
+       found in "March: Book Three" (PLAN-PHASE12.md's "one extra item").
+
+       The old code sliced to `max` FIRST and only then looked backward for
+       '. '/'! '/'? ' inside that slice. That throws away every sentence
+       that starts before `max` but happens to finish just after it, even
+       when the finish is a handful of characters away — which is exactly
+       what happened to the March (comics) trilogy extract: cut at 460,
+       the last boundary INSIDE the slice landed at 381 ("...by Top Shelf
+       Productions."), stopping the blurb on Book One and never reaching
+       the sentence that names Book Three, 216 characters later, even
+       though the whole cleaned extract is only 597 characters — 30% over
+       budget, not the multi-page overrun `max` exists to guard against.
+
+       So: collect every sentence-ending position in the FULL string, and
+       take the last one at or before `ceil` — a soft cap `OVERFLOW`
+       characters past `max` — rather than the last one at or before `max`
+       itself. A false stop from an abbreviation ("U.S.") earlier in the
+       string is harmless: it is never the LAST one when a real sentence
+       boundary exists further along, and if it's the only boundary at
+       all, max*0.5 below still guards against an absurdly short result. */
+    const OVERFLOW = Math.round(max / 3); // ~one more clause's worth of room
+    const ceil = max + OVERFLOW;
+    const stops = [...s.matchAll(/[.!?](?=\s|$)/g)].map((m) => m.index + 1);
+    const stop = stops.filter((p) => p <= ceil).pop() ?? -1;
+    if (stop > max * 0.5) s = s.slice(0, stop);
+    else s = s.slice(0, max).replace(/\s+\S*$/, '') + '…';
   }
   return s.trim();
 }

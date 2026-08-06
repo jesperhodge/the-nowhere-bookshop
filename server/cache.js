@@ -53,11 +53,29 @@ function store(name) {
   return s;
 }
 
+/* On a read-only filesystem — Vercel's function root, unlike the box
+   `npm start` runs on — this throws (EROFS). Locally that would be a real
+   bug worth surfacing; deployed, it is an every-live-request occurrence
+   (server/openlibrary.js's and hardcover.js's `.set()` on every fresh
+   live answer) that must never turn into the 500 IMPLEMENTATION.md §5
+   promises the API never gives on an upstream failure. The in-memory
+   entry this call was trying to persist is already in `s.mem` — set()
+   put it there before calling this — so a request that hits this catch
+   still gets a correct answer, it just won't out-live the invocation
+   that answered it. Vercel functions are not guaranteed to reuse the
+   same container between requests anyway, so this cache was already
+   never durable there; committing data/cache/*.json ahead of time (via
+   vercel.json's includeFiles) is what actually carries answers forward
+   on that platform, not a write from inside the function. */
 function write(s) {
-  fs.mkdirSync(DIR, { recursive: true });
-  const ordered = {};
-  for (const id of Object.keys(s.mem).sort()) ordered[id] = s.mem[id];
-  fs.writeFileSync(s.file, JSON.stringify(ordered, null, 1) + '\n');
+  try {
+    fs.mkdirSync(DIR, { recursive: true });
+    const ordered = {};
+    for (const id of Object.keys(s.mem).sort()) ordered[id] = s.mem[id];
+    fs.writeFileSync(s.file, JSON.stringify(ordered, null, 1) + '\n');
+  } catch (err) {
+    if (err?.code !== 'EROFS' && err?.code !== 'EACCES') throw err;
+  }
   s.dirty = false;
 }
 

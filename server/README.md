@@ -11,12 +11,20 @@ node server/index.js     # or: npm start
 ```
 
 - `GET /api/book?title=&author=` → `{ isbn13, pages, year, description, source }`,
-  looked up live via Hardcover (or from the fixture catalogue with no token) —
-  what `src/js/data/live.js` calls when a book the browser is showing has no
+  looked up live via Hardcover, then Open Library, then the fixture
+  catalogue (`server/lookup.js` is the one place that order lives) — what
+  `src/js/data/live.js` calls when a book the browser is showing has no
   baked ISBN. See "Client fallback" below.
 - `GET /api/list/:slug` → `{ slug, items, source }`, a harvested award list.
-  Nothing has been harvested yet (that's phase 9) — every slug reports a
-  clean `source: 'miss'` until `server/fixtures/lists/<slug>.json` files exist.
+  `data/lists/*.json` (phase 9's harvest, committed) is checked first,
+  `server/fixtures/lists/<slug>.json` second; an unknown slug reports a
+  clean `source: 'miss'`.
+
+Both routes live in `server/routes.js` now, not here — this file mounts that
+one router and adds local static serving on top. `api/index.js` (the Vercel
+serverless function, PLAN-PHASE12.md §1.1) mounts the exact same router with
+no static serving at all; a Vercel deploy is never a second implementation
+of what these two routes do.
 
 It never 500s on an upstream failure: `source` is always one of
 `'live' | 'fixture' | 'miss'`, and a miss just means "nothing to add," not an
