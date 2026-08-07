@@ -1,0 +1,763 @@
+/* ============================================================
+   The Nowhere Bookshop — the rooms themselves (CSS 3D)
+
+   World box: 1680 wide × 940 tall × 1200 deep.
+   Origin (.world) is a zero-size point at the centre of the
+   room's front opening plane, so every face is placed with a
+   single translate3d() from there. Faces use transform-origin:0 0.
+   ============================================================ */
+
+.stage {
+  position: absolute;
+  inset: 0;
+  touch-action: pan-y;
+  cursor: grab;
+  overflow: hidden;
+  perspective: 1500px;
+  perspective-origin: 50% 45%;
+  background: #0a0706;
+}
+
+.stage.is-panning { cursor: grabbing; }
+
+/* centred by hand: an over-sized grid item falls back to start
+   alignment, which puts the crop in the wrong place on a phone */
+.stage__fit {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: var(--world-w);
+  height: var(--world-h);
+  margin-left: calc(var(--world-w) / -2);
+  margin-top: calc(var(--world-h) / -2);
+  transform: scale(var(--fit));
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Every wrapper below is a full-size plane sitting at z = 0, in front of
+   the geometry it contains — so in a preserve-3d context they swallow
+   every pointer event aimed at a shelf. Only the things you can actually
+   pick up take pointer events. */
+.room, .travel, .pivot, .world, .stage__fit,
+.face, .case, .case__panel, .case__row, .case__board, .shelf,
+.prop, .table3d__books,
+.dsign, .dsign__arm, .dsign__board {
+  pointer-events: none;
+}
+.bk, .door3d { pointer-events: auto; }
+.bk.fill { pointer-events: none; }
+
+.room { position: absolute; inset: 0; transform-style: preserve-3d; }
+
+/* travel between rooms */
+.travel {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+}
+.pivot {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--pry, 0deg)) rotateY(var(--prx, 0deg)) translate3d(var(--ptx, 0px), var(--pty, 0px), 0);
+  transition: transform .5s var(--ease);
+}
+.pivot.is-tracking { transition: none; }
+
+.world {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 0; height: 0;
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  left: 0; top: 0;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* ── the six surfaces ─────────────────────────────────────── */
+
+.f-back {
+  width: 1680px; height: 940px;
+  transform: translate3d(-840px, -470px, -1200px);
+  background:
+    var(--wall-art, none),
+    radial-gradient(100% 84% at 50% 76%, color-mix(in srgb, var(--glow) 26%, transparent), transparent 74%),
+    radial-gradient(96% 80% at 50% 72%, var(--wall-lit), transparent 78%),
+    linear-gradient(180deg, color-mix(in srgb, var(--wall) 84%, #000), var(--wall) 46%, color-mix(in srgb, var(--wall) 90%, #000));
+  background-blend-mode: var(--wall-art-blend, normal), normal, normal, normal;
+}
+.f-floor {
+  width: 1680px; height: 1200px;
+  transform: translate3d(-840px, 470px, -1200px) rotateX(90deg);
+  background:
+    radial-gradient(74% 66% at 50% 34%, color-mix(in srgb, var(--glow) 30%, transparent), transparent 76%),
+    radial-gradient(80% 72% at 50% 30%, var(--floor-lit), transparent 82%),
+    repeating-linear-gradient(90deg, var(--floor) 0 78px, color-mix(in srgb, var(--floor) 86%, #000) 78px 82px),
+    var(--floor);
+}
+.f-ceiling {
+  width: 1680px; height: 1200px;
+  transform: translate3d(-840px, -470px, -1200px) rotateX(90deg);
+  background:
+    radial-gradient(64% 58% at 50% 22%, color-mix(in srgb, var(--glow) 46%, transparent), transparent 80%),
+    linear-gradient(0deg, color-mix(in srgb, var(--ceiling) 52%, var(--wall-lit)) 0%, var(--ceiling) 62%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--ceiling) 92%, #fff) 0 200px, var(--ceiling) 200px 214px);
+}
+.f-left {
+  width: 1200px; height: 940px;
+  transform: translate3d(-840px, -470px, -1200px) rotateY(-90deg);
+  background:
+    var(--wall-art, none),
+    linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.10)),
+    radial-gradient(86% 76% at 72% 60%, color-mix(in srgb, var(--glow) 22%, transparent), transparent 76%),
+    radial-gradient(90% 78% at 70% 62%, var(--wall-lit), transparent 80%),
+    linear-gradient(180deg, color-mix(in srgb, var(--wall) 80%, #000), var(--wall) 56%, color-mix(in srgb, var(--wall) 86%, #000));
+  background-blend-mode: var(--wall-art-blend, normal), normal, normal, normal, normal;
+}
+.f-right {
+  width: 1200px; height: 940px;
+  transform: translate3d(840px, -470px, 0px) rotateY(90deg);
+  background:
+    var(--wall-art, none),
+    linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,.16)),
+    radial-gradient(86% 76% at 28% 60%, color-mix(in srgb, var(--glow) 22%, transparent), transparent 76%),
+    radial-gradient(90% 78% at 30% 62%, var(--wall-lit), transparent 80%),
+    linear-gradient(180deg, color-mix(in srgb, var(--wall) 80%, #000), var(--wall) 56%, color-mix(in srgb, var(--wall) 86%, #000));
+  background-blend-mode: var(--wall-art-blend, normal), normal, normal, normal, normal;
+}
+
+/* Near-field ambient on the side walls.
+
+   Both walls used to fall to black long before they reached the front of
+   the room, so every room read as a lit diorama floating in space rather
+   than somewhere you are standing inside. This has to be a shadow rather
+   than another background layer: the themes in themes.css replace the
+   whole `background` property on these faces, and would drop it.
+
+   .f-left's local +x runs from the back wall towards you, so its near end
+   is its right edge; .f-right runs the other way. */
+.f-left  { box-shadow: inset -300px 0 260px -170px color-mix(in srgb, var(--wall-lit) 78%, transparent); }
+.f-right { box-shadow: inset  300px 0 260px -170px color-mix(in srgb, var(--wall-lit) 78%, transparent); }
+
+/* skirting board / picture rail — instant "interior" cue */
+.f-back::after, .f-left::after, .f-right::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 46px;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 40%, var(--wood-dark));
+  box-shadow: 0 -10px 26px -12px rgba(0,0,0,.7);
+}
+
+/* ── bookcases ────────────────────────────────────────────── */
+
+.case {
+  position: absolute;
+  left: 0; top: 0;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  width: var(--cw); height: var(--ch);
+}
+
+.case__panel {
+  position: absolute; left: 0; top: 0;
+  transform-origin: 0 0;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 30%, var(--wood-dark));
+}
+/* back of the case, set --cd deep */
+.case__back {
+  width: var(--cw); height: var(--ch);
+  transform: translateZ(calc(var(--cd) * -1));
+  background:
+    radial-gradient(78% 62% at 50% 42%, color-mix(in srgb, var(--wood) 88%, #000), color-mix(in srgb, var(--wood-dark) 70%, #000));
+  box-shadow: inset 0 0 70px rgba(0,0,0,.62);
+}
+.case__side {
+  width: var(--cd); height: var(--ch);
+  background: linear-gradient(90deg, var(--wood-dark), var(--wood));
+}
+.case__side--l { transform: rotateY(-90deg) translateZ(0); }
+.case__side--r { transform: translateX(var(--cw)) rotateY(-90deg) translateZ(calc(var(--cd) * -1)); }
+.case__cap {
+  width: var(--cw); height: var(--cd);
+  transform-origin: 0 0;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood-dark));
+}
+.case__cap--top { transform: rotateX(90deg) translateY(calc(var(--cd) * -1)) rotateX(0deg); }
+.case__cap--bottom { transform: translateY(var(--ch)) rotateX(90deg) translateY(calc(var(--cd) * -1)); }
+
+/* a shelf: board + the row of books standing on it */
+.case__row {
+  position: absolute;
+  left: 14px;
+  width: calc(var(--cw) - 28px);
+  height: var(--rh);
+  top: var(--ry);
+  transform-style: preserve-3d;
+}
+.case__board {
+  position: absolute;
+  left: -14px; top: var(--rh);
+  width: var(--cw); height: var(--cd);
+  transform-origin: 0 0;
+  transform: rotateX(90deg) translateY(calc(var(--cd) * -1));
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 55%, var(--wood-dark));
+  box-shadow: 0 0 24px rgba(0,0,0,.5);
+}
+.case__board::after {
+  content: "";
+  position: absolute; inset: auto 0 0 0; height: 5px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+}
+/* soft shadow the books sit in */
+.case__row::before {
+  content: "";
+  position: absolute; left: -14px; right: -14px; bottom: 0; height: 62%;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.34));
+  transform: translateZ(calc(var(--cd) * -0.98));
+  pointer-events: none;
+}
+
+.shelf {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap, 4px);
+  padding-left: var(--pad, 10px);
+  transform-style: preserve-3d;
+}
+.shelf--center { justify-content: center; }
+
+/* ── a book on the shelf ──────────────────────────────────── */
+
+.bk {
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--bt);
+  height: var(--bh);
+  transform-style: preserve-3d;
+  transform: translateZ(var(--bz, 0px)) rotate(var(--btilt, 0deg));
+  transition: transform .34s var(--ease);
+  cursor: pointer;
+  padding: 0;
+  outline-offset: 6px;
+}
+/* Only the spine takes the click: it is the face you can see, and the
+   rear faces of a neighbouring book must not steal the hit. */
+.bk__f {
+  position: absolute;
+  left: 50%; top: 50%;
+  translate: -50% -50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+.bk__spine { pointer-events: auto; }
+/* spine — the face you see on the shelf */
+.bk__spine {
+  width: var(--bt); height: var(--bh);
+  transform: translateZ(calc(var(--bd) / 2));
+  background: var(--sp-bg);
+  border-radius: 1px 3px 3px 1px;
+  box-shadow:
+    inset 3px 0 6px -2px rgba(0,0,0,.5),
+    inset -3px 0 5px -2px rgba(255,255,255,.16),
+    inset 0 44px 40px -34px rgba(255,240,210,.30),
+    inset 0 -12px 18px -12px rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bk__spine::after {                    /* head & tail bands */
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 100%;
+  background:
+    linear-gradient(180deg, var(--sp-band) 0 3.5%, transparent 3.5% 96.5%, var(--sp-band) 96.5%);
+  opacity: .85;
+  pointer-events: none;
+}
+.bk__title {
+  writing-mode: vertical-rl;
+  font-family: var(--sp-font, var(--font-display));
+  font-size: var(--sp-size, 13px);
+  letter-spacing: .01em;
+  line-height: 1;
+  color: var(--sp-ink);
+  max-height: calc(var(--bh) - 34px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0,0,0,.28);
+  padding: 0 1px;
+}
+/* covers */
+.bk__front {
+  width: var(--bd); height: var(--bh);
+  transform: translateX(calc(var(--bt) / 2)) rotateY(90deg);
+  background: var(--cv-bg, #2b2b2b);
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,.35);
+}
+.bk__back {
+  width: var(--bd); height: var(--bh);
+  transform: translateX(calc(var(--bt) / -2)) rotateY(-90deg);
+  background: var(--cv-bg2, #232323);
+  border-radius: 2px;
+}
+/* page block */
+.bk__edge {
+  width: var(--bd); height: var(--bh);
+  transform: translateZ(calc(var(--bd) / -2)) rotateY(180deg);
+  background: repeating-linear-gradient(90deg, #e9dec5 0 2px, #cdbf9f 2px 3px);
+  border-radius: 2px;
+}
+.bk__top {
+  width: var(--bt); height: var(--bd);
+  transform: translateY(calc(var(--bh) / -2)) rotateX(90deg);
+  background: repeating-linear-gradient(180deg, #eee3ca 0 2px, #cbbc9a 2px 3px);
+}
+
+/* pulled-out-of-the-shelf gesture */
+.bk:hover, .bk:focus-visible { z-index: 5; }
+.bk:hover  { transform: translateZ(calc(var(--bz, 0px) + 46px)) rotateX(-11deg) rotate(var(--btilt, 0deg)); }
+.bk:focus-visible { transform: translateZ(calc(var(--bz, 0px) + 46px)) rotateX(-11deg) rotate(var(--btilt, 0deg)); }
+.bk.is-read .bk__spine::before {
+  content: "";
+  position: absolute; top: 10px; left: 50%; translate: -50% 0;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--brass);
+  box-shadow: 0 0 8px var(--brass);
+}
+.bk.is-taken { opacity: .12; pointer-events: none; }
+
+/* decorative filler books — not interactive, just make the shop full */
+.fill { pointer-events: none; }
+.fill .bk__spine { box-shadow: inset 3px 0 8px -2px rgba(0,0,0,.7), inset -2px 0 4px -2px rgba(255,255,255,.08); }
+
+/* the floating name-tag that follows the book you're pointing at */
+.tag {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  padding: .5rem .8rem .55rem;
+  border-radius: 8px;
+  background: rgba(20,14,11,.93);
+  border: 1px solid rgba(217,164,79,.3);
+  box-shadow: 0 14px 34px -14px #000;
+  backdrop-filter: blur(6px);
+  transform: translate(-50%, -118%);
+  opacity: 0;
+  transition: opacity .18s var(--ease);
+  max-width: 20rem;
+}
+.tag.is-on { opacity: 1; }
+.tag__t { font-family: var(--font-display); font-size: .96rem; line-height: 1.2; color: var(--paper); }
+.tag__a { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .05em; color: var(--brass); margin-top: .2rem; }
+.tag__x { font-family: var(--font-ui); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: .35rem; }
+
+/* ── passages ─────────────────────────────────────────────── */
+
+.door3d {
+  position: absolute;
+  left: 0; top: 0;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  width: var(--dw); height: var(--dh);
+  cursor: pointer;
+  padding: 0;
+  transition: filter .35s var(--ease);
+}
+.door3d__frame {
+  position: absolute; inset: 0;
+  border-radius: var(--dr, 150px 150px 6px 6px);
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 35%, var(--wood-dark));
+  box-shadow: 0 0 40px rgba(0,0,0,.6);
+  padding: 16px;
+}
+.door3d__void {
+  position: absolute; inset: 16px;
+  border-radius: var(--dr2, 138px 138px 3px 3px);
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 100%, var(--door-glow, #ffb45e) 0%, color-mix(in srgb, var(--door-glow, #ffb45e) 40%, #000) 26%, #0a0706 68%);
+}
+.door3d__void::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 45%, color-mix(in srgb, var(--door-glow, #ffb45e) 55%, transparent));
+  opacity: .5;
+  animation: doorbreathe 5.5s ease-in-out infinite;
+}
+@keyframes doorbreathe { 0%,100% { opacity: .35 } 50% { opacity: .72 } }
+
+.door3d__spill {                       /* light pooling on the floor */
+  position: absolute;
+  left: -12%; bottom: -2px;
+  width: 124%; height: 210px;
+  transform-origin: 50% 100%;
+  transform: rotateX(90deg);
+  background: radial-gradient(60% 100% at 50% 0%, color-mix(in srgb, var(--door-glow, #ffb45e) 62%, transparent), transparent 72%);
+  opacity: .55;
+  pointer-events: none;
+}
+
+/* a lit threshold, so a doorway reads as somewhere to walk rather than an arch */
+.door3d__step {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 26px;
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--door-glow, #ffb45e) 80%, #fff));
+  opacity: .8;
+}
+
+/* ── the name of the room beyond ─────────────────────────────
+   A bracket sign hung out into the room. The doorway is in the side
+   wall, so a name painted flat on it is seen at ~20° and cannot be
+   read; rotating the board back out of the wall turns it to face you.
+   Signage, not a control — it takes no pointer events, and the door
+   itself is the thing you click. */
+.dsign {
+  position: absolute;
+  left: 50%; top: -6px;
+  width: 0; height: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+/* Bays run near-to-far down the wall, and perspective stacks them into
+   the same patch of screen. Hanging the far ones higher keeps three
+   signs on one wall legible instead of overlapping. */
+.dsign { --arm: 34px; }
+[data-bay="2"] .dsign { --arm: 96px; }
+[data-bay="3"] .dsign { --arm: 158px; }
+
+.dsign__arm {
+  position: absolute;
+  left: -1px; bottom: 0;
+  width: 2px; height: var(--arm);
+  background: linear-gradient(180deg, var(--wood-dark), var(--wood));
+}
+.dsign__board {
+  position: absolute;
+  left: 0; bottom: var(--arm);
+  translate: -50% 0;
+  padding: .3rem .7rem .34rem;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #2a1d16, #16100c);
+  border: 1px solid color-mix(in srgb, var(--door-glow, #ffb45e) 40%, transparent);
+  box-shadow: 0 10px 22px -12px #000, 0 0 20px -6px color-mix(in srgb, var(--door-glow, #ffb45e) 55%, transparent);
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+/* turn the board out of the wall it is mounted on, back towards the front
+   of the room, so the type faces the reader */
+.door3d--l .dsign { transform: rotateY(-90deg); }
+.door3d--r .dsign { transform: rotateY(90deg); }
+/* the table already faces you, so its card only needs to stand clear of
+   whatever is shelved on the wall behind it */
+.table3d .dsign { --arm: 150px; top: -8px; }
+
+.dsign__n {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.15;
+  color: var(--paper);
+}
+.dsign__s {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--door-glow, #ffb45e) 75%, #fff);
+  margin-top: .12rem;
+}
+
+.door3d:hover { filter: brightness(1.22) saturate(1.1); }
+.door3d:hover .door3d__void::after { animation-duration: 2.2s; }
+.door3d:hover .dsign__board, .door3d:focus-visible .dsign__board {
+  border-color: color-mix(in srgb, var(--door-glow, #ffb45e) 95%, transparent);
+  box-shadow: 0 10px 22px -12px #000, 0 0 30px -4px color-mix(in srgb, var(--door-glow, #ffb45e) 80%, transparent);
+}
+
+/* ── the front table — a passage that looks like a table ─────
+   The button box is the front apron, standing at the near edge of the
+   table between the floor and the underside of the top. The top recedes
+   *away* from you from there; the legs stand at both ends of that depth;
+   the stacks sit on the surface. Getting the sign of that rotation wrong
+   is what made the table jut out of the front of the room. */
+.table3d { transform-style: preserve-3d; }
+.table3d__top {
+  position: absolute; left: 0; top: 0;
+  width: var(--tw); height: var(--td);
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);          /* the surface goes back, not forward */
+  background:
+    repeating-linear-gradient(96deg, transparent 0 34px, rgba(0,0,0,.10) 34px 38px),
+    linear-gradient(180deg, var(--wood-dark), var(--wood) 46%, var(--wood-lit));
+  border-radius: 7px 7px 3px 3px;
+  box-shadow: inset 0 0 50px rgba(255,220,170,.14), inset 0 -18px 26px -20px rgba(0,0,0,.6);
+}
+.table3d__apron {                       /* the front edge board you actually see */
+  position: absolute; left: 0; top: 0;
+  width: var(--tw); height: 30px;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 60%, var(--wood-dark));
+  border-radius: 3px;
+  box-shadow: 0 26px 46px -20px rgba(0,0,0,.85);
+}
+.table3d__leg {
+  position: absolute; top: 22px;
+  width: 20px; height: calc(var(--th) - 22px);
+  transform: translate3d(var(--lx), 0, var(--lz));
+  background: linear-gradient(90deg, var(--wood-dark), var(--wood) 55%, var(--wood-dark));
+  border-radius: 0 0 3px 3px;
+}
+.table3d__books {
+  position: absolute; left: 0; top: 0;
+  width: var(--tw); height: 0;
+  transform-style: preserve-3d;
+}
+/* a stack of books lying flat: the side you see, plus the top board */
+.tstack {
+  position: absolute; left: 0; top: 0;
+  width: var(--sw); height: var(--sh);
+  transform-style: preserve-3d;
+  transform: translate3d(var(--sx), calc(var(--sh) * -1), calc(var(--sz) * -1));
+}
+.tstack__side {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(180deg, var(--bg) 0 12px, rgba(0,0,0,.5) 12px 17px);
+  border-radius: 2px;
+  box-shadow: 0 10px 20px -8px rgba(0,0,0,.85);
+}
+.tstack__top {
+  position: absolute; left: 0; top: 0;
+  width: var(--sw); height: var(--sd);
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 80%, #fff), var(--bg));
+  border-radius: 2px;
+}
+.table3d:hover .table3d__top,
+.table3d:hover .table3d__apron { filter: brightness(1.24); }
+
+/* the shelves running along the side walls read as background */
+.case--side { --wood: color-mix(in srgb, var(--wood-dark) 62%, #000); --wood-lit: var(--wood-dark); }
+/* their books are painted rather than built — see spineRun() in covers.js */
+.shelf--painted {
+  background-repeat: no-repeat;
+  height: calc(100% - 6px);
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  box-shadow: inset 0 12px 18px -14px rgba(0,0,0,.9);
+}
+
+/* ── props & set dressing ─────────────────────────────────── */
+
+.prop {
+  position: absolute;
+  left: 0; top: 0;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+/* hanging lamp */
+.prop-lamp .flex-cord {
+  position: absolute; left: 50%; bottom: 100%;
+  width: 2px; height: var(--cord, 160px);
+  translate: -50% 0;
+  background: linear-gradient(180deg, transparent, #1c1310);
+}
+.prop-lamp .shade {
+  width: var(--pw); height: var(--ph);
+  background: linear-gradient(180deg, #3c2b21, #23180f);
+  clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
+  box-shadow: 0 20px 60px -10px var(--glow);
+}
+.prop-lamp .bulb {
+  position: absolute; left: 50%; bottom: -14px; translate: -50% 0;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: radial-gradient(circle, #fff8e6, var(--glow) 52%, transparent 74%);
+  box-shadow: 0 0 110px 46px color-mix(in srgb, var(--glow) 55%, transparent);
+}
+.prop-lamp .beam {
+  position: absolute; left: 50%; top: 100%;
+  width: var(--beam, 420px); height: 760px;
+  translate: -50% 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--glow) 44%, transparent), transparent 78%);
+  clip-path: polygon(38% 0, 62% 0, 100% 100%, 0 100%);
+  opacity: .68;
+  filter: blur(3px);
+}
+
+/* rug */
+.prop-rug {
+  width: var(--pw); height: var(--ph);
+  transform: translate3d(var(--px), 470px, var(--pz)) rotateX(90deg);
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 22px, rgba(0,0,0,.10) 22px 44px),
+    radial-gradient(60% 60% at 50% 50%, var(--rug-2, #6d3b34), var(--rug-1, #4a2724));
+  box-shadow: 0 0 90px rgba(0,0,0,.6) inset;
+  opacity: .95;
+}
+
+/* window with weather behind it */
+.prop-window .glass {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, var(--sky-1, #2b3c4a), var(--sky-2, #131c25));
+  box-shadow: inset 0 0 60px rgba(0,0,0,.35), 0 0 70px 12px color-mix(in srgb, var(--sky-1, #2b3c4a) 55%, transparent);
+  overflow: hidden;
+  filter: brightness(1.25);
+}
+.prop-window .weather {
+  position: absolute; inset: -30%;
+  background-image: repeating-linear-gradient(78deg, transparent 0 16px, rgba(200,220,240,.22) 16px 17px, transparent 17px 34px);
+  animation: rainfall 1.5s linear infinite;
+}
+.prop-window .bars {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 4px), var(--wood) calc(50% - 4px) calc(50% + 4px), transparent calc(50% + 4px)),
+    linear-gradient(180deg, transparent calc(50% - 4px), var(--wood) calc(50% - 4px) calc(50% + 4px), transparent calc(50% + 4px));
+}
+.prop-window .frame {
+  position: absolute; inset: -14px;
+  border: 14px solid var(--wood);
+  border-radius: 3px;
+  box-shadow: 0 0 50px color-mix(in srgb, var(--sky-1, #2b3c4a) 60%, transparent);
+}
+
+/* fireplace */
+.prop-hearth .mouth {
+  position: absolute; inset: 0;
+  border-radius: 90px 90px 4px 4px;
+  background: radial-gradient(80% 90% at 50% 100%, #ffb347, #7a2e10 40%, #100907 78%);
+  box-shadow: 0 0 110px 30px rgba(255,140,50,.28);
+}
+.prop-hearth .fire {
+  position: absolute; left: 50%; bottom: 6%;
+  translate: -50% 0;
+  width: 58%; height: 52%;
+  background: radial-gradient(50% 60% at 50% 100%, #fff0b8, #ffa32e 35%, rgba(255,90,20,0) 76%);
+  filter: blur(5px);
+  animation: flicker 2.6s ease-in-out infinite alternate;
+}
+@keyframes flicker {
+  0% { transform: scale(1) translateY(0); opacity: .9 }
+  35% { transform: scale(1.09,1.16) translateY(-4px); opacity: 1 }
+  70% { transform: scale(.95,1.05) translateY(2px); opacity: .82 }
+  100% { transform: scale(1.05,1.1) translateY(-2px); opacity: .95 }
+}
+.prop-hearth .mantel {
+  position: absolute; left: -8%; top: -34px;
+  width: 116%; height: 26px;
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood-dark));
+  border-radius: 3px;
+}
+
+/* the cat */
+.prop-cat {
+  width: var(--pw); height: var(--ph);
+  background: var(--cat-img) center/contain no-repeat;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.6));
+  animation: catbreathe 4.4s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+@keyframes catbreathe { 0%,100% { scale: 1 1 } 50% { scale: 1.01 1.03 } }
+
+/* generic themed prop drawn as an inline SVG background */
+.prop-art {
+  width: var(--pw); height: var(--ph);
+  background: var(--art) center/contain no-repeat;
+  opacity: var(--art-op, 1);
+  filter: var(--art-filter, none);
+}
+
+/* A flat drawing with nothing under it reads as a sticker on the glass.
+   Anything standing on the floor gets a shadow lying on the floor at its
+   feet, and is dimmed with distance by --art-filter (see groundStyle). */
+.prop--ground::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 100%;
+  width: calc(var(--pw) * .92);
+  height: calc(var(--pw) * .46);
+  translate: -50% 0;
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,var(--lift, .6)), transparent 70%);
+  pointer-events: none;
+}
+
+/* table of books (the front table, display tables) */
+.prop-table .top {
+  position: absolute;
+  left: 0; top: 0;
+  width: var(--pw); height: var(--pd);
+  transform-origin: 0 0;
+  transform: rotateX(90deg);
+  background: linear-gradient(180deg, var(--wood-lit), var(--wood) 60%, var(--wood-dark));
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.85);
+}
+.prop-table .leg {
+  position: absolute;
+  width: 16px; height: var(--legh, 300px);
+  background: linear-gradient(90deg, var(--wood-dark), var(--wood));
+}
+
+/* dust, embers, rain — one canvas over the whole stage */
+.ambience {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: .85;
+  mix-blend-mode: screen;
+}
+
+.vignette {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(132% 100% at 50% 46%, transparent 52%, rgba(0,0,0,.34) 82%, rgba(0,0,0,.66) 100%);
+}
+.grain {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: .045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── travelling between rooms ─────────────────────────────── */
+
+.travel.go-in  { animation: travelInOut .46s var(--ease-in-out) forwards; }
+.travel.go-out { animation: travelOutIn .46s var(--ease-in-out) forwards; }
+.travel.arrive-in  { animation: arriveIn .62s var(--ease) backwards; }
+.travel.arrive-out { animation: arriveOut .62s var(--ease) backwards; }
+
+@keyframes travelInOut { to { transform: translateZ(1150px); opacity: 0; filter: brightness(1.5) } }
+@keyframes arriveIn { from { transform: translateZ(-1100px); opacity: 0 } }
+@keyframes travelOutIn { to { transform: translateZ(-1000px); opacity: 0; filter: brightness(.4) } }
+@keyframes arriveOut { from { transform: translateZ(1050px); opacity: 0; filter: brightness(1.4) } }
+
+/* dim the room while a book is in your hands */
+.stage { transition: filter .4s var(--ease), transform .5s var(--ease); }
+body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pivot { transform: none !important; }
+  .travel { animation: none !important; }
+  .door3d__void::after, .prop-hearth .fire, .prop-window .weather, .prop-cat { animation: none !important; }
+}
