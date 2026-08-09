@@ -6,10 +6,13 @@
 
    - `room`             the default §4.2 framing. MUST be identical to
                          what stage.js's makeCamera() produces — see
-                         roomPose() below, which imports CAMERA from
-                         stage.js rather than retyping its numbers. A
-                         drifted default pose would silently invalidate
-                         every screenshot comparison against phases 3-6.
+                         roomPose() below, which reads stage.js's own
+                         roomCameraPose(aspect) rather than retyping its
+                         numbers (including the portrait tilt PLAN-MOBILE.md
+                         iteration 3 added — see that function's doc
+                         comment). A drifted default pose would silently
+                         invalidate every screenshot comparison against
+                         phases 3-6.
    - `shelf:<caseId>`   square-on to a case (back/left/right), close
                          enough that a 22px spine reads — point 8's
                          actual complaint was never a font-size
@@ -63,7 +66,7 @@
 
 import * as THREE from 'three';
 import { WORLD } from './coords.js';
-import { CAMERA } from './stage.js';
+import { roomCameraPose } from './stage.js';
 
 const TWEEN_MS = 700;
 const STACK_CAP = 8; // goTo()'s undo stack — see STACK / ESCAPE below
@@ -197,16 +200,23 @@ function ease(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
-/* The `room` pose — a pure function of stage.js's own CAMERA constant,
-   never retyped. Matches makeCamera() exactly: position (0, WORLD.h/2,
-   CAMERA.eyeZ), lookAt (0, CAMERA.lookY, CAMERA.lookZ). Returns fresh
+/* The `room` pose — a pure function of stage.js's own roomCameraPose(),
+   never retyped. Matches makeCamera() exactly, on every aspect: both
+   read the SAME function, so a phone's tilted-down arrival (PLAN-MOBILE.md
+   iteration 3 — see roomCameraPose()'s own doc comment) can never drift
+   from what the canvas is actually shown at construction. Returns fresh
    Vector3s every call (poseFor() promises "computed fresh" for every
    pose, room included, and a caller may safely mutate what it gets
-   back). */
-function roomPose() {
+   back) — and MUST be called with the camera's CURRENT aspect, not a
+   cached one, since that is the one thing this pose varies on.
+   @param {number} aspect  camera.aspect, read live by every caller
+   below — never stored, so a resize picked up before the next call
+   (goTo(), dolly(), dragLook()) is picked up here too. */
+function roomPose(aspect) {
+  const p = roomCameraPose(aspect);
   return {
-    position: new THREE.Vector3(0, WORLD.h / 2, CAMERA.eyeZ),
-    target: new THREE.Vector3(0, CAMERA.lookY, CAMERA.lookZ),
+    position: new THREE.Vector3(p.position.x, p.position.y, p.position.z),
+    target: new THREE.Vector3(p.target.x, p.target.y, p.target.z),
   };
 }
 
@@ -253,8 +263,8 @@ export function createPoseRig(stage, opts = {}) {
   // the camera on construction.
   let mode = 'tween';
   let toName = 'room';
-  let from = roomPose();
-  let to = roomPose();
+  let from = roomPose(camera.aspect);
+  let to = roomPose(camera.aspect);
   let t = 1;
   let tweenStart = performance.now();
   let tweenDuration = 0;
@@ -271,7 +281,7 @@ export function createPoseRig(stage, opts = {}) {
      window resize since the last goTo() is picked up — see this
      function's own doc comment on `stage`. ── */
   function poseFor(name) {
-    if (name === 'room') return roomPose();
+    if (name === 'room') return roomPose(camera.aspect);
     if (name.startsWith('shelf:')) {
       const c = caseById.get(name.slice('shelf:'.length));
       return c ? shelfPoseFor(c) : null;
@@ -456,10 +466,15 @@ export function createPoseRig(stage, opts = {}) {
    * the frame. Only the centre sight line is checked, not the whole
    * case — see this file's CLEARANCE block for what that still leaves.
    */
-  function isClear(pos, ownCase, target, bottom) {
+  function inRoomBounds(pos) {
     if (pos.x < -WORLD.hw + ROOM_MARGIN || pos.x > WORLD.hw - ROOM_MARGIN) return false;
     if (pos.z < -WORLD.d + ROOM_MARGIN || pos.z > 0) return false;
     if (pos.y < ROOM_MARGIN || pos.y > WORLD.h - ROOM_MARGIN) return false;
+    return true;
+  }
+
+  function isClear(pos, ownCase, target, bottom) {
+    if (!inRoomBounds(pos)) return false;
     for (const ob of obstacles()) {
       if (ob.owner === ownCase) continue;
       padded.copy(ob.box).expandByScalar(CLEAR_PAD);
@@ -624,6 +639,26 @@ export function createPoseRig(stage, opts = {}) {
   }
 
   /**
+   * Re-applies the `room` pose for the camera's CURRENT aspect, but only
+   * if the rig is at rest there already — a no-op mid-tween, mid-dolly,
+   * or at any shelf/table pose. For everything BUT `room`, resize has
+   * never needed this: position/target there don't depend on aspect, so
+   * stage.js's resize() (aspect + fov only, never position — see its own
+   * comment) was always enough. `room` is now the one exception, since
+   * roomCameraPose() (stage.js, PLAN-MOBILE.md iteration 3) tilts by
+   * aspect — so a device rotated while sitting AT REST in `room` would
+   * otherwise keep showing the OLD aspect's tilt until the next goTo(),
+   * because goTo('room') itself is a deliberate no-op when already there
+   * (see its own dedup comment). main.js's orientationchange handler
+   * calls this, right after stage.resize(), to close exactly that gap.
+   * @returns {boolean} true if it actually re-applied
+   */
+  function resyncRoom() {
+    if (currentName() !== 'room' || (mode === 'tween' && t < 1)) return false;
+    return moveTo('room', { instant: true });
+  }
+
+  /**
    * The shelf pose whose POSITION is nearest the camera's CURRENT
    * position (real distance comparison, no projection maths — from
    * the room pose that is, in every room laid out so far, the back
@@ -669,7 +704,7 @@ export function createPoseRig(stage, opts = {}) {
       // case, not the common one this mechanic is for.
       t = 0;
     }
-    from = roomPose();
+    from = roomPose(camera.aspect);
     to = nearest.pose;
     toName = nearest.name;
     t = THREE.MathUtils.clamp(t + delta, 0, 1);
@@ -691,25 +726,48 @@ export function createPoseRig(stage, opts = {}) {
      so a resize picked up by CAMERA/WORLD is picked up here too).
      Distance is pinch's (dolly()'s) job, not this one's.
 
-     CLAMPED BY isClear() — the SAME clearance model shelfPoseFor()
-     uses for a camera POSITION, repurposed here for a look TARGET:
-     passing the candidate target as both `pos` and `target` turns its
-     "stand on free floor, inside the room" bounds check into "aim
-     somewhere inside the room", and its obstacle check into "don't
-     aim dead-centre into a case or table". This is not a coincidence
-     of convenience, it is why the room's own numbers make the clamp
-     land in the right place at all: the eye sits OUTSIDE the room
-     (CAMERA.eyeZ=1500, the room's open front is z=0), so `dir0` is a
-     long vector, and swinging a long vector by yaw moves its tip a
-     lot for a small angle — isClear()'s room-bounds check (x within
-     ±WORLD.hw of margin) stops the swing right as the target reaches
-     the SIDE WALLS, which is exactly where every doorway lives
-     (doorWorldAnchor()'s x = ±WORLD.hw). Measured: the resulting yaw
-     ceiling is ~22-24°, comfortably past the ~19-24° any bay's own
-     anchor needs (nearest bay is hardest: it sits closest to the eye
-     along z, so the same lateral offset subtends the largest angle —
-     passages.js's BAY[0], the same fact iteration 1's now-removed
-     door-targeting fovForAspect() was built around).
+     CLAMPED BY inRoomBounds() — isClear()'s own bounds check (x/y/z
+     within the room's walls/floor/ceiling, margin ROOM_MARGIN), pulled
+     out as its own function and used ALONE here, not the full
+     isClear(). passing the candidate target as `pos` turns that bounds
+     check into "aim somewhere inside the room" — which is why the
+     room's own numbers make the clamp land in the right place at all:
+     the eye sits OUTSIDE the room (CAMERA.eyeZ=1500, the room's open
+     front is z=0), so `dir0` is a long vector, and swinging a long
+     vector by yaw moves its tip a lot for a small angle — the
+     room-bounds check (x within ±WORLD.hw of margin) stops the swing
+     right as the target reaches the SIDE WALLS, which is exactly where
+     every doorway lives (doorWorldAnchor()'s x = ±WORLD.hw). Measured:
+     the resulting yaw ceiling is ~22-24°, comfortably past the ~19-24°
+     any bay's own anchor needs (nearest bay is hardest: it sits closest
+     to the eye along z, so the same lateral offset subtends the
+     largest angle — passages.js's BAY[0], the same fact iteration 1's
+     now-removed door-targeting fovForAspect() was built around).
+
+     Iteration 2 originally ran the candidate target through the FULL
+     isClear() — obstacle check included, on the theory that a look
+     target should also "not aim dead-centre into a case or table". A
+     mobile iteration-3 finding broke that theory: `front`'s table sits
+     at x -300..-65, z -630..-330 (tables.js's buildRoomTable()), and
+     iteration 3's portrait tilt (stage.js's roomCameraPose(), lowering
+     the look-Y from CAMERA.lookY to WORLD.h*0.24 so the ceiling isn't
+     half the frame) put the AT-REST portrait target's y (225.6) inside
+     the table's own height range for the first time — where desktop's
+     un-tilted target (y≈489) always cleared it. The table's z-range
+     already brackets the at-rest target's z (lookZ=-600), so the
+     obstacle check now rejects almost any leftward yaw at the first
+     pixel of drag, before it travels far enough to bring `front`'s
+     three left-side doors (l1-l3) anywhere near the frame — measured:
+     3 of 5 door signs in `front` were unreachable at 320/390/430px
+     wide, on every drag distance tried, portrait only. A camera
+     TARGET is not a camera POSITION: nothing renders wrong from aiming
+     the boresight at a case or table (you just see more of it), the
+     way something WOULD render wrong from standing inside one — so
+     dropping the obstacle half of isClear() for this one call site
+     removes a restriction that was never protecting against a real
+     visual problem, only carrying over a POSITION-shaped rule to a
+     TARGET-shaped question. Room bounds alone still stop a drag from
+     aiming out through a doorway into open z or past a side wall.
 
      Yaw and pitch are tried together first, then yaw alone, then
      pitch alone — so a drag that would overshoot on one axis still
@@ -734,7 +792,7 @@ export function createPoseRig(stage, opts = {}) {
   function dragLook(dxPx, dyPx) {
     if (currentName() !== 'room' || (mode === 'tween' && t < 1)) return false;
 
-    const base = roomPose();
+    const base = roomPose(camera.aspect);
     const dir0 = base.target.clone().sub(base.position);
 
     function targetFor(yaw, pitch) {
@@ -745,7 +803,7 @@ export function createPoseRig(stage, opts = {}) {
       const right = new THREE.Vector3().crossVectors(yawed, YAW_AXIS).normalize();
       return base.position.clone().add(yawed.applyAxisAngle(right, pitch));
     }
-    const clear = (p) => isClear(p, null, p, null);
+    const clear = (p) => inRoomBounds(p);
 
     const wantYaw = THREE.MathUtils.clamp(lookYaw + dxPx * LOOK_YAW_PER_PX, -LOOK_MAX_YAW_RAD, LOOK_MAX_YAW_RAD);
     const wantPitch = THREE.MathUtils.clamp(lookPitch + dyPx * LOOK_PITCH_PER_PX, -LOOK_MAX_PITCH_RAD, LOOK_MAX_PITCH_RAD);
@@ -819,6 +877,7 @@ export function createPoseRig(stage, opts = {}) {
     back,
     dolly,
     dragLook,
+    resyncRoom,
     focusEntry,
     update,
     poseNames,

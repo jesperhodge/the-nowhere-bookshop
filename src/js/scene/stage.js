@@ -27,10 +27,52 @@ export const CAMERA = {
   lookZ: -WORLD.d * 0.5,
 };
 
+/* ── the arrival tilt — PLAN-MOBILE.md iteration 3 ───────────────────
+   fovForAspect() (below) settled M4: the vertical fov is the same
+   calibrated value on every aspect, so a portrait screen never opens a
+   black bar above the ceiling or below the floor. It left a DIFFERENT
+   problem alone, because it is a different axis: `lookY` aims the
+   boresight just above room-CENTRE height (0.52 of WORLD.h) which,
+   held over a tall narrow frame, puts roughly the top 45% of a phone
+   screen on wall-and-ceiling above the case and leaves the case, the
+   table and the floor — the actual subject — fighting for the bottom
+   half, under the dock. Measured, not eyeballed: at 390x664 the case's
+   own top edge lands at y-ndc ≈ +0.10, i.e. 45% of the way DOWN the
+   frame already, before a single pixel of shelf content.
+
+   The fix is a pure PITCH, not a move: the eye stays exactly where
+   CAMERA.eyeZ/WORLD.h/2 already puts it (nothing here changes where
+   the camera physically sits, so nothing here can walk it into
+   geometry — nothing on this path is ever run through isClear()) —
+   only the point it looks AT drops toward the case/table/floor.
+   `lookZ` is untouched: this is the same depth of gaze as desktop,
+   just lower.
+
+   ROOM_MIN_ASPECT reuses fovForAspect()'s own former threshold (aspect
+   < 1, i.e. narrower than square) — the same line that already
+   separates "phone-shaped" from "everything else" for every other
+   mobile fix in this file. Desktop and landscape (aspect >= 1) read
+   `CAMERA.lookY`, bit-identical to before this iteration; only a
+   portrait load computes anything different. roomCameraPose() is the
+   ONE place that decides this, imported by poses.js's roomPose() the
+   same way CAMERA itself already was — so the live shop and this
+   file's own makeCamera() can never drift apart on what "room pose"
+   means, on any aspect. */
+const ROOM_MIN_ASPECT = 1;
+const PORTRAIT_LOOK_Y = WORLD.h * 0.24;
+
+export function roomCameraPose(aspect) {
+  return {
+    position: { x: 0, y: WORLD.h / 2, z: CAMERA.eyeZ },
+    target: { x: 0, y: aspect < ROOM_MIN_ASPECT ? PORTRAIT_LOOK_Y : CAMERA.lookY, z: CAMERA.lookZ },
+  };
+}
+
 export function makeCamera(aspect = 1) {
   const camera = new THREE.PerspectiveCamera(CAMERA.fovDeg, aspect, 10, 6000);
-  camera.position.set(0, WORLD.h / 2, CAMERA.eyeZ);
-  camera.lookAt(0, CAMERA.lookY, CAMERA.lookZ);
+  const pose = roomCameraPose(aspect);
+  camera.position.set(pose.position.x, pose.position.y, pose.position.z);
+  camera.lookAt(pose.target.x, pose.target.y, pose.target.z);
   return camera;
 }
 

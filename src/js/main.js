@@ -734,7 +734,16 @@ function wire() {
   /* The stage sizes itself off its own box (stage.js's resize listener);
      the ambience canvas does the same. Nothing here re-fits a scaled
      world any more — there isn't one. */
-  window.addEventListener('orientationchange', () => setTimeout(() => stage?.resize(), 120));
+  /* stage.resize() alone only ever updates aspect/fov (see its own
+     comment) — never enough on its own here since PLAN-MOBILE.md
+     iteration 3 made the `room` pose ITSELF depend on aspect (the
+     portrait tilt). resyncRoom() closes that one gap: a no-op unless
+     the rig is at rest in `room` right now, in which case it re-applies
+     that pose for the NEW aspect — see its own doc comment. */
+  window.addEventListener('orientationchange', () => setTimeout(() => {
+    stage?.resize();
+    handle?.rig?.resyncRoom();
+  }, 120));
   /* A backgrounded tab has no reason to render a room. Ambience already
      does this for its own canvas; the stage is the expensive one. */
   document.addEventListener('visibilitychange', () => {
@@ -935,10 +944,23 @@ function enter() {
   amb.start();
   showHint();
   /* The stage was sized against a hidden #shop (display:none via
-     [hidden]), so its canvas measured 0x0. Re-measure now that it is on
-     screen — this is the same class of bug the old fit() call here was
-     guarding against — and only now start rendering it. */
+     [hidden]), so its canvas measured 0x0 — and BEFORE that, stage.js's
+     own makeCamera() (called from createStage(), during boot(), also
+     against that same hidden 0x0 canvas) baked a stale aspect's `room`
+     pose straight into the camera's quaternion via camera.lookAt().
+     Re-measuring now that #shop is on screen fixes camera.aspect/fov
+     (resize()'s job — see its own comment: aspect + fov only, never
+     position/orientation), but the ORIENTATION that stale aspect baked
+     in at construction is untouched by that — a plain resize() never
+     revisits it. resyncRoom() is the other half: it re-reads
+     roomCameraPose() with the now-correct aspect and re-applies it,
+     but ONLY while the rig is at rest in `room` (its own guard), which
+     is exactly where a fresh boot always is. Without this line the
+     portrait tilt (PLAN-MOBILE.md iteration 3) computes correctly and
+     is simply never seen — the same gap orientationchange below closes
+     for a later rotation, needed here too for the FIRST paint. */
   stage?.resize();
+  handle?.rig?.resyncRoom();
   stage?.start();
 }
 

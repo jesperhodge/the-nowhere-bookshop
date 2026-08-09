@@ -158,6 +158,60 @@ next person a session. This is phase 12's closing account — see
   nothing better. See `HANDOFF-FINAL.md` for the count broken down by
   source.
 
+**Closed since phase 12 — mobile, iterations 1-3 (`PLAN-MOBILE.md`).** Not a
+phase-12 item, but the account above is stale without it:
+
+- **A phone couldn't reach another room.** No drag gesture existed, and
+  every doorway sat outside the frustum at the arrival pose (M1/M2).
+  `poses.js`'s `dragLook()` now turns the view — one finger on touch, the
+  left button on desktop, clamped to the room and cleared through
+  `isClear()`'s own room-bounds check — and a tap still opens the book
+  under it (verified: a small movement opens, a drag over the same book
+  does not).
+- **~45% of a portrait screen was black bar above the ceiling / below the
+  floor** (M4). `stage.js` no longer widens the vertical fov by aspect; a
+  narrow viewport now sees a narrower SLICE of the room's width at the
+  SAME calibrated vertical framing as desktop, not a distorted one.
+- **The portrait `room` pose still looked at desktop's aim point**,
+  crowding shelves/table/floor into the bottom half under the dock —
+  `roomCameraPose()`'s own portrait tilt landed with no visible effect,
+  because `makeCamera()` ran once against a hidden, 0×0 `#shop` at boot
+  and nothing re-applied the pose once the real aspect was known.
+  `enter()` now calls the rig's `resyncRoom()` right after the resize
+  that reveals the shop, and the existing `orientationchange` handler
+  does the same on a later rotation. Verified with a screenshot, not an
+  assertion, at 390×664 before/after, and through a full
+  portrait→landscape→portrait rotation.
+- **Door signs, `front`'s 5**: at 320/390/430px wide, 4 of 5 (390/320) or
+  5 of 5 (430) are individually reachable and readable via drag, zero
+  overlaps, at every width tried. (`The Lamp Room`'s sign is suppressed
+  by the nearer `Orrery` sign's overlap check at 320/390 specifically —
+  intentional per `doors.js`'s "nearest bay wins, never stack into mush"
+  rule, not a defect.) Fixing this surfaced a real bug: the portrait tilt
+  above put the look-target's height inside `front`'s own table, so
+  `dragLook`'s reused `isClear()` obstacle check silently refused to turn
+  toward 3 of the 5 doors at all. `dragLook` now clears against room
+  bounds only (`inRoomBounds()`, extracted from `isClear()`) — a camera
+  TARGET aimed at a case or table renders nothing wrong, unlike a camera
+  POSITION inside one.
+- **`env(safe-area-inset-*)`** (M9) is wired on the dock, topbar, placard
+  and overlays and was verified against a REAL emulated inset (Chromium's
+  `Emulation.setSafeAreaInsetsOverride`, 47px top / 34px bottom), not
+  assumed: every control's edge cleared the inset band.
+- **The room placard covered the hanging lamp on desktop** for the whole
+  visit (`placardIn` fades in and then stays; nothing freed the fixture
+  the way mobile's `placardArrival` already does). Moved to `27vh` —
+  clears the shade in every lamp room checked (`front`, `lamproom`,
+  `oak`) — plate alpha untouched (`PLAN-CONTRAST.md`'s guarantee still
+  holds). A long, 2-line room description can still nudge the plate's
+  bottom into the case top on some rooms; that is a shelf partly
+  captioned, not a fixture hidden, and is the one soft edge left here.
+- **Landscape 844×390** (very short) is now checked: dock, topbar,
+  placard and doors all sit clear of each other once the arrival caption
+  fades; mid-fade, the caption can sit close enough to a door sign to dim
+  it, same as any arrival caption over a sign, and clears itself within
+  ~2.6s the way it's designed to.
+
 **Still open:**
 
 - **No real screen reader has ever been used on the a11y mirror.** Every

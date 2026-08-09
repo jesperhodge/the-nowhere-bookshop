@@ -266,8 +266,32 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.08); }
    feather is always the outer layer, never the one the text sits on. */
 .placard {
   position: absolute;
-  left: 50%; top: 4.6rem;
-  top: calc(4.6rem + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
+  left: 50%;
+  /* Desktop-only position (the mobile media query below overrides `top`
+     again with a fixed rem, and mobile's placardArrival ALSO fades the
+     placard out after ~2.6s — see that keyframe's own comment — so this
+     collision never lingers there). On a wide/permanent desktop placard
+     (placardIn fades in and then STAYS — no fade-out keyframe — for as
+     long as the reader is in the `room` pose) the OLD 4.6rem put the
+     plate's box across y ≈74-252px of an 880-tall window, which is
+     exactly where the 'hang' lamp's shade+cord render (measured via
+     Box3+project(): shade spans y ≈129-236px at 1400×880, i.e. ≈15-27%
+     of viewport height — a FRACTION independent of aspect, since a
+     perspective camera's vertical FOV alone fixes vertical framing; see
+     stage.js's makeCamera()/fovForAspect()) — the plate sat squarely
+     over the fixture for the entire visit. 27vh clears the shade's own
+     26.9% and lands the plate on the plain wall panel below it and
+     above the shelf case's own top (≈47vh) — the same gap every k-panel
+     room's standard case height and 'hang' lamp slot leave open. A
+     description line long enough to wrap to 2 lines can still nudge the
+     plate's bottom into the case top on some rooms; that is a shelf
+     partly captioned, not a permanent light fixture hidden, and is the
+     one still-open edge of this fix. Alpha is UNCHANGED (PLAN-CONTRAST.md
+     — qa's static check enforces --brass/--paper/--ink-dim against
+     rgba(20,14,9,.90); never lower it to "solve" an overlap): this is a
+     position change only. */
+  top: 27vh;
+  top: calc(27vh + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
   translate: -50% 0;
   z-index: 25;
   text-align: center;
