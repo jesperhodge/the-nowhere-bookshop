@@ -478,7 +478,23 @@ body.is-close .hint { animation: none; opacity: 0; transition: opacity .4s var(-
 @keyframes slideOut { to { transform: translateX(100%) } }
 @keyframes fadeOut { to { opacity: 0 } }
 
-.bd { display: flex; flex-direction: column; height: 100%; }
+/* `overflow: hidden` earns its own note, same as `.overlay__body`'s
+   below: `.bd` is a flex item of `.sheet__body` (column direction) with
+   no explicit width, so it stretches to fill it — except that a flex
+   item's `width: auto` carries a content-based "automatic minimum size"
+   floor whenever its own `overflow` is `visible` (CSS Sizing
+   §automatic-minimum-size), and `.bd__navbtn span`'s prev/next title is
+   `white-space: nowrap`. At mobile widths (§the media query below,
+   `.sheet__body` at `100vw` instead of desktop's 736px) a long
+   neighbouring title's un-shrinkable min-content width can exceed the
+   phone's actual width, and without this, `.bd` floors itself to that
+   width and pushes a real horizontal scrollbar — measured, a 320px
+   `.sheet__body` holding a 364px-floored `.bd`. `overflow: hidden`
+   drops the floor to 0; nothing inside `.bd` actually relies on
+   overflowing it, so nothing is clipped that wasn't already meant to be
+   (`.bd__navbtn span` truncates itself with its own ellipsis exactly as
+   before). */
+.bd { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
 
 .bd__top {
   position: relative;
@@ -531,6 +547,15 @@ body.is-close .hint { animation: none; opacity: 0; transition: opacity .4s var(-
   touch-action: none;
   user-select: none;
   filter: drop-shadow(0 34px 40px rgba(0,0,0,.65));
+  /* book.js used to set these two inline, always to the same 190/288 —
+     they never actually varied per book (only --ht, --sp-bg, --sp-ink,
+     --cv-bg2 do, and those are still set inline). Moved here so the
+     mobile media query below can override them: an inline style always
+     wins over a stylesheet rule for the same property regardless of
+     which media query matches, so leaving them inline would have made
+     `.hold`'s mobile override below silently do nothing. */
+  --hw: 190px;
+  --hh: 288px;
 }
 .hold:active { cursor: grabbing; }
 .hold__obj {
@@ -544,6 +569,15 @@ body.is-close .hint { animation: none; opacity: 0; transition: opacity .4s var(-
 .hold.is-dragging .hold__obj { transition: none; }
 .hold__f { position: absolute; left: 50%; top: 50%; translate: -50% -50%; backface-visibility: hidden; overflow: hidden; }
 .hold__front { width: var(--hw); height: var(--hh); transform: translateZ(calc(var(--ht) / 2)); border-radius: 2px 5px 5px 2px; box-shadow: inset 0 0 60px rgba(0,0,0,.3); }
+/* PLAN-SHEETS.md: the cover art is a fixed-viewBox SVG (covers.js's
+   coverSVG) whose own width/height attributes match --hw/--hh on desktop
+   by construction — nobody had to scale it before. The mobile rule below
+   shrinks --hw/--hh without touching that markup, and an <svg> with
+   explicit width/height attributes ignores a smaller container instead of
+   scaling to it, so without this it would get cropped by .hold__f's own
+   `overflow: hidden` rather than shrink. Harmless on desktop: 100% of a
+   190×288 box is still 190×288. */
+.hold__front svg { display: block; width: 100%; height: 100%; }
 .hold__back  { width: var(--hw); height: var(--hh); transform: translateZ(calc(var(--ht) / -2)) rotateY(180deg); border-radius: 5px 2px 2px 5px; background: var(--cv-bg2); }
 .hold__spine { width: var(--ht); height: var(--hh); transform: translateX(calc(var(--hw) / -2)) rotateY(-90deg); background: var(--sp-bg); display: grid; place-items: center; }
 .hold__fore  { width: var(--ht); height: var(--hh); transform: translateX(calc(var(--hw) / 2)) rotateY(90deg); background: repeating-linear-gradient(90deg, #ece1c8 0 2px, #cfc0a0 2px 3px); }
@@ -811,13 +845,77 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .bd__keep.is-on { color: #1c1310; background: var(--brass); border-color: var(--brass); }
 .bd__keep svg { width: 15px; height: 15px; }
 
+/* PLAN-SHEETS.md: measured at 320×568 before this fix, the book panel
+   was three fixed blocks (cover, buy bar, prev/next) taking whatever
+   height they wanted, leaving `.bd__scroll`'s inner `overflow-y` a 35px
+   window over 951px of content — cover alone was 56% of the viewport.
+   The fix is structural: retire every inner scroller and let
+   `.sheet__body` itself be the one scrolling document. Only the close
+   button stays pinned (fixed, not part of the flow that scrolls). */
 @media (max-width: 620px) {
-  .sheet__body { width: 100vw; }
+  .sheet__body {
+    width: 100vw;
+    overflow-y: auto;
+  }
+  /* the base rule's `overflow: hidden` (see its own comment above) does
+     double duty on desktop: it also stops a flex item's default
+     `flex-shrink: 1` from being moot, because with `height: 100%` there
+     is no free space to shrink out of. Here `height` is `auto` instead,
+     so `.bd`'s flex-basis resolves to its *content* size (hundreds of
+     px taller than the viewport) and default `flex-shrink: 1` squashes
+     it straight back down to `.sheet__body`'s height — measured,
+     `scrollHeight 1664 / clientHeight 568` with nothing to scroll:
+     `.sheet__body` above is `568/568`, i.e. .bd never actually grew.
+     `flex: 0 0 auto` stops that shrink so `.bd` sits at its full content
+     height and overflows `.sheet__body` on purpose — the point of this
+     block, so that `.sheet__body`'s new `overflow-y: auto` has
+     something real to scroll. `overflow: visible` neutralises the base
+     rule's `hidden` (which would otherwise clip `.bd` to the shrunk
+     568px box every bit as hard as the shrink itself) without deleting
+     it, so desktop keeps its width-floor fix untouched. */
+  .bd { height: auto; min-height: 100%; overflow: visible; flex: 0 0 auto; }
   .bd__top { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 1.1rem 1.1rem; }
-  .hold { min-height: 15rem; }
+  /* the cover: was content-sized off a fixed 190×288 --hw/--hh (56% of
+     a 568-tall viewport on its own) — down to ~18vh of actual book art,
+     which lands the whole `.hold` block (art + "drag to turn it over")
+     at ~20-22% of viewport height across 568-932px. `.hold__front svg`
+     above is what makes shrinking --hw/--hh actually resize the art
+     instead of cropping it. */
+  .hold {
+    min-height: 0;
+    --hw: calc(18vh * 2 / 3);
+    --hh: 18vh;
+  }
   .bd__meta { padding-right: 0; }
-  .bd__scroll { padding: 1.1rem; }
+  /* `.sheet__body` above is the only scroll container now, so this drops
+     the inner one. `flex: 0 0 auto` matters once `.bd`'s height is auto
+     instead of 100%: the base rule's `flex: 1 1 auto` would be harmless
+     there too (no free space left for grow/shrink to act on), but pinning
+     it explicitly is worth doing rather than relying on that being true. */
+  .bd__scroll { padding: 1.1rem; overflow: visible; flex: 0 0 auto; }
+  /* Tried `position: sticky; bottom: 0` here first. Measured, it was
+     worse than the thing being fixed: with `.bd` several screens tall,
+     sticky's own rule ("never further from the threshold than its
+     static-flow position allows") pulls the whole buy block up to the
+     bottom edge from the moment the sheet opens — screenshotted at
+     375×667, it covered the bottom ~40% of the screen and cut "What it
+     is" off mid-sentence, unscrolled. A block this tall has no sticky
+     placement that stays out of the way, so it just joins the flow like
+     everything else — the "at most one sticky element" allowance in
+     PLAN-SHEETS.md is a ceiling, not a target. */
   .bd__buy { padding: .9rem 1.1rem 1.1rem; }
+  /* was absolutely positioned inside `.bd__top`, which now scrolls away
+     with everything else. `position: fixed` is what keeps it reachable
+     "at every scroll position" per PLAN-SHEETS.md's verification bullet —
+     same treatment `.overlay__close` gets below for the other three
+     overlays. */
+  .bd__close {
+    position: fixed;
+    top: .85rem;
+    top: calc(.85rem + env(safe-area-inset-top));
+    right: .9rem;
+    right: calc(.9rem + env(safe-area-inset-right));
+  }
 }
 
 /* ─── generic overlay ──────────────────────────────────────── */
@@ -1133,7 +1231,57 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
     padding: 2vh 2vw;
     padding: calc(2vh + env(safe-area-inset-top)) calc(2vw + env(safe-area-inset-right))
              calc(2vh + env(safe-area-inset-bottom)) calc(2vw + env(safe-area-inset-left));
+    /* PLAN-SHEETS.md §2: same rule as the book panel above, applied to
+       the other three overlays. `.overlay__body`'s `max-height: 92vh` +
+       `overflow: hidden` (base rule) is what was forcing an inner
+       scroller on `.find__results`/`.plan__body`/`.parcel__body` — on a
+       short phone the header/search-row furniture took the height and
+       the inner window collapsed, same pattern as `.bd__scroll`. Here
+       `.overlay` itself becomes the one scroll container and the body is
+       let grow to its content's real height.
+       `align-items: flex-start` (not the base rule's `place-items:
+       center`) is why that scrolling works at all: a `center`-aligned
+       item taller than its container overflows symmetrically above AND
+       below, and a scroll container generally can't reach the overflow
+       that spills above its own top edge — anchoring to the start means
+       all the overflow is below, where normal top-anchored scrolling
+       reaches it. */
+    align-items: flex-start;
+    overflow-y: auto;
   }
+  /* `overflow` stays `hidden` (the base rule's value) rather than
+     `visible` — that's not a leftover, it's load-bearing. Grid/flex
+     items get a content-based "automatic minimum size" floor on `width:
+     100%`/`height: auto` UNLESS their own `overflow` is non-`visible`
+     (CSS Sizing §automatic-minimum-size); switching this to `visible`
+     while debugging made `.overlay__body` clamp to its widest
+     `white-space: nowrap` descendant's min-content width (390px at a
+     320px-wide `.overlay`, screenshotted as `.pitem__buy` pushed off the
+     right edge) instead of honouring `width: 100%`. Dropping `max-height`
+     is enough on its own: with no height cap, an auto-height box has
+     nothing to clip, so `overflow: hidden` here clips exactly nothing —
+     it just needs to stay `hidden` rather than `visible` to keep that
+     width floor at 0. */
+  .overlay__body {
+    max-height: none;
+  }
+  /* was absolutely positioned inside `.overlay__body`, which can now be
+     taller than the screen and scroll — `position: fixed` keeps it
+     reachable at every scroll position instead of scrolling away with
+     the header it used to sit next to. Same fix as `.bd__close` above. */
+  .overlay__close {
+    position: fixed;
+    top: .85rem;
+    top: calc(.85rem + env(safe-area-inset-top));
+    right: .9rem;
+    right: calc(.9rem + env(safe-area-inset-right));
+  }
+  /* the three inner scrollers this same rule retires: search results,
+     the shop plan, the parcel/shelf list. `.overlay` above is now the
+     only scroll container. */
+  .find__results { overflow: visible; max-height: none; }
+  .plan__body { overflow: visible; }
+  .parcel__body { overflow: visible; }
   .overlay__body--search { margin-top: 3vh; }
   .plan__grid { grid-template-columns: 1fr; }
   /* .plan__hd/.parcel__hd's `justify-content: space-between` row was

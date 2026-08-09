@@ -114,7 +114,7 @@ export function renderBook(book, ctx) {
   el.innerHTML = `
     <div class="bd__top">
       <button class="bd__close" type="button" data-close aria-label="Put it back">${ICON.close}</button>
-      <div class="hold" id="hold" style="--hw:190px; --hh:288px; --ht:${Math.max(16, Math.min(52, Math.round((book.pages || 300) / 9)))}px; --sp-bg:${s.bg}; --sp-ink:${s.ink}; --cv-bg2:${s.coverFlat2};">
+      <div class="hold" id="hold" style="--ht:${Math.max(16, Math.min(52, Math.round((book.pages || 300) / 9)))}px; --sp-bg:${s.bg}; --sp-ink:${s.ink}; --cv-bg2:${s.coverFlat2};">
         <div>
           <div class="hold__obj" id="holdObj">
             <div class="hold__f hold__front">${coverSVG(book, { w: 190, h: 288, detail: 'full' })}</div>
