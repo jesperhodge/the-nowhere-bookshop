@@ -43,22 +43,56 @@ export function makeCamera(aspect = 1) {
    fit()/panMax) — a mechanic that dies with the swap, since there is
    nothing left to pan.
 
-   So below MIN_ASPECT the vertical fov widens to hold the horizontal
-   framing steady (the standard "Hor+" adaptation). MIN_ASPECT is 1.0
-   deliberately, not the 1.787 the 1680x940 world box would suggest:
-   every desktop viewport, and every measurement, screenshot and pose
-   figure recorded by phases 3-9, is at aspect >= 1 and must come out
-   BIT-IDENTICAL. This only ever fires in portrait.
+   MIN_ASPECT is 1.0 deliberately, not the 1.787 the 1680x940 world box
+   would suggest: every desktop viewport, and every measurement,
+   screenshot and pose figure recorded by phases 3-9, is at aspect >= 1
+   and must come out BIT-IDENTICAL. Everything below only ever fires in
+   portrait.
 
    poses.js reads camera.fov fresh on every goTo() (its own doc comment
-   says why), so shelf and table poses follow this for free. */
+   says why), so shelf and table poses follow this for free.
+
+   PLAN-MOBILE.md's M1/M3: the phase-10 "Hor+" answer (widen vertical
+   fov just enough to hold the horizontal fov at its aspect-1 value)
+   left every doorway off-screen — measured, 0 of 5 doors in frustum,
+   ndc.x up to ±1.40. Holding the OLD aspect-1 horizontal fov was never
+   wide enough; the room is 1680 wide and a doorway's sign has to be
+   readable too. So below MIN_ASPECT this now widens for a DIFFERENT,
+   bigger target: keep the NEAREST doorway on screen with a comfortable
+   margin, at ANY room (every room's worst case is the same, because
+   BAY[0] — passages.js's nearest door bay — is always occupied the
+   moment a room has any door at all: doorSlots() fills l1/r1 first).
+
+   DOOR_WORST_X/Z are BAY[0]'s doorway anchor (doorWorldAnchor('l', 0) —
+   passages.js), duplicated as plain numbers rather than imported: this
+   file is the camera's own home and importing passages.js here would
+   run the two directions of coupling doors.js already warns about
+   (doorwaySpecs() -> passages.js -> stage.js would be a new one). The
+   NEAREST bay is the hardest to fit because it is the closest to the
+   camera along z — depth from the eye is smallest there, so a fixed
+   lateral offset (every doorway sits flush with a side wall, x=±840)
+   subtends the LARGEST angle. Farther bays (BAY[1], BAY[2]) are always
+   easier and never drive this number.
+
+   This does NOT trade back into M4's black-bar problem the way
+   widening naively would: shell.js's floor/ceiling now extend well
+   past the room's own front edge (its own comment explains why), so
+   the extra vertical field this opens up shows more floor and ceiling,
+   not the empty scene background M4 measured. */
 const MIN_ASPECT = 1.0;
 const DEG = Math.PI / 180;
+const DOOR_WORST_X = WORLD.hw;              // 840 — every doorway sits flush with a side wall
+const DOOR_WORST_Z = -420;                  // BAY[0]'s z-centre (passages.js) — the nearest, hardest bay
+const DOOR_NDC_MARGIN = 0.85;               // keep the nearest doorway's anchor within this fraction of
+                                             // |ndc.x|<=1 — comfortable, with room for its sign (doors.js's
+                                             // updateSigns hides a sign past |ndc.x|=1.25, so this is not
+                                             // the tightest bound that would still technically pass)
 
 export function fovForAspect(aspect) {
   if (!(aspect > 0) || aspect >= MIN_ASPECT) return CAMERA.fovDeg;
-  const halfTan = Math.tan((CAMERA.fovDeg * DEG) / 2) * (MIN_ASPECT / aspect);
-  return (2 * Math.atan(halfTan)) / DEG;
+  const doorDepth = CAMERA.eyeZ - DOOR_WORST_Z;
+  const doorHalfTan = DOOR_WORST_X / (doorDepth * aspect * DOOR_NDC_MARGIN);
+  return (2 * Math.atan(doorHalfTan)) / DEG;
 }
 
 /* ── lighting ─────────────────────────────────────────────────

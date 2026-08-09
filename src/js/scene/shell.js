@@ -26,6 +26,49 @@ import { wallTexture } from './textures.js';
 const DEFAULT_THICKNESS = 28;
 const TEX_SCALE = 0.75; // canvas px per world unit
 
+/* ── the floor/ceiling "porch" (PLAN-MOBILE.md M4) ────────────────
+   stage.js's fovForAspect() now widens the vertical fov on a portrait
+   viewport far past the point where the desktop framing's top/bottom
+   frustum edges exactly graze the room's own open front (z=0) — that
+   graze is precisely calibrated (CAMERA.fovDeg = 2*atan(WORLD.hh/1500))
+   to line up with nothing beyond it, which is what made the OLD Hor+
+   widening show empty scene background above the ceiling and below
+   the floor once it went past that calibration: M4's ~45% black bar.
+
+   The fix is not to claw back the fov (that reopens M1 — the doorway
+   never fits at the old, narrower angle) and not to fight the geometry
+   with a wider FOV/closer camera trade-off (every combination tried by
+   hand still leaves 40-60% void at a phone's aspect — the room's own
+   proportions and BAY[0]'s distance make that unavoidable for a
+   symmetric camera looking straight down the room). It is to stop
+   telling the floor and ceiling that the room ends at z=0. They are
+   the two surfaces a widened top/bottom ray can still be aimed at
+   instead of at nothing: extend them forward, PAST the open front,
+   far enough that the widest fov this shop uses (see stage.js's
+   DOOR_NDC_MARGIN/DOOR_WORST_Z) still lands a ray on wood or floorboards
+   rather than off the edge of the world.
+
+   Provably invisible on desktop: aspect>=1 never widens past the exact
+   graze angle (fovForAspect's own early return), so no desktop ray's
+   mathematical crossing of y=940 or y=0 ever happens at z>0 in the
+   first place — this extension only exists for rays that don't occur
+   there. Bit-identical desktop rendering is unaffected; nothing here
+   is gated on aspect because nothing needs to be.
+
+   FRONT_PORCH is sized for the worst case actually in play: the most
+   extreme portrait aspect this project targets (~0.46, PLAN-MOBILE.md's
+   430x932) needs the top/bottom ray to travel to about z=+1080 before
+   it would otherwise cross the ceiling/floor height outside the room;
+   1300 leaves margin without the porch ballooning arbitrarily. SIDE_PAD
+   is a smaller safety margin against the CORNER case (a ray that is
+   wide on both axes at once, briefly outside the un-widened ±840 the
+   walls occupy, while still within the porch's z-range) — the walls
+   themselves are never widened (doorways are the whole point, and a
+   wider wall would just be more wall to walk into), only the floor and
+   ceiling, which have no doorways to preserve. */
+const FRONT_PORCH = 1300; // world units the floor/ceiling extend past z=0, toward the camera
+const SIDE_PAD = 320;     // world units the floor/ceiling extend past x=±840, each side
+
 /**
  * One wall/floor/ceiling surface as an extruded box, `thickness` deep,
  * with its ROOM-FACING surface centred exactly at `position` and facing
@@ -53,10 +96,19 @@ const TEX_SCALE = 0.75; // canvas px per world unit
    over the shape's own width/height so the texture actually tiles across
    the face once, and side-wall UVs to 0-1 over thickness so the (mostly
    hidden) extrude strip doesn't inherit the same bug. */
-function uvGenerator(width, height, thickness) {
+/* `uvWidth`/`uvHeight` (defaulting to `width`/`height`) and `offsetX`/
+   `offsetY` let a caller author a BIGGER shape than the texture should
+   actually tile across — see FRONT_PORCH/SIDE_PAD below, where the
+   floor/ceiling shape itself grows but the texture must still land
+   exactly where it did before on the room's own (unextended) footprint,
+   or desktop's bit-identical rendering breaks the moment the shape's
+   own local origin shifts to make room for the extension. `offset*` is
+   the shape-local-origin shift the extension introduces — see
+   buildShell()'s floor/ceiling calls for the one non-zero case. */
+function uvGenerator(width, height, thickness, uvWidth = width, uvHeight = height, offsetX = 0, offsetY = 0) {
   const cap = (i, vertices) => new THREE.Vector2(
-    vertices[i * 3] / width + 0.5,
-    vertices[i * 3 + 1] / height + 0.5,
+    (vertices[i * 3] - offsetX) / uvWidth + 0.5,
+    (vertices[i * 3 + 1] - offsetY) / uvHeight + 0.5,
   );
   return {
     generateTopUV(geometry, vertices, a, b, c) {
@@ -76,7 +128,10 @@ function uvGenerator(width, height, thickness) {
   };
 }
 
-function buildFace({ width, height, thickness, position, rotation, material, holes = [] }) {
+function buildFace({
+  width, height, thickness, position, rotation, material, holes = [],
+  uvWidth = width, uvHeight = height, uvOffsetX = 0, uvOffsetY = 0,
+}) {
   const shape = new THREE.Shape();
   shape.moveTo(-width / 2, -height / 2);
   shape.lineTo(width / 2, -height / 2);
@@ -90,7 +145,7 @@ function buildFace({ width, height, thickness, position, rotation, material, hol
     bevelEnabled: false,
     steps: 1,
     curveSegments: 12,
-    UVGenerator: uvGenerator(width, height, thickness),
+    UVGenerator: uvGenerator(width, height, thickness, uvWidth, uvHeight, uvOffsetX, uvOffsetY),
   });
   // ExtrudeGeometry extrudes local z in [0, thickness]; shift so z=0 is
   // the room-facing surface and the solid recedes into z<0, i.e. away
