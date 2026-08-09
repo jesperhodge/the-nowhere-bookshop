@@ -88,6 +88,7 @@ What to know before deploying for real:
 | Click a book, or Enter/Space on it | take it off the shelf — blurb, curator's note (if it has one), where to buy |
 | Click a lit doorway | walk through into the next room |
 | Click a case, or the table | fly the camera to it, close enough to read |
+| Drag (one finger on touch, left mouse button on desktop) | turn and look around the room — the way through a doorway you can't yet reach by walking |
 | Wheel / pinch | dolly the camera between the room view and the nearest case |
 | `←` `→` | the next book along the shelf (or, with none open, walk to a side case) |
 | `↑` | walk to the back case |
@@ -108,6 +109,15 @@ view.
 
 If WebGL will not start, the shop opens as a complete text UI instead:
 search, the shop plan, and "everything on this shelf" cover every room.
+
+**On a phone**, the room is framed narrower rather than shorter — no black
+bar above the ceiling — and dragging turns the view, so every doorway is
+reachable without the plan. Every control is a real tap target, laid out
+clear of the notch and the home indicator. Book panel, search, plan and
+parcel are each one scrolling sheet on a small screen — nothing is trapped
+in an inner scroller a thumb can't find — with a visible close button in
+easy reach at any scroll position, alongside the existing scrim-tap and
+`Esc`.
 
 ## How it is built
 
@@ -218,11 +228,13 @@ copyright — the whole text, free.
 
 ## The documents in this repo — what is current, what is archive
 
-This project ran across twelve phases, and every one left a plan and (from
-phase 7 on) a handoff. That is deliberate: the handoffs are the project's
-memory, and every trap recorded in one already cost a session before it was
-written down. None of it is deleted. But a reader picking this repo up cold
-needs to know which four files to read and which twenty to skip.
+This project ran across twelve numbered phases, and every one left a plan
+and (from phase 7 on) a handoff, plus three further plans after phase 12
+that never got their own numbered phase or handoff. That is deliberate: the
+handoffs are the project's memory, and every trap recorded in one already
+cost a session before it was written down. None of it is deleted. But a
+reader picking this repo up cold needs to know which few files to read and
+which twenty-odd to skip.
 
 **Read these, in this order, for the current state:**
 
@@ -230,8 +242,9 @@ needs to know which four files to read and which twenty to skip.
 |---|---|
 | this README | what this is, how to run it, how to deploy it |
 | `TRY-IT.md` | how to try the live build, and — its "what is not done" section — the honest, current list of gaps |
-| `HANDOFF-FINAL.md` | **this phase's own account**: what shipped, how the Vercel deploy was actually proved, what is still open, every trap that would cost the next session |
+| `HANDOFF-FINAL.md` | **phase 12's own account**: what shipped, how the Vercel deploy was actually proved, every trap that would cost the next session. Stops at phase 12 — read its own header note before trusting a number out of it |
 | `IMPLEMENTATION.md` | the architecture brief a fresh session should read first — the server contract, the data pipeline, "things not to do" |
+| `PLAN-CONTRAST.md`, `PLAN-MOBILE.md`, `PLAN-SHEETS.md` | the work that shipped *after* phase 12 — the text-contrast guarantee, three mobile iterations, and the overlay-scrolling fix. No `HANDOFF-*.md` covers these; `TRY-IT.md`'s "what is not done" is where their outcomes are recorded |
 
 **Everything else is archive** — the record of how the shop got here, kept
 for the reasoning, not as a live spec:

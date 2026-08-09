@@ -15,8 +15,8 @@
    hover/focus.
 
    Two entry points, used in this order by the room-assembly code
-   (tools/preview-stage.html today; main.js once phase 5's swap-over
-   lands):
+   (tools/preview-stage.html, and — since phase 10's swap-over — main.js,
+   which runs this same substrate for the live site too):
 
      1. computeRoomDoorHoles(room) — BEFORE buildShell(), so the wall
         geometry can be cut with the holes already known.

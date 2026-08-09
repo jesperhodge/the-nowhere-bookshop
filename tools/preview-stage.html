@@ -5,9 +5,12 @@
 <title>Stage preview — phase 5 checkpoint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  Standalone harness for the three.js stage substrate. Not part of
-  the live site — main.js/index.html still run the CSS-3D scene.js
-  exactly as before. Started as the phase-3 shell/lighting checkpoint;
+  Standalone harness for the three.js stage substrate. Phase 10 made
+  this substrate the live site itself (main.js/index.html run it too,
+  not a parallel CSS-3D scene.js — that file is gone); this harness
+  survives as the place to look at one room with layers switched off,
+  which is how every scene bug since phase 3 was actually found (see
+  TRY-IT.md). Started as the phase-3 shell/lighting checkpoint;
   phase 4 added real cases + books + the per-room spine atlas + raycast
   hover/select + the a11y mirror. Phase 5 adds real doorway openings
   (holes cut into the side walls), a light spill in each opening, and

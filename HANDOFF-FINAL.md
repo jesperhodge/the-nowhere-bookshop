@@ -1,4 +1,15 @@
-# Handoff — phase 12 done. This is the last one.
+# Handoff — phase 12 done. This is the last *numbered* phase.
+
+> **Read this note before the rest of the document.** "This is the last
+> one" (below) turned out not to be true: the contrast guarantee
+> (`PLAN-CONTRAST.md`), three mobile iterations (`PLAN-MOBILE.md`) and the
+> overlay-scrolling fix (`PLAN-SHEETS.md`) all shipped after this handoff
+> was written, none of them got a `HANDOFF-*.md` of their own, and none of
+> what follows here mentions them — including the `67 checks` figure two
+> lines down, now `79`. `TRY-IT.md`'s "What is not done" section is kept
+> current through all of that; treat it, not the account below, as the
+> source of truth for anything past phase 12. Everything below this note is
+> unedited and describes phase 12 only.
 
 Phase 12 (`PLAN-PHASE12.md`) is **complete: planned, implemented, verified**.
 `npm run qa` passes clean — 67 checks, 0 failures, 0 console/page errors, 0

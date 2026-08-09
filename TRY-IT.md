@@ -1,9 +1,13 @@
 # Trying it out, and seeing what changed
 
 Written mid-project, during phase 10, and updated at the close of phase 12 —
-the last phase. Read `HANDOFF-FINAL.md` for that phase's own account of what
-shipped and what is still open; the "What is not done" section at the bottom
-of this file is the standing, itemised worklist it closes most of out.
+the last numbered phase. Read `HANDOFF-FINAL.md` for that phase's own account
+of what shipped and what is still open — but note it stops at phase 12:
+the contrast guarantee (`PLAN-CONTRAST.md`), three mobile iterations
+(`PLAN-MOBILE.md`) and the overlay-scrolling fix (`PLAN-SHEETS.md`) all
+happened after it and have no handoff doc of their own. This file's "What is
+not done" section, below, is kept current through all of that and is the one
+to trust for present-day status.
 
 ## The one thing to know first
 
@@ -113,16 +117,24 @@ npm run harvest:report   # the harvest's coverage counts
 `tools/qa.mjs` was rewritten in phase 10 against `IMPLEMENTATION.md` §7 — it
 checks the canvas, the a11y mirror and the camera poses rather than the
 retired CSS build's `.bk[data-book]` nodes. It ran clean at the end of phase
-12 — 67 checks, zero failures, zero console/page errors, zero failed
-requests, across a full 50-room sweep. A failure now is a real regression.
+12 with 67 checks; `PLAN-CONTRAST.md`'s static and rendered plate checks
+(`tools/contrast.mjs`, a 1,440-run sweep across rooms and poses) grew that
+to 79, still zero failures, zero console/page errors, zero failed requests.
+A failure now is a real regression. The mobile-specific verifications in
+`PLAN-MOBILE.md` and `PLAN-SHEETS.md` (drag-to-look, touch targets, safe
+areas, the overlay-scroll fix) were checked by hand at the viewport sizes
+each plan names, not folded into this automated suite — see those plans'
+own "Verification" sections for exactly what was checked and how.
 
 ---
 
 ## What is not done
 
 Being straight about the state, because a doc that overstates it costs the
-next person a session. This is phase 12's closing account — see
-`HANDOFF-FINAL.md` for the full detail behind every line here.
+next person a session. The first section below is phase 12's closing
+account — see `HANDOFF-FINAL.md` for the full detail behind every line in
+it. Everything after "Closed since phase 12" happened later, has no
+handoff doc of its own, and is recorded here instead.
 
 **Closed this phase, previously carried forward:**
 
@@ -211,6 +223,22 @@ phase-12 item, but the account above is stale without it:
   fades; mid-fade, the caption can sit close enough to a door sign to dim
   it, same as any arrival caption over a sign, and clears itself within
   ~2.6s the way it's designed to.
+
+**Closed after that — overlays that scroll as one document (`PLAN-SHEETS.md`).**
+Reported from the deployed build: open a book on a phone and you cannot read
+it. At 320×568 the cover took 56% of the viewport, the buy bar another 56%
+(they overlap because the fixed furniture overflows the box it's in), and
+the blurb/note/links were squeezed into a 35px inner scroller holding 951px
+of content — a 27:1 ratio, the "one or two lines" the owner actually saw.
+The same `.overlay__body { max-height: 92vh; overflow: hidden }` pattern did
+it to search, plan and parcel too. Fixed by retiring every inner scroller on
+mobile — `.sheet__body` and `.overlay__body` are each now the one scroll
+container, the cover shrinks to ~18vh of actual art, and only the close
+button stays pinned while everything else joins the flow. Surfaced two
+pre-existing structural bugs along the way (an inline `--hw`/`--hh` on every
+book that defeated any stylesheet override, and `overflow: visible` giving
+`.bd`/`.overlay__body` a content-based minimum width past the viewport) —
+both fixed. Desktop untouched. `npm run qa`: 79/79.
 
 **Still open:**
 

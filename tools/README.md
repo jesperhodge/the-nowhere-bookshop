@@ -8,8 +8,11 @@ Development harnesses. Not part of the site — nothing in `src/` imports them.
     node tools/qa.mjs --shots    # also writes tools/rooms/<roomId>.png
     node tools/shot.mjs cellar out.png 1600 1000
 
-`EXE` at the top of each script points at the bundled Chromium; change it if
-your Playwright browsers live elsewhere. Don't edit files in `src/` while the
+`qa.mjs` finds Chromium via the `PW_CHROMIUM` environment variable (falls
+back to Playwright's own default if unset — see its own header comment for
+the exact invocation); `shot.mjs` has the executable path written directly
+into its one `chromium.launch()` call. Change whichever applies if your
+Playwright browsers live elsewhere. Don't edit files in `src/` while the
 sweep is running — a mid-run reload produces failures that aren't real.
 
 ## shot.mjs / qa.mjs and the arrival animation
