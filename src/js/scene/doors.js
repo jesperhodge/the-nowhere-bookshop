@@ -55,9 +55,14 @@ import {
 const DOOR_LIGHT_INTENSITY = 220_000;
 const DOOR_LIGHT_DISTANCE = 900;
 const DOOR_LIGHT_DECAY = 2;
-const SIGN_IDLE = 0.62;  // see buildSignEl()
 const SIGN_STEP = 110;   // world units a deeper bay's sign is raised — see signAnchor
 const HOVER_LIGHT_BOOST = 1.35; // ~= CSS .door3d:hover { filter: brightness(1.22) }, felt right brighter in WebGL
+/* Idle vs. hover border/glow — see buildSignEl()'s comment for why this
+   is no longer done with the element's own `opacity`. */
+const SIGN_BORDER_IDLE = 'rgba(255,180,94,.4)';
+const SIGN_BORDER_HOT = 'rgba(255,199,120,.95)';
+const SIGN_SHADOW_IDLE = '0 10px 22px -12px #000';
+const SIGN_SHADOW_HOT = '0 10px 22px -12px #000, 0 0 26px -4px rgba(255,180,94,.75)';
 
 /* ── the one source of truth for "which kid goes in which bay" ──
    Ported from scene.js's buildRoom(): `kids` excludes the viaTable
@@ -135,25 +140,36 @@ function buildSignEl(room) {
   const el = document.createElement('div');
   el.className = 'scene-door-sign';
   el.setAttribute('aria-hidden', 'true');
-  /* SIGN_IDLE, not 0. PLAN-ARCH.md point 2 says the sign is "shown on
-     hover/focus", and phase 5 implemented exactly that — but the CSS
-     build it replaced hung a permanent bracket plaque over every
-     doorway, and comparing the two side by side in phase 10 that is a
-     real loss: a first-time visitor met five identical glowing arches
-     with no idea what was through any of them. Wayfinding was in the
-     scene and moved to a hover state, which a phone does not have.
-     So: legible always, emphasised on hover. The deviation is
-     deliberate and is recorded in HANDOFF-PHASE11.md. */
+  /* Legible always, emphasised on hover — PLAN-ARCH.md point 2 says the
+     sign is "shown on hover/focus", but the CSS build it replaced hung a
+     permanent bracket plaque over every doorway, and comparing the two
+     side by side in phase 10 that was a real loss (a first-time visitor
+     met five identical glowing arches with no idea what was through any
+     of them; wayfinding moved to a hover state, which a phone does not
+     have). That's still the goal, deliberately per HANDOFF-PHASE11.md —
+     but PHASE-CONTRAST found this element's OWN mechanism for it broken:
+     the whole element (background AND text) was faded to opacity .62 at
+     idle, which doesn't dim the sign against a dark room, it dilutes its
+     plate with whatever is behind it — α·(plate+text) + (1−α)·scene, the
+     exact bug this pass exists to remove, just moved into this element's
+     own style instead of the CSS the rest of it was fixed in. Measured:
+     .62 idle gives ~4.17:1 against a worst-case-white scene, under the
+     4.5 this text needs. Fixed by never touching this element's opacity
+     (it stays at the implicit 1, i.e. the plate behind every glyph here
+     is fully opaque) and moving "idle vs. hover" onto the border/glow
+     instead — see setHighlight() below, and the SIGN_BORDER_ / SIGN_SHADOW_
+     constants above. Same idea as .door3d:hover .dsign__board in the old
+     CSS build, not a new one. */
   el.style.cssText = [
     'position:fixed', 'left:0', 'top:0',
     'transform:translate(-50%,-100%)', 'transform-origin:50% 100%',
-    `opacity:${SIGN_IDLE}`, 'transition:opacity .18s ease',
+    'transition:border-color .18s ease, box-shadow .18s ease',
     'pointer-events:none', 'z-index:5', 'will-change:transform,left,top',
     'background:linear-gradient(180deg,#2a1d16,#16100c)',
-    'border:1px solid rgba(255,180,94,.4)',
+    `border:1px solid ${SIGN_BORDER_IDLE}`,
     'border-radius:4px', 'padding:5px 10px 6px',
     'text-align:center', 'white-space:nowrap',
-    'box-shadow:0 10px 22px -12px #000',
+    `box-shadow:${SIGN_SHADOW_IDLE}`,
   ].join(';');
 
   const n = document.createElement('div');
@@ -270,7 +286,10 @@ export function buildRoomDoors(room, opts = {}) {
       ariaLabel: `Go through to ${spec.room.name}${spec.room.sub ? ' — ' + spec.room.sub : ''}`,
       setHighlight(on) {
         light.intensity = on ? baseIntensity * HOVER_LIGHT_BOOST : baseIntensity;
-        if (signEl) signEl.style.opacity = on ? '1' : String(SIGN_IDLE);
+        if (signEl) {
+          signEl.style.borderColor = on ? SIGN_BORDER_HOT : SIGN_BORDER_IDLE;
+          signEl.style.boxShadow = on ? SIGN_SHADOW_HOT : SIGN_SHADOW_IDLE;
+        }
       },
       signEl,
       signAnchor,

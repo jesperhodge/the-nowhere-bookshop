@@ -14,6 +14,13 @@
   /* shop chrome — warm, lamplit, constant across rooms */
   --ink: #f2e6d2;
   --ink-dim: #bda98c;
+  /* --ink-faint and --brass-soft: fine on the opaque, fixed-colour panels
+     (the book sheet, the search/plan/parcel overlays) — never as a text
+     colour drawn over the canvas. PLAN-CONTRAST.md: against a plate this
+     project can actually guarantee (α=.90 on rgb(20,14,9)), --ink-faint
+     needs ~.99 alpha to clear 4.5:1 and --brass-soft needs .88 — both
+     past the point a "plate" still reads as one. tools/contrast.mjs's
+     static check enforces this for every on-canvas rule it knows about. */
   --ink-faint: #8b7a63;
   --paper: #efe3cd;
   --brass: #d9a44f;

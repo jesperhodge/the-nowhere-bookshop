@@ -72,7 +72,10 @@
 .tag.is-on { opacity: 1; }
 .tag__t { font-family: var(--font-display); font-size: .96rem; line-height: 1.2; color: var(--paper); }
 .tag__a { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .05em; color: var(--brass); margin-top: .2rem; }
-.tag__x { font-family: var(--font-ui); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); margin-top: .35rem; }
+/* --ink-faint measured 3.93:1 here — under 4.5 even against this tag's own
+   .93-alpha plate (it needs ~.99 to clear 4.5:1 at this text size). Moved
+   to --ink-dim, same fix as .crumb / .placard__kicker. */
+.tag__x { font-family: var(--font-ui); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin-top: .35rem; }
 
 /* ─── travelling between rooms ──────────────────────────────────
    Same four beats and the same 300ms hand-over go() has always used,
@@ -137,7 +140,12 @@ body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(
 }
 .topbar > * { pointer-events: auto; }
 
+/* One shared plate under the whole trail, not one per crumb: separators
+   ("▸") are children of .crumbs too and would otherwise float over the
+   canvas with no backdrop of their own. See the .placard comment above
+   for why this is two layers (flat plate + outer glow) rather than one. */
 .crumbs {
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -145,18 +153,43 @@ body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(
   font-family: var(--font-ui);
   font-size: .84rem;
   max-width: min(62vw, 60rem);
+  padding: .3rem .5rem;
+  border-radius: 999px;
+}
+.crumbs::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -.55rem -.8rem;
+  border-radius: 999px;
+  background: radial-gradient(closest-side, rgba(20,14,9,.32), rgba(20,14,9,0) 100%);
+}
+.crumbs::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(20,14,9,.90);
 }
 .crumb {
   padding: .3rem .5rem;
   border-radius: 6px;
-  color: var(--ink-faint);
+  /* --ink-faint needs ~.99 plate alpha to clear 4.5:1 at this text size —
+     far past what still reads as a soft plate rather than a box, so the
+     default crumb colour moved up to --ink-dim (needs .795, safe with
+     margin at the .90 plate above). --brass-soft was ruled out the same
+     way for .placard__kicker; this is that same fix. */
+  color: var(--ink-dim);
   letter-spacing: .04em;
   transition: color .2s, background .2s;
   white-space: nowrap;
 }
-a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
+a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.08); }
 .crumb--now { color: var(--brass); font-weight: 600; }
-.crumb__sep { color: rgba(255,255,255,.2); font-size: .7rem; padding: 0 .05rem; }
+.crumb__sep { color: var(--ink-dim); font-size: .7rem; padding: 0 .05rem; }
 
 .topbar__tools { display: flex; gap: .4rem; align-items: center; }
 
@@ -171,12 +204,17 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   font-size: .8rem;
   letter-spacing: .05em;
   color: var(--ink-dim);
-  background: rgba(28,20,16,.72);
+  /* .72 measured 3.18:1 against a worst-case-white scene — well under the
+     4.5 this text needs. rgba(20,14,9,.90) is the same guaranteed plate as
+     the placard/dock/crumbs; backdrop-filter: blur() doesn't undermine it
+     (blurring a uniform worst-case white backdrop is still uniform white,
+     so the bound above assumed the worst case already). */
+  background: rgba(20,14,9,.90);
   border: 1px solid rgba(217,164,79,.18);
   backdrop-filter: blur(8px);
   transition: color .2s, border-color .2s, background .2s, transform .2s var(--ease);
 }
-.tool:hover { color: var(--paper); border-color: rgba(217,164,79,.5); background: rgba(44,31,24,.85); transform: translateY(-1px); }
+.tool:hover { color: var(--paper); border-color: rgba(217,164,79,.5); background: rgba(20,14,9,.95); transform: translateY(-1px); }
 .tool svg { width: 17px; height: 17px; }
 .tool--icon { padding: .5rem; }
 .tool__badge {
@@ -198,6 +236,22 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
 
 /* ─── room placard ─────────────────────────────────────────── */
 
+/* PLAN-CONTRAST.md's guarantee: composite behind a glyph is α·P + (1−α)·S,
+   worst case S is pure white (the lamp), so the plate's α has to clear the
+   scene at that worst case — not just look fine in whatever room this was
+   last eyeballed in. P = rgb(20,14,9) here throughout; α = .90 clears every
+   token below with margin (paper/ink ≥.64 needed, ink-dim/brass ≥.795,
+   see the plan's table) EXCEPT --brass-soft (needs .88, and even that isn't
+   enough at normal-text size) — which is why it is retired from every
+   surface below and replaced with --brass.
+
+   The plate is ::after, flat, exactly the size of .placard's own (now
+   padded) box — nothing outside that box can hold a glyph, so nothing
+   outside it needs to be opaque. ::before is the "lamplight pooling"
+   glow: bigger, blurred, lower-alpha, painted BEHIND the flat plate and
+   entirely outside the region any character can land in. Same two-layer
+   shape is reused for .crumbs, .dock__btn, .tool and .hint below — the
+   feather is always the outer layer, never the one the text sits on. */
 .placard {
   position: absolute;
   left: 50%; top: 4.6rem;
@@ -206,9 +260,22 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.06); }
   text-align: center;
   pointer-events: none;
   max-width: min(46rem, 88vw);
+  padding: 1.05rem 2.15rem 1.3rem;
   animation: placardIn .8s var(--ease) both;
 }
 @keyframes placardIn { from { opacity: 0; transform: translateY(-10px) } }
+.placard::before,
+.placard::after { content: ""; position: absolute; z-index: -1; pointer-events: none; }
+.placard::before {
+  inset: -2.6rem -3.4rem;
+  background: radial-gradient(closest-side, rgba(20,14,9,.4), rgba(20,14,9,0) 100%);
+}
+.placard::after {
+  inset: 0;
+  border-radius: 16px;
+  background: rgba(20,14,9,.90);
+  border: 1px solid rgba(217,164,79,.14);
+}
 /* Stepped up to a shelf or over the table: the room's name is a caption
    printed across the books. It goes; the dock and the breadcrumbs stay,
    because those are how you get back out. */
@@ -219,7 +286,7 @@ body.is-close .hint { opacity: 0; }
   font-size: .66rem;
   letter-spacing: .4em;
   text-transform: uppercase;
-  color: var(--brass-soft);
+  color: var(--brass);
   margin-bottom: .5rem;
 }
 .placard__name {
@@ -243,7 +310,7 @@ body.is-close .hint { opacity: 0; }
   font-size: .68rem;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.32);
+  color: var(--ink-dim);
 }
 
 /* ─── bottom dock ──────────────────────────────────────────── */
@@ -272,7 +339,8 @@ body.is-close .hint { opacity: 0; }
   font-size: .82rem;
   letter-spacing: .05em;
   color: var(--ink-dim);
-  background: rgba(28,20,16,.75);
+  /* .75 measured 3.55:1 — the same guaranteed plate as .placard/.tool. */
+  background: rgba(20,14,9,.90);
   border: 1px solid rgba(217,164,79,.2);
   backdrop-filter: blur(8px);
   transition: color .2s, border-color .2s, transform .2s var(--ease), background .2s;
@@ -284,6 +352,13 @@ body.is-close .hint { opacity: 0; }
    a real disabled button swallows the click by itself, whereas that makes it
    a hole in the dock and the click lands on whatever book or doorway happens
    to be behind. :not([disabled]) on the hover rule is what it was there for. */
+/* opacity, not colour, and deliberately exempt from the contrast guarantee
+   above: WCAG 1.4.3 explicitly excludes disabled/inactive controls, and a
+   translucent disabled state necessarily dilutes the plate along with the
+   text (the same group-opacity trap the door sign had — see doors.js) — so
+   this is the one place on-canvas text is allowed to be unreadable, because
+   it is a button you cannot press. tools/qa.mjs's contrast probe skips
+   [disabled] for exactly this reason. */
 .dock__btn[disabled] { opacity: .32; cursor: default; }
 .dock__btn--bell { color: var(--brass); }
 .dock__btn--bell:hover .dock__bell { animation: ring .5s var(--ease); }
@@ -299,7 +374,17 @@ body.is-close .hint { opacity: 0; }
   font-size: .72rem;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.3);
+  color: var(--ink-dim);
+  padding: .5rem .95rem;
+  /* Not 999px: at this element's own height a full pill's corner radius
+     (~half the height) sits close enough to the padding that a probe
+     sampling this box's literal rectangle could clip the rounded-off
+     corner — real for any pill-shaped plate, not just this one, see
+     tools/contrast.mjs's note on why .dock__btn/.tool are probed via
+     their inner span instead. A softer 10px radius keeps the "pooled
+     light" plate but stays well inside the padding on every side. */
+  border-radius: 10px;
+  background: rgba(20,14,9,.90);
   pointer-events: none;
   animation: fadeInOut 6s var(--ease) forwards;
 }

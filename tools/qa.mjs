@@ -38,10 +38,12 @@
 
 import { chromium } from 'playwright';
 import fs from 'node:fs';
+import { runStaticPlateChecks, measureContrast } from './contrast.mjs';
 
 const median = (xs) => { const s = [...xs].sort((a, b) => a - b); return s[s.length >> 1]; };
 const shots = process.argv.includes('--shots');
 const [VPW, VPH] = (process.env.QA_VP || '1280x800').split('x').map(Number);
+const REPO_ROOT = new URL('..', import.meta.url).pathname;
 
 const browser = await chromium.launch(
   process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {});
@@ -61,6 +63,21 @@ const expect = (name, ok, extra = '') => {
   if (!ok) fails++;
   console.log(`${ok ? 'ok  ' : 'FAIL'} ${name}${extra ? ' — ' + extra : ''}`);
 };
+
+/* ── the contrast guarantee, static half (PLAN-CONTRAST.md) ──────────
+   No browser needed for this one — it reads the plate alpha straight out
+   of the CSS source and solves the arithmetic itself (tools/contrast.mjs),
+   so it fails the instant someone lightens a plate below the value the
+   text sitting on it needs, before a single pixel is rendered. */
+{
+  const { rows, fails: staticFails } = runStaticPlateChecks(REPO_ROOT);
+  expect(`contrast (static): ${rows.length} plate/token pairs meet their required alpha`,
+    staticFails.length === 0,
+    staticFails.map((r) => r.reason
+      ? `${r.of} (${r.selector}): ${r.reason}`
+      : `${r.of} (${r.selector}): declared α=${r.declaredAlpha.toFixed(2)} < required α=${r.requiredAlpha.toFixed(3)} for --${r.token} @ ${r.need}:1`,
+    ).join('\n     '));
+}
 
 /* ── open the shop ──────────────────────────────────────────────
    The door is pushed open BEFORE anything is settled on, and that
@@ -97,6 +114,23 @@ async function goRoom(id) {
   const ms = await settle(want);
   await page.waitForFunction((f) => (window.__stage?.frame ?? 0) > f, before, { timeout: 45000 }).catch(() => {});
   return ms;
+}
+/* main.js fades .placard/.hint out over .4s on body.is-close, driven by a
+   CSS transition that settle()'s camera-tween check knows nothing about —
+   a room whose LANDING pose is a shelf/table pose (or the contrast probe's
+   own second-pose check, below) can settle() clean while that fade is
+   still mid-flight. Caught by the contrast probe itself the first time
+   through: a placard at, say, opacity .3 dilutes its own plate against
+   the canvas exactly like the door sign's group-opacity bug did, so
+   measuring mid-fade produced real-looking failures that were actually
+   this, not the CSS. Real condition, not a fixed wait: whatever
+   `is-close` currently says, wait for the placard to actually be there. */
+async function settlePlacardFade() {
+  await page.waitForFunction(() => {
+    const want = document.body.classList.contains('is-close') ? '0' : '1';
+    const el = document.getElementById('placard');
+    return !el || getComputedStyle(el).opacity === want;
+  }, null, { timeout: 5000 }).catch(() => {});
 }
 await settle('front');
 
@@ -210,6 +244,25 @@ if (data.emptyRooms.length) console.log('     rooms with no shelf (ways through)
    room.js's dispose() fifty times over, which nothing before this phase
    ever ran even once. The fresh-page-per-room sweep is a separate
    thing and lives in the handoff's verification notes. */
+/* ── the contrast guarantee, rendered half (PLAN-CONTRAST.md) ────────
+   The static check above proves the arithmetic; this proves it against
+   a real render. Folded into the room walk below rather than a second
+   pass over all 50 rooms — the room is already settled at its landing
+   pose by the time `info` is read, so this only pays for the SECOND
+   pose per room, not a second navigation+settle for the first one too.
+   Two poses per room, not one: "the backdrop changes when the camera
+   moves" is the plan's own diagnosis of the original bug, and a probe
+   that only ever checks the landing pose would not have caught it.
+   tools/contrast.mjs hides every text run in PROBE_SELECTORS, screenshots
+   the true backdrop, and measures the worst pixel any glyph could land
+   on; disabled controls are skipped there (WCAG 1.4.3 exempts them, and
+   see ui.css's .dock__btn[disabled] comment for why a translucent
+   disabled state couldn't clear this bar anyway). Assumes the desktop
+   (>900px-wide) layout, same as the rest of this file's default
+   viewport — a QA_VP narrow enough to hit the mobile breakpoints will
+   under-report here for the same reason the file's own header warns
+   narrow viewports give "worse screenshots" generally. */
+const contrastRows = [];
 const report = [];
 const sigs = new Map();
 for (const id of data.roomIds) {
@@ -273,8 +326,38 @@ for (const id of data.roomIds) {
   });
   report.push({ id, ms, ...info });
   sigs.set(id, info.sig);
+
+  /* contrast, pose 1: wherever this room just landed (see the comment
+     above the loop). Measured, and the shot (if asked for) taken, BEFORE
+     the pose-2 probe below moves the camera — --shots has always meant
+     "this room at its landing pose", and it still does. A table id (the
+     only room whose LANDING pose isn't 'room') needs the fade-settle
+     too, hence before, not after, this first measurement. */
+  await settlePlacardFade();
+  contrastRows.push(...await measureContrast(page, { room: id, pose: 'landing' }));
   if (shots) await page.screenshot({ path: new URL(`rooms/${id}.png`, import.meta.url).pathname });
+
+  /* contrast, pose 2: any OTHER pose this room's rig offers. A table id
+     already lands in `table:${id}`, not `room` — computed the same way
+     goRoom() itself resolves table ids, rather than a second evaluate. */
+  const landing = data.tableIds.includes(id) ? `table:${id}` : 'room';
+  const other = info.poses.find((p) => p !== landing);
+  if (other) {
+    const went = await page.evaluate((nm) => window.__room.rig.goTo(nm), other);
+    if (went) {
+      await settle(info.room); // info.room, not `id`: a table id settles on the room it stands in
+      await settlePlacardFade();
+      contrastRows.push(...await measureContrast(page, { room: id, pose: other }));
+    }
+  }
 }
+
+const contrastFails = contrastRows.filter((r) => !r.pass);
+expect(`contrast (rendered): ${contrastRows.length} text runs across ${data.roomIds.length} room records, 2 poses where available`,
+  contrastFails.length === 0,
+  contrastFails.slice(0, 15).map((r) =>
+    `${r.room}/${r.pose} ${r.sel} "${r.text}" ${r.worst.toFixed(2)}:1 (need ${r.need}) bg=rgb(${r.bg.join(',')})`,
+  ).join('\n     '));
 
 const routed = report.filter((r) => r.room !== r.id && !data.tableIds.includes(r.id));
 expect(`all ${report.length} room records route`, routed.length === 0,
