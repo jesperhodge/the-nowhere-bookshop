@@ -34,65 +34,56 @@ export function makeCamera(aspect = 1) {
   return camera;
 }
 
-/* ── narrow viewports ────────────────────────────────────────
+/* ── narrow viewports — PLAN-MOBILE.md iteration 2 ───────────────
    A perspective camera holds its VERTICAL fov, so a tall, narrow
-   viewport simply sees less of the room's width: at a phone's 0.46
-   aspect the room pose frames x ±216 of its ±840, which is a third of
-   the back case and no doorways at all. The CSS build handled this by
-   cropping in and letting you drag along the shelf (main.js's old
-   fit()/panMax) — a mechanic that dies with the swap, since there is
-   nothing left to pan.
+   viewport simply sees less of the room's WIDTH: at a phone's 0.46
+   aspect the room pose frames x ±216 of its ±840 — a third of the back
+   case, no doorways. Two different fixes were tried and both made the
+   picture worse, not better:
 
-   MIN_ASPECT is 1.0 deliberately, not the 1.787 the 1680x940 world box
-   would suggest: every desktop viewport, and every measurement,
-   screenshot and pose figure recorded by phases 3-9, is at aspect >= 1
-   and must come out BIT-IDENTICAL. Everything below only ever fires in
-   portrait.
+   Phase 10's "Hor+" (widen the vertical fov just enough to hold the
+   aspect-1 HORIZONTAL fov steady) left every doorway off-screen anyway
+   (0/5, M1) and, because the room's own floor/ceiling end at z=0, the
+   extra vertical field it opened up showed empty scene background
+   above the ceiling and below the floor — M4's ~45% black bar.
 
-   poses.js reads camera.fov fresh on every goTo() (its own doc comment
-   says why), so shelf and table poses follow this for free.
+   Iteration 1 widened the vertical fov further still, this time
+   against a big enough horizontal target (the nearest doorway). The
+   ndc test went to 21/21 doors on screen — and the picture went the
+   other way: widening the field makes EVERYTHING smaller, so the
+   doors arrived as slivers at the frame edges, their signs piled into
+   an unreadable heap (doors.js's updateSigns() scales a sign by
+   distance to keep near/far bays apart on screen — cramming three bays'
+   worth of doorway into one narrow frame defeats that), and the room
+   shrank into the upper-middle of the frame with M4 arguably worse than
+   before. The metric went green well before the picture did.
 
-   PLAN-MOBILE.md's M1/M3: the phase-10 "Hor+" answer (widen vertical
-   fov just enough to hold the horizontal fov at its aspect-1 value)
-   left every doorway off-screen — measured, 0 of 5 doors in frustum,
-   ndc.x up to ±1.40. Holding the OLD aspect-1 horizontal fov was never
-   wide enough; the room is 1680 wide and a doorway's sign has to be
-   readable too. So below MIN_ASPECT this now widens for a DIFFERENT,
-   bigger target: keep the NEAREST doorway on screen with a comfortable
-   margin, at ANY room (every room's worst case is the same, because
-   BAY[0] — passages.js's nearest door bay — is always occupied the
-   moment a room has any door at all: doorSlots() fills l1/r1 first).
+   Both fixes shared the same mistake: trying to make the WHOLE room's
+   width fit inside one static portrait frame at all. It does not have
+   to, now that poses.js's dragLook() exists — a reader turns to find a
+   door instead of the room being crammed sideways to show every door
+   at once. So this function no longer adapts fov to aspect AT ALL:
+   fovForAspect() always returns the plain vertical fov stage 3-9
+   calibrated (CAMERA.fovDeg), on every viewport, portrait or not.
 
-   DOOR_WORST_X/Z are BAY[0]'s doorway anchor (doorWorldAnchor('l', 0) —
-   passages.js), duplicated as plain numbers rather than imported: this
-   file is the camera's own home and importing passages.js here would
-   run the two directions of coupling doors.js already warns about
-   (doorwaySpecs() -> passages.js -> stage.js would be a new one). The
-   NEAREST bay is the hardest to fit because it is the closest to the
-   camera along z — depth from the eye is smallest there, so a fixed
-   lateral offset (every doorway sits flush with a side wall, x=±840)
-   subtends the LARGEST angle. Farther bays (BAY[1], BAY[2]) are always
-   easier and never drive this number.
+   What that buys, concretely: the vertical framing — how much floor,
+   how much ceiling, how big the case and the lamp read — is IDENTICAL
+   to desktop's own calibrated picture at every aspect (M4's black bar
+   cannot recur: the vertical fov never changes, so the top/bottom rays
+   never travel past where they already, exactly, graze the room's open
+   front on desktop). A narrow viewport simply sees a narrower SLICE of
+   the room's width, cropped to the centre — smaller ndc.x range, not a
+   smaller or more distorted picture — and dragLook() (a yaw of roughly
+   ±22-24°, clamped by poses.js's own isClear()) is what brings the rest
+   of the width, doors included, into view.
 
-   This does NOT trade back into M4's black-bar problem the way
-   widening naively would: shell.js's floor/ceiling now extend well
-   past the room's own front edge (its own comment explains why), so
-   the extra vertical field this opens up shows more floor and ceiling,
-   not the empty scene background M4 measured. */
-const MIN_ASPECT = 1.0;
-const DEG = Math.PI / 180;
-const DOOR_WORST_X = WORLD.hw;              // 840 — every doorway sits flush with a side wall
-const DOOR_WORST_Z = -420;                  // BAY[0]'s z-centre (passages.js) — the nearest, hardest bay
-const DOOR_NDC_MARGIN = 0.85;               // keep the nearest doorway's anchor within this fraction of
-                                             // |ndc.x|<=1 — comfortable, with room for its sign (doors.js's
-                                             // updateSigns hides a sign past |ndc.x|=1.25, so this is not
-                                             // the tightest bound that would still technically pass)
-
-export function fovForAspect(aspect) {
-  if (!(aspect > 0) || aspect >= MIN_ASPECT) return CAMERA.fovDeg;
-  const doorDepth = CAMERA.eyeZ - DOOR_WORST_Z;
-  const doorHalfTan = DOOR_WORST_X / (doorDepth * aspect * DOOR_NDC_MARGIN);
-  return (2 * Math.atan(doorHalfTan)) / DEG;
+   MIN_ASPECT / the aspect check survives only as a marker of what used
+   to branch here — kept as a comment, not a constant, because there is
+   nothing left for it to gate: desktop (aspect >= 1) was always
+   BIT-IDENTICAL through this function and remains so; portrait now
+   takes the exact same path instead of a different one. */
+export function fovForAspect() {
+  return CAMERA.fovDeg;
 }
 
 /* ── lighting ─────────────────────────────────────────────────
@@ -229,7 +220,8 @@ export function createStage(canvas, { toneMappingExposure = 1.05, onContextLost 
     const h = Math.max(1, (parent ? parent.clientHeight : window.innerHeight));
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
-    camera.fov = fovForAspect(camera.aspect); // see fovForAspect() — portrait only
+    camera.fov = fovForAspect(); // see fovForAspect() — no longer aspect-dependent, kept as a function
+                                  // so a future revisit has one place to change, not a scattered constant
     camera.updateProjectionMatrix();
   }
   window.addEventListener('resize', resize);

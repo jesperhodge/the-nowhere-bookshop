@@ -57,6 +57,22 @@ const DOOR_LIGHT_DISTANCE = 900;
 const DOOR_LIGHT_DECAY = 2;
 const SIGN_STEP = 110;   // world units a deeper bay's sign is raised — see signAnchor
 const HOVER_LIGHT_BOOST = 1.35; // ~= CSS .door3d:hover { filter: brightness(1.22) }, felt right brighter in WebGL
+/* PLAN-MOBILE.md M3/iteration 1's own finding: SIGN_STEP's vertical stagger
+   and updateSigns()'s distance scaling were tuned against a WIDE desktop
+   frame, where two-or-three bays on one wall never crowd the same few
+   hundred screen px. A phone is narrow enough on its own, and poses.js's
+   dragLook() adds a way to turn and stare straight down a wall — the one
+   framing these numbers were never tuned against. SIGN_MAX_W_PX/SIGN_H_PX
+   are a conservative (i.e. never-too-small) estimate of a sign's own
+   rendered box, used two ways below: clamping `left` so a sign can never
+   render half off the edge of the viewport (M3's literal complaint —
+   "…ing 1181", "CR…"), and as the box updateSigns()'s own new overlap pass
+   tests nearest-bay-first, hiding (not mushing together) whichever sign
+   would otherwise land on top of one already accepted — "individually
+   readable or suppressed, never stacked into mush" is the literal bar. */
+const SIGN_MAX_W_PX = 178;
+const SIGN_H_PX = 54;
+const SIGN_EDGE_PAD = 8;
 /* Idle vs. hover border/glow — see buildSignEl()'s comment for why this
    is no longer done with the element's own `opacity`. */
 const SIGN_BORDER_IDLE = 'rgba(255,180,94,.4)';
@@ -169,16 +185,22 @@ function buildSignEl(room) {
     `border:1px solid ${SIGN_BORDER_IDLE}`,
     'border-radius:4px', 'padding:5px 10px 6px',
     'text-align:center', 'white-space:nowrap',
+    // box-sizing:border-box + max-width in lockstep with SIGN_MAX_W_PX:
+    // updateSigns()'s edge-clamp and overlap pass reason about a sign's
+    // box using that constant, so the real rendered box can never exceed
+    // it — a long room name TRUNCATES (below) rather than quietly
+    // invalidating the assumption both fixes are built on.
+    'box-sizing:border-box', `max-width:${SIGN_MAX_W_PX}px`,
     `box-shadow:${SIGN_SHADOW_IDLE}`,
   ].join(';');
 
   const n = document.createElement('div');
   n.textContent = room.name;
-  n.style.cssText = 'font:15px/1.15 Georgia,"Iowan Old Style",serif;color:#f4ead9;';
+  n.style.cssText = 'font:15px/1.15 Georgia,"Iowan Old Style",serif;color:#f4ead9;overflow:hidden;text-overflow:ellipsis;';
 
   const s = document.createElement('div');
   s.textContent = `${room.sub || 'further in'} · ${room.total}`;
-  s.style.cssText = 'font:9px/1.4 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#ffcf94;margin-top:2px;';
+  s.style.cssText = 'font:9px/1.4 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#ffcf94;margin-top:2px;overflow:hidden;text-overflow:ellipsis;';
 
   el.appendChild(n);
   el.appendChild(s);
@@ -307,23 +329,72 @@ export function buildRoomDoors(room, opts = {}) {
      by distance restores the same stepped diagonal the CSS build had,
      and a far doorway's sign reads as further away rather than as a
      duplicate of its neighbour's. Clamped, so the nearest never becomes
-     a billboard and the furthest stays readable. */
+     a billboard and the furthest stays readable.
+
+     Two more passes since PLAN-MOBILE.md iteration 2, both needed only
+     because a phone is narrower than this was tuned against and
+     poses.js's dragLook() now lets a reader turn to stare straight down
+     a wall — the case that crowds every bay into the same few hundred
+     screen px:
+
+       EDGE CLAMP — `left` (and `top`) are clamped so a sign's own box
+       (SIGN_MAX_W_PX/SIGN_H_PX, scaled by the SAME `k` the sign itself
+       renders at) never crosses the viewport edge. M3's literal
+       complaint ("…ing 1181", "CR…") was a sign's ANCHOR sitting inside
+       the visible range while its rendered box, centred on that anchor,
+       hung half off the side.
+
+       OVERLAP SUPPRESSION — nearest bay first (ascending `dist`): once
+       a sign is accepted, any farther sign whose (already-clamped) box
+       would overlap it is hidden outright rather than drawn on top of
+       it. This is the literal bar in PLAN-MOBILE.md's work item 3 —
+       "individually readable or suppressed, never stacked into mush" —
+       and it is cheap: at most 3 bays a side, 6 signs a room. */
   const SIGN_REF_DIST = 1750;   // roughly a near doorway from the room pose
+  const SIGN_OVERLAP_GAP = 6;   // px of breathing room the overlap test insists on beyond a bare touch
   function updateSigns(stage) {
     if (!container) return;
     const rect = stage.renderer.domElement.getBoundingClientRect();
     if (rect.width === 0 || rect.height === 0) return;
+
+    const candidates = [];
     for (const entry of entries) {
       if (!entry.signAnchor) continue;
       const p = entry.signAnchor.clone().project(stage.camera);
       const dist = entry.signAnchor.distanceTo(stage.camera.position);
-      const k = Math.max(0.5, Math.min(1.06, SIGN_REF_DIST / Math.max(1, dist)));
-      entry.signEl.style.left = `${Math.round((p.x * 0.5 + 0.5) * rect.width + rect.left)}px`;
-      entry.signEl.style.top = `${Math.round((1 - (p.y * 0.5 + 0.5)) * rect.height + rect.top)}px`;
-      entry.signEl.style.transform = `translate(-50%,-100%) scale(${k.toFixed(3)})`;
       /* Behind the camera, or off to the side of a shelf pose: hide it
          rather than pin it to an edge. p.z > 1 is beyond the far plane. */
-      entry.signEl.style.visibility = (p.z > 1 || Math.abs(p.x) > 1.25) ? 'hidden' : '';
+      if (p.z > 1 || Math.abs(p.x) > 1.25) { entry.signEl.style.visibility = 'hidden'; continue; }
+      const k = Math.max(0.5, Math.min(1.06, SIGN_REF_DIST / Math.max(1, dist)));
+      const halfW = (SIGN_MAX_W_PX * k) / 2;
+      const halfH = (SIGN_H_PX * k) / 2;
+      const left = THREE.MathUtils.clamp(
+        (p.x * 0.5 + 0.5) * rect.width + rect.left,
+        rect.left + halfW + SIGN_EDGE_PAD, rect.left + rect.width - halfW - SIGN_EDGE_PAD,
+      );
+      // The sign sits ABOVE its anchor (translate(-50%,-100%): `top`
+      // here is the box's BOTTOM edge), so the box spans [top-2*halfH, top].
+      const top = THREE.MathUtils.clamp(
+        (1 - (p.y * 0.5 + 0.5)) * rect.height + rect.top,
+        rect.top + 2 * halfH + SIGN_EDGE_PAD, rect.top + rect.height - SIGN_EDGE_PAD,
+      );
+      candidates.push({ entry, dist, k, left, top, halfW, halfH });
+    }
+
+    candidates.sort((a, b) => a.dist - b.dist);
+    const accepted = [];
+    for (const c of candidates) {
+      const box = { l: c.left - c.halfW, r: c.left + c.halfW, t: c.top - 2 * c.halfH, b: c.top };
+      const overlaps = accepted.some((o) => !(
+        box.r + SIGN_OVERLAP_GAP <= o.l || box.l - SIGN_OVERLAP_GAP >= o.r
+        || box.b + SIGN_OVERLAP_GAP <= o.t || box.t - SIGN_OVERLAP_GAP >= o.b
+      ));
+      if (overlaps) { c.entry.signEl.style.visibility = 'hidden'; continue; }
+      accepted.push(box);
+      c.entry.signEl.style.left = `${Math.round(c.left)}px`;
+      c.entry.signEl.style.top = `${Math.round(c.top)}px`;
+      c.entry.signEl.style.transform = `translate(-50%,-100%) scale(${c.k.toFixed(3)})`;
+      c.entry.signEl.style.visibility = '';
     }
   }
 

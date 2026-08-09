@@ -135,6 +135,18 @@ body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(
   justify-content: space-between;
   gap: 1rem;
   padding: 1.05rem 1.3rem;
+  /* PLAN-MOBILE.md M9: index.html's viewport-fit=cover means the page
+     can draw under the notch/status-bar island and the home indicator —
+     nothing stopped it from doing so until now. The plain declaration
+     above is the fallback for a browser that does not know `env()`;
+     this one is only ever reached when it does, and only ever adds to
+     the layout padding already there (a device with no cutout gets
+     `env(...)` = 0, i.e. bit-identical to the line above). Left/right
+     too, not just top — landscape puts the notch on a SIDE. */
+  padding: calc(1.05rem + env(safe-area-inset-top))
+           calc(1.3rem + env(safe-area-inset-right))
+           1.05rem
+           calc(1.3rem + env(safe-area-inset-left));
   background: linear-gradient(180deg, rgba(10,7,6,.86), rgba(10,7,6,.42) 55%, transparent);
   pointer-events: none;
 }
@@ -255,6 +267,7 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.08); }
 .placard {
   position: absolute;
   left: 50%; top: 4.6rem;
+  top: calc(4.6rem + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
   translate: -50% 0;
   z-index: 25;
   text-align: center;
@@ -279,8 +292,21 @@ a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.08); }
 /* Stepped up to a shelf or over the table: the room's name is a caption
    printed across the books. It goes; the dock and the breadcrumbs stay,
    because those are how you get back out. */
-body.is-close .placard { opacity: 0; transition: opacity .4s var(--ease); }
-body.is-close .hint { opacity: 0; }
+/* `animation: none` matters on mobile specifically: the mobile media
+   query below gives `.placard` its own placardArrival fade-in-hold-fade
+   keyframe, which — while running — owns `opacity` ahead of this rule's
+   plain value (a running CSS animation beats a transition on the same
+   property, per spec). Cancelling the animation outright, not just
+   overriding its end value, is what makes stepping to a shelf hide the
+   placard on the SAME .4s beat it always did, instead of waiting out
+   whatever's left of the arrival fade. */
+body.is-close .placard { animation: none; opacity: 0; transition: opacity .4s var(--ease); }
+/* `animation: none` here too — same reasoning as .placard just above.
+   .hint runs its own fadeInOut for up to 6.2s after arrival (main.js's
+   showHint()); stepping to a shelf/table pose inside that window used
+   to leave the hint's own animation still driving `opacity`, sitting
+   right across the shelf it was just floated over. */
+body.is-close .hint { animation: none; opacity: 0; transition: opacity .4s var(--ease); }
 .placard__kicker {
   font-family: var(--font-ui);
   font-size: .66rem;
@@ -323,6 +349,12 @@ body.is-close .hint { opacity: 0; }
   align-items: flex-end;
   gap: .8rem;
   padding: 1rem 1.3rem 1.15rem;
+  /* PLAN-MOBILE.md M9 — see .topbar's comment for the fallback pattern.
+     The bottom edge is the home-indicator bar; left/right for landscape. */
+  padding: 1rem
+           calc(1.3rem + env(safe-area-inset-right))
+           calc(1.15rem + env(safe-area-inset-bottom))
+           calc(1.3rem + env(safe-area-inset-left));
   background: linear-gradient(0deg, rgba(9,6,5,.92), rgba(9,6,5,.55) 46%, transparent);
   pointer-events: none;
 }
@@ -368,6 +400,7 @@ body.is-close .hint { opacity: 0; }
 .hint {
   position: absolute;
   left: 50%; bottom: 5.4rem;
+  bottom: calc(5.4rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
   translate: -50% 0;
   z-index: 24;
   font-family: var(--font-ui);
@@ -765,7 +798,15 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 
 /* ─── generic overlay ──────────────────────────────────────── */
 
-.overlay { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 4vh 4vw; }
+.overlay {
+  position: fixed; inset: 0; z-index: 70; display: grid; place-items: center;
+  padding: 4vh 4vw;
+  /* PLAN-MOBILE.md M9 — see .topbar's comment for the fallback pattern.
+     All four sides: an overlay is full-screen, so every edge is a
+     candidate for the notch/home-indicator/side cutout. */
+  padding: calc(4vh + env(safe-area-inset-top)) calc(4vw + env(safe-area-inset-right))
+           calc(4vh + env(safe-area-inset-bottom)) calc(4vw + env(safe-area-inset-left));
+}
 .overlay__scrim { position: absolute; inset: 0; background: rgba(6,4,3,.78); backdrop-filter: blur(5px); animation: fade .25s var(--ease); }
 .overlay__body {
   position: relative;
@@ -786,10 +827,34 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .overlay.is-closing .overlay__scrim { animation: fadeOut .2s var(--ease) forwards; }
 @keyframes popOut { to { opacity: 0; transform: translateY(8px) scale(.99) } }
 
+/* invisible to layout on purpose — see index.html's comment on why the
+   id-bearing content node (main.js rewrites its contents wholesale) is
+   a separate element from `.overlay__body` (which now also holds the
+   close button) rather than the same one. */
+.overlay__content { display: contents; }
+
+/* PLAN-MOBILE.md M7: a visible close control on every overlay, styled
+   like the book panel's own `.bd__close` for one consistent language —
+   same circle, same corner, same icon. Scrim-tap and Escape both still
+   work unchanged; this is a THIRD way in, not a replacement. */
+.overlay__close {
+  position: absolute;
+  top: .85rem; right: .9rem;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--ink-faint);
+  background: rgba(255,255,255,.05);
+  transition: color .2s, background .2s, transform .2s;
+  z-index: 5;
+}
+.overlay__close:hover { color: var(--paper); background: rgba(255,255,255,.12); transform: rotate(90deg); }
+.overlay__close svg { width: 16px; height: 16px; }
+
 /* ─── search ───────────────────────────────────────────────── */
 
 .overlay__body--search { max-width: 42rem; align-self: start; margin-top: 8vh; }
-.find { display: flex; align-items: center; gap: .8rem; padding: 1.05rem 1.2rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.find { display: flex; align-items: center; gap: .8rem; padding: 1.05rem 3.8rem 1.05rem 1.2rem; border-bottom: 1px solid rgba(255,255,255,.08); }
 .find__ic { width: 19px; height: 19px; color: var(--brass); flex: 0 0 auto; }
 .find__input {
   flex: 1;
@@ -803,6 +868,15 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .find__kbd {
   font-family: var(--font-ui); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-faint); padding: .2rem .45rem; border: 1px solid rgba(255,255,255,.14); border-radius: 4px;
+  white-space: nowrap; flex: 0 0 auto;
+}
+/* PLAN-MOBILE.md M8: "esc" told a device with no Esc key nothing true.
+   Hidden outright on a coarse pointer rather than swapped for
+   replacement text — see index.html's comment on why (the visible
+   .overlay__close button right beside it already says "tap here", and
+   there is no width left in this row for a caption on top of it). */
+@media (pointer: coarse) {
+  .find__kbd { display: none; }
 }
 .find__results { overflow-y: auto; max-height: 60vh; padding: .5rem; }
 .res {
@@ -831,6 +905,9 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .plan__hd {
   display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
   padding: 1.15rem 1.4rem .9rem;
+  /* clears .overlay__close (M7) — same reservation on every overlay
+     header that puts a title/subtitle row up near that corner. */
+  padding-right: 3.6rem;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .plan__title { font-family: var(--font-display); font-size: 1.35rem; color: var(--paper); margin: 0; }
@@ -891,7 +968,8 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 /* ─── parcel ───────────────────────────────────────────────── */
 
 .overlay__body--parcel { max-width: 44rem; }
-.parcel__hd { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.4rem .9rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+/* padding-right: see .plan__hd's comment — same reservation for .overlay__close. */
+.parcel__hd { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.15rem 3.6rem .9rem 1.4rem; border-bottom: 1px solid rgba(255,255,255,.08); }
 .parcel__body { overflow: auto; padding: .8rem .9rem 1.2rem; }
 .parcel__empty { padding: 3rem 1.5rem; text-align: center; color: var(--ink-faint); font-style: italic; line-height: 1.8; }
 .pitem { display: flex; align-items: center; gap: .9rem; padding: .6rem .7rem; border-radius: 9px; transition: background .15s; }
@@ -912,6 +990,7 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
 .toast {
   position: fixed;
   left: 50%; bottom: 6.2rem;
+  bottom: calc(6.2rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
   translate: -50% 0;
   z-index: 80;
   padding: .7rem 1.15rem;
@@ -938,18 +1017,112 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
    the main way through on a phone */
 .dock__btn--shelf { color: var(--brass); }
 
+/* PLAN-MOBILE.md M-placard (iteration 2): iteration 1's widened fov made
+   this worse (five lines, across the lamp) but did not cause it — a long
+   room name plus a long "N on the shelf · M on the table · K further in"
+   count line was always going to wrap hard in ~340px, the .68rem count
+   line's own .2em letter-spacing being the biggest offender. Three
+   changes, none of which touch the guaranteed plate alpha (still the
+   same rgba(20,14,9,.90) — see the PLAN-CONTRAST.md comment above
+   .placard):
+
+     NARROWER text, not narrower box: the name is clamped to 2 lines
+     with an ellipsis rather than free-wrapping to as many as the room's
+     own name needs, and the kicker/count are forced to one truncated
+     line each — 4 lines is now the hard ceiling (kicker + 2-line name +
+     count), not 5, and every one of the shop's 50 room names/subs
+     measured well inside 2 lines in practice.
+
+     SHORTER on screen: font-size drops again from the pre-existing
+     1.5rem mobile override.
+
+     FADES AFTER ARRIVAL: this is an arrival caption, not a permanent
+     label — placardArrival holds it for ~2.6s (matches the 0.8s
+     entrance PLUS a beat to actually read it) then fades it out over
+     the next second, freeing the lamp underneath for the rest of the
+     visit. paintChrome() already restarts `.placard`'s animation on
+     every room change (it zeroes then clears `style.animation`), so
+     this refires exactly like the old fade-in-only one did — nothing
+     new to wire. The dock/crumbs/tools stay opaque throughout; those
+     are how you get back out and are not part of this caption. */
+@keyframes placardArrival {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  12%  { opacity: 1; transform: translateY(0); }
+  62%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 @media (max-width: 900px), (max-height: 620px) {
-  .placard { top: 3.6rem; }
+  .placard {
+    top: 3.6rem;
+    top: calc(3.6rem + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
+    max-width: 92vw;
+    animation: placardArrival 4.6s var(--ease) both;
+  }
   .placard__line { display: none; }
-  .placard__name { font-size: 1.5rem; }
-  .dock { flex-wrap: wrap; gap: .5rem; padding: .7rem .8rem .9rem; }
+  .placard__kicker,
+  .placard__count {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .placard__name {
+    font-size: 1.3rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .dock {
+    flex-wrap: wrap; gap: .5rem;
+    padding: .7rem .8rem .9rem;
+    /* Safe-area again: this mobile block's own padding shorthand would
+       otherwise CANCEL the env()-aware one on .dock/.topbar above (same
+       selector, later in the file always wins) right on the viewports
+       that need it most. */
+    padding: .7rem calc(.8rem + env(safe-area-inset-right))
+             calc(.9rem + env(safe-area-inset-bottom)) calc(.8rem + env(safe-area-inset-left));
+  }
   .dock__btn { padding: .55rem .8rem; font-size: .78rem; }
-  .topbar { padding: .7rem .8rem; }
+  .topbar {
+    padding: .7rem .8rem;
+    padding: calc(.7rem + env(safe-area-inset-top)) calc(.8rem + env(safe-area-inset-right))
+             .7rem calc(.8rem + env(safe-area-inset-left));
+  }
   .crumbs { font-size: .74rem; max-width: 56vw; }
-  .hint { display: none; }
-  .overlay { padding: 2vh 2vw; }
+  /* PLAN-MOBILE.md M10: this used to be `display: none` on every mobile
+     viewport, i.e. the one place the shop could have said "drag to look
+     around" said nothing at all. main.js's showHint() now writes touch-
+     appropriate copy here (via `(pointer: coarse)`, read once at
+     startup) instead of the desktop "scroll to come closer" line — the
+     element just needed to be allowed to render it. Raised off the
+     bottom a little further than desktop's 5.4rem: the dock wraps to two
+     rows at these widths (immediately above, `flex-wrap: wrap`), and a
+     one-line hint sitting where a two-row dock might be is a hint no
+     one reads before it's covered. */
+  .hint {
+    bottom: 7.4rem;
+    bottom: calc(7.4rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
+    max-width: 88vw; text-align: center;
+  }
+  .overlay {
+    padding: 2vh 2vw;
+    padding: calc(2vh + env(safe-area-inset-top)) calc(2vw + env(safe-area-inset-right))
+             calc(2vh + env(safe-area-inset-bottom)) calc(2vw + env(safe-area-inset-left));
+  }
   .overlay__body--search { margin-top: 3vh; }
   .plan__grid { grid-template-columns: 1fr; }
+  /* .plan__hd/.parcel__hd's `justify-content: space-between` row was
+     never tested this narrow: a long subtitle ("50 books on this
+     shelf, 11 of them the shopkeeper's own") left so little room for
+     the title that it wrapped letter-by-word into three lines. Stack
+     instead of squeeze — the subtitle earns its own line below the
+     title rather than fighting it for the same one. */
+  .plan__hd, .parcel__hd {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3rem;
+  }
 }
 
 /* on a touch screen the spines are small, so make the list route obvious */
@@ -960,4 +1133,55 @@ button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); b
     border-color: transparent;
   }
   .tag { display: none; }
+}
+
+/* ─── touch target floor (PLAN-MOBILE.md M5) ──────────────────────
+   Every one of these measured under 44×44 at some width: tools 37×37,
+   dock buttons ~86-160×38, .bd__close/.overlay__close 34×34,
+   .pitem__x 28×28, .tagchip/.buy__alt/.pitem__buy well under 44 tall.
+   `min-width`/`min-height` clamp the USED size from below regardless of
+   whether a rule elsewhere set an explicit width/height (.bd__close) or
+   sized from padding (.tool) — no per-selector special case needed for
+   which kind of sizing it started from.
+
+   `justify-content: center` accompanies `min-width` wherever a
+   flex/inline-flex box's own content doesn't already fill it (`.tool`,
+   `.dock__btn`, `.tagchip`, `.buy__alt`, `.pitem__buy` were never
+   centred because they were never bigger than their content before);
+   `.bd__close`/`.overlay__close`/`.pitem__x` already use
+   `place-items: center` on a `display: grid` box, which centres
+   regardless of how much the box grows, and need nothing added.
+
+   This is explicitly NOT the a11y mirror (`#mirror button`) — those are
+   the visually-hidden, screen-reader/keyboard-only mirror of the same
+   controls the canvas already renders at whatever size the room's own
+   perspective gives them, and PLAN-MOBILE.md's own verification note
+   says to leave its 20px-by-design box alone. Nothing in this block
+   touches `#mirror`. */
+@media (pointer: coarse) {
+  .tool,
+  .dock__btn,
+  .tagchip,
+  .buy__alt,
+  .pitem__buy,
+  .bd__keep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* 45, not 44 — sub-pixel layout at some viewport widths rounds a
+       flat 44px min down to ~43.9 in getBoundingClientRect(), which is
+       the real thing a touch-target check measures. A px of margin
+       costs nothing and keeps the floor honest. */
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .bd__close,
+  .overlay__close,
+  .pitem__x {
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .bd__navbtn {
+    min-height: 45px;
+  }
 }

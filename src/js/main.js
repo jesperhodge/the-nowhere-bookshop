@@ -33,6 +33,14 @@ const PICKMARK = '<span class="pickmark" title="The shopkeeper\'s pick">'
   + '<span class="vh"> — the shopkeeper\'s pick</span></span>';
 
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* PLAN-MOBILE.md M10: a touch device gets its own arrival hint (drag to
+   look around is the whole point of poses.js's dragLook(), and it is
+   not discoverable by eye) instead of the desktop wording, which talks
+   about scrolling and clicking a device with no wheel and no cursor
+   does not have. Read once at startup, same as REDUCED above — this is
+   "is the input coarse", not "is the window narrow", so it does not
+   need to track resizes. */
+const COARSE = window.matchMedia('(pointer: coarse)').matches;
 
 /* Where "home" is. fromHash() falls back to the same room and boot() tests
    for the same hash; those two are left spelled out on the entry path. */
@@ -936,9 +944,11 @@ function enter() {
 
 function showHint() {
   dom.hint.hidden = false;
-  dom.hint.textContent = state.webgl
-    ? 'Point at a spine to read it · click a shelf to step up to it · scroll to come closer · Esc to step back'
-    : 'The rooms cannot be drawn here — press S for this shelf, / to search, M for the plan';
+  dom.hint.textContent = !state.webgl
+    ? 'The rooms cannot be drawn here — press S for this shelf, / to search, M for the plan'
+    : COARSE
+      ? 'Drag to look around · tap empty floor to step back'
+      : 'Point at a spine to read it · click a shelf to step up to it · scroll to come closer · Esc to step back';
   setTimeout(() => { dom.hint.hidden = true; }, 6200);
 }
 

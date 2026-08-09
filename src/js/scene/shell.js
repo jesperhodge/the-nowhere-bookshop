@@ -26,46 +26,39 @@ import { wallTexture } from './textures.js';
 const DEFAULT_THICKNESS = 28;
 const TEX_SCALE = 0.75; // canvas px per world unit
 
-/* ── the floor/ceiling "porch" (PLAN-MOBILE.md M4) ────────────────
-   stage.js's fovForAspect() now widens the vertical fov on a portrait
-   viewport far past the point where the desktop framing's top/bottom
-   frustum edges exactly graze the room's own open front (z=0) — that
-   graze is precisely calibrated (CAMERA.fovDeg = 2*atan(WORLD.hh/1500))
-   to line up with nothing beyond it, which is what made the OLD Hor+
-   widening show empty scene background above the ceiling and below
-   the floor once it went past that calibration: M4's ~45% black bar.
+/* ── the floor/ceiling "porch" (PLAN-MOBILE.md M4, M2) ─────────────
+   Iteration 1 widened stage.js's vertical fov on portrait viewports far
+   past the point where the desktop framing's top/bottom frustum edges
+   exactly graze the room's own open front (z=0) — that graze is
+   precisely calibrated (CAMERA.fovDeg = 2*atan(WORLD.hh/1500)) to line
+   up with nothing beyond it, which is what made the widening show empty
+   scene background above the ceiling and below the floor: M4's ~45%
+   black bar. This extension was iteration 1's fix for that: stop
+   telling the floor and ceiling the room ends at z=0, and give a
+   widened top/bottom ray something to land on instead of the void.
 
-   The fix is not to claw back the fov (that reopens M1 — the doorway
-   never fits at the old, narrower angle) and not to fight the geometry
-   with a wider FOV/closer camera trade-off (every combination tried by
-   hand still leaves 40-60% void at a phone's aspect — the room's own
-   proportions and BAY[0]'s distance make that unavoidable for a
-   symmetric camera looking straight down the room). It is to stop
-   telling the floor and ceiling that the room ends at z=0. They are
-   the two surfaces a widened top/bottom ray can still be aimed at
-   instead of at nothing: extend them forward, PAST the open front,
-   far enough that the widest fov this shop uses (see stage.js's
-   DOOR_NDC_MARGIN/DOOR_WORST_Z) still lands a ray on wood or floorboards
-   rather than off the edge of the world.
+   Iteration 2 removes the widening itself (poses.js's dragLook() is the
+   real fix for M1/M2 — turn to find a door, don't cram the whole room
+   into one frame — see stage.js's fovForAspect() for the full account)
+   so THAT reason for this extension is gone: the room pose's own fov is
+   back to being bit-identical across every aspect, portrait included,
+   and its top/bottom rays graze the room exactly as they always did.
 
-   Provably invisible on desktop: aspect>=1 never widens past the exact
-   graze angle (fovForAspect's own early return), so no desktop ray's
-   mathematical crossing of y=940 or y=0 ever happens at z>0 in the
-   first place — this extension only exists for rays that don't occur
-   there. Bit-identical desktop rendering is unaffected; nothing here
-   is gated on aspect because nothing needs to be.
+   The extension stays anyway, as a safety margin for a DIFFERENT small
+   widening this same iteration adds: dragLook()'s pitch (±11°, see its
+   own doc comment) tilts the whole frustum, fov unchanged — including
+   its top/bottom EDGES, which sat exactly on the graze at pitch 0 and
+   so are the first things to swing past the ceiling/floor into open
+   background at the top of the pitch range. FRONT_PORCH/SIDE_PAD were
+   sized for iteration 1's much larger fov widening, so they cover this
+   much smaller pitch-only case with room to spare — no retuning needed,
+   just a smaller ask of the same margin.
 
-   FRONT_PORCH is sized for the worst case actually in play: the most
-   extreme portrait aspect this project targets (~0.46, PLAN-MOBILE.md's
-   430x932) needs the top/bottom ray to travel to about z=+1080 before
-   it would otherwise cross the ceiling/floor height outside the room;
-   1300 leaves margin without the porch ballooning arbitrarily. SIDE_PAD
-   is a smaller safety margin against the CORNER case (a ray that is
-   wide on both axes at once, briefly outside the un-widened ±840 the
-   walls occupy, while still within the porch's z-range) — the walls
-   themselves are never widened (doorways are the whole point, and a
-   wider wall would just be more wall to walk into), only the floor and
-   ceiling, which have no doorways to preserve. */
+   Provably invisible on desktop: nothing here is gated on aspect, but
+   the room pose's own rays (fov never widened, pitch never applied
+   outside dragLook(), which only ever fires from the `room` pose after
+   a drag) never approach this extension's edges there in the first
+   place. Bit-identical desktop rendering is unaffected. */
 const FRONT_PORCH = 1300; // world units the floor/ceiling extend past z=0, toward the camera
 const SIDE_PAD = 320;     // world units the floor/ceiling extend past x=±840, each side
 

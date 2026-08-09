@@ -162,17 +162,39 @@
 </div>
 
 <!-- ─── Overlays ─────────────────────────────────────────────── -->
+<!-- Every overlay body carries the SAME visible close control now
+     (PLAN-MOBILE.md M7 — no overlay had one before this), styled like
+     the book panel's own `.bd__close` for one consistent language. It
+     sits OUTSIDE the id-bearing content node: main.js's renderMap()/
+     renderShelf()/renderParcel() replace that node's content wholesale
+     (`.innerHTML = …` / `.textContent=''` + appendChild) on every open
+     and every refresh, which would erase a close button living inside
+     it. `display:contents` on the content node (ui.css) makes it
+     invisible to layout — its children flex INTO `.overlay__body`
+     exactly as if the id were still on that element directly, so
+     nothing about the existing scroll/height chain changes; it is
+     still a real, addressable node main.js can keep targeting by id. -->
 <div class="overlay" id="mapOverlay" hidden aria-hidden="true">
   <div class="overlay__scrim" data-close></div>
-  <div class="overlay__body overlay__body--map" role="dialog" aria-modal="true" aria-label="The shop plan" tabindex="-1" id="mapBody"></div>
+  <div class="overlay__body overlay__body--map" role="dialog" aria-modal="true" aria-label="The shop plan" tabindex="-1">
+    <button class="overlay__close" type="button" data-close aria-label="Close the plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div id="mapBody" class="overlay__content"></div>
+  </div>
 </div>
 
 <div class="overlay" id="searchOverlay" hidden aria-hidden="true">
   <div class="overlay__scrim" data-close></div>
   <div class="overlay__body overlay__body--search" role="dialog" aria-modal="true" aria-label="Search the shop" tabindex="-1">
+    <button class="overlay__close" type="button" data-close aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <div class="find">
       <svg viewBox="0 0 24 24" class="find__ic" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
       <input id="findInput" class="find__input" type="search" placeholder="A title, an author, a mood — “grief”, “islands”, “Calvino”…" autocomplete="off" spellcheck="false" aria-label="Search books and rooms">
+      <!-- PLAN-MOBILE.md M8: this told a device with no Esc key to
+           press one. ui.css hides it under (pointer: coarse) instead of
+           swapping in replacement text — the visible close button next
+           to it (.overlay__close) already says "tap here" without
+           needing a caption, and there is no room in this row for one
+           at a phone's width without it colliding with that button. -->
       <kbd class="find__kbd">esc</kbd>
     </div>
     <div class="find__results" id="findResults" role="listbox" aria-label="Results"></div>
@@ -181,12 +203,18 @@
 
 <div class="overlay" id="shelfOverlay" hidden aria-hidden="true">
   <div class="overlay__scrim" data-close></div>
-  <div class="overlay__body overlay__body--parcel" role="dialog" aria-modal="true" aria-label="Everything on this shelf" tabindex="-1" id="shelfBody"></div>
+  <div class="overlay__body overlay__body--parcel" role="dialog" aria-modal="true" aria-label="Everything on this shelf" tabindex="-1">
+    <button class="overlay__close" type="button" data-close aria-label="Close the shelf list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div id="shelfBody" class="overlay__content"></div>
+  </div>
 </div>
 
 <div class="overlay" id="parcelOverlay" hidden aria-hidden="true">
   <div class="overlay__scrim" data-close></div>
-  <div class="overlay__body overlay__body--parcel" role="dialog" aria-modal="true" aria-label="Your parcel" tabindex="-1" id="parcelBody"></div>
+  <div class="overlay__body overlay__body--parcel" role="dialog" aria-modal="true" aria-label="Your parcel" tabindex="-1">
+    <button class="overlay__close" type="button" data-close aria-label="Close your parcel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div id="parcelBody" class="overlay__content"></div>
+  </div>
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

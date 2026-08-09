@@ -23,10 +23,18 @@
 
    Poses are TRANSIENT UI state, not navigation: no route change, no
    `history` entry (§4.3 says so explicitly) — the room stays mounted;
-   goTo()/back()/dolly() only ever move camera.position/lookAt. The
-   stack goTo() pushes onto (see STACK / ESCAPE below) is deliberately
-   NOT `history` — it exists purely so Escape can undo a pose change,
-   capped and forgotten, never a browser-visible thing.
+   goTo()/back()/dolly()/dragLook() only ever move camera.position/
+   lookAt. The stack goTo() pushes onto (see STACK / ESCAPE below) is
+   deliberately NOT `history` — it exists purely so Escape can undo a
+   pose change, capped and forgotten, never a browser-visible thing.
+
+   dragLook() (PLAN-MOBILE.md M2) is a fourth input alongside dolly()'s
+   wheel/pinch — one-finger drag / left-mouse-drag turning the view
+   while settled in `room` — but it is not a fourth animation path: it
+   still only ever writes the SAME from/to/t/mode state below, applied
+   through the SAME applyPose(). See its own doc comment, next to
+   dolly(), for the isClear()-based clamp that keeps it from turning
+   the view at a point outside the room or into a wall.
 
    CAMERA MODEL — one lerp, two drivers, not two animation systems.
    Every frame (goTo()/back(), driven by stage.onFrame()) or every
@@ -165,6 +173,21 @@ const LIFTS = [0, 130, 240, 345];
    viewer's side), so only its far edge needs the margin. */
 const ROOM_MARGIN = 40;
 
+/* dragLook()'s own tuning — see that function's doc comment for the
+   clamp itself (isClear(), not these). Sensitivity picked by feel: a
+   ~160px drag corner-to-corner of a phone screen turns roughly a
+   quarter-turn before isClear() would have stopped it anyway; pitch is
+   deliberately the smaller of the two ("a small clamped pitch" per
+   PLAN-MOBILE.md, yaw is the axis that finds doors). LOOK_MAX_YAW_RAD
+   is a generous OUTER ceiling, not the real limit — isClear()'s own
+   room-bounds check bites first, at roughly 22-24°, for every room in
+   the shop; this just stops a fast fling from asking for something
+   absurd before that check ever runs. */
+const LOOK_YAW_PER_PX = 0.0022;
+const LOOK_PITCH_PER_PX = 0.0016;
+const LOOK_MAX_YAW_RAD = THREE.MathUtils.degToRad(75);
+const LOOK_MAX_PITCH_RAD = THREE.MathUtils.degToRad(11);
+
 /* Cubic-in-out, the brief's own formula — symmetric, ease(0)=0 and
    ease(1)=1 exactly, which is why goTo()/moveTo() can call
    applyPose(ease(t)) uniformly for both a running tween (0<t<1) and an
@@ -204,8 +227,8 @@ function roomPose() {
  *   `prefers-reduced-motion` media query (tests/harness); when true,
  *   every goTo() jumps instead of tweening.
  * @returns the rig — see this file's own header for the full surface
- *   (`goTo`/`back`/`dolly`/`focusEntry`/`update`/`poseNames`/`poseFor`/
- *   `current`/`tweening`/`t`).
+ *   (`goTo`/`back`/`dolly`/`dragLook`/`focusEntry`/`update`/`poseNames`/
+ *   `poseFor`/`current`/`tweening`/`t`).
  */
 export function createPoseRig(stage, opts = {}) {
   const camera = stage.camera;
@@ -235,6 +258,12 @@ export function createPoseRig(stage, opts = {}) {
   let t = 1;
   let tweenStart = performance.now();
   let tweenDuration = 0;
+  // dragLook()'s own offset from the room pose's canonical gaze — see
+  // that function's doc comment. Reset to 0 by every moveTo(), which is
+  // what makes "any goTo() cancels an in-flight drag" (PLAN-MOBILE.md
+  // M2) true without dragLook() having to watch for one itself.
+  let lookYaw = 0;
+  let lookPitch = 0;
   let liveTarget = to.target.clone();
   const stack = [];
 
@@ -514,6 +543,15 @@ export function createPoseRig(stage, opts = {}) {
     to = pose;
     toName = name;
     mode = 'tween';
+    // "Any goTo() cancels an in-flight drag" (PLAN-MOBILE.md M2): a
+    // dragLook() offset is only meaningful relative to the room pose
+    // it was taken from, so the instant the rig is asked to go ANYWHERE
+    // — including back to 'room' itself, e.g. Escape from a shelf — the
+    // next look starts fresh from that pose's own canonical gaze rather
+    // than carrying a stale turn into wherever `from` (dragLook's own
+    // last camera state, read by currentState() above) just was.
+    lookYaw = 0;
+    lookPitch = 0;
     tweenStart = performance.now();
     // Reduced motion (or an explicit `instant` request, e.g. the
     // harness's `?pose=` startup param) jumps SYNCHRONOUSLY, right
@@ -638,6 +676,98 @@ export function createPoseRig(stage, opts = {}) {
     applyPose(t); // e = t directly: no easing while actively dollying
   }
 
+  /* ── drag to look (PLAN-MOBILE.md M2) ────────────────────────────
+     One-finger drag / left-mouse-drag while settled in the `room`
+     pose turns the view — the fix M1 actually needed: iteration 1
+     widened the fov so every doorway sat inside the frustum AT REST,
+     which shrank the room and piled the door signs into mush instead.
+     The room does not have to fit in one frame if the reader can turn
+     to find what is not in it.
+
+     The camera's POSITION never moves here — only the LOOK TARGET
+     orbits it, by yaw (dxPx) and a small pitch (dyPx), starting from
+     roomPose()'s own canonical gaze direction (`dir0`, recomputed
+     fresh each call the same way roomPose() itself is, never cached,
+     so a resize picked up by CAMERA/WORLD is picked up here too).
+     Distance is pinch's (dolly()'s) job, not this one's.
+
+     CLAMPED BY isClear() — the SAME clearance model shelfPoseFor()
+     uses for a camera POSITION, repurposed here for a look TARGET:
+     passing the candidate target as both `pos` and `target` turns its
+     "stand on free floor, inside the room" bounds check into "aim
+     somewhere inside the room", and its obstacle check into "don't
+     aim dead-centre into a case or table". This is not a coincidence
+     of convenience, it is why the room's own numbers make the clamp
+     land in the right place at all: the eye sits OUTSIDE the room
+     (CAMERA.eyeZ=1500, the room's open front is z=0), so `dir0` is a
+     long vector, and swinging a long vector by yaw moves its tip a
+     lot for a small angle — isClear()'s room-bounds check (x within
+     ±WORLD.hw of margin) stops the swing right as the target reaches
+     the SIDE WALLS, which is exactly where every doorway lives
+     (doorWorldAnchor()'s x = ±WORLD.hw). Measured: the resulting yaw
+     ceiling is ~22-24°, comfortably past the ~19-24° any bay's own
+     anchor needs (nearest bay is hardest: it sits closest to the eye
+     along z, so the same lateral offset subtends the largest angle —
+     passages.js's BAY[0], the same fact iteration 1's now-removed
+     door-targeting fovForAspect() was built around).
+
+     Yaw and pitch are tried together first, then yaw alone, then
+     pitch alone — so a drag that would overshoot on one axis still
+     turns on the other rather than freezing dead, the same "give
+     something back" idea shelfPoseFor()'s own yaw/lift search uses.
+
+     Sign convention: this drags the ROOM, not the camera (the
+     Street-View/panorama-viewer convention, not FPS mouselook) —
+     finger/mouse moving right reveals what was to the left of the
+     current view. Desktop and touch share this function; there is
+     only ever one gesture to get right.
+
+     No-op — and no state changed at all — unless the rig is fully
+     settled at `room` (not mid-tween toward it, not mid-dolly): the
+     same `currentName()`/`mode` reasoning dolly() and moveTo() already
+     use, not a third idea of "is anything else driving the camera
+     right now". attachPoseControls() is what actually gates calls to
+     this on the input side (pointer count, tap-vs-drag threshold);
+     this function's own guard is the second, cheaper line of defence.
+     @returns {boolean} true if the look direction actually changed
+     ============================================================ */
+  function dragLook(dxPx, dyPx) {
+    if (currentName() !== 'room' || (mode === 'tween' && t < 1)) return false;
+
+    const base = roomPose();
+    const dir0 = base.target.clone().sub(base.position);
+
+    function targetFor(yaw, pitch) {
+      const yawed = dir0.clone().applyAxisAngle(YAW_AXIS, yaw);
+      // The pitch axis is the CURRENT (yawed) local right, not the
+      // pose-at-rest one — recomputed per call so a large yaw does not
+      // leave pitch tilting around a stale axis and rolling the view.
+      const right = new THREE.Vector3().crossVectors(yawed, YAW_AXIS).normalize();
+      return base.position.clone().add(yawed.applyAxisAngle(right, pitch));
+    }
+    const clear = (p) => isClear(p, null, p, null);
+
+    const wantYaw = THREE.MathUtils.clamp(lookYaw + dxPx * LOOK_YAW_PER_PX, -LOOK_MAX_YAW_RAD, LOOK_MAX_YAW_RAD);
+    const wantPitch = THREE.MathUtils.clamp(lookPitch + dyPx * LOOK_PITCH_PER_PX, -LOOK_MAX_PITCH_RAD, LOOK_MAX_PITCH_RAD);
+
+    let yaw = lookYaw, pitch = lookPitch;
+    if (clear(targetFor(wantYaw, wantPitch))) { yaw = wantYaw; pitch = wantPitch; }
+    else if (clear(targetFor(wantYaw, lookPitch))) { yaw = wantYaw; }
+    else if (clear(targetFor(lookYaw, wantPitch))) { pitch = wantPitch; }
+    if (yaw === lookYaw && pitch === lookPitch) return false;
+
+    lookYaw = yaw;
+    lookPitch = pitch;
+    to = { position: base.position.clone(), target: targetFor(yaw, pitch) };
+    from = to; // nothing to interpolate — applied instantly, like moveTo()'s own jump path
+    toName = 'room';
+    mode = 'tween';
+    t = 1;
+    tweenDuration = 0;
+    applyPose(1);
+    return true;
+  }
+
   /**
    * Fly to whatever `entry` (a book/case/table/door entry, per
    * interact.js's shapes) implies as a pose: `entry.pose` if it has
@@ -688,6 +818,7 @@ export function createPoseRig(stage, opts = {}) {
     goTo,
     back,
     dolly,
+    dragLook,
     focusEntry,
     update,
     poseNames,
@@ -704,6 +835,11 @@ export function createPoseRig(stage, opts = {}) {
 // only one that feels right under a real trackpad/mouse.
 const WHEEL_DOLLY_SCALE = 0.0012;
 const PINCH_DOLLY_SCALE = 0.0016;
+// PLAN-MOBILE.md M2's own number: "below ~8 CSS px of movement, fall
+// through to the existing raycast". Squared so onPointerMove never
+// pays for a sqrt on every move of a gesture that is, overwhelmingly,
+// about to turn out to be a tap.
+const TAP_PX_THRESHOLD_SQ = 8 * 8;
 
 function isEditableTarget(target) {
   if (!target) return false;
@@ -745,14 +881,28 @@ export function attachPoseControls(stage, rig, opts = {}) {
   }
   canvas.addEventListener('wheel', onWheel, { passive: false });
 
-  // Pinch: live pointers tracked by pointerId, on the SAME canvas the
-  // wheel listener uses (both are "gestures over the 3D view"). Only
-  // when exactly two are down does a pair distance exist at all —
-  // three-finger and other combinations simply produce no dolly until
-  // the count returns to two, with no special-casing needed beyond
-  // that null check.
+  // Pinch AND drag-to-look share one pointer/gesture tracker, on the
+  // SAME canvas the wheel listener uses (all three are "gestures over
+  // the 3D view"): pinch is two pointers (dolly()), drag-to-look is one
+  // (rig.dragLook()) — three-finger and other combinations simply drive
+  // neither until the count returns to one or two, no special-casing
+  // needed beyond the size checks below.
   const pointers = new Map();
   let prevDist = null;
+
+  // Tap-vs-drag (M2's other half): a SINGLE pointer's cumulative
+  // straight-line distance from where it went down. `tapId` is which
+  // pointer that measurement belongs to — a second pointer joining
+  // mid-gesture (pinch starting from what looked like a tap) marks
+  // `suppressClick` immediately, since multi-touch was never a tap
+  // candidate to begin with. onClickCapture() (below) is what actually
+  // acts on this; a `click` never fires for most drags on its own (most
+  // browsers already cancel it past some internal movement threshold),
+  // but that is a courtesy this code cannot depend on — interact.js's
+  // attachScenePicking() opens a book on ANY click that hits one, and a
+  // drag that ends over a book is explicitly the case M2 must not
+  // regress.
+  let tapId = null, tapStartX = 0, tapStartY = 0, tapMaxDistSq = 0, suppressClick = false;
 
   function pinchDist() {
     if (pointers.size !== 2) return null;
@@ -760,24 +910,59 @@ export function attachPoseControls(stage, rig, opts = {}) {
     return Math.hypot(a.x - b.x, a.y - b.y);
   }
   function onPointerDown(e) {
+    if (e.button !== 0) return; // left button only — right/middle-drag is not this gesture
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     prevDist = pinchDist();
+    if (pointers.size === 1) {
+      tapId = e.pointerId;
+      tapStartX = e.clientX;
+      tapStartY = e.clientY;
+      tapMaxDistSq = 0;
+      suppressClick = false;
+    } else {
+      suppressClick = true; // a second pointer joined: no longer a tap candidate
+    }
   }
   function onPointerMove(e) {
-    if (!pointers.has(e.pointerId)) return;
+    const prev = pointers.get(e.pointerId);
+    if (!prev) return;
+    const dx = e.clientX - prev.x, dy = e.clientY - prev.y;
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
     const dist = pinchDist();
     if (dist !== null && prevDist !== null) rig.dolly((dist - prevDist) * PINCH_DOLLY_SCALE);
     prevDist = dist;
+
+    if (pointers.size === 1) {
+      rig.dragLook(dx, dy); // no-op outside the room pose — see its own doc comment
+      if (e.pointerId === tapId) {
+        const distSq = (e.clientX - tapStartX) ** 2 + (e.clientY - tapStartY) ** 2;
+        if (distSq > tapMaxDistSq) tapMaxDistSq = distSq;
+        if (tapMaxDistSq > TAP_PX_THRESHOLD_SQ) suppressClick = true;
+      }
+    }
   }
   function onPointerUp(e) {
     pointers.delete(e.pointerId);
     prevDist = pinchDist();
   }
+  // Capture phase, not bubble: interact.js's attachScenePicking() adds
+  // its own bubble-phase `click` listener to this SAME canvas, from
+  // room.js, AFTER this function runs — relying on registration order
+  // between two different modules to win a race is exactly the kind of
+  // thing that quietly breaks the next time either module's wiring
+  // moves. Capture always runs before bubble on the same target
+  // regardless of add order, so `stopPropagation()` here reliably
+  // reaches attachScenePicking()'s onClick before it does — the drag
+  // this click would otherwise open a book for never gets there.
+  function onClickCapture(e) {
+    if (suppressClick) { e.stopPropagation(); e.preventDefault(); }
+  }
   canvas.addEventListener('pointerdown', onPointerDown);
   canvas.addEventListener('pointermove', onPointerMove);
   canvas.addEventListener('pointerup', onPointerUp);
   canvas.addEventListener('pointercancel', onPointerUp);
+  canvas.addEventListener('click', onClickCapture, { capture: true });
 
   // Escape/Arrow keys, on window (not the canvas — the canvas is not
   // normally a focus target, per §4.7's "keyboard and AT use the
@@ -814,6 +999,7 @@ export function attachPoseControls(stage, rig, opts = {}) {
     canvas.removeEventListener('pointermove', onPointerMove);
     canvas.removeEventListener('pointerup', onPointerUp);
     canvas.removeEventListener('pointercancel', onPointerUp);
+    canvas.removeEventListener('click', onClickCapture, { capture: true });
     if (wantKeys) window.removeEventListener('keydown', onKeydown);
   };
 }
