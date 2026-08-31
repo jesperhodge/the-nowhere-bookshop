@@ -19,7 +19,10 @@
     "describe": "NODE_USE_ENV_PROXY=1 node bookshop/tools/describe.mjs run",
     "describe:apply": "node bookshop/tools/describe.mjs apply",
     "describe:report": "node bookshop/tools/describe.mjs report",
-    "describe:selftest": "node bookshop/tools/describe.mjs selftest"
+    "describe:selftest": "node bookshop/tools/describe.mjs selftest",
+    "links": "NODE_USE_ENV_PROXY=1 node bookshop/tools/links.mjs verify",
+    "links:apply": "node bookshop/tools/links.mjs apply",
+    "links:report": "node bookshop/tools/links.mjs report"
   },
   "dependencies": {
     "express": "^5.2.1"

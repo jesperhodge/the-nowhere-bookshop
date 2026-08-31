@@ -50,7 +50,17 @@ export function renderBook(book, ctx) {
     `<a class="buy__alt" href="${v.href}" target="_blank" rel="noopener noreferrer" title="${esc(v.note)}">${esc(v.name)}</a>`
   ).join('');
 
-  const alts = linkRow(altLinks(book));
+  /* altLinks()/sampleLinks() can return fewer entries now that the
+     preview link fails closed and the Cloudflare-blocked vendors are
+     gone (src/js/links.js) — down to an empty array in principle,
+     though openlibrary is always shown so that floor is not actually
+     reachable today. Render the wrapping div only when there is
+     something to put in it, so an empty list never leaves a bare
+     bordered/gapped container sitting in the layout. */
+  const altsBlock = (list) => (list.length ? `<div class="buy__alts">${linkRow(list)}</div>` : '');
+  const sampleBlock = (list) => (list.length ? `<div class="firstpage__links">${linkRow(list)}</div>` : '');
+
+  const alts = altsBlock(altLinks(book));
 
   /* An opening line is only shown when we can say where it came from.
      The `first` field on most books was written from memory rather than
@@ -64,7 +74,7 @@ export function renderBook(book, ctx) {
     : `<p class="firstpage__t">Have a look inside before you commit. Most of these have publisher preview
          pages${book.publicDomain ? ', and this one is out of copyright — the whole text is free' : ', and a good many can be borrowed for nothing'}.</p>`;
 
-  const where = linkRow(sampleLinks(book));
+  const where = sampleBlock(sampleLinks(book));
 
   /* The curator's note is the product — but only 409 of the books on these
      shelves have one, and since phase 9 the rest are harvested from prize
@@ -105,7 +115,7 @@ export function renderBook(book, ctx) {
       <h3 class="bd__h">Before you buy it</h3>
       <div class="firstpage">
         ${quoted}
-        <div class="firstpage__links">${where}</div>
+        ${where}
       </div>
     </section>`;
 
@@ -159,7 +169,7 @@ export function renderBook(book, ctx) {
         ${ICON.cart}<span>Buy it from Bookshop.org</span>
       </a>
       <p class="buy__why">Bookshop.org pays a share of every sale into a pool for independent bookshops. Not Amazon, on purpose.</p>
-      <div class="buy__alts">${alts}</div>
+      ${alts}
     </div>
 
     <div class="bd__nav">
@@ -192,11 +202,30 @@ export function renderBook(book, ctx) {
       const buyMain = el.querySelector('.buy__main');
       if (buyMain) buyMain.href = buyLink(book);
 
+      /* A fresh ISBN can grow these lists from nothing (e.g. a preview
+         link becomes possible) or shrink them to nothing, so the
+         container itself may need to be created or removed here, not
+         just its contents swapped — same empty-container rule as the
+         initial render above. */
+      const newAlts = altLinks(book);
       const altsEl = el.querySelector('.buy__alts');
-      if (altsEl) altsEl.innerHTML = linkRow(altLinks(book));
+      if (!newAlts.length) {
+        altsEl?.remove();
+      } else if (altsEl) {
+        altsEl.innerHTML = linkRow(newAlts);
+      } else {
+        el.querySelector('.buy__why')?.insertAdjacentHTML('afterend', altsBlock(newAlts));
+      }
 
+      const newSample = sampleLinks(book);
       const sampleEl = el.querySelector('.firstpage__links');
-      if (sampleEl) sampleEl.innerHTML = linkRow(sampleLinks(book));
+      if (!newSample.length) {
+        sampleEl?.remove();
+      } else if (sampleEl) {
+        sampleEl.innerHTML = linkRow(newSample);
+      } else {
+        el.querySelector('.firstpage')?.insertAdjacentHTML('beforeend', sampleBlock(newSample));
+      }
     });
   }
 
