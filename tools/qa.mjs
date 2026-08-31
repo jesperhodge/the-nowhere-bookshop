@@ -669,24 +669,68 @@ expect('the shelf overlay lists the table\'s books', chrome.shelfTableHeading &&
 expect('the shelf overlay does not offer the table as a door',
   !chrome.doorNames.some((n) => /Front Table/.test(n)), chrome.doorNames.join(' | '));
 
-/* ── outbound links land on the book, not on a search box ── */
+/* ── outbound links land on the book, not on a search box (PLAN-LINKS.md) ── */
 const links = await page.evaluate(async () => {
   const m = await import('/src/js/links.js');
-  const withIsbn = { id: 'x', title: 'Beloved', author: 'Toni Morrison', isbn: '9781400033416' };
-  const without = { id: 'y', title: 'Beloved', author: 'Toni Morrison' };
+  /* LINKFACTS (src/js/data/linkfacts.js) is baked separately by
+     `npm run links && npm run links:apply`, and is an empty scaffold
+     until that pipeline has run at least once. Rather than depend on
+     real baked data existing — which would make the "gb id present"
+     branch untestable until someone has run that pipeline — inject
+     synthetic records straight into the shared LINKFACTS object.
+     Importing the same specifier twice resolves to the identical
+     cached module namespace, so mutating it here is visible inside
+     links.js's own `LINKFACTS[book.id]` lookups. That makes both
+     branches (a book with a verified preview id, and one without)
+     deterministic regardless of whether tools/links.mjs has ever run,
+     so this test passes the same way before and after the real data
+     is baked. */
+  const lf = await import('/src/js/data/linkfacts.js');
+  const withGb = '__qa_with_gb__', withoutGb = '__qa_without_gb__';
+  lf.LINKFACTS[withGb] = { gb: 'K5IyEAAAQBAJ' };
+  delete lf.LINKFACTS[withoutGb];
+  const bookWithGb = { id: withGb, title: 'Beloved', author: 'Toni Morrison', isbn: '9781400033416' };
+  const bookWithoutGb = { id: withoutGb, title: 'Beloved', author: 'Toni Morrison' };
+
+  /* Sweep every real book too, so the "retired shape/vendor never
+     appears" and "always something to read or borrow" checks are not
+     just about the two synthetic fixtures above. */
+  const allBooks = window.__shop.ALL_BOOKS;
+  const vidUrls = [];
+  const retiredVendorUrls = [];
+  for (const b of allBooks) {
+    for (const v of [...m.altLinks(b), ...m.sampleLinks(b)]) {
+      if (/books\.google\.com\/books\?vid=/.test(v.href)) vidUrls.push(`${b.id}:${v.key}`);
+      if (/hive\.co\.uk|biblio\.com/.test(v.href)) retiredVendorUrls.push(`${b.id}:${v.key}`);
+    }
+  }
+  const noReadOrBorrow = allBooks.filter((b) => m.sampleLinks(b).length === 0).map((b) => b.id);
+
   return {
-    previewIsbn: m.VENDORS.preview.url(withIsbn),
-    previewPlain: m.VENDORS.preview.url(without),
-    borrowIsbn: m.VENDORS.openlibrary.url(withIsbn),
-    buy: m.buyLink(withIsbn),
-    samples: m.sampleLinks(withIsbn).length,
+    previewWithGb: m.VENDORS.preview.url(bookWithGb),
+    previewWithoutGb: m.VENDORS.preview.url(bookWithoutGb),
+    sampleKeysWithoutGb: m.sampleLinks(bookWithoutGb).map((v) => v.key),
+    borrowIsbn: m.VENDORS.openlibrary.url(bookWithGb),
+    buy: m.buyLink(bookWithGb),
+    vidUrls,
+    retiredVendorUrls,
+    noReadOrBorrow,
   };
 });
-expect('preview deep-links by ISBN', links.previewIsbn === 'https://books.google.com/books?vid=ISBN9781400033416');
-expect('preview still works without one', links.previewPlain.startsWith('https://www.google.com/search?tbm=bks'));
+expect('preview deep-links to a verified volume id',
+  links.previewWithGb === 'https://www.google.com/books/edition/_/K5IyEAAAQBAJ?gbpv=1', links.previewWithGb);
+expect('no gb id means VENDORS.preview.url offers nothing',
+  !links.previewWithoutGb, String(links.previewWithoutGb));
+expect('no gb id means sampleLinks() omits the preview vendor entirely',
+  !links.sampleKeysWithoutGb.includes('preview'), links.sampleKeysWithoutGb.join(', '));
+expect('no emitted link anywhere uses the retired vid=ISBN shape',
+  links.vidUrls.length === 0, links.vidUrls.slice(0, 5).join(' | '));
+expect('hive.co.uk and biblio.com appear in no emitted link',
+  links.retiredVendorUrls.length === 0, links.retiredVendorUrls.slice(0, 5).join(' | '));
 expect('borrow deep-links by ISBN', links.borrowIsbn === 'https://openlibrary.org/isbn/9781400033416');
 expect('buy link is bookshop.org', /^https:\/\/bookshop\.org\//.test(links.buy));
-expect('every book offers somewhere to read a sample', links.samples >= 3);
+expect('every book still offers at least one place to read or borrow',
+  links.noReadOrBorrow.length === 0, links.noReadOrBorrow.slice(0, 10).join(', '));
 const unsourcedFirst = await page.evaluate(() =>
   window.__shop.ALL_BOOKS.filter((b) => b.first && !b.firstSource).length);
 console.log(`     books with an unsourced opening line shown: 0 (${unsourcedFirst} held back)`);

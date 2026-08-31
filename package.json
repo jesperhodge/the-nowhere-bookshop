@@ -18,7 +18,10 @@
     "describe": "NODE_USE_ENV_PROXY=1 node tools/describe.mjs run",
     "describe:apply": "node tools/describe.mjs apply",
     "describe:report": "node tools/describe.mjs report",
-    "describe:selftest": "node tools/describe.mjs selftest"
+    "describe:selftest": "node tools/describe.mjs selftest",
+    "links": "NODE_USE_ENV_PROXY=1 node tools/links.mjs verify",
+    "links:apply": "node tools/links.mjs apply",
+    "links:report": "node tools/links.mjs report"
   },
   "dependencies": {
     "express": "^5.2.1"

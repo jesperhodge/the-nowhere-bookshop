@@ -174,9 +174,11 @@ sound is filtered noise from an oscillator, off unless you ask for it.
 
 `src/js/links.js` is the only file that knows about shops. The primary link is
 **Bookshop.org**, which pays a share of every sale into a pool for independent
-bookshops. Underneath it are Bookshop.org UK, Hive (which pays a share to a
-high-street shop of your choice), Better World Books and Biblio for secondhand,
-and Open Library so you can borrow it for nothing instead.
+bookshops. Underneath it are Bookshop.org UK and Better World Books for
+secondhand, and Open Library so you can borrow it for nothing instead. Hive
+and Biblio used to be alternates too; both are retired because they sit
+behind Cloudflare, so a link to either could never be verified as actually
+working.
 
 An ISBN is only ever taken from a **specific edition record**, and only when
 that edition is in English — both APIs hand back every ISBN of every printing
@@ -208,8 +210,11 @@ opening line.
 
 The shop will not quote a book's opening lines unless it can say where the
 quotation came from. Instead each book points at somewhere you can read the
-real pages: a publisher preview, a library loan, or — for anything out of
-copyright — the whole text, free.
+real pages: a library loan, or — for anything out of copyright — the whole
+text, free. A publisher preview is offered too, but only where a Google Books
+volume id has actually been verified to show pages — roughly a fifth of the
+shelf — rather than guessed from the ISBN, which used to send readers to a
+page saying "No preview available" far more often than not.
 
 ## Accessibility
 
