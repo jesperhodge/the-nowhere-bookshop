@@ -18,25 +18,34 @@ const PATTERNS = [
 // pick up next, while skipping node_modules/.git and anything gitignored
 // (data/cache/wiki/, data/cache/describe/, etc.) for free.
 export function listScannedFiles(roots = SCAN_ROOTS, cwd = process.cwd()) {
+  // `-z` NUL-terminates entries and unconditionally disables path quoting —
+  // unlike setting core.quotePath=false, it doesn't depend on repo config a
+  // fresh clone wouldn't inherit. Without it, core.quotePath's default of
+  // true (unset in this repo) C-quotes any path with a byte above 0x7F, a
+  // backslash, a double-quote, or a newline, and that literal quoted string
+  // then fails to resolve to a real file on disk (see SG-1).
   const out = execFileSync(
     'git',
-    ['ls-files', '--cached', '--others', '--exclude-standard', '--', ...roots],
+    ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', ...roots],
     { cwd, encoding: 'utf8' }
   );
-  return out.split('\n').filter(Boolean);
+  return out.split('\0').filter(Boolean);
 }
 
 function isBinary(buffer) {
   return buffer.subarray(0, 8000).includes(0);
 }
 
-export function scanFile(relativePath, cwd = process.cwd()) {
+export function scanFile(relativePath, cwd = process.cwd(), onSkip) {
   const hits = [];
   let buffer;
   try {
     buffer = readFileSync(`${cwd}/${relativePath}`);
   } catch (err) {
-    if (err.code === 'ENOENT') return hits; // staged-for-delete, nothing on disk
+    if (err.code === 'ENOENT') {
+      if (onSkip) onSkip(relativePath); // staged-for-delete, nothing on disk
+      return hits;
+    }
     throw err;
   }
   if (isBinary(buffer)) return hits;
@@ -52,13 +61,20 @@ export function scanFile(relativePath, cwd = process.cwd()) {
 }
 
 export function findSecrets(roots = SCAN_ROOTS, cwd = process.cwd()) {
-  return listScannedFiles(roots, cwd).flatMap((path) => scanFile(path, cwd));
+  let skipped = 0;
+  const hits = listScannedFiles(roots, cwd).flatMap((path) =>
+    scanFile(path, cwd, () => {
+      skipped += 1;
+    })
+  );
+  return { hits, skipped };
 }
 
 function main() {
-  const hits = findSecrets();
+  const { hits, skipped } = findSecrets();
   if (hits.length === 0) {
-    console.log(`check-no-secrets: clean (${SCAN_ROOTS.join(', ')}).`);
+    const skipNote = skipped > 0 ? ` (${skipped} listed path(s) skipped: not found on disk)` : '';
+    console.log(`check-no-secrets: clean (${SCAN_ROOTS.join(', ')})${skipNote}.`);
     return 0;
   }
   console.error(`check-no-secrets: found ${hits.length} possible secret(s):`);
