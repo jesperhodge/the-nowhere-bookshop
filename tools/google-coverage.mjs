@@ -464,6 +464,41 @@ function ciHalfWidthPp(matched, measured, population) {
   return 1.96 * se * fpc * 100;
 }
 
+/* ── "is this a matching bug, or a genuine catalogue gap" ───────────────
+   The query is always plain unqualified text (see the header traps), so
+   Google returns SOME fuzzy result for almost any string — `totalItems:
+   0` is rare in every run regardless of real match quality. A miss where
+   every candidate scored 0 on title AND landed outside tiers D/E (i.e.
+   every rejected candidate is a genuine non-match, like "The Gardener's
+   Monthly and Horticultural Advertiser" rejected for "The Guardener's
+   Tale") is a real absence. A miss with a rejected candidate that has
+   SOME title-level similarity (titleScore > 0 — the classifier saw
+   something and still said no) or that landed in tier D/E is the
+   signal worth a human's attention. */
+const MIN_MISSES_FOR_BANNER = 10;
+
+/** One miss record (the shape stored at rec.miss, i.e. { candidates }) →
+    true if any of its (already top-N) candidates looks like a plausible,
+    wrongly-rejected match rather than a clean non-match. Pure. */
+function missLooksPlausible(missRecord) {
+  const candidates = missRecord?.candidates || [];
+  return candidates.some((c) => (c.titleScore ?? 0) > 0 || c.tier === 'D' || c.tier === 'E');
+}
+
+/** Reduces a list of miss records (`rec.miss` shapes) to the statistic the
+    report's banner is based on. Pure, and deliberately takes the FULL miss
+    population, not just the capped sample that gets printed — a banner
+    computed over only the first 20 shown in a document under-samples a
+    full harvest with hundreds of misses. `n < MIN_MISSES_FOR_BANNER` means
+    "don't claim confidence either way", surfaced by the caller rather than
+    folded into `warn` so a reader can see the sample size regardless. */
+export function missBugSignal(missRecords) {
+  const n = missRecords.length;
+  const plausible = missRecords.filter(missLooksPlausible).length;
+  const share = n ? plausible / n : 0;
+  return { n, plausible, share, warn: n >= MIN_MISSES_FOR_BANNER && share >= 0.5 };
+}
+
 async function cmdReport() {
   const store = cache('gbcoverage');
   const all = targets(); // shuffle order — also the population for the CI and the misses sample
@@ -508,14 +543,16 @@ async function cmdReport() {
   const topCountry = Object.entries(countries).sort((a, b) => b[1] - a[1])[0]?.[0] || '(none)';
 
   /* Twenty misses, in shuffle order (deterministic, re-derivable) — the
-     first 20 MEASURED records whose tier is null. */
+     first 20 MEASURED records whose tier is null. This cap is for what
+     gets PRINTED only; the banner's statistic below is computed over
+     every miss, not just these twenty (Finding 5). */
   const misses = [];
   for (const { t, rec } of records) {
     if (rec.tier === null) misses.push({ t, rec });
     if (misses.length >= 20) break;
   }
-  const zeroResultMisses = misses.filter((m) => m.rec.totalItems === 0).length;
-  const zeroResultShare = misses.length ? zeroResultMisses / misses.length : 1;
+  const allMisses = records.filter((x) => x.rec.tier === null).map((x) => x.rec.miss);
+  const missSignal = missBugSignal(allMisses);
 
   /* Run ledger. */
   let runsDoc = { runs: [] };
@@ -605,14 +642,21 @@ async function cmdReport() {
 
   push(`## Twenty misses (first ${misses.length} tier-null records in shuffle order)`);
   push();
-  const withCandidatesShare = 1 - zeroResultShare;
-  if (zeroResultShare < 0.5) {
-    push(`**⚠ MOST MISSES CAME BACK WITH RESULTS WE REJECTED (${(withCandidatesShare * 100).toFixed(0)}% of misses `
-      + 'had candidates). That is a matching bug on our side, not an absence from Google\'s catalogue. '
-      + 'Do not act on the headline number until the rejections below have been read by hand.**');
+  push(`Signal below is computed over all **${missSignal.n}** miss(es) measured so far, not just the `
+    + `${misses.length} shown below.`);
+  push();
+  if (missSignal.n < MIN_MISSES_FOR_BANNER) {
+    push(`*Too few misses (${missSignal.n} < ${MIN_MISSES_FOR_BANNER}) to judge whether misses look like a `
+      + 'matching bug — treat this as anecdotal until more of the shelf is measured.*');
+  } else if (missSignal.warn) {
+    push(`**⚠ ${(missSignal.share * 100).toFixed(0)}% of misses (${missSignal.plausible}/${missSignal.n}) had a `
+      + 'rejected candidate with real title-level similarity (titleScore > 0) or a tier D/E candidate. That '
+      + 'looks like a matching bug on our side, not an absence from Google\'s catalogue. Do not act on the '
+      + 'headline number until the rejections below have been read by hand.**');
   } else {
-    push(`Most misses (${(zeroResultShare * 100).toFixed(0)}%) genuinely returned nothing from Google — the gap `
-      + 'reads as Google\'s, not a matching bug on our side.');
+    push(`Most misses (${((1 - missSignal.share) * 100).toFixed(0)}%, ${missSignal.n - missSignal.plausible}/`
+      + `${missSignal.n}) had no plausible rejected candidate — every candidate scored 0 on title and sat `
+      + 'outside tiers D/E. The gap reads as Google\'s, not a matching bug on our side.');
   }
   push();
   for (const { t, rec } of misses) {
