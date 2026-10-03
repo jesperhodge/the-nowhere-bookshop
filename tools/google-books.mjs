@@ -197,10 +197,18 @@ export function classifyVolume(book, item) {
 
   let tier = null;
   let why;
-  if (authorState === 'mismatch') {
+  if (titleScore === 0) {
+    /* Checked FIRST, regardless of authorState: the author-mismatch
+       message below ("title matched but...") is only accurate when the
+       title actually matched. Author state is still worth distinguishing
+       even when the title didn't, so a reader doing the report's
+       hand-check sees what actually happened rather than a misleading
+       "title matched" on a candidate where it didn't. */
+    why = authorState === 'confirmed'
+      ? 'author surname matched but the title did not'
+      : 'neither title nor author matched';
+  } else if (authorState === 'mismatch') {
     why = 'title matched but the listed author(s) do not include the shop\'s author surname';
-  } else if (titleScore === 0) {
-    why = 'title mismatch';
   } else if (isbnConfirmed && titleScore >= 40) {
     tier = 'A';
     why = 'ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree';

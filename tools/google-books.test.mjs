@@ -65,6 +65,28 @@ test('classifyMatch — genuinely different edition subtitle still matches (Mone
   assert.equal(result.matched, true);
 });
 
+test('classifyVolume — titleScore 0 with a mismatched author must not claim "title matched" (review finding 3)', () => {
+  const book = { title: 'Completely Unrelated Title Words', author: 'Fixture Author' };
+  const item = { volumeInfo: { title: 'Totally Different Book', authors: ['Someone Else'] } };
+  const v = classifyVolume(book, item);
+  assert.equal(v.titleScore, 0);
+  assert.equal(v.authorState, 'mismatch');
+  assert.equal(v.tier, null);
+  assert.ok(!v.why.includes('title matched'), `why "${v.why}" wrongly claims the title matched`);
+  assert.equal(v.why, 'neither title nor author matched');
+});
+
+test('classifyVolume — titleScore 0 with a confirmed author describes it accurately too', () => {
+  const book = { title: 'Completely Unrelated Title Words', author: 'Fixture Author' };
+  const item = { volumeInfo: { title: 'Totally Different Book', authors: ['Fixture Author'] } };
+  const v = classifyVolume(book, item);
+  assert.equal(v.titleScore, 0);
+  assert.equal(v.authorState, 'confirmed');
+  assert.equal(v.tier, null);
+  assert.ok(!v.why.includes('title matched'), `why "${v.why}" wrongly claims the title matched`);
+  assert.equal(v.why, 'author surname matched but the title did not');
+});
+
 test('pickGoogleMatch is unchanged by the move into google-books.mjs', () => {
   const gbFixture = JSON.parse(
     fs.readFileSync(path.join(ROOT, 'tools/fixtures/googlebooks-sample.json'), 'utf8'),
