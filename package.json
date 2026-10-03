@@ -8,6 +8,7 @@
     "start": "node server/index.js",
     "mock": "HARDCOVER_MOCK=1 node server/index.js",
     "qa": "node tools/qa.mjs",
+    "security:selftest": "node tools/security.selftest.mjs",
     "enrich": "NODE_USE_ENV_PROXY=1 node tools/hardcover.mjs enrich",
     "harvest": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs fetch",
     "harvest:enrich": "NODE_USE_ENV_PROXY=1 node tools/harvest.mjs enrich",

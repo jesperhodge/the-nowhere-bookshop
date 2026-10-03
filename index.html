@@ -34,7 +34,19 @@
      (PLAN-ARCH.md "The one dependency"). three.module.js imports
      ./three.core.js by a RELATIVE path the map never sees, which is why
      both files sit together in vendor/three/build/ — the map itself
-     needs only these two entries. -->
+     needs only these two entries.
+
+     vercel.json's CSP (PHI-13 S3) allows this one inline script by a
+     sha256 hash of its exact text rather than 'unsafe-inline' — if you
+     change so much as a space inside this tag, recompute that hash and
+     update it there, or three.js silently stops loading under the CSP.
+     The hash covers EVERYTHING between the tags, including the leading
+     and trailing newline right after `>` and before `</script>` — do
+     not trim those before hashing, the browser doesn't either:
+       node -e "const c=require('crypto');const fs=require('fs');
+       const h=fs.readFileSync('index.html','utf8');
+       const i=h.indexOf('<script type=\"importmap\">')+26, j=h.indexOf('</script>',i);
+       console.log('sha256-'+c.createHash('sha256').update(h.slice(i,j)).digest('base64'))" -->
 <script type="importmap">
 { "imports": {
     "three": "/vendor/three/build/three.module.js",
@@ -220,7 +232,7 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <noscript>
-  <div style="padding:3rem;max-width:40rem;margin:auto;font-family:Georgia,serif;color:#e8dcc8;background:#1a1210">
+  <div class="noscript">
     <h1>The Nowhere Bookshop</h1>
     <p>The shop is built with JavaScript — the rooms, the shelves and the books all live there.
     Please enable it, and mind the step.</p>

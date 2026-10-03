@@ -581,7 +581,7 @@ export function coverSVG(book, opts = {}) {
 
   const grain = detail === 'full'
     ? `<filter id="g${id}"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
-       <rect width="100" height="150" filter="url(#g${id})" opacity=".085" style="mix-blend-mode:overlay"/>`
+       <rect width="100" height="150" filter="url(#g${id})" opacity=".085" class="cv-grain"/>`
     : '';
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150" width="${w}" height="${h}" role="img" aria-label="Cover of ${esc(book.title)} by ${esc(book.author || '')}">

@@ -29,5 +29,12 @@
     "description": "A walking tour of Suffolk that drifts into meditations on history and decay.",
     "contributions": [{ "author": { "name": "W. G. Sebald" } }],
     "editions": [{ "isbn_13": null, "pages": 296, "release_year": 1995, "language": { "language": "English" } }]
+  },
+  {
+    "id": 5, "title": "Security Regression Fixture", "slug": "security-regression-fixture",
+    "pages": "<b>x</b>", "release_year": "<b>x</b>",
+    "description": "A fixture-only entry (PHI-13 S1): upstream pages/year are not guaranteed to be numbers, so this one deliberately isn't, to prove /api/book coerces rather than re-emits.",
+    "contributions": [{ "author": { "name": "Marker Testauthor" } }],
+    "editions": [{ "isbn_13": "9780000000099", "pages": "<b>x</b>", "release_year": "<b>x</b>", "language": { "language": "English" } }]
   }
 ]

@@ -4,6 +4,13 @@ tools/qa-report.json
 tools/suggestions/
 .DS_Store
 
+# Agent worktree tooling (PHI-13 S5). .claude/worktrees/** copies .env into
+# every worktree it creates, so this has to be ignored up front rather than
+# trusted to inherit the credentials block below — a worktree that doesn't
+# carry its own .gitignore copy would otherwise have nothing stopping a
+# commit of that .env.
+.claude/
+
 # Credentials. Order matters here: the negation has to come after the
 # pattern it is carving an exception out of, or .env.example gets ignored
 # too and nobody can see what needs filling in.

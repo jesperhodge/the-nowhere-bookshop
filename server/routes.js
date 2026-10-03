@@ -22,6 +22,18 @@ import { MODE, lookupBook } from './lookup.js';
 
 export { MODE };
 
+/* `pages`/`year` are untyped upstream JSON (server/openlibrary.js,
+   server/hardcover.js) re-emitted here and then fed into an innerHTML
+   sink downstream (src/js/views/book.js). Coerce to a real number or
+   null at this trust boundary rather than passing through whatever
+   upstream sent — null short-circuits first so `Number(null) === 0`
+   never turns a genuine "no data" into a fake 0. */
+const numberOrNull = (x) => {
+  if (x === null || x === undefined) return null;
+  const n = Number(x);
+  return Number.isFinite(n) ? n : null;
+};
+
 export function apiRouter() {
   const router = express.Router();
 
@@ -33,8 +45,8 @@ export function apiRouter() {
     const result = await lookupBook({ title: String(title || ''), author: String(author || ''), isbn: String(isbn || '') });
     res.json({
       isbn13: result.isbn13,
-      pages: result.pages,
-      year: result.year,
+      pages: numberOrNull(result.pages),
+      year: numberOrNull(result.year),
       description: result.description,
       source: result.source,
       via: result.via,
