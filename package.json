@@ -25,7 +25,8 @@
     "links:report": "node bookshop/tools/links.mjs report",
     "check:secrets": "node bookshop/tools/check-no-secrets.mjs",
     "pretest": "npm run check:secrets",
-    "test": "node --test bookshop/tools/*.test.mjs"
+    "test": "node --test bookshop/tools/*.test.mjs",
+    "security:selftest": "node bookshop/tools/security.selftest.mjs"
   },
   "dependencies": {
     "express": "^5.2.1"

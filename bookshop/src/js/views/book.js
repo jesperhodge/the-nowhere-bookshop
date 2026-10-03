@@ -26,18 +26,23 @@ const ICON = {
   pick: '<svg viewBox="0 0 24 24"><path d="M8 3h8v13l-4-3-4 3V3z"/><path d="M5 20h14"/></svg>',
 };
 
+/* `year`/`pages` can arrive from the live-facts fetch below (server/
+   routes.js re-emits untyped upstream JSON) as well as from the baked
+   snapshot, so they get the same esc() treatment as translator/ISBN —
+   this is the innerHTML sink those have to survive (PHI-13 S1).
+   Exported so the regression test can call it directly. */
+export const factLine = (b) => [
+  b.year ? `${esc(b.year)}` : '',
+  b.pages ? `${esc(b.pages)} pp.` : '',
+  b.translator ? `translated by ${esc(b.translator)}` : '',
+  isbn13(b) ? `ISBN ${isbn13(b)}` : '',
+].filter(Boolean).map((f) => `<span>${f}</span>`).join('');
+
 export function renderBook(book, ctx) {
   const s = spineStyle(book);
   const room = ROOM_BY_ID[book.room];
   const trail = pathTo(book.room).map((r) => r.name).join(' › ');
   const kept = ctx.isKept(book.id);
-
-  const factLine = (b) => [
-    b.year ? `${b.year}` : '',
-    b.pages ? `${b.pages} pp.` : '',
-    b.translator ? `translated by ${esc(b.translator)}` : '',
-    isbn13(b) ? `ISBN ${isbn13(b)}` : '',
-  ].filter(Boolean).map((f) => `<span>${f}</span>`).join('');
 
   const facts = factLine(book);
 
@@ -47,7 +52,7 @@ export function renderBook(book, ctx) {
   ].join('');
 
   const linkRow = (list) => list.map((v) =>
-    `<a class="buy__alt" href="${v.href}" target="_blank" rel="noopener noreferrer" title="${esc(v.note)}">${esc(v.name)}</a>`
+    `<a class="buy__alt" href="${esc(v.href)}" target="_blank" rel="noopener noreferrer" title="${esc(v.note)}">${esc(v.name)}</a>`
   ).join('');
 
   /* altLinks()/sampleLinks() can return fewer entries now that the
@@ -124,7 +129,7 @@ export function renderBook(book, ctx) {
   el.innerHTML = `
     <div class="bd__top">
       <button class="bd__close" type="button" data-close aria-label="Put it back">${ICON.close}</button>
-      <div class="hold" id="hold" style="--ht:${Math.max(16, Math.min(52, Math.round((book.pages || 300) / 9)))}px; --sp-bg:${s.bg}; --sp-ink:${s.ink}; --cv-bg2:${s.coverFlat2};">
+      <div class="hold" id="hold">
         <div>
           <div class="hold__obj" id="holdObj">
             <div class="hold__f hold__front">${coverSVG(book, { w: 190, h: 288, detail: 'full' })}</div>
@@ -184,7 +189,16 @@ export function renderBook(book, ctx) {
       </button>
     </div>`;
 
-  wireHold(el.querySelector('#hold'), el.querySelector('#holdObj'));
+  /* These four CSS custom properties used to be a style= attribute on
+     #hold — a strict CSP's style-src can't allow 'unsafe-inline' (S3),
+     so they're set through the CSSOM instead, which CSP never governs. */
+  const hold = el.querySelector('#hold');
+  hold.style.setProperty('--ht', `${Math.max(16, Math.min(52, Math.round((book.pages || 300) / 9)))}px`);
+  hold.style.setProperty('--sp-bg', s.bg);
+  hold.style.setProperty('--sp-ink', s.ink);
+  hold.style.setProperty('--cv-bg2', s.coverFlat2);
+
+  wireHold(hold, el.querySelector('#holdObj'));
 
   /* Client fallback: the baked snapshot (src/js/data/enrich.js) may not
      have this book yet. If we're served by server/index.js, ask it —

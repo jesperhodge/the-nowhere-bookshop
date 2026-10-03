@@ -51,6 +51,12 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* covers.js's coverSVG() grain rect — a class instead of a style=
+   attribute so it doesn't need 'unsafe-inline' in the CSP's style-src
+   (vercel.json, PHI-13 S3). mix-blend-mode has no SVG presentation
+   attribute equivalent, so this can't just move to opacity=/fill=. */
+.cv-grain { mix-blend-mode: overlay; }
+
 /* the floating name-tag that follows the book you're pointing at.
    main.js re-projects it from the camera every frame while it is on —
    the camera moves under it during a pose tween. */

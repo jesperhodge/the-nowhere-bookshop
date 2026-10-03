@@ -198,3 +198,16 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
   }
   .door__rain { display: none; }
 }
+
+/* The <noscript> fallback. An inline style= attribute here would need
+   'unsafe-inline' in the CSP's style-src (vercel.json, PHI-13 S3), so
+   it lives here instead — the external stylesheet always loads
+   regardless of whether script ran. */
+.noscript {
+  padding: 3rem;
+  max-width: 40rem;
+  margin: auto;
+  font-family: Georgia, serif;
+  color: #e8dcc8;
+  background: #1a1210;
+}
