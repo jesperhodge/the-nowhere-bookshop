@@ -65,7 +65,9 @@ Viewability is jurisdiction-dependent; these numbers describe **US**.
 
 ## Twenty misses (first 3 tier-null records in shuffle order)
 
-**⚠ MOST MISSES CAME BACK WITH RESULTS WE REJECTED (67% of misses had candidates). That is a matching bug on our side, not an absence from Google's catalogue. Do not act on the headline number until the rejections below have been read by hand.**
+Signal below is computed over all **3** miss(es) measured so far, not just the 3 shown below.
+
+*Too few misses (3 < 10) to judge whether misses look like a matching bug — treat this as anecdotal until more of the shelf is measured.*
 
 - **The Guardener's Tale** / Bruce Boston (isbn 9781933556789)
   query: `The Guardener's Tale Bruce Boston` — totalItems: 337
