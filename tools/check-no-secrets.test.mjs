@@ -81,6 +81,47 @@ test('runs correctly (does not silently no-op) when the checker script lives und
   }
 });
 
+test('exits non-zero on a committed secret whose filename has non-ASCII bytes that git quotes by default (SG-1)', () => {
+  // Regression for SG-1: core.quotePath defaults to true and this repo sets
+  // no override, so `git ls-files` C-quotes any path with a byte above 0x7F
+  // (quotes and octal escapes included). The pre-fix listScannedFiles split
+  // stdout on '\n' and handed that literal quoted string straight to
+  // readFileSync, which ENOENTs because the real file is at the unquoted
+  // path. The ENOENT swallow in scanFile then silently returned [] — a
+  // committed secret in a scanned root went completely unreported. Build a
+  // throwaway repo, stage a non-ASCII-named file under src/ with a fake key,
+  // and confirm the checker actually fails.
+  const tmpRoot = path.join(repoRoot, `__sg1-regression-tmp-${process.pid}__`);
+  try {
+    mkdirSync(path.join(tmpRoot, 'src'), { recursive: true });
+    copyFileSync(checkerPath, path.join(tmpRoot, 'check-no-secrets.mjs'));
+    const plantedPath = path.join(tmpRoot, 'src', 'café.js');
+    writeFileSync(
+      plantedPath,
+      'export const leaked = "AIzaSyFAKEFAKEFAKEFAKEFAKEFAKEFAKEFAKE0";\n'
+    );
+    execFileSync('git', ['init', '--quiet'], { cwd: tmpRoot });
+    execFileSync('git', ['add', '-A'], { cwd: tmpRoot });
+
+    let status = 0;
+    try {
+      execFileSync('node', [path.join(tmpRoot, 'check-no-secrets.mjs')], {
+        cwd: tmpRoot,
+        encoding: 'utf8',
+      });
+    } catch (err) {
+      status = err.status;
+    }
+    assert.notEqual(
+      status,
+      0,
+      'checker must fail on a committed secret even when its filename contains non-ASCII bytes that git quotes by default'
+    );
+  } finally {
+    rmSync(tmpRoot, { recursive: true, force: true });
+  }
+});
+
 const assignmentCases = [
   { name: 'GOOGLE_BOOKS_KEY with a non-empty value', content: 'GOOGLE_BOOKS_KEY=realvalue123\n', expectNonZero: true },
   { name: 'HARDCOVER_TOKEN with a non-empty value', content: 'HARDCOVER_TOKEN=Bearer abc123\n', expectNonZero: true },
