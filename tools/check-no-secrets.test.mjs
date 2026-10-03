@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { writeFileSync, unlinkSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { scanFile } from './check-no-secrets.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(here, '..');
@@ -38,6 +39,10 @@ test('exits non-zero and never echoes the value when a key-shaped string is plan
 test('exits zero against the real tree as it stands today', () => {
   const result = runChecker();
   assert.equal(result.status, 0, `checker should pass on a clean tree, stderr was: ${result.stderr}`);
+});
+
+test('scanFile returns no hits (and does not throw) for a path that does not exist on disk', () => {
+  assert.deepEqual(scanFile('path/that/does/not/exist.js'), []);
 });
 
 const assignmentCases = [
