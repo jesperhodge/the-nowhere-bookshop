@@ -64,9 +64,10 @@ What to know before deploying for real:
   `index.html` ever references it (checked: `grep -r HARDCOVER_TOKEN src/
   index.html` — zero hits), and it must stay server-side per Hardcover's own
   terms.
-- **`GOOGLE_BOOKS_KEY`** is build/tooling-only (`tools/describe.mjs`, run by
-  hand, not by the deployed function) and is not read anywhere `api/`
-  touches. It has no reason to be set on Vercel at all.
+- **`GOOGLE_BOOKS_KEY`** is build/tooling-only (`tools/describe.mjs` and
+  `tools/google-coverage.mjs`, both run by hand, never by the deployed
+  function) and is not read anywhere `api/` touches. It has no reason to be
+  set on Vercel at all.
 - The function's filesystem is **read-only**. A live lookup that resolves
   still tries to update `data/cache/*.json` the way it does locally, for a
   warm-container speedup — `server/cache.js` catches the write failure

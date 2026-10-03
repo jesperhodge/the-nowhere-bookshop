@@ -151,3 +151,59 @@ as `blurb` — it is a fact, not a description.
 `harvest.mjs shelve` regenerates `src/js/data/generated/` from scratch — shelve
 does not know this tool exists and will wipe its fills; `apply` puts them back
 without a single new request.
+
+## google-coverage.mjs — PHI-4's measurement
+
+A measurement, not a build: what fraction of the shop's ~2,500 books (2,444
+distinct title+author keys) can be resolved to a Google Books volume at all.
+Nothing under `src/js/**` is touched — no book is modified, no cover or
+preview link is wired into the site. That is all gated on the number this
+tool produces.
+
+    NODE_USE_ENV_PROXY=1 node tools/google-coverage.mjs plan                     # zero requests
+    NODE_USE_ENV_PROXY=1 node tools/google-coverage.mjs run [--budget N] [--force] [--limit N]
+                         node tools/google-coverage.mjs report                   # zero requests, writes GOOGLE-BOOKS-COVERAGE.md
+
+**The query is plain unqualified text — `${title} ${author}` — never
+`intitle:`/`inauthor:`/`isbn:`.** Those field-restricted operators were
+measured returning `totalItems: 0` for books unambiguously present
+(2026-10-03, valid key, HTTP 200) — this repo's own `data/cache/describe/
+google/` from phase 11 (gitignored, not present in a fresh checkout) proves
+they worked when that run happened. This is a regression in Google's API,
+not a bug either tool introduced, but it means a field-restricted query here
+would silently reproduce it as a false-negative factory. `maxResults` is
+capped at 20 server-side regardless of what is requested, so there is no
+pagination — one request answers the question this tool asks, and a
+per-volume follow-up fetch is never made (the search response already
+carries `accessInfo` and `imageLinks`).
+
+The match rule (`tools/google-books.mjs`'s `classifyMatch`/`classifyVolume`)
+is stricter and tiered (A–E) rather than the plain accept/reject
+`pickGoogleMatch` describe.mjs uses — it needs to say *why*, at what
+confidence, with an upper bound, not just fill in a blurb. ISBN confirmation
+is a strengthener (tier A), not a requirement — a book's shop ISBN is often a
+different edition than Google's top-ranked volume, so requiring it would
+produce an artificially low, wrong number. The Abarat guard (tier E) is the
+same subtitle-corroboration check `describe.mjs`'s Wikipedia path uses,
+ported to the Google path, so a later series volume cannot match the first
+one's record just because `bareTitle()` strips the subtitle off both sides.
+
+Disk-cached under `data/cache/gbcoverage/` (gitignored — regenerable from
+the query alone, ~100 MB), with the derived per-book verdict committed at
+`data/cache/gbcoverage.json` (same footing as `describe.json`) and a
+request ledger at `data/cache/gbcoverage-runs.json` (same footing as
+`harvest-attempts.json`). `run` walks all 2,444 distinct keys in a fixed
+seeded shuffle, not shelf order, so any partial run — interrupted,
+budget-limited, multi-day — is a uniform random sample with a computable
+confidence interval rather than a biased slice correlated with room/hub.
+Resumable the same way as `describe.mjs`/`links.mjs`: a key already measured
+is skipped unless `--force`, and a raw response already on disk is replayed
+rather than re-fetched. Stops cleanly — never mid-write — at the daily
+budget, on a genuine daily-quota error (distinguished from a transient
+429/5xx, which is retried with backoff instead), or after five consecutive
+transport failures. A transport failure is never cached, same rule as
+`links.mjs`.
+
+`report` makes no requests; it only reads the two cache files above and
+(re)writes `GOOGLE-BOOKS-COVERAGE.md` at the repo root, banner-marked as
+generated so its numbers can never drift from what was actually measured.
