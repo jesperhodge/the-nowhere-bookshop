@@ -1,0 +1,1176 @@
+{
+ "a calculated life anne charnock": {
+  "ids": [
+   "a-calculated-life-charnock"
+  ],
+  "title": "A Calculated Life",
+  "author": "Anne Charnock",
+  "isbn": "9781477849514",
+  "q": "A Calculated Life Anne Charnock",
+  "totalItems": 197,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 0,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "VVMsnwEACAAJ",
+   "title": "A Calculated Life",
+   "subtitle": null,
+   "authors": [
+    "Anne Charnock"
+   ],
+   "publishedDate": "2013",
+   "isbn13": "9781477849514",
+   "isbn10": "1477849513",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=VVMsnwEACAAJ&dq=A+Calculated+Life+Anne+Charnock&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=VVMsnwEACAAJ&dq=A+Calculated+Life+Anne+Charnock&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/A_Calculated_Life.html?hl=&id=VVMsnwEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:27.492Z"
+ },
+ "a confusion of princes garth nix": {
+  "ids": [
+   "a-confusion-of-princes-nix"
+  ],
+  "title": "A Confusion of Princes",
+  "author": "Garth Nix",
+  "isbn": "9780007298358",
+  "q": "A Confusion of Princes Garth Nix",
+  "totalItems": 8,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "LxORGkHseioC",
+   "title": "A Confusion of Princes",
+   "subtitle": null,
+   "authors": [
+    "Garth Nix"
+   ],
+   "publishedDate": "2012-05-15",
+   "isbn13": "9780062213563",
+   "isbn10": "0062213563",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=LxORGkHseioC&printsec=frontcover&dq=A+Confusion+of+Princes+Garth+Nix&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=LxORGkHseioC&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=LxORGkHseioC",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:08.957Z"
+ },
+ "a fine line gianrico carofiglio": {
+  "ids": [
+   "a-fine-line-carofiglio"
+  ],
+  "title": "A Fine Line",
+  "author": "Gianrico Carofiglio",
+  "isbn": "9781908524621",
+  "q": "A Fine Line Gianrico Carofiglio",
+  "totalItems": 5,
+  "returned": 16,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "FXstjgEACAAJ",
+   "title": "A Fine Line",
+   "subtitle": null,
+   "authors": [
+    "Gianrico Carofiglio"
+   ],
+   "publishedDate": "2016",
+   "isbn13": "9781908524614",
+   "isbn10": "1908524618",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=FXstjgEACAAJ&dq=A+Fine+Line+Gianrico+Carofiglio&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=FXstjgEACAAJ&dq=A+Fine+Line+Gianrico+Carofiglio&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/A_Fine_Line.html?hl=&id=FXstjgEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:36.082Z"
+ },
+ "altered carbon richard k morgan": {
+  "ids": [
+   "altered-carbon-morgan"
+  ],
+  "title": "Altered Carbon",
+  "author": "Richard K. Morgan",
+  "isbn": "9780575073906",
+  "q": "Altered Carbon Richard K. Morgan",
+  "totalItems": 152,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 8,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "2NI8PgAACAAJ",
+   "title": "Altered Carbon",
+   "subtitle": null,
+   "authors": [
+    "Richard K. Morgan"
+   ],
+   "publishedDate": "2002",
+   "isbn13": "9780575073906",
+   "isbn10": "057507390X",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=2NI8PgAACAAJ&dq=Altered+Carbon+Richard+K.+Morgan&hl=&cd=9&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=2NI8PgAACAAJ&dq=Altered+Carbon+Richard+K.+Morgan&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Altered_Carbon.html?hl=&id=2NI8PgAACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:46.328Z"
+ },
+ "apex ramez naam": {
+  "ids": [
+   "apex-naam"
+  ],
+  "title": "Apex",
+  "author": "Ramez Naam",
+  "isbn": "9780857664013",
+  "q": "Apex Ramez Naam",
+  "totalItems": 10,
+  "returned": 18,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "OvjKCQAAQBAJ",
+   "title": "Apex",
+   "subtitle": null,
+   "authors": [
+    "Ramez Naam"
+   ],
+   "publishedDate": "2015-05-07",
+   "isbn13": "9780857664020",
+   "isbn10": "0857664026",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=OvjKCQAAQBAJ&dq=Apex+Ramez+Naam&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=OvjKCQAAQBAJ&dq=Apex+Ramez+Naam&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Apex.html?hl=&id=OvjKCQAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:17.506Z"
+ },
+ "autumn of the phantoms yasmina khadra": {
+  "ids": [
+   "autumn-of-the-phantoms-khadra"
+  ],
+  "title": "Autumn of the Phantoms",
+  "author": "Yasmina Khadra",
+  "isbn": "9781592641437",
+  "q": "Autumn of the Phantoms Yasmina Khadra",
+  "totalItems": 17,
+  "returned": 19,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "AbsdAQAAIAAJ",
+   "title": "Autumn of the Phantoms",
+   "subtitle": null,
+   "authors": [
+    "Yasmina Khadra"
+   ],
+   "publishedDate": "2006",
+   "isbn13": null,
+   "isbn10": null,
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=AbsdAQAAIAAJ&q=Autumn+of+the+Phantoms+Yasmina+Khadra&dq=Autumn+of+the+Phantoms+Yasmina+Khadra&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=AbsdAQAAIAAJ&dq=Autumn+of+the+Phantoms+Yasmina+Khadra&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Autumn_of_the_Phantoms.html?hl=&id=AbsdAQAAIAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:15.981Z"
+ },
+ "borkmann s point hakan nesser": {
+  "ids": [
+   "borkmann-s-point-nesser"
+  ],
+  "title": "Borkmann's Point",
+  "author": "Håkan Nesser",
+  "isbn": "9781400030323",
+  "q": "Borkmann's Point Håkan Nesser",
+  "totalItems": 20,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "YlVHAs-SPa4C",
+   "title": "Borkmann's Point",
+   "subtitle": "An Inspector Van Veeteren Mystery [2]",
+   "authors": [
+    "Hakan Nesser"
+   ],
+   "publishedDate": "2006-03-14",
+   "isbn13": "9780375424274",
+   "isbn10": "037542427X",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=YlVHAs-SPa4C&printsec=frontcover&dq=Borkmann%27s+Point+H%C3%A5kan+Nesser&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=YlVHAs-SPa4C&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=YlVHAs-SPa4C",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:04.117Z"
+ },
+ "bury your dead louise penny": {
+  "ids": [
+   "bury-your-dead",
+   "bury-your-dead-penny"
+  ],
+  "title": "Bury Your Dead",
+  "author": "Louise Penny",
+  "isbn": "9781429957434",
+  "q": "Bury Your Dead Louise Penny",
+  "totalItems": 113,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "_NaVar4pJ6cC",
+   "title": "Bury Your Dead",
+   "subtitle": "A Chief Inspector Gamache Novel",
+   "authors": [
+    "Louise Penny"
+   ],
+   "publishedDate": "2011-08-02",
+   "isbn13": "9781429945523",
+   "isbn10": "1429945524",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=_NaVar4pJ6cC&printsec=frontcover&dq=Bury+Your+Dead+Louise+Penny&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=_NaVar4pJ6cC&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=_NaVar4pJ6cC",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:14.266Z"
+ },
+ "darling girls sally hepworth": {
+  "ids": [
+   "darling-girls-hepworth"
+  ],
+  "title": "Darling Girls",
+  "author": "Sally Hepworth",
+  "isbn": "9781250341877",
+  "q": "Darling Girls Sally Hepworth",
+  "totalItems": 18,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "VOi5EAAAQBAJ",
+   "title": "Darling Girls",
+   "subtitle": "A Novel",
+   "authors": [
+    "Sally Hepworth"
+   ],
+   "publishedDate": "2024-04-23",
+   "isbn13": "9781250284532",
+   "isbn10": "1250284538",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=VOi5EAAAQBAJ&printsec=frontcover&dq=Darling+Girls+Sally+Hepworth&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=VOi5EAAAQBAJ&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=VOi5EAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:02.410Z"
+ },
+ "dispersals on plants borders and belonging jessica j lee": {
+  "ids": [
+   "dispersals-on-plants-borders-and-belonging-lee"
+  ],
+  "title": "Dispersals: On Plants, Borders and Belonging",
+  "author": "Jessica J. Lee",
+  "isbn": "9780241996881",
+  "q": "Dispersals: On Plants, Borders and Belonging Jessica J. Lee",
+  "totalItems": 3,
+  "returned": 5,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "3DfKEAAAQBAJ",
+   "title": "Dispersals",
+   "subtitle": "On Plants, Borders, and Belonging",
+   "authors": [
+    "Jessica J. Lee"
+   ],
+   "publishedDate": "2024-03-12",
+   "isbn13": "9781646221790",
+   "isbn10": "1646221796",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=3DfKEAAAQBAJ&printsec=frontcover&dq=Dispersals:+On+Plants,+Borders+and+Belonging+Jessica+J.+Lee&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=3DfKEAAAQBAJ&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3DfKEAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:10.680Z"
+ },
+ "emily wilde s encyclopaedia of faeries heather fawcett": {
+  "ids": [
+   "emily-wilde-s-encyclopaedia-of-faeries-fawcett",
+   "emily-wilde"
+  ],
+  "title": "Emily Wilde’s Encyclopaedia of Faeries",
+  "author": "Heather Fawcett",
+  "isbn": "9780356519128",
+  "q": "Emily Wilde’s Encyclopaedia of Faeries Heather Fawcett",
+  "totalItems": 4,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "ks_JEAAAQBAJ",
+   "title": "Emily Wilde's Encyclopaedia of Faeries",
+   "subtitle": null,
+   "authors": [
+    "Heather Fawcett"
+   ],
+   "publishedDate": "2023-10-24",
+   "isbn13": "9780593500156",
+   "isbn10": "0593500156",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=ks_JEAAAQBAJ&printsec=frontcover&dq=Emily+Wilde%E2%80%99s+Encyclopaedia+of+Faeries+Heather+Fawcett&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=ks_JEAAAQBAJ&dq=Emily+Wilde%E2%80%99s+Encyclopaedia+of+Faeries+Heather+Fawcett&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Emily_Wilde_s_Encyclopaedia_of_Faeries.html?hl=&id=ks_JEAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:19.115Z"
+ },
+ "fishing in utopia sweden and the future that disappeared andrew brown": {
+  "ids": [
+   "fishing-in-utopia-sweden-and-the-future-that-d-brown"
+  ],
+  "title": "Fishing in Utopia: Sweden and the future that disappeared",
+  "author": "Andrew Brown",
+  "isbn": "9781862079953",
+  "q": "Fishing in Utopia: Sweden and the future that disappeared Andrew Brown",
+  "totalItems": 13,
+  "returned": 14,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "l0mnbp5-J4QC",
+   "title": "Fishing In Utopia",
+   "subtitle": "Sweden And The Future That Disappeared",
+   "authors": [
+    "Andrew Brown"
+   ],
+   "publishedDate": "2011-08-04",
+   "isbn13": "9781847085672",
+   "isbn10": "1847085679",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=l0mnbp5-J4QC&printsec=frontcover&dq=Fishing+in+Utopia:+Sweden+and+the+future+that+disappeared+Andrew+Brown&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=l0mnbp5-J4QC&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=l0mnbp5-J4QC",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:05.784Z"
+ },
+ "midnight feast martina evans": {
+  "ids": [
+   "midnight-feast-evans"
+  ],
+  "title": "Midnight Feast",
+  "author": "Martina Evans",
+  "isbn": null,
+  "q": "Midnight Feast Martina Evans",
+  "totalItems": 26,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "p3ktnQEACAAJ",
+   "title": "Midnight Feast",
+   "subtitle": null,
+   "authors": [
+    "Martina Evans"
+   ],
+   "publishedDate": "2013-05-18",
+   "isbn13": "9781484000540",
+   "isbn10": "1484000544",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": false,
+   "hasThumbnail": false,
+   "previewLink": "http://books.google.com/books?id=p3ktnQEACAAJ&dq=Midnight+Feast+Martina+Evans&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=p3ktnQEACAAJ&dq=Midnight+Feast+Martina+Evans&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Midnight_Feast.html?hl=&id=p3ktnQEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:00.690Z"
+ },
+ "purge sofi oksanen": {
+  "ids": [
+   "purge"
+  ],
+  "title": "Purge",
+  "author": "Sofi Oksanen",
+  "isbn": "9780802197139",
+  "q": "Purge Sofi Oksanen",
+  "totalItems": 19,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 0,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "EcYhKmlqlZ8C",
+   "title": "Purge",
+   "subtitle": "A Novel",
+   "authors": [
+    "Sofi Oksanen"
+   ],
+   "publishedDate": "2010-04-01",
+   "isbn13": "9780802197139",
+   "isbn10": "0802197132",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=EcYhKmlqlZ8C&printsec=frontcover&dq=Purge+Sofi+Oksanen&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=EcYhKmlqlZ8C&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=EcYhKmlqlZ8C",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:39.617Z"
+ },
+ "rebirding restoring britain s wildlife benedict macdonald": {
+  "ids": [
+   "rebirding-restoring-britain-s-wildlife-macdonald"
+  ],
+  "title": "Rebirding: Restoring Britain's Wildlife",
+  "author": "Benedict Macdonald",
+  "isbn": "9781784272197",
+  "q": "Rebirding: Restoring Britain's Wildlife Benedict Macdonald",
+  "totalItems": 5,
+  "returned": 15,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 4,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "u6yVzQEACAAJ",
+   "title": "Rebirding",
+   "subtitle": "Restoring Britain's Wildlife",
+   "authors": [
+    "Benedict Macdonald"
+   ],
+   "publishedDate": "2020-07-27",
+   "isbn13": "9781784272197",
+   "isbn10": "1784272191",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=u6yVzQEACAAJ&dq=Rebirding:+Restoring+Britain%27s+Wildlife+Benedict+Macdonald&hl=&cd=5&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=u6yVzQEACAAJ&dq=Rebirding:+Restoring+Britain%27s+Wildlife+Benedict+Macdonald&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Rebirding.html?hl=&id=u6yVzQEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:32.788Z"
+ },
+ "testosterone rex unmaking the myths of our gendered minds cordelia fine": {
+  "ids": [
+   "testosterone-rex-unmaking-the-myths-of-our-gen-fine"
+  ],
+  "title": "Testosterone Rex: Unmaking the Myths of Our Gendered Minds",
+  "author": "Cordelia Fine",
+  "isbn": "9780393082081",
+  "q": "Testosterone Rex: Unmaking the Myths of Our Gendered Minds Cordelia Fine",
+  "totalItems": 6,
+  "returned": 10,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 1,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "U1GNEAAAQBAJ",
+   "title": "Testosterone Rex",
+   "subtitle": "Myths of Sex, Science, and Society",
+   "authors": [
+    "Cordelia Fine"
+   ],
+   "publishedDate": "2017-01-24",
+   "isbn13": "9780393082081",
+   "isbn10": "0393082083",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=U1GNEAAAQBAJ&dq=Testosterone+Rex:+Unmaking+the+Myths+of+Our+Gendered+Minds+Cordelia+Fine&hl=&cd=2&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=U1GNEAAAQBAJ&dq=Testosterone+Rex:+Unmaking+the+Myths+of+Our+Gendered+Minds+Cordelia+Fine&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Testosterone_Rex.html?hl=&id=U1GNEAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:34.453Z"
+ },
+ "texaco patrick chamoiseau": {
+  "ids": [
+   "texaco-chamoiseau"
+  ],
+  "title": "Texaco",
+  "author": "Patrick Chamoiseau",
+  "isbn": "9780679432357",
+  "q": "Texaco Patrick Chamoiseau",
+  "totalItems": 148,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "-oU3AAAACAAJ",
+   "title": "Texaco",
+   "subtitle": null,
+   "authors": [
+    "Patrick Chamoiseau"
+   ],
+   "publishedDate": "1994",
+   "isbn13": "9788806133450",
+   "isbn10": "8806133454",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=-oU3AAAACAAJ&dq=Texaco+Patrick+Chamoiseau&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=-oU3AAAACAAJ&dq=Texaco+Patrick+Chamoiseau&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Texaco.html?hl=&id=-oU3AAAACAAJ",
+   "language": "it"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:49:57.195Z"
+ },
+ "the argonauts maggie nelson": {
+  "ids": [
+   "the-argonauts"
+  ],
+  "title": "The Argonauts",
+  "author": "Maggie Nelson",
+  "isbn": "9781555977078",
+  "q": "The Argonauts Maggie Nelson",
+  "totalItems": 35,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "F4QkBQAAQBAJ",
+   "title": "The Argonauts",
+   "subtitle": null,
+   "authors": [
+    "Maggie Nelson"
+   ],
+   "publishedDate": "2015-05-05",
+   "isbn13": "9781555973407",
+   "isbn10": "155597340X",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=F4QkBQAAQBAJ&printsec=frontcover&dq=The+Argonauts+Maggie+Nelson&hl=&cd=1&source=gbs_api",
+   "infoLink": "https://play.google.com/store/books/details?id=F4QkBQAAQBAJ&source=gbs_api",
+   "canonicalVolumeLink": "https://play.google.com/store/books/details?id=F4QkBQAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:42.876Z"
+ },
+ "the family doctor debra oswald": {
+  "ids": [
+   "the-family-doctor-oswald"
+  ],
+  "title": "The Family Doctor",
+  "author": "Debra Oswald",
+  "isbn": "9781761067099",
+  "q": "The Family Doctor Debra Oswald",
+  "totalItems": 79,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "cgAMEAAAQBAJ",
+   "title": "The Family Doctor",
+   "subtitle": null,
+   "authors": [
+    "Debra Oswald"
+   ],
+   "publishedDate": "2021-03-02",
+   "isbn13": "9781761061172",
+   "isbn10": "1761061178",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=cgAMEAAAQBAJ&dq=The+Family+Doctor+Debra+Oswald&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=cgAMEAAAQBAJ&dq=The+Family+Doctor+Debra+Oswald&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Family_Doctor.html?hl=&id=cgAMEAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:22.539Z"
+ },
+ "the guardener s tale bruce boston": {
+  "ids": [
+   "the-guardener-s-tale-boston"
+  ],
+  "title": "The Guardener's Tale",
+  "author": "Bruce Boston",
+  "isbn": "9781933556789",
+  "q": "The Guardener's Tale Bruce Boston",
+  "totalItems": 337,
+  "returned": 20,
+  "tier": null,
+  "matched": false,
+  "score": 0,
+  "index": -1,
+  "why": "title mismatch",
+  "volume": null,
+  "miss": {
+   "reason": "title mismatch",
+   "candidates": [
+    {
+     "index": 0,
+     "title": "The Gardener's Monthly and Horticultural Advertiser",
+     "authors": [],
+     "tier": null,
+     "score": 0,
+     "why": "title mismatch"
+    },
+    {
+     "index": 1,
+     "title": "The Gardeners' Chronicle",
+     "authors": [],
+     "tier": null,
+     "score": 0,
+     "why": "title mismatch"
+    },
+    {
+     "index": 2,
+     "title": "Nor-west Farmer for the Stock-raiser, the Gardener, Etc",
+     "authors": [],
+     "tier": null,
+     "score": 0,
+     "why": "title mismatch"
+    }
+   ]
+  },
+  "cachedAt": "2026-10-03T20:49:58.975Z"
+ },
+ "the immeasurable heaven caspar geon": {
+  "ids": [
+   "the-immeasurable-heaven-geon"
+  ],
+  "title": "The Immeasurable Heaven",
+  "author": "Caspar Geon",
+  "isbn": "9781837864737",
+  "q": "The Immeasurable Heaven Caspar Geon",
+  "totalItems": 0,
+  "returned": 0,
+  "tier": null,
+  "matched": false,
+  "score": 0,
+  "index": -1,
+  "why": "no results",
+  "volume": null,
+  "miss": {
+   "reason": "no results",
+   "candidates": []
+  },
+  "cachedAt": "2026-10-03T20:50:07.288Z"
+ },
+ "the midnight promise zane lovitt": {
+  "ids": [
+   "the-midnight-promise-lovitt"
+  ],
+  "title": "The Midnight Promise",
+  "author": "Zane Lovitt",
+  "isbn": "9781609451332",
+  "q": "The Midnight Promise Zane Lovitt",
+  "totalItems": 4,
+  "returned": 9,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "Mj0AngEACAAJ",
+   "title": "The Midnight Promise",
+   "subtitle": "A detective's story in ten cases",
+   "authors": [
+    "Zane Lovitt"
+   ],
+   "publishedDate": "2013-10-23",
+   "isbn13": "9781922147608",
+   "isbn10": "1922147605",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=Mj0AngEACAAJ&dq=The+Midnight+Promise+Zane+Lovitt&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=Mj0AngEACAAJ&dq=The+Midnight+Promise+Zane+Lovitt&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Midnight_Promise.html?hl=&id=Mj0AngEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:48.038Z"
+ },
+ "the owl service alan garner": {
+  "ids": [
+   "owl-service"
+  ],
+  "title": "The Owl Service",
+  "author": "Alan Garner",
+  "isbn": null,
+  "q": "The Owl Service Alan Garner",
+  "totalItems": 162,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "ZOyozwEACAAJ",
+   "title": "The Owl Service",
+   "subtitle": null,
+   "authors": [
+    "Alan Garner"
+   ],
+   "publishedDate": "1969",
+   "isbn13": null,
+   "isbn10": null,
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": false,
+   "hasThumbnail": false,
+   "previewLink": "http://books.google.com/books?id=ZOyozwEACAAJ&dq=The+Owl+Service+Alan+Garner&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=ZOyozwEACAAJ&dq=The+Owl+Service+Alan+Garner&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Owl_Service.html?hl=&id=ZOyozwEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:41.228Z"
+ },
+ "the raven tower ann leckie": {
+  "ids": [
+   "the-raven-tower-leckie"
+  ],
+  "title": "The Raven Tower",
+  "author": "Ann Leckie",
+  "isbn": "9780356507026",
+  "q": "The Raven Tower Ann Leckie",
+  "totalItems": 14,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "IQ8xyQEACAAJ",
+   "title": "The Raven Tower",
+   "subtitle": null,
+   "authors": [
+    "Ann Leckie"
+   ],
+   "publishedDate": "2019",
+   "isbn13": "9780316388689",
+   "isbn10": "0316388688",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=IQ8xyQEACAAJ&dq=The+Raven+Tower+Ann+Leckie&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=IQ8xyQEACAAJ&dq=The+Raven+Tower+Ann+Leckie&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Raven_Tower.html?hl=&id=IQ8xyQEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:20.718Z"
+ },
+ "the sermon on the fall of rome jerome ferrari": {
+  "ids": [
+   "the-sermon-on-the-fall-of-rome-ferrari"
+  ],
+  "title": "The Sermon on the Fall of Rome",
+  "author": "Jérôme Ferrari",
+  "isbn": "9780857052902",
+  "q": "The Sermon on the Fall of Rome Jérôme Ferrari",
+  "totalItems": 32,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "LcECCwAAQBAJ",
+   "title": "Sermon on the Fall of Rome",
+   "subtitle": null,
+   "authors": [
+    "Jerome Ferrari"
+   ],
+   "publishedDate": "2016-02-09",
+   "isbn13": "9781623657277",
+   "isbn10": "162365727X",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=LcECCwAAQBAJ&printsec=frontcover&dq=The+Sermon+on+the+Fall+of+Rome+J%C3%A9r%C3%B4me+Ferrari&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=LcECCwAAQBAJ&dq=The+Sermon+on+the+Fall+of+Rome+J%C3%A9r%C3%B4me+Ferrari&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Sermon_on_the_Fall_of_Rome.html?hl=&id=LcECCwAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:12.506Z"
+ },
+ "the seven moons of maali almeida shehan karunatilaka": {
+  "ids": [
+   "seven-moons",
+   "the-seven-moons-of-maali-almeida-karunatilaka"
+  ],
+  "title": "The Seven Moons of Maali Almeida",
+  "author": "Shehan Karunatilaka",
+  "isbn": "9781914502064",
+  "q": "The Seven Moons of Maali Almeida Shehan Karunatilaka",
+  "totalItems": 6,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 0,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "oaxQzwEACAAJ",
+   "title": "The Seven Moons of Maali Almeida",
+   "subtitle": "Longlisted for the 2022 Booker Prize",
+   "authors": [
+    "Shehan Karunatilaka"
+   ],
+   "publishedDate": "2022-11",
+   "isbn13": "9781914502064",
+   "isbn10": "191450206X",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=oaxQzwEACAAJ&dq=The+Seven+Moons+of+Maali+Almeida+Shehan+Karunatilaka&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=oaxQzwEACAAJ&dq=The+Seven+Moons+of+Maali+Almeida+Shehan+Karunatilaka&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Seven_Moons_of_Maali_Almeida.html?hl=&id=oaxQzwEACAAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:29.163Z"
+ },
+ "the tooth fairy graham joyce": {
+  "ids": [
+   "the-tooth-fairy-joyce"
+  ],
+  "title": "The Tooth Fairy",
+  "author": "Graham Joyce",
+  "isbn": "9780312868338",
+  "q": "The Tooth Fairy Graham Joyce",
+  "totalItems": 158,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 0,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "lf-QhJZRY7wC",
+   "title": "The Tooth Fairy",
+   "subtitle": "A Novel",
+   "authors": [
+    "Graham Joyce"
+   ],
+   "publishedDate": "1998-12-15",
+   "isbn13": "9780312868338",
+   "isbn10": "0312868332",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=lf-QhJZRY7wC&printsec=frontcover&dq=The+Tooth+Fairy+Graham+Joyce&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=lf-QhJZRY7wC&dq=The+Tooth+Fairy+Graham+Joyce&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/The_Tooth_Fairy.html?hl=&id=lf-QhJZRY7wC",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:25.818Z"
+ },
+ "the wild iris louise gluck": {
+  "ids": [
+   "the-wild-iris-gluck"
+  ],
+  "title": "The Wild Iris",
+  "author": "Louise Glück",
+  "isbn": "9780880013345",
+  "q": "The Wild Iris Louise Glück",
+  "totalItems": 181,
+  "returned": 20,
+  "tier": "A",
+  "matched": true,
+  "score": 250,
+  "index": 0,
+  "why": "ISBN-13 confirmed verbatim in industryIdentifiers; title heads agree",
+  "volume": {
+   "id": "A_PlTtnmrykC",
+   "title": "Wild Iris",
+   "subtitle": null,
+   "authors": [
+    "Louise Gluck"
+   ],
+   "publishedDate": "1993-11-01",
+   "isbn13": "9780880013345",
+   "isbn10": "0880013346",
+   "viewability": "PARTIAL",
+   "embeddable": true,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=A_PlTtnmrykC&printsec=frontcover&dq=The+Wild+Iris+Louise+Gl%C3%BCck&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=A_PlTtnmrykC&dq=The+Wild+Iris+Louise+Gl%C3%BCck&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Wild_Iris.html?hl=&id=A_PlTtnmrykC",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:37.975Z"
+ },
+ "through the heart richard grant": {
+  "ids": [
+   "through-the-heart-grant"
+  ],
+  "title": "Through the Heart",
+  "author": "Richard Grant",
+  "isbn": null,
+  "q": "Through the Heart Richard Grant",
+  "totalItems": 352,
+  "returned": 20,
+  "tier": null,
+  "matched": false,
+  "score": 0,
+  "index": -1,
+  "why": "title matched but the listed author(s) do not include the shop's author surname",
+  "volume": null,
+  "miss": {
+   "reason": "title matched but the listed author(s) do not include the shop's author surname",
+   "candidates": [
+    {
+     "index": 0,
+     "title": "The International Library of Famous Literature",
+     "authors": [
+      "Richard Garnett"
+     ],
+     "tier": null,
+     "score": 0,
+     "why": "title matched but the listed author(s) do not include the shop's author surname"
+    },
+    {
+     "index": 1,
+     "title": "The International Library of Famous Literature",
+     "authors": [],
+     "tier": null,
+     "score": 0,
+     "why": "title mismatch"
+    },
+    {
+     "index": 2,
+     "title": "The Roxburghe Library of Classics",
+     "authors": [],
+     "tier": null,
+     "score": 0,
+     "why": "title mismatch"
+    }
+   ]
+  },
+  "cachedAt": "2026-10-03T20:50:44.635Z"
+ },
+ "unsettled ground claire fuller": {
+  "ids": [
+   "unsettled-ground-fuller"
+  ],
+  "title": "Unsettled Ground",
+  "author": "Claire Fuller",
+  "isbn": "9780241457467",
+  "q": "Unsettled Ground Claire Fuller",
+  "totalItems": 16,
+  "returned": 20,
+  "tier": "B",
+  "matched": true,
+  "score": 150,
+  "index": 0,
+  "why": "exact bare title; author surname confirmed",
+  "volume": {
+   "id": "YH4DEAAAQBAJ",
+   "title": "Unsettled Ground",
+   "subtitle": null,
+   "authors": [
+    "Claire Fuller"
+   ],
+   "publishedDate": "2021-05-18",
+   "isbn13": "9781487009410",
+   "isbn10": "1487009410",
+   "viewability": "NO_PAGES",
+   "embeddable": false,
+   "country": "US",
+   "publicDomain": false,
+   "hasImageLinks": true,
+   "hasThumbnail": true,
+   "previewLink": "http://books.google.com/books?id=YH4DEAAAQBAJ&dq=Unsettled+Ground+Claire+Fuller&hl=&cd=1&source=gbs_api",
+   "infoLink": "http://books.google.com/books?id=YH4DEAAAQBAJ&dq=Unsettled+Ground+Claire+Fuller&hl=&source=gbs_api",
+   "canonicalVolumeLink": "https://books.google.com/books/about/Unsettled_Ground.html?hl=&id=YH4DEAAAQBAJ",
+   "language": "en"
+  },
+  "miss": null,
+  "cachedAt": "2026-10-03T20:50:24.186Z"
+ }
+}

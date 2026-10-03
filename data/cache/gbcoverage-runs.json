@@ -1,0 +1,16 @@
+{
+ "runs": [
+  {
+   "startedAt": "2026-10-03T20:49:55.420Z",
+   "finishedAt": "2026-10-03T20:50:48.040Z",
+   "budget": 30,
+   "paceMs": 1100,
+   "requests": 31,
+   "booksMeasured": 30,
+   "servedFromRawCache": 0,
+   "transportFailures": 0,
+   "stoppedBecause": "budget",
+   "remainingAfter": 2414
+  }
+ ]
+}
