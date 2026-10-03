@@ -398,10 +398,260 @@ async function cmdRun() {
   }
 }
 
+/* ── report: zero requests, reads the cache, writes the document ──────
+   The numbers can never drift from the cache (they ARE the cache, read
+   back), and the match-rule prose can never drift from the implemented
+   rule (it is a template literal in this file, not hand-copied prose). ── */
+
+const DOC_PATH = path.join(ROOT, 'GOOGLE-BOOKS-COVERAGE.md');
+
+const MATCH_RULE_PROSE = `**A match is:** one unqualified text query of \`"<title> <author>"\` against the Google Books Volumes API, returning up to 20 volumes, scored client-side. A volume matches when, after normalisation (lowercased, accents and punctuation stripped, leading article and subtitle removed), **either** the shop's checksum-valid ISBN-13 appears verbatim in the volume's \`industryIdentifiers\` and the title heads agree (**tier A**), **or** the bare titles are equal and the author's surname appears in the volume's author list (**tier B**), **or** one bare title is a ≥4-character prefix of the other and the author's surname appears in the volume's author list (**tier C**). A volume whose listed authors do not contain the author's surname is rejected outright. Where the shop's title carries a distinctive subtitle that the volume's title and subtitle fail to corroborate, the volume is demoted to **tier E** and is *not* counted as a match — this is the "Abarat" guard from \`REVIEW-PHASE11.md\`, which stops a later series volume matching volume one. A volume with an exact title and **no** authors listed is **tier D** and is also not counted. **The headline match rate counts tiers A + B + C only.** An upper bound including D and E is reported alongside it.`;
+
+const VIEWABILITY_KINDS = ['ALL_PAGES', 'PARTIAL', 'NO_PAGES', 'UNKNOWN'];
+
+function bandFor(pct) {
+  if (pct >= 80) return '≥80% — good';
+  if (pct >= 50) return '50–80% — report and ask';
+  return '<50% — stop, fix matching first';
+}
+
+function pct(n, d) {
+  return d ? ((n / d) * 100) : 0;
+}
+
+/** 95% CI half-width in percentage points, finite-population corrected.
+    N = the shelf's distinct title+author keys (2444), n = measured, p =
+    matched/measured. Used to say how tight a partial run's number is
+    without pretending a prefix of the shuffle is a census. */
+function ciHalfWidthPp(matched, measured, population) {
+  if (!measured) return 0;
+  const p = matched / measured;
+  const se = Math.sqrt((p * (1 - p)) / measured);
+  const fpc = measured < population ? Math.sqrt((population - measured) / (population - 1)) : 1;
+  return 1.96 * se * fpc * 100;
+}
+
+async function cmdReport() {
+  const store = cache('gbcoverage');
+  const all = targets(); // shuffle order — also the population for the CI and the misses sample
+  const population = all.length;
+
+  const records = all
+    .map((t) => ({ t, rec: store.get(t.key) }))
+    .filter((x) => x.rec);
+  const measured = records.length;
+
+  const tierCounts = { A: 0, B: 0, C: 0, D: 0, E: 0, miss: 0 };
+  for (const { rec } of records) {
+    if (rec.tier === null) tierCounts.miss++;
+    else tierCounts[rec.tier] = (tierCounts[rec.tier] || 0) + 1;
+  }
+  const matched = tierCounts.A + tierCounts.B + tierCounts.C;
+  const upperBound = measured - tierCounts.miss; // tiers A-E, i.e. "found something"
+
+  const confirmedRate = pct(matched, measured);
+  const upperBoundRate = pct(upperBound, measured);
+  const ci = ciHalfWidthPp(matched, measured, population);
+
+  /* accessInfo.viewability / country / embeddable / imageLinks — all over
+     the HEADLINE matched set (tiers A+B+C) only, per the plan. */
+  const matchedRecords = records.filter((x) => x.rec.matched);
+  const viewability = { ALL_PAGES: 0, PARTIAL: 0, NO_PAGES: 0, UNKNOWN: 0, absent: 0 };
+  const countries = {};
+  const embeddable = { true: 0, false: 0, absent: 0 };
+  const imageLinks = { present: 0, absent: 0, thumbnail: 0 };
+  for (const { rec } of matchedRecords) {
+    const v = rec.volume || {};
+    if (v.viewability && VIEWABILITY_KINDS.includes(v.viewability)) viewability[v.viewability]++;
+    else viewability.absent++;
+    const country = v.country || '(unknown)';
+    countries[country] = (countries[country] || 0) + 1;
+    if (v.embeddable === true) embeddable.true++;
+    else if (v.embeddable === false) embeddable.false++;
+    else embeddable.absent++;
+    if (v.hasImageLinks) { imageLinks.present++; if (v.hasThumbnail) imageLinks.thumbnail++; }
+    else imageLinks.absent++;
+  }
+  const topCountry = Object.entries(countries).sort((a, b) => b[1] - a[1])[0]?.[0] || '(none)';
+
+  /* Twenty misses, in shuffle order (deterministic, re-derivable) — the
+     first 20 MEASURED records whose tier is null. */
+  const misses = [];
+  for (const { t, rec } of records) {
+    if (rec.tier === null) misses.push({ t, rec });
+    if (misses.length >= 20) break;
+  }
+  const zeroResultMisses = misses.filter((m) => m.rec.totalItems === 0).length;
+  const zeroResultShare = misses.length ? zeroResultMisses / misses.length : 1;
+
+  /* Run ledger. */
+  let runsDoc = { runs: [] };
+  if (fs.existsSync(RUNS_PATH)) {
+    try { runsDoc = JSON.parse(fs.readFileSync(RUNS_PATH, 'utf8')); } catch { runsDoc = { runs: [] }; }
+  }
+  const runs = Array.isArray(runsDoc.runs) ? runsDoc.runs : [];
+  const totalRequests = runs.reduce((sum, r) => sum + (r.requests || 0), 0);
+
+  const lines = [];
+  const push = (s = '') => lines.push(s);
+
+  push('<!-- GENERATED — rewritten by `node tools/google-coverage.mjs report`. Edits made');
+  push('     directly to this file will be overwritten the next time that command runs.');
+  push('     The numbers below come only from data/cache/gbcoverage.json and');
+  push('     data/cache/gbcoverage-runs.json; the match-rule prose is a template literal');
+  push('     in tools/google-coverage.mjs itself, so neither can drift from what the tool');
+  push('     actually measured. -->');
+  push();
+  push('# Google Books coverage — PHI-4');
+  push();
+
+  push('## Headline');
+  push();
+  if (measured < population) {
+    push(`**This is a ${measured}-book uniform random sample, not a census.**`);
+    push();
+  }
+  push(`**${confirmedRate.toFixed(1)}% matched** (${matched} / ${measured}), tiers A+B+C only.`);
+  push();
+  push(`n = ${measured} of ${population} distinct title+author keys (${ALL_BOOKS.length} books). `
+    + `95% CI ±${ci.toFixed(1)} pp (finite-population corrected).`);
+  push();
+  push(`Upper bound including tiers D and E ("found something, not confidently"): `
+    + `**${upperBoundRate.toFixed(1)}%** (${upperBound} / ${measured}).`);
+  push();
+
+  push('## How a match was defined');
+  push();
+  push(MATCH_RULE_PROSE);
+  push();
+  push('| tier | count | share of measured |');
+  push('|---|---:|---:|');
+  for (const tier of ['A', 'B', 'C', 'D', 'E']) {
+    push(`| ${tier} | ${tierCounts[tier]} | ${pct(tierCounts[tier], measured).toFixed(1)}% |`);
+  }
+  push(`| miss | ${tierCounts.miss} | ${pct(tierCounts.miss, measured).toFixed(1)}% |`);
+  push();
+
+  push('## `accessInfo.viewability` across the matched set (tiers A+B+C)');
+  push();
+  push('| viewability | count | share |');
+  push('|---|---:|---:|');
+  for (const kind of VIEWABILITY_KINDS) {
+    push(`| ${kind} | ${viewability[kind]} | ${pct(viewability[kind], matched).toFixed(1)}% |`);
+  }
+  push(`| (field absent) | ${viewability.absent} | ${pct(viewability.absent, matched).toFixed(1)}% |`);
+  push();
+  push('`accessInfo.country` distribution over the same set:');
+  push();
+  push('| country | count | share |');
+  push('|---|---:|---:|');
+  for (const [country, n] of Object.entries(countries).sort((a, b) => b[1] - a[1])) {
+    push(`| ${country} | ${n} | ${pct(n, matched).toFixed(1)}% |`);
+  }
+  push();
+  push(`Viewability is jurisdiction-dependent; these numbers describe **${topCountry}**.`);
+  push();
+
+  push('## `accessInfo.embeddable`');
+  push();
+  push('| embeddable | count | share |');
+  push('|---|---:|---:|');
+  push(`| true | ${embeddable.true} | ${pct(embeddable.true, matched).toFixed(1)}% |`);
+  push(`| false | ${embeddable.false} | ${pct(embeddable.false, matched).toFixed(1)}% |`);
+  if (embeddable.absent) push(`| (field absent) | ${embeddable.absent} | ${pct(embeddable.absent, matched).toFixed(1)}% |`);
+  push();
+
+  push('## `volumeInfo.imageLinks`');
+  push();
+  push('| | count | share |');
+  push('|---|---:|---:|');
+  push(`| present | ${imageLinks.present} | ${pct(imageLinks.present, matched).toFixed(1)}% |`);
+  push(`| — of which carries a \`thumbnail\` (not merely \`smallThumbnail\`) | ${imageLinks.thumbnail} | ${pct(imageLinks.thumbnail, imageLinks.present).toFixed(1)}% of present |`);
+  push(`| absent (would need the generated spine fallback) | ${imageLinks.absent} | ${pct(imageLinks.absent, matched).toFixed(1)}% |`);
+  push();
+
+  push(`## Twenty misses (first ${misses.length} tier-null records in shuffle order)`);
+  push();
+  const withCandidatesShare = 1 - zeroResultShare;
+  if (zeroResultShare < 0.5) {
+    push(`**⚠ MOST MISSES CAME BACK WITH RESULTS WE REJECTED (${(withCandidatesShare * 100).toFixed(0)}% of misses `
+      + 'had candidates). That is a matching bug on our side, not an absence from Google\'s catalogue. '
+      + 'Do not act on the headline number until the rejections below have been read by hand.**');
+  } else {
+    push(`Most misses (${(zeroResultShare * 100).toFixed(0)}%) genuinely returned nothing from Google — the gap `
+      + 'reads as Google\'s, not a matching bug on our side.');
+  }
+  push();
+  for (const { t, rec } of misses) {
+    push(`- **${t.title}** / ${t.author}${t.isbn ? ` (isbn ${t.isbn})` : ''}`);
+    push(`  query: \`${rec.q}\` — totalItems: ${rec.totalItems}`);
+    const cands = rec.miss?.candidates || [];
+    if (cands.length) {
+      for (const c of cands) {
+        push(`  - candidate[${c.index}] "${c.title}" / ${(c.authors || []).join(', ') || '(no authors listed)'} — tier ${c.tier ?? 'null'}, score ${c.score}, ${c.why}`);
+      }
+    } else {
+      push('  - (no candidates returned)');
+    }
+  }
+  push();
+
+  push('## Requests used');
+  push();
+  push(`Total across all runs: **${totalRequests}**.`);
+  push();
+  push('| date | requests | books measured | stop reason |');
+  push('|---|---:|---:|---|');
+  for (const r of runs) {
+    push(`| ${r.startedAt} | ${r.requests} | ${r.booksMeasured} | ${r.stoppedBecause} |`);
+  }
+  push();
+
+  push('## Threshold band');
+  push();
+  push(`Confirmed rate (A+B+C): ${confirmedRate.toFixed(1)}% — **${bandFor(confirmedRate)}**.`);
+  push(`Upper bound (A+B+C+D+E): ${upperBoundRate.toFixed(1)}% — **${bandFor(upperBoundRate)}**.`);
+  if (bandFor(confirmedRate) !== bandFor(upperBoundRate)) {
+    push();
+    push('**The confirmed rate and the upper bound fall in different bands; the decision is not yet safe to make.**');
+  }
+  push();
+
+  push('## Caveats');
+  push();
+  push('- **ISBN confirmation is conservative.** Tier A requires the shop\'s checksum-valid ISBN-13 to appear');
+  push('  verbatim in a volume\'s `industryIdentifiers`. No ISBN-10↔13 arithmetic is performed, so a volume');
+  push('  carrying only an ISBN-10 record never confirms — this under-counts tier A and never over-counts it.');
+  push(`- **Tier E (${tierCounts.E} record(s))** is the subtitle-corroboration guard (REVIEW-PHASE11.md\'s "Abarat"`);
+  push('  guard, ported from the Wikipedia path to the Google path) firing: a head-title match whose distinctive');
+  push('  subtitle isn\'t corroborated by the volume\'s own title/subtitle is demoted out of the matched set.');
+  push(`- **Viewability and embeddability are jurisdiction-dependent.** These numbers describe ${topCountry},`);
+  push('  the country Google\'s own geolocation returned for this run — a different request origin could read');
+  push('  differently.');
+  push('- **The query is plain unqualified text, not a field-restricted one, by design.** `intitle:`/`inauthor:`/');
+  push('  `isbn:` were measured returning `totalItems: 0` for books unambiguously present (2026-10-03, valid key,');
+  push('  HTTP 200) — a regression in Google\'s API relative to phase 11\'s run, not a bug this tool introduced.');
+  push('  Reusing a field-restricted operator here would silently resurrect that false-negative factory.');
+  push();
+
+  push('## What this means');
+  push();
+  push('_TBD after the real harvest run._');
+  push();
+
+  fs.writeFileSync(DOC_PATH, lines.join('\n'));
+
+  console.log(`report: ${measured} of ${population} distinct keys measured`);
+  console.log(`  confirmed (A+B+C): ${matched} (${confirmedRate.toFixed(1)}%), 95% CI ±${ci.toFixed(1)} pp`);
+  console.log(`  upper bound (A-E): ${upperBound} (${upperBoundRate.toFixed(1)}%)`);
+  console.log(`  tiers: A=${tierCounts.A} B=${tierCounts.B} C=${tierCounts.C} D=${tierCounts.D} E=${tierCounts.E} miss=${tierCounts.miss}`);
+  console.log(`  wrote ${path.relative(ROOT, DOC_PATH)}`);
+}
+
 /* ── main ──────────────────────────────────────────────────── */
 
 const cmd = process.argv[2];
-const COMMANDS = { plan: cmdPlan, run: cmdRun };
+const COMMANDS = { plan: cmdPlan, run: cmdRun, report: cmdReport };
 if (COMMANDS[cmd]) {
   await COMMANDS[cmd]();
 } else {
