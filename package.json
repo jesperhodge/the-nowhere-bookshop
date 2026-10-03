@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node server/index.js",
+    "test": "node --test tools/*.test.mjs",
     "mock": "HARDCOVER_MOCK=1 node server/index.js",
     "qa": "node tools/qa.mjs",
     "enrich": "NODE_USE_ENV_PROXY=1 node tools/hardcover.mjs enrich",

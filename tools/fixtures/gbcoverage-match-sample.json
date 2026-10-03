@@ -1,0 +1,142 @@
+{
+  "_fixture": true,
+  "_note": "Synthetic responses shaped like the real Google Books Volumes API (https://www.googleapis.com/books/v1/volumes), used only by tools/google-books.test.mjs to exercise classifyMatch()/classifyVolume() offline. None of this is real book data, no real API response is reproduced here and no API key is ever committed to this file — the titles, authors, ISBNs and volume records below are made up for the test (two, Abarat and Moneyland, are named after the real books that motivated the subtitle-corroboration guard in REVIEW-PHASE11.md, but the volume records attached to them here are still invented, not fetched). This exists so PHI-4's tiered coverage match rule can be exercised, and regression-locked, without spending Google Books quota.",
+
+  "cases": [
+    {
+      "name": "clean exact match",
+      "book": { "title": "Piranesi", "author": "Susanna Clarke" },
+      "items": [
+        { "id": "v1", "volumeInfo": { "title": "Piranesi", "authors": ["Susanna Clarke"] } }
+      ],
+      "expectTier": "B",
+      "expectIndex": 0,
+      "expectMatched": true
+    },
+
+    {
+      "name": "study guide outranks the real book",
+      "book": { "title": "Test Volume One", "author": "Fixture Author" },
+      "items": [
+        { "id": "decoy", "volumeInfo": { "title": "Test Volume One: A Study Guide", "authors": ["Study Notes Inc."] } },
+        { "id": "real", "volumeInfo": { "title": "Test Volume One", "authors": ["Fixture Author"] } }
+      ],
+      "expectTier": "B",
+      "expectIndex": 1,
+      "expectMatched": true
+    },
+
+    {
+      "name": "summary decoy with the title embedded",
+      "book": { "title": "The Underground Railroad", "author": "Colson Whitehead" },
+      "items": [
+        { "id": "summary", "volumeInfo": { "title": "Summary - The Underground Railroad", "authors": ["E. Z. - Summary"] } }
+      ],
+      "expectTier": null,
+      "expectIndex": -1,
+      "expectMatched": false
+    },
+
+    {
+      "name": "right title, wrong author",
+      "book": { "title": "Test Volume One", "author": "Fixture Author" },
+      "items": [
+        { "id": "wrongauthor", "volumeInfo": { "title": "Test Volume One", "authors": ["A Completely Different Person"] } }
+      ],
+      "expectTier": null,
+      "expectIndex": -1,
+      "expectMatched": false,
+      "expectWhyContains": "author"
+    },
+
+    {
+      "name": "no results",
+      "book": { "title": "A Book That Does Not Exist Anywhere", "author": "Nobody Wrote This" },
+      "items": [],
+      "expectTier": null,
+      "expectIndex": -1,
+      "expectMatched": false,
+      "expectWhyEquals": "no results",
+      "expectCandidatesLength": 0
+    },
+
+    {
+      "name": "ISBN confirmation beats a higher-ranked decoy",
+      "book": { "title": "Khrushchev", "author": "William Taubman", "isbn": "9780143127550" },
+      "items": [
+        { "id": "decoy", "volumeInfo": { "title": "Khrushchev", "authors": ["A Completely Different Person"] } },
+        {
+          "id": "real", "volumeInfo": { "title": "Khrushchev", "authors": ["William Taubman"] },
+          "industryIdentifiers": [{ "type": "ISBN_13", "identifier": "9780143127550" }]
+        }
+      ],
+      "expectTier": "A",
+      "expectIndex": 1,
+      "expectMatched": true,
+      "expectWinnerIsbnConfirmed": true
+    },
+
+    {
+      "name": "ISBN absent from every candidate still matches on title and author",
+      "book": { "title": "Test Volume One", "author": "Fixture Author", "isbn": "9780307459657" },
+      "items": [
+        { "id": "real", "volumeInfo": { "title": "Test Volume One", "authors": ["Fixture Author"] } }
+      ],
+      "expectTier": "B",
+      "expectIndex": 0,
+      "expectMatched": true,
+      "expectWinnerIsbnConfirmed": false
+    },
+
+    {
+      "name": "series volume does not match volume one (Abarat)",
+      "book": { "title": "Abarat: Days of Magic, Nights of War", "author": "Clive Barker" },
+      "items": [
+        { "id": "v1", "volumeInfo": { "title": "Abarat", "authors": ["Clive Barker"] } }
+      ],
+      "expectTier": "E",
+      "expectIndex": 0,
+      "expectMatched": false
+    },
+
+    {
+      "name": "genuinely different edition subtitle still matches (Moneyland)",
+      "book": { "title": "Moneyland: Why Thieves and Crooks Now Rule the World", "author": "Oliver Bullough" },
+      "items": [
+        {
+          "id": "v1",
+          "volumeInfo": {
+            "title": "Moneyland",
+            "subtitle": "The Inside Story of the Crooks and Kleptocrats Who Rule the World",
+            "authors": ["Oliver Bullough"]
+          }
+        }
+      ],
+      "expectTier": "B",
+      "expectIndex": 0,
+      "expectMatched": true
+    },
+
+    {
+      "name": "volume with no authors listed",
+      "book": { "title": "Test Volume One", "author": "Fixture Author" },
+      "items": [
+        { "id": "noauthors", "volumeInfo": { "title": "Test Volume One" } }
+      ],
+      "expectTier": "D",
+      "expectIndex": 0,
+      "expectMatched": false
+    },
+
+    {
+      "name": "a 3-character title does not prefix-match",
+      "book": { "title": "Ash", "author": "Jane Doe" },
+      "items": [
+        { "id": "v1", "volumeInfo": { "title": "Ashenden", "authors": ["Jane Doe"] } }
+      ],
+      "expectTier": null,
+      "expectIndex": -1,
+      "expectMatched": false
+    }
+  ]
+}
