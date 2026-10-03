@@ -39,3 +39,27 @@ test('exits zero against the real tree as it stands today', () => {
   const result = runChecker();
   assert.equal(result.status, 0, `checker should pass on a clean tree, stderr was: ${result.stderr}`);
 });
+
+const assignmentCases = [
+  { name: 'GOOGLE_BOOKS_KEY with a non-empty value', content: 'GOOGLE_BOOKS_KEY=realvalue123\n', expectNonZero: true },
+  { name: 'HARDCOVER_TOKEN with a non-empty value', content: 'HARDCOVER_TOKEN=Bearer abc123\n', expectNonZero: true },
+  { name: 'GOOGLE_BOOKS_KEY with an empty value', content: 'GOOGLE_BOOKS_KEY=\n', expectNonZero: false },
+  { name: 'HARDCOVER_TOKEN with an empty value', content: 'HARDCOVER_TOKEN=\n', expectNonZero: false },
+];
+
+for (const { name, content, expectNonZero } of assignmentCases) {
+  test(`assignment pattern: ${name}`, () => {
+    const plantedPath = path.join(repoRoot, 'src', '__check-no-secrets-regression-tmp__.js');
+    writeFileSync(plantedPath, content);
+    try {
+      const result = runChecker();
+      if (expectNonZero) {
+        assert.notEqual(result.status, 0, `checker must fail for ${name}`);
+      } else {
+        assert.equal(result.status, 0, `checker must pass for ${name}, stderr was: ${result.stderr}`);
+      }
+    } finally {
+      unlinkSync(plantedPath);
+    }
+  });
+}
