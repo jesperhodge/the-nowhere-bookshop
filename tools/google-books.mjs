@@ -255,12 +255,20 @@ export function classifyMatch(book, items) {
     else if (cRank === bRank && c.score === best.score && c.index < best.index) best = c;
   }
 
-  const candidates = scored.slice(0, 3).map((c) => ({
+  /* Top 3 by THIS classifier's own score, not Google's return order
+     (`scored` is already in Google's order; sort is a copy so `best`
+     selection above, which deliberately uses Google's index as its final
+     tiebreak, is unaffected). For a genuine miss, Google's own top 3 are
+     usually irrelevant junk, while a candidate ranked 11th by Google but
+     highest-scored among rejects is exactly the one worth a human's eyes
+     — and would never otherwise appear in the report. */
+  const candidates = scored.slice().sort((a, b) => b.score - a.score).slice(0, 3).map((c) => ({
     index: c.index,
     title: c.item.volumeInfo?.title || '',
     authors: c.item.volumeInfo?.authors || [],
     tier: c.tier,
     score: c.score,
+    titleScore: c.titleScore,
     why: c.why,
   }));
 

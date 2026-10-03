@@ -87,6 +87,27 @@ test('classifyVolume — titleScore 0 with a confirmed author describes it accur
   assert.equal(v.why, 'author surname matched but the title did not');
 });
 
+test('classifyMatch — a highly-scored-but-rejected candidate ranked low by Google still appears in the top-3 candidates output (review finding 4)', () => {
+  const book = { title: 'Test Volume One', author: 'Fixture Author' };
+  const items = [
+    { id: 'junk1', volumeInfo: { title: 'Nothing Alike', authors: ['Nobody'] } },
+    { id: 'junk2', volumeInfo: { title: 'Also Nothing Alike', authors: ['Nobody Else'] } },
+    { id: 'junk3', volumeInfo: { title: 'Still Nothing Alike', authors: ['Yet Another'] } },
+    // Ranked 4th by Google, but the only candidate with any real title
+    // similarity (exact bare-title match, just the wrong author) — the
+    // one a human reviewing misses would actually want to see.
+    { id: 'plausible', volumeInfo: { title: 'Test Volume One', authors: ['A Completely Different Person'] } },
+  ];
+  const result = classifyMatch(book, items);
+  assert.equal(result.tier, null);
+  assert.equal(result.matched, false);
+  const ids = result.candidates.map((c) => c.index);
+  assert.ok(ids.includes(3), `expected Google-index 3 (the plausible reject) among top-3 candidates, got indexes ${ids}`);
+  // and it should be first, since it scores highest
+  assert.equal(result.candidates[0].index, 3);
+  assert.equal(result.candidates[0].titleScore, 100);
+});
+
 test('pickGoogleMatch is unchanged by the move into google-books.mjs', () => {
   const gbFixture = JSON.parse(
     fs.readFileSync(path.join(ROOT, 'tools/fixtures/googlebooks-sample.json'), 'utf8'),
