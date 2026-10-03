@@ -32,7 +32,13 @@ function isBinary(buffer) {
 
 export function scanFile(relativePath, cwd = process.cwd()) {
   const hits = [];
-  const buffer = readFileSync(`${cwd}/${relativePath}`);
+  let buffer;
+  try {
+    buffer = readFileSync(`${cwd}/${relativePath}`);
+  } catch (err) {
+    if (err.code === 'ENOENT') return hits; // staged-for-delete, nothing on disk
+    throw err;
+  }
   if (isBinary(buffer)) return hits;
   const lines = buffer.toString('utf8').split('\n');
   lines.forEach((line, index) => {
@@ -63,6 +69,6 @@ function main() {
   return 1;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.filename === process.argv[1]) {
   process.exitCode = main();
 }
