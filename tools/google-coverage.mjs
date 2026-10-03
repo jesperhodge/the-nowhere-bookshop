@@ -159,9 +159,45 @@ function rawCachePath(key) {
                 anything, same rule as tools/links.mjs. */
 const TERMINAL_QUOTA = Symbol('terminal-quota');
 const TRANSPORT_FAILURE = Symbol('transport-failure');
-const QUOTA_MESSAGE_RE = /quota.*(per\s*day|daily|PerDay)/i;
-const TERMINAL_REASONS = new Set(['dailyLimitExceeded', 'quotaExceeded', 'rateLimitExceeded']);
 const BACKOFF_MS = [2000, 4000, 8000];
+
+/* ── terminal vs transient quota classification ────────────────────────
+   Google's `reason` field is not trustworthy alone: a real captured
+   daily-exhaustion payload (see tools/google-coverage.test.mjs) carries
+   reason: 'rateLimitExceeded' even though the message is unambiguously
+   about the PER-DAY limit ("Quota exceeded for quota metric 'Queries'
+   and limit 'Queries per day'..."). So `reason` is checked first for the
+   two reasons Google uses that ARE unambiguous on their own
+   ('dailyLimitExceeded', 'quotaExceeded' — deliberately NOT
+   'rateLimitExceeded', which is Google's per-MINUTE limit and must stay
+   transient/retried), and the message is checked second with a regex
+   that matches either word order: Google's actual "Daily Limit
+   Exceeded..." message puts "Daily" BEFORE "quota", which the previous
+   regex (requiring quota first) missed entirely. */
+const TERMINAL_REASONS = new Set(['dailyLimitExceeded', 'quotaExceeded']);
+const QUOTA_MESSAGE_RE = /\b(daily|per[\s-]?day)\b.{0,40}\b(limit|quota)\b|\bquota\b.{0,40}\b(daily|per[\s-]?day)\b/i;
+
+/** Pure, unit-testable classification of one error response. Returns
+    'terminal' (stop the whole run, nothing left to retry today),
+    'transient' (back off and retry, or give up on this one book without
+    caching anything), or null when httpStatus isn't an error response at
+    all (not applicable). httpStatus 429/403 get the full reason+message
+    check; any other error status (5xx, other 4xx, or no parseable body)
+    is transient — only a 429/403 can ever mean the daily quota itself is
+    exhausted. */
+export function classifyQuotaResponse(httpStatus, parsedErrorBody) {
+  if (httpStatus == null || httpStatus < 400) return null;
+
+  if (httpStatus === 429 || httpStatus === 403) {
+    const reason = parsedErrorBody?.error?.errors?.[0]?.reason || '';
+    const message = parsedErrorBody?.error?.message || '';
+    if (TERMINAL_REASONS.has(reason)) return 'terminal';
+    if (QUOTA_MESSAGE_RE.test(message)) return 'terminal';
+    return 'transient';
+  }
+
+  return 'transient';
+}
 
 async function fetchWithQuotaAwareness(q, requestCounter) {
   const url = urlFor(q);
@@ -178,10 +214,7 @@ async function fetchWithQuotaAwareness(q, requestCounter) {
     if (res.status === 429 || res.status === 403) {
       let body = null;
       try { body = await res.json(); } catch { /* unparseable error body */ }
-      const reason = body?.error?.errors?.[0]?.reason || '';
-      const message = body?.error?.message || '';
-      const isTerminal = QUOTA_MESSAGE_RE.test(message) || (TERMINAL_REASONS.has(reason) && QUOTA_MESSAGE_RE.test(message));
-      if (isTerminal) return TERMINAL_QUOTA;
+      if (classifyQuotaResponse(res.status, body) === 'terminal') return TERMINAL_QUOTA;
       if (attempt < BACKOFF_MS.length) { await sleep(BACKOFF_MS[attempt]); continue; }
       return TRANSPORT_FAILURE;
     }
@@ -648,13 +681,20 @@ async function cmdReport() {
   console.log(`  wrote ${path.relative(ROOT, DOC_PATH)}`);
 }
 
-/* ── main ──────────────────────────────────────────────────── */
-
-const cmd = process.argv[2];
-const COMMANDS = { plan: cmdPlan, run: cmdRun, report: cmdReport };
-if (COMMANDS[cmd]) {
-  await COMMANDS[cmd]();
-} else {
-  console.error('usage: node tools/google-coverage.mjs <plan|run|report> [--budget N] [--pace MS] [--force] [--limit N]');
-  process.exit(1);
+/* ── main ──────────────────────────────────────────────────────────────
+   Guarded so `import` (tools/google-coverage.test.mjs, testing the pure
+   classifyQuotaResponse()) never triggers the CLI dispatcher — same trap
+   google-books.mjs's header comment documents for describe.mjs, whose
+   unguarded dispatcher calls process.exit(1) outside a known command and
+   would kill the test process stone dead if it were ever imported. */
+const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+if (isMainModule) {
+  const cmd = process.argv[2];
+  const COMMANDS = { plan: cmdPlan, run: cmdRun, report: cmdReport };
+  if (COMMANDS[cmd]) {
+    await COMMANDS[cmd]();
+  } else {
+    console.error('usage: node tools/google-coverage.mjs <plan|run|report> [--budget N] [--pace MS] [--force] [--limit N]');
+    process.exit(1);
+  }
 }
