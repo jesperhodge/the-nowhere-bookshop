@@ -66,8 +66,11 @@
       "items": [
         { "id": "decoy", "volumeInfo": { "title": "Khrushchev", "authors": ["A Completely Different Person"] } },
         {
-          "id": "real", "volumeInfo": { "title": "Khrushchev", "authors": ["William Taubman"] },
-          "industryIdentifiers": [{ "type": "ISBN_13", "identifier": "9780143127550" }]
+          "id": "real",
+          "volumeInfo": {
+            "title": "Khrushchev", "authors": ["William Taubman"],
+            "industryIdentifiers": [{ "type": "ISBN_13", "identifier": "9780143127550" }]
+          }
         }
       ],
       "expectTier": "A",
