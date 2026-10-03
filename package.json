@@ -22,7 +22,10 @@
     "describe:selftest": "node bookshop/tools/describe.mjs selftest",
     "links": "NODE_USE_ENV_PROXY=1 node bookshop/tools/links.mjs verify",
     "links:apply": "node bookshop/tools/links.mjs apply",
-    "links:report": "node bookshop/tools/links.mjs report"
+    "links:report": "node bookshop/tools/links.mjs report",
+    "check:secrets": "node bookshop/tools/check-no-secrets.mjs",
+    "pretest": "npm run check:secrets",
+    "test": "node --test bookshop/tools/*.test.mjs"
   },
   "dependencies": {
     "express": "^5.2.1"
