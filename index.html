@@ -45,7 +45,7 @@
      not trim those before hashing, the browser doesn't either:
        node -e "const c=require('crypto');const fs=require('fs');
        const h=fs.readFileSync('index.html','utf8');
-       const i=h.indexOf('<script type=\"importmap\">')+26, j=h.indexOf('</script>',i);
+       const t='<script type=\"importmap\">', i=h.indexOf(t)+t.length, j=h.indexOf('</script>',i);
        console.log('sha256-'+c.createHash('sha256').update(h.slice(i,j)).digest('base64'))" -->
 <script type="importmap">
 { "imports": {
