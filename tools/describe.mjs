@@ -73,6 +73,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { cache, cacheKey } from '../server/cache.js';
 import { cleanDescription, validIsbn13 } from '../server/openlibrary.js';
 import { loadDotEnv } from '../server/env.js';
+import {
+  norm, lastWord, bareTitle, subtitleOf, distinctiveSubtitleWords, pickGoogleMatch,
+} from './google-books.mjs';
 
 loadDotEnv();
 
@@ -88,24 +91,18 @@ const args = process.argv.slice(3);
 const flag = (name) => args.includes(`--${name}`);
 const opt = (name, d) => { const i = args.indexOf(`--${name}`); return i > -1 && args[i + 1] ? args[i + 1] : d; };
 
-/* ── text helpers, same normalisation as the rest of the pipeline
-   (tools/harvest.mjs, server/openlibrary.js, server/cache.js each
-   keep their own copy rather than share one — a small, deliberate
-   duplication already established in this repo). ─────────────── */
-
-const norm = (s) => String(s || '').toLowerCase()
-  .normalize('NFD').replace(/[̀-ͯ]/g, '')
-  .replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
-
-const lastWord = (s) => { const p = norm(s).split(' ').filter(Boolean); return p[p.length - 1] || ''; };
-
-/** Title for comparison: subtitle and a trailing "(novel)"-style disambiguator
-    dropped, leading article dropped, then normalised. Applied identically to
-    the book's own title and to every candidate, so "Book Title: A Novel"
-    matches a Wikipedia page titled "Book Title (novel)". */
-const bareTitle = (t) => norm(
-  String(t || '').replace(/[:;–—].*$/, '').replace(/\s*\([^)]*\)\s*$/, ''),
-).replace(/^(the|a|an) /, '');
+/* ── text helpers ──────────────────────────────────────────────
+   norm/lastWord/bareTitle/subtitleOf/distinctiveSubtitleWords and the
+   Google match rule itself (pickGoogleMatch) now live in one place,
+   tools/google-books.mjs, imported above — NOT duplicated here. That is
+   a deliberate departure from this repo's usual rule (tools/harvest.mjs,
+   server/openlibrary.js, server/cache.js each keep their own trivial
+   copy of norm() rather than share one): a normalisation helper
+   diverging quietly across unrelated subsystems is a shrug, but TWO
+   tools (this one and tools/google-coverage.mjs, PHI-4) querying the
+   SAME Google Books API with two copies of "does this volume match the
+   book" that can silently drift apart is exactly the failure mode PHI-4
+   exists to rule out. One copy, two importers. ──────────────────── */
 
 /* ── raw response cache: one file per fetch, under data/cache/describe/,
    gitignored (regenerable from the same URL) — mirrors WIKI_CACHE in
@@ -149,30 +146,6 @@ async function fetchJSONCached(source, url, cacheFile, { paceMs = 1200, retries 
    makes a request — the feasibility doc measured 429 from this
    sandbox's IP at *any* pacing, keyed or not, so the honest move
    is to skip cleanly rather than pretend a retry loop will help. */
-
-/** Never simplify to items[0] — same trap as Hardcover's search.ids[]
-    (IMPLEMENTATION.md §8.3): Google Books happily ranks a study guide or an
-    abridgement above the real book. Exact bare-title match always qualifies;
-    a superset/subset title only qualifies together with a confirmed author. */
-function pickGoogleMatch(items, book) {
-  const want = bareTitle(book.title);
-  const sn = lastWord(book.author);
-  let best = null, bestScore = -1;
-  for (const it of items || []) {
-    const vi = it.volumeInfo || {};
-    const t = bareTitle(vi.title || '');
-    if (!t || !want) continue;
-    let score = 0;
-    if (t === want) score += 100;
-    else if (t.startsWith(want) || want.startsWith(t)) score += 40;
-    else continue;
-    const authors = norm((vi.authors || []).join(' '));
-    if (sn && authors.includes(sn)) score += 50;
-    else if (authors) continue; /* right title, wrong book */
-    if (score > bestScore) { bestScore = score; best = it; }
-  }
-  return bestScore >= 90 ? best : null;
-}
 
 async function tryGoogleBooks(book, key) {
   if (!GOOGLE_KEY) return { tried: false, reason: 'no GOOGLE_BOOKS_KEY — skipped cleanly' };
@@ -228,56 +201,6 @@ const LIST_RE = /^list of /i;
    whose subtitle IS the book. The fix: a book title with a subtitle
    must have that subtitle corroborated somewhere on the page — not
    merely left unmentioned-and-forgiven — before the match counts. */
-
-/** Everything after the first subtitle separator in a title, same split
-    bareTitle() uses to discard it — kept here instead, minus a trailing
-    "(Top Shelf Productions)"-style parenthetical, the same disambiguator
-    bareTitle() strips (there, only from the already-subtitle-free head; a
-    subtitle can carry one too — an imprint credit, not book content, and it
-    fooled the first cut of this check into "corroborating" March: Book
-    Three's mismatch against the March (comics) series page on the word
-    "Productions"). '' when there is no subtitle. */
-const subtitleOf = (t) => {
-  const m = String(t || '').match(/[:;–—](.*)$/);
-  return m ? m[1].replace(/\s*\([^)]*\)\s*$/, '') : '';
-};
-
-/** Common function words a subtitle is mostly made of and that would match
-    almost any page by accident — filtered out so what is left is actually
-    distinctive. Deliberately conservative (errs toward dropping a word, not
-    toward keeping one); a subtitle contributing no word at all just can't be
-    checked and is skipped rather than forced to fail. */
-const SUBTITLE_STOPWORDS = new Set([
-  'the', 'a', 'an', 'of', 'and', 'or', 'but', 'to', 'in', 'on', 'at', 'for', 'from', 'by', 'with',
-  'now', 'how', 'why', 'who', 'what', 'when', 'where', 'it', 'its', 'that', 'this', 'these', 'those',
-  'is', 'are', 'was', 'were', 'be', 'been', 'being', 'as', 'so', 'if', 'than', 'then', 'no', 'not', 'yet',
-  'all', 'more', 'most', 'some', 'any', 'into', 'over', 'under', 'up', 'down', 'out', 'off', 'again',
-  'once', 'here', 'there', 'own', 'same', 'too', 'very', 'can', 'will', 'just', 'should', 'could',
-  'would', 'may', 'might', 'must', 'shall', 'you', 'your', 'we', 'our', 'i', 'he', 'she', 'they', 'them',
-]);
-
-/** Genre-label words ("Stories", "A Novel", "Poems") are a subtitle in form
-    only — they say what kind of book it is, the same handful of words
-    WORK_RE already checks for, not anything specific to this book. A page
-    that is correctly about a story collection will not necessarily use the
-    literal word "stories" (it may say "short story collection" instead, as
-    the real Your Utopia page does) — so these cannot be asked to corroborate
-    themselves and are excluded from "distinctive" rather than left in to
-    manufacture a false rejection. */
-const GENRE_LABEL_WORDS = new Set([
-  'novel', 'novels', 'novella', 'novellas', 'story', 'stories', 'memoir', 'memoirs',
-  'poem', 'poems', 'poetry', 'essay', 'essays', 'anthology', 'anthologies',
-  'collection', 'collections', 'tale', 'tales', 'saga', 'fiction', 'nonfiction',
-  'biography', 'autobiography', 'book', 'books',
-]);
-
-/** Words from a title's subtitle distinctive enough to corroborate a match:
-    not a stopword, not a bare genre label, and long enough (>=4 chars) that
-    a coincidental hit on an unrelated page is unlikely. */
-function distinctiveSubtitleWords(t) {
-  return norm(subtitleOf(t)).split(' ')
-    .filter((w) => w.length >= 4 && !SUBTITLE_STOPWORDS.has(w) && !GENRE_LABEL_WORDS.has(w));
-}
 
 /** The extract naming the matched work as an early volume of a series — the
     Abarat page's own words ("the first in Barker's ... series"). Stated
