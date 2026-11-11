@@ -125,15 +125,15 @@ function tractatus() {
   }));
 
   out.push(block([
-    { n: '1.2', body: `The author does not belong to the site; he is a limit of it. His name is ${PERSON.name}.` },
+    { n: '1.2', body: `The author does not belong to the site, but is a limit of it. The author’s name is ${PERSON.name}.` },
   ], {
     label: 'cf. 5.632',
     gloss: 'The subject does not belong to the world: rather, it is a limit of the world. Wittgenstein’s claim, borrowed for a footer.',
   }));
 
   out.push(block([
-    { n: '1.21', cls: 'd3', body: 'He studied philosophy, and he builds things. These are not two facts but one, described in two vocabularies.' },
-    { n: '1.22', cls: 'd3', body: 'He does deep thinking and thoughtful tech. Whether the adjectives are earned is a question for the projects.' },
+    { n: '1.21', cls: 'd3', body: 'The author studied philosophy, and builds things. These are not two facts but one, described in two vocabularies.' },
+    { n: '1.22', cls: 'd3', body: 'The author does deep thinking and thoughtful tech. Whether the adjectives are earned is a question for the projects.' },
   ]));
 
   out.push(block([
@@ -168,7 +168,7 @@ function tractatus() {
     ...PERSON.links.map((l, i) => ({
       n: '3.' + (i + 1),
       body: [
-        l.kind === 'said' ? 'What must be said is on ' : l.kind === 'shown' ? 'What can be shown is on ' : 'He may also be found on ',
+        l.kind === 'said' ? 'What must be said is on ' : l.kind === 'shown' ? 'What can be shown is on ' : 'The author may also be found on ',
         link(l.href, l.label),
         '.',
       ],
@@ -252,7 +252,7 @@ function ethics() {
   }));
 
   out.push(block([
-    def(4, 'By *a project* I understand that which the intellect perceives of the author as constituting his essence; or, at least, the part of it that has a URL.'),
+    def(4, 'By *a project* I understand that which the intellect perceives of the author as constituting the author’s essence; or, at least, the part of it that has a URL.'),
   ], { mod: 'tight' }));
 
   out.push(block([{ n: '', cls: 'wide', tag: 'h3', bodyCls: 'rubric', body: 'Axioms' }], { mod: 'tight gap' }));
