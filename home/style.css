@@ -1,0 +1,480 @@
+/* ============================================================
+   philosophicaltech.com — paper and ink.
+   Hand-written, no preprocessor. Colours are tokens on :root;
+   dark mode is the system preference unless the visitor has
+   chosen (html[data-theme]).
+   ============================================================ */
+
+:root {
+  --paper: #f3eee2;
+  --ink: #1d1b17;
+  --muted: #665f54;      /* 5.4:1 on paper */
+  --accent: #8a2e1c;     /* 7.3:1 on paper — a worn oxblood */
+  --rule: #cdc4ae;       /* decoration only, never text */
+  --wash: rgba(138, 46, 28, 0.07);
+  --grain: 0.5;
+  --ink-line: #1d1b17;
+  color-scheme: light;
+
+  --serif: 'EB Garamond', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* type scale, ratio 1.25, fluid between 390px and 1280px */
+  --s-1: clamp(0.8rem, 0.76rem + 0.18vw, 0.9rem);
+  --s0: clamp(1.0625rem, 0.98rem + 0.4vw, 1.25rem);
+  --s1: calc(var(--s0) * 1.25);
+  --s2: calc(var(--s0) * 1.5625);
+  --s3: calc(var(--s0) * 1.953);
+  --s4: clamp(2.3rem, 1.2rem + 4.8vw, 4.6rem);
+
+  --gutter: 1.5rem;
+  --num-w: 5rem;
+  --gloss-w: 13.5rem;
+  --gap: 1.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #14120f;
+    --ink: #ebe4d3;
+    --muted: #a69e8d;    /* 7:1 on paper */
+    --accent: #e2896a;
+    --rule: #3a342b;
+    --wash: rgba(226, 137, 106, 0.09);
+    --grain: 0.25;
+    --ink-line: #ebe4d3;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --paper: #14120f;
+  --ink: #ebe4d3;
+  --muted: #a69e8d;
+  --accent: #e2896a;
+  --rule: #3a342b;
+  --wash: rgba(226, 137, 106, 0.09);
+  --grain: 0.25;
+  --ink-line: #ebe4d3;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--s0);
+  line-height: 1.55;
+  font-feature-settings: 'kern', 'liga', 'onum';
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+/* Paper grain: one small tiled SVG, no request. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: calc(var(--grain) * 0.18);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+#ink {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter) 3rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: text-decoration-color 0.15s;
+}
+a:hover { text-decoration-color: currentColor; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+main:focus { outline: none; }
+
+::selection { background: var(--accent); color: var(--paper); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead { padding-top: 1.25rem; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.theme button {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0.6rem 0;
+  min-height: 44px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--rule);
+}
+.theme button:hover { color: var(--ink); text-decoration-color: currentColor; }
+
+.title {
+  margin: clamp(2.5rem, 8vw, 5.5rem) 0 0;
+  font-size: var(--s4);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  font-feature-settings: 'kern', 'liga', 'swsh', 'dlig';
+}
+.title em { font-style: italic; color: var(--accent); }
+
+.about {
+  margin: 1.4rem 0 0;
+  max-width: 34rem;
+  font-size: var(--s1);
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ---------- form switch ---------- */
+
+.forms {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1.75rem;
+  row-gap: 0;
+}
+.forms:empty { display: none; }
+
+.forms-label {
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  flex-basis: 100%;
+  margin: 0 0 0.1rem;
+}
+
+.forms button {
+  font: inherit;
+  font-size: var(--s1);
+  font-style: italic;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.55rem 0 0.35rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+.forms button:hover { color: var(--ink); }
+.forms button[aria-pressed='true'] {
+  color: var(--ink);
+  font-style: normal;
+  border-bottom-color: var(--accent);
+}
+
+.manner {
+  flex-basis: 100%;
+  margin: 0.15rem 0 0;
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- the text ---------- */
+
+.text {
+  position: relative;
+  margin-top: clamp(2rem, 5vw, 3.25rem);
+  padding-top: clamp(1.75rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--rule);
+  transition: opacity 0.18s ease;
+}
+.text.is-out { opacity: 0; }
+
+/* title page of whichever form is showing */
+.leaf { margin: 0 0 clamp(2rem, 5vw, 3rem); max-width: 40rem; }
+.leaf .eyebrow {
+  margin: 0 0 0.6rem;
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.leaf h2 {
+  margin: 0;
+  font-size: var(--s3);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+}
+.leaf .sub {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* A block = a few rows that share one marginal gloss. */
+.block {
+  display: grid;
+  grid-template-columns: var(--num-w) minmax(0, 1fr) var(--gloss-w);
+  column-gap: var(--gap);
+  align-items: baseline;
+  row-gap: 0.55rem;
+}
+.block + .block { margin-top: 1.9rem; }
+.block.tight + .block.tight { margin-top: 0.9rem; }
+.block.loose + .block { margin-top: 2.75rem; }
+.block.block.gap { margin-top: 2.75rem; }
+
+.row { display: contents; }
+.row > .num  { grid-column: 1; grid-row: var(--r); }
+.row > .body { grid-column: 2; grid-row: var(--r); margin: 0; min-width: 0; }
+h3.body { font-weight: 500; }
+.row.wide > .body { grid-column: 1 / 3; }
+
+.num {
+  justify-self: end;
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'lnum', 'tnum';
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* the hanging margin rule, like the gutter of a printed book */
+.text::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: calc(var(--num-w) + var(--gap) / 2);
+  width: 1px;
+  background: var(--rule);
+  opacity: 0.7;
+}
+
+/* marginal gloss */
+.gloss {
+  grid-column: 3;
+  grid-row: 1 / span var(--span, 1);
+  align-self: start;
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--rule);
+  font-size: var(--s-1);
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+.gloss-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* hover/focus pairs a gloss with its rows */
+.block:hover > .gloss,
+.block:focus-within > .gloss {
+  border-left-color: var(--accent);
+  color: var(--ink);
+}
+.block:has(> .gloss:hover) .row > .body,
+.block:has(> .gloss:hover) .row > .num {
+  background: var(--wash);
+}
+
+/* ---------- Tractatus ---------- */
+
+.tlp .top .body { font-size: var(--s2); line-height: 1.25; font-weight: 400; }
+.tlp h3.body a { font-weight: 500; }
+.tlp .top .num  { font-size: 0.95rem; }
+.tlp .d3 .body  { font-size: 0.94em; }
+.tlp .d3 .num   { font-size: 0.72rem; }
+.tlp .ladder .body { font-style: italic; }
+
+.ghost .body { color: var(--muted); font-style: italic; }
+.ghost .num  { color: var(--muted); }
+
+/* ---------- Ethics ---------- */
+
+.eth .num { font-size: 0.74rem; }
+.eth .rubric {
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--ink);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.25rem;
+}
+.eth .prop {
+  font-size: var(--s1);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.eth .label {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+  font-style: normal;
+  color: var(--accent);
+  margin-right: 0.15em;
+}
+.eth .qed {
+  display: block;
+  text-align: right;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* ---------- Dialogue ---------- */
+
+.dlg .speech .body { text-wrap: pretty; }
+.dlg .who {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-right: 0.35em;
+}
+.dlg .who.socrates { color: var(--accent); }
+.dlg .num { color: var(--muted); }
+.dlg .stage {
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ---------- links that leave the page / go to a project ---------- */
+
+a[href^='http']:not(.go)::after { content: '\2197'; font-size: 0.7em; margin-left: 0.15em; vertical-align: 0.25em; display: inline-block; text-decoration: none; }
+
+/* ---------- colophon ---------- */
+
+.colophon {
+  margin-top: clamp(3rem, 8vw, 5.5rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: var(--s-1);
+  color: var(--muted);
+}
+.colophon p { margin: 0 0 0.35rem; }
+.colophon .fine { font-size: 0.72rem; max-width: 34rem; }
+
+/* ---------- noscript ---------- */
+
+.plain { max-width: 36rem; }
+.plain h2 { font-size: var(--s2); font-weight: 400; margin: 1.5rem 0 0.5rem; }
+.plain li { margin: 0.4rem 0; }
+.plain-note { color: var(--muted); font-style: italic; }
+
+/* ---------- narrow screens: numbers above text, glosses inline ---------- */
+
+@media (max-width: 60rem) {
+  :root { --gutter: 1.25rem; }
+  .text::before { display: none; }
+  .block { display: block; }
+  .row { display: block; margin-bottom: 0.7rem; }
+  .row.wide { margin-bottom: 0.4rem; }
+  .row > .num {
+    display: block;
+    justify-self: start;
+    text-align: left;
+    margin-bottom: 0.05rem;
+  }
+  .row > .num:empty { display: none; }
+  .gloss {
+    margin: 0.2rem 0 0 0;
+    padding: 0.1rem 0 0.1rem 0.9rem;
+    border-left: 2px solid var(--rule);
+    font-size: 0.92em;
+  }
+  .gloss-label { display: inline; margin: 0 0.4em 0 0; }
+  .block + .block { margin-top: 1.9rem; }
+}
+
+@media (max-width: 30rem) {
+  .tlp .top .body { font-size: var(--s1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text { transition: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+@media print {
+  #ink, body::after, .forms, .theme { display: none; }
+  body { background: #fff; color: #000; }
+}

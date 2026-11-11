@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+/* Old deep links. The bookshop used to live at "/", so shared links look like
+   philosophicaltech.com/#/front. Send them where the shop lives now, before
+   anything renders. The form hashes (#tractatus …) have no slash: no clash. */
+if (/^#\/[\w-]+/.test(location.hash)) location.replace('/bookshop/' + location.search + location.hash);
+/* Apply a remembered theme before first paint (no flash). Storage can throw. */
+try { var t = localStorage.getItem('pt-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philosophical Tech — Jesper Hodge</title>
+<meta name="description" content="The work of Jesper Hodge, who studied philosophy and does deep thinking and thoughtful tech — set out as a Tractatus, a geometrical Ethics, or a Socratic dialogue.">
+<link rel="canonical" href="https://philosophicaltech.com/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3eee2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14120f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Philosophical Tech">
+<meta property="og:title" content="Philosophical Tech — Jesper Hodge">
+<meta property="og:description" content="Deep thinking and thoughtful tech, read as a Tractatus, a geometrical Ethics, or a Socratic dialogue.">
+<meta property="og:url" content="https://philosophicaltech.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Philosophical Tech — Jesper Hodge">
+<meta name="twitter:description" content="Deep thinking and thoughtful tech, read as a Tractatus, a geometrical Ethics, or a Socratic dialogue.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231d1b17'/><path d='M9 9.5h14.5L13 25' fill='none' stroke='%23f3eee2' stroke-width='2.6' stroke-linejoin='miter'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..600;1,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/home/style.css">
+<script type="module" src="/home/main.js"></script>
+</head>
+<body>
+<canvas id="ink" aria-hidden="true"></canvas>
+
+<div class="page">
+  <header class="masthead">
+    <div class="topbar">
+      <span class="who">Jesper Hodge</span>
+      <div class="theme" id="theme"></div>
+    </div>
+    <h1 class="title">Philosophical <em>Tech</em></h1>
+    <p class="about">Studied philosophy. Does deep thinking and thoughtful tech. Builds things.</p>
+    <div class="forms" id="forms"></div>
+  </header>
+
+  <main id="text" class="text" tabindex="-1">
+    <noscript>
+      <section class="plain">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="/bookshop/">The Nowhere Bookshop</a> (2026) — a curated 3D bookshop: wander the rooms, pull books off the shelf, buy from an independent seller. Hand-written three.js, no build step.</li>
+        </ul>
+        <h2>Correspondence</h2>
+        <ul>
+          <li><a href="https://github.com/jesperhodge">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jesper-hodge">LinkedIn</a></li>
+        </ul>
+        <p class="plain-note">This page can be read as a Tractatus, a geometrical Ethics, or a Socratic dialogue, if JavaScript is available. It is not required for anything else.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <footer class="colophon">
+    <p>Hand-set in HTML. No framework was harmed.</p>
+    <p class="fine">Set in EB Garamond and IBM Plex Mono. The line in the background is a random walk with momentum; it is not trying to prove anything.</p>
+  </footer>
+</div>
+</body>
+</html>
