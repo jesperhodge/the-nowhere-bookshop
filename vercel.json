@@ -2,28 +2,48 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
-    { "src": "src/**", "use": "@vercel/static" },
-    { "src": "vendor/**", "use": "@vercel/static" },
+    { "src": "home/**", "use": "@vercel/static" },
+    { "src": "bookshop/index.html", "use": "@vercel/static" },
+    { "src": "bookshop/src/**", "use": "@vercel/static" },
+    { "src": "bookshop/vendor/**", "use": "@vercel/static" },
     {
-      "src": "api/index.js",
+      "src": "bookshop/api/index.js",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": "{data/cache/hardcover.json,data/cache/openlibrary.json,server/fixtures/**,data/lists/**}"
+        "includeFiles": "{bookshop/data/cache/hardcover.json,bookshop/data/cache/openlibrary.json,bookshop/server/fixtures/**,bookshop/data/lists/**}"
       }
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" }
+    { "source": "/bookshop/api/(.*)", "destination": "/bookshop/api" }
   ],
   "headers": [
     {
-      "source": "/vendor/(.*)",
+      "source": "/bookshop/vendor/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/src/(.*)",
+      "source": "/bookshop/src/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/home/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/bookshop/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/bookshop/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]

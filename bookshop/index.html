@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+/* Served at /bookshop/ in production: at /bookshop (no slash) every relative URL
+   below would resolve against /, so add the slash before anything else loads. */
+if (/\/bookshop$/.test(location.pathname)) location.replace(location.pathname + '/' + location.search + location.hash);
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Nowhere Bookshop — a small shop that goes on forever</title>
 <meta name="description" content="A curated 3D bookshop. Wander the rooms, pull books off the shelf, read the blurb, and buy from an independent seller. Every shelf hand-picked from prize lists and critics' choices — never bestsellers by default.">
@@ -37,8 +42,8 @@
      needs only these two entries. -->
 <script type="importmap">
 { "imports": {
-    "three": "/vendor/three/build/three.module.js",
-    "three/addons/": "/vendor/three/examples/jsm/"
+    "three": "./vendor/three/build/three.module.js",
+    "three/addons/": "./vendor/three/examples/jsm/"
 } }
 </script>
 </head>

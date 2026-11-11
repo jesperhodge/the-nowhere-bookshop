@@ -8,13 +8,13 @@
    Express app exists only because Vercel's Node runtime accepts one
    directly as the default export (an Express app IS a
    `(req, res) => {}` handler), and the app's only job is mounting
-   apiRouter() where vercel.json's rewrite sends every /api/* request.
+   apiRouter() where vercel.json's rewrite sends every /bookshop/api/* request.
 
-   No static serving here — Vercel's CDN serves index.html, src/ and
-   vendor/ directly (vercel.json), and a serverless function has no
+   No static serving here — Vercel's CDN serves bookshop/index.html, bookshop/src/
+   and bookshop/vendor/ directly (vercel.json), and a serverless function has no
    business handing those out.
 
-   data/cache/ and server/fixtures/ are NOT visible to this function
+   bookshop/data/cache/ and bookshop/server/fixtures/ are NOT visible to this function
    by default: Vercel's build only includes what it can see via a
    static import/require graph, and both directories are read at
    runtime with fs.readFileSync() using paths built from strings —
@@ -34,6 +34,8 @@ import { apiRouter } from '../server/routes.js';
 
 const app = express();
 app.disable('x-powered-by');
-app.use('/api', apiRouter());
+/* Vercel rewrites keep the original URL in req.url, so in prod Express sees
+   /bookshop/api/...; '/api' is kept so the same function also answers there. */
+app.use(['/bookshop/api', '/api'], apiRouter());
 
 export default app;

@@ -21,7 +21,7 @@ export function fetchBookFacts(book) {
   const p = (async () => {
     try {
       const qs = new URLSearchParams({ title: book.title, author: book.author });
-      const res = await fetch(`/api/book?${qs}`);
+      const res = await fetch(`api/book?${qs}`);
       if (!res.ok) return null;
       const data = await res.json();
       return data && data.source !== 'miss' ? data : null;
