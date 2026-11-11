@@ -14,11 +14,15 @@ each accolade kept alongside it.
 
 ## Run it
 
-**No install needed to just look at it.** Open `index.html` in a browser, or
-serve the folder with anything static:
+This folder is one project inside the repo-wide site (see the root
+`README.md`): in production it lives at `/bookshop/`, and the npm scripts
+below are run **from the repo root**, not from here.
+
+**No install needed to just look at it.** Open `bookshop/index.html` in a
+browser, or serve this folder with anything static:
 
 ```sh
-python3 -m http.server 8000     # then visit http://localhost:8000
+cd bookshop && python3 -m http.server 8000     # then visit http://localhost:8000
 ```
 
 That gives you the whole shop on baked data — every book's ISBN, page count
@@ -29,40 +33,47 @@ calls, nothing to configure.
 snapshot missed, plus the harvested award lists:
 
 ```sh
-npm install          # only needed once
-npm start            # Express on :8099
+npm install          # only needed once, at the repo root
+npm start            # the bookshop alone, at /, Express on :8099
+npm run dev          # the whole site as Vercel serves it: / and /bookshop/, on :8080
 ```
 
 Then open <http://localhost:8099>. Without a `.env` holding `HARDCOVER_TOKEN`
 this runs on fixtures, which is the intended offline default — nothing is
-broken, `/api/book` just answers from `data/cache/` and
-`server/fixtures/catalogue.json` instead of a live API. `npm run mock` forces
+broken, `/api/book` just answers from `bookshop/data/cache/` and
+`bookshop/server/fixtures/catalogue.json` instead of a live API. `npm run mock` forces
 fixture mode even when a token is present, for deterministic offline work.
 
 No build step, ever. This is a static folder plus ES modules; the server is
-optional and only adds `/api`.
+optional and only adds `/api`. The page uses only relative URLs (`./vendor/…`,
+`api/book`), so the same files work at `/` (`npm start`) and at `/bookshop/`
+(`npm run dev`, Vercel). `HARDCOVER_TOKEN` goes in `bookshop/.env` (see
+`bookshop/.env.example`).
 
 ## Deploy it
 
-The shop deploys to **Vercel** as a static site (CDN: `index.html`, `src/`,
-`vendor/`) plus one serverless function (`api/index.js`) wrapping the exact
-same router `server/index.js` uses locally — `server/routes.js` is the one
-place `/api/book` and `/api/list/:slug` are implemented, imported by both.
-`vercel.json` wires it up:
+The shop deploys to **Vercel** at `/bookshop/` as a static site (CDN:
+`bookshop/index.html`, `bookshop/src/`, `bookshop/vendor/`) plus one
+serverless function (`bookshop/api/index.js`, answering `/bookshop/api/*`)
+wrapping the exact same router `server/index.js` uses locally —
+`server/routes.js` is the one place `/api/book` and `/api/list/:slug` are
+implemented, imported by both. The function mounts the router at both
+`/bookshop/api` (production) and `/api`. The repo-root `vercel.json` wires it
+up, and its `builds` array is an allowlist — only what it names is public:
 
 ```sh
-npx vercel build      # or: npx vercel deploy, with a real account/project
+npx vercel build      # from the repo root; or: npx vercel deploy, with a real account/project
 ```
 
 What to know before deploying for real:
 
 - **Set `HARDCOVER_TOKEN`** as a Vercel project environment variable if you
   want live lookups; leave it unset and the function runs on
-  `data/cache/*.json` + `server/fixtures/catalogue.json` (committed, via
-  `vercel.json`'s `includeFiles`) — the same offline default as local
+  `bookshop/data/cache/*.json` + `bookshop/server/fixtures/catalogue.json`
+  (committed, via `vercel.json`'s `includeFiles`) — the same offline default as local
   fixture mode. **Never** put it in the client — nothing under `src/` or
   `index.html` ever references it (checked: `grep -r HARDCOVER_TOKEN src/
-  index.html` — zero hits), and it must stay server-side per Hardcover's own
+  index.html` from this folder — zero hits), and it must stay server-side per Hardcover's own
   terms.
 - **`GOOGLE_BOOKS_KEY`** is build/tooling-only (`tools/describe.mjs`, run by
   hand, not by the deployed function) and is not read anywhere `api/`
@@ -122,8 +133,8 @@ easy reach at any scroll position, alongside the existing scrim-tap and
 ## How it is built
 
 ```
+(this folder is bookshop/ — vercel.json, package.json and dev.mjs are one level up)
 index.html
-vercel.json          Vercel: static + the one /api function, headers, includeFiles
 api/index.js         the Vercel serverless function — wraps server/routes.js, nothing else
 server/
   index.js           Express: static (local dev only) + mounts the same router

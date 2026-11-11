@@ -4,6 +4,8 @@ This project has one hard rule: **Opus thinks, Sonnet types.** Opus is
 expensive and good at judgment; Sonnet (and Haiku) are cheap and good at
 following instructions. Route every task by that split, not by habit.
 
+The bookshop's `PLAN*.md`, `HANDOFF*.md` and `IMPLEMENTATION.md` now live in `bookshop/` (the repo root holds only `PLAN-HOMEPAGE.md`).
+
 ## The workflow
 
 ```
