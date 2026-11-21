@@ -5,6 +5,7 @@
   "description": "A curated 3D bookshop. The site itself needs no install — this only serves /api and enrichment tooling.",
   "type": "module",
   "scripts": {
+    "test": "node --test tests/",
     "start": "node server/index.js",
     "mock": "HARDCOVER_MOCK=1 node server/index.js",
     "qa": "node tools/qa.mjs",

@@ -4,6 +4,8 @@
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "src/**", "use": "@vercel/static" },
     { "src": "vendor/**", "use": "@vercel/static" },
+    { "src": "shop/config.js", "use": "@vercel/static" },
+    { "src": "shop/assets/**", "use": "@vercel/static" },
     {
       "src": "api/index.js",
       "use": "@vercel/node",
