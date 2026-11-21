@@ -1,0 +1,1365 @@
+/* ============================================================
+   The Nowhere Bookshop — chrome, panels, overlays
+   ============================================================ */
+
+/* ─── the stage ────────────────────────────────────────────────
+   The room is a WebGL canvas as of phase 10. Everything else in
+   here came over from scene.css when that file was retired,
+   unchanged except where the note says otherwise: the grain and
+   the vignette carry a lot of the mood and IMPLEMENTATION.md §4.5
+   is explicit that they stay on top of the canvas exactly as they
+   were. */
+
+.stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0a0706;
+  /* `perspective`/`perspective-origin` lived here and are gone with
+     the CSS 3D world — the camera is a real camera now (stage.js
+     §4.2 reproduces the same framing). `cursor: grab` is gone too:
+     there is nothing to drag, and interact.js sets `pointer` on the
+     canvas itself whenever something under it is clickable. */
+  touch-action: none;
+}
+
+/* The room itself. Sized by stage.js's resize() from this element's
+   own box, so it must fill it exactly. */
+.scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* dust, embers, rain — one canvas over the whole stage */
+.ambience {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: .85;
+  mix-blend-mode: screen;
+}
+
+.vignette {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(132% 100% at 50% 46%, transparent 52%, rgba(0,0,0,.34) 82%, rgba(0,0,0,.66) 100%);
+}
+.grain {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  opacity: .045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* covers.js's coverSVG() grain rect — a class instead of a style=
+   attribute so it doesn't need 'unsafe-inline' in the CSP's style-src
+   (vercel.json, PHI-13 S3). mix-blend-mode has no SVG presentation
+   attribute equivalent, so this can't just move to opacity=/fill=. */
+.cv-grain { mix-blend-mode: overlay; }
+
+/* the floating name-tag that follows the book you're pointing at.
+   main.js re-projects it from the camera every frame while it is on —
+   the camera moves under it during a pose tween. */
+.tag {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  padding: .5rem .8rem .55rem;
+  border-radius: 8px;
+  background: rgba(20,14,11,.93);
+  border: 1px solid rgba(217,164,79,.3);
+  box-shadow: 0 14px 34px -14px #000;
+  backdrop-filter: blur(6px);
+  transform: translate(-50%, -118%);
+  opacity: 0;
+  transition: opacity .18s var(--ease);
+  max-width: 20rem;
+}
+.tag.is-on { opacity: 1; }
+.tag__t { font-family: var(--font-display); font-size: .96rem; line-height: 1.2; color: var(--paper); }
+.tag__a { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .05em; color: var(--brass); margin-top: .2rem; }
+/* --ink-faint measured 3.93:1 here — under 4.5 even against this tag's own
+   .93-alpha plate (it needs ~.99 to clear 4.5:1 at this text size). Moved
+   to --ink-dim, same fix as .crumb / .placard__kicker. */
+.tag__x { font-family: var(--font-ui); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin-top: .35rem; }
+
+/* ─── travelling between rooms ──────────────────────────────────
+   Same four beats and the same 300ms hand-over go() has always used,
+   moved from the old .travel node onto the canvas. `translateZ` gave
+   way to `scale` because there is no perspective context left to give
+   it depth — the felt effect is the same. Driving this from the CAMERA
+   instead was the tempting move and the wrong one: poses.js owns the
+   camera, and a second thing moving it is the class of bug that file
+   warns about twice. */
+#scene.go-in      { animation: travelInOut .46s var(--ease-in-out) forwards; }
+#scene.go-out     { animation: travelOutIn .46s var(--ease-in-out) forwards; }
+#scene.arrive-in  { animation: arriveIn .62s var(--ease) backwards; }
+#scene.arrive-out { animation: arriveOut .62s var(--ease) backwards; }
+
+@keyframes travelInOut { to   { transform: scale(2.6); opacity: 0; filter: brightness(1.5) } }
+@keyframes arriveIn    { from { transform: scale(.45); opacity: 0 } }
+@keyframes travelOutIn { to   { transform: scale(.45); opacity: 0; filter: brightness(.4) } }
+@keyframes arriveOut   { from { transform: scale(2.4); opacity: 0; filter: brightness(1.4) } }
+
+/* dim the room while a book is in your hands */
+.stage { transition: filter .4s var(--ease), transform .5s var(--ease); }
+body.is-reading .stage { filter: brightness(.42) saturate(.7); transform: scale(.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  #scene { animation: none !important; }
+}
+
+/* ─── no WebGL ──────────────────────────────────────────────────
+   Not an error page. The shop is entirely usable from here — the
+   shelf list, the plan and search are a complete text UI for all
+   fifty rooms, and main.js opens the shelf for you (§4.7). */
+.flat {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: 8vh 2rem;
+  text-align: center;
+  background: radial-gradient(120% 90% at 50% 30%, rgba(255,176,88,.10), transparent 62%), #0d0a09;
+}
+.flat__inner { max-width: 30rem; }
+.flat__hd { font-family: var(--font-display); font-size: 1.5rem; color: var(--paper); margin: 0 0 1rem; }
+.flat__p { font-size: .94rem; line-height: 1.7; color: var(--ink-dim); margin: 0 0 .8rem; }
+.flat__keys { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .08em; color: var(--ink-faint); margin: 1.6rem 0 0; }
+.flat__keys kbd {
+  font-family: var(--font-mono); font-size: .72rem;
+  padding: .12rem .4rem; border-radius: 4px;
+  border: 1px solid rgba(217,164,79,.32); color: var(--brass);
+}
+
+/* ─── top bar ──────────────────────────────────────────────── */
+
+.topbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 30;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 1.3rem;
+  /* PLAN-MOBILE.md M9: index.html's viewport-fit=cover means the page
+     can draw under the notch/status-bar island and the home indicator —
+     nothing stopped it from doing so until now. The plain declaration
+     above is the fallback for a browser that does not know `env()`;
+     this one is only ever reached when it does, and only ever adds to
+     the layout padding already there (a device with no cutout gets
+     `env(...)` = 0, i.e. bit-identical to the line above). Left/right
+     too, not just top — landscape puts the notch on a SIDE. */
+  padding: calc(1.05rem + env(safe-area-inset-top))
+           calc(1.3rem + env(safe-area-inset-right))
+           1.05rem
+           calc(1.3rem + env(safe-area-inset-left));
+  background: linear-gradient(180deg, rgba(10,7,6,.86), rgba(10,7,6,.42) 55%, transparent);
+  pointer-events: none;
+}
+.topbar > * { pointer-events: auto; }
+
+/* One shared plate under the whole trail, not one per crumb: separators
+   ("▸") are children of .crumbs too and would otherwise float over the
+   canvas with no backdrop of their own. See the .placard comment above
+   for why this is two layers (flat plate + outer glow) rather than one. */
+.crumbs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .1rem .12rem;
+  font-family: var(--font-ui);
+  font-size: .84rem;
+  max-width: min(62vw, 60rem);
+  padding: .3rem .5rem;
+  border-radius: 999px;
+}
+.crumbs::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -.55rem -.8rem;
+  border-radius: 999px;
+  background: radial-gradient(closest-side, rgba(20,14,9,.32), rgba(20,14,9,0) 100%);
+}
+.crumbs::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(20,14,9,.90);
+}
+.crumb {
+  padding: .3rem .5rem;
+  border-radius: 6px;
+  /* --ink-faint needs ~.99 plate alpha to clear 4.5:1 at this text size —
+     far past what still reads as a soft plate rather than a box, so the
+     default crumb colour moved up to --ink-dim (needs .795, safe with
+     margin at the .90 plate above). --brass-soft was ruled out the same
+     way for .placard__kicker; this is that same fix. */
+  color: var(--ink-dim);
+  letter-spacing: .04em;
+  transition: color .2s, background .2s;
+  white-space: nowrap;
+}
+a.crumb:hover { color: var(--paper); background: rgba(255,255,255,.08); }
+.crumb--now { color: var(--brass); font-weight: 600; }
+.crumb__sep { color: var(--ink-dim); font-size: .7rem; padding: 0 .05rem; }
+
+.topbar__tools { display: flex; gap: .4rem; align-items: center; }
+
+.tool {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .5rem .85rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  letter-spacing: .05em;
+  color: var(--ink-dim);
+  /* .72 measured 3.18:1 against a worst-case-white scene — well under the
+     4.5 this text needs. rgba(20,14,9,.90) is the same guaranteed plate as
+     the placard/dock/crumbs; backdrop-filter: blur() doesn't undermine it
+     (blurring a uniform worst-case white backdrop is still uniform white,
+     so the bound above assumed the worst case already). */
+  background: rgba(20,14,9,.90);
+  border: 1px solid rgba(217,164,79,.18);
+  backdrop-filter: blur(8px);
+  transition: color .2s, border-color .2s, background .2s, transform .2s var(--ease);
+}
+.tool:hover { color: var(--paper); border-color: rgba(217,164,79,.5); background: rgba(20,14,9,.95); transform: translateY(-1px); }
+.tool svg { width: 17px; height: 17px; }
+.tool--icon { padding: .5rem; }
+.tool__badge {
+  position: absolute; top: -5px; right: -3px;
+  min-width: 18px; height: 18px;
+  display: grid; place-items: center;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--brass);
+  color: #1b120d;
+  font-size: .66rem; font-weight: 700;
+}
+#btnSound .ic-off { display: none; }
+#btnSound[aria-pressed="false"] .ic-on { display: none; }
+#btnSound[aria-pressed="false"] .ic-off { display: block; }
+#btnSound[aria-pressed="true"] { color: var(--brass); border-color: rgba(217,164,79,.5); }
+
+@media (max-width: 780px) { .tool__txt { display: none; } .tool { padding: .55rem; } }
+
+/* ─── room placard ─────────────────────────────────────────── */
+
+/* PLAN-CONTRAST.md's guarantee: composite behind a glyph is α·P + (1−α)·S,
+   worst case S is pure white (the lamp), so the plate's α has to clear the
+   scene at that worst case — not just look fine in whatever room this was
+   last eyeballed in. P = rgb(20,14,9) here throughout; α = .90 clears every
+   token below with margin (paper/ink ≥.64 needed, ink-dim/brass ≥.795,
+   see the plan's table) EXCEPT --brass-soft (needs .88, and even that isn't
+   enough at normal-text size) — which is why it is retired from every
+   surface below and replaced with --brass.
+
+   The plate is ::after, flat, exactly the size of .placard's own (now
+   padded) box — nothing outside that box can hold a glyph, so nothing
+   outside it needs to be opaque. ::before is the "lamplight pooling"
+   glow: bigger, blurred, lower-alpha, painted BEHIND the flat plate and
+   entirely outside the region any character can land in. Same two-layer
+   shape is reused for .crumbs, .dock__btn, .tool and .hint below — the
+   feather is always the outer layer, never the one the text sits on. */
+.placard {
+  position: absolute;
+  left: 50%;
+  /* Desktop-only position (the mobile media query below overrides `top`
+     again with a fixed rem, and mobile's placardArrival ALSO fades the
+     placard out after ~2.6s — see that keyframe's own comment — so this
+     collision never lingers there). On a wide/permanent desktop placard
+     (placardIn fades in and then STAYS — no fade-out keyframe — for as
+     long as the reader is in the `room` pose) the OLD 4.6rem put the
+     plate's box across y ≈74-252px of an 880-tall window, which is
+     exactly where the 'hang' lamp's shade+cord render (measured via
+     Box3+project(): shade spans y ≈129-236px at 1400×880, i.e. ≈15-27%
+     of viewport height — a FRACTION independent of aspect, since a
+     perspective camera's vertical FOV alone fixes vertical framing; see
+     stage.js's makeCamera()/fovForAspect()) — the plate sat squarely
+     over the fixture for the entire visit. 27vh clears the shade's own
+     26.9% and lands the plate on the plain wall panel below it and
+     above the shelf case's own top (≈47vh) — the same gap every k-panel
+     room's standard case height and 'hang' lamp slot leave open. A
+     description line long enough to wrap to 2 lines can still nudge the
+     plate's bottom into the case top on some rooms; that is a shelf
+     partly captioned, not a permanent light fixture hidden, and is the
+     one still-open edge of this fix. Alpha is UNCHANGED (PLAN-CONTRAST.md
+     — qa's static check enforces --brass/--paper/--ink-dim against
+     rgba(20,14,9,.90); never lower it to "solve" an overlap): this is a
+     position change only. */
+  top: 27vh;
+  top: calc(27vh + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
+  translate: -50% 0;
+  z-index: 25;
+  text-align: center;
+  pointer-events: none;
+  max-width: min(46rem, 88vw);
+  padding: 1.05rem 2.15rem 1.3rem;
+  animation: placardIn .8s var(--ease) both;
+}
+@keyframes placardIn { from { opacity: 0; transform: translateY(-10px) } }
+.placard::before,
+.placard::after { content: ""; position: absolute; z-index: -1; pointer-events: none; }
+.placard::before {
+  inset: -2.6rem -3.4rem;
+  background: radial-gradient(closest-side, rgba(20,14,9,.4), rgba(20,14,9,0) 100%);
+}
+.placard::after {
+  inset: 0;
+  border-radius: 16px;
+  background: rgba(20,14,9,.90);
+  border: 1px solid rgba(217,164,79,.14);
+}
+/* Stepped up to a shelf or over the table: the room's name is a caption
+   printed across the books. It goes; the dock and the breadcrumbs stay,
+   because those are how you get back out. */
+/* `animation: none` matters on mobile specifically: the mobile media
+   query below gives `.placard` its own placardArrival fade-in-hold-fade
+   keyframe, which — while running — owns `opacity` ahead of this rule's
+   plain value (a running CSS animation beats a transition on the same
+   property, per spec). Cancelling the animation outright, not just
+   overriding its end value, is what makes stepping to a shelf hide the
+   placard on the SAME .4s beat it always did, instead of waiting out
+   whatever's left of the arrival fade. */
+body.is-close .placard { animation: none; opacity: 0; transition: opacity .4s var(--ease); }
+/* `animation: none` here too — same reasoning as .placard just above.
+   .hint runs its own fadeInOut for up to 6.2s after arrival (main.js's
+   showHint()); stepping to a shelf/table pose inside that window used
+   to leave the hint's own animation still driving `opacity`, sitting
+   right across the shelf it was just floated over. */
+body.is-close .hint { animation: none; opacity: 0; transition: opacity .4s var(--ease); }
+.placard__kicker {
+  font-family: var(--font-ui);
+  font-size: .66rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: .5rem;
+}
+.placard__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+  line-height: 1.05;
+  color: var(--paper);
+  text-shadow: 0 2px 24px rgba(0,0,0,.9), 0 0 60px rgba(0,0,0,.7);
+}
+.placard__line {
+  margin-top: .55rem;
+  font-size: clamp(.86rem, 1.7vw, .98rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--ink-dim);
+  text-shadow: 0 2px 14px rgba(0,0,0,.95);
+}
+.placard__count {
+  margin-top: .5rem;
+  font-family: var(--font-ui);
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* ─── bottom dock ──────────────────────────────────────────── */
+
+.dock {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 30;
+  display: flex;
+  align-items: flex-end;
+  gap: .8rem;
+  padding: 1rem 1.3rem 1.15rem;
+  /* PLAN-MOBILE.md M9 — see .topbar's comment for the fallback pattern.
+     The bottom edge is the home-indicator bar; left/right for landscape. */
+  padding: 1rem
+           calc(1.3rem + env(safe-area-inset-right))
+           calc(1.15rem + env(safe-area-inset-bottom))
+           calc(1.3rem + env(safe-area-inset-left));
+  background: linear-gradient(0deg, rgba(9,6,5,.92), rgba(9,6,5,.55) 46%, transparent);
+  pointer-events: none;
+}
+.dock > * { pointer-events: auto; }
+
+.dock__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  flex: 0 0 auto;
+  padding: .62rem 1rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  letter-spacing: .05em;
+  color: var(--ink-dim);
+  /* .75 measured 3.55:1 — the same guaranteed plate as .placard/.tool. */
+  background: rgba(20,14,9,.90);
+  border: 1px solid rgba(217,164,79,.2);
+  backdrop-filter: blur(8px);
+  transition: color .2s, border-color .2s, transform .2s var(--ease), background .2s;
+}
+.dock__btn svg { width: 18px; height: 18px; }
+.dock__btn:hover:not([disabled]) { color: var(--paper); border-color: rgba(217,164,79,.55); transform: translateY(-2px); }
+/* Both back controls: Back is disabled in the front room, and so is the way
+   home, because you are already standing in it. No `pointer-events: none` —
+   a real disabled button swallows the click by itself, whereas that makes it
+   a hole in the dock and the click lands on whatever book or doorway happens
+   to be behind. :not([disabled]) on the hover rule is what it was there for. */
+/* opacity, not colour, and deliberately exempt from the contrast guarantee
+   above: WCAG 1.4.3 explicitly excludes disabled/inactive controls, and a
+   translucent disabled state necessarily dilutes the plate along with the
+   text (the same group-opacity trap the door sign had — see doors.js) — so
+   this is the one place on-canvas text is allowed to be unreadable, because
+   it is a button you cannot press. tools/qa.mjs's contrast probe skips
+   [disabled] for exactly this reason. */
+.dock__btn[disabled] { opacity: .32; cursor: default; }
+.dock__btn--bell { color: var(--brass); }
+.dock__btn--bell:hover .dock__bell { animation: ring .5s var(--ease); }
+@keyframes ring { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-16deg) } 60% { transform: rotate(12deg) } }
+.dock__bell { display: grid; place-items: center; }
+
+.hint {
+  position: absolute;
+  left: 50%; bottom: 5.4rem;
+  bottom: calc(5.4rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
+  translate: -50% 0;
+  z-index: 24;
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding: .5rem .95rem;
+  /* Not 999px: at this element's own height a full pill's corner radius
+     (~half the height) sits close enough to the padding that a probe
+     sampling this box's literal rectangle could clip the rounded-off
+     corner — real for any pill-shaped plate, not just this one, see
+     tools/contrast.mjs's note on why .dock__btn/.tool are probed via
+     their inner span instead. A softer 10px radius keeps the "pooled
+     light" plate but stays well inside the padding on every side. */
+  border-radius: 10px;
+  background: rgba(20,14,9,.90);
+  pointer-events: none;
+  animation: fadeInOut 6s var(--ease) forwards;
+}
+@keyframes fadeInOut { 0% { opacity: 0 } 12%,64% { opacity: 1 } 100% { opacity: 0 } }
+
+/* ─── the book sheet (taking a book in your hands) ─────────── */
+
+.sheet { position: fixed; inset: 0; z-index: 60; }
+.sheet__scrim {
+  position: absolute; inset: 0;
+  background: rgba(6,4,3,.62);
+  backdrop-filter: blur(3px);
+  animation: fade .3s var(--ease);
+}
+@keyframes fade { from { opacity: 0 } }
+
+.sheet__body {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: min(46rem, 100vw);
+  background:
+    radial-gradient(80% 40% at 90% 0%, rgba(217,164,79,.09), transparent 70%),
+    linear-gradient(180deg, #1e1613, #150f0d);
+  border-left: 1px solid rgba(217,164,79,.24);
+  box-shadow: -40px 0 90px -30px rgba(0,0,0,.9);
+  display: flex;
+  flex-direction: column;
+  animation: slideIn .42s var(--ease);
+  outline: none;
+}
+@keyframes slideIn { from { transform: translateX(100%) } }
+.sheet.is-closing .sheet__body { animation: slideOut .3s var(--ease) forwards; }
+.sheet.is-closing .sheet__scrim { animation: fadeOut .3s var(--ease) forwards; }
+@keyframes slideOut { to { transform: translateX(100%) } }
+@keyframes fadeOut { to { opacity: 0 } }
+
+/* `overflow: hidden` earns its own note, same as `.overlay__body`'s
+   below: `.bd` is a flex item of `.sheet__body` (column direction) with
+   no explicit width, so it stretches to fill it — except that a flex
+   item's `width: auto` carries a content-based "automatic minimum size"
+   floor whenever its own `overflow` is `visible` (CSS Sizing
+   §automatic-minimum-size), and `.bd__navbtn span`'s prev/next title is
+   `white-space: nowrap`. At mobile widths (§the media query below,
+   `.sheet__body` at `100vw` instead of desktop's 736px) a long
+   neighbouring title's un-shrinkable min-content width can exceed the
+   phone's actual width, and without this, `.bd` floors itself to that
+   width and pushes a real horizontal scrollbar — measured, a 320px
+   `.sheet__body` holding a 364px-floored `.bd`. `overflow: hidden`
+   drops the floor to 0; nothing inside `.bd` actually relies on
+   overflowing it, so nothing is clipped that wasn't already meant to be
+   (`.bd__navbtn span` truncates itself with its own ellipsis exactly as
+   before). */
+.bd { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+
+.bd__top {
+  position: relative;
+  display: grid;
+  grid-template-columns: 15.5rem 1fr;
+  gap: 1.6rem;
+  padding: 1.4rem 1.6rem 1.3rem;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: linear-gradient(180deg, rgba(255,255,255,.028), transparent);
+}
+
+.bd__close {
+  position: absolute;
+  top: .85rem; right: .9rem;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--ink-faint);
+  background: rgba(255,255,255,.05);
+  transition: color .2s, background .2s, transform .2s;
+  z-index: 3;
+}
+.bd__close:hover { color: var(--paper); background: rgba(255,255,255,.12); transform: rotate(90deg); }
+.bd__close svg { width: 16px; height: 16px; }
+
+/* the 3D object you can turn over in your hands.
+
+   The drop-shadow sits on `.hold`, NOT on `.hold__obj`, and that is the
+   whole point of it being written down here. `.hold__obj` carries
+   `transform-style: preserve-3d`, and a computed `filter` other than
+   `none` forces that property's used value to `flat` — the grouping-
+   property trap PLAN.md's Finding B is about, and the one
+   IMPLEMENTATION.md §2 names by element: "do not put a filter on
+   `.hold` or `.hold__obj`". It was on `.hold__obj` from the start, so
+   the book in the panel had never actually been three-dimensional: the
+   spine and fore-edge collapsed into the front cover's plane and only
+   the cover was ever drawn. Found by tools/qa.mjs's own §7 check in
+   phase 10, on the very element the brief warned about.
+
+   `.hold` uses `perspective`, not `preserve-3d`, so the filter here
+   applies to the composited 3D result instead of destroying it — the
+   shadow is unchanged, the book is finally a book, and the check that
+   caught it is in the suite. */
+.hold {
+  perspective: 1400px;
+  display: grid;
+  place-items: center;
+  min-height: 20.5rem;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  filter: drop-shadow(0 34px 40px rgba(0,0,0,.65));
+  /* book.js used to set these two inline, always to the same 190/288 —
+     they never actually varied per book (only --ht, --sp-bg, --sp-ink,
+     --cv-bg2 do, and those are still set inline). Moved here so the
+     mobile media query below can override them: an inline style always
+     wins over a stylesheet rule for the same property regardless of
+     which media query matches, so leaving them inline would have made
+     `.hold`'s mobile override below silently do nothing. */
+  --hw: 190px;
+  --hh: 288px;
+}
+.hold:active { cursor: grabbing; }
+.hold__obj {
+  position: relative;
+  width: var(--hw, 200px);
+  height: var(--hh, 300px);
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, -6deg)) rotateY(var(--ry, -28deg));
+  transition: transform .5s var(--ease);
+}
+.hold.is-dragging .hold__obj { transition: none; }
+.hold__f { position: absolute; left: 50%; top: 50%; translate: -50% -50%; backface-visibility: hidden; overflow: hidden; }
+.hold__front { width: var(--hw); height: var(--hh); transform: translateZ(calc(var(--ht) / 2)); border-radius: 2px 5px 5px 2px; box-shadow: inset 0 0 60px rgba(0,0,0,.3); }
+/* PLAN-SHEETS.md: the cover art is a fixed-viewBox SVG (covers.js's
+   coverSVG) whose own width/height attributes match --hw/--hh on desktop
+   by construction — nobody had to scale it before. The mobile rule below
+   shrinks --hw/--hh without touching that markup, and an <svg> with
+   explicit width/height attributes ignores a smaller container instead of
+   scaling to it, so without this it would get cropped by .hold__f's own
+   `overflow: hidden` rather than shrink. Harmless on desktop: 100% of a
+   190×288 box is still 190×288. */
+.hold__front svg { display: block; width: 100%; height: 100%; }
+.hold__back  { width: var(--hw); height: var(--hh); transform: translateZ(calc(var(--ht) / -2)) rotateY(180deg); border-radius: 5px 2px 2px 5px; background: var(--cv-bg2); }
+.hold__spine { width: var(--ht); height: var(--hh); transform: translateX(calc(var(--hw) / -2)) rotateY(-90deg); background: var(--sp-bg); display: grid; place-items: center; }
+.hold__fore  { width: var(--ht); height: var(--hh); transform: translateX(calc(var(--hw) / 2)) rotateY(90deg); background: repeating-linear-gradient(90deg, #ece1c8 0 2px, #cfc0a0 2px 3px); }
+.hold__top   { width: var(--hw); height: var(--ht); transform: translateY(calc(var(--hh) / -2)) rotateX(90deg); background: repeating-linear-gradient(180deg, #efe4cb 0 2px, #cdbe9c 2px 3px); }
+.hold__bot   { width: var(--hw); height: var(--ht); transform: translateY(calc(var(--hh) / 2)) rotateX(-90deg); background: repeating-linear-gradient(180deg, #d9cbab 0 2px, #b7a687 2px 3px); }
+.hold__spine .hold__sptitle {
+  writing-mode: vertical-rl;
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--sp-ink);
+  white-space: nowrap; overflow: hidden;
+  max-height: calc(var(--hh) - 30px);
+}
+.hold__turn {
+  margin-top: .7rem;
+  font-family: var(--font-ui);
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.26);
+  text-align: center;
+}
+
+.bd__meta { display: flex; flex-direction: column; justify-content: center; padding-right: 2rem; min-width: 0; }
+.bd__title { font-family: var(--font-display); font-size: clamp(1.35rem, 3vw, 1.85rem); line-height: 1.12; color: var(--paper); margin: 0 0 .35rem; }
+.bd__author { font-family: var(--font-ui); font-size: .95rem; letter-spacing: .04em; color: var(--brass); margin: 0 0 .1rem; }
+.bd__facts { font-family: var(--font-ui); font-size: .74rem; letter-spacing: .06em; color: var(--ink-faint); margin: .45rem 0 0; line-height: 1.7; }
+.bd__facts span + span::before { content: "·"; padding: 0 .45rem; opacity: .5; }
+
+.seals { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .85rem; }
+.seal {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .26rem .6rem .3rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .68rem;
+  letter-spacing: .04em;
+  color: #f4dfb4;
+  background: linear-gradient(180deg, rgba(217,164,79,.20), rgba(217,164,79,.07));
+  border: 1px solid rgba(217,164,79,.34);
+}
+.seal::before { content: "❦"; font-size: .62rem; color: var(--brass); }
+.seal--win { background: linear-gradient(180deg, rgba(217,164,79,.34), rgba(217,164,79,.12)); border-color: rgba(240,200,130,.6); color: #fff0d0; }
+.seal--win::before { content: "★"; }
+
+.bd__scroll { flex: 1 1 auto; overflow-y: auto; padding: 1.35rem 1.6rem 1.5rem; }
+
+.bd__sec + .bd__sec { margin-top: 1.5rem; }
+.bd__h {
+  font-family: var(--font-ui);
+  font-size: .66rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--brass-soft);
+  margin: 0 0 .6rem;
+  display: flex; align-items: center; gap: .7rem;
+}
+.bd__h::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(217,164,79,.3), transparent); }
+.bd__p { margin: 0 0 .85rem; font-size: 1.02rem; line-height: 1.72; color: #e2d5bf; }
+.bd__p:last-child { margin-bottom: 0; }
+
+.bd__note {
+  font-size: .98rem;
+  line-height: 1.72;
+  color: #d3c3a8;
+  padding: .95rem 1.1rem;
+  border-radius: 8px;
+  background: rgba(217,164,79,.055);
+  border-left: 2px solid rgba(217,164,79,.45);
+}
+.bd__note em { color: var(--brass); font-style: italic; }
+
+/* ── the shopkeeper's picks ────────────────────────────────────
+   409 of the books in this shop carry a curator's note; since phase 9 the
+   rest are harvested from prize lists and carry none by design. The note is
+   the thing this shop has that a catalogue does not, so a pick is marked
+   in all three places a book appears: on the spine (scene.css), in every
+   list (.res--pick), and at the head of its own note. */
+.vh {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
+.pickmark { display: inline-flex; align-items: center; margin-left: .4em; vertical-align: -.1em; }
+.pickmark svg {
+  width: .78em; height: .78em;
+  fill: var(--brass); stroke: none;
+}
+.bd__h .pickmark { margin: 0; }
+.bd__h .pickmark svg { width: 1em; height: 1em; }
+.bd__sec--pick .bd__note {
+  border-left-color: var(--brass);
+  background: rgba(217,164,79,.09);
+}
+/* A book with no note says so plainly rather than leaving a gap where a
+   section used to be — the shelf is honest about which books the shopkeeper
+   has actually written about. */
+.bd__nonote {
+  margin: 0;
+  font-size: .88rem;
+  line-height: 1.6;
+  color: rgba(226,213,191,.5);
+  font-style: italic;
+  padding-left: .9rem;
+  border-left: 1px solid rgba(217,164,79,.2);
+}
+.res--pick .res__t { color: #f2e2c4; }
+
+/* the opening line, set like a first page */
+.firstpage {
+  position: relative;
+  padding: 1.5rem 1.6rem 1.3rem;
+  border-radius: 4px;
+  background: linear-gradient(100deg, #efe4cd, #e3d5b8);
+  color: #2c2418;
+  box-shadow: 0 20px 40px -22px #000, inset -14px 0 24px -18px rgba(90,70,40,.7);
+  font-family: var(--font-body);
+}
+.firstpage::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 10px;
+  background: linear-gradient(90deg, rgba(120,95,55,.34), transparent);
+  border-radius: 4px 0 0 4px;
+}
+.firstpage__t { font-size: 1rem; line-height: 1.7; margin: 0; }
+/* only a real, sourced quotation gets set like a first page */
+.firstpage__q {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+.firstpage__q::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.05rem;
+  line-height: .82;
+  padding: .12em .1em 0 0;
+  color: #7a3f2c;
+}
+.firstpage__c {
+  margin: 1.1rem 0 0;
+  font-family: var(--font-ui);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #8a7855;
+}
+.firstpage__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(120,95,55,.24);
+}
+.firstpage__links .buy__alt {
+  color: #5d4a2c;
+  border-color: rgba(120,95,55,.34);
+  background: rgba(255,255,255,.34);
+}
+.firstpage__links .buy__alt:hover {
+  color: #2c2418;
+  border-color: rgba(120,95,55,.7);
+  background: rgba(255,255,255,.7);
+}
+
+.taglist { display: flex; flex-wrap: wrap; gap: .35rem; }
+.tagchip {
+  padding: .3rem .65rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  color: var(--ink-dim);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: color .2s, border-color .2s, background .2s;
+}
+button.tagchip:hover { color: var(--paper); border-color: rgba(217,164,79,.5); background: rgba(217,164,79,.12); }
+
+/* buy row */
+.bd__buy {
+  flex: 0 0 auto;
+  padding: 1rem 1.6rem 1.25rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.35));
+}
+.buy__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  width: 100%;
+  padding: .92rem 1.2rem;
+  border-radius: 10px;
+  font-family: var(--font-ui);
+  font-size: .92rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1c1310;
+  background: linear-gradient(180deg, #f0c274, var(--brass) 62%, #b0812f);
+  box-shadow: 0 12px 30px -14px rgba(255,170,80,.8), inset 0 1px 0 rgba(255,240,210,.5);
+  transition: transform .2s var(--ease), box-shadow .25s;
+}
+.buy__main:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -14px rgba(255,180,90,.9), inset 0 1px 0 rgba(255,240,210,.6); }
+.buy__main svg { width: 17px; height: 17px; stroke-width: 2; }
+.buy__why {
+  margin: .55rem 0 .7rem;
+  font-family: var(--font-ui);
+  font-size: .7rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  text-align: center;
+}
+.buy__alts { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; }
+.buy__alt {
+  padding: .42rem .8rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  text-decoration: none;
+  color: var(--ink-dim);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  transition: color .2s, border-color .2s, background .2s;
+}
+.buy__alt:hover { color: var(--paper); border-color: rgba(217,164,79,.5); background: rgba(217,164,79,.1); }
+
+.bd__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .55rem 1.6rem;
+  border-top: 1px solid rgba(255,255,255,.06);
+  background: rgba(0,0,0,.28);
+}
+.bd__navbtn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .4rem .6rem;
+  border-radius: 6px;
+  font-family: var(--font-ui);
+  font-size: .74rem;
+  color: var(--ink-faint);
+  max-width: 45%;
+  transition: color .2s, background .2s;
+}
+.bd__navbtn:hover { color: var(--paper); background: rgba(255,255,255,.06); }
+.bd__navbtn[disabled] { opacity: .28; pointer-events: none; }
+.bd__navbtn svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.bd__navbtn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd__keep {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .4rem .8rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .74rem;
+  color: var(--ink-dim);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: color .2s, border-color .2s, background .2s;
+}
+.bd__keep:hover { color: var(--paper); border-color: rgba(217,164,79,.5); }
+.bd__keep.is-on { color: #1c1310; background: var(--brass); border-color: var(--brass); }
+.bd__keep svg { width: 15px; height: 15px; }
+
+/* PLAN-SHEETS.md: measured at 320×568 before this fix, the book panel
+   was three fixed blocks (cover, buy bar, prev/next) taking whatever
+   height they wanted, leaving `.bd__scroll`'s inner `overflow-y` a 35px
+   window over 951px of content — cover alone was 56% of the viewport.
+   The fix is structural: retire every inner scroller and let
+   `.sheet__body` itself be the one scrolling document. Only the close
+   button stays pinned (fixed, not part of the flow that scrolls). */
+@media (max-width: 620px) {
+  .sheet__body {
+    width: 100vw;
+    overflow-y: auto;
+  }
+  /* the base rule's `overflow: hidden` (see its own comment above) does
+     double duty on desktop: it also stops a flex item's default
+     `flex-shrink: 1` from being moot, because with `height: 100%` there
+     is no free space to shrink out of. Here `height` is `auto` instead,
+     so `.bd`'s flex-basis resolves to its *content* size (hundreds of
+     px taller than the viewport) and default `flex-shrink: 1` squashes
+     it straight back down to `.sheet__body`'s height — measured,
+     `scrollHeight 1664 / clientHeight 568` with nothing to scroll:
+     `.sheet__body` above is `568/568`, i.e. .bd never actually grew.
+     `flex: 0 0 auto` stops that shrink so `.bd` sits at its full content
+     height and overflows `.sheet__body` on purpose — the point of this
+     block, so that `.sheet__body`'s new `overflow-y: auto` has
+     something real to scroll. `overflow: visible` neutralises the base
+     rule's `hidden` (which would otherwise clip `.bd` to the shrunk
+     568px box every bit as hard as the shrink itself) without deleting
+     it, so desktop keeps its width-floor fix untouched. */
+  .bd { height: auto; min-height: 100%; overflow: visible; flex: 0 0 auto; }
+  .bd__top { grid-template-columns: 1fr; gap: 1rem; padding: 3rem 1.1rem 1.1rem; }
+  /* the cover: was content-sized off a fixed 190×288 --hw/--hh (56% of
+     a 568-tall viewport on its own) — down to ~18vh of actual book art,
+     which lands the whole `.hold` block (art + "drag to turn it over")
+     at ~20-22% of viewport height across 568-932px. `.hold__front svg`
+     above is what makes shrinking --hw/--hh actually resize the art
+     instead of cropping it. */
+  .hold {
+    min-height: 0;
+    --hw: calc(18vh * 2 / 3);
+    --hh: 18vh;
+  }
+  .bd__meta { padding-right: 0; }
+  /* `.sheet__body` above is the only scroll container now, so this drops
+     the inner one. `flex: 0 0 auto` matters once `.bd`'s height is auto
+     instead of 100%: the base rule's `flex: 1 1 auto` would be harmless
+     there too (no free space left for grow/shrink to act on), but pinning
+     it explicitly is worth doing rather than relying on that being true. */
+  .bd__scroll { padding: 1.1rem; overflow: visible; flex: 0 0 auto; }
+  /* Tried `position: sticky; bottom: 0` here first. Measured, it was
+     worse than the thing being fixed: with `.bd` several screens tall,
+     sticky's own rule ("never further from the threshold than its
+     static-flow position allows") pulls the whole buy block up to the
+     bottom edge from the moment the sheet opens — screenshotted at
+     375×667, it covered the bottom ~40% of the screen and cut "What it
+     is" off mid-sentence, unscrolled. A block this tall has no sticky
+     placement that stays out of the way, so it just joins the flow like
+     everything else — the "at most one sticky element" allowance in
+     PLAN-SHEETS.md is a ceiling, not a target. */
+  .bd__buy { padding: .9rem 1.1rem 1.1rem; }
+  /* was absolutely positioned inside `.bd__top`, which now scrolls away
+     with everything else. `position: fixed` is what keeps it reachable
+     "at every scroll position" per PLAN-SHEETS.md's verification bullet —
+     same treatment `.overlay__close` gets below for the other three
+     overlays. */
+  .bd__close {
+    position: fixed;
+    top: .85rem;
+    top: calc(.85rem + env(safe-area-inset-top));
+    right: .9rem;
+    right: calc(.9rem + env(safe-area-inset-right));
+  }
+}
+
+/* ─── generic overlay ──────────────────────────────────────── */
+
+.overlay {
+  position: fixed; inset: 0; z-index: 70; display: grid; place-items: center;
+  padding: 4vh 4vw;
+  /* PLAN-MOBILE.md M9 — see .topbar's comment for the fallback pattern.
+     All four sides: an overlay is full-screen, so every edge is a
+     candidate for the notch/home-indicator/side cutout. */
+  padding: calc(4vh + env(safe-area-inset-top)) calc(4vw + env(safe-area-inset-right))
+           calc(4vh + env(safe-area-inset-bottom)) calc(4vw + env(safe-area-inset-left));
+}
+.overlay__scrim { position: absolute; inset: 0; background: rgba(6,4,3,.78); backdrop-filter: blur(5px); animation: fade .25s var(--ease); }
+.overlay__body {
+  position: relative;
+  width: 100%;
+  max-height: 92vh;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #221913, #140e0c);
+  border: 1px solid rgba(217,164,79,.22);
+  box-shadow: var(--shadow);
+  animation: popIn .32s var(--ease);
+  outline: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes popIn { from { opacity: 0; transform: translateY(14px) scale(.98) } }
+.overlay.is-closing .overlay__body { animation: popOut .2s var(--ease) forwards; }
+.overlay.is-closing .overlay__scrim { animation: fadeOut .2s var(--ease) forwards; }
+@keyframes popOut { to { opacity: 0; transform: translateY(8px) scale(.99) } }
+
+/* invisible to layout on purpose — see index.html's comment on why the
+   id-bearing content node (main.js rewrites its contents wholesale) is
+   a separate element from `.overlay__body` (which now also holds the
+   close button) rather than the same one. */
+.overlay__content { display: contents; }
+
+/* PLAN-MOBILE.md M7: a visible close control on every overlay, styled
+   like the book panel's own `.bd__close` for one consistent language —
+   same circle, same corner, same icon. Scrim-tap and Escape both still
+   work unchanged; this is a THIRD way in, not a replacement. */
+.overlay__close {
+  position: absolute;
+  top: .85rem; right: .9rem;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--ink-faint);
+  background: rgba(255,255,255,.05);
+  transition: color .2s, background .2s, transform .2s;
+  z-index: 5;
+}
+.overlay__close:hover { color: var(--paper); background: rgba(255,255,255,.12); transform: rotate(90deg); }
+.overlay__close svg { width: 16px; height: 16px; }
+
+/* ─── search ───────────────────────────────────────────────── */
+
+.overlay__body--search { max-width: 42rem; align-self: start; margin-top: 8vh; }
+.find { display: flex; align-items: center; gap: .8rem; padding: 1.05rem 3.8rem 1.05rem 1.2rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.find__ic { width: 19px; height: 19px; color: var(--brass); flex: 0 0 auto; }
+.find__input {
+  flex: 1;
+  background: none; border: 0; outline: none;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+}
+.find__input::placeholder { color: rgba(255,255,255,.26); font-style: italic; }
+.find__input::-webkit-search-cancel-button { display: none; }
+.find__kbd {
+  font-family: var(--font-ui); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-faint); padding: .2rem .45rem; border: 1px solid rgba(255,255,255,.14); border-radius: 4px;
+  white-space: nowrap; flex: 0 0 auto;
+}
+/* PLAN-MOBILE.md M8: "esc" told a device with no Esc key nothing true.
+   Hidden outright on a coarse pointer rather than swapped for
+   replacement text — see index.html's comment on why (the visible
+   .overlay__close button right beside it already says "tap here", and
+   there is no width left in this row for a caption on top of it). */
+@media (pointer: coarse) {
+  .find__kbd { display: none; }
+}
+.find__results { overflow-y: auto; max-height: 60vh; padding: .5rem; }
+.res {
+  display: flex; align-items: center; gap: .85rem;
+  width: 100%;
+  padding: .6rem .7rem;
+  border-radius: 9px;
+  text-align: left;
+  transition: background .15s;
+}
+.res:hover, .res.is-cursor { background: rgba(217,164,79,.13); }
+.res__mini { display: block; flex: 0 0 auto; width: 30px; height: 44px; border-radius: 2px 3px 3px 2px; box-shadow: 0 4px 10px -4px #000; overflow: hidden; }
+.res__mini img, .res__mini svg { width: 100%; height: 100%; display: block; }
+.res__txt { display: block; min-width: 0; flex: 1; }
+.res__t { display: block; font-family: var(--font-display); font-size: .98rem; color: var(--paper); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.res__s { display: block; font-family: var(--font-ui); font-size: .74rem; color: var(--ink-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: .1rem; }
+.res__where { display: block; font-family: var(--font-ui); font-size: .66rem; letter-spacing: .07em; color: var(--brass-soft); flex: 0 0 auto; text-align: right; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.res__room { width: 30px; height: 44px; display: grid; place-items: center; border-radius: 5px; background: rgba(217,164,79,.14); color: var(--brass); }
+.res__room svg { width: 16px; height: 16px; }
+.find__empty { padding: 2.2rem 1.2rem; text-align: center; color: var(--ink-faint); font-style: italic; }
+.find__hd { font-family: var(--font-ui); font-size: .62rem; letter-spacing: .26em; text-transform: uppercase; color: var(--brass-soft); padding: .8rem .8rem .35rem; }
+
+/* ─── the shop plan ────────────────────────────────────────── */
+
+.overlay__body--map { max-width: 68rem; }
+.plan__hd {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  padding: 1.15rem 1.4rem .9rem;
+  /* clears .overlay__close (M7) — same reservation on every overlay
+     header that puts a title/subtitle row up near that corner. */
+  padding-right: 3.6rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.plan__title { font-family: var(--font-display); font-size: 1.35rem; color: var(--paper); margin: 0; }
+.plan__sub { font-family: var(--font-ui); font-size: .74rem; color: var(--ink-faint); letter-spacing: .05em; }
+.plan { display: flex; flex-direction: column; min-height: 0; height: 100%; }
+.plan__body { overflow: auto; padding: 1.1rem 1.4rem 1.6rem; }
+.plan__lead { max-width: 24rem; margin-bottom: .5rem; }
+.plan__sect {
+  font-family: var(--font-ui);
+  font-size: .64rem; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--brass-soft);
+  margin: 1.5rem 0 .7rem;
+  display: flex; align-items: center; gap: .8rem;
+}
+.plan__sect::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(217,164,79,.32), transparent); }
+.plan__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .8rem; align-items: start; }
+.plan__col { display: flex; flex-direction: column; gap: .5rem; }
+.pbranch { display: flex; flex-direction: column; }
+.plan__foot {
+  margin: 2rem 0 0;
+  font-size: .84rem; line-height: 1.7; font-style: italic;
+  color: var(--ink-faint);
+  max-width: 42rem;
+}
+
+.pnode {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: .6rem .8rem .65rem;
+  border-radius: 9px;
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.028);
+  transition: border-color .2s, background .2s, transform .2s var(--ease);
+}
+.pnode:hover { border-color: var(--brass); background: rgba(217,164,79,.1); transform: translateX(2px); }
+.pnode.is-here { border-color: var(--brass); background: rgba(217,164,79,.17); }
+.pnode.is-here .pnode__n::after { content: " ● you are here"; white-space: nowrap; font-family: var(--font-ui); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
+.pnode__n { display: block; font-family: var(--font-display); font-size: 1rem; color: var(--paper); line-height: 1.25; }
+.pnode__s { display: block; font-family: var(--font-ui); font-size: .68rem; letter-spacing: .07em; color: var(--ink-faint); margin-top: .12rem; }
+.pnode__c { display: block; font-family: var(--font-ui); font-size: .62rem; letter-spacing: .1em; color: var(--brass-soft); margin-top: .3rem; }
+.pnode--l1 { background: linear-gradient(180deg, rgba(217,164,79,.13), rgba(255,255,255,.02)); }
+.pkids { display: flex; flex-direction: column; gap: .35rem; margin: .35rem 0 0 .85rem; padding-left: .75rem; border-left: 1px dashed rgba(217,164,79,.26); }
+.pnode--l2 .pnode__n { font-size: .9rem; }
+/* the front table: a table, not a room — drawn in its own line under
+   the room it stands in rather than as one more card in the grid */
+.pnode--table {
+  background: linear-gradient(180deg, rgba(217,164,79,.09), rgba(255,255,255,.02));
+  border-style: dashed;
+}
+.pnode--table .pnode__n::before {
+  content: "▤ ";
+  color: var(--brass-soft);
+}
+.pnode--l3 { opacity: .95; }
+.pnode--l3 .pnode__n { font-size: .84rem; font-style: italic; }
+
+/* ─── parcel ───────────────────────────────────────────────── */
+
+.overlay__body--parcel { max-width: 44rem; }
+/* padding-right: see .plan__hd's comment — same reservation for .overlay__close. */
+.parcel__hd { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.15rem 3.6rem .9rem 1.4rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.parcel__body { overflow: auto; padding: .8rem .9rem 1.2rem; }
+.parcel__empty { padding: 3rem 1.5rem; text-align: center; color: var(--ink-faint); font-style: italic; line-height: 1.8; }
+.pitem { display: flex; align-items: center; gap: .9rem; padding: .6rem .7rem; border-radius: 9px; transition: background .15s; }
+.pitem:hover { background: rgba(255,255,255,.045); }
+.pitem__mini { display: block; width: 34px; height: 50px; flex: 0 0 auto; border-radius: 2px 3px 3px 2px; overflow: hidden; box-shadow: 0 5px 12px -5px #000; cursor: pointer; }
+.pitem__mini svg { width: 100%; height: 100%; display: block; }
+.pitem__txt { display: block; flex: 1; min-width: 0; cursor: pointer; }
+.pitem__t { display: block; font-family: var(--font-display); font-size: .98rem; color: var(--paper); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pitem__a { display: block; font-family: var(--font-ui); font-size: .74rem; color: var(--ink-faint); margin-top: .1rem; }
+.pitem__buy { flex: 0 0 auto; padding: .35rem .8rem; border-radius: 999px; font-family: var(--font-ui); font-size: .72rem; text-decoration: none; color: var(--brass); border: 1px solid rgba(217,164,79,.4); transition: background .2s, color .2s; }
+.pitem__buy:hover { background: var(--brass); color: #1b120d; }
+.pitem__x { flex: 0 0 auto; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: var(--ink-faint); transition: color .2s, background .2s; }
+.pitem__x:hover { color: #ffb0a0; background: rgba(255,120,90,.12); }
+.pitem__x svg { width: 14px; height: 14px; }
+
+/* ─── toast ────────────────────────────────────────────────── */
+
+.toast {
+  position: fixed;
+  left: 50%; bottom: 6.2rem;
+  bottom: calc(6.2rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
+  translate: -50% 0;
+  z-index: 80;
+  padding: .7rem 1.15rem;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  letter-spacing: .04em;
+  color: var(--paper);
+  background: rgba(30,21,17,.96);
+  border: 1px solid rgba(217,164,79,.4);
+  box-shadow: 0 18px 40px -18px #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+  transform: translateY(10px);
+  max-width: 90vw;
+  text-align: center;
+}
+.toast.is-on { opacity: 1; transform: translateY(0); }
+
+/* ─── mobile: keep the room, bring the shelf forward ───────── */
+
+/* the shelf-as-a-list button: a convenience on a desktop,
+   the main way through on a phone */
+.dock__btn--shelf { color: var(--brass); }
+
+/* PLAN-MOBILE.md M-placard (iteration 2): iteration 1's widened fov made
+   this worse (five lines, across the lamp) but did not cause it — a long
+   room name plus a long "N on the shelf · M on the table · K further in"
+   count line was always going to wrap hard in ~340px, the .68rem count
+   line's own .2em letter-spacing being the biggest offender. Three
+   changes, none of which touch the guaranteed plate alpha (still the
+   same rgba(20,14,9,.90) — see the PLAN-CONTRAST.md comment above
+   .placard):
+
+     NARROWER text, not narrower box: the name is clamped to 2 lines
+     with an ellipsis rather than free-wrapping to as many as the room's
+     own name needs, and the kicker/count are forced to one truncated
+     line each — 4 lines is now the hard ceiling (kicker + 2-line name +
+     count), not 5, and every one of the shop's 50 room names/subs
+     measured well inside 2 lines in practice.
+
+     SHORTER on screen: font-size drops again from the pre-existing
+     1.5rem mobile override.
+
+     FADES AFTER ARRIVAL: this is an arrival caption, not a permanent
+     label — placardArrival holds it for ~2.6s (matches the 0.8s
+     entrance PLUS a beat to actually read it) then fades it out over
+     the next second, freeing the lamp underneath for the rest of the
+     visit. paintChrome() already restarts `.placard`'s animation on
+     every room change (it zeroes then clears `style.animation`), so
+     this refires exactly like the old fade-in-only one did — nothing
+     new to wire. The dock/crumbs/tools stay opaque throughout; those
+     are how you get back out and are not part of this caption. */
+@keyframes placardArrival {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  12%  { opacity: 1; transform: translateY(0); }
+  62%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 900px), (max-height: 620px) {
+  .placard {
+    top: 3.6rem;
+    top: calc(3.6rem + env(safe-area-inset-top)); /* PLAN-MOBILE.md M9 */
+    max-width: 92vw;
+    animation: placardArrival 4.6s var(--ease) both;
+  }
+  .placard__line { display: none; }
+  .placard__kicker,
+  .placard__count {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .placard__name {
+    font-size: 1.3rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .dock {
+    flex-wrap: wrap; gap: .5rem;
+    padding: .7rem .8rem .9rem;
+    /* Safe-area again: this mobile block's own padding shorthand would
+       otherwise CANCEL the env()-aware one on .dock/.topbar above (same
+       selector, later in the file always wins) right on the viewports
+       that need it most. */
+    padding: .7rem calc(.8rem + env(safe-area-inset-right))
+             calc(.9rem + env(safe-area-inset-bottom)) calc(.8rem + env(safe-area-inset-left));
+  }
+  .dock__btn { padding: .55rem .8rem; font-size: .78rem; }
+  .topbar {
+    padding: .7rem .8rem;
+    padding: calc(.7rem + env(safe-area-inset-top)) calc(.8rem + env(safe-area-inset-right))
+             .7rem calc(.8rem + env(safe-area-inset-left));
+  }
+  .crumbs { font-size: .74rem; max-width: 56vw; }
+  /* PLAN-MOBILE.md M10: this used to be `display: none` on every mobile
+     viewport, i.e. the one place the shop could have said "drag to look
+     around" said nothing at all. main.js's showHint() now writes touch-
+     appropriate copy here (via `(pointer: coarse)`, read once at
+     startup) instead of the desktop "scroll to come closer" line — the
+     element just needed to be allowed to render it. Raised off the
+     bottom a little further than desktop's 5.4rem: the dock wraps to two
+     rows at these widths (immediately above, `flex-wrap: wrap`), and a
+     one-line hint sitting where a two-row dock might be is a hint no
+     one reads before it's covered. */
+  .hint {
+    bottom: 7.4rem;
+    bottom: calc(7.4rem + env(safe-area-inset-bottom)); /* PLAN-MOBILE.md M9 */
+    max-width: 88vw; text-align: center;
+  }
+  .overlay {
+    padding: 2vh 2vw;
+    padding: calc(2vh + env(safe-area-inset-top)) calc(2vw + env(safe-area-inset-right))
+             calc(2vh + env(safe-area-inset-bottom)) calc(2vw + env(safe-area-inset-left));
+    /* PLAN-SHEETS.md §2: same rule as the book panel above, applied to
+       the other three overlays. `.overlay__body`'s `max-height: 92vh` +
+       `overflow: hidden` (base rule) is what was forcing an inner
+       scroller on `.find__results`/`.plan__body`/`.parcel__body` — on a
+       short phone the header/search-row furniture took the height and
+       the inner window collapsed, same pattern as `.bd__scroll`. Here
+       `.overlay` itself becomes the one scroll container and the body is
+       let grow to its content's real height.
+       `align-items: flex-start` (not the base rule's `place-items:
+       center`) is why that scrolling works at all: a `center`-aligned
+       item taller than its container overflows symmetrically above AND
+       below, and a scroll container generally can't reach the overflow
+       that spills above its own top edge — anchoring to the start means
+       all the overflow is below, where normal top-anchored scrolling
+       reaches it. */
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  /* `overflow` stays `hidden` (the base rule's value) rather than
+     `visible` — that's not a leftover, it's load-bearing. Grid/flex
+     items get a content-based "automatic minimum size" floor on `width:
+     100%`/`height: auto` UNLESS their own `overflow` is non-`visible`
+     (CSS Sizing §automatic-minimum-size); switching this to `visible`
+     while debugging made `.overlay__body` clamp to its widest
+     `white-space: nowrap` descendant's min-content width (390px at a
+     320px-wide `.overlay`, screenshotted as `.pitem__buy` pushed off the
+     right edge) instead of honouring `width: 100%`. Dropping `max-height`
+     is enough on its own: with no height cap, an auto-height box has
+     nothing to clip, so `overflow: hidden` here clips exactly nothing —
+     it just needs to stay `hidden` rather than `visible` to keep that
+     width floor at 0. */
+  .overlay__body {
+    max-height: none;
+  }
+  /* was absolutely positioned inside `.overlay__body`, which can now be
+     taller than the screen and scroll — `position: fixed` keeps it
+     reachable at every scroll position instead of scrolling away with
+     the header it used to sit next to. Same fix as `.bd__close` above. */
+  .overlay__close {
+    position: fixed;
+    top: .85rem;
+    top: calc(.85rem + env(safe-area-inset-top));
+    right: .9rem;
+    right: calc(.9rem + env(safe-area-inset-right));
+  }
+  /* the three inner scrollers this same rule retires: search results,
+     the shop plan, the parcel/shelf list. `.overlay` above is now the
+     only scroll container. */
+  .find__results { overflow: visible; max-height: none; }
+  .plan__body { overflow: visible; }
+  .parcel__body { overflow: visible; }
+  .overlay__body--search { margin-top: 3vh; }
+  .plan__grid { grid-template-columns: 1fr; }
+  /* .plan__hd/.parcel__hd's `justify-content: space-between` row was
+     never tested this narrow: a long subtitle ("50 books on this
+     shelf, 11 of them the shopkeeper's own") left so little room for
+     the title that it wrapped letter-by-word into three lines. Stack
+     instead of squeeze — the subtitle earns its own line below the
+     title rather than fighting it for the same one. */
+  .plan__hd, .parcel__hd {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3rem;
+  }
+}
+
+/* on a touch screen the spines are small, so make the list route obvious */
+@media (hover: none) {
+  .dock__btn--shelf {
+    background: linear-gradient(180deg, rgba(240,194,116,.95), rgba(217,164,79,.9));
+    color: #1c1310;
+    border-color: transparent;
+  }
+  .tag { display: none; }
+}
+
+/* ─── touch target floor (PLAN-MOBILE.md M5) ──────────────────────
+   Every one of these measured under 44×44 at some width: tools 37×37,
+   dock buttons ~86-160×38, .bd__close/.overlay__close 34×34,
+   .pitem__x 28×28, .tagchip/.buy__alt/.pitem__buy well under 44 tall.
+   `min-width`/`min-height` clamp the USED size from below regardless of
+   whether a rule elsewhere set an explicit width/height (.bd__close) or
+   sized from padding (.tool) — no per-selector special case needed for
+   which kind of sizing it started from.
+
+   `justify-content: center` accompanies `min-width` wherever a
+   flex/inline-flex box's own content doesn't already fill it (`.tool`,
+   `.dock__btn`, `.tagchip`, `.buy__alt`, `.pitem__buy` were never
+   centred because they were never bigger than their content before);
+   `.bd__close`/`.overlay__close`/`.pitem__x` already use
+   `place-items: center` on a `display: grid` box, which centres
+   regardless of how much the box grows, and need nothing added.
+
+   This is explicitly NOT the a11y mirror (`#mirror button`) — those are
+   the visually-hidden, screen-reader/keyboard-only mirror of the same
+   controls the canvas already renders at whatever size the room's own
+   perspective gives them, and PLAN-MOBILE.md's own verification note
+   says to leave its 20px-by-design box alone. Nothing in this block
+   touches `#mirror`. */
+@media (pointer: coarse) {
+  .tool,
+  .dock__btn,
+  .tagchip,
+  .buy__alt,
+  .pitem__buy,
+  .bd__keep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* 45, not 44 — sub-pixel layout at some viewport widths rounds a
+       flat 44px min down to ~43.9 in getBoundingClientRect(), which is
+       the real thing a touch-target check measures. A px of margin
+       costs nothing and keeps the floor honest. */
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .bd__close,
+  .overlay__close,
+  .pitem__x {
+    min-width: 45px;
+    min-height: 45px;
+  }
+  .bd__navbtn {
+    min-height: 45px;
+  }
+}
