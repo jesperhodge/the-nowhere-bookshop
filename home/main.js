@@ -35,6 +35,7 @@ function el(tag, props = {}, ...kids) {
   for (const [k, v] of Object.entries(props)) {
     if (v == null || v === false) continue;
     if (k === 'class') n.className = v;
+    else if (k === 'style') n.style.cssText = v; // CSSOM, so the CSP needs no 'unsafe-inline'
     else n.setAttribute(k, v === true ? '' : v);
   }
   return add(n, kids);

@@ -5,7 +5,9 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 
-const SCAN_ROOTS = ['index.html', 'src', 'vendor', 'data'];
+// Paths relative to the site root (where `npm test` runs): everything Vercel
+// serves, plus the bookshop's data the function bundles.
+const SCAN_ROOTS = ['index.html', 'home', 'bookshop/index.html', 'bookshop/src', 'bookshop/vendor', 'bookshop/data'];
 
 const PATTERNS = [
   { label: 'Google API key shape', re: /AIza[0-9A-Za-z_-]{20,}/ },

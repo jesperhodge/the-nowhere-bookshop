@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { scanFile } from './check-no-secrets.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(here, '..');
+const repoRoot = path.resolve(here, '../..');
 const checkerPath = path.join(here, 'check-no-secrets.mjs');
 
 function runChecker() {
@@ -24,7 +24,7 @@ function runChecker() {
 
 test('exits non-zero and never echoes the value when a key-shaped string is planted in a scanned path', () => {
   const fakeKey = 'AIzaSyFAKEFAKEFAKEFAKEFAKEFAKEFAKEFAKE0';
-  const plantedPath = path.join(repoRoot, 'src', '__check-no-secrets-regression-tmp__.js');
+  const plantedPath = path.join(repoRoot, 'bookshop', 'src', '__check-no-secrets-regression-tmp__.js');
   writeFileSync(plantedPath, `export const leaked = "${fakeKey}";\n`);
   try {
     const result = runChecker();
@@ -54,10 +54,10 @@ test('runs correctly (does not silently no-op) when the checker script lives und
   // the checker actually runs (non-zero exit) instead of silently passing.
   const tmpRoot = path.join(repoRoot, `__s1-regression-tmp-${process.pid} probe space__`);
   try {
-    mkdirSync(path.join(tmpRoot, 'src'), { recursive: true });
+    mkdirSync(path.join(tmpRoot, 'bookshop', 'src'), { recursive: true });
     copyFileSync(checkerPath, path.join(tmpRoot, 'check-no-secrets.mjs'));
     writeFileSync(
-      path.join(tmpRoot, 'src', 'leak.js'),
+      path.join(tmpRoot, 'bookshop', 'src', 'leak.js'),
       'export const leaked = "AIzaSyFAKEFAKEFAKEFAKEFAKEFAKEFAKEFAKE0";\n'
     );
     execFileSync('git', ['init', '--quiet'], { cwd: tmpRoot });
@@ -93,9 +93,9 @@ test('exits non-zero on a committed secret whose filename has non-ASCII bytes th
   // and confirm the checker actually fails.
   const tmpRoot = path.join(repoRoot, `__sg1-regression-tmp-${process.pid}__`);
   try {
-    mkdirSync(path.join(tmpRoot, 'src'), { recursive: true });
+    mkdirSync(path.join(tmpRoot, 'bookshop', 'src'), { recursive: true });
     copyFileSync(checkerPath, path.join(tmpRoot, 'check-no-secrets.mjs'));
-    const plantedPath = path.join(tmpRoot, 'src', 'café.js');
+    const plantedPath = path.join(tmpRoot, 'bookshop', 'src', 'café.js');
     writeFileSync(
       plantedPath,
       'export const leaked = "AIzaSyFAKEFAKEFAKEFAKEFAKEFAKEFAKEFAKE0";\n'
@@ -131,7 +131,7 @@ const assignmentCases = [
 
 for (const { name, content, expectNonZero } of assignmentCases) {
   test(`assignment pattern: ${name}`, () => {
-    const plantedPath = path.join(repoRoot, 'src', '__check-no-secrets-regression-tmp__.js');
+    const plantedPath = path.join(repoRoot, 'bookshop', 'src', '__check-no-secrets-regression-tmp__.js');
     writeFileSync(plantedPath, content);
     try {
       const result = runChecker();

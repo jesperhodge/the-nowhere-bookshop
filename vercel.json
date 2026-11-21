@@ -65,11 +65,16 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-LLMDjX7Ud3auaku1RMPtDieubSx/lAAbhb8I0zPHCzg=' https://www.google.com https://books.google.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-src https://www.google.com https://books.google.com; frame-ancestors 'none'"
+          "value": "default-src 'self'; script-src 'self' 'sha256-2rqzDZgw9+/6nIKcmrxhZEQg30pEQLz5A9idoectr4I=' 'sha256-aOCcdG+iqzon4MIdAeUE2i8BZ64cPu0S3OcSIVgZuU8=' 'sha256-FCkejGX7WrdBVvH7liiXzBLegMRK4N0meatNSjoK5yY=' https://www.google.com https://books.google.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-src https://www.google.com https://books.google.com; frame-ancestors 'none'"
         },
         { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "no-referrer" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    },
+    {
+      "source": "/bookshop/(.*)",
+      "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
       ]
     }
