@@ -1,0 +1,23 @@
+title = "the-nowhere-bookshop secret gate"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "scope exclusions and the one documented placeholder usage line"
+# Directories that are never a plausible home for a committed credential:
+# vendored deps and the harness's own worktree copies (which would
+# otherwise double-report everything found in the real tree).
+paths = [
+  '''node_modules''',
+  '''\.claude/worktrees''',
+  '''(?:^|/)\.git/''',
+]
+# Narrow, line-matched allowlist for the documented "paste your token here"
+# usage lines in tools/README.md, tools/hardcover.mjs and tools/harvest.mjs.
+# Matched on the literal placeholder ellipsis, not on the file — a real
+# token pasted into any of these files still trips the gate.
+regexTarget = "line"
+regexes = [
+  '''HARDCOVER_TOKEN=…''',
+]
