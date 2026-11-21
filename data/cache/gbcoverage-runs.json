@@ -11,6 +11,42 @@
    "transportFailures": 0,
    "stoppedBecause": "budget",
    "remainingAfter": 2414
+  },
+  {
+   "startedAt": "2026-10-03T23:42:13.029Z",
+   "finishedAt": "2026-10-03T23:42:40.693Z",
+   "budget": 900,
+   "paceMs": 1100,
+   "requests": 17,
+   "booksMeasured": 16,
+   "servedFromRawCache": 0,
+   "transportFailures": 0,
+   "stoppedBecause": "interrupted",
+   "remainingAfter": 2398
+  },
+  {
+   "startedAt": "2026-10-03T23:47:43.438Z",
+   "finishedAt": "2026-10-03T23:57:55.588Z",
+   "budget": 450,
+   "paceMs": 1100,
+   "requests": 347,
+   "booksMeasured": 326,
+   "servedFromRawCache": 1,
+   "transportFailures": 0,
+   "stoppedBecause": "interrupted",
+   "remainingAfter": 2072
+  },
+  {
+   "startedAt": "2026-10-03T23:59:12.444Z",
+   "finishedAt": "2026-10-04T00:08:10.180Z",
+   "budget": 300,
+   "paceMs": 1100,
+   "requests": 315,
+   "booksMeasured": 300,
+   "servedFromRawCache": 1,
+   "transportFailures": 0,
+   "stoppedBecause": "budget",
+   "remainingAfter": 1772
   }
  ]
 }
